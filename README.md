@@ -83,3 +83,11 @@ The [Ryukyu phylogenetic-polarity diagnostic](src/anto_ryukyu_polarity.py) demon
 Commands: `python -m unittest discover -s tests -v`; `python scripts/run_public_sra_intake_v4.py`; `python src/anto_ryukyu_polarity.py`.
 
 **Status:** provenance and model-based limitations established; no demonstrated Ryukyu floral reactivation or cross-angiosperm evolutionary window.
+
+## v5 — real GenBank CDS reference panel and molecular re-expression gate (2026-10-17)
+
+**Real molecular data now registered:** three coding reference sequences were independently retrieved from GenBank and checked against annotated CDS coordinates: *Saussurea medusa* **DFR EF600682.1 (1,029 bp)**, **ANS AY547342.1 (1,071 bp)** and *Gerbera hybrida* **GMYC1 AJ007709.1 (1,602 bp; a bHLH regulator, not a DFR enzyme)**. They are source-verified Asteraceae controls — **not focal Ryukyu RNA results**. See [reference FASTA](data/molecular/asteraceae_reference_cds_v5.fasta), [annotation provenance](data/molecular/asteraceae_reference_provenance_v5.json), and the [research interpretation](docs/REAL_REFERENCE_MOLECULAR_GATE_V5.md).
+
+The original Ryukyu PRJNA1311153 project provides 25 young-leaf RNA read registrations. A project-scoped ENA audit returned no secondary analysis/sequence objects, and no six-specimen DFR/ANS/GMYC1 orthologues have been retrieved or inferred yet. A [source-checked 18-row register](data/molecular/ryukyu_gene_screen_register_v5.csv) predeclares 6 Cirsium runs × 3 loci as **NOT_TESTED**. The [candidate CDS validator](src/anto_molecular_screen_v5.py) and [tests](tests/test_molecular_screen_v5.py) reject false function claims, swapped samples, incomplete ORFs and multiple paralog conflation. This pipeline can inspect future externally obtained CDS contigs, but cannot assign orthology, infer floral gene function, or prove re-expression without independent tests.
+
+Run `python scripts/run_molecular_preflight_v5.py --output results/ryukyu_molecular_preflight_v5.json`. v5 scientifically strengthens the **source and mechanism validation stage** rather than claiming a colour regain in *C. irumtiense*. An independent positively confirmed molecular reference is not a verified developmental pathway retained in a white Cirsium ancestor.
