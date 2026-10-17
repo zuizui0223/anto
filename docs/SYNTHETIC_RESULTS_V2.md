@@ -59,6 +59,11 @@ Sensitivity analysis (same random seed):
 
 **This benchmark is intentionally favourable:** real local ancestry and pigment haplotypes may not be diagnostic, known training histories rarely exist, multiple histories may coexist, and gene flow may erase simple ancestry markers. Hence it demonstrates what *sort of information* would be needed; it does not claim an achievable experimental classifier, validate a causal marker or identify an empirical re-expression event.
 
+### 4. Competing first-recolouring routes
+In an exploratory mixture with seed-migration probability .005, within-W+ re-expression probability .005, pollen-delivery probability .4, introgressive-reacquisition probability .005 and island competence degradation .08, the island starts with 8 W+ plants and receives seeds/pollen from a source with 8 P plants. Fecundity is 1.6 and the horizon is 8 generations.
+
+Among 400 synthetic seeds of randomness, first P establishment was assigned to **pigmented immigrants 163**, **intrinsic re-expression 119**, **pollen-associated introgressive reacquisition 64**, **multiple same-generation causes 20**, and **no appearance 34**. All these are oracle simulator route labels, not categories inferable from visible flowers. Simultaneous events cannot legitimately be forced to one cause. The parameter regime is exploratory and is not an empirical calibrated frequency distribution.
+
 ## Model scope and caveats
 The simulator has finite regional carrying capacities, stochastic propagules, seed movement, local recruitment, catastrophe, optional pollen-origin genetic rescue, and separate observer colour vs oracle-only latent states. It is not a coalescent, diploid genotype model, phylogenetic diversification/DEC model, detailed Mendelian hybrid simulator, seed-bank model or real-world dispersal kernel. Each simulated parental lineage carries a simplistic maternal tag; genotype ancestry should **not** be reconstructed from that tag in nature. Wilson intervals over Monte Carlo draws quantify simulator randomness, not parameter/model uncertainty.
 
