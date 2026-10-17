@@ -71,3 +71,15 @@ The [exact three-history observation model](src/anto_assay_design.py) calculates
 - [Regression tests](tests/test_empirical_v3.py)
 
 Run \`python scripts/run_empirical_gate_v3.py --output results/empirical_design_gate_v3.json\` after installing numpy/scipy. The exact assay-rank values are **synthetic design results**, not observed molecular classification accuracy. The repository has not established actual *Cirsium* re-expression or a universal rule across flowering plants.
+
+## v4 — verified public Ryukyu specimen crosswalk (2026-10-17)
+
+**Actual public data, not synthetic:** [25 ENA leaf RNA-seq runs](data/public_sra/prjna1311153_run_manifest_20261017.csv) now have exact SRR experiment, SAMN BioSample, published taxon title and specimen code; among them **3 C. brevicaule**, **3 C. irumtiense**, and **6 var. takaoense**. All 6 takaoense runs independently match [aza3's three-white/three-blue-purple labels](data/public_sra/takaoense_aza3_morph_crosswalk_20261017.csv). The Ryukyu 3+3 colour contrast remains a taxon-level description, not direct individual pigment measurement. See [full evidence and data provenance audit](docs/PUBLIC_SRA_SPECIMEN_GATE_V4.md).
+
+The [offline intake validator](src/anto_sra_intake.py) rejects invented individual floral colours, wrong tissue, swapped BioSamples, duplicate runs and unverified morph labels; the [sequencing platform audit](data/public_sra/prjna1311153_ena_platform_fingerprints_20261017.json) flags unresolved **MiniSeq (ENA) vs NovaSeq (paper)** metadata disagreement. No raw reads have been downloaded; ENA's declared paired FASTQ files total approximately 80.66 GB.
+
+The [Ryukyu phylogenetic-polarity diagnostic](src/anto_ryukyu_polarity.py) demonstrates a substantive limitation: with symmetric transition rates, equal temporal branches and a 50:50 prior, one white and one coloured sister lineage yield **no ancestral direction** (posterior remains 0.5 regardless of elapsed time). A 0.93 Ma **lineage** split is not a pigment transition date. Next biological experiments must resolve ancestral polymorphism, introgression, pathway retention and flower-stage function before claiming re-expression.
+
+Commands: `python -m unittest discover -s tests -v`; `python scripts/run_public_sra_intake_v4.py`; `python src/anto_ryukyu_polarity.py`.
+
+**Status:** provenance and model-based limitations established; no demonstrated Ryukyu floral reactivation or cross-angiosperm evolutionary window.
