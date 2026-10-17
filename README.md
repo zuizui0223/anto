@@ -2,7 +2,7 @@
 
 **Core question:** When plants colonize new regions, to what extent can lineages retain, transport, and reuse reproductive traits that were previously lost from visible expression?
 
-**Origin:** The contrasting white and coloured flower phenotypes of the Ryukyu *Cirsium brevicaule* / *irumtiense* complex motivated this programme through [aza3](https://github.com/zuizui0223/aza3). Their ancestry, trait polarity, taxonomic boundaries, and any reacquisition are **not established**. They are a hypothesis-generating system, not proof of reversal.
+**Origin:** The contrasting white and coloured flower phenotypes of the Ryukyu *Cirsium brevicaule* / *irumtiense* complex motivated this programme through [aza3](https://github.com/zuizui0223/aza3). A 2026 phylotranscriptomic study supports distinct Ryukyu lineages (doi:10.1186/s12870-026-08097-6), while POWO retains a broader synonym treatment. Neither the ancestral pigment state nor any loss/regain event is established. This remains the hypothesis-generating origin, not proof of reversal.
 
 **Scope:** Cross-angiosperm evolutionary biogeography, led by plant lineage dispersal, colonization, extinction, introgression, and the movement of latent developmental/genetic capacities. Pollinators enter as ecological filters and selection agents, **not** the default moving protagonist.
 
@@ -42,3 +42,19 @@ Define accessibility as Pr(a specified trait establishes within H generations | 
 - [Model, identifiability, and falsification contract](docs/MODEL_AND_IDENTIFIABILITY_V1.md)
 
 **Evidence status (2026-10-17):** This repository contains a new hypothesis and study design, **not** a demonstrated reversal, calibrated re-expression rate, dated accessibility window, or universal law. Existing projects remain independently governed. No fieldwork, sampling, sequencing, or ethics authorization is implied.
+
+## Working v2 — plant dispersal × latent competence × genetic rescue
+
+The [finite-region colonization simulator](src/anto_colonization.py) now explicitly models discrete plant generations, seed-based migration/recruitment, regional capacity, extinction shocks, inherited pigment expression capacity and pollen-mediated genetic rescue. It logs **intrinsic re-expression**, **already-pigmented seed immigration**, and **introgressive reacquisition** as *different histories*. Its observer output contains only visible pigmentation; hidden states live in a separately identified simulator-oracle field.
+
+The [identifiability benchmark](src/anto_identifiability.py) demonstrates that three different histories can produce exactly the same visible-colour endpoint distribution. Synthetic ancestry/pigment-haplotype assays help only when genuinely diagnostic. [Replay experiments](scripts/run_synthetic_baselines.py) and [tests](tests/test_colonization.py) are included. This is model development, not Cirsium parameter estimation or evidence of real re-evolution.
+
+### New research navigation
+
+- [Ryukyu 2026 source audit, taxonomy conflict, BioProject and ancestry hypotheses](docs/RYUKYU_ORIGIN_EVIDENCE_V2.md)
+- [Cross-angiosperm selection panel and falsifiers](docs/CROSS_CLADE_PROSPECTIVE_PANEL_V2.md)
+- [Reproducible synthetic results and stringent inference limits](docs/SYNTHETIC_RESULTS_V2.md)
+
+Commands: `python -m pip install numpy scipy`; `python -m unittest discover -s tests -v`; `python scripts/run_synthetic_baselines.py --replicates 400 --output results/synthetic_baselines_v2.json`.
+
+**Claim ceiling:** no biological specimens were newly admitted, no genuine colour re-evolution has been inferred for the Ryukyu pair, and no universal evolutionary window has been demonstrated.
