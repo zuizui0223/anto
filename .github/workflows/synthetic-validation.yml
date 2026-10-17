@@ -24,3 +24,10 @@ jobs:
         run: |
           python scripts/run_empirical_gate_v3.py --output /tmp/anto_empirical_gate_v3.json
           python -c "import json; d=json.load(open('/tmp/anto_empirical_gate_v3.json')); assert d['empirical_inference_performed'] is False; assert d['literature_source_audit']['integrated_accessibility_systems'] == 0; assert d['three_history_designs']['colour_only']['rank_known_emissions'] == 1; assert d['four_history_designs']['two_ancestry_markers']['rank_known_emissions'] == 3; assert d['four_history_designs']['plus_ancestral_reuse_evidence']['rank_known_emissions'] == 4"
+
+      - name: Verify real public SRA specimen crosswalk and inherited floral-trait polarity gate
+        run: |
+          python scripts/run_public_sra_intake_v4.py --out /tmp/anto_sra_v4.json
+          python -c "import json; d=json.load(open('/tmp/anto_sra_v4.json')); assert d['ryukyu_n_runs']==6; assert d['manifest_n_runs']==25; assert not d['floral_reexpression_demonstrated']; assert d['unresolved_instrument_inconsistency']"
+          python src/anto_ryukyu_polarity.py > /tmp/anto_ryukyu_polarity_v4.json
+          python -c "import json; x=json.load(open('/tmp/anto_ryukyu_polarity_v4.json')); assert len(x['cases'])==12; assert x['rates_hypothetical'] and x['not_phenotype_transition_date']"
