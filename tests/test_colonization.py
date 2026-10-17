@@ -54,6 +54,14 @@ class TestDispersalReexpression(unittest.TestCase):
         self.assertGreater(result['events'][0]['regions']['island']['seed_recolonist'], 0)
         self.assertEqual(result['histories'][1]['regions']['island']['pigmented'], 0)
 
+    def test_recolonization_after_catastrophe(self):
+        p = Parameters(('source', 'island'), {'source':100, 'island':100},
+                       seed_migration={('source', 'island'):1},
+                       catastrophe={'island':1}, fecundity=15)
+        result = simulate(p, {'source':[Plant('S','P')],
+                              'island':[Plant('I','W-')]}, 1)
+        self.assertGreater(result['events'][0]['regions']['island']['seed_recolonist'],0)
+
     def test_capacity(self):
         p = Parameters(('A',), {'A': 5}, fecundity=12)
         result = simulate(p, {'A': [Plant('A', 'P')]*5}, 5)
@@ -86,6 +94,10 @@ class TestIdentifiability(unittest.TestCase):
         rows = generate(15)
         self.assertEqual(len(rows), 45)
         self.assertEqual({r[0] for r in rows}, {'intrinsic','immigration','introgression'})
+
+    def test_uninformative_assays_remain_at_chance(self):
+        b = benchmark(sensitivity=.5, specificity=.5)
+        self.assertLess(abs(b['predictions']['two_molecular_markers']['accuracy'] - 1/3), .03)
 
     def test_assays_improve_synthetic_discrimination(self):
         b = benchmark()
