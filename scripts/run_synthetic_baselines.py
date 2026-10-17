@@ -6,7 +6,7 @@ import sys
 from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parents[1] / 'src'))
-from anto_colonization import Parameters, Plant, simulate, first_pigmented, order_experiment_probability
+from anto_colonization import Parameters, Plant, simulate, first_pigmented, first_pigmented_route, order_experiment_probability
 from anto_identifiability import benchmark
 
 
@@ -79,6 +79,23 @@ def main(replicates=400, horizon=8):
             'ever_coloured_fraction':total_coloured_ever/replicates,
             'ever_coloured_wilson95':wilson(total_coloured_ever,replicates),
             'accepted_recruitment_event_counts':dict(sorted(event_totals.items()))}
+    mixed = Parameters(('source','island'), {'source':30,'island':30},
+                       seed_migration={('source','island'):.005},
+                       pollen_delivery={('source','island'):.4},
+                       fecundity=1.6, reexpression=.005,
+                       degradation={'island':.08}, introgression=.005)
+    source = {'source':[Plant('source_P','P')]*8,
+              'island':[Plant('island_W','W+')]*8}
+    route_counts = {}
+    for i in range(replicates):
+        simulation = simulate(mixed, source, horizon, seed=20261017+i)
+        route = first_pigmented_route(simulation, 'island')['route']
+        route_counts[route] = route_counts.get(route, 0) + 1
+    output['mixed_routes'] = {
+        'note':'First coloured island cohort: outcomes from a mixture of all three mechanisms; same-generation ties retained',
+        'first_route_counts':dict(sorted(route_counts.items())),
+        'first_route_proportions':{k:v/replicates for k,v in sorted(route_counts.items())},
+    }
     return output
 
 
