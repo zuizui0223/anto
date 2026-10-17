@@ -36,3 +36,31 @@ jobs:
         run: |
           python scripts/run_molecular_preflight_v5.py --output /tmp/anto_molecular_preflight_v5.json
           python -c "import json; x=json.load(open('/tmp/anto_molecular_preflight_v5.json')); assert x['registered_screen_count'] == 18; assert x['focal_run_count'] == 6; assert x['n_candidate_sequences_supplied'] == 0; assert x['focal_gene_state'] == 'UNMEASURED'; assert set(x['references']) == {'DFR','ANS','GMYC1'}; assert x['ancestral_regain_demonstrated'] is False"
+      - name: Verify Cirsium organ contrasts and hidden molecular state model
+        run: |
+          python scripts/run_organ_history_v6.py --output /tmp/anto_organ_v6.json
+          python -c "import json; x=json.load(open('/tmp/anto_organ_v6.json')); a=x['measured_organ_evidence_from_published_study']; b=x['theory_hypothesis_not_fitted_to_source']; assert a['n_author_reported_contrasts']==11; assert a['root_vs_leaf_dfr_mrna_n']==2; assert not a['ryukyu_competence_assessed']; assert b['not_Cirsium_rates'] and not x['hard_separation']['Ryukyu_floral_reexpression_confirmed']"
+
+  # Optional network reconnaissance: a failed or blocked supplement never
+  # makes source biology disappear and never upgrades candidate orthology.
+  supplement_probe:
+    if: github.event_name == 'pull_request'
+    needs: tests
+    runs-on: ubuntu-latest
+    timeout-minutes: 3
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Probe size-capped public Cirsium japonicum supplemental archive
+        run: |
+          python scripts/probe_cirsium_japonicum_supplement_v6.py --fetch-public --output /tmp/anto_supplement_v6.json
+      - name: Preserve retrieval status only, never raw unigene files
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: anto-v6-supplement-probe
+          path: /tmp/anto_supplement_v6.json
+          retention-days: 7
+          if-no-files-found: ignore
