@@ -1,0 +1,108 @@
+{
+  "registry_version": "anto_empirical_evidence_v3",
+  "as_of": "2026-10-17",
+  "purpose": "Public-source evidence/measurement readiness, not a genotype table or an evolutionary reconstruction",
+  "source_records": [
+    {
+      "flower_colour_recorded": true,
+      "geographic_occurrence_recorded": true,
+      "dated_lineage_tree_available": true,
+      "colour_transition_direction_established": false,
+      "colonization_direction_established": false,
+      "young_leaf_rna_registered": true,
+      "same_individual_genomic_flower_link": false,
+      "floral_pigment_chemistry": false,
+      "flower_stage_rna": false,
+      "functional_reexpression_test": false,
+      "pigment_locus_gene_flow_resolved": false,
+      "replicated_independent_reexpression_events": false,
+      "id": "CIRSIUM_RYUKYU_2026",
+      "system": "Cirsium brevicaule / Cirsium irumtiense",
+      "primary_url": "https://doi.org/10.1186/s12870-026-08097-6",
+      "project_accession": "PRJNA1311153",
+      "sample_scope": "Published 37 studied accessions, of which 25 newly sequenced young-leaf SRA libraries and 12 comparative previously published samples; not 37 new SRA records",
+      "published_split_ma": 0.93,
+      "published_split_95hpd_ma": [
+        0.71,
+        1.33
+      ],
+      "colour_resolution": "taxon",
+      "limitations": "Leaf RNA does not measure floral competence; lineage divergence is not pigment-loss date; recent gene-flow limitation is not proof against historical introgression; experimental floral expression wording requires separately verifiable methods.",
+      "evidence_source_urls": [
+        "https://pmc.ncbi.nlm.nih.gov/articles/PMC13020037/",
+        "https://www.ncbi.nlm.nih.gov/bioproject/1311153"
+      ]
+    },
+    {
+      "flower_colour_recorded": true,
+      "geographic_occurrence_recorded": true,
+      "dated_lineage_tree_available": true,
+      "colour_transition_direction_established": false,
+      "colonization_direction_established": false,
+      "young_leaf_rna_registered": true,
+      "same_individual_genomic_flower_link": true,
+      "floral_pigment_chemistry": false,
+      "flower_stage_rna": false,
+      "functional_reexpression_test": false,
+      "pigment_locus_gene_flow_resolved": false,
+      "replicated_independent_reexpression_events": false,
+      "id": "CIRSIUM_TAKAOENSE_2026",
+      "system": "Cirsium japonicum var. takaoense white/bluish-purple morphs",
+      "primary_url": "https://github.com/zuizui0223/aza3/blob/main/docs/TAKAOENSE_PHASEB_PREFIELD_CANDIDATE_REDUCTION_V1.md",
+      "project_accession": "PRJNA1311153",
+      "sample_scope": "Six aza3-curated morph-labelled young-leaf libraries: 3 white + 3 bluish-purple, one plant per locality, confounded morph/geography",
+      "colour_resolution": "individual_with_geographic_confounding",
+      "limitations": "Three-vs-three morph labels are confounded with site/elevation; no comparable floral-stage expression, pigment chemistry, or proof of a restored pathway; DFR/ANS homologous leaf reads are at most retention candidates.",
+      "evidence_source_urls": [
+        "https://github.com/zuizui0223/aza3/blob/main/data/contracts/takaoense_phaseb_prefield_contract_v1.json"
+      ]
+    },
+    {
+      "flower_colour_recorded": true,
+      "geographic_occurrence_recorded": false,
+      "dated_lineage_tree_available": false,
+      "colour_transition_direction_established": true,
+      "colonization_direction_established": false,
+      "young_leaf_rna_registered": false,
+      "same_individual_genomic_flower_link": true,
+      "floral_pigment_chemistry": true,
+      "flower_stage_rna": true,
+      "functional_reexpression_test": true,
+      "pigment_locus_gene_flow_resolved": false,
+      "replicated_independent_reexpression_events": true,
+      "id": "PETUNIA_MECHANISTIC_POSITIVE_CONTROL",
+      "system": "Petunia secreta and Petunia exserta",
+      "primary_url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC8364234/",
+      "project_accession": null,
+      "sample_scope": "Published genus-level molecular/functional evidence; two outcomes within one genus, not independent plant clades",
+      "colour_resolution": "experimental",
+      "limitations": "AN2 reading-frame restoration and DPL regulatory deployment are molecularly supported, but no calibrated history-dependent plant-colonization rate or genomewide locality ancestry inference is established here.",
+      "evidence_source_urls": [
+        "https://www.sciencedirect.com/science/article/pii/S0960982218313484",
+        "https://academic.oup.com/plcell/article/33/7/2273/6237947"
+      ]
+    },
+    {
+      "flower_colour_recorded": true,
+      "geographic_occurrence_recorded": false,
+      "dated_lineage_tree_available": false,
+      "colour_transition_direction_established": false,
+      "colonization_direction_established": false,
+      "young_leaf_rna_registered": false,
+      "same_individual_genomic_flower_link": false,
+      "floral_pigment_chemistry": false,
+      "flower_stage_rna": false,
+      "functional_reexpression_test": false,
+      "pigment_locus_gene_flow_resolved": false,
+      "replicated_independent_reexpression_events": false,
+      "id": "CHUN_CROSS_CLADE_VISIBLE_TIME",
+      "system": "Angiosperm visible flower-colour evolutionary memory clades",
+      "primary_url": "https://github.com/zuizui0223/chun/blob/main/docs/FLOWER_COLOUR_VARIATION_TEMPORAL_PROGRAM.md",
+      "project_accession": null,
+      "sample_scope": "Comparative visible-phenotype phylogenetic summary across clades, not organ-specific ability assays",
+      "colour_resolution": "taxon",
+      "limitations": "Relative phylogenetic similarity of visible floral hues does not imply pigment-pathway competence, molecular reacquisition, or an independently reconstructed dispersal direction.",
+      "evidence_source_urls": []
+    }
+  ]
+}
