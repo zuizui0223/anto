@@ -58,3 +58,16 @@ The [identifiability benchmark](src/anto_identifiability.py) demonstrates that t
 Commands: `python -m pip install numpy scipy`; `python -m unittest discover -s tests -v`; `python scripts/run_synthetic_baselines.py --replicates 400 --output results/synthetic_baselines_v2.json`.
 
 **Claim ceiling:** no biological specimens were newly admitted, no genuine colour re-evolution has been inferred for the Ryukyu pair, and no universal evolutionary window has been demonstrated.
+
+## v3 — empirical source intake and identifiability gate (2026-10-17)
+
+**New:** The [Ryukyu/Petunia/chun source-level evidence registry](data/empirical_sources_v3.json) is validated by a [fail-closed gate](src/anto_evidence_gate.py); *no* registered system yet combines experimentally validated floral re-expression competence, dated colonization direction, dense pigment-locus ancestry and independent replication. The new source audit verifies that the 2026 Ryukyu *Cirsium* study used **37 analysed accessions** but the NCBI [PRJNA1311153](https://www.ncbi.nlm.nih.gov/bioproject/1311153) project contains **25 new young-leaf transcriptome samples**. These do not measure flower-stage re-expression.
+
+The [exact three-history observation model](src/anto_assay_design.py) calculates why colour-only records are structurally non-identifying and how *hypothetical*, calibrated ancestry and pigment haplotype assays can help. A [four-history extension](src/anto_four_history_design.py) adds the most important anto contrast: **retained ancestral pathway reuse versus local de novo construction**. Two simple ancestry assays remain rank deficient for four histories; the third ancestral-reuse signal is hypothetical and requires independent molecular/dated validation.
+
+- [Evidence audit and full inference boundaries](docs/EMPIRICAL_GATE_AND_ASSAY_IDENTIFIABILITY_V3.md)
+- [Source-level evidence record](data/empirical_sources_v3.json)
+- [One-command validation runner](scripts/run_empirical_gate_v3.py)
+- [Regression tests](tests/test_empirical_v3.py)
+
+Run \`python scripts/run_empirical_gate_v3.py --output results/empirical_design_gate_v3.json\` after installing numpy/scipy. The exact assay-rank values are **synthetic design results**, not observed molecular classification accuracy. The repository has not established actual *Cirsium* re-expression or a universal rule across flowering plants.
