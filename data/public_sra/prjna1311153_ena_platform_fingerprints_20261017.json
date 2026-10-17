@@ -8,7 +8,7 @@
   },
   "paper_methods_instrument": "Illumina NovaSeq (150-bp paired end)",
   "paper_methods_url": "https://doi.org/10.1186/s12870-026-08097-6",
-  "metadata_discrepancy": "All 25 ENA experiments list Illumina MiniSeq, whereas paper Methods states Illumina NovaSeq. Flag unresolved; do not infer true instrument or data invalidity without author/SRA clarification.",
+  "metadata_discrepancy": "Discrepancy unresolved: all 25 ENA experiments list Illumina MiniSeq, whereas paper Methods states Illumina NovaSeq. Do not infer which instrument was used or that the data are invalid without author/SRA clarification.",
   "total_ena_fastq_bytes": 80659086447,
   "data_scope": "Run-index registration metadata only. No raw reads downloaded. MD5 fingerprints are provider declarations, not independently recomputed.",
   "run_fingerprints": [
