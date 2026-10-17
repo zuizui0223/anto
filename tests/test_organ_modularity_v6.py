@@ -132,7 +132,11 @@ class SupplementProbeTest(unittest.TestCase):
         with zipfile.ZipFile(io,"w",compression=zipfile.ZIP_DEFLATED) as z:
             z.writestr("ao0c04001_si_002.txt",
                        "geneid\tannotation\nTR001\tdihydroflavonol 4 reductase\nTR002\tcontrol\nTR003\tANS\n")
-            z.writestr("ao0c04001_si_003.xlsx",b"TEST_NON_REAL_XLSX")
+            workbook=BytesIO()
+            with zipfile.ZipFile(workbook,"w",compression=zipfile.ZIP_DEFLATED) as internal:
+                internal.writestr("xl/worksheets/sheet1.xml","<worksheet/>")
+                internal.writestr("xl/workbook.xml","<workbook/>")
+            z.writestr("ao0c04001_si_003.xlsx",workbook.getvalue())
         r=inspect_zip(io.getvalue())
         self.assertEqual(r["annotation_text_scan_status"],"SCANNED_ALL_LINES")
         self.assertEqual(r["potential_gene_annotation_text_hits"],2)
