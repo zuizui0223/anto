@@ -55,12 +55,12 @@ jobs:
           python-version: '3.11'
       - name: Probe size-capped public Cirsium japonicum supplemental archive
         run: |
-          python scripts/probe_cirsium_japonicum_supplement_v6.py --fetch-public --output /tmp/anto_supplement_v6.json
+          python scripts/inspect_cirsium_japonicum_unigene_annotation_v6.py --fetch-public --output /tmp/anto_unigene_introspection_v6.json
       - name: Preserve retrieval status only, never raw unigene files
         if: always()
         uses: actions/upload-artifact@v4
         with:
-          name: anto-v6-supplement-probe
-          path: /tmp/anto_supplement_v6.json
+          name: anto-v6-unigene-introspection
+          path: /tmp/anto_unigene_introspection_v6.json
           retention-days: 7
           if-no-files-found: ignore
