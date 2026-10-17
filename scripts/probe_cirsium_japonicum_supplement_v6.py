@@ -58,13 +58,19 @@ def inspect_zip(data, max_uncompressed=180_000_000):
             seen=0
             header_mode=None
             samples=[]
+            first_text_lines=[]
+            fasta_header_lines=0
             with z.open(target,"r") as raw:
                 for b in raw:
                     n+=1
-                    if n > 250000:
-                        report["annotation_text_scan_status"]="TRUNCATED_AT_250000_LINES"
+                    if n > 2000000:
+                        report["annotation_text_scan_status"]="TRUNCATED_AT_2000000_LINES"
                         break
                     s=b.decode("utf-8",errors="replace").strip()
+                    if len(first_text_lines)<5:
+                        first_text_lines.append(s[:200])
+                    if s.startswith(">"):
+                        fasta_header_lines+=1
                     if header_mode is None and s:
                         header_mode="FASTA_FORMAT" if s.startswith(">") else "TABULAR_OR_OTHER_TEXT"
                     if PATTERN.search(s):
@@ -75,8 +81,18 @@ def inspect_zip(data, max_uncompressed=180_000_000):
                     report["annotation_text_scan_status"]="SCANNED_ALL_LINES"
             report.update(annotation_lines_scanned=n,
                           annotation_text_structure=header_mode,
+                          annotation_first_lines=first_text_lines,
+                          fasta_header_lines=fasta_header_lines,
                           potential_gene_annotation_text_hits=seen,
                           annotation_examples=samples)
+        xlsx=next((m for m in members if Path(m.filename).name=="ao0c04001_si_003.xlsx"),None)
+        if xlsx is not None:
+            with zipfile.ZipFile(io.BytesIO(z.read(xlsx)), "r") as inner:
+                report["xlsx_internal_parts"]=[
+                    {"name":p.filename,"uncompressed_bytes":p.file_size}
+                    for p in inner.infolist()
+                    if p.filename in ("xl/sharedStrings.xml","xl/worksheets/sheet1.xml","xl/workbook.xml")
+                ]
         report["biological_sequence_assignment"]="NOT_VALIDATED"
         report["focal_ryukyu_evidence"]="NOT_TESTED"
         return report
