@@ -31,3 +31,8 @@ jobs:
           python -c "import json; d=json.load(open('/tmp/anto_sra_v4.json')); assert d['ryukyu_n_runs']==6; assert d['manifest_n_runs']==25; assert not d['floral_reexpression_demonstrated']; assert d['unresolved_instrument_inconsistency']"
           python src/anto_ryukyu_polarity.py > /tmp/anto_ryukyu_polarity_v4.json
           python -c "import json; x=json.load(open('/tmp/anto_ryukyu_polarity_v4.json')); assert len(x['cases'])==12; assert x['rates_hypothetical'] and x['not_phenotype_transition_date']"
+
+      - name: Verify real annotated Asteraceae reference CDSs and fail-closed Ryukyu molecular preflight
+        run: |
+          python scripts/run_molecular_preflight_v5.py --output /tmp/anto_molecular_preflight_v5.json
+          python -c "import json; x=json.load(open('/tmp/anto_molecular_preflight_v5.json')); assert x['registered_screen_count'] == 18; assert x['focal_run_count'] == 6; assert x['n_candidate_sequences_supplied'] == 0; assert x['focal_gene_state'] == 'UNMEASURED'; assert set(x['references']) == {'DFR','ANS','GMYC1'}; assert x['ancestral_regain_demonstrated'] is False"
