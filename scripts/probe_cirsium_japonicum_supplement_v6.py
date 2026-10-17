@@ -71,8 +71,8 @@ def inspect_zip(data, max_uncompressed=180_000_000):
                         seen+=1
                         if len(samples)<6:
                             samples.append(s[:200])
-            else:
-                report["annotation_text_scan_status"]="SCANNED_ALL_LINES"
+                else:
+                    report["annotation_text_scan_status"]="SCANNED_ALL_LINES"
             report.update(annotation_lines_scanned=n,
                           annotation_text_structure=header_mode,
                           potential_gene_annotation_text_hits=seen,
