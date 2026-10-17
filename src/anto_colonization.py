@@ -241,3 +241,23 @@ def order_experiment_probability(delta_source, delta_island, delay, horizon,
     return {"early": at_least_one((1-delta_island)**delay * p_gain),
             "late": at_least_one((1-delta_source)**delay * p_gain),
             "p_gain_if_competent": p_gain}
+
+
+def first_pigmented_route(result, region):
+    """Competing first-arrival routes; a same-generation tie is reported.
+
+    Observing coloured flowers alone does not supply these route labels. They
+    are simulator-oracle event logs, and cannot be used as empirical labels
+    without ancestry/molecular evidence.
+    """
+    time = first_pigmented(result, region)
+    if time is None:
+        return {"generation": None, "route": "not_observed"}
+    if time == 0:
+        return {"generation": 0, "route": "initially_present"}
+    observed = result["events"][time-1]["regions"][region]
+    causes = sorted(k for k in ("intrinsic_reexpression",
+                                "introgressive_reacquisition",
+                                "pigmented_immigrant") if observed.get(k, 0) > 0)
+    label = causes[0] if len(causes) == 1 else ("simultaneous_multiple" if causes else "undetermined")
+    return {"generation": time, "route": label, "concurrent_causes": causes}
