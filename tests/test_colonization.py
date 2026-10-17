@@ -2,7 +2,7 @@ import sys
 import unittest
 from pathlib import Path
 sys.path.insert(0, str(Path(__file__).resolve().parents[1] / 'src'))
-from anto_colonization import Parameters, Plant, simulate, visible, first_pigmented, order_experiment_probability
+from anto_colonization import Parameters, Plant, simulate, visible, first_pigmented, first_pigmented_route, order_experiment_probability
 from anto_identifiability import benchmark, generate
 
 class TestDispersalReexpression(unittest.TestCase):
@@ -53,6 +53,18 @@ class TestDispersalReexpression(unittest.TestCase):
         result = simulate(p, {'source': [Plant('S', 'W+')], 'island': []}, 1)
         self.assertGreater(result['events'][0]['regions']['island']['seed_recolonist'], 0)
         self.assertEqual(result['histories'][1]['regions']['island']['pigmented'], 0)
+
+    def test_first_recolouring_keeps_competing_causes(self):
+        p = Parameters(('source', 'island'), {'source':40, 'island':40},
+                       seed_migration={('source','island'):1},
+                       pollen_delivery={('source','island'):1},
+                       introgression=1, fecundity=10)
+        result = simulate(p, {'source':[Plant('S','P')],
+                              'island':[Plant('I','W-')]}, 1)
+        routes = first_pigmented_route(result,'island')
+        self.assertEqual(routes['route'], 'simultaneous_multiple')
+        self.assertEqual(set(routes['concurrent_causes']),
+                         {'introgressive_reacquisition','pigmented_immigrant'})
 
     def test_recolonization_after_catastrophe(self):
         p = Parameters(('source', 'island'), {'source':100, 'island':100},
