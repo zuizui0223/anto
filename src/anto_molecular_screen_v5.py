@@ -67,7 +67,7 @@ def cds_quality(seq):
     frame = (len(seq) % 3 == 0)
     codons = [seq[i:i + 3] for i in range(0, len(seq) - 2, 3)]
     stop_positions = [i for i, c in enumerate(codons) if GENETIC_CODE.get(c) == "*"]
-    complete = frame and codons[0] == "ATG" and codons[-1] in ("TAA", "TAG", "TGA")
+    complete = frame and bool(codons) and codons[0] == "ATG" and codons[-1] in ("TAA", "TAG", "TGA")
     internal_stop = any(i < len(codons)-1 for i in stop_positions)
     if n_fraction > .02:
         status = "AMBIGUOUS_CDS_NOT_CALLABLE"
@@ -81,7 +81,7 @@ def cds_quality(seq):
         "nucleotide_length": len(seq),
         "ambiguous_fraction": n_fraction,
         "divisible_by_three": frame,
-        "canonical_start": codons[0] == "ATG",
+        "canonical_start": bool(codons) and codons[0] == "ATG",
         "canonical_terminal_stop": bool(codons) and codons[-1] in ("TAA","TAG","TGA"),
         "internal_stop_codon_count": sum(i < len(codons)-1 for i in stop_positions),
         "sequence_qc_status": status,
