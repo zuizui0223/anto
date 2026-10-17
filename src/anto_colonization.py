@@ -197,7 +197,7 @@ def simulate(params, initial, generations, seed=1729):
                     counts[dst][route] += 1
                 if migrant:
                     counts[dst]["seed_immigrant"] += 1
-                    if not pop[dst]:
+                    if not survivors[dst]:
                         counts[dst]["seed_recolonist"] += 1
         pop = next_pop
         histories.append({"generation": t, "regions": visible(pop), "oracle_latent": latent_truth(pop)})
