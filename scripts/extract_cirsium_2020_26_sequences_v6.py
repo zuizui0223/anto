@@ -47,16 +47,15 @@ def load_registry(path=REGISTER):
     return d
 
 
-def extract_text_stream(raw, targets):
+def extract_text_stream(raw, targets, expected_total_headers=104890):
     """One pass through source FASTA; strict match for all declared transcript IDs."""
     found={}
     current=None
     seq=[]
     declared=None
     seen_headers=0
-    nucleotide_total=0
     def emit():
-        nonlocal current,seq,declared,nucleotide_total
+        nonlocal current,seq,declared
         if current is None:
             return
         bases="".join(seq)
@@ -89,7 +88,7 @@ def extract_text_stream(raw, targets):
             seq.append(line.upper())
     if current:
         emit()
-    if seen_headers != 104890:
+    if seen_headers != expected_total_headers:
         raise ValueError(f"Source unigene count drift: {seen_headers}")
     if set(found) != set(targets):
         raise ValueError(f"Missing {len(set(targets)-set(found))} target transcripts: {sorted(set(targets)-set(found))}")
