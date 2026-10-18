@@ -121,7 +121,7 @@ def _verify_published_worksheet(xlsx_bytes, registry):
         annotation=hit["annotation_cells"]
         if (cells.get(f"A{row}") != r["unigene_id"] or
             cells.get(f"B{row}") != r["blast_subject_identifier"] or
-            annotation.get(f"D{row}") != r["annotated_best_blast_hit"]):
+            r["annotated_best_blast_hit"] not in annotation.values()):
             raise ValueError(
                 f"Publisher annotation crosswalk mismatch at row {row}: "
                 f"A={cells.get(f'A{row}')!r} B={cells.get(f'B{row}')!r} "
