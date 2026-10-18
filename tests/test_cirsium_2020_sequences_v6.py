@@ -62,11 +62,11 @@ ATGAAATAG
                 b">TR1|c0_g1_i1 len=6\nATGTAA\n"),{
                 "TR1|c0_g1_i1"},expected_total_headers=104890)
 
-    def test_source_zip_checksum_fails_closed(self):
+    def test_bogus_archive_fails_uncompressed_source_gate(self):
         b=io.BytesIO()
         with zipfile.ZipFile(b,"w",compression=zipfile.ZIP_DEFLATED) as z:
             z.writestr("ao0c04001_si_002.txt",">TR1|c0_g1_i1 len=6\nATGTAA\n")
-        with self.assertRaisesRegex(ValueError,"checksum"):
+        with self.assertRaisesRegex(ValueError,"missing"):
             extract_archive(b.getvalue(),load_registry())
 
 
