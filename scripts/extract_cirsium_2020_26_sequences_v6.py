@@ -8,13 +8,16 @@ ANS or pigmentation locus. Neither paper nor these sequences describe the
 focal Ryukyu *brevicaule/irumtiense* six-individual RNA libraries.
 
 Source archive: Europe PMC public PMC7675961 supplementaryFiles.
-The archive SHA256 and exact unigenes are fixed before extraction; do not
-silently accept a changed archive or unrelated FASTA.
+Archive ZIP SHA256 may change when Europe PMC repackages files. Validate
+published source member sizes, row-level annotations, and exact unigene IDs;
+report each member's decompressed SHA256 before admitting biological data.
 """
 import argparse
 from collections import Counter
 from hashlib import sha256
 from io import BytesIO
+from decimal import Decimal, InvalidOperation
+from inspect_cirsium_japonicum_unigene_annotation_v6 import worksheet_report
 import json
 from pathlib import Path
 import re
@@ -27,6 +30,9 @@ ROOT = Path(__file__).resolve().parents[1]
 SOURCE_URL = "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC7675961/supplementaryFiles"
 REGISTER = ROOT / "data/molecular/cirsium_japonicum_2020_blast_candidate_hits_v6.json"
 TEXT_NAME = "ao0c04001_si_002.txt"
+XLSX_NAME = "ao0c04001_si_003.xlsx"
+EXPECTED_TEXT_BYTES = 90263821
+EXPECTED_XLSX_BYTES = 9753067
 MAX_ZIP = 50_000_000
 MAX_EXPANDED = 180_000_000
 HEADER_PATTERN = re.compile(r"^(TR\d+\|c\d+_g\d+_i\d+)\s+len=(\d+)(?:\s|$)")
@@ -95,22 +101,63 @@ def extract_text_stream(raw, targets, expected_total_headers=104890):
     return found,seen_headers
 
 
+def _verify_published_worksheet(xlsx_bytes, registry):
+    """Independent workbook-to-frozen-candidate audit; IDs and meanings fixed."""
+    worksheet=worksheet_report(xlsx_bytes)
+    if worksheet["workbook_row_count"] != 54791 or worksheet["hit_list_truncated_at_150"]:
+        raise ValueError("Changed/insufficient published BLAST annotation workbook")
+    hits=worksheet["candidate_annotation_hit_rows_capped"]
+    if len(hits) != 26:
+        raise ValueError(f"Expected 26 original annotation hits, found {len(hits)}")
+    byrow={r["row"]:r for r in hits}
+    if len(byrow)!=len(hits):
+        raise ValueError("Duplicate publisher workbook row")
+    for r in registry["records"]:
+        row=r["supplement_sheet_row"]
+        hit=byrow.get(row)
+        if hit is None:
+            raise ValueError(f"Publisher annotation row absent: {row}")
+        cells=hit["adjacent_cells"]
+        annotation=hit["annotation_cells"]
+        if (cells.get(f"A{row}") != r["unigene_id"] or
+            cells.get(f"B{row}") != r["blast_subject_identifier"] or
+            annotation.get(f"D{row}") != r["annotated_best_blast_hit"]):
+            raise ValueError(f"Publisher gene/BLAST crosswalk changed for row {row}")
+        try:
+            if Decimal(cells[f"C{row}"]) != Decimal(r["blast_evalue_source_string"]):
+                raise ValueError(f"Original BLAST score no longer matches at row {row}")
+        except (InvalidOperation,KeyError) as e:
+            raise ValueError(f"Invalid published E-value at row {row}") from e
+    return len(hits), worksheet["workbook_row_count"]
+
+
 def extract_archive(data, registry):
     if len(data)>MAX_ZIP or not zipfile.is_zipfile(BytesIO(data)):
         raise ValueError("Archive exceeds budget or is not a ZIP")
-    actual_sha=sha256(data).hexdigest()
-    if actual_sha != registry["source_zip_sha256"]:
-        raise ValueError(f"Source ZIP checksum mismatch; requires independent audit: {actual_sha}")
+    zip_sha=sha256(data).hexdigest()
     with zipfile.ZipFile(BytesIO(data),"r") as z:
         members=z.infolist()
         if sum(m.file_size for m in members)>MAX_EXPANDED:
             raise ValueError("Expanded archive exceeds budget")
-        target=next((m for m in members if Path(m.filename).name==TEXT_NAME),None)
-        if target is None:
-            raise ValueError("Frozen publisher supplementary TXT missing")
-        with z.open(target) as stream:
+        src=next((m for m in members if Path(m.filename).name==TEXT_NAME),None)
+        book=next((m for m in members if Path(m.filename).name==XLSX_NAME),None)
+        if src is None or book is None:
+            raise ValueError("Publisher supplementary FASTA or annotation workbook missing")
+        if src.file_size != EXPECTED_TEXT_BYTES or book.file_size != EXPECTED_XLSX_BYTES:
+            raise ValueError("Publisher source contents changed in uncompressed size; re-audit required")
+        with z.open(src) as stream:
+            # Streaming FASTA ensures all 104890 source headers and exact
+            # 26 target sequences are verified without retaining all transcripts.
             found,total_headers=extract_text_stream(
                 stream,{r["unigene_id"] for r in registry["records"]})
+        with z.open(src) as stream:
+            digest=sha256()
+            for chunk in iter(lambda: stream.read(1024*1024),b""):
+                digest.update(chunk)
+            fasta_sha=digest.hexdigest()
+        xlsx_bytes=z.read(book)
+        xlsx_sha=sha256(xlsx_bytes).hexdigest()
+        nverified,nworkbook=_verify_published_worksheet(xlsx_bytes,registry)
     rows=[]
     for r in registry["records"]:
         c=found[r["unigene_id"]]
@@ -131,9 +178,14 @@ def extract_archive(data, registry):
         "contract":"anto_park2020_26_source_transcripts_v6",
         "source_study":"10.1021/acsomega.0c04001",
         "source_archive":SOURCE_URL,
-        "source_zip_sha256":actual_sha,
+        "source_zip_sha256":zip_sha,
+        "prior_zip_sha256":registry["source_zip_sha256"],
+        "zip_container_sha_differs_from_previous":zip_sha != registry["source_zip_sha256"],
+        "decompressed_fasta_sha256":fasta_sha,
+        "decompressed_workbook_sha256":xlsx_sha,
         "source_fasta_entry_count":total_headers,
-        "selected_annotation_rows":len(rows),
+        "source_workbook_row_count":nworkbook,
+        "selected_annotation_rows_verified_against_original_workbook":nverified,
         "sequence_extracted_rows":len(rows),
         "selected_total_nucleotide_chars":sum(r["source_fasta_length"] for r in rows),
         "distinct_sequences":len({r["sha256_nucleotide"] for r in rows}),
