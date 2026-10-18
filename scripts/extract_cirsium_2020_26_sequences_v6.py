@@ -122,7 +122,12 @@ def _verify_published_worksheet(xlsx_bytes, registry):
         if (cells.get(f"A{row}") != r["unigene_id"] or
             cells.get(f"B{row}") != r["blast_subject_identifier"] or
             annotation.get(f"D{row}") != r["annotated_best_blast_hit"]):
-            raise ValueError(f"Publisher gene/BLAST crosswalk changed for row {row}")
+            raise ValueError(
+                f"Publisher annotation crosswalk mismatch at row {row}: "
+                f"A={cells.get(f'A{row}')!r} B={cells.get(f'B{row}')!r} "
+                f"D={annotation.get(f'D{row}')!r}; expected "
+                f"{r['unigene_id']!r}, {r['blast_subject_identifier']!r}, "
+                f"{r['annotated_best_blast_hit']!r}")
         try:
             if Decimal(cells[f"C{row}"]) != Decimal(r["blast_evalue_source_string"]):
                 raise ValueError(f"Original BLAST score no longer matches at row {row}")
