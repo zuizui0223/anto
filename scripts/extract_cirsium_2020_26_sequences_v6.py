@@ -178,9 +178,12 @@ def main():
     print("Extracted 26 published transcript FASTA records; biological orthology remains unverified.")
     print(f"Source SHA256={outcome['source_zip_sha256']}; distinct sequences={outcome['distinct_sequences']}; total_nt={outcome['selected_total_nucleotide_chars']}")
     if args.print_transfer_json:
-        print("ANTO_CIRSIUM_2020_TRANSFER_JSON_BEGIN")
-        print(compact)
-        print("ANTO_CIRSIUM_2020_TRANSFER_JSON_END")
+        print("ANTO_CIRSIUM_2020_TRANSFER_BEGIN")
+        without_records = {k:v for k,v in outcome.items() if k != "records"}
+        print("ANTO_SOURCE_SUMMARY_JSON:"+json.dumps(without_records,separators=(",",":"),ensure_ascii=False))
+        for record in outcome["records"]:
+            print("ANTO_SOURCE_RECORD_JSON:"+json.dumps(record,separators=(",",":"),ensure_ascii=False))
+        print("ANTO_CIRSIUM_2020_TRANSFER_END")
 
 
 if __name__=="__main__":
