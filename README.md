@@ -1,6 +1,10 @@
 # anto — The biogeography of floral evolutionary potential
 
 
+**New v9: when does history cease to predict evolution?** If a plant's present molecular/developmental state is sufficient to predict a future trait, past dispersal history should add no independent predictive information *after that state is fully measured*. But past history can still predict strongly when the observed white flower hides jointly retained resources. [Exact theoretical forecast experiment](docs/HISTORY_MEDIATION_AND_HIDDEN_STATE_SUFFICIENCY_V9.md) compares visible colour, dispersal-history labels, imperfect module assays and the full resource inventory; it is a synthetic Markov/state-identification hypothesis, not a demonstrated universally predictive genetic result.
+
+
+
 **Repository execution boundary (v8, 19 October 2026):** Active anto CI now runs **generic probabilistic models only**. All public *Cirsium* RNA/DFR/ANS source analyses, pigmentation/capitulum LEGO field and genomic designs are canonically executed in [aza3](https://github.com/zuizui0223/aza3). Older Cirsium modules and files in anto are retained as **historical provenance, not a competing empirical pipeline**. [Details](docs/THEORY_ONLY_CI_AND_AZA3_ROUTING_V8.md).
 
 
