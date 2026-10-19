@@ -24,6 +24,20 @@ jobs:
         run: |
           python scripts/audit_iochrominae_ho_smith_original_dryad_v1.py \
             --output /tmp/iochrominae-2016-raw-source-audit.json
+          python - <<'PY'
+          import json
+          p=json.load(open("/tmp/iochrominae-2016-raw-source-audit.json"))
+          if p["source_status"]!="SOURCE_BYTES_VERIFIED":
+              assert p["source_status"].startswith("SOURCE_FILE_ACCESS_RESTRICTED_HTTP_")
+              assert p["scientific_admission"]=="SOURCE_ONLY_METADATA_FILES_UNAVAILABLE"
+              assert p["coding_integrity_independently_replayed"] is False
+              assert p["phenotypic_regain_or_fitness_estimated"] is False
+              print("SOURCE_ACCESS_ABSTENTION_NOT_BIOLOGICAL_RESULT",
+                    p["source_status"])
+          else:
+              assert p["source_bytes_downloaded"] is True
+              print("SOURCE_BYTES_HASH_VERIFICATION_COMPLETED")
+          PY
       - uses: actions/upload-artifact@v4
         with:
           name: iochrominae-2016-original-alignment-source-receipt
