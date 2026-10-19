@@ -204,7 +204,28 @@ def panel():
     v = opportunity_trace(theta, rates, gradient, "value")
     p = opportunity_trace(theta, rates, gradient, "path")
     a = opportunity_trace(theta, rates, gradient, "all")
+    # Same loss hazard and same five favorable generations in both rows.
+    # The rank reverses when activation is slow but expressed states persist.
+    fast_at_fixed_loss = Rates(F(2,5), F(3,4), F(1,20))
+    slow_persistent_at_fixed_loss = Rates(F(1,20), F(19,20), F(1,20))
+    fast_early = opportunity_trace(theta, fast_at_fixed_loss, early)[-1][outcome]
+    fast_late = opportunity_trace(theta, fast_at_fixed_loss, late)[-1][outcome]
+    slow_early = opportunity_trace(theta, slow_persistent_at_fixed_loss, early)[-1][outcome]
+    slow_late = opportunity_trace(theta, slow_persistent_at_fixed_loss, late)[-1][outcome]
     return {
+        "timing_rank_reversal_at_fixed_loss": {
+            "degradation": F(1,20),
+            "fast_activation": F(2,5),
+            "fast_repeat": F(3,4),
+            "fast_early": fast_early,
+            "fast_late": fast_late,
+            "slow_activation": F(1,20),
+            "slow_repeat": F(19,20),
+            "slow_early": slow_early,
+            "slow_late": slow_late,
+            "late_to_early_ratio_slow": slow_late/slow_early,
+            "equal_favorable_generations": 5,
+        },
         "schema": "anto_slk_ecological_opportunity_window_v1",
         "synthetic_conditional_model": True,
         "actual_evolutionary_regain_or_fixation_observed": False,
