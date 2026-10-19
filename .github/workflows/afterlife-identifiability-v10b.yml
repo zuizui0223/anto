@@ -1,0 +1,44 @@
+name: ANTO first-induction identifiability v10b
+on:
+  push:
+    paths:
+      - "src/anto_afterlife_induction_identifiability_v10b.py"
+      - "tests/test_afterlife_induction_identifiability_v10b.py"
+      - "scripts/run_afterlife_induction_identifiability_v10b.py"
+      - "src/anto_afterlife_frontier_v10.py"
+      - "src/anto_joint_accessibility_v7.py"
+      - ".github/workflows/afterlife-identifiability-v10b.yml"
+  pull_request:
+    paths:
+      - "src/anto_afterlife_induction_identifiability_v10b.py"
+      - "tests/test_afterlife_induction_identifiability_v10b.py"
+      - "scripts/run_afterlife_induction_identifiability_v10b.py"
+      - "src/anto_afterlife_frontier_v10.py"
+      - "src/anto_joint_accessibility_v7.py"
+      - ".github/workflows/afterlife-identifiability-v10b.yml"
+permissions:
+  contents: read
+jobs:
+  exact-hypothesis-gates:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - name: Verify exact nonidentifiability, repeated expression and claim ceilings
+        run: |
+          python -m unittest discover -s tests -p 'test_afterlife_frontier_v10.py' -v
+          python -m unittest discover -s tests -p 'test_afterlife_induction_identifiability_v10b.py' -v
+      - name: Reproduce fixed equivalence witnesses
+        run: |
+          python scripts/run_afterlife_induction_identifiability_v10b.py --output /tmp/anto-identifiability.json
+          python - <<'PY'
+          import json
+          from fractions import Fraction as F
+          r=json.load(open("/tmp/anto-identifiability.json"))
+          x=r["first_induction_counterexample"]
+          assert x["first_pulse_visible_positive_both"]=="1/10"
+          assert F(x["three_in_a_row_by_horizon_A"]) < F(x["three_in_a_row_by_horizon_B"])
+          assert r["ecological_fitness_or_true_trait_regain_measured"] is False
+          PY
