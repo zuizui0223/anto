@@ -1,0 +1,43 @@
+name: anto v10 phenotype-afterlife exact frontier
+on:
+  push:
+    paths:
+      - "src/anto_afterlife_frontier_v10.py"
+      - "src/anto_joint_accessibility_v7.py"
+      - "tests/test_afterlife_frontier_v10.py"
+      - "scripts/run_afterlife_frontier_v10.py"
+      - ".github/workflows/afterlife-frontier-v10.yml"
+  pull_request:
+    paths:
+      - "src/anto_afterlife_frontier_v10.py"
+      - "src/anto_joint_accessibility_v7.py"
+      - "tests/test_afterlife_frontier_v10.py"
+      - "scripts/run_afterlife_frontier_v10.py"
+      - ".github/workflows/afterlife-frontier-v10.yml"
+permissions:
+  contents: read
+jobs:
+  conditional-model-only:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Check all exact transition and claim-boundary tests
+        run: python -m unittest discover -s tests -p 'test_afterlife_frontier_v10.py' -v
+      - name: Reproduce model scenarios from frozen source
+        run: |
+          python scripts/run_afterlife_frontier_v10.py --output /tmp/anto-afterlife-v10.json
+          python - <<'PY'
+          import json
+          from fractions import Fraction as F
+          p=json.load(open('/tmp/anto-afterlife-v10.json'))
+          assert p['synthetic'] and not p['empirical_generalization_demonstrated']
+          assert p['Cirsium_empirical_owner']=='zuizui0223/aza3'
+          a=p['scenarios']['fast_flash_weak_retention']['trajectory']
+          b=p['scenarios']['slow_activation_strong_retention']['trajectory']
+          assert F(a[1]['first_expression_ever'])>F(b[1]['first_expression_ever'])
+          assert F(a[-1]['three_consecutive_expression_ever'])<F(b[-1]['three_consecutive_expression_ever'])
+          assert p['scenarios']['slow_activation_with_acquisition']['sharp_bounds']['initial_no_complete_toolkit_can_recover']
+          PY
