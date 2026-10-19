@@ -20,6 +20,12 @@ jobs:
           python -m unittest discover -s tests -p 'test_colonization.py' -v
       - name: Test exact higher-order module accessibility and movement order
         run: python -m unittest discover -s tests -p 'test_joint_accessibility_v7.py' -v
+      - name: Test exact history vs hidden-present-state sufficiency and noisy functional assays
+        run: |
+          python -m unittest discover -s tests -p 'test_history_state_sufficiency_v9.py' -v
+          python scripts/run_history_state_sufficiency_v9.py --output /tmp/anto_history_sufficiency_v9.json
+          python -c "import json; d=json.load(open('/tmp/anto_history_sufficiency_v9.json')); r=d['models']['strong_assay']; b=r['bayes_optimal_brier_exact']; assert b['visible_flower_only']=='19/400'; assert b['visible_plus_history']=='9/200'; assert b['visible_plus_complete_functional_inventory']=='3/100'; assert r['residual_history_gain_after_complete_state']==0 and not d['empirical_generalization_demonstrated']"
+
       - name: Replay generic synthetic regional dispersal and state-identification examples
         run: |
           python scripts/run_synthetic_baselines.py --replicates 40 --horizon 8 --output /tmp/anto_synthetic.json
