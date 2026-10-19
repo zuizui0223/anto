@@ -66,6 +66,22 @@ class SLKAntoWindowTests(unittest.TestCase):
                                0.022911090658500367, places=14)
         self.assertGreater(a["gate_qualified_three_streak_ever"],2*b["gate_qualified_three_streak_ever"])
 
+    def test_timing_ranking_reverses_under_constant_loss(self):
+        early=[self.on]*5+[self.off]*9
+        late=[self.off]*9+[self.on]*5
+        high=Rates(F(2,5),F(3,4),F(1,20))
+        slow=Rates(F(1,20),F(19,20),F(1,20))
+        f1=opportunity_trace(F(1,8),high,early)[-1]["gate_qualified_three_streak_ever"]
+        f2=opportunity_trace(F(1,8),high,late)[-1]["gate_qualified_three_streak_ever"]
+        s1=opportunity_trace(F(1,8),slow,early)[-1]["gate_qualified_three_streak_ever"]
+        s2=opportunity_trace(F(1,8),slow,late)[-1]["gate_qualified_three_streak_ever"]
+        self.assertGreater(f1,f2)
+        self.assertLess(s1,s2)
+        self.assertAlmostEqual(float(f1),0.0543515625,places=12)
+        self.assertAlmostEqual(float(f2),0.03901085888547753,places=12)
+        self.assertAlmostEqual(float(s1),0.01528609375,places=12)
+        self.assertAlmostEqual(float(s2),0.03194657665380759,places=12)
+
     def test_shifted_value_local_and_invasion_crossings(self):
         contexts=gradient_slices()
         self.assertEqual([sum(c.allows(g) for c in contexts)
