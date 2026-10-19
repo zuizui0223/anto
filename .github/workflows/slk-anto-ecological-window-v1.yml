@@ -42,5 +42,9 @@ jobs:
           assert F(d["early_qualified"])>2*F(d["late_qualified"])
           assert F(d["early_any_expression"])==F(d["late_any_expression"])
           assert F(d["gradient_probabilities"]["value"]) > F(d["gradient_probabilities"]["value_and_local_path"]) > F(d["gradient_probabilities"]["value_path_and_rare_invader"])
+          y=d["timing_rank_reversal_at_fixed_loss"]
+          assert y["degradation"]=="1/20"
+          assert F(y["fast_early"])>F(y["fast_late"])
+          assert F(y["slow_early"])<F(y["slow_late"])
           print("EXACT_SLK_ANTO_WINDOW_VALIDATED",d["early_late_ratio"])
           PY
