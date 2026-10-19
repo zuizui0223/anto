@@ -1,0 +1,37 @@
+name: Iochrominae original trait–gene joint source audit
+on:
+  pull_request:
+    paths:
+      - "scripts/audit_iochrominae_2016_pigment_source_join_v1.py"
+      - "data/iochrominae_2016_fig1_source_trait_taxon_crosswalk_v1.json"
+      - "results/iochrominae_2016_trait_KT_source_join_20261019.json"
+      - "tests/test_iochrominae_2016_pigment_source_join_v1.py"
+      - ".github/workflows/iochrominae-trait-genbank-join.yml"
+  push:
+    branches: [main]
+    paths:
+      - "scripts/audit_iochrominae_2016_pigment_source_join_v1.py"
+      - "data/iochrominae_2016_fig1_source_trait_taxon_crosswalk_v1.json"
+      - "results/iochrominae_2016_trait_KT_source_join_20261019.json"
+      - "tests/test_iochrominae_2016_pigment_source_join_v1.py"
+permissions:
+  contents: read
+jobs:
+  biological-grain-and-missingness:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - name: Revalidate published 7/15 flower phenotype and genotype source crosswalk
+        run: python -m unittest discover -s tests -p test_iochrominae_2016_pigment_source_join_v1.py -v
+      - name: Recompute frozen original-source figure × accession result
+        run: |
+          python scripts/audit_iochrominae_2016_pigment_source_join_v1.py \
+            --output /tmp/iochrominae_trait_source_join.json \
+            --expected results/iochrominae_2016_trait_KT_source_join_20261019.json
+      - uses: actions/upload-artifact@v4
+        with:
+          name: iochrominae-2016-published-pigment-kt-original-source-join
+          path: /tmp/iochrominae_trait_source_join.json
