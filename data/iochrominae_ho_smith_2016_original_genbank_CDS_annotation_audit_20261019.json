@@ -1,0 +1,80 @@
+{
+  "schema": "anto_iochrominae_original_genbank_58_record_annotation_audit_v1",
+  "date": "2026-10-19",
+  "original_authors": "Ho and Smith 2016",
+  "original_study_doi": "10.1186/s12862-016-0675-3",
+  "original_accession_interval": [
+    "KT898394",
+    "KT898451"
+  ],
+  "original_source_git_commit": "994aeea3e3711d877e2cba42865ffc270c4b5904",
+  "original_source_workflow_run_id": 39232695589,
+  "original_source_json_artifact": "iochrominae-original-author-kt-source-audit",
+  "original_source_recovered_58_of_58": true,
+  "unique_taxa_from_registered_accessions": 22,
+  "gene_group_metadata": {
+    "CHI": {
+      "n_records": 22,
+      "n_annotated_CDS": 22,
+      "record_length_nt": {
+        "705": 22
+      },
+      "phenotype_conditioned_function_verified": false
+    },
+    "F3H": {
+      "n_records": 22,
+      "n_annotated_CDS": 22,
+      "record_length_nt": {
+        "1089": 22
+      },
+      "phenotype_conditioned_function_verified": false
+    },
+    "DFR": {
+      "n_records": 14,
+      "n_annotated_CDS": 12,
+      "record_length_nt": {
+        "1143": 1,
+        "1145": 1,
+        "1146": 11,
+        "1170": 1
+      },
+      "phenotype_conditioned_function_verified": false
+    }
+  },
+  "original_2016_article_aligned_coding_region_lengths_nt": {
+    "CHI": 717,
+    "F3H": 1113,
+    "DFR": 1179
+  },
+  "total_deposited_records_with_CDS_annotation": 56,
+  "source_records_without_CDS_annotation": [
+    {
+      "accession": "KT898443",
+      "organism": "Iochroma confertiflorum",
+      "group": "DFR",
+      "record_length_nt": 1145
+    },
+    {
+      "accession": "KT898446",
+      "organism": "Iochroma ellipticum",
+      "group": "DFR",
+      "record_length_nt": 1170
+    }
+  ],
+  "source_records_without_CDS_annotation_are_not_confirmed_pseudogenes": true,
+  "registered_DFR_missing_for_8_species_does_not_establish_gene_loss": true,
+  "cross_study_Iochroma_edule": {
+    "registered_chi_accession": "KT898423",
+    "registered_f3h_accession": "KT898401",
+    "registered_dfr_accession": "KT898445",
+    "retained_regulatory_capacity_same_individual": "UNMEASURED",
+    "evolutionary_regain": "PHYLOGENETICALLY_INFERRED_IN_PUBLISHED_LARTER_2018_NOT_REPLICATED_IN_THIS_AUDIT",
+    "original_larter_DOI": "10.1093/molbev/msy117",
+    "source_overlap_is_not_independent_biological_replication": true
+  },
+  "present_analysis_scope": "Original GenBank accession registry, deposited gene metadata and CDS feature presence; no reassembly, no codon phylogeny, no enzymology.",
+  "phenotype_conditioned_gene_erosion_rate_estimated": false,
+  "historical_irreversible_loss_probability_estimated": false,
+  "multi_clade_generalization_demonstrated": false,
+  "error_model": "Missing source annotation is UNKNOWN; original source paper results remain attributed to the original authors, not claimed as new biological discovery."
+}
