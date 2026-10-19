@@ -40,6 +40,49 @@ def validate_joint(p: Mapping[str,Fraction]):
     return distribution
 
 
+def feasible_triple_bounds(marginal, pairs):
+    """Sharp P(111) bounds from ALL first and second binary moments alone.
+
+    This is the elementary Fréchet feasibility polytope, not a novel theorem.
+    Marginal order M1,M2,M3; pairs map {(0,1), (0,2), (1,2)} to
+    the observed joint probabilities P(Xi=1,Xj=1).
+    """
+    if len(marginal)!=3 or set(pairs)!={(0,1),(0,2),(1,2)}:
+        raise ValueError("Need three marginal and three pairwise joint values")
+    m1,m2,m3=(Fraction(x) for x in marginal)
+    p12,p13,p23=(Fraction(pairs[pair]) for pair in ((0,1),(0,2),(1,2)))
+    if any(x<ZERO or x>ONE for x in (m1,m2,m3,p12,p13,p23)):
+        raise ValueError("Marginal and pairwise probabilities must be [0,1]")
+    lo=max(ZERO,p12+p13-m1,p12+p23-m2,p13+p23-m3)
+    hi=min(p12,p13,p23,ONE-m1-m2-m3+p12+p13+p23)
+    if lo>hi:
+        raise ValueError("Given marginal and pairwise moments have no joint distribution")
+    return lo,hi
+
+
+def joint_from_moments(marginal,pairs,p111):
+    """Every 3-Bernoulli distribution compatible with given moments.
+
+    There is one unconstrained third-order degree of freedom p111.
+    """
+    m1,m2,m3=(Fraction(x) for x in marginal)
+    p12,p13,p23=(Fraction(pairs[k]) for k in ((0,1),(0,2),(1,2)))
+    p111=Fraction(p111)
+    lower,upper=feasible_triple_bounds((m1,m2,m3),pairs)
+    if not lower<=p111<=upper:
+        raise ValueError("Third-order joint lies outside its sharp feasibility bounds")
+    return validate_joint({
+        "111":p111,
+        "110":p12-p111,
+        "101":p13-p111,
+        "011":p23-p111,
+        "100":m1-p12-p13+p111,
+        "010":m2-p12-p23+p111,
+        "001":m3-p13-p23+p111,
+        "000":ONE-m1-m2-m3+p12+p13+p23-p111
+    })
+
+
 def pairwise_constrained_family(theta:Fraction):
     """Construct every feasible 3-module exchangeable parity-like family.
 
@@ -54,10 +97,11 @@ def pairwise_constrained_family(theta:Fraction):
     theta=Fraction(theta)
     if not ZERO <= theta <= Fraction(1,4):
         raise ValueError("Feasible theta is between 0 and 1/4")
-    return validate_joint({
-        mask:(theta if (mask.count("1")%2) else Fraction(1,4)-theta)
-        for mask in MASKS
-    })
+    return joint_from_moments(
+        (Fraction(1,2),)*3,
+        {(0,1):Fraction(1,4),(0,2):Fraction(1,4),(1,2):Fraction(1,4)},
+        theta
+    )
 
 
 def co_retained_distribution():
