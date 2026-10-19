@@ -1,0 +1,49 @@
+name: ANTO-SLK silent priming and finite ecological window v2
+on:
+  pull_request:
+    paths:
+      - "src/anto_slk_silent_priming_window_v2.py"
+      - "tests/test_slk_anto_silent_priming_window_v2.py"
+      - "scripts/run_slk_anto_silent_priming_v2.py"
+      - "docs/SLK_ANTO_SILENT_PRIMING_WINDOW_V2.md"
+      - "src/anto_slk_ecological_window_v1.py"
+      - ".github/workflows/slk-anto-silent-priming-v2.yml"
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  exact-and-independent-state-check:
+    runs-on: ubuntu-latest
+    timeout-minutes: 7
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - name: Test original SLK bridge, independent U-P-D oracle, and v2
+        run: |
+          python -m unittest discover -s tests -p 'test_slk_anto_ecological_window_v1.py' -v
+          python -m unittest discover -s tests -p 'test_slk_anto_silent_priming_window_v2.py' -v
+      - name: Reproduce exact result with no biological claim inflation
+        run: |
+          python scripts/run_slk_anto_silent_priming_v2.py --output /tmp/anto-slk-silent-priming-v2.json
+          python - <<'PY'
+          import json
+          from fractions import Fraction as F
+          data=json.load(open("/tmp/anto-slk-silent-priming-v2.json"))
+          assert data["model_type"]=="exact_conditional_synthetic_hypothesis"
+          assert data["no_new_specimens_or_empirical_rates"] is True
+          assert data["priming_is_unverified_mechanism"] is True
+          assert data["three_expression_snapshots_not_fitness_or_fixation"] is True
+          assert data["SLK_positive_gate_is_not_population_establishment"] is True
+          assert data["Cirsium_empirical_owner"]=="zuizui0223/aza3"
+          assert data["one_step_delay_boundary"]=="71/1000"
+          assert data["one_step_delayed_better"] is True
+          assert data["finite_optimum"]["best_wait"]==9
+          assert data["sampled_delay_event_probabilities"]["0"]=="1/125"
+          p=data["same_all_white_and_same_toolkit_at_delay9"]
+          assert p["visible_positive_both"]=="0"
+          assert F(p["with_silent_priming"])>4*F(p["without_priming"])
+          assert data["finite_optimum"]["best_probability"]==data["sampled_delay_event_probabilities"]["9"]
+          print("CONDITIONAL_SILENT_PRIMING_VERIFIED",data["finite_optimum"]["best_wait"])
+          PY
