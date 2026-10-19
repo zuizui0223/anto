@@ -34,6 +34,18 @@ class AfterlifeFrontierV10Tests(unittest.TestCase):
             self.assertEqual(after["three_streak_native"]+after["three_streak_acquired"],
                              after["three_consecutive_expression_ever"])
 
+    def test_independent_short_path_oracle_and_visibility_partition(self):
+        a,r,d,g=F(3,5),F(3,4),F(1,10),F(1,3)
+        rates=Rates(a,r,d,g)
+        # Independent three-step path: L -> E1 -> E2 -> E3.
+        self.assertEqual(run(1,rates,3)[-1]["three_streak_native"],a*r*r)
+        # Four steps from no toolkit: D -> newly acquired L -> E1 -> E2 -> E3.
+        self.assertEqual(run(0,rates,4)[-1]["three_streak_acquired"],g*a*r*r)
+        path=run(F(1,8),rates,12)
+        self.assertEqual(path[1]["first_expression_ever"],F(1,8)*a)
+        for item in path:
+            self.assertEqual(item["present_expression"]+item["visibly_white_now"],1)
+
     def test_no_initial_resources_no_acquisition_absolutely_no_return(self):
         for t in run(0,Rates("3/5","3/4","1/10",0),12):
             self.assertEqual(t["first_expression_ever"],0)
