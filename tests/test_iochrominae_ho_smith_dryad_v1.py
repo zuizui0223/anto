@@ -88,6 +88,26 @@ class SourceIntakeTests(unittest.TestCase):
             with self.assertRaisesRegex(ValueError,"SHA256 mismatch"):
                 d.download_registered_files(metadata)
 
+    def test_access_denial_records_explicit_metadata_only_abstention(self):
+        meta={"identifier":"doi:10.5061/dryad.49rs8","title":"Original Ho-Smith",
+              "_links":{"stash:version":{"href":"/api/v2/versions/12345"}}}
+        names=list(d.EXPECTED_FILES)
+        files=[{"path":name,"size":12345,"digest":"abc"+str(i),"digestType":"sha-256",
+                "_links":{"stash:download":{"href":f"/api/v2/files/{i+2222}/download"}}}
+               for i,name in enumerate(names)]
+        def mocked(url):
+            if url=="https://datadryad.org/api/v2/versions/12345/files":
+                return json.dumps({"total":3,"_embedded":{"stash:files":files}}).encode()
+            raise AssertionError(url)
+        with patch.object(d,"get_bytes",side_effect=mocked):
+            receipt=d.blocked_source_receipt(meta,"SOURCE_FILE_ACCESS_RESTRICTED_HTTP_401")
+        self.assertEqual(receipt["scientific_admission"],"SOURCE_ONLY_METADATA_FILES_UNAVAILABLE")
+        self.assertFalse(receipt["source_bytes_downloaded"])
+        self.assertFalse(receipt["per_file_sha256_computed"])
+        self.assertFalse(receipt["coding_integrity_independently_replayed"])
+        self.assertFalse(receipt["phenotypic_regain_or_fitness_estimated"])
+        self.assertEqual(set(receipt["original_files_metadata_only"]),set(d.EXPECTED_FILES))
+
     def test_missing_version_link_is_not_caught_with_fake_file(self):
         with self.assertRaisesRegex(RuntimeError,"VERSION_METADATA"):
             d.download_registered_files({})
