@@ -1,5 +1,17 @@
 # anto — The biogeography of floral evolutionary potential
 
+
+## Active v7 theory: higher-order floral resource accessibility
+
+**anto now owns general theory only; [aza3 owns all Cirsium experimental designs, source data and genetic LEGO/fitness tests](https://github.com/zuizui0223/aza3/blob/main/docs/ANTO_ACCESSIBILITY_TO_AZA3_HEAD_LEGO_EMPIRICAL_MASTER_V1.md).** Earlier *Cirsium* sample/sequence files in this repo are archived source evidence, **not** a second active empirical pipeline. All future same-individual molecular and head morphology analysis should take place under aza3.
+
+**Core exact result (conditional, not empirical):** Even if every module is retained in 50% of lineages and every pair co-occurs in 25%, the probability of retaining **all three required components** can be anywhere between 0 and 25%. One, two and three-module summary traits are not interchangeable. In particular, pairwise-independent module inventories can completely lack the triple combination. See [formal argument and dispersal history results](docs/JOINT_MODULE_ACCESSIBILITY_AND_DISPERSAL_V7.md), [executable exact bounds](src/anto_joint_accessibility_v7.py) and [new tests](tests/test_joint_accessibility_v7.py).
+
+Geographically, moving a plant lineage before versus after a duration of region-dependent genetic/developmental degradation can alter which composite modules remain accessible. When losses of required modules are independent and destination rates exceed source rates, the *relative* accessibility penalty accumulates multiplicatively with module count. This prediction can disappear or reverse if the destination preserves resources, if the required modules were never jointly present, or if gene exchange and recovery reopen routes. The current numbers are mathematical examples, **not measured rates or universal directionality**.
+
+**Theory vs evidence:** An intact module inventory is not a floral phenotype; compatibility, developmental expression, establishment and actual fitness are separate layers. Generality across angiosperms remains an empirical question. No *Cirsium brevicaule* or *C. irumtiense* ancestral pigment regain has been established.
+
+
 **Core question:** When plants colonize new regions, to what extent can lineages retain, transport, and reuse reproductive traits that were previously lost from visible expression?
 
 **Origin:** The contrasting white and coloured flower phenotypes of the Ryukyu *Cirsium brevicaule* / *irumtiense* complex motivated this programme through [aza3](https://github.com/zuizui0223/aza3). A 2026 phylotranscriptomic study supports distinct Ryukyu lineages (doi:10.1186/s12870-026-08097-6), while POWO retains a broader synonym treatment. Neither the ancestral pigment state nor any loss/regain event is established. This remains the hypothesis-generating origin, not proof of reversal.
