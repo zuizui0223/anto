@@ -46,6 +46,11 @@ jobs:
           python scripts/run_2020_homology_triage_v6.py --output /tmp/anto_2020_homology_v6.json
           python -c "import json; x=json.load(open('/tmp/anto_2020_homology_v6.json')); assert x['n_transcripts']==26 and x['Ryukyu_2026_sequences_included'] is False and x['floral_reexpression_proven'] is False and x['orthology_resolved'] is False"
 
+      - name: Verify generic three-module sharp bounds and history-order amplification
+        run: |
+          python scripts/run_joint_accessibility_v7.py --output /tmp/anto_joint_accessibility_v7.json
+          python -c "import json; x=json.load(open('/tmp/anto_joint_accessibility_v7.json')); d=x['distributions']; assert x['empirical_plant_data_admitted'] is False; assert d['even_parity']['all_three_joint']=='0' and d['independent']['all_three_joint']=='1/8' and d['odd_parity']['all_three_joint']=='1/4'; assert x['exact_sharp_bound_p111_given_marginals_half_and_pairs_quarter']==['0','1/4']; assert x['Cirsium_empirical_owner']=='zuizui0223/aza3'"
+
   # Optional network reconnaissance: a failed or blocked supplement never
   # makes source biology disappear and never upgrades candidate orthology.
   supplement_probe:
