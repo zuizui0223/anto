@@ -1,0 +1,254 @@
+{
+  "schema": "anto_iochrominae_58_original_genbank_source_coverage_v1",
+  "date": "2026-10-19",
+  "program": "original Ho and Smith 2016, DOI 10.1186/s12862-016-0675-3",
+  "dataset_doi": "10.5061/dryad.49rs8",
+  "original_accessions": "KT898394-KT898451",
+  "original_retrieval": "ENA INSDC Browser API, 2026-10-19",
+  "provenance": {
+    "github_workflow_run_id": 39229422231,
+    "github_job_id": 117983501801,
+    "github_workflow_head_sha": "e447bf0c47a1c7d733045440caf969131736b7f2",
+    "artifact_id": 12176187221,
+    "artifact_name": "original-iochrominae-58-insdc-record-source-audit",
+    "root_source_retrieval_path": "scripts/audit_iochrominae_ena_genbank_58_v1.py"
+  },
+  "scope": "Independent source-record inventory; not original paper's codon-model replay, functional assay, or evolutionary regain estimate",
+  "observed": {
+    "successful_accessions": 58,
+    "failed_accessions": 0,
+    "submitted_taxon_names": 22,
+    "annotated_CDS_features": 56,
+    "records_without_CDS_feature": 2,
+    "records_with_ambiguous_nucleotides": 23,
+    "ambiguous_base_positions": 52,
+    "overall_nucleotide_length_min": 705,
+    "overall_nucleotide_length_max": 1170,
+    "source_accession_family_groups": [
+      {
+        "label": "F3h",
+        "accessions": "KT898394-KT898415",
+        "n": 22,
+        "length_nt_all": 1089,
+        "annotated_protein_products": 22
+      },
+      {
+        "label": "Chi",
+        "accessions": "KT898416-KT898437",
+        "n": 22,
+        "length_nt_all": 705,
+        "annotated_protein_products": 22
+      },
+      {
+        "label": "Dfr accession block",
+        "accessions": "KT898438-KT898451",
+        "n": 14,
+        "length_nt_min": 1143,
+        "length_nt_max": 1170,
+        "annotated_Dfr_products": 12,
+        "source_no_CDS_feature": 2
+      }
+    ],
+    "taxa_with_all_three_accession_groups": 14,
+    "taxa_with_only_F3h_and_Chi_new_accessions": 8,
+    "source_no_CDS_feature_accessions": [
+      {
+        "accession": "KT898443",
+        "species": "Iochroma confertiflorum"
+      },
+      {
+        "accession": "KT898446",
+        "species": "Iochroma ellipticum"
+      }
+    ]
+  },
+  "per_taxon": [
+    {
+      "submitted_species_name": "Acnistus arborescens",
+      "has_new_F3h_record": true,
+      "has_new_Chi_record": true,
+      "has_new_Dfr_accession_in_this_span": true,
+      "Dfr_accession_missing_cds_feature": false,
+      "no_Dfr_in_this_new_accession_span_is_gene_loss": false
+    },
+    {
+      "submitted_species_name": "Dunalia brachyacantha",
+      "has_new_F3h_record": true,
+      "has_new_Chi_record": true,
+      "has_new_Dfr_accession_in_this_span": false,
+      "Dfr_accession_missing_cds_feature": false,
+      "no_Dfr_in_this_new_accession_span_is_gene_loss": false
+    },
+    {
+      "submitted_species_name": "Dunalia solanacea",
+      "has_new_F3h_record": true,
+      "has_new_Chi_record": true,
+      "has_new_Dfr_accession_in_this_span": false,
+      "Dfr_accession_missing_cds_feature": false,
+      "no_Dfr_in_this_new_accession_span_is_gene_loss": false
+    },
+    {
+      "submitted_species_name": "Dunalia spathulata",
+      "has_new_F3h_record": true,
+      "has_new_Chi_record": true,
+      "has_new_Dfr_accession_in_this_span": true,
+      "Dfr_accession_missing_cds_feature": false,
+      "no_Dfr_in_this_new_accession_span_is_gene_loss": false
+    },
+    {
+      "submitted_species_name": "Eriolarynx fasciculata",
+      "has_new_F3h_record": true,
+      "has_new_Chi_record": true,
+      "has_new_Dfr_accession_in_this_span": true,
+      "Dfr_accession_missing_cds_feature": false,
+      "no_Dfr_in_this_new_accession_span_is_gene_loss": false
+    },
+    {
+      "submitted_species_name": "Iochroma australe",
+      "has_new_F3h_record": true,
+      "has_new_Chi_record": true,
+      "has_new_Dfr_accession_in_this_span": true,
+      "Dfr_accession_missing_cds_feature": false,
+      "no_Dfr_in_this_new_accession_span_is_gene_loss": false
+    },
+    {
+      "submitted_species_name": "Iochroma calycinum",
+      "has_new_F3h_record": true,
+      "has_new_Chi_record": true,
+      "has_new_Dfr_accession_in_this_span": false,
+      "Dfr_accession_missing_cds_feature": false,
+      "no_Dfr_in_this_new_accession_span_is_gene_loss": false
+    },
+    {
+      "submitted_species_name": "Iochroma confertiflorum",
+      "has_new_F3h_record": true,
+      "has_new_Chi_record": true,
+      "has_new_Dfr_accession_in_this_span": true,
+      "Dfr_accession_missing_cds_feature": true,
+      "no_Dfr_in_this_new_accession_span_is_gene_loss": false
+    },
+    {
+      "submitted_species_name": "Iochroma cornifolium",
+      "has_new_F3h_record": true,
+      "has_new_Chi_record": true,
+      "has_new_Dfr_accession_in_this_span": true,
+      "Dfr_accession_missing_cds_feature": false,
+      "no_Dfr_in_this_new_accession_span_is_gene_loss": false
+    },
+    {
+      "submitted_species_name": "Iochroma cyaneum",
+      "has_new_F3h_record": true,
+      "has_new_Chi_record": true,
+      "has_new_Dfr_accession_in_this_span": false,
+      "Dfr_accession_missing_cds_feature": false,
+      "no_Dfr_in_this_new_accession_span_is_gene_loss": false
+    },
+    {
+      "submitted_species_name": "Iochroma edule",
+      "has_new_F3h_record": true,
+      "has_new_Chi_record": true,
+      "has_new_Dfr_accession_in_this_span": true,
+      "Dfr_accession_missing_cds_feature": false,
+      "no_Dfr_in_this_new_accession_span_is_gene_loss": false
+    },
+    {
+      "submitted_species_name": "Iochroma ellipticum",
+      "has_new_F3h_record": true,
+      "has_new_Chi_record": true,
+      "has_new_Dfr_accession_in_this_span": true,
+      "Dfr_accession_missing_cds_feature": true,
+      "no_Dfr_in_this_new_accession_span_is_gene_loss": false
+    },
+    {
+      "submitted_species_name": "Iochroma gesnerioides",
+      "has_new_F3h_record": true,
+      "has_new_Chi_record": true,
+      "has_new_Dfr_accession_in_this_span": false,
+      "Dfr_accession_missing_cds_feature": false,
+      "no_Dfr_in_this_new_accession_span_is_gene_loss": false
+    },
+    {
+      "submitted_species_name": "Iochroma grandiflorum",
+      "has_new_F3h_record": true,
+      "has_new_Chi_record": true,
+      "has_new_Dfr_accession_in_this_span": true,
+      "Dfr_accession_missing_cds_feature": false,
+      "no_Dfr_in_this_new_accession_span_is_gene_loss": false
+    },
+    {
+      "submitted_species_name": "Iochroma loxense",
+      "has_new_F3h_record": true,
+      "has_new_Chi_record": true,
+      "has_new_Dfr_accession_in_this_span": false,
+      "Dfr_accession_missing_cds_feature": false,
+      "no_Dfr_in_this_new_accession_span_is_gene_loss": false
+    },
+    {
+      "submitted_species_name": "Iochroma parvifolium",
+      "has_new_F3h_record": true,
+      "has_new_Chi_record": true,
+      "has_new_Dfr_accession_in_this_span": false,
+      "Dfr_accession_missing_cds_feature": false,
+      "no_Dfr_in_this_new_accession_span_is_gene_loss": false
+    },
+    {
+      "submitted_species_name": "Iochroma squamosum",
+      "has_new_F3h_record": true,
+      "has_new_Chi_record": true,
+      "has_new_Dfr_accession_in_this_span": true,
+      "Dfr_accession_missing_cds_feature": false,
+      "no_Dfr_in_this_new_accession_span_is_gene_loss": false
+    },
+    {
+      "submitted_species_name": "Iochroma tupayachianum",
+      "has_new_F3h_record": true,
+      "has_new_Chi_record": true,
+      "has_new_Dfr_accession_in_this_span": true,
+      "Dfr_accession_missing_cds_feature": false,
+      "no_Dfr_in_this_new_accession_span_is_gene_loss": false
+    },
+    {
+      "submitted_species_name": "Iochroma umbellatum",
+      "has_new_F3h_record": true,
+      "has_new_Chi_record": true,
+      "has_new_Dfr_accession_in_this_span": false,
+      "Dfr_accession_missing_cds_feature": false,
+      "no_Dfr_in_this_new_accession_span_is_gene_loss": false
+    },
+    {
+      "submitted_species_name": "Saracha quitensis",
+      "has_new_F3h_record": true,
+      "has_new_Chi_record": true,
+      "has_new_Dfr_accession_in_this_span": true,
+      "Dfr_accession_missing_cds_feature": false,
+      "no_Dfr_in_this_new_accession_span_is_gene_loss": false
+    },
+    {
+      "submitted_species_name": "Vassobia breviflora",
+      "has_new_F3h_record": true,
+      "has_new_Chi_record": true,
+      "has_new_Dfr_accession_in_this_span": true,
+      "Dfr_accession_missing_cds_feature": false,
+      "no_Dfr_in_this_new_accession_span_is_gene_loss": false
+    },
+    {
+      "submitted_species_name": "Vassobia dichotoma",
+      "has_new_F3h_record": true,
+      "has_new_Chi_record": true,
+      "has_new_Dfr_accession_in_this_span": true,
+      "Dfr_accession_missing_cds_feature": false,
+      "no_Dfr_in_this_new_accession_span_is_gene_loss": false
+    }
+  ],
+  "necessary_caveats": [
+    "These 58 new-source accessions are NOT the complete original author's multilocus alignment; other Dfr sequences may predate this accession block.",
+    "Author paper reported coding-alignment lengths Chi717 F3h1113 Dfr1179 bp; downloaded accession nucleotide lengths 705/1089/1143–1170 are not equivalent to the original complete analyses.",
+    "The 2 submitted records without a CDS feature are unannotated, not enzyme loss or frameshift.",
+    "A missing fresh accession does not indicate genomic absence in that species.",
+    "Ho and Smith (2016) already published intact pathway coding sequence after pigment loss; this tool does not independently infer coding integrity or site-specific positive/purifying selection.",
+    "No specimen-matched physiological induction, colour transition time, reciprocal transplantation, heritable reproduction or fitness measured here.",
+    "22 species are not 22 independent losses: original authors describe >=3 independent losses and a possible regain; those historical reconstructions were not independently rerun here."
+  ],
+  "author_2016_original_results_still_original_author_only": true,
+  "independent_real_reexpression_rate_estimate": false
+}

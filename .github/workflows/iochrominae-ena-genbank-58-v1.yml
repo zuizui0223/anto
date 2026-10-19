@@ -1,0 +1,52 @@
+name: Iochrominae original GenBank KT898394-KT898451 audit
+on:
+  pull_request:
+    paths:
+      - "scripts/audit_iochrominae_ena_genbank_58_v1.py"
+      - "tests/test_iochrominae_ena_genbank_58_v1.py"
+      - "docs/IOCHROMINAE_GENBANK_58_REAL_SOURCE_SCOPE_V1.md"
+      - ".github/workflows/iochrominae-ena-genbank-58-v1.yml"
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  public-coding-record-receipt:
+    runs-on: ubuntu-latest
+    timeout-minutes: 12
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - name: Install only open-source sequence parser
+        run: python -m pip install "biopython>=1.83,<2"
+      - name: Validate accession and scientific-outcome gates
+        run: python -m unittest discover -s tests -p test_iochrominae_ena_genbank_58_v1.py -v
+      - name: Retrieve original registered KT898394-KT898451 through ENA Browser API
+        run: python scripts/audit_iochrominae_ena_genbank_58_v1.py --output /tmp/ena-original-58-source.json
+      - name: Validate actual 58 original records against 22 taxon source ledger
+        run: |
+          python -m unittest discover -s tests -p test_iochrominae_ena_coverage_v1.py -v
+          python scripts/check_iochrominae_ena_coverage_v1.py \
+            --source /tmp/ena-original-58-source.json \
+            --expected data/external/iochrominae_2016_genbank_58_source_coverage_v1.json \
+            --output /tmp/iochrominae-58-source-coverage-verified.json
+      - name: Enforce no phenotype and no false-independent replication
+        run: |
+          python - <<'PY'
+          import json
+          p=json.load(open('/tmp/ena-original-58-source.json'))
+          assert p['expected_original_accession_count']==58
+          assert p['retrieved_count']+p['not_retrieved_count']==58
+          assert p['flower_trait_regain_and_persistence_data_collected'] is False
+          assert p['original_author_coding_integrity_result_not_independently_retested'] is True
+          assert p['no_false_independent_clade_or_transition_replication'] is True
+          print('SOURCE_ADMISSION',p['retrieved_count'],p['not_retrieved_count'])
+          PY
+      - uses: actions/upload-artifact@v4
+        with:
+          name: original-iochrominae-58-insdc-record-source-audit
+          path: |
+            /tmp/ena-original-58-source.json
+            /tmp/iochrominae-58-source-coverage-verified.json
+          retention-days: 90
