@@ -1,0 +1,27 @@
+{
+  "schema": "anto_iochrominae_2016_source_access_gate_v1",
+  "audit_date": "2026-10-19",
+  "registered_DOI": "10.5061/dryad.49rs8",
+  "original_pub": "Ho and Smith (2016), BMC Evolutionary Biology, 10.1186/s12862-016-0675-3",
+  "official_metadata_url": "https://datadryad.org/api/v2/datasets/doi%3A10.5061%2Fdryad.49rs8",
+  "source_expected_original_files": [
+    "EVOL_CHI_SEQFILE.txt",
+    "EVOL_DFR_SEQFILE.txt",
+    "F3H_SEQFILE.txt"
+  ],
+  "dataset_metadata_retrieved": true,
+  "version_file_manifest_retrieved": true,
+  "original_archive_download_401": true,
+  "registered_individual_file_download_401": true,
+  "original_sequence_bytes_retrieved": false,
+  "independently_recalculated_coding_integrity": false,
+  "real_phylogenetic_reversal_estimated": false,
+  "scientific_decision": "SOURCE_FILE_ACCESS_RESTRICTED_HTTP_401",
+  "status_type": "TECHNICAL_SOURCE_GATE_NOT_BIOLOGICAL_NEGATIVE",
+  "github_actions_run_id": 39228634110,
+  "github_actions_job_id": 117980956709,
+  "github_actions_conclusion": "success_for_source_access_abstention",
+  "offline_validation_tests_passed": 11,
+  "publication_ceiling": "No independent raw-data reanalysis. Original author results can be cited as prior evidence only; no novel probability of reversibility inferred.",
+  "next_data_requirement": "Original published sequence files must be obtained through authorized means then checked against Dryad per-file declared digests; do not invent or scrape inaccessible bytes."
+}
