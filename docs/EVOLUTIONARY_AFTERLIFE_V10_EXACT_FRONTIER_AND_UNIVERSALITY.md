@@ -61,7 +61,7 @@ If g>0 and a,r>0 remain strictly positive forever, eventual three-streak probabi
 
 ### Sharp uncertainty from first/pairwise module measurements
 
-ANT0 v7 already proves that identical single-module probability 1/2 and pairwise joint 1/4 are consistent with theta=P(all three retained) anywhere in [0,1/4].
+ANTO v7 already proves that identical single-module probability 1/2 and pairwise joint 1/4 are consistent with theta=P(all three retained) anywhere in [0,1/4].
 
 Because v10 groups all initial non-complete inventories into a single loss class and only theta changes, its finite-horizon event probability has the exact affine form
 
@@ -91,6 +91,11 @@ A separate 12-generation exposure-order example fixes the same **six generations
 - unfavorable first, then favorable: **0.5677%** event.
 
 This is an illustrative **noncommuting ecological history** under the chosen first-passage target, not a universal claim that early colonization is advantageous. Time order can matter because the state-transition process is noncommutative; its sign depends on the rates and chosen endpoint.
+
+
+**Robust, not a numerical coincidence:** For two closed homogeneous systems with the same strictly positive d and theta, the infinite-horizon ranking is determined by Q(a,r), while the first-generation ranking is determined by a. In the displayed counterexample a_fast>a_slow but Q_fast<Q_slow. These inequalities are strict and continuous in a and r, so they persist over a non-zero open neighborhood of declared rate values. It is a model-defined *regime* of reversals, not just one random-seed anomaly. This does not establish its frequency in nature.
+
+**Forecast partial-identification illustration:** With all three module marginals fixed at 1/2 and all pairwise co-retention fixed at 1/4, theta can still lie anywhere in [0,1/4]. In the slow-activation/strong-repeat *closed* model, the exact 12-generation three-streak probability therefore lies in **[0, 11.397%]**. Under the same rate model with g=0.05 full-toolkit acquisition/reassembly, it lies in **[12.541%, 21.462%]**. These are mathematically sharp conditional ranges for the stipulated grouping of all partial inventories into one model state, *not* confidence intervals or plant-world estimates. The latter positive range does not identify ancestral retained modules because acquisition can produce the event even at theta=0.
 
 ### Negative and counterfactual controls
 
