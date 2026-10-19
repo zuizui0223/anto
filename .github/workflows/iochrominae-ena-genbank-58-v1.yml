@@ -24,6 +24,13 @@ jobs:
         run: python -m unittest discover -s tests -p test_iochrominae_ena_genbank_58_v1.py -v
       - name: Retrieve original registered KT898394-KT898451 through ENA Browser API
         run: python scripts/audit_iochrominae_ena_genbank_58_v1.py --output /tmp/ena-original-58-source.json
+      - name: Validate actual 58 original records against 22 taxon source ledger
+        run: |
+          python -m unittest discover -s tests -p test_iochrominae_ena_coverage_v1.py -v
+          python scripts/check_iochrominae_ena_coverage_v1.py \
+            --source /tmp/ena-original-58-source.json \
+            --expected data/external/iochrominae_2016_genbank_58_source_coverage_v1.json \
+            --output /tmp/iochrominae-58-source-coverage-verified.json
       - name: Enforce no phenotype and no false-independent replication
         run: |
           python - <<'PY'
@@ -39,5 +46,7 @@ jobs:
       - uses: actions/upload-artifact@v4
         with:
           name: original-iochrominae-58-insdc-record-source-audit
-          path: /tmp/ena-original-58-source.json
+          path: |
+            /tmp/ena-original-58-source.json
+            /tmp/iochrominae-58-source-coverage-verified.json
           retention-days: 90
