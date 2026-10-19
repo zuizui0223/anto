@@ -60,6 +60,12 @@ class OriginalAccessionTests(unittest.TestCase):
         self.assertEqual(p["source_records_recovered"],58)
         self.assertEqual(p["unique_organism_names_in_deposited_records"],22)
         self.assertTrue(p["not_independent_evolutionary_trait_reversal_events"])
+        inv=p["taxon_gene_accession_inventory"]
+        self.assertEqual(len(inv),22)
+        self.assertEqual(sum(len(v["CHI"]) for v in inv.values()),20)
+        self.assertEqual(sum(sum(len(a) for a in v.values()) for v in inv.values()),58)
+        self.assertEqual(sum(len(v["DFR"]) for v in inv.values()),19)
+
         self.assertFalse(p["phenotypic_color_crosswalk_independently_qualified"])
         self.assertFalse(p["coding_integrity_verified_by_functional_experiment"])
         self.assertFalse(p["regain_or_perpetuation_probability_estimated"])
