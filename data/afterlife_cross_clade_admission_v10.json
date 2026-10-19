@@ -35,6 +35,18 @@
       "currently_passes_reexpression_gate": false
     },
     {
+      "clade": "Iochrominae (Iochroma and allies, Solanaceae)",
+      "role": "independent comparative molecular retention system with phylogenetically inferred, not experimentally causal, I. edule repigmentation",
+      "source_doi": [
+        "10.1186/s12862-016-0675-3",
+        "10.1093/molbev/msy117"
+      ],
+      "open_source_dataset_doi": "10.5061/dryad.49rs8",
+      "original_research_ledger": "docs/CROSS_CLADE_REEXPRESSION_SOURCE_AUDIT_V10.md",
+      "experimentally_perturbed_true_historical_trait_regain": false,
+      "currently_passes_reexpression_gate": false
+    },
+    {
       "clade": "Antirrhineae",
       "role": "candidate historical trait reconstruction; functional validation pending",
       "currently_passes_reexpression_gate": false
@@ -102,5 +114,6 @@
     "https://doi.org/10.1002/brv.70168",
     "https://doi.org/10.1016/j.cub.2018.10.019",
     "https://doi.org/10.1093/plcell/koab114"
-  ]
+  ],
+  "research_source_screen": "retrospective outcome-visible literature; NOT a prospectively qualified clade holdout"
 }
