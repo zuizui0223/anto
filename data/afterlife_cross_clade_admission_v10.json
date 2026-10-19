@@ -1,0 +1,119 @@
+{
+  "version": "afterlife_v10_cross_clade_admission_v1",
+  "frozen_at": "2026-10-19",
+  "owner_general_theory": "zuizui0223/anto",
+  "owner_Cirsium_empirical": "zuizui0223/aza3",
+  "status": "DESIGN_ONLY_NO_CROSS_CLADE_DATA_ADMITTED",
+  "uses_external_rate_estimates": false,
+  "question": "Do joint, validated functional resources predict trait re-expression and multigeneration reproduction beyond visible loss and dated lineage history?",
+  "claim_ceiling": [
+    "Visible pigment loss is not proof of molecular competence loss",
+    "Homology or leaf RNA is not functionally complete floral pathway",
+    "A three-generation visible streak in the v10 toy chain is not flowering fitness or biological establishment",
+    "Pigmented migrants and introgressed alleles require distinct ancestral-history labels",
+    "Repeated published Petunia cases belong to a single clade",
+    "No universal clock time, universal reversal probability or causal pollinator effect has been established"
+  ],
+  "independent_unit": "whole phylogenetic clade or geographically independent lineage populations; not transcripts/photos/specimens from same individual",
+  "primary_event": "experimentally or longitudinally documented true flower-trait re-expression in a lineage with historically recorded floral-expression loss",
+  "primary_mechanism": "same-plant flower-scoped complete functional developmental/pigment modules measured jointly",
+  "candidate_clades": [
+    {
+      "clade": "Petunia",
+      "role": "published mechanistic positive control",
+      "source_doi": [
+        "10.1016/j.cub.2018.10.019",
+        "10.1093/plcell/koab114"
+      ],
+      "empirical_owner": "original authors",
+      "currently_counts_as_independent_positive_clades": 1
+    },
+    {
+      "clade": "Ryukyu Cirsium",
+      "role": "hypothesis origin, ancestry/functional competence not yet established",
+      "empirical_owner": "zuizui0223/aza3",
+      "currently_passes_reexpression_gate": false
+    },
+    {
+      "clade": "Iochrominae (Iochroma and allies, Solanaceae)",
+      "role": "independent comparative molecular retention system with phylogenetically inferred, not experimentally causal, I. edule repigmentation",
+      "source_doi": [
+        "10.1186/s12862-016-0675-3",
+        "10.1093/molbev/msy117"
+      ],
+      "open_source_dataset_doi": "10.5061/dryad.49rs8",
+      "original_research_ledger": "docs/CROSS_CLADE_REEXPRESSION_SOURCE_AUDIT_V10.md",
+      "experimentally_perturbed_true_historical_trait_regain": false,
+      "currently_passes_reexpression_gate": false
+    },
+    {
+      "clade": "Antirrhineae",
+      "role": "candidate historical trait reconstruction; functional validation pending",
+      "currently_passes_reexpression_gate": false
+    },
+    {
+      "clade": "Mimulus/Erythranthe",
+      "role": "candidate functional regulator and negative mechanism screen",
+      "currently_passes_reexpression_gate": false
+    },
+    {
+      "clade": "Camellia",
+      "role": "temporal flower-colour history candidate, not functional gene assay",
+      "empirical_owner": "zuizui0223/chun",
+      "currently_passes_reexpression_gate": false
+    }
+  ],
+  "admission_gates": [
+    {
+      "id": "G0",
+      "criteria": "Taxonomic identity, lineage ancestry and dating sufficiently resolved to orient loss and possible return",
+      "no_substitute": "present geography order"
+    },
+    {
+      "id": "G1",
+      "criteria": "Visible phenotype verified in floral tissue at registered ontogenetic phase under comparable measurement",
+      "no_substitute": "photographic major hue category alone"
+    },
+    {
+      "id": "G2",
+      "criteria": "Functional joint genotype/developmental inventory from the same biological individual/lineage, appropriate organ and stage",
+      "no_substitute": "pairwise modules, homology BLAST, leaf-only transcripts"
+    },
+    {
+      "id": "G3",
+      "criteria": "Alternative mechanisms disentangled: retained activation, de novo sequence repair, introgression, already-coloured immigration, plasticity",
+      "no_substitute": "photographed recolouring alone"
+    },
+    {
+      "id": "G4",
+      "criteria": "Held-out entire clade/population predictive endpoint with temporal ordering and independent candidate controls",
+      "no_substitute": "random photo-level train/test split"
+    },
+    {
+      "id": "G5",
+      "criteria": "Reproductive/ecological relevance quantified via actual viable propagules/seed or specified trait function",
+      "no_substitute": "three model snapshots or visible colour alone"
+    }
+  ],
+  "model_comparisons": [
+    "M0 present flower phenotype + environment + geography + declared taxonomic effects",
+    "M1 M0 plus independently reconstructed dated ancestry/colonisation",
+    "M2 M1 plus validated functionally joint retained modules and flower-scoped regulatory readiness",
+    "M3 M2 plus locus genealogy, cytotype and directional introgression/immigrant provenance"
+  ],
+  "scoring": "clade-heldout Brier and log loss, model calibration; no model selection after protected outcomes",
+  "external_generalization_gate": "At least two independently admitted additional clades beyond Petunia and Cirsium, with positive and negative controls and prospective outcome qualification",
+  "count_of_newly_collected_specimens": 0,
+  "count_of_measured_real_cross_clade_reexpression_events_by_anto": 0,
+  "referenced_theory": [
+    "zuizui0223/anto/src/anto_joint_accessibility_v7.py",
+    "zuizui0223/anto/src/anto_history_state_sufficiency_v9.py",
+    "zuizui0223/anto/src/anto_afterlife_frontier_v10.py"
+  ],
+  "sources": [
+    "https://doi.org/10.1002/brv.70168",
+    "https://doi.org/10.1016/j.cub.2018.10.019",
+    "https://doi.org/10.1093/plcell/koab114"
+  ],
+  "research_source_screen": "retrospective outcome-visible literature; NOT a prospectively qualified clade holdout"
+}
