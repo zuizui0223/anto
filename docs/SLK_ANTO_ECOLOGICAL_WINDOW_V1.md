@@ -62,6 +62,21 @@ The probability of **ever expressing at least once** (irrespective of ecology) i
 
 This is a constructive contrast **under the declared toy rates and starting state**, not a universal monotone effect of late colonization or a measured effect of climate change.
 
+### Result 1b — even the direction of the timing effect can reverse
+
+It would be misleading to generalize Result 1 into "earlier favorable conditions always give more evolutionary opportunity." With *the same loss rate* `d=1/20`, the *same initial competence* `theta=1/8`, and the *same two schedules of five favorable generations*, changing expression activation and continuation reverses the ranking:
+
+| Expression regime, both with d=0.05 | Activation a | Repetition r | Favorable early | Favorable late | Direction |
+|---|---:|---:|---:|---:|---|
+| Faster activation, moderate continuation | 0.40 | 0.75 | **5.435156%** | 3.901086% | Early > late |
+| Slow activation, high continuation | 0.05 | 0.95 | 1.528609% | **3.194658%** | Late > early |
+
+In the second constructed regime, the unfavorable pre-window generations can allow latent lineages to *begin expressing and continue expressing* before the ecological opportunity opens. With slow activation, an early five-generation window is often missed; late-arriving favorable conditions can coincide with an already-expressing pool even though a positive resource-loss hazard operates throughout.
+
+This **temporal preconditioning effect** is model-specific, not evidence that plants can freely sustain a selected-against phenotype before a future ecological change. If expression itself is costly under unfavorable ecology, or if expression/decay rates depend strongly on the environment, the ranking may change. Crucially, merely knowing the duration of the future selective window and the loss hazard is not enough to rank histories without activation and continuation.
+
+**Biological implication to test:** ancestral latent trait retention can create either historical inertia or delayed re-expression opportunity; neither earlier colonization nor faster first expression is universally the better predictor of repeated functional expression. Timing, hidden resource inventory and expression kinetics jointly matter.
+
 ### Result 2 — selective profitability, access and invasion open at different times
 
 On a monotonically decreasing cost example `k(t)=max(0,12/5-t/5)`, `eta=3/2` (cost saturates at zero in generations 12–14), the gates become strictly positive at different generations:
