@@ -214,7 +214,29 @@ def panel():
     optimum=best_delay(theta,params,50)
     at_nine=qualified_pulse(theta,params,9)
     control=qualified_pulse(theta,no_priming,9)
+    q0,q1,q2=(qualified_pulse(theta,params,m) for m in (0,1,2))
+    ident=identify_priming_from_three_pulses(
+        q0,q1,q2,ONE-params.resource_loss)
+    # Same q0 and q1: higher priming rate versus smaller activation advantage.
+    alt=SilentPriming(
+        params.activation_unprimed,F(2,5),F(1,4),
+        params.resource_loss,params.continuation)
+    alt0,alt1,alt2=(qualified_pulse(theta,alt,m) for m in (0,1,2))
+    if q0!=alt0 or q1!=alt1 or q2==alt2:
+        raise AssertionError("Prespecified nonidentifiability example changed")
     return {
+        "three_preexposure_arm_identification":ident,
+        "same_pulse0_pulse1_different_pulse2":{
+            "baseline_p0_both":q0,
+            "one_delay_p1_both":q1,
+            "world_A_priming":params.silent_priming,
+            "world_A_primed_activation":params.activation_primed,
+            "world_B_priming":alt.silent_priming,
+            "world_B_primed_activation":alt.activation_primed,
+            "world_A_p2":q2,
+            "world_B_p2":alt2,
+            "no_measured_biological_parameters":True,
+        },
         "schema":"anto_slk_silent_priming_opportunity_v2",
         "model_type":"exact_conditional_synthetic_hypothesis",
         "no_new_specimens_or_empirical_rates":True,
