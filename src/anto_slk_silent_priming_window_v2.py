@@ -150,6 +150,51 @@ def best_delay(theta,params,max_wait):
             "horizon_limited":True}
 
 
+
+def identify_priming_from_three_pulses(p0,p1,p2,retention_ratio):
+    """Identify *conditional* b and aP/aU using 0-,1-,2-wait cohorts.
+
+    Assume shared initial toolkit theta, expression continuation r, and
+    activation probabilities across separately allocated cohorts; identical
+    pre-window loss hazard d with independently measured survival S=1-d.
+    Normalize pulses y_m=Q(m)/Q(0), so theta and r cancel:
+      v1=y1-S=b*(aP/aU-1)
+      v2=y2-S**2=v1*(2*S-b)
+      b=2*S-v2/v1; aP/aU=1+v1/b.
+    When v1=0, no priming or no activation premium is observationally
+    inseparable by these two extra pulse arms. Assay noise requires a
+    statistical model; this function is structural algebra, NOT an estimator
+    of real rates or confidence intervals.
+    """
+    p0,p1,p2,s=(_prob(x) for x in (p0,p1,p2,retention_ratio))
+    base={"conditional_structural_design":True,
+          "no_real_population_rates_inferred":True,
+          "requires_independent_toolkit_survival":True}
+    if p0==ZERO:
+        return {**base,"identified":False,"status":"NO_BASELINE_EVENT"}
+    v1=p1/p0-s
+    v2=p2/p0-s*s
+    if v1==ZERO:
+        return {**base,"identified":False,"status":(
+            "PRIMING_NOT_IDENTIFIED" if v2==ZERO
+            else "INCOMPATIBLE_WITH_CONSTANT_RATE_MODEL"),
+                "normalized_first_pulse_effect":v1}
+    b=2*s-v2/v1
+    if not ZERO < b <= s:
+        return {**base,"identified":False,
+                "status":"INCOMPATIBLE_PRIMING_RATE"}
+    ratio=ONE+v1/b
+    if ratio<ZERO:
+        return {**base,"identified":False,
+                "status":"INCOMPATIBLE_ACTIVATION_RATIO"}
+    expected_p3=p0*(ratio*s**3-(ratio-ONE)*(s-b)**3)
+    return {**base,"identified":True,
+            "status":"STRUCTURALLY_IDENTIFIED_IF_ASSUMPTIONS_HOLD",
+            "silent_priming":b,"activation_primed_over_unprimed":ratio,
+            "normalized_first_pulse_effect":v1,
+            "predicted_wait3_event_for_holdout":expected_p3}
+
+
 def panel():
     theta=F(1,8)
     params=SilentPriming(
