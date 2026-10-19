@@ -128,6 +128,57 @@ def download_registered_files(metadata):
     return buff.getvalue()
 
 
+def official_original_file_manifest(metadata):
+    """Return only public API metadata when sequence bytes are inaccessible.
+
+    The registered Dryad digest and size are *author/source statements*, not
+    locally computed checksums. All claims about intact coding/trait reversal
+    remain excluded until original bytes pass an independent source check.
+    """
+    links=metadata.get("_links",{})
+    version=links.get("stash:version",{}).get("href")
+    if not version or not re.match(r"^/api/v2/versions/\d+$",version):
+        raise RuntimeError("SOURCE_VERSION_METADATA_UNAVAILABLE")
+    response=json.loads(get_bytes("https://datadryad.org"+version+"/files"))
+    records=response.get("_embedded",{}).get("stash:files",[])
+    if not records or response.get("total",len(records))>len(records):
+        raise RuntimeError("SOURCE_FILE_PAGINATION_OR_EMPTY_LIST")
+    rows={}
+    for row in records:
+        name=Path(row.get("path","")).name
+        if name in EXPECTED_FILES:
+            link=row.get("_links",{}).get("stash:download",{}).get("href")
+            if not link or not re.match(r"^/api/v2/files/\d+/download$",link):
+                raise RuntimeError("SOURCE_FILE_ID_MISSING")
+            rows[name]={"source_path":row.get("path"),
+                        "source_declared_bytes":row.get("size"),
+                        "source_declared_digest":row.get("digest"),
+                        "source_declared_digest_type":row.get("digestType"),
+                        "api_file_url":"https://datadryad.org"+link,
+                        "raw_bytes_accessed":False}
+    if set(rows)!=set(EXPECTED_FILES):
+        raise RuntimeError("SOURCE_ALIGNMENT_MANIFEST_INCOMPLETE")
+    return rows
+
+
+def blocked_source_receipt(metadata,reason):
+    return {"schema":"anto_iochrominae_2016_ho_smith_public_coding_source_v1",
+            "source_status":reason,
+            "scientific_admission":"SOURCE_ONLY_METADATA_FILES_UNAVAILABLE",
+            "registered_dataset_DOI":DOI,
+            "dataset_metadata_URL":METADATA_URL,
+            "dataset_title":metadata.get("title",""),
+            "original_files_metadata_only":official_original_file_manifest(metadata),
+            "source_bytes_downloaded":False,
+            "per_file_sha256_computed":False,
+            "coding_integrity_independently_replayed":False,
+            "published_original_author_claim_not_retested":
+                "Ho and Smith (2016) reported intact coding regions in sampled unpigmented lineages.",
+            "phenotypic_regain_or_fitness_estimated":False,
+            "no_natural_trait_reexpression_event_count_assigned":True,
+            "remediation":"Requires legitimate access to original raw Dryad files; rerun raw-byte verifier without changing source DOI."}
+
+
 def public_original_material(metadata):
     try:
         return get_bytes(DOWNLOAD_URL),"original_dataset_zip"
@@ -167,15 +218,27 @@ def main():
     p.add_argument("--output",type=Path,required=True)
     args=p.parse_args()
     meta=json.loads(get_bytes(METADATA_URL))
-    archive,method=public_original_material(meta)
-    result=evaluate(meta,archive,method)
+    try:
+        archive,method=public_original_material(meta)
+    except RuntimeError as ex:
+        if str(ex) not in ("SOURCE_FILE_ACCESS_RESTRICTED_HTTP_401",
+                           "SOURCE_FILE_ACCESS_RESTRICTED_HTTP_403"):
+            raise
+        result=blocked_source_receipt(meta,str(ex))
+        status="IOCHROMINAE_DRYAD_SOURCE_DOWNLOAD_BLOCKED"
+    else:
+        result=evaluate(meta,archive,method)
+        result["source_status"]="SOURCE_BYTES_VERIFIED"
+        result["source_bytes_downloaded"]=True
+        status="IOCHROMINAE_DRYAD_SOURCE_BYTES_VERIFIED"
     args.output.parent.mkdir(parents=True,exist_ok=True)
     args.output.write_text(json.dumps(result,sort_keys=True,indent=2)+"\n",encoding="utf-8")
-    print("IOCHROMINAE_DRYAD_SOURCE_AUDIT_PASS",json.dumps({
-        "gene_files":list(result["source_files"]["target_gene_file_metadata"]),
-        "formats":{k:v["format"] for k,v in result["source_files"]["target_gene_file_metadata"].items()},
-        "declared_alignment_sites":{k:v["declared_alignment_sites"] for k,v in result["source_files"]["target_gene_file_metadata"].items()},
-        "no_new_plant_function_claim":result["biological_inference_level"]
+    print(status,json.dumps({
+        "source_status":result["source_status"],
+        "original_bytes_available":result["source_bytes_downloaded"],
+        "no_biological_return_claim":True,
+        "file_names":list(result.get("source_files",{}).get("target_gene_file_metadata",
+                         result.get("original_files_metadata_only",{})))
     },sort_keys=True))
 
 if __name__=="__main__":
