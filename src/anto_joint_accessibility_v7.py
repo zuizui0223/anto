@@ -22,7 +22,7 @@ breaks physical linkage at the assumed rate.
 """
 from fractions import Fraction
 from itertools import combinations, product
-from math import exp, isfinite, prod, log
+from math import exp, isfinite, prod, log2, expm1, log1p
 from typing import Mapping
 
 MODULES=("M1","M2","M3")
@@ -106,6 +106,12 @@ def expected_expressible_subsets_upper_bound(p):
     return sum(v*(2**mask.count("1")) for mask,v in p.items())
 
 
+def joint_inventory_entropy_bits(p):
+    """Entropy of the full inventory distribution, distinct from access."""
+    p=validate_joint(p)
+    return -sum(float(q)*log2(float(q)) for q in p.values() if q>0)
+
+
 def independent_marginal_distribution(p):
     """Product of component marginal retention probabilities."""
     mu=marginals(p)
@@ -140,6 +146,7 @@ def observed_modules_report(p):
         "expected_potential_expression_combinations_upper_bound":
             str(expected_expressible_subsets_upper_bound(p)),
         "n_support_genotypes":sum(v>0 for v in p.values()),
+        "joint_inventory_entropy_bits":joint_inventory_entropy_bits(p),
         "probability_mass":{mask:str(v) for mask,v in p.items() if v>0}
     }
 
@@ -181,7 +188,7 @@ def founders_at_least_one_complete(p_complete, n_founders,
         if not isfinite(x) or not 0<=x<=1:
             raise ValueError("All probabilities must be in [0,1]")
     q=p_complete*assembly_success*establishment_success
-    return -(__import__("math").expm1(n_founders*__import__("math").log1p(-q))) if q<1 else 1.0
+    return -expm1(n_founders*log1p(-q)) if q<1 else 1.0
 
 
 def migration_order_counterfactual(p, rate_source, rate_target,
@@ -241,7 +248,7 @@ def exact_report():
             "sum_island_hazard":round(.12*k,6),
             "relative_early_over_late":exp(-10*.10*k),
             "earlier_migration_resource_probability":
-                (Fraction(1,2)**k).__float__()*exp(-10*.12*k),
+                float(Fraction(1,2)**k)*exp(-10*.12*k),
             "later_migration_resource_probability":
                 (Fraction(1,2)**k).__float__()*exp(-10*.02*k)
         } for k in (1,2,3)
