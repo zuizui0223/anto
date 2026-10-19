@@ -1,0 +1,267 @@
+{
+  "schema": "anto_iochrominae_ho_smith_2016_registered_genbank_kt_crosswalk_v1",
+  "as_of": "2026-10-19",
+  "original_study": "Ho & Smith (2016), BMC Evolutionary Biology 16:98",
+  "original_study_DOI": "10.1186/s12862-016-0675-3",
+  "original_accession_range": [
+    "KT898394",
+    "KT898451"
+  ],
+  "authoritative_retrieval": {
+    "service": "NCBI EUtils nuccore GenBank",
+    "workflow_run_id": 39232519706,
+    "source_script": "scripts/audit_iochrominae_original_genbank_kt_accessions_v1.py",
+    "fetched_accessions": 58,
+    "accession_validation": "ALL_58_MATCHED",
+    "original_sequences_included": false
+  },
+  "biological_unit": "22 source taxon names, not independent trait reversals",
+  "registered_gene_coverage": {
+    "CHI": 22,
+    "F3H": 22,
+    "DFR": 14
+  },
+  "n_taxa": 22,
+  "n_DFR_without_KT_accession_in_range": 8,
+  "DFR_without_KT_deposit": [
+    "Dunalia brachyacantha",
+    "Iochroma calycinum",
+    "Iochroma cyaneum",
+    "Iochroma gesnerioides",
+    "Iochroma loxense",
+    "Iochroma parvifolium",
+    "Iochroma umbellatum",
+    "Saracha nigribaccata"
+  ],
+  "DFR_no_KT_deposit_does_not_mean_biological_gene_loss": true,
+  "source_experiment_pigmentation_states_added_to_species": false,
+  "mechanism_or_fitness_of_reexpression_measured": false,
+  "table": {
+    "Dunalia brachyacantha": {
+      "CHI": [
+        "KT898430"
+      ],
+      "DFR": [],
+      "F3H": [
+        "KT898403"
+      ]
+    },
+    "Dunalia spathulata": {
+      "CHI": [
+        "KT898429"
+      ],
+      "DFR": [
+        "KT898440"
+      ],
+      "F3H": [
+        "KT898415"
+      ]
+    },
+    "Eriolarynx australis": {
+      "CHI": [
+        "KT898427"
+      ],
+      "DFR": [
+        "KT898438"
+      ],
+      "F3H": [
+        "KT898397"
+      ]
+    },
+    "Eriolarynx fasciculata": {
+      "CHI": [
+        "KT898426"
+      ],
+      "DFR": [
+        "KT898447"
+      ],
+      "F3H": [
+        "KT898395"
+      ]
+    },
+    "Iochroma arborescens": {
+      "CHI": [
+        "KT898428"
+      ],
+      "DFR": [
+        "KT898450"
+      ],
+      "F3H": [
+        "KT898406"
+      ]
+    },
+    "Iochroma calycinum": {
+      "CHI": [
+        "KT898417"
+      ],
+      "DFR": [],
+      "F3H": [
+        "KT898394"
+      ]
+    },
+    "Iochroma confertiflorum": {
+      "CHI": [
+        "KT898418"
+      ],
+      "DFR": [
+        "KT898443"
+      ],
+      "F3H": [
+        "KT898404"
+      ]
+    },
+    "Iochroma cornifolium": {
+      "CHI": [
+        "KT898420"
+      ],
+      "DFR": [
+        "KT898441"
+      ],
+      "F3H": [
+        "KT898399"
+      ]
+    },
+    "Iochroma cyaneum": {
+      "CHI": [
+        "KT898421"
+      ],
+      "DFR": [],
+      "F3H": [
+        "KT898413"
+      ]
+    },
+    "Iochroma edule": {
+      "CHI": [
+        "KT898423"
+      ],
+      "DFR": [
+        "KT898445"
+      ],
+      "F3H": [
+        "KT898401"
+      ]
+    },
+    "Iochroma ellipticum": {
+      "CHI": [
+        "KT898425"
+      ],
+      "DFR": [
+        "KT898446"
+      ],
+      "F3H": [
+        "KT898414"
+      ]
+    },
+    "Iochroma gesnerioides": {
+      "CHI": [
+        "KT898437"
+      ],
+      "DFR": [],
+      "F3H": [
+        "KT898408"
+      ]
+    },
+    "Iochroma loxense": {
+      "CHI": [
+        "KT898422"
+      ],
+      "DFR": [],
+      "F3H": [
+        "KT898409"
+      ]
+    },
+    "Iochroma parvifolium": {
+      "CHI": [
+        "KT898431"
+      ],
+      "DFR": [],
+      "F3H": [
+        "KT898405"
+      ]
+    },
+    "Iochroma squamosum": {
+      "CHI": [
+        "KT898434"
+      ],
+      "DFR": [
+        "KT898448"
+      ],
+      "F3H": [
+        "KT898412"
+      ]
+    },
+    "Iochroma tupayachianum": {
+      "CHI": [
+        "KT898419"
+      ],
+      "DFR": [
+        "KT898449"
+      ],
+      "F3H": [
+        "KT898398"
+      ]
+    },
+    "Iochroma umbellatum": {
+      "CHI": [
+        "KT898433"
+      ],
+      "DFR": [],
+      "F3H": [
+        "KT898402"
+      ]
+    },
+    "Saracha nigribaccata": {
+      "CHI": [
+        "KT898436"
+      ],
+      "DFR": [],
+      "F3H": [
+        "KT898396"
+      ]
+    },
+    "Saracha quitensis": {
+      "CHI": [
+        "KT898416"
+      ],
+      "DFR": [
+        "KT898444"
+      ],
+      "F3H": [
+        "KT898410"
+      ]
+    },
+    "Trozelia grandiflora": {
+      "CHI": [
+        "KT898432"
+      ],
+      "DFR": [
+        "KT898442"
+      ],
+      "F3H": [
+        "KT898411"
+      ]
+    },
+    "Vassobia breviflora": {
+      "CHI": [
+        "KT898424"
+      ],
+      "DFR": [
+        "KT898451"
+      ],
+      "F3H": [
+        "KT898407"
+      ]
+    },
+    "Vassobia dichotoma": {
+      "CHI": [
+        "KT898435"
+      ],
+      "DFR": [
+        "KT898439"
+      ],
+      "F3H": [
+        "KT898400"
+      ]
+    }
+  }
+}
