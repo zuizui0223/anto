@@ -1,6 +1,10 @@
 # anto — The biogeography of floral evolutionary potential
 
 
+**Repository execution boundary (v8, 19 October 2026):** Active anto CI now runs **generic probabilistic models only**. All public *Cirsium* RNA/DFR/ANS source analyses, pigmentation/capitulum LEGO field and genomic designs are canonically executed in [aza3](https://github.com/zuizui0223/aza3). Older Cirsium modules and files in anto are retained as **historical provenance, not a competing empirical pipeline**. [Details](docs/THEORY_ONLY_CI_AND_AZA3_ROUTING_V8.md).
+
+
+
 ## Active v7 theory: higher-order floral resource accessibility
 
 **anto now owns general theory only; [aza3 owns all Cirsium experimental designs, source data and genetic LEGO/fitness tests](https://github.com/zuizui0223/aza3/blob/main/docs/ANTO_ACCESSIBILITY_TO_AZA3_HEAD_LEGO_EMPIRICAL_MASTER_V1.md).** Earlier *Cirsium* sample/sequence files in this repo are archived source evidence, **not** a second active empirical pipeline. All future same-individual molecular and head morphology analysis should take place under aza3.
