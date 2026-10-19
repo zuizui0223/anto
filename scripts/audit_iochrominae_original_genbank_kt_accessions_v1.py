@@ -112,6 +112,12 @@ def audit(records):
         "taxa_named_in_original_2016_paper_as_outgroups":6,
         "source_record_gene_label_counts":genes,
         "organism_names_in_retrieved_records":taxa,
+        "taxon_gene_accession_inventory":{
+            organism:{gene:sorted([r["accession"] for r in items
+                        if r["organism"]==organism and r["named_gene"]==gene])
+                     for gene in ("CHI","F3H","DFR")}
+            for organism in taxa
+        },
         "original_sequences_embedded_in_result":False,
         "coding_integrity_verified_by_functional_experiment":False,
         "phenotypic_color_crosswalk_independently_qualified":False,
@@ -142,5 +148,7 @@ def main():
         "gene_labels":result["source_record_gene_label_counts"],
         "no_biological_reversion_estimated":True,
     },sort_keys=True))
+    print("ORIGINAL_KT_TAXON_GENE_INVENTORY",
+          json.dumps(result["taxon_gene_accession_inventory"],sort_keys=True))
 
 if __name__=="__main__":main()
