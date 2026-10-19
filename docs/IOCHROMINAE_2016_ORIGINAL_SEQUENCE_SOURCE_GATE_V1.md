@@ -4,6 +4,12 @@
 
 The original independent plant study is Ho & Smith (2016), [BMC Evolutionary Biology](https://doi.org/10.1186/s12862-016-0675-3), and [Dryad dataset 10.5061/dryad.49rs8](https://doi.org/10.5061/dryad.49rs8). The authors examined *Chi*, *F3h* and *Dfr* from flower-bud cDNA in 22 Iochrominae species plus six Solanaceae outgroups. They reported intact coding regions in unpigmented lineages as well as changes in selection constraint; those are **their** results, not newly discovered in ANTO.
 
+## Executed access decision on 19 October 2026
+
+The dedicated public GitHub Actions run first retrieved the dataset metadata, but the official whole-dataset /download endpoint returned **HTTP 401**. A second attempt followed the **registered version-file metadata and exact official individual /api/v2/files/{id}/download links**, and these sequence-byte endpoints also returned **HTTP 401**. These are two legitimate documented retrieval routes, not source-data negative results. No sequence bytes, codon alignments, coding integrity measurements or per-species regained-colour estimates were independently produced.
+
+**Current machine decision: SOURCE_FILE_ACCESS_RESTRICTED_HTTP_401 / SOURCE_ONLY_METADATA_FILES_UNAVAILABLE.** The workflow now records a source-file metadata-only receipt and stops biological promotion while keeping the actual authenticated-byte verifier available for future authorized replay. Passing metadata/fixture tests must not be interpreted as having reproduced Ho–Smith sequence comparisons.
+
 ## Actual-source next work
 
 The runnable [audit script](../scripts/audit_iochrominae_ho_smith_original_dryad_v1.py) uses the [official Dryad API](https://github.com/datadryad/dryad-app/blob/main/documentation/apis/README.md) and original dataset DOI to retrieve only the public 2016 archive (no sequence files are added to this repository). It checks exact three alignment file names, bytes and SHA256, detecting FASTA/PHYLIP/PAML/NEXUS-format first headers where possible, and emits a compact original-data receipt through dedicated GitHub Actions.
