@@ -1,0 +1,46 @@
+name: Penstemon published F2 structural-loss vs donor-access audit
+on:
+  pull_request:
+    paths:
+      - "data/external/penstemon_2014_f3p5h_source_genetic_accessibility_v1.json"
+      - "scripts/audit_penstemon_2014_afterlife_contrast_v1.py"
+      - "tests/test_penstemon_2014_afterlife_contrast_v1.py"
+      - "docs/PENSTEMON_2014_STRUCTURAL_LOSS_VS_DONOR_REGAIN_V1.md"
+      - ".github/workflows/penstemon-afterlife-published-evidence-v1.yml"
+  push:
+    branches: [main]
+    paths:
+      - "data/external/penstemon_2014_f3p5h_source_genetic_accessibility_v1.json"
+      - "scripts/audit_penstemon_2014_afterlife_contrast_v1.py"
+      - "tests/test_penstemon_2014_afterlife_contrast_v1.py"
+      - ".github/workflows/penstemon-afterlife-published-evidence-v1.yml"
+permissions:
+  contents: read
+jobs:
+  original-source-count-reconciliation:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - name: Test published source and negative controls
+        run: python -m unittest discover -s tests -p test_penstemon_2014_afterlife_contrast_v1.py -v
+      - name: Compute exact F2 source-table cross-tabulation
+        run: |
+          python scripts/audit_penstemon_2014_afterlife_contrast_v1.py \
+            --output /tmp/penstemon-2014-source-phenotype-genotype.json
+          python - <<'PY'
+          import json
+          from fractions import Fraction
+          p=json.load(open('/tmp/penstemon-2014-source-phenotype-genotype.json'))
+          assert p["observed_F2_individuals"]==161
+          assert Fraction(p["heterozygote_red_probability"])==Fraction(3,16)
+          assert not p["natural_introgression_frequency_or_permanence_estimated"]
+          assert not p["synthetic_ANTO_model_parameter_g_inferred"]
+          assert p["original_source_results_only"] is True
+          PY
+      - uses: actions/upload-artifact@v4
+        with:
+          name: penstemon2014-original-f2-source-receipt
+          path: /tmp/penstemon-2014-source-phenotype-genotype.json
