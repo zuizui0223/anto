@@ -1,0 +1,31 @@
+name: Iochrominae Ho–Smith Dryad original source audit
+on:
+  pull_request:
+    paths:
+      - "scripts/audit_iochrominae_ho_smith_original_dryad_v1.py"
+      - "tests/test_iochrominae_ho_smith_dryad_v1.py"
+      - "docs/IOCHROMINAE_2016_ORIGINAL_SEQUENCE_SOURCE_GATE_V1.md"
+      - ".github/workflows/iochrominae-ho-smith-dryad-v1.yml"
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  public-original-source:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - name: Test zip, DOI and no-overclaim admission
+        run: python -m unittest discover -s tests -p test_iochrominae_ho_smith_dryad_v1.py -v
+      - name: Fetch original published 2016 Dryad archive via documented public GET API
+        run: |
+          python scripts/audit_iochrominae_ho_smith_original_dryad_v1.py \
+            --output /tmp/iochrominae-2016-raw-source-audit.json
+      - uses: actions/upload-artifact@v4
+        with:
+          name: iochrominae-2016-original-alignment-source-receipt
+          path: /tmp/iochrominae-2016-raw-source-audit.json
+          retention-days: 90
