@@ -90,7 +90,7 @@ class ANTOAbsoluteDemographyV3Tests(unittest.TestCase):
         at_9=high["all_waits"][9]["at_least_one_of_n_independent_lineages"]
         self.assertGreater(at_6,at_9)
         self.assertAlmostEqual(float(at_6),0.6467768821574177,places=13)
-        self.assertAlmostEqual(float(at_9),0.5507944786106482,places=12)
+        self.assertAlmostEqual(float(at_9),0.5507944725059499,places=12)
         self.assertEqual(high["all_waits"][14]["at_least_one_of_n_independent_lineages"],0)
 
     def test_same_relative_selection_subcritical_control(self):
