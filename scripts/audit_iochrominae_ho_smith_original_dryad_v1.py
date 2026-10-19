@@ -18,6 +18,7 @@ from pathlib import Path
 import re
 import urllib.parse
 import urllib.request
+import urllib.error
 import zipfile
 
 DOI="10.5061/dryad.49rs8"
@@ -83,7 +84,60 @@ def inspect_zip(archive):
     return {"file_count":len(members),"all_file_names":sorted(members),
             "target_gene_file_metadata":output}
 
-def evaluate(metadata,archive):
+def download_registered_files(metadata):
+    """Use official public version/file links when the dataset ZIP returns 401.
+
+    Individual Dryad file GET is documented separately from dataset ZIP GET.
+    Packaging the retrieved files into an in-memory ZIP lets the same file
+    identity audit run, but this is NOT the original dataset ZIP checksum.
+    """
+    links=metadata.get("_links",{})
+    version=links.get("stash:version",{}).get("href")
+    if not version or not re.match(r"^/api/v2/versions/\d+$",version):
+        raise RuntimeError("SOURCE_VERSION_METADATA_UNAVAILABLE")
+    url="https://datadryad.org"+version+"/files"
+    payload=json.loads(get_bytes(url))
+    files=payload.get("_embedded",{}).get("stash:files",[])
+    if not files or payload.get("total",len(files))>len(files):
+        raise RuntimeError("SOURCE_FILE_PAGINATION_OR_EMPTY_LIST")
+    lookup={}
+    for row in files:
+        name=Path(row.get("path","")).name
+        if name in EXPECTED_FILES:
+            target=row.get("_links",{}).get("stash:download",{}).get("href")
+            if not target or not re.match(r"^/api/v2/files/\d+/download$",target):
+                raise RuntimeError("SOURCE_FILE_DOWNLOAD_LINK_UNAVAILABLE")
+            try:
+                contents=get_bytes("https://datadryad.org"+target)
+            except urllib.error.HTTPError as ex:
+                raise RuntimeError(f"SOURCE_FILE_ACCESS_RESTRICTED_HTTP_{ex.code}") from ex
+            declared_digest=row.get("digest")
+            digest_type=row.get("digestType","").lower()
+            if declared_digest and digest_type in ("sha256","sha-256"):
+                if sha256(contents)!=declared_digest:
+                    raise ValueError(f"Source file SHA256 mismatch: {name}")
+            elif declared_digest and digest_type=="md5":
+                if hashlib.md5(contents).hexdigest()!=declared_digest:
+                    raise ValueError(f"Source file MD5 mismatch: {name}")
+            lookup[name]=contents
+    if set(lookup)!=set(EXPECTED_FILES):
+        raise RuntimeError("SOURCE_REGISTERED_GENE_ALIGNMENT_MISSING")
+    buff=io.BytesIO()
+    with zipfile.ZipFile(buff,"w") as z:
+        for key in sorted(lookup):z.writestr(key,lookup[key])
+    return buff.getvalue()
+
+
+def public_original_material(metadata):
+    try:
+        return get_bytes(DOWNLOAD_URL),"original_dataset_zip"
+    except urllib.error.HTTPError as err:
+        if err.code not in (401,403):
+            raise
+        return download_registered_files(metadata),"official_registered_file_API_fallback"
+
+
+def evaluate(metadata,archive,method="original_dataset_zip"):
     if metadata.get("identifier")!="doi:"+DOI:
         raise ValueError("Metadata did not identify declared Dryad dataset")
     if metadata.get("versionStatus","").lower() not in ("published","public",""):
@@ -96,7 +150,9 @@ def evaluate(metadata,archive):
             "version":metadata.get("versionNumber"),
             "dataset_metadata_URL":METADATA_URL,
             "original_archive_URL":DOWNLOAD_URL,
-            "downloaded_bundle_sha256":sha256(archive),
+            "archive_mode":method,
+            "original_zip_sha256":sha256(archive) if method=="original_dataset_zip" else None,
+            "repackaged_file_bundle_sha256":sha256(archive) if method!="original_dataset_zip" else None,
             "source_files":info,
             "published_flower_bud_cDNA_sequences_22_ingroups_and_6_outgroups":"AUTHOR_SOURCE_STATEMENT_NOT_RECOUNTED",
             "coding_integrity_result_already_published":"Ho and Smith 2016 report intact Chi/F3h/Dfr coding in their unpigmented lineages",
@@ -111,8 +167,8 @@ def main():
     p.add_argument("--output",type=Path,required=True)
     args=p.parse_args()
     meta=json.loads(get_bytes(METADATA_URL))
-    archive=get_bytes(DOWNLOAD_URL)
-    result=evaluate(meta,archive)
+    archive,method=public_original_material(meta)
+    result=evaluate(meta,archive,method)
     args.output.parent.mkdir(parents=True,exist_ok=True)
     args.output.write_text(json.dumps(result,sort_keys=True,indent=2)+"\n",encoding="utf-8")
     print("IOCHROMINAE_DRYAD_SOURCE_AUDIT_PASS",json.dumps({
