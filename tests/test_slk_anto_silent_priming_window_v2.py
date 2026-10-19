@@ -8,7 +8,7 @@ sys.path.insert(0,str(Path(__file__).resolve().parents[1]/"src"))
 from anto_slk_ecological_window_v1 import SLKSlice
 from anto_slk_silent_priming_window_v2 import (
     SilentPriming, hidden_inventory, qualified_pulse,
-    first_delay_boundary, exact_delay_increment, best_delay, panel
+    first_delay_boundary, exact_delay_increment, best_delay, identify_priming_from_three_pulses, panel
 )
 
 
@@ -150,6 +150,62 @@ class SilentPrimingExactTests(unittest.TestCase):
             best_delay(self.theta,self.params,-1)
         with self.assertRaises(TypeError):
             qualified_pulse(self.theta,self.params,2,favorable="good")
+
+    def test_three_arm_readiness_identification_in_exact_model(self):
+        p=self.params
+        q0,q1,q2=(qualified_pulse(self.theta,p,m) for m in (0,1,2))
+        identified=identify_priming_from_three_pulses(q0,q1,q2,1-p.resource_loss)
+        self.assertTrue(identified["identified"])
+        self.assertEqual(identified["silent_priming"],p.silent_priming)
+        self.assertEqual(identified["activation_primed_over_unprimed"],
+                         p.activation_primed/p.activation_unprimed)
+        self.assertEqual(identified["predicted_wait3_event_for_holdout"],
+                         qualified_pulse(self.theta,p,3))
+
+    def test_two_worlds_same_first_two_cohorts_but_different_third(self):
+        p=self.params
+        q=SilentPriming(F(1,10),F(2,5),F(1,4),F(1,25),F(4,5))
+        for m in (0,1):
+            self.assertEqual(qualified_pulse(self.theta,p,m),
+                             qualified_pulse(self.theta,q,m))
+        self.assertNotEqual(qualified_pulse(self.theta,p,2),
+                            qualified_pulse(self.theta,q,2))
+        identified=identify_priming_from_three_pulses(
+            *(qualified_pulse(self.theta,q,m) for m in (0,1,2)),
+            1-q.resource_loss)
+        self.assertEqual(identified["silent_priming"],F(1,4))
+        self.assertEqual(identified["activation_primed_over_unprimed"],4)
+
+    def test_identification_does_not_require_known_theta_or_repeat(self):
+        p=self.params
+        alternative=SilentPriming(
+            p.activation_unprimed,p.activation_primed,p.silent_priming,
+            p.resource_loss,F(3,5))
+        a=identify_priming_from_three_pulses(
+            *(qualified_pulse(F(1,8),p,m) for m in (0,1,2)),
+            1-p.resource_loss)
+        b=identify_priming_from_three_pulses(
+            *(qualified_pulse(F(1,4),alternative,m) for m in (0,1,2)),
+            1-p.resource_loss)
+        self.assertEqual(a["silent_priming"],b["silent_priming"])
+        self.assertEqual(a["activation_primed_over_unprimed"],
+                         b["activation_primed_over_unprimed"])
+
+    def test_nonidentification_and_incompatible_rate_sequences(self):
+        p=self.params
+        no=SilentPriming(p.activation_unprimed,p.activation_primed,0,
+                         p.resource_loss,p.continuation)
+        vals=[qualified_pulse(self.theta,no,m) for m in (0,1,2)]
+        n=identify_priming_from_three_pulses(*vals,1-p.resource_loss)
+        self.assertFalse(n["identified"])
+        self.assertEqual(n["status"],"PRIMING_NOT_IDENTIFIED")
+        n=identify_priming_from_three_pulses(
+            vals[0],vals[1],vals[2]+F(1,1000),1-p.resource_loss)
+        self.assertFalse(n["identified"])
+        self.assertEqual(n["status"],"INCOMPATIBLE_WITH_CONSTANT_RATE_MODEL")
+        n=identify_priming_from_three_pulses(0,0,0,1-p.resource_loss)
+        self.assertFalse(n["identified"])
+        self.assertEqual(n["status"],"NO_BASELINE_EVENT")
 
     def test_receipt_firewall(self):
         result=panel()
