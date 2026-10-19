@@ -126,6 +126,36 @@ The first-delay boundary equals `0.071>0`, and the best wait in the registered 0
 
 This does **not** violate present-state sufficiency: it says a **coding/inventory-only assay** is an incomplete present-state assay. A truly complete assay including the distinct molecular priming state would distinguish the cases. The biological question is whether there exists a measurable flower-specific latent readiness variable that carries some information beyond sequence integrity and visible morphology.
 
+## A further non-obvious result: three planned pulse cohorts can identify the hidden-priming contrast
+
+The initial-delay condition is not sufficient to estimate *why* it holds. The pulse at wait 0 and wait 1 depends on `b*(a_P-a_U)`; therefore one delayed comparison **cannot separately identify** the priming rate `b` and its regulatory advantage `a_P/a_U`.
+
+However, a simple source-specific intervention sequence is **structurally sufficient under the declared model**, provided the **same complete-toolkit survival probability** `S=1-d` is independently measured and the experimental cohorts share their initial resource distribution and continuation conditions.
+
+Observe the probabilities `Q_0`, `Q_1`, and `Q_2` of the **three-expression outcome** following **zero, one or two nonqualifying pre-exposure generations**, each followed by the identical three-generation qualifying window. Let `y_j=Q_j/Q_0`, `Q_0>0`, and `kappa=a_P/a_U`. Then:
+
+```text
+v1 = y1-S    = b*(kappa-1)
+v2 = y2-S^2  = b*(kappa-1)*(2*S-b)
+
+if v1!=0 and the resulting parameters are biologically admissible:
+    b     = 2*S - v2/v1
+    kappa = 1 + v1/b.
+```
+
+Initial retained-toolkit fraction `theta` and continued-expression probability `r` **cancel from these ratios**, if they are the same across arms. The model makes an additional out-of-sample prediction for `Q_3`; a failure of that prediction rejects this constant-rate priming description. If `v1=0` and `v2=0`, no-priming and no-activation-premium remain indistinguishable. This is exact **structural identifiability** in a toy model, not a clinical/field power guarantee or error-controlled statistical estimator.
+
+**Constructive two-world ambiguity:** two rate combinations have exactly identical `Q_0=0.8000%` and `Q_1=1.3680%` under the same `d=0.04`, `a_U=0.10`, `r=0.80`, `theta=1/8`:
+
+| Hypothetical world | Silent priming b | Primed activation a_P | Third cohort Q_2 |
+|---|---:|---:|---:|
+| A | 0.15 | 0.60 | **1.79928%** |
+| B | 0.25 | 0.40 | **1.73928%** |
+
+One delayed induction response therefore does not identify the hidden mechanism even with perfect measurement of its probability; the second pre-exposure interval breaks the equivalence **under these assumptions**. The difference between these Q2 values is only 0.060 percentage points, so an actual experiment would need independent lineages, appropriately modeled response uncertainty and pre-registered precision rather than treating exact algebraic identifiability as achievable power.
+
+This assay contrast addresses a genuine biology question: whether environmental history changes *the fraction primed* or *the activation efficacy of priming*. A genotype assay identifying intact coding genes will not directly measure either variable; stage-matched regulatory assays and a repeated-outcome test are required.
+
 ## Falsifiers and organismal research programme
 
 In replicated whole-lineage cohorts with identified ancestral capacity (not photos treated as independent origin events):
