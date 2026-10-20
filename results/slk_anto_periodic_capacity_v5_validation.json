@@ -1,0 +1,11 @@
+{
+  "grid_cases": 364,
+  "symmetric_grid_cases": 324,
+  "asymmetric_random_cases": 40,
+  "numpy_eigenvalue_classification_agreements": 357,
+  "near_critical_float_comparisons_skipped": 7,
+  "max_per_generation_absolute_difference": 1.1102230246251565e-15,
+  "sampled_supercritical_survival_checks": 14,
+  "max_iterations_in_sample": 216,
+  "input_base_commit": "0d57f461c3e2e00181251c412f32d2a4df9c898e"
+}

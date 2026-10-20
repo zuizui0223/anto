@@ -1,0 +1,52 @@
+name: ANTO-SLK periodic ecological capacity v5
+on:
+  pull_request:
+    paths:
+      - "src/anto_slk_periodic_capacity_v5.py"
+      - "src/anto_slk_recurrent_capacity_v4.py"
+      - "tests/test_slk_anto_periodic_capacity_v5.py"
+      - "scripts/run_slk_anto_periodic_capacity_v5.py"
+      - "scripts/validate_slk_anto_periodic_capacity_v5.py"
+      - "results/slk_anto_periodic_capacity_v5_summary.json"
+      - "docs/SLK_ANTO_PERIODIC_CAPACITY_V5.md"
+      - ".github/workflows/slk-anto-periodic-capacity-v5.yml"
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  periodic-capacity-and-regressions:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - run: python -m pip install numpy scipy biopython openpyxl pandas
+      - name: Full repository unit suite
+        run: python -m unittest discover -s tests -v
+      - name: Independent NumPy matrix/eigenvalue grid
+        run: python scripts/validate_slk_anto_periodic_capacity_v5.py --output /tmp/periodic-capacity-validation-v5.json
+      - name: Reproduce selected periodic-capacity results
+        run: |
+          python scripts/run_slk_anto_periodic_capacity_v5.py --output /tmp/periodic-capacity-v5.json --expected results/slk_anto_periodic_capacity_v5_summary.json
+          python - <<'PY'
+          import json
+          d=json.load(open('/tmp/periodic-capacity-v5.json'))
+          rows={(x['phenotype_switching'],x['environment_run_length']):x for x in d['scenarios']}
+          assert rows['1/10',1]['regime']=='subcritical'
+          assert rows['1/10',4]['regime']=='supercritical'
+          assert rows['9/10',1]['regime']=='supercritical'
+          assert rows['9/10',4]['regime']=='subcritical'
+          assert all(x['converged'] for x in rows.values())
+          assert not d['natural_regain_demonstrated']
+          assert not d['organism_extinction_inferred']
+          assert not d['slk_payoff_calibrated']
+          assert d['empirical_owner']=='zuizui0223/aza3'
+          PY
+      - uses: actions/upload-artifact@v4
+        with:
+          name: anto-slk-periodic-capacity-v5
+          path: |
+            /tmp/periodic-capacity-v5.json
+            /tmp/periodic-capacity-validation-v5.json
