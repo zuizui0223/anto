@@ -1,0 +1,33 @@
+name: ANTO v11 empirical route evidence and claim boundaries
+on:
+  pull_request:
+    paths:
+      - "data/afterlife_v11_mechanistic_regain_routes_literature_registry_20261020.json"
+      - "scripts/validate_afterlife_v11_empirical_regain_routes.py"
+      - "tests/test_afterlife_v11_empirical_regain_routes.py"
+      - ".github/workflows/anto-v11-empirical-route-evidence.yml"
+  push:
+    branches: [main]
+    paths:
+      - "data/afterlife_v11_mechanistic_regain_routes_literature_registry_20261020.json"
+      - "scripts/validate_afterlife_v11_empirical_regain_routes.py"
+      - "tests/test_afterlife_v11_empirical_regain_routes.py"
+      - ".github/workflows/anto-v11-empirical-route-evidence.yml"
+permissions:
+  contents: read
+jobs:
+  source-limited-evidence:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - name: Prevent false claims across Petunia Iochroma Antirrhinum and Cirsium
+        run: python -m unittest discover -s tests -p test_afterlife_v11_empirical_regain_routes.py -v
+      - name: Export validated exact original-source route summary
+        run: python scripts/validate_afterlife_v11_empirical_regain_routes.py --output /tmp/anto_v11_original_route_evidence.json
+      - uses: actions/upload-artifact@v4
+        with:
+          name: anto-v11-regain-mechanism-source-summary
+          path: /tmp/anto_v11_original_route_evidence.json
