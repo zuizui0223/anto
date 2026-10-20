@@ -114,7 +114,7 @@
       "molecular_causal_evidence": "SOURCE_SUPPORTED_FOR_PATTERN_REPRESSION",
       "alternative_regulator_recruitment": false,
       "pigment_tissue_evidence": "Transposon-tagging, phenotype, repressor assays, two-generation inheritance",
-      "quantitative_lineage_reexpression_rate": "NOT_ESTIMATED_MACROEVOLUTIONARY",
+      "quantitative_lineage_reexpression_rate": "NOT_ESTIMATED",
       "trait_specific_viable_seed_fitness": "NOT_QUALIFIED",
       "independent_regain_clade_weight": 0,
       "caveat": "Functionally documented regulatory reversibility is not independent angiosperm evidence of ancient floral anthocyanin regain"
@@ -132,7 +132,7 @@
       "pre_loss_ancestral_hue": "NOT_QUALIFIED",
       "current_pigment_hue": "reduced_floral_pigment",
       "colorless_ancestor_inferred": false,
-      "visible_pigmentation_present": false,
+      "visible_pigmentation_present": "REDUCED_NOT_BINARY_ABSENCE_VALIDATED",
       "ancestral_hue_restoration": "NO_REGAIN_EVENT_RECORDED",
       "focal_molecular_mechanism": "Upstream translation-initiation alteration in 5-prime UTR of PELAN reduces activator translation",
       "molecular_causal_evidence": "SOURCE_SUPPORTED_LOSS_ROUTE_ONLY",
