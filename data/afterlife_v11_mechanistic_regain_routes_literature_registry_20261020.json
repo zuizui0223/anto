@@ -1,0 +1,197 @@
+{
+  "schema": "anto_evolutionary_afterlife_empirical_route_registry_v11",
+  "evidence_cutoff_date": "2026-10-20",
+  "dataset_identity": "non_systematic_source-verified_mechanism_examples_NOT_random_species_sample",
+  "central_question": "After a visible floral trait is lost, does its future regain necessarily reconstruct the ancestral pigment, gene regulator, ecological function, and heritable phenotype together?",
+  "ownership": {
+    "general_cross_clade_evidence": "zuizui0223/anto",
+    "Cirsium_same_individual_function_and_field": "zuizui0223/aza3"
+  },
+  "definitions": {
+    "visible_regain": "Flower pigment or pattern becomes observable again after inferred or experimentally documented absence; not necessarily restoring ancestral hue",
+    "ancestral_hue_restoration": "Present pigment phenotype matches published inferred pre-loss ancestral dominant hue, rather than simply a return to any visible anthocyanin",
+    "regulator_reuse": "Original functional regulator repaired or redeployed, distinct from an alternate functional paralog",
+    "family_homology": "Short original-RNA/GenBank sequence similarity; not enzyme activity or intact whole genomic pathway",
+    "independent_evolutionary_origin": "Separate reconstructed phylogenetic return event; multiple studies of the same clade/tip are not independent",
+    "fitness": "Direct fecundity/viability/ecological-function result measured under a relevant comparative or experimental control"
+  },
+  "cases": [
+    {
+      "case_id": "P_secreta_AN2_resurrection",
+      "clade": "Petunia",
+      "taxon": "Petunia secreta",
+      "case_role": "MOLECULARLY_SUPPORTED_PIGMENT_REGAIN",
+      "source_dois": [
+        "10.1016/j.cub.2018.10.019"
+      ],
+      "original_papers_are_not_anto_experiments": true,
+      "source_ancestry": "Colourless ancestor supported by published phylogeny, not experimentally observed ancestral flowers",
+      "pre_loss_ancestral_hue": "purple",
+      "current_pigment_hue": "purple",
+      "colorless_ancestor_inferred": true,
+      "visible_pigmentation_present": true,
+      "ancestral_hue_restoration": "SOURCE_SUPPORTED",
+      "focal_molecular_mechanism": "Compensatory two-base deletion restored AN2 coding frame/function",
+      "molecular_causal_evidence": "SOURCE_SUPPORTED",
+      "alternative_regulator_recruitment": false,
+      "pigment_tissue_evidence": "Flower/petal pigmentation documented",
+      "quantitative_lineage_reexpression_rate": "NOT_ESTIMATED",
+      "trait_specific_viable_seed_fitness": "NOT_QUALIFIED",
+      "independent_regain_clade_weight": 1,
+      "caveat": "Same Petunia radiation as P. exserta; do not count studies/species as independent plant-clade replications"
+    },
+    {
+      "case_id": "P_exserta_DPL_novel_red",
+      "clade": "Petunia",
+      "taxon": "Petunia exserta",
+      "case_role": "MOLECULARLY_SUPPORTED_ALTERNATIVE_HUE_REGAIN",
+      "source_dois": [
+        "10.1093/plcell/koab114"
+      ],
+      "original_papers_are_not_anto_experiments": true,
+      "source_ancestry": "Previously colourless ancestor phylogenetically supported",
+      "pre_loss_ancestral_hue": "purple",
+      "current_pigment_hue": "red_visual_with_cyanidin_and_delphinidin_not_pelargonidin",
+      "colorless_ancestor_inferred": true,
+      "visible_pigmentation_present": true,
+      "ancestral_hue_restoration": "ALTERED_NOT_ANCESTRAL",
+      "focal_molecular_mechanism": "AN2 nonfunctional; functional DPL paralog upregulated in petal limb, plus hydroxylation and acylation changes",
+      "molecular_causal_evidence": "SOURCE_SUPPORTED_FUNCTIONAL_DPL_KNOCKDOWN_AND_COMPLEMENTATION",
+      "alternative_regulator_recruitment": true,
+      "pigment_tissue_evidence": "LC-MS flower anthocyanins and floral genetic expression/functional interventions",
+      "quantitative_lineage_reexpression_rate": "NOT_ESTIMATED",
+      "trait_specific_viable_seed_fitness": "NOT_QUALIFIED",
+      "independent_regain_clade_weight": 0,
+      "caveat": "Petunia secreta and exserta are different published mechanisms but still ONE genus; red hue is not pelargonidin synthesis"
+    },
+    {
+      "case_id": "I_edule_cyanidin_inferred_recovery",
+      "clade": "Iochrominae",
+      "taxon": "Iochroma edule",
+      "case_role": "PHYLOGENETIC_PIGMENT_REGAIN_INFERRED",
+      "source_dois": [
+        "10.1186/s12862-016-0675-3",
+        "10.1093/molbev/msy117"
+      ],
+      "source_repository_evidence": "data/iochrominae_2016_fig1_source_trait_taxon_crosswalk_v1.json",
+      "original_papers_are_not_anto_experiments": true,
+      "source_ancestry": "Published dated/phylogenetic analysis places tip in old unpigmented A clade; direction is inferred",
+      "pre_loss_ancestral_hue": "delphinidin_based_blue_or_purple",
+      "current_pigment_hue": "cyanidin_dominant",
+      "colorless_ancestor_inferred": true,
+      "visible_pigmentation_present": true,
+      "ancestral_hue_restoration": "ALTERED_NOT_ANCESTRAL",
+      "original_registered_KT_2016": {
+        "CHI": "KT898423",
+        "F3H": "KT898401",
+        "DFR": "KT898445"
+      },
+      "focal_molecular_mechanism": "Published flower-bud cDNA structural sequences; late F3'5'h, Dfr, Ans flower expression regained relative to unpigmented A clade; specific causal regulatory allele not resolved",
+      "molecular_causal_evidence": "NOT_IDENTIFIED",
+      "alternative_regulator_recruitment": "HYPOTHESIZED_NOT_CAUSAL",
+      "pigment_tissue_evidence": "Published flower HPLC cyanidin and seven-gene comparative expression",
+      "quantitative_lineage_reexpression_rate": "NOT_ESTIMATED",
+      "trait_specific_viable_seed_fitness": "NOT_QUALIFIED",
+      "independent_regain_clade_weight": 0,
+      "caveat": "Ho 2016 and Larter 2018 overlap the SAME Iochrominae clade; phenotype return and late expression jointly do not establish causally retained regulator"
+    },
+    {
+      "case_id": "A_majus_Eluta_pattern_reversion",
+      "clade": "Antirrhinum",
+      "taxon": "Antirrhinum majus",
+      "case_role": "EXPERIMENTALLY_INHERITED_FLORAL_PATTERN_REGULATOR_REVERSIBILITY_CONTROL",
+      "source_dois": [
+        "10.1111/nph.19866"
+      ],
+      "original_papers_are_not_anto_experiments": true,
+      "source_ancestry": "Experimental transposon insertion/excision within cultivated genotype; not dated ancient whole-flower pigment loss",
+      "pre_loss_ancestral_hue": "NOT_QUALIFIED_FOR_WHOLE_FLOWER",
+      "current_pigment_hue": "pale_bullseye_pattern_after_Myb_repressor_reversion",
+      "colorless_ancestor_inferred": false,
+      "visible_pigmentation_present": true,
+      "ancestral_hue_restoration": "NOT_APPLICABLE_PATTERN_SWITCH",
+      "focal_molecular_mechanism": "CACTA transposable-element excision restored suppressive ELUTA MYB activity; S1 22 magenta versus 5 pale and S2 segregating",
+      "molecular_causal_evidence": "SOURCE_SUPPORTED_FOR_PATTERN_REPRESSION",
+      "alternative_regulator_recruitment": false,
+      "pigment_tissue_evidence": "Transposon-tagging, phenotype, repressor assays, two-generation inheritance",
+      "quantitative_lineage_reexpression_rate": "NOT_ESTIMATED",
+      "trait_specific_viable_seed_fitness": "NOT_QUALIFIED",
+      "independent_regain_clade_weight": 0,
+      "caveat": "Functionally documented regulatory reversibility is not independent angiosperm evidence of ancient floral anthocyanin regain"
+    },
+    {
+      "case_id": "M_parishii_PELAN_reduction",
+      "clade": "Mimulus_Erythranthe",
+      "taxon": "Mimulus parishii",
+      "case_role": "FUNCTIONAL_PIGMENT_LOSS_NEGATIVE_MECHANISM_CONTROL",
+      "source_dois": [
+        "10.1126/sciadv.abo1113"
+      ],
+      "original_papers_are_not_anto_experiments": true,
+      "source_ancestry": "Published floral colour attenuation associated with regulatory translation change, no regained event",
+      "pre_loss_ancestral_hue": "NOT_QUALIFIED",
+      "current_pigment_hue": "reduced_floral_pigment",
+      "colorless_ancestor_inferred": false,
+      "visible_pigmentation_present": "REDUCED_NOT_BINARY_ABSENCE_VALIDATED",
+      "ancestral_hue_restoration": "NO_REGAIN_EVENT_RECORDED",
+      "focal_molecular_mechanism": "Upstream translation-initiation alteration in 5-prime UTR of PELAN reduces activator translation",
+      "molecular_causal_evidence": "SOURCE_SUPPORTED_LOSS_ROUTE_ONLY",
+      "alternative_regulator_recruitment": false,
+      "pigment_tissue_evidence": "Functional regulatory pigment-loss study",
+      "quantitative_lineage_reexpression_rate": "NOT_ESTIMATED",
+      "trait_specific_viable_seed_fitness": "NOT_QUALIFIED",
+      "independent_regain_clade_weight": 0,
+      "caveat": "Do not recode a mechanism of phenotype loss as a failed experiment to re-express it"
+    },
+    {
+      "case_id": "Ryukyu_Cirsium_RNA_6_source",
+      "clade": "Cirsium",
+      "taxon": "Cirsium brevicaule and Cirsium irumtiense",
+      "case_role": "HYPOTHESIS_GENERATING_LEAF_SEQUENCE_HOMOLOGY",
+      "source_dois": [
+        "10.1186/s12870-026-08097-6",
+        "10.1021/acsomega.0c04001"
+      ],
+      "source_repository_evidence": "https://github.com/zuizui0223/aza3/blob/main/docs/RYUKYU_FULL_AUTHOR_TRANSCRIPTOME_RESULTS_V7.md",
+      "original_papers_are_not_anto_experiments": true,
+      "source_ancestry": "No supported loss-then-regain polarity for individual colour contrast",
+      "pre_loss_ancestral_hue": "UNKNOWN",
+      "current_pigment_hue": "species_level_contrast_only_unmeasured_in_6_donors",
+      "colorless_ancestor_inferred": false,
+      "visible_pigmentation_present": "NOT_MEASURED_IN_SIX_DONORS",
+      "ancestral_hue_restoration": "NOT_IDENTIFIABLE",
+      "focal_molecular_mechanism": "Original six 2026 young-leaf first-R1 prefixes, 747234 reads, 215 selected source-fragments after competition with 104890 C. japonicum transcript sequences; TR39766 and TR41106 fragments in 6/6 source libraries",
+      "molecular_causal_evidence": "NOT_MEASURED",
+      "alternative_regulator_recruitment": "NOT_MEASURED",
+      "pigment_tissue_evidence": "NO_FLOWER_TISSUE_STUDIED",
+      "quantitative_lineage_reexpression_rate": "NOT_ESTIMATED",
+      "trait_specific_viable_seed_fitness": "NOT_MEASURED",
+      "independent_regain_clade_weight": 0,
+      "caveat": "Leaf RNA homology fragments are not functional enzyme assignments, flower gene expression, genotype persistence or phenotype regain"
+    }
+  ],
+  "derived_summary_contract": {
+    "distinct_named_clades": 5,
+    "listed_pigment_regain_candidates_with_sourced_evolutionary_ancestry": 3,
+    "published_molecularly_supported_pigment_regains_within_petunia": 2,
+    "independently_molecularly_proven_pigment_regain_clades_in_this_registry": 1,
+    "inferred_pigment_regain_in_separate_iochrominae_clade": 1,
+    "source_cases_currently_showing_ancestral_hue_restoration": 1,
+    "source_cases_currently_showing_altered_hue_on_colour_return": 2,
+    "human_selected_source_cases_not_unbiased_clade_sample": true,
+    "frequency_of_ancestral_hue_recovery_from_trait_loss": "NOT_ESTIMABLE",
+    "fitted_latent_capacity_or_degradation_rates": "NONE",
+    "source_cases_with_trait_specific_qualified_viable_seed_fitness": 0
+  },
+  "biological_target_next": "Estimate separately Pr(any biochemical reexpression), Pr(ancestral biochemical branch restored | reexpression), Pr(heritable persistence) and ecological fitness on validated whole-clade heldouts; current selected literature does not estimate these probabilities.",
+  "competing_explanations": [
+    "reuse_of_original_gene_regulator",
+    "regulatory_paralog_cooption",
+    "incomplete_branch_reactivation",
+    "new_coding_variant",
+    "introgression_or_immigration",
+    "phenotypic_plasticity",
+    "pathway_function_serving_nonfloral_tissues"
+  ],
+  "publication_boundary": "Forni et al 2026 reviews lost-trait reversals/novelty; existence of multiple routes is known. This is a source-audited hypothesis registry, not a newly tested general evolutionary law."
+}
