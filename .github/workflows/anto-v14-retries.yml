@@ -1,0 +1,51 @@
+name: ANTO v14 retries and first surviving recovery route
+on:
+  pull_request:
+    paths:
+      - "src/anto_afterlife_retries_v14.py"
+      - "tests/test_afterlife_retries_v14.py"
+      - "scripts/run_afterlife_retries_v14.py"
+      - "docs/EVOLUTIONARY_AFTERLIFE_V14_RETRY_IDENTIFICATION.md"
+      - ".github/workflows/anto-v14-retries.yml"
+  push:
+    branches: [main]
+    paths:
+      - "src/anto_afterlife_retries_v14.py"
+      - "tests/test_afterlife_retries_v14.py"
+      - "scripts/run_afterlife_retries_v14.py"
+      - ".github/workflows/anto-v14-retries.yml"
+permissions:
+  contents: read
+jobs:
+  no-preemption:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - name: Install frozen core numeric dependencies
+        run: python -m pip install "numpy>=1.25,<3" "scipy>=1.11,<2"
+      - name: Verify earlier v12/v13 bounds and v14 retry controls
+        run: |
+          python -m unittest discover -s tests -p 'test_afterlife_route_window_v12.py' -v
+          python -m unittest discover -s tests -p 'test_afterlife_ecological_filter_v13.py' -v
+          python -m unittest discover -s tests -p 'test_afterlife_retries_v14.py' -v
+      - name: Reproduce no-preemption model and numerical sensitivity
+        run: |
+          python scripts/run_afterlife_retries_v14.py --output /tmp/anto_v14.json --grid /tmp/anto_v14_grid.csv
+          python - <<'PY'
+          import json
+          p=json.load(open("/tmp/anto_v14.json"))
+          assert p["synthetic_only"] and not p["natural_phylogeny_or_reversion_rate_estimated"]
+          assert abs(p["crossover_delay"]-2.17240158406441)<1e-7
+          assert p["adverse_control"]["one_shot_spurious_gain_disappears_when_failed_expression_does_not_preempt"]
+          assert p["sensitivity_grid"]["settings"] == 540
+          assert p["observed_plant_reexpression_events"]==0
+          PY
+      - uses: actions/upload-artifact@v4
+        with:
+          name: anto-v14-retry-first-persistent-route
+          path: |
+            /tmp/anto_v14.json
+            /tmp/anto_v14_grid.csv
