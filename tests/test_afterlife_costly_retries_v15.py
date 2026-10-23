@@ -162,6 +162,42 @@ class CostlyV15(unittest.TestCase):
         with self.assertRaises(ValueError):
             after_silence(cfg,0,.95,1.5,-5)
 
+    def test_independent_stochastic_event_race_for_costly_recovery(self):
+        # Competing exponential clocks with independently drawn pre-aging
+        # resource lifetimes, rather than using matrix exponential or source
+        # exact_eventual probabilities. Here R_A=.95 implies q_A=0.
+        rng=np.random.default_rng(20261023)
+        beta=.2*v13.poisson_lineage_nonextinction(1.5)
+        c,x,y=.02,.3,.01
+        failed_A_common=.4*.3
+        hazard_both=beta+x+c+y+failed_A_common
+        chance_bonly=beta/(beta+c+y)
+        n=180000
+        model=CostlyRoutes(self.rates,RetryCost(0,.3),self.empty)
+        for age in (0.,2.8193330561728502,5.):
+            # The common/A/B resources survive the silent phase independently.
+            alive_c=rng.exponential(1/c,n)>age
+            alive_a=rng.exponential(1/x,n)>age
+            alive_b=rng.exponential(1/y,n)>age
+            both=alive_c&alive_a&alive_b
+            bonly=alive_c&(~alive_a)&alive_b
+            count=np.count_nonzero(bonly)
+            result=np.count_nonzero(rng.random(count)<chance_bonly)
+            if np.any(both):
+                # While both exist, a B-success races A-background-loss
+                # against common, B and futile-A common-capacity depletion.
+                u=rng.random(np.count_nonzero(both))
+                direct_B=(u<beta/hazard_both)
+                A_is_lost=(u>=beta/hazard_both)&(
+                    u<(beta+x)/hazard_both)
+                result+=np.count_nonzero(direct_B)
+                result+=np.count_nonzero(
+                    rng.random(np.count_nonzero(A_is_lost))<chance_bonly)
+            estimate=result/n
+            predicted=after_silence(model,age,.95,1.5)["any_nonextinct"]
+            sigma=math.sqrt(predicted*(1-predicted)/n)
+            self.assertLess(abs(estimate-predicted),6*sigma+1/n)
+
     def test_declared_parameter_grid_and_missing_outcomes(self):
         grid=cost_grid(self.rates,self.loss)
         self.assertEqual(len(grid),210)
