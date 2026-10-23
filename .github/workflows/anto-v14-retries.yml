@@ -6,6 +6,7 @@ on:
       - "tests/test_afterlife_retries_v14.py"
       - "scripts/run_afterlife_retries_v14.py"
       - "docs/EVOLUTIONARY_AFTERLIFE_V14_RETRY_IDENTIFICATION.md"
+      - "README.md"
       - ".github/workflows/anto-v14-retries.yml"
   push:
     branches: [main]
