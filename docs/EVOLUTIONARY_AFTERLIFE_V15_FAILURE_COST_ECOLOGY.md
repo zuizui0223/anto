@@ -81,7 +81,7 @@ antoは汎用理論の所有者、aza3が同じ植物の分子・頭花・実際
 ## 技術・再現性
 
 - 主モデル：src/anto_afterlife_costly_retries_v15.py
-- 負対照・解析式の13テスト：tests/test_afterlife_costly_retries_v15.py
+- 負対照・解析式・独立サンプリングの14テスト：tests/test_afterlife_costly_retries_v15.py
 - 210条件の計算：scripts/run_afterlife_costly_retries_v15.py
 - GitHub Actions：.github/workflows/anto-v15-failure-cost.yml
 
