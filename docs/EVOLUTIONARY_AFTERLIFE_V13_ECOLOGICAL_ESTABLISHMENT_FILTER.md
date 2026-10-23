@@ -1,6 +1,6 @@
 # ANTO v13 — Re-expression probability is not demographic establishment
 
-**As of 23 October 2026.** This is a mathematical, synthetic extension of [ANTO v12](EVOLUTIONARY_AFTERLIFE_V12_RECOVERY_DIRECTION_AND_CAPACITY.md) and its alternative first-recovery model. **No mean offspring rate, floral reversion, genetic fixation, seed germination, or population persistence was estimated from real plants.** All original Cirsium observation/biochemical/field analyses stay in [aza3](https://github.com/zuizui0223/aza3).
+**As of 23 October 2026.** This is a mathematical, synthetic extension of [ANTO v12 model and source results](../results/afterlife_route_window_v12.json) and its alternative first-recovery model. **No mean offspring rate, floral reversion, genetic fixation, seed germination, or population persistence was estimated from real plants.** All original Cirsium observation/biochemical/field analyses stay in [aza3](https://github.com/zuizui0223/aza3).
 
 ## Main question
 
@@ -59,6 +59,8 @@ A **strictly larger** R_B is required for greater alternative contribution. At t
 | 7 | 1.034856 |
 
 The actual example R_B=1.05 is below the threshold at t=5 but above it at t=7. This is a **conditional frontier**, not a field-derived fitness estimate.
+
+This threshold inversion has direct regression tests at t=0,5,7, plus adverse cases in which B has no allowed re-expression route or cannot overtake A for any finite Poisson offspring mean. It is an algebraic consequence of the declared one-shot model, not an independently fitted ecological selection coefficient.
 
 When B has R_B≤1, it may be the first re-expressed phenotype often while its long-run Poisson branching nonextinction stays exactly zero. Thus neither first return nor repeated finite observations alone establish demographic persistence.
 
