@@ -1,0 +1,53 @@
+name: ANTO v15 failure-cost gates and recovery window
+on:
+  pull_request:
+    paths:
+      - "src/anto_afterlife_costly_retries_v15.py"
+      - "tests/test_afterlife_costly_retries_v15.py"
+      - "scripts/run_afterlife_costly_retries_v15.py"
+      - "docs/EVOLUTIONARY_AFTERLIFE_V15_FAILURE_COST_ECOLOGY.md"
+      - ".github/workflows/anto-v15-failure-cost.yml"
+      - "README.md"
+  push:
+    branches: [main]
+    paths:
+      - "src/anto_afterlife_costly_retries_v15.py"
+      - "tests/test_afterlife_costly_retries_v15.py"
+      - "scripts/run_afterlife_costly_retries_v15.py"
+      - ".github/workflows/anto-v15-failure-cost.yml"
+permissions:
+  contents: read
+jobs:
+  fail-closed-persistence:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - name: Source-preserving NumPy and SciPy dependencies
+        run: python -m pip install "numpy>=1.25,<3" "scipy>=1.11,<2"
+      - name: Require previous cost-free and newly costed re-expression checks
+        run: |
+          python -m unittest discover -s tests -p 'test_afterlife_retries_v14.py' -v
+          python -m unittest discover -s tests -p 'test_afterlife_costly_retries_v15.py' -v
+      - name: Replay independent source-defined interval and 210 sensitivity settings
+        run: |
+          python scripts/run_afterlife_costly_retries_v15.py --output /tmp/anto_v15.json --grid /tmp/anto_v15_grid.csv
+          python - <<'PY'
+          import json
+          p=json.load(open("/tmp/anto_v15.json"))
+          assert p["synthetic_only"] and not p["plant_reversion_hazard_measured"]
+          assert p["cost_window"]["kind"]=="interior"
+          assert abs(p["cost_window"]["peak_age"]-2.8193330561728502)<1e-7
+          assert p["reference"]["costly_age_peak"]["any_nonextinct"]>p["reference"]["costly_age_zero"]["any_nonextinct"]
+          assert p["reference"]["no_cost_age_zero"]["any_nonextinct"]>p["reference"]["no_cost_age_peak"]["any_nonextinct"]
+          assert p["source_biological_conclusions"]["new_Cirsium_flower_pigment_expression_assays"]==0
+          PY
+      - uses: actions/upload-artifact@v4
+        with:
+          name: anto-v15-costly-retries-source-gate
+          path: |
+            /tmp/anto_v15.json
+            /tmp/anto_v15_grid.csv
+          retention-days: 90
