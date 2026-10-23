@@ -15,6 +15,7 @@ from anto_afterlife_ecological_filter_v13 import (
     poisson_lineage_nonextinction, one_attempt_ecological_filter,
     fitness_route_crossover, nonpreemptive_alternative_probe,
     sensitivity_grid,
+    minimum_alternative_offspring_mean_for_dominance,
 )
 
 class BranchingGateTests(unittest.TestCase):
@@ -118,6 +119,37 @@ class BranchingGateTests(unittest.TestCase):
             fitness_route_crossover(self.rates,self.loss,3,1.05,(5,0))
         with self.assertRaises(ValueError):
             one_attempt_ecological_filter(self.rates,self.loss,-1,3,1.05)
+
+    def test_sharp_alternative_offspring_threshold_changes_with_loss_age(self):
+        expected = {0:2.1241506874564764, 5:1.0676628591032438,
+                    7:1.0348558370892016}
+        for age, reference in expected.items():
+            gate=minimum_alternative_offspring_mean_for_dominance(
+                self.rates,self.loss,age,3.)
+            self.assertEqual(gate["kind"],"finite")
+            self.assertAlmostEqual(gate["critical_mean_offspring"],reference,places=10)
+            above=one_attempt_ecological_filter(
+                self.rates,self.loss,age,3.,reference+0.001)
+            below=one_attempt_ecological_filter(
+                self.rates,self.loss,age,3.,reference-0.001)
+            self.assertGreater(above["one_attempt_nonextinction"]["alternative"],
+                               above["one_attempt_nonextinction"]["ancestral"])
+            self.assertLess(below["one_attempt_nonextinction"]["alternative"],
+                            below["one_attempt_nonextinction"]["ancestral"])
+
+    def test_alternative_missing_or_too_rare_cannot_dominate(self):
+        no_route=previous.Rates(".4",0,self.loss)
+        self.assertEqual(
+            minimum_alternative_offspring_mean_for_dominance(
+                no_route,self.loss,0,3.)["kind"],"no_alternative_route")
+        fast_a=previous.Rates(4.,".001",self.loss)
+        result=minimum_alternative_offspring_mean_for_dominance(
+            fast_a,self.loss,0,3.)
+        self.assertEqual(result["kind"],"not_attainable_for_finite_Poisson_R_B")
+        no_a=minimum_alternative_offspring_mean_for_dominance(
+            self.rates,self.loss,0,1.)
+        self.assertEqual(no_a["kind"],"any_supercritical_B_suffices")
+        self.assertEqual(no_a["critical_mean_offspring"],1.)
 
     def test_sensitivity_grid_no_population_estimates(self):
         grid=sensitivity_grid(self.rates,self.loss)
