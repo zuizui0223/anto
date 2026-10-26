@@ -5,6 +5,8 @@ NO experiments with loss-and-regain, no causal gene fine mapping, no phylo
 replication, and no claim original paper discoveries are newly ours.
 """
 import hashlib
+import copy
+import json
 import sys
 import unittest
 from pathlib import Path
@@ -13,6 +15,7 @@ ROOT=Path(__file__).resolve().parents[1]
 sys.path.insert(0,str(ROOT/"scripts"))
 from audit_iochroma_2025_osf_myb12_backcross import (
     SOURCE, MYB_ID, parse_manifest, audit_tpm_table, validate_payload,
+    assert_expected_receipt,
 )
 
 class IochromaSourceTests(unittest.TestCase):
@@ -72,6 +75,40 @@ class IochromaSourceTests(unittest.TestCase):
         ):
             with self.assertRaisesRegex(ValueError,word):
                 audit_tpm_table(mat,m,selected_gene="MYB")
+
+    def test_frozen_original_source_receipt_preserves_exact_separators(self):
+        path=ROOT/"results/iochroma_2025_24_individual_myb12_16_transcript_source_audit_20261026.json"
+        ref=json.loads(path.read_text(encoding="utf-8"))
+        self.assertEqual(ref["original_n_transcript_entries"],19184)
+        self.assertEqual(len(ref["our_descriptive_audit"]["strict_perfect_source_entries"]),16)
+        self.assertEqual(ref["our_descriptive_audit"]["n_distinct_TRINITY_DN_assembly_component_labels"],14)
+        fake={
+            "n_samples_blue":12,"n_samples_red":12,
+            "total_filtered_transcripts":19184,
+            "perfect_blue_over_red":16,"perfect_red_over_blue":0,
+            "perfect_blue_transcript_IDs":[x["id"] for x in ref["our_descriptive_audit"]["strict_perfect_source_entries"]],
+            "perfect_red_transcript_IDs":[],
+            "selected_gene":{
+                "blue_mean_tpm":ref["our_descriptive_audit"]["mean_blue_TPM"],
+                "red_mean_tpm":ref["our_descriptive_audit"]["mean_red_TPM"],
+                "blue_min_tpm":ref["our_descriptive_audit"]["min_blue_TPM"],
+                "red_max_tpm":ref["our_descriptive_audit"]["max_red_TPM"],
+                "pairwise_blue_over_red_AUC":1.,
+                "individuals":[{"source_original_ID":v["sample_id"],
+                                "paper_phenotype":"blue" if v["source_flower_colour"]=="B" else "red",
+                                "TPM":v["TPM"]}
+                               for v in ref["our_descriptive_audit"]["original_Myb12_TPM_by_sample"]],
+            },
+        }
+        assert_expected_receipt(fake,ref)
+        perturbed=copy.deepcopy(fake)
+        perturbed["perfect_blue_transcript_IDs"][0]="SYNTHETIC_ID"
+        with self.assertRaisesRegex(ValueError,"receipt"):
+            assert_expected_receipt(perturbed,ref)
+        perturbed=copy.deepcopy(fake)
+        perturbed["selected_gene"]["individuals"][0]["TPM"]+=1
+        with self.assertRaisesRegex(ValueError,"receipt"):
+            assert_expected_receipt(perturbed,ref)
 
     def test_source_byte_digest_or_count_fails_closed(self):
         with self.assertRaisesRegex(ValueError,"source"):
