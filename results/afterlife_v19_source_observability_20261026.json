@@ -1,0 +1,113 @@
+{
+  "schema": "anto_v19_original_sources_cross_system_observability_gate",
+  "date": "2026-10-26",
+  "source_reuse_not_original_author_experiment_or_original_full_alignment_reconstruction": true,
+  "source_paths": {
+    "phenotype_genbank_22_taxa": "results/iochrominae_2016_trait_KT_source_join_20261019.json",
+    "selected_mechanisms": "data/afterlife_v11_mechanistic_regain_routes_literature_registry_20261020.json",
+    "penstemon_hybrid_F2": "data/external/penstemon_2014_f3p5h_source_genetic_accessibility_v1.json",
+    "iochroma_flower_rna": "results/iochroma_2025_color_conditioned_sensitivity_v3_20261026.json"
+  },
+  "Iochrominae_KT_source_metadata": {
+    "original_taxa": 22,
+    "source_nucleotide_accessions": 58,
+    "unpigmented_taxa": 7,
+    "pigmented_taxa": 15,
+    "three_source_metadata_levels": {
+      "UNPIGMENTED": {
+        "DFR_KT_CDS_ANNOTATED": 3,
+        "DFR_KT_NO_CDS_FEATURE": 2,
+        "DFR_NOT_IN_NEW_KT_BLOCK": 2
+      },
+      "PIGMENTED": {
+        "DFR_KT_CDS_ANNOTATED": 9,
+        "DFR_KT_NO_CDS_FEATURE": 0,
+        "DFR_NOT_IN_NEW_KT_BLOCK": 6
+      }
+    },
+    "CHI_F3H_new_KT_accessions_by_taxon": 22,
+    "DFR_new_KT_accessions": 14,
+    "DFR_CDS_features_annotated_in_new_block": 12,
+    "DFR_records_with_no_CDS_feature": 2,
+    "DFR_no_new_KT_accession_species": 8,
+    "new_KT_DFR_records_with_CDS_feature_unpigmented": 3,
+    "new_KT_DFR_records_with_CDS_feature_pigmented": 9,
+    "observed_source_annotation_fraction_unpigmented": "3/7",
+    "observed_source_annotation_fraction_pigmented": "3/5",
+    "observed_annotation_fraction_difference_unpig_minus_pig": "-6/35",
+    "unpigmented_without_new_KT_annotated_DFR": 4,
+    "unpigmented_missing_KT_annotated_DFR_fraction": "4/7",
+    "original_author_reports_intact_three_coding_regions_after_floral_pigment_loss": true,
+    "author_full_coding_in_original_alignments_not_independently_recomputed": true,
+    "false_negative_if_missing_new_DFR_CDS_feature_treated_as_gene_absence_unpigmented": 4,
+    "unknown_DFR_new_KT_feature_statuses_do_not_establish_pseudogenization": true
+  },
+  "exact_source_metadata_random_label_reference_NOT_evolutionary_p_value": {
+    "metadata_observed_pearson_X2_exact": "33/7",
+    "fixed_margins_conditional_tail_exact": "134/969",
+    "enumerated_2_by_3_tables": 21,
+    "conditional_p_is_not_a_phylogenetic_or_evolutionary_test": true,
+    "among_14_deposited_DFR_two_no_CDS_both_unpigmented_exact": "10/91"
+  },
+  "unmeasured_function_partial_identification": {
+    "counterfactual_proxy_assumption": "All annotated DFR CDS new source records provisionally counted 1; unverified rows can be 0 or 1, not actual gene-function calls",
+    "unpigmented_proxy_completion_fraction_range": [
+      "3/7",
+      "1"
+    ],
+    "pigmented_proxy_completion_fraction_range": [
+      "3/5",
+      "1"
+    ],
+    "unpig_minus_pig_proxy_contrast_sharp_bounds": [
+      "-4/7",
+      "2/5"
+    ],
+    "source_proxy_contrast_sign_unidentified": true,
+    "true_functional_joint_toolkit_unmeasured_in_all_22_by_THIS_KT_SOURCE_AUDIT": true,
+    "true_functional_joint_toolkit_fraction_identification_bounds_both_groups": [
+      "0",
+      "1"
+    ],
+    "true_group_function_difference_undetermined_without_functional_assay": true,
+    "no_gene_deletion_or_pseudogene_inferred": true
+  },
+  "cross_programme_evidence_grain": {
+    "source_programmes": [
+      {
+        "programme": "HoSmith2016_Iochrominae",
+        "observations": 22,
+        "observational_unit": "species with colour symbol and deposited-source accessions",
+        "endpoint": "source data presence/annotation, not coding enzyme function or independent regain event",
+        "clade": "Iochrominae"
+      },
+      {
+        "programme": "Wheeler2025_Iochroma",
+        "observations": 24,
+        "observational_unit": "flower RNA sample from one interspecies backcross offspring",
+        "endpoint": "in-sample red/blue transcript differences, not historical white-flower regain",
+        "clade": "Iochrominae"
+      },
+      {
+        "programme": "WessingerRausher2014_Penstemon",
+        "observations": 161,
+        "observational_unit": "experimental F2 hybrid offspring",
+        "endpoint": "blue-purple donor allele complementation, not natural intrinsic backmutation",
+        "clade": "Penstemon"
+      }
+    ],
+    "incompatible_original_observation_units_raw_arithmetic_sum": 207,
+    "raw_sum_must_not_be_called_regain_events_or_independent_replicates": true,
+    "petunia_molecular_mechanism_source_cases": 2,
+    "petunia_independent_genus_units": 1,
+    "independent_evolutionary_regain_clades_molecularly_source_supported_in_selected_v11_registry": 1,
+    "selected_registry_inferred_iochroma_regain_is_not_a_causally_proven_second_clade": true,
+    "multiple_iochroma_studies_are_within_same_iochrominae_lineage_group": true,
+    "source_cases_with_trait_specific_qualified_viable_seed_fitness": 0,
+    "observed_species_level_phylogenetic_transition_directly_reconstructed_by_anto": false,
+    "real_plant_generational_ecological_rate_estimated_by_anto": false
+  },
+  "no_natural_floral_trait_regain_rate_estimated": true,
+  "no_long_term_fitness_or_adaptation_identified": true,
+  "Cirsium_empirical_owner": "zuizui0223/aza3"
+}
