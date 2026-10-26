@@ -17,6 +17,7 @@ from audit_iochroma_2025_osf_myb12_backcross import (
     SOURCE, MYB_ID, parse_manifest, audit_tpm_table, validate_payload,
     assert_expected_receipt, coexpression_of_selected_perfect,
     assert_expected_coexpression,
+    colour_conditioned_sensitivity,
 )
 
 class IochromaSourceTests(unittest.TestCase):
@@ -176,6 +177,36 @@ class IochromaSourceTests(unittest.TestCase):
             if mode=="source_digest": bad["source_original_tpm_md5"]="WRONG"
             with self.assertRaisesRegex(ValueError,"Frozen"):
                 assert_expected_coexpression(d,bad)
+
+    def test_one_individual_omission_reestimates_original_color_means(self):
+        ids=["B1","B2","B3","R1","R2","R3"]
+        assigned={i:("B" if i.startswith("B") else "R") for i in ids}
+        vectors={
+            "MYB":[8.,9.,10.,0.,1.,2.],
+            "ANTI":[14.,12.,10.,3.,2.,1.],
+            "SAME":[11.,12.,13.,0.1,0.2,0.3],
+        }
+        result=colour_conditioned_sensitivity(vectors,"MYB",ids,assigned)
+        self.assertEqual(result["original_individuals"],6)
+        self.assertEqual(result["raw_color_centered_negative"],1)
+        self.assertEqual(result["negative_with_all_omissions_same_sign"],1)
+        self.assertEqual(result["negative_with_at_least_one_omission_sign_reversal"],0)
+        self.assertEqual(result["negative_preserved_under_log1p"],1)
+        rows={r["transcript_id"]:r for r in result["per_transcript"]}
+        self.assertEqual(rows["ANTI"]["loocv_n"],6)
+        self.assertEqual(rows["ANTI"]["omissions_same_nonzero_sign"],6)
+        self.assertEqual(rows["ANTI"]["omissions_opposite_nonzero_sign"],0)
+        self.assertLess(rows["ANTI"]["blue_only_r"],0)
+        self.assertLess(rows["ANTI"]["red_only_r"],0)
+        self.assertTrue(result["not_independent_holdout_or_predictive_cross_validation"])
+        self.assertTrue(result["not_a_formal_uncertainty_interval_or_causal_regulatory_assay"])
+
+    def test_jackknife_rejects_inadequate_strata(self):
+        ids=["B1","B2","R1","R2"]
+        assigned={i:i[0] for i in ids}
+        vectors={"MYB":[8.,9.,0.,1.],"ANTI":[10.,11.,2.,3.]}
+        with self.assertRaisesRegex(ValueError,"three"):
+            colour_conditioned_sensitivity(vectors,"MYB",ids,assigned)
 
     def test_source_byte_digest_or_count_fails_closed(self):
         with self.assertRaisesRegex(ValueError,"source"):
