@@ -1,0 +1,58 @@
+name: ANTO v16 horizon-state sufficiency and branching endpoint
+on:
+  pull_request:
+    paths:
+      - "src/anto_horizon_state_sufficiency_v16.py"
+      - "tests/test_horizon_state_sufficiency_v16.py"
+      - "scripts/run_horizon_state_sufficiency_v16.py"
+      - "docs/HORIZON_STATE_SUFFICIENCY_V16.md"
+      - ".github/workflows/anto-v16-horizon-sufficiency.yml"
+      - "README.md"
+  push:
+    branches: [main]
+    paths:
+      - "src/anto_horizon_state_sufficiency_v16.py"
+      - "tests/test_horizon_state_sufficiency_v16.py"
+      - "scripts/run_horizon_state_sufficiency_v16.py"
+permissions:
+  contents: read
+jobs:
+  exact-horizon-contract:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - name: Test exact horizon and ecological branching counterexamples
+        run: python -m unittest discover -s tests -p test_horizon_state_sufficiency_v16.py -v
+      - name: Replay fractions and fail closed on empirical claims
+        run: |
+          python scripts/run_horizon_state_sufficiency_v16.py --output /tmp/anto_v16.json
+          python - <<'PY'
+          import json
+          from fractions import Fraction as F
+          d=json.load(open("/tmp/anto_v16.json"))
+          assert d["same_present_visible_phenotype"]=="white in both constructed histories"
+          assert d["conditional_branching_nonextinction"]=="3/4"
+          assert d["full_future_transition_kernel_is_part_of_sufficient_state"]
+          assert not d["short_horizon_acceptance_establishes_long_horizon_sufficiency"]
+          assert d["no_empirical_plant_parameter_calibrated"]
+          assert not d["wild_trait_regain_observed"]
+          assert not d["permanent_genetic_fixation_inferred"]
+          assert not d["ecological_population_rescue_measured"]
+          assert d["Cirsium_empirical_owner"]=="zuizui0223/aza3"
+          a=d["results"]["constant_hidden_retention"]
+          z=d["results"]["delayed_hidden_retention"]
+          assert a["1"]["visible"]["residual_history_gain"]=="0"
+          assert a["2"]["visible"]["residual_history_gain"]=="1/256"
+          assert a["2"]["lineage"]["residual_history_gain"]=="225/65536"
+          assert z["2"]["lineage"]["residual_history_gain"]=="0"
+          assert F(z["3"]["lineage"]["difference_B_minus_A"])==F(75,2048)
+          PY
+      - uses: actions/upload-artifact@v4
+        with:
+          name: anto-v16-exact-synthetic-state-sufficiency
+          path: /tmp/anto_v16.json
+          retention-days: 90

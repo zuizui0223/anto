@@ -1,0 +1,282 @@
+{
+  "schema": "anto_original_osf_iochroma_2025_myb12_flower_tpm_descriptive_audit_20261026",
+  "study": "Wheeler et al 2025 (G3)",
+  "source_publication_doi": "10.1093/g3journal/jkaf230",
+  "source_url": "https://osf.io/j5m8f/",
+  "source_retrieval_sha_external_claim": "OSF published provider MD5 and file lengths checked independently by GitHub Actions run 40270778955",
+  "original_source_files": {
+    "TPM": {
+      "id": "6622e385ea2b630b23532fe5",
+      "length_bytes": 4792342,
+      "md5": "dcf46c27169d1b84612a2fd4c43d4642"
+    },
+    "cohort": {
+      "id": "6622e067387f9d08bf7ac834",
+      "length_bytes": 955,
+      "md5": "a9264d3a09fca80efe62ce3eaee32046"
+    },
+    "author_DE": {
+      "id": "6622e4e220a88e09c136efe0",
+      "length_bytes": 6780,
+      "md5": "d6584d58743b0b5f901ae0fe030488d4"
+    }
+  },
+  "observation_unit": "original floral RNA library from one Iochroma backcross individual",
+  "original_n_individuals": 24,
+  "original_n_blue": 12,
+  "original_n_red": 12,
+  "original_n_transcript_entries": 19184,
+  "source_group_label_meaning": "B blue and R red backcross flower phenotype; NOT white vs fixed white",
+  "author_MYB12_candidate_transcript": "TRINITY_DN3000_c0_g1_i10.p1",
+  "author_DE_seq2_effect": {
+    "original_genome": "IC1.0ch05",
+    "source_reported_log2_fold_change_red_over_blue": -6.35096062795051,
+    "source_reported_fdr_adjusted_p": 7.92200138547908e-34,
+    "not_new_DE_test": true
+  },
+  "our_descriptive_audit": {
+    "mean_blue_TPM": 11.824398166666667,
+    "mean_red_TPM": 0.16201000000000002,
+    "median_blue_TPM": 10.201754000000001,
+    "median_red_TPM": 0.0825525,
+    "min_blue_TPM": 3.062934,
+    "max_red_TPM": 0.749076,
+    "blue_over_red_pairwise_AUC": 1,
+    "strict_blue_above_red": true,
+    "n_perfect_BLUE_GT_RED_transcript_entries": 16,
+    "n_perfect_RED_GT_BLUE_transcript_entries": 0,
+    "perfect_transcript_entries_fraction": 0.0008340283569641367,
+    "n_distinct_TRINITY_DN_assembly_component_labels": 14,
+    "transcript_entries_are_not_independent_causal_genes": true,
+    "strict_perfect_source_entries": [
+      {
+        "id": "TRINITY_DN11681_c0_g3_i5.p1",
+        "direction": "BLUE_GT_RED",
+        "blue_min": 0.656886,
+        "red_max": 0
+      },
+      {
+        "id": "TRINITY_DN12748_c0_g2_i2.p1",
+        "direction": "BLUE_GT_RED",
+        "blue_min": 0.71695,
+        "red_max": 0
+      },
+      {
+        "id": "TRINITY_DN1372_c0_g1_i30.p1",
+        "direction": "BLUE_GT_RED",
+        "blue_min": 6.818003,
+        "red_max": 4.0602
+      },
+      {
+        "id": "TRINITY_DN2718_c1_g1_i1.p1",
+        "direction": "BLUE_GT_RED",
+        "blue_min": 20.347529,
+        "red_max": 15.616923
+      },
+      {
+        "id": "TRINITY_DN2718_c1_g2_i1.p1",
+        "direction": "BLUE_GT_RED",
+        "blue_min": 23.067079,
+        "red_max": 19.259654
+      },
+      {
+        "id": "TRINITY_DN3000_c0_g1_i10.p1",
+        "direction": "BLUE_GT_RED",
+        "blue_min": 3.062934,
+        "red_max": 0.749076
+      },
+      {
+        "id": "TRINITY_DN3164_c0_g1_i15.p1",
+        "direction": "BLUE_GT_RED",
+        "blue_min": 1.414628,
+        "red_max": 0.478383
+      },
+      {
+        "id": "TRINITY_DN3164_c0_g1_i6.p1",
+        "direction": "BLUE_GT_RED",
+        "blue_min": 2.141755,
+        "red_max": 0.73056
+      },
+      {
+        "id": "TRINITY_DN5710_c0_g1_i14.p1",
+        "direction": "BLUE_GT_RED",
+        "blue_min": 1.446919,
+        "red_max": 0
+      },
+      {
+        "id": "TRINITY_DN5810_c0_g1_i18.p1",
+        "direction": "BLUE_GT_RED",
+        "blue_min": 6.037716,
+        "red_max": 1.351283
+      },
+      {
+        "id": "TRINITY_DN6389_c0_g1_i4.p2",
+        "direction": "BLUE_GT_RED",
+        "blue_min": 33.349559,
+        "red_max": 7.981685
+      },
+      {
+        "id": "TRINITY_DN6574_c0_g1_i12.p1",
+        "direction": "BLUE_GT_RED",
+        "blue_min": 1.393351,
+        "red_max": 0.8316
+      },
+      {
+        "id": "TRINITY_DN6994_c1_g1_i1.p1",
+        "direction": "BLUE_GT_RED",
+        "blue_min": 3.545614,
+        "red_max": 2.237624
+      },
+      {
+        "id": "TRINITY_DN753_c0_g1_i2.p1",
+        "direction": "BLUE_GT_RED",
+        "blue_min": 2.868579,
+        "red_max": 0
+      },
+      {
+        "id": "TRINITY_DN901_c0_g1_i2.p1",
+        "direction": "BLUE_GT_RED",
+        "blue_min": 26.118165,
+        "red_max": 7.274472
+      },
+      {
+        "id": "TRINITY_DN9157_c0_g1_i2.p1",
+        "direction": "BLUE_GT_RED",
+        "blue_min": 0.506338,
+        "red_max": 0
+      }
+    ],
+    "original_Myb12_TPM_by_sample": [
+      {
+        "sample_id": "GCG49",
+        "source_flower_colour": "B",
+        "TPM": 8.76831
+      },
+      {
+        "sample_id": "GCG18",
+        "source_flower_colour": "B",
+        "TPM": 12.933357
+      },
+      {
+        "sample_id": "GCG22",
+        "source_flower_colour": "B",
+        "TPM": 29.813995
+      },
+      {
+        "sample_id": "GCG11",
+        "source_flower_colour": "B",
+        "TPM": 13.9932
+      },
+      {
+        "sample_id": "GCG40",
+        "source_flower_colour": "B",
+        "TPM": 6.642598
+      },
+      {
+        "sample_id": "GCG94",
+        "source_flower_colour": "B",
+        "TPM": 4.254393
+      },
+      {
+        "sample_id": "GCG25",
+        "source_flower_colour": "B",
+        "TPM": 8.452045
+      },
+      {
+        "sample_id": "GCG84",
+        "source_flower_colour": "B",
+        "TPM": 3.062934
+      },
+      {
+        "sample_id": "GCG98",
+        "source_flower_colour": "B",
+        "TPM": 18.229062
+      },
+      {
+        "sample_id": "GCG60",
+        "source_flower_colour": "B",
+        "TPM": 17.302519
+      },
+      {
+        "sample_id": "GCG76",
+        "source_flower_colour": "B",
+        "TPM": 11.635198
+      },
+      {
+        "sample_id": "GCG55",
+        "source_flower_colour": "B",
+        "TPM": 6.805167
+      },
+      {
+        "sample_id": "GCG104",
+        "source_flower_colour": "R",
+        "TPM": 0.082535
+      },
+      {
+        "sample_id": "GCG73",
+        "source_flower_colour": "R",
+        "TPM": 0
+      },
+      {
+        "sample_id": "GCG4",
+        "source_flower_colour": "R",
+        "TPM": 0.081727
+      },
+      {
+        "sample_id": "GCG2",
+        "source_flower_colour": "R",
+        "TPM": 0.131406
+      },
+      {
+        "sample_id": "GCG9",
+        "source_flower_colour": "R",
+        "TPM": 0.076368
+      },
+      {
+        "sample_id": "GCG23",
+        "source_flower_colour": "R",
+        "TPM": 0.483096
+      },
+      {
+        "sample_id": "GCG61",
+        "source_flower_colour": "R",
+        "TPM": 0
+      },
+      {
+        "sample_id": "GCG85",
+        "source_flower_colour": "R",
+        "TPM": 0
+      },
+      {
+        "sample_id": "GCG24",
+        "source_flower_colour": "R",
+        "TPM": 0.08257
+      },
+      {
+        "sample_id": "GCG7",
+        "source_flower_colour": "R",
+        "TPM": 0.091438
+      },
+      {
+        "sample_id": "GCG43",
+        "source_flower_colour": "R",
+        "TPM": 0.749076
+      },
+      {
+        "sample_id": "GCG6",
+        "source_flower_colour": "R",
+        "TPM": 0.165904
+      }
+    ]
+  },
+  "scientific_boundaries": {
+    "source_study_is_one_backcross_not_multiple_clades": true,
+    "in_sample_post_source_selected_discrimination_not_prospective_validation": true,
+    "MYB12_candidate_biological_causality_not_independently_tested_here": true,
+    "observed_white_flower_or_ancestral_regain_events": 0,
+    "unmeasured_white_morph_vs_fixed_white_2019_raw_data": true,
+    "original_2019_white_morph_study_doi": "10.1002/dvdy.82",
+    "original_2019_raw_data_download_status": "Dryad p5dq84v original RAR/download HTTP_401 at time of audit",
+    "no_natural_plant_evolvability_inference": true
+  }
+}

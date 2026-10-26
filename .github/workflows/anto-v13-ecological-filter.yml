@@ -1,0 +1,52 @@
+name: ANTO v13 ecological filter after phenotype re-expression
+on:
+  pull_request:
+    paths:
+      - "src/anto_afterlife_ecological_filter_v13.py"
+      - "tests/test_afterlife_ecological_filter_v13.py"
+      - "scripts/run_afterlife_ecological_filter_v13.py"
+      - "docs/EVOLUTIONARY_AFTERLIFE_V13_ECOLOGICAL_ESTABLISHMENT_FILTER.md"
+      - ".github/workflows/anto-v13-ecological-filter.yml"
+  push:
+    branches: [main]
+    paths:
+      - "src/anto_afterlife_ecological_filter_v13.py"
+      - "tests/test_afterlife_ecological_filter_v13.py"
+      - "scripts/run_afterlife_ecological_filter_v13.py"
+      - ".github/workflows/anto-v13-ecological-filter.yml"
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  conditional-ecology-only:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - name: Install v12 source-required numeric libraries
+        run: python -m pip install "numpy>=1.25,<3" "scipy>=1.11,<2"
+      - name: Model assumptions, branch threshold and no-preemption regression tests
+        run: |
+          python -m unittest discover -s tests -p test_afterlife_route_window_v12.py -v
+          python -m unittest discover -s tests -p test_afterlife_ecological_filter_v13.py -v
+      - name: Reproduce synthetic demographic filter result
+        run: |
+          python scripts/run_afterlife_ecological_filter_v13.py --output /tmp/anto_v13.json --grid-csv /tmp/anto_v13_grid.csv
+          python - <<'PY'
+          import json
+          d=json.load(open("/tmp/anto_v13.json"))
+          assert d["synthetic_only"] and not d["real_plant_mean_offspring_estimated"]
+          assert not d["genetic_fixation_or_true_ecological_establishment_demonstrated"]
+          assert abs(d["ancestral_vs_alternative_crossover_delay"]-5.8896093398868)<1e-7
+          assert d["no_preemption_adverse_control"]["spurious_gain_removed"]
+          assert d["sensitivity_grid"]["settings"]==540
+          PY
+      - uses: actions/upload-artifact@v4
+        with:
+          name: anto-v13-conditional-reproductive-filter
+          path: |
+            /tmp/anto_v13.json
+            /tmp/anto_v13_grid.csv
+          retention-days: 90

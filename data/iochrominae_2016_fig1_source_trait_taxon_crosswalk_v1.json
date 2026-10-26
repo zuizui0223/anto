@@ -1,0 +1,171 @@
+{
+  "schema": "anto_iochrominae_ho_smith_original_2016_figure1_source_taxon_trait_v1",
+  "source": "Ho & Smith 2016 figure 1 original flower/branch pigment symbols",
+  "source_doi": "10.1186/s12862-016-0675-3",
+  "original_source_gene_crosswalk": "data/iochrominae_ho_smith_original_KT_taxon_gene_crosswalk_20261019.json",
+  "n_original_species": 22,
+  "n_original_pigmented": 15,
+  "n_original_unpigmented": 7,
+  "n_direct_source_binomials": 17,
+  "n_taxonomic_synonyms_qualified": 5,
+  "species_level_color_status_only": true,
+  "individual_or_developmental_color_measured_by_anto": false,
+  "regain_ancestry_of_Iochroma_edule": "ORIGINAL_PUBLISHED_PHYLOGENETIC_INFERENCE_NOT_INDEPENDENTLY_REESTIMATED",
+  "n_original_loss_origins_not_equal_species_count": true,
+  "source_taxa": [
+    {
+      "current_genbank_taxon": "Dunalia brachyacantha",
+      "figure_2016_taxon": "Dunalia brachyacantha",
+      "floral_anthocyanin_status_from_2016_figure": "PIGMENTED",
+      "nomenclature_match": "DIRECT_BINOMIAL",
+      "taxon_concept_source": "https://doi.org/10.1186/s12862-016-0675-3"
+    },
+    {
+      "current_genbank_taxon": "Dunalia spathulata",
+      "figure_2016_taxon": "Dunalia spathulata",
+      "floral_anthocyanin_status_from_2016_figure": "PIGMENTED",
+      "nomenclature_match": "DIRECT_BINOMIAL",
+      "taxon_concept_source": "https://doi.org/10.1186/s12862-016-0675-3"
+    },
+    {
+      "current_genbank_taxon": "Eriolarynx australis",
+      "figure_2016_taxon": "Iochroma australe",
+      "floral_anthocyanin_status_from_2016_figure": "PIGMENTED",
+      "nomenclature_match": "POST2016_COMBINATION_OR_SYNONYM",
+      "taxon_concept_source": "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:77186335-1"
+    },
+    {
+      "current_genbank_taxon": "Eriolarynx fasciculata",
+      "figure_2016_taxon": "Eriolarynx fasciculata",
+      "floral_anthocyanin_status_from_2016_figure": "PIGMENTED",
+      "nomenclature_match": "DIRECT_BINOMIAL",
+      "taxon_concept_source": "https://doi.org/10.1186/s12862-016-0675-3"
+    },
+    {
+      "current_genbank_taxon": "Iochroma arborescens",
+      "figure_2016_taxon": "Acnistus arborescens",
+      "floral_anthocyanin_status_from_2016_figure": "UNPIGMENTED",
+      "nomenclature_match": "POST2016_COMBINATION_OR_SYNONYM",
+      "taxon_concept_source": "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:77186334-1"
+    },
+    {
+      "current_genbank_taxon": "Iochroma calycinum",
+      "figure_2016_taxon": "Iochroma calycinum",
+      "floral_anthocyanin_status_from_2016_figure": "PIGMENTED",
+      "nomenclature_match": "DIRECT_BINOMIAL",
+      "taxon_concept_source": "https://doi.org/10.1186/s12862-016-0675-3"
+    },
+    {
+      "current_genbank_taxon": "Iochroma confertiflorum",
+      "figure_2016_taxon": "Iochroma confertiflorum",
+      "floral_anthocyanin_status_from_2016_figure": "UNPIGMENTED",
+      "nomenclature_match": "DIRECT_BINOMIAL",
+      "taxon_concept_source": "https://doi.org/10.1186/s12862-016-0675-3"
+    },
+    {
+      "current_genbank_taxon": "Iochroma cornifolium",
+      "figure_2016_taxon": "Iochroma cornifolium",
+      "floral_anthocyanin_status_from_2016_figure": "PIGMENTED",
+      "nomenclature_match": "DIRECT_BINOMIAL",
+      "taxon_concept_source": "https://doi.org/10.1186/s12862-016-0675-3"
+    },
+    {
+      "current_genbank_taxon": "Iochroma cyaneum",
+      "figure_2016_taxon": "Iochroma cyaneum",
+      "floral_anthocyanin_status_from_2016_figure": "PIGMENTED",
+      "nomenclature_match": "DIRECT_BINOMIAL",
+      "taxon_concept_source": "https://doi.org/10.1186/s12862-016-0675-3"
+    },
+    {
+      "current_genbank_taxon": "Iochroma edule",
+      "figure_2016_taxon": "Iochroma edule",
+      "floral_anthocyanin_status_from_2016_figure": "PIGMENTED",
+      "nomenclature_match": "DIRECT_BINOMIAL",
+      "taxon_concept_source": "https://doi.org/10.1186/s12862-016-0675-3"
+    },
+    {
+      "current_genbank_taxon": "Iochroma ellipticum",
+      "figure_2016_taxon": "Iochroma ellipticum",
+      "floral_anthocyanin_status_from_2016_figure": "UNPIGMENTED",
+      "nomenclature_match": "DIRECT_BINOMIAL",
+      "taxon_concept_source": "https://doi.org/10.1186/s12862-016-0675-3"
+    },
+    {
+      "current_genbank_taxon": "Iochroma gesnerioides",
+      "figure_2016_taxon": "Iochroma gesnerioides",
+      "floral_anthocyanin_status_from_2016_figure": "PIGMENTED",
+      "nomenclature_match": "DIRECT_BINOMIAL",
+      "taxon_concept_source": "https://doi.org/10.1186/s12862-016-0675-3"
+    },
+    {
+      "current_genbank_taxon": "Iochroma loxense",
+      "figure_2016_taxon": "Iochroma loxense",
+      "floral_anthocyanin_status_from_2016_figure": "UNPIGMENTED",
+      "nomenclature_match": "DIRECT_BINOMIAL",
+      "taxon_concept_source": "https://doi.org/10.1186/s12862-016-0675-3"
+    },
+    {
+      "current_genbank_taxon": "Iochroma parvifolium",
+      "figure_2016_taxon": "Iochroma parvifolium",
+      "floral_anthocyanin_status_from_2016_figure": "PIGMENTED",
+      "nomenclature_match": "DIRECT_BINOMIAL",
+      "taxon_concept_source": "https://doi.org/10.1186/s12862-016-0675-3"
+    },
+    {
+      "current_genbank_taxon": "Iochroma squamosum",
+      "figure_2016_taxon": "Iochroma lehmannii",
+      "floral_anthocyanin_status_from_2016_figure": "UNPIGMENTED",
+      "nomenclature_match": "POST2016_COMBINATION_OR_SYNONYM",
+      "taxon_concept_source": "https://www.worldfloraonline.org/taxon/wfo-0001021914"
+    },
+    {
+      "current_genbank_taxon": "Iochroma tupayachianum",
+      "figure_2016_taxon": "Iochroma tupayachianum",
+      "floral_anthocyanin_status_from_2016_figure": "UNPIGMENTED",
+      "nomenclature_match": "DIRECT_BINOMIAL",
+      "taxon_concept_source": "https://doi.org/10.1186/s12862-016-0675-3"
+    },
+    {
+      "current_genbank_taxon": "Iochroma umbellatum",
+      "figure_2016_taxon": "Iochroma umbellatum",
+      "floral_anthocyanin_status_from_2016_figure": "PIGMENTED",
+      "nomenclature_match": "DIRECT_BINOMIAL",
+      "taxon_concept_source": "https://doi.org/10.1186/s12862-016-0675-3"
+    },
+    {
+      "current_genbank_taxon": "Saracha nigribaccata",
+      "figure_2016_taxon": "Dunalia solanacea",
+      "floral_anthocyanin_status_from_2016_figure": "UNPIGMENTED",
+      "nomenclature_match": "POST2016_COMBINATION_OR_SYNONYM",
+      "taxon_concept_source": "https://www.gbif.org/taxon/79MBC"
+    },
+    {
+      "current_genbank_taxon": "Saracha quitensis",
+      "figure_2016_taxon": "Saracha quitensis",
+      "floral_anthocyanin_status_from_2016_figure": "PIGMENTED",
+      "nomenclature_match": "DIRECT_BINOMIAL",
+      "taxon_concept_source": "https://doi.org/10.1186/s12862-016-0675-3"
+    },
+    {
+      "current_genbank_taxon": "Trozelia grandiflora",
+      "figure_2016_taxon": "Iochroma grandiflorum",
+      "floral_anthocyanin_status_from_2016_figure": "PIGMENTED",
+      "nomenclature_match": "POST2016_COMBINATION_OR_SYNONYM",
+      "taxon_concept_source": "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:77186340-1"
+    },
+    {
+      "current_genbank_taxon": "Vassobia breviflora",
+      "figure_2016_taxon": "Vassobia breviflora",
+      "floral_anthocyanin_status_from_2016_figure": "PIGMENTED",
+      "nomenclature_match": "DIRECT_BINOMIAL",
+      "taxon_concept_source": "https://doi.org/10.1186/s12862-016-0675-3"
+    },
+    {
+      "current_genbank_taxon": "Vassobia dichotoma",
+      "figure_2016_taxon": "Vassobia dichotoma",
+      "floral_anthocyanin_status_from_2016_figure": "PIGMENTED",
+      "nomenclature_match": "DIRECT_BINOMIAL",
+      "taxon_concept_source": "https://doi.org/10.1186/s12862-016-0675-3"
+    }
+  ]
+}

@@ -1,0 +1,150 @@
+{
+  "absorbing_labels_mean_first_event_record_not_permanent_biological_state": true,
+  "analysis_date": "2026-10-20",
+  "base_anto_commit": "3efa90dbd5f95469ff4f8732606e8c8d64b0a347",
+  "biological_establishment_fixation_fitness_and_natural_regain_measured": false,
+  "deterministic_parameter_grid": {
+    "all_interior_have_higher_absolute_alternative_first": true,
+    "all_interior_have_nonincreasing_total_first_recovery": true,
+    "grid_is_not_a_probability_distribution_or_natural_incidence_estimate": true,
+    "interior_maxima": 509,
+    "settings": 1125
+  },
+  "empirical_owner_Cirsium": "zuizui0223/aza3",
+  "endpoint": "Identity and probability of FIRST re-expression after opportunity returns",
+  "external_motivation_not_calibration": [
+    "https://doi.org/10.1093/plcell/koab114",
+    "https://doi.org/10.1093/molbev/msy117"
+  ],
+  "initial_condition": "All C,A,B functional resources intact; expressed phenotype absent",
+  "negative_control": {
+    "alternative_ever_counted_after_ancestral_removes_window": true,
+    "interpreting_B_first_increase_as_faster_B_activation_is_invalid": true,
+    "symmetric_routes_peak": {
+      "age": 0.0,
+      "kind": "boundary_at_zero"
+    }
+  },
+  "no_new_module_creation_mutation_import_or_regain_of_lost_resource": true,
+  "novelty_boundary": "Standard competing-risk mathematics; new route-resolved conditional extension in this repository, not a new general probability theorem",
+  "parameter_units": "Arbitrary model time; not calibrated years or generations",
+  "parameters_estimated_from_real_plants": false,
+  "peak_for_eventual_alternative_first": {
+    "age": 5.18058411253017,
+    "kind": "interior"
+  },
+  "pre_opportunity": "No re-expression, independent irreversible C/A/B losses",
+  "rates": {
+    "activation_alternative": 0.2,
+    "activation_ancestral": 0.4,
+    "loss_alternative": 0.01,
+    "loss_ancestral": 0.3,
+    "loss_common": 0.02,
+    "same_loss_rates_before_and_after_opportunity": true
+  },
+  "reference_cases": [
+    {
+      "alternative_ever_no_first_event_censoring": 0.8695652173913043,
+      "eventual": {
+        "alternative_first": 0.49555867227676487,
+        "alternative_fraction_among_first_recoveries": 0.5319208252021187,
+        "ancestral_first": 0.43608124253285546,
+        "any_first": 0.9316399148096204,
+        "no_recovery_by_endpoint": 0.06836008519037962
+      },
+      "followup_10_model_units": {
+        "alternative_first": 0.4581838931036418,
+        "alternative_fraction_among_first_recoveries": 0.5123907708792033,
+        "ancestral_first": 0.4360240418235453,
+        "any_first": 0.8942079349271872,
+        "no_recovery_by_endpoint": 0.1057920650728128
+      },
+      "silent_age_model_units": 0.0
+    },
+    {
+      "alternative_ever_no_first_event_censoring": 0.748441718630485,
+      "eventual": {
+        "alternative_first": 0.6766137958176738,
+        "alternative_fraction_among_first_recoveries": 0.8834998708543123,
+        "ancestral_first": 0.08921970132071606,
+        "any_first": 0.7658334971383899,
+        "no_recovery_by_endpoint": 0.23416650286161012
+      },
+      "followup_10_model_units": {
+        "alternative_first": 0.6111412905240732,
+        "alternative_fraction_among_first_recoveries": 0.8726277557954842,
+        "ancestral_first": 0.08920463185259823,
+        "any_first": 0.7003459223766714,
+        "no_recovery_by_endpoint": 0.29965407762332863
+      },
+      "silent_age_model_units": 5.0
+    },
+    {
+      "alternative_ever_no_first_event_censoring": 0.47722750964697946,
+      "eventual": {
+        "alternative_first": 0.4767187230971719,
+        "alternative_fraction_among_first_recoveries": 0.9984071385569724,
+        "ancestral_first": 0.0007605583372414459,
+        "any_first": 0.4774792814344133,
+        "no_recovery_by_endpoint": 0.5225207185655867
+      },
+      "followup_10_model_units": {
+        "alternative_first": 0.42894020039876113,
+        "alternative_fraction_among_first_recoveries": 0.9982304989174798,
+        "ancestral_first": 0.0007603555989975785,
+        "any_first": 0.4297005559977587,
+        "no_recovery_by_endpoint": 0.5702994440022413
+      },
+      "silent_age_model_units": 20.0
+    },
+    {
+      "alternative_ever_no_first_event_censoring": 0.7443979815345771,
+      "eventual": {
+        "alternative_first": 0.6767254377587063,
+        "alternative_fraction_among_first_recoveries": 0.8892877903116103,
+        "ancestral_first": 0.0842491816292185,
+        "any_first": 0.7609746193879248,
+        "no_recovery_by_endpoint": 0.23902538061207523
+      },
+      "followup_10_model_units": {
+        "alternative_first": 0.6111049769062128,
+        "alternative_fraction_among_first_recoveries": 0.8788580214404782,
+        "ancestral_first": 0.08423484135543421,
+        "any_first": 0.695339818261647,
+        "no_recovery_by_endpoint": 0.30466018173835296
+      },
+      "silent_age_model_units": 5.18058411253017
+    }
+  ],
+  "reproducibility": {
+    "numpy": "2.3.5",
+    "python": "3.13.5",
+    "scipy": "1.17.0"
+  },
+  "schema": "anto_afterlife_route_window_v12",
+  "source_sha256": "2bbbf402b6cfe792a66d3f1aa1a0f84fccc93b29cf9c031b9038abafcaad6ee5",
+  "strict_local_neighborhood": [
+    {
+      "factor_on_ancestral_activation": 0.9,
+      "peak": {
+        "age": 4.975926138407803,
+        "kind": "interior"
+      }
+    },
+    {
+      "factor_on_ancestral_activation": 1.0,
+      "peak": {
+        "age": 5.18058411253017,
+        "kind": "interior"
+      }
+    },
+    {
+      "factor_on_ancestral_activation": 1.1,
+      "peak": {
+        "age": 5.3579130940441635,
+        "kind": "interior"
+      }
+    }
+  ],
+  "synthetic_only": true
+}
