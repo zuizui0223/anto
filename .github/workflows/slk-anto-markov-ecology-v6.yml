@@ -1,0 +1,49 @@
+name: ANTO-SLK shared Markov ecology capacity v6
+on:
+  pull_request:
+    paths:
+      - "src/anto_slk_markov_ecology_v6.py"
+      - "tests/test_slk_anto_markov_ecology_v6.py"
+      - "scripts/run_slk_anto_markov_ecology_v6.py"
+      - "docs/SLK_ANTO_MARKOV_ECOLOGY_V6.md"
+      - ".github/workflows/slk-anto-markov-ecology-v6.yml"
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  stationary-markov-capacity:
+    runs-on: ubuntu-latest
+    timeout-minutes: 12
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Install numerical tools for complete repository tests
+        run: python -m pip install numpy scipy biopython openpyxl pandas
+      - name: Run new environmental stochasticity tests
+        run: python -m unittest discover -s tests -p 'test_slk_anto_markov_ecology_v6.py' -v
+      - name: Run complete ANTO regression suite
+        run: python -m unittest discover -s tests -v
+      - name: Regenerate bounded, labeled theoretical result
+        run: |
+          python scripts/run_slk_anto_markov_ecology_v6.py --output /tmp/anto-slk-markov-v6.json
+          python - <<'PY'
+          import json
+          d=json.load(open('/tmp/anto-slk-markov-v6.json'))
+          assert d['schema']=='anto_slk_markov_environment_v6'
+          assert d['environment_process']=='shared stationary two-state Markov'
+          assert d['observed_flower_trait_regain'] is False
+          assert d['field_measured_environment_process'] is False
+          assert d['formal_lyapunov_sign_certificate'] is False
+          assert d['slk_selection_fitness_calibrated'] is False
+          x={(s['trait_switch'],s['environment_persistence']):s for s in d['scenarios']}
+          assert x['1/10','9/10']['finite_genealogy_survival_from_C']>2*x['1/10','1/10']['finite_genealogy_survival_from_C']
+          assert x['9/10','1/10']['finite_genealogy_survival_from_C']>2*x['9/10','9/10']['finite_genealogy_survival_from_C']
+          assert x['1/2','1/10']['finite_genealogy_survival_from_C']==x['1/2','9/10']['finite_genealogy_survival_from_C'] or abs(x['1/2','1/10']['finite_genealogy_survival_from_C']-x['1/2','9/10']['finite_genealogy_survival_from_C'])<1e-11
+          print('MARKOV_ECOLOGY_V6_CONDITIONAL_ANALYSIS_VERIFIED')
+          PY
+      - uses: actions/upload-artifact@v4
+        with:
+          name: markov-capacity-v6-result
+          path: /tmp/anto-slk-markov-v6.json
