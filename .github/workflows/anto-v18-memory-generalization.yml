@@ -1,0 +1,61 @@
+name: ANTO v18 nonsymmetric environment-memory sufficiency
+on:
+  pull_request:
+    paths:
+      - 'src/anto_environment_memory_generalization_v18.py'
+      - 'tests/test_environment_memory_generalization_v18.py'
+      - 'scripts/run_environment_memory_generalization_v18.py'
+      - 'docs/ENVIRONMENT_MEMORY_GENERALIZATION_V18.md'
+      - '.github/workflows/anto-v18-memory-generalization.yml'
+      - 'README.md'
+  push:
+    branches: [main]
+    paths:
+      - 'src/anto_environment_memory_generalization_v18.py'
+      - 'tests/test_environment_memory_generalization_v18.py'
+      - 'scripts/run_environment_memory_generalization_v18.py'
+permissions:
+  contents: read
+jobs:
+  exact-branching-and-negative-controls:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Exact two-type reproduction tests and adverse controls
+        run: python -m unittest discover -s tests -p test_environment_memory_generalization_v18.py -v
+      - name: Freeze five exact rational witnesses and guard unsupported claims
+        run: |
+          python scripts/run_environment_memory_generalization_v18.py --output /tmp/anto_v18.json
+          python - <<'PY'
+          import json
+          from fractions import Fraction as F
+          d=json.load(open('/tmp/anto_v18.json'))
+          assert d['no_plant_calibration'] and d['no_natural_trait_regain']
+          assert d['no_demographic_rescue_or_genetic_fixation']
+          assert d['no_SLK_ecological_payoff_measurement']
+          assert d['Cirsium_empirical_owner']=='zuizui0223/aza3'
+          s=d['witnesses']
+          assert len(s)==5
+          assert s['v17_symmetric']['h2_delta']=='5789184/244140625'
+          assert s['asymmetric_transition']['switching_null_threshold']=='7/13'
+          assert s['asymmetric_transition']['h2_delta']=='0'
+          assert F(s['asymmetric_transition']['h3_delta'])!=0
+          assert F(s['asymmetric_transition']['h3_history_brier_gain'])>0
+          assert F(s['nonphenotype_environment']['h2_delta'])>0
+          assert F(s['high_retention_saturation']['h2_delta'])<0
+          assert F(s['low_retention_unsaturated']['h2_delta'])>0
+          for row in s.values():
+              assert row['first_visible_equal']
+              assert row['h1_low']==row['h1_high']
+              assert row['h1_history_brier_gain']=='0'
+              assert row['h2_delta']==row['analytic_h2_delta']
+          PY
+      - uses: actions/upload-artifact@v4
+        with:
+          name: anto-v18-symmetric-to-asymmetric-exact-receipt
+          path: /tmp/anto_v18.json
+          retention-days: 90

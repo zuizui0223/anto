@@ -1,0 +1,81 @@
+{
+  "activation_critical": 0.7279541446208113,
+  "activation_critical_exact": "1651/2268",
+  "date": "2026-10-20",
+  "empirical_owner": "zuizui0223/aza3",
+  "fixation_inferred": false,
+  "loss_critical_at_activation_03": 0.35897435897435903,
+  "natural_regain_demonstrated": false,
+  "organism_extinction_inferred": false,
+  "parameters": {
+    "loss": "3/10",
+    "q_expressed": "13/20",
+    "q_silent": "9/10",
+    "silencing": "1/4"
+  },
+  "process": "constant-environment irreducible two-type Galton-Watson",
+  "schema": "anto_slk_recurrent_capacity_v4",
+  "selected_scenarios": [
+    {
+      "activation": 0.3,
+      "converged": true,
+      "decimal_digits": 50,
+      "first_expression_probability": 0.342279,
+      "iterations": 294,
+      "mean_matrix": [[0.6825, 0.2275], [0.378, 0.882]],
+      "numerical_brackets_not_interval_certificates": true,
+      "regime": "supercritical",
+      "residual": 8.369497573046398e-15,
+      "spectral_radius": 1.092,
+      "survival_lower": [0.21447970049690046, 0.35615799132163545],
+      "survival_upper": [0.21447970049720722, 0.3561579913220979],
+      "width": 4.62463400907609e-13
+    },
+    {
+      "activation": 0.5,
+      "converged": true,
+      "decimal_digits": 50,
+      "first_expression_probability": 0.530775,
+      "iterations": 753,
+      "mean_matrix": [[0.6825, 0.2275], [0.63, 0.63]],
+      "numerical_brackets_not_interval_certificates": true,
+      "regime": "supercritical",
+      "residual": 2.6563308937954127e-15,
+      "spectral_radius": 1.0357418477385252,
+      "survival_lower": [0.10717892669645754, 0.16292830899586833],
+      "survival_upper": [0.10717892669678522, 0.16292830899635524],
+      "width": 4.86916063024978e-13
+    },
+    {
+      "activation": 0.9,
+      "converged": true,
+      "decimal_digits": 50,
+      "first_expression_probability": 0.812511,
+      "iterations": 0,
+      "mean_matrix": [[0.6825, 0.2275], [1.134, 0.126]],
+      "numerical_brackets_not_interval_certificates": true,
+      "regime": "subcritical",
+      "residual": 0.0,
+      "spectral_radius": 0.9833942501657078,
+      "survival_lower": [0.0, 0.0],
+      "survival_upper": [0.0, 0.0],
+      "width": 0.0
+    }
+  ],
+  "silent_state_reproduces_and_is_not_seed_dormancy": true,
+  "slk_payoff_calibrated": false,
+  "source_blob_sha1": {
+    "scripts/run_slk_anto_recurrent_capacity_v4.py": "7061c7d772bb46f1febd94303179c3af77a141a6",
+    "src/anto_slk_recurrent_capacity_v4.py": "a9e15bb88929622afb08aae43f27e232f2fb009e",
+    "tests/test_slk_anto_recurrent_capacity_v4.py": "4c76ba82e31a27c01090fed74c6213025d01b403"
+  },
+  "validation": {
+    "all_survival_runs_converged": true,
+    "eigenvalue_absolute_tolerance": 1e-12,
+    "external_eigensolver": "numpy.linalg.eigvals",
+    "full_repository_ci": "separate_remote_run_not_inferred_from_local_suite",
+    "independent_grid_cases": 324,
+    "local_unit_tests_passed": 14,
+    "max_iterations_observed": 90612
+  }
+}
