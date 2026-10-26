@@ -1,0 +1,82 @@
+name: ANTO v19 original-source evidence admissibility and DFR censoring
+on:
+  pull_request:
+    paths:
+      - "scripts/anto_afterlife_empirical_admissibility_v19.py"
+      - "tests/test_afterlife_empirical_admissibility_v19.py"
+      - "docs/AFTERLIFE_V19_SOURCE_OBSERVABILITY_AND_ADMISSIBILITY.md"
+      - "results/afterlife_v19_source_observability_20261026.json"
+      - ".github/workflows/anto-v19-empirical-admissibility.yml"
+      - "README.md"
+  push:
+    branches: [main]
+    paths:
+      - "scripts/anto_afterlife_empirical_admissibility_v19.py"
+      - "tests/test_afterlife_empirical_admissibility_v19.py"
+      - "results/afterlife_v19_source_observability_20261026.json"
+      - ".github/workflows/anto-v19-empirical-admissibility.yml"
+permissions:
+  contents: read
+jobs:
+  source-and-biological-unit:
+    runs-on: ubuntu-latest
+    timeout-minutes: 6
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - name: Test frozen original-source 22 taxa, 58 accessions and observation-grain boundaries
+        run: python -m unittest discover -s tests -p test_afterlife_empirical_admissibility_v19.py -v
+      - name: Recalculate full 2x3 DFR annotation table and cross-system source admissibility
+        run: |
+          python scripts/anto_afterlife_empirical_admissibility_v19.py --output /tmp/anto_source_admissibility_v19.json
+          python - <<'PY'
+          import json
+          from fractions import Fraction as F
+          d=json.load(open('/tmp/anto_source_admissibility_v19.json'))
+          s=d["Iochrominae_KT_source_metadata"]
+          assert s["original_taxa"]==22 and s["source_nucleotide_accessions"]==58
+          assert s["DFR_CDS_features_annotated_in_new_block"]==12
+          assert s["DFR_records_with_no_CDS_feature"]==2
+          assert s["DFR_no_new_KT_accession_species"]==8
+          assert s["unpigmented_missing_KT_annotated_DFR_fraction"]=="4/7"
+          assert s["false_negative_if_missing_new_DFR_CDS_feature_treated_as_gene_absence_unpigmented"]==4
+          ref=d["exact_source_metadata_random_label_reference_NOT_evolutionary_p_value"]
+          assert ref["metadata_observed_pearson_X2_exact"]=="33/7"
+          assert ref["fixed_margins_conditional_tail_exact"]=="134/969"
+          assert ref["among_14_deposited_DFR_two_no_CDS_both_unpigmented_exact"]=="10/91"
+          assert ref["conditional_p_is_not_a_phylogenetic_or_evolutionary_test"]
+          partial=d["unmeasured_function_partial_identification"]
+          assert partial["unpig_minus_pig_proxy_contrast_sharp_bounds"]==["-4/7","2/5"]
+          assert partial["true_functional_joint_toolkit_unmeasured_in_all_22_by_THIS_KT_SOURCE_AUDIT"]
+          cross=d["cross_programme_evidence_grain"]
+          assert cross["incompatible_original_observation_units_raw_arithmetic_sum"]==207
+          assert cross["raw_sum_must_not_be_called_regain_events_or_independent_replicates"]
+          assert cross["petunia_independent_genus_units"]==1
+          assert cross["source_cases_with_trait_specific_qualified_viable_seed_fitness"]==0
+          assert d["no_natural_floral_trait_regain_rate_estimated"]
+          assert d["no_long_term_fitness_or_adaptation_identified"]
+          assert d["Cirsium_empirical_owner"]=="zuizui0223/aza3"
+          print("ANTO_V19_SOURCE_ADMISSIBILITY_PASS",json.dumps({
+              "taxa":s["original_taxa"],
+              "original_KT_accessions":s["source_nucleotide_accessions"],
+              "unpigmented_naive_false_loss_calls":4,
+              "metadata_conditional_arithmetic_reference":ref["fixed_margins_conditional_tail_exact"],
+              "noncomparable_source_unit_raw_sum":cross["incompatible_original_observation_units_raw_arithmetic_sum"],
+              "no_real_regain_rate":d["no_natural_floral_trait_regain_rate_estimated"],
+          },sort_keys=True))
+          print("ANTO_V19_FREEZE_RECEIPT",json.dumps(d,sort_keys=True))
+          PY
+      - name: Verify frozen exact receipt once admitted
+        run: |
+          if [ -f results/afterlife_v19_source_observability_20261026.json ]; then
+            python scripts/anto_afterlife_empirical_admissibility_v19.py \
+              --output /tmp/anto_v19_replay.json \
+              --expected results/afterlife_v19_source_observability_20261026.json
+          fi
+      - uses: actions/upload-artifact@v4
+        with:
+          name: anto-v19-original-22-taxon-source-censoring-and-cross-clade-grain
+          path: /tmp/anto_source_admissibility_v19.json
+          retention-days: 90
