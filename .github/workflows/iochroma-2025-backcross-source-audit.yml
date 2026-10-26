@@ -7,6 +7,7 @@ on:
       - "docs/IOCHROMA_2019_WHITE_MORPH_VS_FIXED_WHITE_AND_2025_MYB12_SOURCE_AUDIT.md"
       - "results/iochroma_2025_24_individual_myb12_16_transcript_source_audit_20261026.json"
       - "results/iochroma_2025_color_conditioned_coexpression_v2_20261026.json"
+      - "results/iochroma_2025_color_conditioned_sensitivity_v3_20261026.json"
       - ".github/workflows/iochroma-2025-backcross-source-audit.yml"
   workflow_dispatch:
   push:
@@ -33,7 +34,8 @@ jobs:
           python scripts/audit_iochroma_2025_osf_myb12_backcross.py \
             --output /tmp/iochroma_2025_real_backcross_audit.json \
             --expected results/iochroma_2025_24_individual_myb12_16_transcript_source_audit_20261026.json \
-            --conditioned-expected results/iochroma_2025_color_conditioned_coexpression_v2_20261026.json
+            --conditioned-expected results/iochroma_2025_color_conditioned_coexpression_v2_20261026.json \
+            --sensitivity-expected results/iochroma_2025_color_conditioned_sensitivity_v3_20261026.json
           python - <<'PY'
           import json
           x=json.load(open("/tmp/iochroma_2025_real_backcross_audit.json"))
@@ -46,6 +48,14 @@ jobs:
           assert c["pooled_positive"]==15 and c["pooled_negative"]==0
           assert c["color_centered_negative"]==9 and c["color_centered_positive"]==6
           assert c["color_centered_undefined"]==0
+          s=x["color_conditioned_sensitivity"]
+          assert s["original_individuals"]==24
+          assert s["raw_color_centered_negative"]==9
+          assert s["negative_with_all_omissions_same_sign"]==4
+          assert s["negative_with_at_least_one_omission_sign_reversal"]==5
+          assert s["negative_preserved_under_log1p"]==6
+          assert s["not_independent_holdout_or_predictive_cross_validation"]
+          assert s["not_a_formal_uncertainty_interval_or_causal_regulatory_assay"]
           assert c["not_independent_causal_coregulation"]
           assert len(x["perfect_blue_transcript_IDs"])==16
           assert "TRINITY_DN3000_c0_g1_i10.p1" in x["perfect_blue_transcript_IDs"]
