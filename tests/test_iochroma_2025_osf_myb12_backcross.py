@@ -18,6 +18,7 @@ from audit_iochroma_2025_osf_myb12_backcross import (
     assert_expected_receipt, coexpression_of_selected_perfect,
     assert_expected_coexpression,
     colour_conditioned_sensitivity,
+    assert_expected_sensitivity,
 )
 
 class IochromaSourceTests(unittest.TestCase):
@@ -207,6 +208,38 @@ class IochromaSourceTests(unittest.TestCase):
         vectors={"MYB":[8.,9.,0.,1.],"ANTI":[10.,11.,2.,3.]}
         with self.assertRaisesRegex(ValueError,"three"):
             colour_conditioned_sensitivity(vectors,"MYB",ids,assigned)
+
+    def test_original_24_individual_sensitivity_receipt_and_adverse_changes(self):
+        src=json.loads((ROOT/"results/iochroma_2025_color_conditioned_sensitivity_v3_20261026.json")
+                       .read_text(encoding="utf-8"))
+        data=src["original_24_sensitivity"]
+        self.assertEqual((data["original_individuals"],data["original_blue"],data["original_red"]),
+                         (24,12,12))
+        self.assertEqual(data["other_preselected_transcript_entries"],15)
+        self.assertEqual(data["raw_color_centered_negative"],9)
+        self.assertEqual(data["negative_with_all_omissions_same_sign"],4)
+        self.assertEqual(data["negative_with_at_least_one_omission_sign_reversal"],5)
+        self.assertEqual(data["negative_preserved_under_log1p"],6)
+        self.assertEqual(len(data["per_transcript"]),15)
+        self.assertTrue(data["not_independent_holdout_or_predictive_cross_validation"])
+        self.assertTrue(data["not_a_formal_uncertainty_interval_or_causal_regulatory_assay"])
+        self.assertTrue(data["one_original_backcross_no_ancestral_loss_regain_or_fitness"])
+        self.assertEqual(sum(x["original_centered_r"]<0 and
+                             x["omissions_same_nonzero_sign"]==24 and
+                             x["log1p_same_nonzero_sign"] is True
+                             for x in data["per_transcript"]),4)
+        assert_expected_sensitivity(data,src)
+        for mode in ("count","sample","sign","coefficient","source","claim"):
+            tampered=copy.deepcopy(src)
+            x=tampered["original_24_sensitivity"]
+            if mode=="count": x["negative_with_all_omissions_same_sign"]=9
+            if mode=="sample": x["per_transcript"][0]["loocv_n"]=23
+            if mode=="sign": x["per_transcript"][0]["log1p_same_nonzero_sign"]=False
+            if mode=="coefficient": x["per_transcript"][0]["loocv_min_r"]+=0.02
+            if mode=="source": tampered["source_original_tpm_md5"]="NOT_ORIGINAL"
+            if mode=="claim": tampered["not_inference_of_regulatory_causation"]=False
+            with self.assertRaisesRegex(ValueError,"Frozen"):
+                assert_expected_sensitivity(data,tampered)
 
     def test_source_byte_digest_or_count_fails_closed(self):
         with self.assertRaisesRegex(ValueError,"source"):
