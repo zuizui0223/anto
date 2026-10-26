@@ -1,0 +1,263 @@
+{
+  "Cirsium_organismal_empirical_owner": "zuizui0223/aza3",
+  "assay_claim_boundary": "A deterministic error cap requires validation independent of genomic/CDS annotation; a nominal 95% assay accuracy is NOT a maximum of one wrong taxon in 22, and no inferred natural functional positivity is reported.",
+  "beyond_current_scope": [
+    "stage/tissue-matched same-organism coding and regulation assays",
+    "intraspecific replicate validation and assay-calibration specimens",
+    "ancestral polarity, introgression, donor complementation and plasticity",
+    "lineage-specific re-expression and transgenerational stability",
+    "trait-specific viable progeny and fitness",
+    "new independent clades for holdout external biological validation"
+  ],
+  "date": "2026-10-26",
+  "full_support_random_assay_example_not_a_validation_rate": {
+    "all_22_functional_state_vectors_compatible_with_any_binary_call_vector": true,
+    "assumed_independent_full_support_binary_error_likelihood": true,
+    "deterministic_strict_sign_can_be_proven_from_accuracy_rates_alone": false,
+    "full_panel_true_difference_logical_support": [
+      "-1",
+      "1"
+    ],
+    "hard_miscall_cap_derived_from_sensitivity_specificity": false,
+    "sensitivity": "19/20",
+    "specificity": "19/20"
+  },
+  "ideal_counterfactual_minima_for_error_caps": {
+    "U0_P0": {
+      "PIGMENTED_HIGHER": {
+        "minimum_allocations_unpigmented_pigmented": [
+          [
+            7,
+            1
+          ]
+        ],
+        "minimum_tested_taxa": 8,
+        "possible_under_ideal_hypothetical_calls": true
+      },
+      "UNPIGMENTED_HIGHER": {
+        "minimum_allocations_unpigmented_pigmented": [
+          [
+            7,
+            1
+          ]
+        ],
+        "minimum_tested_taxa": 8,
+        "possible_under_ideal_hypothetical_calls": true
+      }
+    },
+    "U0_P1": {
+      "PIGMENTED_HIGHER": {
+        "minimum_allocations_unpigmented_pigmented": [
+          [
+            7,
+            2
+          ]
+        ],
+        "minimum_tested_taxa": 9,
+        "possible_under_ideal_hypothetical_calls": true
+      },
+      "UNPIGMENTED_HIGHER": {
+        "minimum_allocations_unpigmented_pigmented": [
+          [
+            7,
+            2
+          ]
+        ],
+        "minimum_tested_taxa": 9,
+        "possible_under_ideal_hypothetical_calls": true
+      }
+    },
+    "U1_P0": {
+      "PIGMENTED_HIGHER": {
+        "minimum_allocations_unpigmented_pigmented": [
+          [
+            7,
+            3
+          ]
+        ],
+        "minimum_tested_taxa": 10,
+        "possible_under_ideal_hypothetical_calls": true
+      },
+      "UNPIGMENTED_HIGHER": {
+        "minimum_allocations_unpigmented_pigmented": [
+          [
+            7,
+            3
+          ]
+        ],
+        "minimum_tested_taxa": 10,
+        "possible_under_ideal_hypothetical_calls": true
+      }
+    },
+    "U1_P1": {
+      "PIGMENTED_HIGHER": {
+        "minimum_allocations_unpigmented_pigmented": [
+          [
+            7,
+            4
+          ]
+        ],
+        "minimum_tested_taxa": 11,
+        "possible_under_ideal_hypothetical_calls": true
+      },
+      "UNPIGMENTED_HIGHER": {
+        "minimum_allocations_unpigmented_pigmented": [
+          [
+            7,
+            4
+          ]
+        ],
+        "minimum_tested_taxa": 11,
+        "possible_under_ideal_hypothetical_calls": true
+      }
+    },
+    "U2_P1": {
+      "PIGMENTED_HIGHER": {
+        "minimum_allocations_unpigmented_pigmented": [
+          [
+            7,
+            6
+          ]
+        ],
+        "minimum_tested_taxa": 13,
+        "possible_under_ideal_hypothetical_calls": true
+      },
+      "UNPIGMENTED_HIGHER": {
+        "minimum_allocations_unpigmented_pigmented": [
+          [
+            7,
+            6
+          ]
+        ],
+        "minimum_tested_taxa": 13,
+        "possible_under_ideal_hypothetical_calls": true
+      }
+    }
+  },
+  "ideal_eleven_taxon_certificate_if_each_group_may_have_one_miscall": {
+    "finite_panel_direction": "UNPIGMENTED_HIGHER",
+    "hypothetical_binary_calls_only": true,
+    "not_sampling_confidence_interval_or_phylogenetic_rate": true,
+    "pigmented": {
+      "assumed_deterministic_miscall_cap": 1,
+      "hypothetically_tested": 4,
+      "not_tested": 11,
+      "reported_negative": 4,
+      "reported_positive": 0,
+      "source_taxa": 15,
+      "true_positive_maximum": 12,
+      "true_positive_minimum": 0,
+      "true_prevalence_lower": "0",
+      "true_prevalence_upper": "4/5"
+    },
+    "source_annotation_is_not_function": true,
+    "unpigmented": {
+      "assumed_deterministic_miscall_cap": 1,
+      "hypothetically_tested": 7,
+      "not_tested": 0,
+      "reported_negative": 0,
+      "reported_positive": 7,
+      "source_taxa": 7,
+      "true_positive_maximum": 7,
+      "true_positive_minimum": 6,
+      "true_prevalence_lower": "6/7",
+      "true_prevalence_upper": "1"
+    },
+    "unpigmented_minus_pigmented_lower": "2/35",
+    "unpigmented_minus_pigmented_upper": "1"
+  },
+  "n_original_pigmented": 15,
+  "n_original_taxa": 22,
+  "n_original_unpigmented": 7,
+  "native_ancestral_trait_regain_or_transgenerational_establishment_measured": false,
+  "phylogenetically_independent_regain_events_added": 0,
+  "schema": "anto_v21_fallible_joint_flower_assay_identifiability",
+  "source": "Ho and Smith 2016 source 22-taxon pigment and CDS registry via ANTO v19/v20",
+  "source_ledger_sha_not_a_functional_assay": "results/anto_v20_functional_assay_identification_20261026.json",
+  "source_taxa_with_new_joint_flower_function_assays": 0,
+  "v20_eight_taxon_certificate_after_up_to_one_total_miscall": {
+    "at_most_one_total_miscall_hypothesis_only": true,
+    "difference_lower": "-8/105",
+    "difference_upper": "1",
+    "negative_sign_certified": false,
+    "positive_sign_certified": false,
+    "possible_allocation_caps": [
+      [
+        0,
+        0
+      ],
+      [
+        1,
+        0
+      ],
+      [
+        0,
+        1
+      ]
+    ]
+  },
+  "v20_eight_taxon_certificate_if_each_group_may_have_one_miscall": {
+    "finite_panel_direction": "STRICT_DIRECTION_UNIDENTIFIED",
+    "hypothetical_binary_calls_only": true,
+    "not_sampling_confidence_interval_or_phylogenetic_rate": true,
+    "pigmented": {
+      "assumed_deterministic_miscall_cap": 1,
+      "hypothetically_tested": 1,
+      "not_tested": 14,
+      "reported_negative": 1,
+      "reported_positive": 0,
+      "source_taxa": 15,
+      "true_positive_maximum": 15,
+      "true_positive_minimum": 0,
+      "true_prevalence_lower": "0",
+      "true_prevalence_upper": "1"
+    },
+    "source_annotation_is_not_function": true,
+    "unpigmented": {
+      "assumed_deterministic_miscall_cap": 1,
+      "hypothetically_tested": 7,
+      "not_tested": 0,
+      "reported_negative": 0,
+      "reported_positive": 7,
+      "source_taxa": 7,
+      "true_positive_maximum": 7,
+      "true_positive_minimum": 6,
+      "true_prevalence_lower": "6/7",
+      "true_prevalence_upper": "1"
+    },
+    "unpigmented_minus_pigmented_lower": "-1/7",
+    "unpigmented_minus_pigmented_upper": "1"
+  },
+  "zero_misclassification_reproduces_v20": {
+    "finite_panel_direction": "UNPIGMENTED_HIGHER",
+    "hypothetical_binary_calls_only": true,
+    "not_sampling_confidence_interval_or_phylogenetic_rate": true,
+    "pigmented": {
+      "assumed_deterministic_miscall_cap": 0,
+      "hypothetically_tested": 1,
+      "not_tested": 14,
+      "reported_negative": 1,
+      "reported_positive": 0,
+      "source_taxa": 15,
+      "true_positive_maximum": 14,
+      "true_positive_minimum": 0,
+      "true_prevalence_lower": "0",
+      "true_prevalence_upper": "14/15"
+    },
+    "source_annotation_is_not_function": true,
+    "unpigmented": {
+      "assumed_deterministic_miscall_cap": 0,
+      "hypothetically_tested": 7,
+      "not_tested": 0,
+      "reported_negative": 0,
+      "reported_positive": 7,
+      "source_taxa": 7,
+      "true_positive_maximum": 7,
+      "true_positive_minimum": 7,
+      "true_prevalence_lower": "1",
+      "true_prevalence_upper": "1"
+    },
+    "unpigmented_minus_pigmented_lower": "1/15",
+    "unpigmented_minus_pigmented_upper": "1"
+  }
+}
