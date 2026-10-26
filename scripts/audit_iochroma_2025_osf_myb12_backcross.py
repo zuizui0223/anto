@@ -183,6 +183,45 @@ def crosscheck_author_DE(text:str)->dict:
         "source_note":"Authors' pre-existing DESeq2 effect; cannot treat TPM mean ratio as an independently fitted DESeq2 coefficient",
     }
 
+def assert_expected_receipt(current:dict,expected:dict)->None:
+    """Reject changed specimen-level MYB12 and 16 transcript-source IDs.
+
+    The durable frozen summary is independently assembled from the original
+    three public source files. Checking an expected file does not substitute
+    for downloading and hashing original OSF bytes on each live run.
+    """
+    obs=expected["our_descriptive_audit"]
+    expected_ids=[r["id"] for r in obs["strict_perfect_source_entries"]]
+    checks=[
+        current["n_samples_blue"]==expected["original_n_blue"],
+        current["n_samples_red"]==expected["original_n_red"],
+        current["total_filtered_transcripts"]==expected["original_n_transcript_entries"],
+        current["perfect_blue_over_red"]==obs["n_perfect_BLUE_GT_RED_transcript_entries"],
+        current["perfect_red_over_blue"]==obs["n_perfect_RED_GT_BLUE_transcript_entries"],
+        current["perfect_blue_transcript_IDs"]==expected_ids,
+        current["perfect_red_transcript_IDs"]==[],
+        current["selected_gene"]["pairwise_blue_over_red_AUC"]==obs["blue_over_red_pairwise_AUC"],
+    ]
+    for current_key,frozen_key in (
+        ("blue_mean_tpm","mean_blue_TPM"),
+        ("red_mean_tpm","mean_red_TPM"),
+        ("blue_min_tpm","min_blue_TPM"),
+        ("red_max_tpm","max_red_TPM"),
+    ):
+        checks.append(math.isclose(
+            current["selected_gene"][current_key],obs[frozen_key],
+            rel_tol=0,abs_tol=1e-12))
+    expected_samples=[
+        {"source_original_ID":s["sample_id"],
+         "paper_phenotype":"blue" if s["source_flower_colour"]=="B" else "red",
+         "TPM":s["TPM"]}
+        for s in obs["original_Myb12_TPM_by_sample"]
+    ]
+    checks.append(current["selected_gene"]["individuals"]==expected_samples)
+    if len(expected_ids)!=16 or not all(checks):
+        raise ValueError("Frozen original 24-sample and 16-transcript receipt mismatch")
+
+
 def report():
     source_bytes={name:fetch_bytes(meta) for name,meta in SOURCE.items()}
     originals={name:val.decode("utf-8-sig") for name,val in source_bytes.items()}
@@ -234,8 +273,12 @@ def report():
 def main():
     parser=argparse.ArgumentParser()
     parser.add_argument("--output",type=Path,required=True)
+    parser.add_argument("--expected",type=Path)
     args=parser.parse_args()
     result=report()
+    if args.expected:
+        frozen=json.loads(args.expected.read_text(encoding="utf-8"))
+        assert_expected_receipt(result,frozen)
     args.output.parent.mkdir(parents=True,exist_ok=True)
     args.output.write_text(json.dumps(result,ensure_ascii=False,sort_keys=True,indent=2)+"\n",encoding="utf-8")
     print("IOCHROMA_REAL_SOURCE_ADMISSION_PASS",json.dumps({
