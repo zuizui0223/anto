@@ -1,0 +1,124 @@
+{
+  "schema": "anto_iochroma_2025_original_blue_red_myb12_color_conditioned_coexpression_v2",
+  "date": "2026-10-26",
+  "source_data": "Wheeler, Larter & Smith (2025), G3, DOI 10.1093/g3journal/jkaf230; original OSF j5m8f",
+  "source_original_tpm_md5": "dcf46c27169d1b84612a2fd4c43d4642",
+  "source_original_manifest_md5": "a9264d3a09fca80efe62ce3eaee32046",
+  "source_original_gene_crosswalk_md5": "d6584d58743b0b5f901ae0fe030488d4",
+  "reproduced_from_successful_job": "https://github.com/zuizui0223/anto/actions/runs/40277344606",
+  "population_context": "one 2025 red-blue Iochroma backcross; NOT white morph versus white-fixed species; NOT independent angiosperm clades",
+  "analysis_construction": "Pearson r on original untransformed TPM, pooled and after subtracting each transcript's mean separately in B and R cohorts; 15 comparators selected only because of their previously frozen in-sample perfect blue-over-red separation",
+  "measurement_unit": "one original floral RNA sample per segregating backcross individual, 12 blue and 12 red",
+  "no_multiple_testing_corrected_discovery_or_causal_coregulation": true,
+  "not_ancestral_trait_regain_fitness_or_multigeneration_retention": true,
+  "do_not_merge_transcript_rows_into_independent_genetic_loci": true,
+  "source_verified_descriptive_result": {
+    "blue_individuals": 12,
+    "color_centered_negative": 9,
+    "color_centered_positive": 6,
+    "color_centered_undefined": 0,
+    "conditioning_on_flower_color_not_molecular_intervention": true,
+    "descriptive_in_sample_only": true,
+    "no_natural_regain_or_fitness_assay": true,
+    "not_independent_causal_coregulation": true,
+    "original_individuals": 24,
+    "other_blue_perfect_transcripts": 15,
+    "per_transcript": [
+      {
+        "correlation_unit": "original backcross individual",
+        "pooled_r": 0.6317707729219696,
+        "transcript_id": "TRINITY_DN11681_c0_g3_i5.p1",
+        "within_color_centered_r": 0.18861757204092405
+      },
+      {
+        "correlation_unit": "original backcross individual",
+        "pooled_r": 0.5811090875882704,
+        "transcript_id": "TRINITY_DN12748_c0_g2_i2.p1",
+        "within_color_centered_r": 0.0833861385220913
+      },
+      {
+        "correlation_unit": "original backcross individual",
+        "pooled_r": 0.5682465594485127,
+        "transcript_id": "TRINITY_DN1372_c0_g1_i30.p1",
+        "within_color_centered_r": -0.28322907506700196
+      },
+      {
+        "correlation_unit": "original backcross individual",
+        "pooled_r": 0.7265322482172146,
+        "transcript_id": "TRINITY_DN2718_c1_g1_i1.p1",
+        "within_color_centered_r": 0.2223177917344597
+      },
+      {
+        "correlation_unit": "original backcross individual",
+        "pooled_r": 0.7892125521067326,
+        "transcript_id": "TRINITY_DN2718_c1_g2_i1.p1",
+        "within_color_centered_r": 0.3998438255697352
+      },
+      {
+        "correlation_unit": "original backcross individual",
+        "pooled_r": 0.5230831049783583,
+        "transcript_id": "TRINITY_DN3164_c0_g1_i15.p1",
+        "within_color_centered_r": -0.30466707908098734
+      },
+      {
+        "correlation_unit": "original backcross individual",
+        "pooled_r": 0.548626503212836,
+        "transcript_id": "TRINITY_DN3164_c0_g1_i6.p1",
+        "within_color_centered_r": -0.32121396830106536
+      },
+      {
+        "correlation_unit": "original backcross individual",
+        "pooled_r": 0.5514053574754129,
+        "transcript_id": "TRINITY_DN5710_c0_g1_i14.p1",
+        "within_color_centered_r": -0.1315544139024166
+      },
+      {
+        "correlation_unit": "original backcross individual",
+        "pooled_r": 0.629476589898481,
+        "transcript_id": "TRINITY_DN5810_c0_g1_i18.p1",
+        "within_color_centered_r": -0.25404481617287683
+      },
+      {
+        "correlation_unit": "original backcross individual",
+        "pooled_r": 0.9118659371355811,
+        "transcript_id": "TRINITY_DN6389_c0_g1_i4.p2",
+        "within_color_centered_r": 0.793681364790508
+      },
+      {
+        "correlation_unit": "original backcross individual",
+        "pooled_r": 0.5343487217698626,
+        "transcript_id": "TRINITY_DN6574_c0_g1_i12.p1",
+        "within_color_centered_r": -0.3309092784893486
+      },
+      {
+        "correlation_unit": "original backcross individual",
+        "pooled_r": 0.47452548147286366,
+        "transcript_id": "TRINITY_DN6994_c1_g1_i1.p1",
+        "within_color_centered_r": -0.357083116166073
+      },
+      {
+        "correlation_unit": "original backcross individual",
+        "pooled_r": 0.6807406892512802,
+        "transcript_id": "TRINITY_DN753_c0_g1_i2.p1",
+        "within_color_centered_r": -0.015444131562799149
+      },
+      {
+        "correlation_unit": "original backcross individual",
+        "pooled_r": 0.902273171665882,
+        "transcript_id": "TRINITY_DN901_c0_g1_i2.p1",
+        "within_color_centered_r": 0.7517063608050951
+      },
+      {
+        "correlation_unit": "original backcross individual",
+        "pooled_r": 0.384241034470154,
+        "transcript_id": "TRINITY_DN9157_c0_g1_i2.p1",
+        "within_color_centered_r": -0.015050795855660952
+      }
+    ],
+    "pooled_negative": 0,
+    "pooled_positive": 15,
+    "pooled_undefined": 0,
+    "red_individuals": 12,
+    "reference_transcript": "TRINITY_DN3000_c0_g1_i10.p1"
+  }
+}
