@@ -1,5 +1,7 @@
 # Iochroma 2025 original flower RNA — pooled versus within-colour transcript correlation
 
+**Follow-up:** [v3 original individual-omission and log-scale sensitivity audit](IOCHROMA_2025_COEXPRESSION_SENSITIVITY_V3.md) shows only 4/9 originally negative pooled residual correlations retain their sign under all 24 single-individual omissions; 6/9 remain negative after log1p transformation. Do not treat all 9 negative residual signs as equally stable.
+
 **26 October 2026. New independent source-data *reanalysis* of original author-provided files, not a new sequencing experiment, natural trait regain or functionally verified regulatory network.** The original dataset was published by Wheeler, Larter & Smith (2025), *G3*, DOI 10.1093/g3journal/jkaf230; source https://osf.io/j5m8f/.
 
 ## Main original-data result
