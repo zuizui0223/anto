@@ -350,6 +350,141 @@ def coexpression_of_selected_perfect(vectors:dict[str,list[float]],
 
 
 
+
+def colour_conditioned_sensitivity(vectors:dict[str,list[float]],
+                                    selected_gene:str,
+                                    sample_ids:list[str],
+                                    assignments:dict[str,str])->dict:
+    """Leave-one-original-individual-out and log1p audit of stratified r.
+
+    Sensitivity analysis only: the 24 backcross individuals and original
+    group-selected transcripts are not independent genetic causes or
+    prospective ancestral regains. Each omission re-estimates the blue/red
+    means. Zero-variance group-specific correlations remain undefined.
+    """
+    primary=coexpression_of_selected_perfect(
+        vectors,selected_gene,sample_ids,assignments)
+    n=len(sample_ids)
+    counts={c:list(assignments[k] for k in sample_ids).count(c) for c in ("B","R")}
+    if min(counts.values())<3:
+        raise ValueError("Jackknife requires at least three original individuals per colour group")
+    transformations={k:[math.log1p(v) for v in value] for k,value in vectors.items()}
+    logged=coexpression_of_selected_perfect(
+        transformations,selected_gene,sample_ids,assignments)
+    logged_lookup={z["transcript_id"]:z for z in logged["per_transcript"]}
+    delete_lookups=[]
+    for dropped in range(n):
+        reduced_ids=[key for i,key in enumerate(sample_ids) if i!=dropped]
+        reduced_vectors={k:[val for i,val in enumerate(values) if i!=dropped]
+                         for k,values in vectors.items()}
+        diagnostic=coexpression_of_selected_perfect(
+            reduced_vectors,selected_gene,reduced_ids,
+            {k:assignments[k] for k in reduced_ids})
+        delete_lookups.append({z["transcript_id"]:z for z in diagnostic["per_transcript"]})
+
+    b_indices=[i for i,key in enumerate(sample_ids) if assignments[key]=="B"]
+    r_indices=[i for i,key in enumerate(sample_ids) if assignments[key]=="R"]
+    reference=vectors[selected_gene]
+    rows=[]
+    for entry in primary["per_transcript"]:
+        gene=entry["transcript_id"]
+        initial=entry["within_color_centered_r"]
+        transformed=logged_lookup[gene]["within_color_centered_r"]
+        all_loo=[d[gene]["within_color_centered_r"] for d in delete_lookups]
+        same=sum(v is not None and initial is not None and
+                 (v>0)==(initial>0) and v!=0 and initial!=0
+                 for v in all_loo)
+        opposite=sum(v is not None and initial is not None and
+                     (v>0)!=(initial>0) and v!=0 and initial!=0
+                     for v in all_loo)
+        undefined=sum(v is None or v==0 for v in all_loo)
+        blue_r=_pearson([reference[i] for i in b_indices],
+                        [vectors[gene][i] for i in b_indices])
+        red_r=_pearson([reference[i] for i in r_indices],
+                       [vectors[gene][i] for i in r_indices])
+        rows.append({
+            "transcript_id":gene,
+            "original_centered_r":initial,
+            "loocv_n":n,
+            "omissions_same_nonzero_sign":same,
+            "omissions_opposite_nonzero_sign":opposite,
+            "omissions_undefined_or_zero":undefined,
+            "loocv_min_r":min((v for v in all_loo if v is not None),default=None),
+            "loocv_max_r":max((v for v in all_loo if v is not None),default=None),
+            "log1p_centered_r":transformed,
+            "log1p_same_nonzero_sign":(
+                None if initial is None or transformed is None or
+                        initial==0 or transformed==0
+                else (initial>0)==(transformed>0)),
+            "blue_only_r":blue_r,
+            "red_only_r":red_r,
+        })
+        if same+opposite+undefined!=n:
+            raise ArithmeticError("Leave-one-out sign partition lost specimens")
+    neg=[row for row in rows if row["original_centered_r"] is not None
+         and row["original_centered_r"]<0]
+    return {
+        "original_individuals":n,
+        "original_blue":counts["B"],
+        "original_red":counts["R"],
+        "other_preselected_transcript_entries":len(rows),
+        "raw_color_centered_negative":len(neg),
+        "negative_with_all_omissions_same_sign":sum(
+            x["omissions_same_nonzero_sign"]==n for x in neg),
+        "negative_with_at_least_one_omission_sign_reversal":sum(
+            x["omissions_opposite_nonzero_sign"]>0 for x in neg),
+        "negative_preserved_under_log1p":sum(
+            x["log1p_same_nonzero_sign"] is True for x in neg),
+        "original_groups_recentered_after_each_omission":True,
+        "not_independent_holdout_or_predictive_cross_validation":True,
+        "not_a_formal_uncertainty_interval_or_causal_regulatory_assay":True,
+        "one_original_backcross_no_ancestral_loss_regain_or_fitness":True,
+        "per_transcript":rows,
+    }
+
+
+
+def assert_expected_sensitivity(current:dict, receipt:dict)->None:
+    """Reject source drift against original-live-replay 24-deletion sensitivity.
+
+    Frozen coefficients are descriptive within one author backcross; neither
+    leave-one-individual-out nor log transform is independent prospective
+    prediction, gene perturbation or trait evolutionary reacquisition.
+    """
+    if (receipt.get("source_original_tpm_md5")!=SOURCE["tpm"]["md5"] or
+        receipt.get("source_original_manifest_md5")!=SOURCE["sample"]["md5"]):
+        raise ValueError("Frozen original source digest mismatch for sensitivity")
+    for flag in ("not_held_out_population_validation",
+                 "not_inference_of_regulatory_causation",
+                 "not_independent_plant_clade_or_natural_flower_regain",
+                 "no_ancestral_toolkit_reexpression_persistence_rate_estimated"):
+        if receipt.get(flag) is not True:
+            raise ValueError("Frozen inference boundaries incorrectly promoted")
+    frozen=receipt.get("original_24_sensitivity")
+    if not isinstance(frozen,dict):
+        raise ValueError("Frozen sensitivity data missing")
+
+    def compare(a,b,path):
+        if isinstance(b,dict):
+            if not isinstance(a,dict) or set(a)!=set(b):
+                raise ValueError(f"Frozen sensitivity key mismatch at {path}")
+            for key in b:
+                compare(a[key],b[key],path+"."+key)
+        elif isinstance(b,list):
+            if not isinstance(a,list) or len(a)!=len(b):
+                raise ValueError(f"Frozen sensitivity list mismatch at {path}")
+            for i,(x,y) in enumerate(zip(a,b)):
+                compare(x,y,path+"."+str(i))
+        elif type(b) is float:
+            if (not isinstance(a,(float,int)) or
+                not math.isfinite(a) or
+                not math.isclose(a,b,abs_tol=1e-12,rel_tol=0)):
+                raise ValueError(f"Frozen sensitivity coefficient mismatch at {path}")
+        elif a!=b or type(a)!=type(b):
+            raise ValueError(f"Frozen sensitivity value mismatch at {path}")
+    compare(current,frozen,"original_24_sensitivity")
+
+
 def assert_expected_coexpression(current:dict,expected_receipt:dict)->None:
     """Fail closed on drift from the independently frozen source-derived result.
 
@@ -400,6 +535,8 @@ def report():
         originals["tpm"],manifest,selected_ids)
     x["color_conditioned_coexpression"]=coexpression_of_selected_perfect(
         original_perfect,MYB_ID,ids,manifest)
+    x["color_conditioned_sensitivity"]=colour_conditioned_sensitivity(
+        original_perfect,MYB_ID,ids,manifest)
     if x["color_conditioned_coexpression"]["other_blue_perfect_transcripts"]!=15:
         raise ValueError("Coexpression source-selected comparator count is not 15")
     if (x["total_filtered_transcripts"]!=19184 or x["n_samples_red"]!=12 or
@@ -449,6 +586,7 @@ def main():
     parser.add_argument("--output",type=Path,required=True)
     parser.add_argument("--expected",type=Path)
     parser.add_argument("--conditioned-expected",type=Path)
+    parser.add_argument("--sensitivity-expected",type=Path)
     args=parser.parse_args()
     result=report()
     if args.expected:
@@ -457,8 +595,13 @@ def main():
     if args.conditioned_expected:
         audit=json.loads(args.conditioned_expected.read_text(encoding="utf-8"))
         assert_expected_coexpression(result["color_conditioned_coexpression"],audit)
+    if args.sensitivity_expected:
+        frozen=json.loads(args.sensitivity_expected.read_text(encoding="utf-8"))
+        assert_expected_sensitivity(result["color_conditioned_sensitivity"],frozen)
     args.output.parent.mkdir(parents=True,exist_ok=True)
     args.output.write_text(json.dumps(result,ensure_ascii=False,sort_keys=True,indent=2)+"\n",encoding="utf-8")
+    print("IOCHROMA_COLOR_SENSITIVITY_DETAIL",json.dumps(
+        result["color_conditioned_sensitivity"],sort_keys=True))
     print("IOCHROMA_COLOR_CONDITIONED_DETAIL",json.dumps(
         result["color_conditioned_coexpression"],sort_keys=True))
     print("IOCHROMA_REAL_SOURCE_ADMISSION_PASS",json.dumps({
