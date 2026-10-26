@@ -443,6 +443,48 @@ def colour_conditioned_sensitivity(vectors:dict[str,list[float]],
     }
 
 
+
+def assert_expected_sensitivity(current:dict, receipt:dict)->None:
+    """Reject source drift against original-live-replay 24-deletion sensitivity.
+
+    Frozen coefficients are descriptive within one author backcross; neither
+    leave-one-individual-out nor log transform is independent prospective
+    prediction, gene perturbation or trait evolutionary reacquisition.
+    """
+    if (receipt.get("source_original_tpm_md5")!=SOURCE["tpm"]["md5"] or
+        receipt.get("source_original_manifest_md5")!=SOURCE["sample"]["md5"]):
+        raise ValueError("Frozen original source digest mismatch for sensitivity")
+    for flag in ("not_held_out_population_validation",
+                 "not_inference_of_regulatory_causation",
+                 "not_independent_plant_clade_or_natural_flower_regain",
+                 "no_ancestral_toolkit_reexpression_persistence_rate_estimated"):
+        if receipt.get(flag) is not True:
+            raise ValueError("Frozen inference boundaries incorrectly promoted")
+    frozen=receipt.get("original_24_sensitivity")
+    if not isinstance(frozen,dict):
+        raise ValueError("Frozen sensitivity data missing")
+
+    def compare(a,b,path):
+        if isinstance(b,dict):
+            if not isinstance(a,dict) or set(a)!=set(b):
+                raise ValueError(f"Frozen sensitivity key mismatch at {path}")
+            for key in b:
+                compare(a[key],b[key],path+"."+key)
+        elif isinstance(b,list):
+            if not isinstance(a,list) or len(a)!=len(b):
+                raise ValueError(f"Frozen sensitivity list mismatch at {path}")
+            for i,(x,y) in enumerate(zip(a,b)):
+                compare(x,y,path+"."+str(i))
+        elif type(b) is float:
+            if (not isinstance(a,(float,int)) or
+                not math.isfinite(a) or
+                not math.isclose(a,b,abs_tol=1e-12,rel_tol=0)):
+                raise ValueError(f"Frozen sensitivity coefficient mismatch at {path}")
+        elif a!=b or type(a)!=type(b):
+            raise ValueError(f"Frozen sensitivity value mismatch at {path}")
+    compare(current,frozen,"original_24_sensitivity")
+
+
 def assert_expected_coexpression(current:dict,expected_receipt:dict)->None:
     """Fail closed on drift from the independently frozen source-derived result.
 
@@ -544,6 +586,7 @@ def main():
     parser.add_argument("--output",type=Path,required=True)
     parser.add_argument("--expected",type=Path)
     parser.add_argument("--conditioned-expected",type=Path)
+    parser.add_argument("--sensitivity-expected",type=Path)
     args=parser.parse_args()
     result=report()
     if args.expected:
@@ -552,6 +595,9 @@ def main():
     if args.conditioned_expected:
         audit=json.loads(args.conditioned_expected.read_text(encoding="utf-8"))
         assert_expected_coexpression(result["color_conditioned_coexpression"],audit)
+    if args.sensitivity_expected:
+        frozen=json.loads(args.sensitivity_expected.read_text(encoding="utf-8"))
+        assert_expected_sensitivity(result["color_conditioned_sensitivity"],frozen)
     args.output.parent.mkdir(parents=True,exist_ok=True)
     args.output.write_text(json.dumps(result,ensure_ascii=False,sort_keys=True,indent=2)+"\n",encoding="utf-8")
     print("IOCHROMA_COLOR_SENSITIVITY_DETAIL",json.dumps(
