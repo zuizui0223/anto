@@ -1,0 +1,54 @@
+name: ANTO v17 exact environment-horizon sufficiency
+on:
+  pull_request:
+    paths:
+      - "src/anto_environment_horizon_bridge_v17.py"
+      - "tests/test_environment_horizon_bridge_v17.py"
+      - "scripts/run_environment_horizon_bridge_v17.py"
+      - "docs/ENVIRONMENT_HORIZON_SUFFICIENCY_V17.md"
+      - ".github/workflows/anto-v17-environment-horizon.yml"
+      - "README.md"
+  push:
+    branches: [main]
+    paths:
+      - "src/anto_environment_horizon_bridge_v17.py"
+      - "tests/test_environment_horizon_bridge_v17.py"
+      - "scripts/run_environment_horizon_bridge_v17.py"
+permissions:
+  contents: read
+jobs:
+  exact-shared-environment:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - name: Run twelve exact independent and adverse model checks
+        run: python -m unittest discover -s tests -p test_environment_horizon_bridge_v17.py -v
+      - name: Replay exact rational Brier and transition-duration results
+        run: |
+          python scripts/run_environment_horizon_bridge_v17.py --output /tmp/anto_v17.json
+          python - <<'PY'
+          import json
+          from fractions import Fraction as F
+          d=json.load(open('/tmp/anto_v17.json'))
+          assert d['same_first_generation_probability']=='456/625'
+          assert d['no_natural_plant_parameters_estimated']
+          assert not d['ancestral_trait_regain_measured']
+          assert d['no_permanent_genealogy_nonextinction_claim']
+          assert not d['SLK_payoff_calibrated']
+          assert d['Cirsium_empirical_owner']=='zuizui0223/aza3'
+          s=d['scenarios']
+          assert s['1/10']['difference_p9_minus_p1_at_h2']=='5789184/244140625'
+          assert s['9/10']['difference_p9_minus_p1_at_h2']=='-5789184/244140625'
+          assert s['1/2']['difference_p9_minus_p1_at_h2']=='0'
+          assert s['1/10']['brier_gain_at_h1']=='0'
+          assert F(s['1/10']['brier_gain_at_h2'])>0
+          PY
+      - uses: actions/upload-artifact@v4
+        with:
+          name: anto-v17-horizon-environment-rational-receipt
+          path: /tmp/anto_v17.json
+          retention-days: 90
