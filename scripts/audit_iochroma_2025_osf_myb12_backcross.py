@@ -96,6 +96,8 @@ def audit_tpm_table(text:str,assignments:dict[str,str],selected_gene=MYB_ID)->di
         raise ValueError("Missing B/R sample group")
     ids=set()
     n=perfect_blue=perfect_red=0
+    perfect_ids_blue=[]
+    perfect_ids_red=[]
     selected=None
     for row in reader:
         if not row:
@@ -119,6 +121,8 @@ def audit_tpm_table(text:str,assignments:dict[str,str],selected_gene=MYB_ID)->di
         n+=1
         perfect_blue+=int(sepB)
         perfect_red+=int(sepR)
+        if sepB: perfect_ids_blue.append(id_)
+        if sepR: perfect_ids_red.append(id_)
         if id_==selected_gene:
             wins=sum(1. if b>r else .5 if b==r else 0.
                      for b in blue for r in red)
@@ -149,6 +153,8 @@ def audit_tpm_table(text:str,assignments:dict[str,str],selected_gene=MYB_ID)->di
         "perfect_blue_over_red":perfect_blue,
         "perfect_red_over_blue":perfect_red,
         "perfect_transcript_fraction":(perfect_blue+perfect_red)/n,
+        "perfect_blue_transcript_IDs":sorted(perfect_ids_blue),
+        "perfect_red_transcript_IDs":sorted(perfect_ids_red),
         "selected_gene":selected,
         "trait_loss_then_historical_regain_measured":False,
         "causal_MYB_gene_demonstrated_by_reanalysis":False,
