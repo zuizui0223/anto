@@ -60,6 +60,9 @@ jobs:
           assert d['after_fictional_12_positives_best_case_additional_certificates']['UNPIGMENTED_HIGHER']['minimum_additional_assays']==5
           assert d['after_fictional_12_positives_best_case_additional_certificates']['PIGMENTED_HIGHER']['minimum_additional_assays']==3
           assert d['no_worst_case_nonzero_sign_guarantee_even_after_all_22_if_true_rates_equal']
+          serialized=json.dumps(d,sort_keys=True,separators=(',',':'),ensure_ascii=False)
+          for i in range(0,len(serialized),3500):
+              print('ANTO_V20_RECEIPT_CHUNK',i//3500,serialized[i:i+3500])
           print('ANTO_V20_SOURCE_AND_ORACLE_GATES_PASS',
                 json.dumps({'taxa':len(d['source_taxon_panel']),
                             'actual_functional_assays':0,
