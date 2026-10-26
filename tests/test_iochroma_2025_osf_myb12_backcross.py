@@ -15,7 +15,7 @@ ROOT=Path(__file__).resolve().parents[1]
 sys.path.insert(0,str(ROOT/"scripts"))
 from audit_iochroma_2025_osf_myb12_backcross import (
     SOURCE, MYB_ID, parse_manifest, audit_tpm_table, validate_payload,
-    assert_expected_receipt,
+    assert_expected_receipt, coexpression_of_selected_perfect,
 )
 
 class IochromaSourceTests(unittest.TestCase):
@@ -109,6 +109,37 @@ class IochromaSourceTests(unittest.TestCase):
         perturbed["selected_gene"]["individuals"][0]["TPM"]+=1
         with self.assertRaisesRegex(ValueError,"receipt"):
             assert_expected_receipt(perturbed,ref)
+
+    def test_pooled_correlation_is_not_within_color_coregulation(self):
+        assigned={"B1":"B","B2":"B","R1":"R","R2":"R"}
+        ids=["B1","R1","B2","R2"]
+        vectors={
+            "MYB":[8,0,9,1],
+            "ANTI":[20,3,10,1],
+            "SAME":[12,0,14,1],
+        }
+        diagnostic=coexpression_of_selected_perfect(vectors,"MYB",ids,assigned)
+        self.assertEqual(diagnostic["other_blue_perfect_transcripts"],2)
+        self.assertEqual(diagnostic["pooled_positive"],2)
+        self.assertEqual(diagnostic["color_centered_negative"],1)
+        self.assertEqual(diagnostic["color_centered_positive"],1)
+        self.assertEqual(diagnostic["color_centered_undefined"],0)
+        rows={v["transcript_id"]:v for v in diagnostic["per_transcript"]}
+        self.assertGreater(rows["ANTI"]["pooled_r"],0)
+        self.assertLess(rows["ANTI"]["within_color_centered_r"],0)
+        self.assertGreater(rows["SAME"]["within_color_centered_r"],0)
+
+    def test_centered_correlation_handles_constant_within_groups_without_false_sign(self):
+        assigned={"B1":"B","B2":"B","R1":"R","R2":"R"}
+        ids=["B1","B2","R1","R2"]
+        vectors={
+            "MYB":[8,9,0,1],
+            "STRONG_BUT_FLAT":[15,15,0,0],
+        }
+        diagnostic=coexpression_of_selected_perfect(vectors,"MYB",ids,assigned)
+        self.assertEqual(diagnostic["pooled_positive"],1)
+        self.assertEqual(diagnostic["color_centered_undefined"],1)
+        self.assertIsNone(diagnostic["per_transcript"][0]["within_color_centered_r"])
 
     def test_source_byte_digest_or_count_fails_closed(self):
         with self.assertRaisesRegex(ValueError,"source"):
