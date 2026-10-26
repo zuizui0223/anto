@@ -349,6 +349,46 @@ def coexpression_of_selected_perfect(vectors:dict[str,list[float]],
     }
 
 
+
+def assert_expected_coexpression(current:dict,expected_receipt:dict)->None:
+    """Fail closed on drift from the independently frozen source-derived result.
+
+    The frozen values were produced by a previous MD5-gated OSF live replay,
+    and are descriptive within a single segregating original backcross.
+    """
+    if (expected_receipt.get("source_original_tpm_md5")!=SOURCE["tpm"]["md5"] or
+        expected_receipt.get("source_original_manifest_md5")!=SOURCE["sample"]["md5"] or
+        expected_receipt.get("source_original_gene_crosswalk_md5")!=SOURCE["gene_crosswalk"]["md5"]):
+        raise ValueError("Frozen original source digest mismatch")
+    expected=expected_receipt.get("source_verified_descriptive_result",{})
+    fields=("reference_transcript","original_individuals","blue_individuals",
+            "red_individuals","other_blue_perfect_transcripts",
+            "pooled_positive","pooled_negative","pooled_undefined",
+            "color_centered_positive","color_centered_negative",
+            "color_centered_undefined","descriptive_in_sample_only",
+            "conditioning_on_flower_color_not_molecular_intervention",
+            "not_independent_causal_coregulation",
+            "no_natural_regain_or_fitness_assay")
+    if any(current.get(key)!=expected.get(key) for key in fields):
+        raise ValueError("Frozen phenotype-conditioned coexpression counts mismatch")
+    observed=current.get("per_transcript",[])
+    frozen=expected.get("per_transcript",[])
+    if len(observed)!=15 or len(frozen)!=15:
+        raise ValueError("Frozen coexpression must contain 15 original comparators")
+    for a,b in zip(observed,frozen):
+        if (a.get("transcript_id")!=b.get("transcript_id") or
+            a.get("correlation_unit")!=b.get("correlation_unit")):
+            raise ValueError("Frozen transcript identity or measurement unit mismatch")
+        for name in ("pooled_r","within_color_centered_r"):
+            x,y=a.get(name),b.get(name)
+            if x is None or y is None:
+                if x is not None or y is not None:
+                    raise ValueError("Frozen undefined correlation mismatch")
+            elif not (math.isfinite(x) and math.isfinite(y) and
+                      math.isclose(x,y,abs_tol=1e-12,rel_tol=0)):
+                raise ValueError("Frozen per-transcript coexpression drift")
+
+
 def report():
     source_bytes={name:fetch_bytes(meta) for name,meta in SOURCE.items()}
     originals={name:val.decode("utf-8-sig") for name,val in source_bytes.items()}
@@ -408,11 +448,15 @@ def main():
     parser=argparse.ArgumentParser()
     parser.add_argument("--output",type=Path,required=True)
     parser.add_argument("--expected",type=Path)
+    parser.add_argument("--conditioned-expected",type=Path)
     args=parser.parse_args()
     result=report()
     if args.expected:
         frozen=json.loads(args.expected.read_text(encoding="utf-8"))
         assert_expected_receipt(result,frozen)
+    if args.conditioned_expected:
+        audit=json.loads(args.conditioned_expected.read_text(encoding="utf-8"))
+        assert_expected_coexpression(result["color_conditioned_coexpression"],audit)
     args.output.parent.mkdir(parents=True,exist_ok=True)
     args.output.write_text(json.dumps(result,ensure_ascii=False,sort_keys=True,indent=2)+"\n",encoding="utf-8")
     print("IOCHROMA_COLOR_CONDITIONED_DETAIL",json.dumps(
