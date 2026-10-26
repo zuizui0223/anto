@@ -1,0 +1,62 @@
+{
+  "schema": "anto_penstemon_barbatus_F3p5H_genetic_accessibility_source_table_v1",
+  "source": {
+    "paper": "Wessinger & Rausher (2014) Predictability and irreversibility of genetic changes associated with flower color evolution in Penstemon barbatus",
+    "paper_doi": "10.1111/evo.12340",
+    "data_doi": "10.5061/dryad.sp800",
+    "table": "Table 1: Flower colour phenotype x F3′5′h genotype in 161 interspecific F2 individuals",
+    "source_kind": "published peer-reviewed article Table 1, manually transcribed and arithmetic checked",
+    "analysis_type": "retrospective public-text count replication; no new source experiment"
+  },
+  "species_1": "Penstemon neomexicanus",
+  "species_2": "Penstemon barbatus",
+  "trait_target": "blue-purple delphinidin-based floral colour; P. barbatus remains RED and anthocyanin-pigmented, not a white flower or total pigment loss",
+  "genotype_definition": {
+    "FF": "two P. neomexicanus-derived alleles",
+    "Ff": "one allele from each parental lineage",
+    "ff": "two P. barbatus-derived alleles"
+  },
+  "observed_F2_table": {
+    "purple": {
+      "FF": 57,
+      "Ff": 65,
+      "ff": 0
+    },
+    "red": {
+      "FF": 0,
+      "Ff": 15,
+      "ff": 24
+    }
+  },
+  "published_F2_n": 161,
+  "published_purple_n": 122,
+  "published_red_n": 39,
+  "reported_source_molecular_results": {
+    "P_barbatus_F3p5H_stop_codon_AA": 407,
+    "experiment": "Recombinant P. barbatus F3′5′H enzyme did not show detectable activity; converting its premature termination codon back to glycine did not restore enzyme activity; at least one additional structural substitution is implicated.",
+    "stop_repair_only_restored_activity": false,
+    "multiple_function_disabling_changes_supported_by_source": true,
+    "P_neomexicanus_original_F3p5H_has_enzyme_activity": true,
+    "hybrid_offspring_purple_from_functional_donor_alleles": true,
+    "original_authors_two_locus_background_effect_interpretation": true,
+    "unmeasured_actual_wild_gene_flow": true,
+    "no_direct_natural_pbarbatus_backmutation_reversal_observed": true
+  },
+  "inference_ceiling": [
+    "Genetic crossing with a donor species is an experimental gain of the donor allele, not endogenous re-evolution of the damaged P. barbatus gene.",
+    "The trait is loss of the blue-purple pigment branch while red anthocyanin pigmentation remains present.",
+    "Source F2 counts do not establish real-world hybrid gene flow or population establishment.",
+    "Repair of one nonsense codon not restoring catalytic activity demonstrates additional source biochemical problem but does not identify every lesion.",
+    "Published authors' genotype-phenotype results are background evidence, not independent new user-collected ecological replication.",
+    "One interspecific cross of a particular locus cannot calibrate cross-angiosperm restoration hazard or ANTO v10 parameters."
+  ],
+  "role": "INDEPENDENT_NEGATIVE_INTRINSIC_CAPACITY_AND_POSITIVE_DONOR_ALLELE_COMPLEMENTATION_CONTROL",
+  "comparison_units": {
+    "Penstemon": "one published original experimental programme (one genus)",
+    "Petunia": "one separate regain clade, independently published prior evidence",
+    "Iochrominae": "one separate comparative molecular clade",
+    "Ryukyu_Cirsium": "unverified candidate with prospective same-plant function"
+  },
+  "prespecified_new_hypothesis": "Future phenotype accessibility conditional on structurally intact functional modules and their provenance can diverge sharply from observed historical phenotype state; donor-mediated restoration and endogenous repair are distinct mechanisms.",
+  "user_discovered_new_empirical_evolutionary_transition": false
+}
