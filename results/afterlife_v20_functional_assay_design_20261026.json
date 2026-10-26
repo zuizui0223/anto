@@ -1,0 +1,532 @@
+{
+  "Cirsium_organismal_empirical_owner": "zuizui0223/aza3",
+  "date": "2026-10-26",
+  "entire_clade_phylogenetic_nonindependence_not_resolved": true,
+  "functional_assay_status": "NO_QUALIFYING_REAL_ASSAYS_ADMITTED",
+  "genetic_retention_vs_current_flower_expression_vs_heritable_regain_are_separate_endpoints": true,
+  "identification_if_future_direct_taxon_assays_exist": {
+    "actual_no_new_functional_assays": {
+      "does_not_identify_ancestral_regain_heritability_fitness_or_phylogenetic_causality": true,
+      "finite_panel_sign_decision": "SIGN_NOT_IDENTIFIED",
+      "group_denominators": [
+        7,
+        15
+      ],
+      "measured_positive": [
+        0,
+        0
+      ],
+      "pigmented_prevalence_bound": [
+        "0",
+        "1"
+      ],
+      "sharp_given_binary_validated_taxon_level_assay": true,
+      "taxa_measured": [
+        0,
+        0
+      ],
+      "unpigmented_minus_pigmented_bound": [
+        "-1",
+        "1"
+      ],
+      "unpigmented_prevalence_bound": [
+        "0",
+        "1"
+      ]
+    },
+    "synthetic_best_case_7U_negative_1P_positive": {
+      "does_not_identify_ancestral_regain_heritability_fitness_or_phylogenetic_causality": true,
+      "finite_panel_sign_decision": "UNPIGMENTED_LT_PIGMENTED_CERTIFIED",
+      "group_denominators": [
+        7,
+        15
+      ],
+      "measured_positive": [
+        0,
+        1
+      ],
+      "pigmented_prevalence_bound": [
+        "1/15",
+        "1"
+      ],
+      "sharp_given_binary_validated_taxon_level_assay": true,
+      "taxa_measured": [
+        7,
+        1
+      ],
+      "unpigmented_minus_pigmented_bound": [
+        "-1",
+        "-1/15"
+      ],
+      "unpigmented_prevalence_bound": [
+        "0",
+        "0"
+      ]
+    },
+    "synthetic_best_case_7U_positive_1P_negative": {
+      "does_not_identify_ancestral_regain_heritability_fitness_or_phylogenetic_causality": true,
+      "finite_panel_sign_decision": "UNPIGMENTED_GT_PIGMENTED_CERTIFIED",
+      "group_denominators": [
+        7,
+        15
+      ],
+      "measured_positive": [
+        7,
+        0
+      ],
+      "pigmented_prevalence_bound": [
+        "0",
+        "14/15"
+      ],
+      "sharp_given_binary_validated_taxon_level_assay": true,
+      "taxa_measured": [
+        7,
+        1
+      ],
+      "unpigmented_minus_pigmented_bound": [
+        "1/15",
+        "1"
+      ],
+      "unpigmented_prevalence_bound": [
+        "1",
+        "1"
+      ]
+    },
+    "synthetic_full_panel_all_nonfunctional": {
+      "does_not_identify_ancestral_regain_heritability_fitness_or_phylogenetic_causality": true,
+      "finite_panel_sign_decision": "EQUALITY_CERTIFIED_FOR_THIS_FINITE_PANEL",
+      "group_denominators": [
+        7,
+        15
+      ],
+      "measured_positive": [
+        0,
+        0
+      ],
+      "pigmented_prevalence_bound": [
+        "0",
+        "0"
+      ],
+      "sharp_given_binary_validated_taxon_level_assay": true,
+      "taxa_measured": [
+        7,
+        15
+      ],
+      "unpigmented_minus_pigmented_bound": [
+        "0",
+        "0"
+      ],
+      "unpigmented_prevalence_bound": [
+        "0",
+        "0"
+      ]
+    },
+    "synthetic_full_panel_positive_group_difference": {
+      "does_not_identify_ancestral_regain_heritability_fitness_or_phylogenetic_causality": true,
+      "finite_panel_sign_decision": "UNPIGMENTED_GT_PIGMENTED_CERTIFIED",
+      "group_denominators": [
+        7,
+        15
+      ],
+      "measured_positive": [
+        5,
+        6
+      ],
+      "pigmented_prevalence_bound": [
+        "2/5",
+        "2/5"
+      ],
+      "sharp_given_binary_validated_taxon_level_assay": true,
+      "taxa_measured": [
+        7,
+        15
+      ],
+      "unpigmented_minus_pigmented_bound": [
+        "11/35",
+        "11/35"
+      ],
+      "unpigmented_prevalence_bound": [
+        "5/7",
+        "5/7"
+      ]
+    },
+    "synthetic_incomplete_no_sign": {
+      "does_not_identify_ancestral_regain_heritability_fitness_or_phylogenetic_causality": true,
+      "finite_panel_sign_decision": "SIGN_NOT_IDENTIFIED",
+      "group_denominators": [
+        7,
+        15
+      ],
+      "measured_positive": [
+        2,
+        2
+      ],
+      "pigmented_prevalence_bound": [
+        "2/15",
+        "13/15"
+      ],
+      "sharp_given_binary_validated_taxon_level_assay": true,
+      "taxa_measured": [
+        4,
+        4
+      ],
+      "unpigmented_minus_pigmented_bound": [
+        "-61/105",
+        "61/105"
+      ],
+      "unpigmented_prevalence_bound": [
+        "2/7",
+        "5/7"
+      ]
+    }
+  },
+  "minimal_functional_assay_definition": "Functionally validated jointly required ancestral/potential pathway modules measured at appropriate flower organ/stage with a prespecified taxon-level sampling and comparison protocol; a CDS feature alone does not qualify",
+  "minimum_best_case_design_bound": {
+    "assumes_perfectly_qualified_binary_functional_taxon_assays": true,
+    "best_case_allocations_unpigmented_and_pigmented": [
+      [
+        7,
+        1
+      ]
+    ],
+    "minimum_hypothetical_taxon_functional_calls": 8,
+    "not_a_guaranteed_sample_size_or_power_analysis": true,
+    "strict_certificate_requires_both_groups": true
+  },
+  "new_functional_assays_or_regain_events_added": 0,
+  "new_multigeneration_reexpression_fitness_experiments": 0,
+  "no_ancestral_state_polarity_measured": true,
+  "no_cross_angiosperm_rate_or_predictive_clade_holdout_estimated": true,
+  "no_direct_function_or_reexpression_measured_in_this_KT_audit": true,
+  "original_source_taxa": 22,
+  "original_source_taxa_by_flower_pigment": {
+    "PIGMENTED": 15,
+    "UNPIGMENTED": 7
+  },
+  "schema": "anto_v20_functional_assay_identifiability_and_taxon_enrollment",
+  "source": "Original Ho and Smith 2016 fig.1 taxon/GenBank crosswalk, verified in ANTO v19",
+  "source_annotation_coverage_not_function": {
+    "PIGMENTED": {
+      "DFR_NOT_IN_NEW_KT_SOURCE_RANGE_NOT_GENE_LOSS": 6,
+      "DFR_SOURCE_CDS_FEATURE_PRESENT_NOT_FUNCTION": 9,
+      "DFR_SOURCE_RECORD_NO_CDS_FEATURE_NOT_GENE_LOSS": 0
+    },
+    "UNPIGMENTED": {
+      "DFR_NOT_IN_NEW_KT_SOURCE_RANGE_NOT_GENE_LOSS": 2,
+      "DFR_SOURCE_CDS_FEATURE_PRESENT_NOT_FUNCTION": 3,
+      "DFR_SOURCE_RECORD_NO_CDS_FEATURE_NOT_GENE_LOSS": 2
+    }
+  },
+  "source_reference": "results/iochrominae_2016_trait_KT_source_join_20261019.json",
+  "target_estimand_if_future_assays_exist": "Finite 22-taxon panel prevalence difference in validated flower functional competence, NOT the frequency/rate of evolutionary regained traits",
+  "taxon_enrollment": [
+    {
+      "DFR_new_KT_accession": null,
+      "floral_induction_response": "UNMEASURED",
+      "native_ancestral_regain_vs_donor_origin": "UNRESOLVED",
+      "native_flower_joint_function": "UNMEASURED",
+      "no_new_taxon_function_assay_admitted": true,
+      "original_2016_taxon": "Dunalia brachyacantha",
+      "original_flower_pigment_category": "PIGMENTED",
+      "source_DFR_annotation_class": "DFR_NOT_IN_NEW_KT_SOURCE_RANGE_NOT_GENE_LOSS",
+      "taxon": "Dunalia brachyacantha",
+      "taxonomy_source_join": "DIRECT_BINOMIAL",
+      "trait_specific_reproduction": "UNMEASURED",
+      "transgenerational_stability": "UNMEASURED"
+    },
+    {
+      "DFR_new_KT_accession": "KT898440",
+      "floral_induction_response": "UNMEASURED",
+      "native_ancestral_regain_vs_donor_origin": "UNRESOLVED",
+      "native_flower_joint_function": "UNMEASURED",
+      "no_new_taxon_function_assay_admitted": true,
+      "original_2016_taxon": "Dunalia spathulata",
+      "original_flower_pigment_category": "PIGMENTED",
+      "source_DFR_annotation_class": "DFR_SOURCE_CDS_FEATURE_PRESENT_NOT_FUNCTION",
+      "taxon": "Dunalia spathulata",
+      "taxonomy_source_join": "DIRECT_BINOMIAL",
+      "trait_specific_reproduction": "UNMEASURED",
+      "transgenerational_stability": "UNMEASURED"
+    },
+    {
+      "DFR_new_KT_accession": "KT898438",
+      "floral_induction_response": "UNMEASURED",
+      "native_ancestral_regain_vs_donor_origin": "UNRESOLVED",
+      "native_flower_joint_function": "UNMEASURED",
+      "no_new_taxon_function_assay_admitted": true,
+      "original_2016_taxon": "Iochroma australe",
+      "original_flower_pigment_category": "PIGMENTED",
+      "source_DFR_annotation_class": "DFR_SOURCE_CDS_FEATURE_PRESENT_NOT_FUNCTION",
+      "taxon": "Eriolarynx australis",
+      "taxonomy_source_join": "POST2016_COMBINATION_OR_SYNONYM",
+      "trait_specific_reproduction": "UNMEASURED",
+      "transgenerational_stability": "UNMEASURED"
+    },
+    {
+      "DFR_new_KT_accession": "KT898447",
+      "floral_induction_response": "UNMEASURED",
+      "native_ancestral_regain_vs_donor_origin": "UNRESOLVED",
+      "native_flower_joint_function": "UNMEASURED",
+      "no_new_taxon_function_assay_admitted": true,
+      "original_2016_taxon": "Eriolarynx fasciculata",
+      "original_flower_pigment_category": "PIGMENTED",
+      "source_DFR_annotation_class": "DFR_SOURCE_CDS_FEATURE_PRESENT_NOT_FUNCTION",
+      "taxon": "Eriolarynx fasciculata",
+      "taxonomy_source_join": "DIRECT_BINOMIAL",
+      "trait_specific_reproduction": "UNMEASURED",
+      "transgenerational_stability": "UNMEASURED"
+    },
+    {
+      "DFR_new_KT_accession": "KT898450",
+      "floral_induction_response": "UNMEASURED",
+      "native_ancestral_regain_vs_donor_origin": "UNRESOLVED",
+      "native_flower_joint_function": "UNMEASURED",
+      "no_new_taxon_function_assay_admitted": true,
+      "original_2016_taxon": "Acnistus arborescens",
+      "original_flower_pigment_category": "UNPIGMENTED",
+      "source_DFR_annotation_class": "DFR_SOURCE_CDS_FEATURE_PRESENT_NOT_FUNCTION",
+      "taxon": "Iochroma arborescens",
+      "taxonomy_source_join": "POST2016_COMBINATION_OR_SYNONYM",
+      "trait_specific_reproduction": "UNMEASURED",
+      "transgenerational_stability": "UNMEASURED"
+    },
+    {
+      "DFR_new_KT_accession": null,
+      "floral_induction_response": "UNMEASURED",
+      "native_ancestral_regain_vs_donor_origin": "UNRESOLVED",
+      "native_flower_joint_function": "UNMEASURED",
+      "no_new_taxon_function_assay_admitted": true,
+      "original_2016_taxon": "Iochroma calycinum",
+      "original_flower_pigment_category": "PIGMENTED",
+      "source_DFR_annotation_class": "DFR_NOT_IN_NEW_KT_SOURCE_RANGE_NOT_GENE_LOSS",
+      "taxon": "Iochroma calycinum",
+      "taxonomy_source_join": "DIRECT_BINOMIAL",
+      "trait_specific_reproduction": "UNMEASURED",
+      "transgenerational_stability": "UNMEASURED"
+    },
+    {
+      "DFR_new_KT_accession": "KT898443",
+      "floral_induction_response": "UNMEASURED",
+      "native_ancestral_regain_vs_donor_origin": "UNRESOLVED",
+      "native_flower_joint_function": "UNMEASURED",
+      "no_new_taxon_function_assay_admitted": true,
+      "original_2016_taxon": "Iochroma confertiflorum",
+      "original_flower_pigment_category": "UNPIGMENTED",
+      "source_DFR_annotation_class": "DFR_SOURCE_RECORD_NO_CDS_FEATURE_NOT_GENE_LOSS",
+      "taxon": "Iochroma confertiflorum",
+      "taxonomy_source_join": "DIRECT_BINOMIAL",
+      "trait_specific_reproduction": "UNMEASURED",
+      "transgenerational_stability": "UNMEASURED"
+    },
+    {
+      "DFR_new_KT_accession": "KT898441",
+      "floral_induction_response": "UNMEASURED",
+      "native_ancestral_regain_vs_donor_origin": "UNRESOLVED",
+      "native_flower_joint_function": "UNMEASURED",
+      "no_new_taxon_function_assay_admitted": true,
+      "original_2016_taxon": "Iochroma cornifolium",
+      "original_flower_pigment_category": "PIGMENTED",
+      "source_DFR_annotation_class": "DFR_SOURCE_CDS_FEATURE_PRESENT_NOT_FUNCTION",
+      "taxon": "Iochroma cornifolium",
+      "taxonomy_source_join": "DIRECT_BINOMIAL",
+      "trait_specific_reproduction": "UNMEASURED",
+      "transgenerational_stability": "UNMEASURED"
+    },
+    {
+      "DFR_new_KT_accession": null,
+      "floral_induction_response": "UNMEASURED",
+      "native_ancestral_regain_vs_donor_origin": "UNRESOLVED",
+      "native_flower_joint_function": "UNMEASURED",
+      "no_new_taxon_function_assay_admitted": true,
+      "original_2016_taxon": "Iochroma cyaneum",
+      "original_flower_pigment_category": "PIGMENTED",
+      "source_DFR_annotation_class": "DFR_NOT_IN_NEW_KT_SOURCE_RANGE_NOT_GENE_LOSS",
+      "taxon": "Iochroma cyaneum",
+      "taxonomy_source_join": "DIRECT_BINOMIAL",
+      "trait_specific_reproduction": "UNMEASURED",
+      "transgenerational_stability": "UNMEASURED"
+    },
+    {
+      "DFR_new_KT_accession": "KT898445",
+      "floral_induction_response": "UNMEASURED",
+      "native_ancestral_regain_vs_donor_origin": "UNRESOLVED",
+      "native_flower_joint_function": "UNMEASURED",
+      "no_new_taxon_function_assay_admitted": true,
+      "original_2016_taxon": "Iochroma edule",
+      "original_flower_pigment_category": "PIGMENTED",
+      "source_DFR_annotation_class": "DFR_SOURCE_CDS_FEATURE_PRESENT_NOT_FUNCTION",
+      "taxon": "Iochroma edule",
+      "taxonomy_source_join": "DIRECT_BINOMIAL",
+      "trait_specific_reproduction": "UNMEASURED",
+      "transgenerational_stability": "UNMEASURED"
+    },
+    {
+      "DFR_new_KT_accession": "KT898446",
+      "floral_induction_response": "UNMEASURED",
+      "native_ancestral_regain_vs_donor_origin": "UNRESOLVED",
+      "native_flower_joint_function": "UNMEASURED",
+      "no_new_taxon_function_assay_admitted": true,
+      "original_2016_taxon": "Iochroma ellipticum",
+      "original_flower_pigment_category": "UNPIGMENTED",
+      "source_DFR_annotation_class": "DFR_SOURCE_RECORD_NO_CDS_FEATURE_NOT_GENE_LOSS",
+      "taxon": "Iochroma ellipticum",
+      "taxonomy_source_join": "DIRECT_BINOMIAL",
+      "trait_specific_reproduction": "UNMEASURED",
+      "transgenerational_stability": "UNMEASURED"
+    },
+    {
+      "DFR_new_KT_accession": null,
+      "floral_induction_response": "UNMEASURED",
+      "native_ancestral_regain_vs_donor_origin": "UNRESOLVED",
+      "native_flower_joint_function": "UNMEASURED",
+      "no_new_taxon_function_assay_admitted": true,
+      "original_2016_taxon": "Iochroma gesnerioides",
+      "original_flower_pigment_category": "PIGMENTED",
+      "source_DFR_annotation_class": "DFR_NOT_IN_NEW_KT_SOURCE_RANGE_NOT_GENE_LOSS",
+      "taxon": "Iochroma gesnerioides",
+      "taxonomy_source_join": "DIRECT_BINOMIAL",
+      "trait_specific_reproduction": "UNMEASURED",
+      "transgenerational_stability": "UNMEASURED"
+    },
+    {
+      "DFR_new_KT_accession": null,
+      "floral_induction_response": "UNMEASURED",
+      "native_ancestral_regain_vs_donor_origin": "UNRESOLVED",
+      "native_flower_joint_function": "UNMEASURED",
+      "no_new_taxon_function_assay_admitted": true,
+      "original_2016_taxon": "Iochroma loxense",
+      "original_flower_pigment_category": "UNPIGMENTED",
+      "source_DFR_annotation_class": "DFR_NOT_IN_NEW_KT_SOURCE_RANGE_NOT_GENE_LOSS",
+      "taxon": "Iochroma loxense",
+      "taxonomy_source_join": "DIRECT_BINOMIAL",
+      "trait_specific_reproduction": "UNMEASURED",
+      "transgenerational_stability": "UNMEASURED"
+    },
+    {
+      "DFR_new_KT_accession": null,
+      "floral_induction_response": "UNMEASURED",
+      "native_ancestral_regain_vs_donor_origin": "UNRESOLVED",
+      "native_flower_joint_function": "UNMEASURED",
+      "no_new_taxon_function_assay_admitted": true,
+      "original_2016_taxon": "Iochroma parvifolium",
+      "original_flower_pigment_category": "PIGMENTED",
+      "source_DFR_annotation_class": "DFR_NOT_IN_NEW_KT_SOURCE_RANGE_NOT_GENE_LOSS",
+      "taxon": "Iochroma parvifolium",
+      "taxonomy_source_join": "DIRECT_BINOMIAL",
+      "trait_specific_reproduction": "UNMEASURED",
+      "transgenerational_stability": "UNMEASURED"
+    },
+    {
+      "DFR_new_KT_accession": "KT898448",
+      "floral_induction_response": "UNMEASURED",
+      "native_ancestral_regain_vs_donor_origin": "UNRESOLVED",
+      "native_flower_joint_function": "UNMEASURED",
+      "no_new_taxon_function_assay_admitted": true,
+      "original_2016_taxon": "Iochroma lehmannii",
+      "original_flower_pigment_category": "UNPIGMENTED",
+      "source_DFR_annotation_class": "DFR_SOURCE_CDS_FEATURE_PRESENT_NOT_FUNCTION",
+      "taxon": "Iochroma squamosum",
+      "taxonomy_source_join": "POST2016_COMBINATION_OR_SYNONYM",
+      "trait_specific_reproduction": "UNMEASURED",
+      "transgenerational_stability": "UNMEASURED"
+    },
+    {
+      "DFR_new_KT_accession": "KT898449",
+      "floral_induction_response": "UNMEASURED",
+      "native_ancestral_regain_vs_donor_origin": "UNRESOLVED",
+      "native_flower_joint_function": "UNMEASURED",
+      "no_new_taxon_function_assay_admitted": true,
+      "original_2016_taxon": "Iochroma tupayachianum",
+      "original_flower_pigment_category": "UNPIGMENTED",
+      "source_DFR_annotation_class": "DFR_SOURCE_CDS_FEATURE_PRESENT_NOT_FUNCTION",
+      "taxon": "Iochroma tupayachianum",
+      "taxonomy_source_join": "DIRECT_BINOMIAL",
+      "trait_specific_reproduction": "UNMEASURED",
+      "transgenerational_stability": "UNMEASURED"
+    },
+    {
+      "DFR_new_KT_accession": null,
+      "floral_induction_response": "UNMEASURED",
+      "native_ancestral_regain_vs_donor_origin": "UNRESOLVED",
+      "native_flower_joint_function": "UNMEASURED",
+      "no_new_taxon_function_assay_admitted": true,
+      "original_2016_taxon": "Iochroma umbellatum",
+      "original_flower_pigment_category": "PIGMENTED",
+      "source_DFR_annotation_class": "DFR_NOT_IN_NEW_KT_SOURCE_RANGE_NOT_GENE_LOSS",
+      "taxon": "Iochroma umbellatum",
+      "taxonomy_source_join": "DIRECT_BINOMIAL",
+      "trait_specific_reproduction": "UNMEASURED",
+      "transgenerational_stability": "UNMEASURED"
+    },
+    {
+      "DFR_new_KT_accession": null,
+      "floral_induction_response": "UNMEASURED",
+      "native_ancestral_regain_vs_donor_origin": "UNRESOLVED",
+      "native_flower_joint_function": "UNMEASURED",
+      "no_new_taxon_function_assay_admitted": true,
+      "original_2016_taxon": "Dunalia solanacea",
+      "original_flower_pigment_category": "UNPIGMENTED",
+      "source_DFR_annotation_class": "DFR_NOT_IN_NEW_KT_SOURCE_RANGE_NOT_GENE_LOSS",
+      "taxon": "Saracha nigribaccata",
+      "taxonomy_source_join": "POST2016_COMBINATION_OR_SYNONYM",
+      "trait_specific_reproduction": "UNMEASURED",
+      "transgenerational_stability": "UNMEASURED"
+    },
+    {
+      "DFR_new_KT_accession": "KT898444",
+      "floral_induction_response": "UNMEASURED",
+      "native_ancestral_regain_vs_donor_origin": "UNRESOLVED",
+      "native_flower_joint_function": "UNMEASURED",
+      "no_new_taxon_function_assay_admitted": true,
+      "original_2016_taxon": "Saracha quitensis",
+      "original_flower_pigment_category": "PIGMENTED",
+      "source_DFR_annotation_class": "DFR_SOURCE_CDS_FEATURE_PRESENT_NOT_FUNCTION",
+      "taxon": "Saracha quitensis",
+      "taxonomy_source_join": "DIRECT_BINOMIAL",
+      "trait_specific_reproduction": "UNMEASURED",
+      "transgenerational_stability": "UNMEASURED"
+    },
+    {
+      "DFR_new_KT_accession": "KT898442",
+      "floral_induction_response": "UNMEASURED",
+      "native_ancestral_regain_vs_donor_origin": "UNRESOLVED",
+      "native_flower_joint_function": "UNMEASURED",
+      "no_new_taxon_function_assay_admitted": true,
+      "original_2016_taxon": "Iochroma grandiflorum",
+      "original_flower_pigment_category": "PIGMENTED",
+      "source_DFR_annotation_class": "DFR_SOURCE_CDS_FEATURE_PRESENT_NOT_FUNCTION",
+      "taxon": "Trozelia grandiflora",
+      "taxonomy_source_join": "POST2016_COMBINATION_OR_SYNONYM",
+      "trait_specific_reproduction": "UNMEASURED",
+      "transgenerational_stability": "UNMEASURED"
+    },
+    {
+      "DFR_new_KT_accession": "KT898451",
+      "floral_induction_response": "UNMEASURED",
+      "native_ancestral_regain_vs_donor_origin": "UNRESOLVED",
+      "native_flower_joint_function": "UNMEASURED",
+      "no_new_taxon_function_assay_admitted": true,
+      "original_2016_taxon": "Vassobia breviflora",
+      "original_flower_pigment_category": "PIGMENTED",
+      "source_DFR_annotation_class": "DFR_SOURCE_CDS_FEATURE_PRESENT_NOT_FUNCTION",
+      "taxon": "Vassobia breviflora",
+      "taxonomy_source_join": "DIRECT_BINOMIAL",
+      "trait_specific_reproduction": "UNMEASURED",
+      "transgenerational_stability": "UNMEASURED"
+    },
+    {
+      "DFR_new_KT_accession": "KT898439",
+      "floral_induction_response": "UNMEASURED",
+      "native_ancestral_regain_vs_donor_origin": "UNRESOLVED",
+      "native_flower_joint_function": "UNMEASURED",
+      "no_new_taxon_function_assay_admitted": true,
+      "original_2016_taxon": "Vassobia dichotoma",
+      "original_flower_pigment_category": "PIGMENTED",
+      "source_DFR_annotation_class": "DFR_SOURCE_CDS_FEATURE_PRESENT_NOT_FUNCTION",
+      "taxon": "Vassobia dichotoma",
+      "taxonomy_source_join": "DIRECT_BINOMIAL",
+      "trait_specific_reproduction": "UNMEASURED",
+      "transgenerational_stability": "UNMEASURED"
+    }
+  ]
+}
