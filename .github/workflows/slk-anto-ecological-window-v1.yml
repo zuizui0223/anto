@@ -1,0 +1,50 @@
+name: ANTO-SLK ecological opportunity window exact theory
+on:
+  pull_request:
+    paths:
+      - "src/anto_slk_ecological_window_v1.py"
+      - "tests/test_slk_anto_ecological_window_v1.py"
+      - "scripts/run_slk_anto_ecological_window_v1.py"
+      - "src/anto_afterlife_frontier_v10.py"
+      - "src/anto_joint_accessibility_v7.py"
+      - ".github/workflows/slk-anto-ecological-window-v1.yml"
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  verify-theory-only-window:
+    runs-on: ubuntu-latest
+    timeout-minutes: 6
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - name: Test exact ecological window and unchanged underlying afterlife model
+        run: |
+          python -m unittest discover -s tests -p 'test_afterlife_frontier_v10.py' -v
+          python -m unittest discover -s tests -p 'test_slk_anto_ecological_window_v1.py' -v
+      - name: Reproduce locked fractions and biological claim limits
+        run: |
+          python scripts/run_slk_anto_ecological_window_v1.py --output /tmp/anto-slk-window-v1.json
+          python - <<'PY'
+          import json
+          from fractions import Fraction as F
+          d=json.load(open("/tmp/anto-slk-window-v1.json"))
+          assert d["synthetic_conditional_model"] is True
+          assert d["actual_evolutionary_regain_or_fixation_observed"] is False
+          assert d["qualified_expression_is_not_establishment"] is True
+          assert d["Cirsium_empirical_owner"]=="zuizui0223/aza3"
+          assert d["gradient_first_positive_generation"] == {
+            "value":3,"path":8,"all":10}
+          assert d["equal_favorable_generations"]==5
+          assert d["early_qualified"]=="1629/32000"
+          assert F(d["early_qualified"])>2*F(d["late_qualified"])
+          assert F(d["early_any_expression"])==F(d["late_any_expression"])
+          assert F(d["gradient_probabilities"]["value"]) > F(d["gradient_probabilities"]["value_and_local_path"]) > F(d["gradient_probabilities"]["value_path_and_rare_invader"])
+          y=d["timing_rank_reversal_at_fixed_loss"]
+          assert y["degradation"]=="1/20"
+          assert F(y["fast_early"])>F(y["fast_late"])
+          assert F(y["slow_early"])<F(y["slow_late"])
+          print("EXACT_SLK_ANTO_WINDOW_VALIDATED",d["early_late_ratio"])
+          PY

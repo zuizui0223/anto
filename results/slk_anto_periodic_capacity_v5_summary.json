@@ -1,0 +1,23 @@
+{
+  "arithmetic_mean_growth": 1.04,
+  "common_loss": "1/5",
+  "date": "2026-10-20",
+  "empirical_owner": "zuizui0223/aza3",
+  "environment_process": "deterministic periodic, shared across descendants",
+  "environment_proportions": [0.5, 0.5],
+  "fixation_or_optimal_strategy_inferred": false,
+  "natural_regain_demonstrated": false,
+  "organism_extinction_inferred": false,
+  "pure_D_or_pure_C_geometric_growth": 0.96,
+  "q_A": {"C": "2/5", "D": "9/10"},
+  "q_B": {"C": "9/10", "D": "2/5"},
+  "scenarios": [
+    {"common_loss_boundary":0.17434306606795824,"converged":true,"decimal_digits":70,"environment_run_length":1,"first_D_child_from_C_at_phase0":0.062976,"growth_per_generation":0.9689254303117698,"iterations":0,"numerical_brackets_not_interval_certificates":true,"period":2,"phenotype_switching":"1/10","regime":"subcritical","residual":0.0,"survival_lower":[0.0,0.0],"survival_upper":[0.0,0.0],"width":0.0},
+    {"common_loss_boundary":0.21290834312693063,"converged":true,"decimal_digits":70,"environment_run_length":4,"first_D_child_from_C_at_phase0":0.062976,"growth_per_generation":1.0164000507618294,"iterations":202,"numerical_brackets_not_interval_certificates":true,"period":8,"phenotype_switching":"1/10","regime":"supercritical","residual":1.1543061457439443e-15,"survival_lower":[0.11244131193367123,0.020859324844524293],"survival_upper":[0.11244131193413837,0.02085932484461354],"width":4.671402153988424e-13},
+    {"common_loss_boundary":0.38865038271510477,"converged":true,"decimal_digits":70,"environment_run_length":1,"first_D_child_from_C_at_phase0":0.493056,"growth_per_generation":1.3085801927102405,"iterations":40,"numerical_brackets_not_interval_certificates":true,"period":2,"phenotype_switching":"9/10","regime":"supercritical","residual":5.585260888837284e-15,"survival_lower":[0.7303564053955016,0.10356766021128337],"survival_upper":[0.7303564053958491,0.1035676602114179],"width":3.47499806707674e-13},
+    {"common_loss_boundary":0.18185894784118928,"converged":true,"decimal_digits":70,"environment_run_length":4,"first_D_child_from_C_at_phase0":0.493056,"growth_per_generation":0.9778264981191908,"iterations":0,"numerical_brackets_not_interval_certificates":true,"period":8,"phenotype_switching":"9/10","regime":"subcritical","residual":0.0,"survival_lower":[0.0,0.0],"survival_upper":[0.0,0.0],"width":0.0}
+  ],
+  "schema": "anto_slk_periodic_capacity_v5",
+  "slk_payoff_calibrated": false,
+  "starting_unit": "one silent competent C at first A generation"
+}

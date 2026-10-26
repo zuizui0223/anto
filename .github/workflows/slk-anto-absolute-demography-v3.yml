@@ -1,0 +1,48 @@
+name: ANTO-SLK absolute demography after latent readiness v3
+on:
+  pull_request:
+    paths:
+      - "src/anto_slk_absolute_demography_v3.py"
+      - "tests/test_slk_anto_absolute_demography_v3.py"
+      - "scripts/run_slk_anto_absolute_demography_v3.py"
+      - "docs/SLK_ANTO_ABSOLUTE_DEMOGRAPHY_V3.md"
+      - ".github/workflows/slk-anto-absolute-demography-v3.yml"
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  independent-demography-oracle:
+    runs-on: ubuntu-latest
+    timeout-minutes: 8
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - name: Verify existing opportunity bridge and demographic independent oracle
+        run: |
+          python -m unittest discover -s tests -p 'test_slk_anto_silent_priming_window_v2.py' -v
+          python -m unittest discover -s tests -p 'test_slk_anto_absolute_demography_v3.py' -v
+      - name: Reproduce exact finite-offspring-count result and no-rescue caveats
+        run: |
+          python scripts/run_slk_anto_absolute_demography_v3.py --output /tmp/slk-anto-demography-v3.json
+          python - <<'PY'
+          import json
+          from decimal import Decimal as D
+          x=json.load(open('/tmp/slk-anto-demography-v3.json'))
+          assert x['synthetic_conditional_no_field_rates'] is True
+          assert x['activation_heritable_is_added_unvalidated_assumption'] is True
+          assert x['relative_advantage_not_population_rescue'] is True
+          assert x['finite_threshold_not_establishment_or_fixation'] is True
+          assert x['Cirsium_empirical_owner']=='zuizui0223/aza3'
+          assert x['same_relative_expected_offspring_ratio']=='13/11'
+          aa=x['scenarios']['absolute_supercritical']
+          bb=x['scenarios']['absolute_subcritical']
+          assert aa['earliest_best_pre_exposure']==6
+          assert bb['earliest_best_pre_exposure']==9
+          assert D(aa['best_census_event'])>D('0.64')
+          assert D(bb['best_census_event'])<D('0.017')
+          assert D(aa['best_census_event'])>35*D(bb['best_census_event'])
+          assert x['population_reference_conditions']['absolute_subcritical']['candidate_nonextinction_under_permanent_environment']=='0'
+          print('ABSOLUTE_DEMOGRAPHY_CONDITIONAL_CENSUS_VERIFIED')
+          PY
