@@ -1,0 +1,76 @@
+name: ANTO v20 original-source functional-assay identifiability
+on:
+  pull_request:
+    paths:
+      - "scripts/anto_functional_assay_bounds_v20.py"
+      - "tests/test_afterlife_functional_assay_design_v20.py"
+      - "docs/AFTERLIFE_V20_FUNCTIONAL_ASSAY_IDENTIFIABILITY.md"
+      - "results/afterlife_v20_functional_assay_design_20261026.json"
+      - ".github/workflows/anto-v20-functional-assay-design.yml"
+      - "README.md"
+  push:
+    branches: [main]
+    paths:
+      - "scripts/anto_functional_assay_bounds_v20.py"
+      - "tests/test_afterlife_functional_assay_design_v20.py"
+      - "results/afterlife_v20_functional_assay_design_20261026.json"
+      - ".github/workflows/anto-v20-functional-assay-design.yml"
+permissions:
+  contents: read
+jobs:
+  exact-functional-identifiability:
+    runs-on: ubuntu-latest
+    timeout-minutes: 4
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - name: Verify 22 source taxa and original v19 observed evidence boundary
+        run: |
+          python -m unittest discover -s tests -p 'test_afterlife_empirical_admissibility_v19.py' -v
+      - name: Test source-anchored finite-panel bounds and exhaustive binary completion oracle
+        run: |
+          python -m unittest discover -s tests -p 'test_afterlife_functional_assay_design_v20.py' -v
+      - name: Replay original data grain and prospective no-assay partial identification
+        run: |
+          python scripts/anto_functional_assay_bounds_v20.py --output /tmp/anto_v20_design.json
+          python - <<'PY'
+          import json
+          x=json.load(open('/tmp/anto_v20_design.json'))
+          assert x['original_source_taxa']==22
+          assert x['original_source_taxa_by_flower_pigment']=={'UNPIGMENTED':7,'PIGMENTED':15}
+          assert x['new_functional_assays_or_regain_events_added']==0
+          assert x['new_multigeneration_reexpression_fitness_experiments']==0
+          assert x['functional_assay_status']=='NO_QUALIFYING_REAL_ASSAYS_ADMITTED'
+          assert x['entire_clade_phylogenetic_nonindependence_not_resolved']
+          assert x['Cirsium_organismal_empirical_owner']=='zuizui0223/aza3'
+          assert x['no_cross_angiosperm_rate_or_predictive_clade_holdout_estimated']
+          assert x['minimum_best_case_design_bound']['minimum_hypothetical_taxon_functional_calls']==8
+          assert x['minimum_best_case_design_bound']['not_a_guaranteed_sample_size_or_power_analysis']
+          q=x['identification_if_future_direct_taxon_assays_exist']
+          assert q['actual_no_new_functional_assays']['unpigmented_minus_pigmented_bound']==['-1','1']
+          assert q['synthetic_best_case_7U_positive_1P_negative']['unpigmented_minus_pigmented_bound']==['1/15','1']
+          assert q['synthetic_best_case_7U_negative_1P_positive']['unpigmented_minus_pigmented_bound']==['-1','-1/15']
+          assert q['synthetic_incomplete_no_sign']['unpigmented_minus_pigmented_bound']==['-61/105','61/105']
+          assert q['synthetic_full_panel_all_nonfunctional']['finite_panel_sign_decision']=='EQUALITY_CERTIFIED_FOR_THIS_FINITE_PANEL'
+          for taxon in x['taxon_enrollment']:
+              assert taxon['native_flower_joint_function']=='UNMEASURED'
+              assert taxon['floral_induction_response']=='UNMEASURED'
+              assert taxon['transgenerational_stability']=='UNMEASURED'
+              assert taxon['trait_specific_reproduction']=='UNMEASURED'
+          print('ANTO_V20_REPLAY_PASS')
+          print('ANTO_V20_SOURCE_RECEIPT',json.dumps(x,sort_keys=True,ensure_ascii=False))
+          PY
+      - name: Fail closed against a previously frozen complete receipt once present
+        run: |
+          if [ -f results/afterlife_v20_functional_assay_design_20261026.json ]; then
+            python scripts/anto_functional_assay_bounds_v20.py \
+              --output /tmp/anto_v20_receipt_checked.json \
+              --expected results/afterlife_v20_functional_assay_design_20261026.json
+          fi
+      - uses: actions/upload-artifact@v4
+        with:
+          name: anto-v20-source-anchored-future-functional-assay-plan
+          path: /tmp/anto_v20_design.json
+          retention-days: 90

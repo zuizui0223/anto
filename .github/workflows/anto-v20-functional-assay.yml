@@ -1,0 +1,84 @@
+name: ANTO v20 function-assay sharp bounds and prospective sampling
+on:
+  pull_request:
+    paths:
+      - 'scripts/anto_functional_assay_identifiability_v20.py'
+      - 'tests/test_functional_assay_identifiability_v20.py'
+      - 'docs/AFTERLIFE_V20_FUNCTIONAL_ASSAY_IDENTIFIABILITY.md'
+      - 'results/anto_v20_functional_assay_identification_20261026.json'
+      - '.github/workflows/anto-v20-functional-assay.yml'
+      - 'README.md'
+  push:
+    branches: [main]
+    paths:
+      - 'scripts/anto_functional_assay_identifiability_v20.py'
+      - 'tests/test_functional_assay_identifiability_v20.py'
+      - 'results/anto_v20_functional_assay_identification_20261026.json'
+permissions:
+  contents: read
+jobs:
+  original-source-and-counterfactual-identification:
+    runs-on: ubuntu-latest
+    timeout-minutes: 4
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Recheck existing v19 original-source status and functional nonclaims
+        run: python -m unittest discover -s tests -p test_afterlife_empirical_admissibility_v19.py -v
+      - name: Test exact partial-identification and adversarial functional labels
+        run: python -m unittest discover -s tests -p test_functional_assay_identifiability_v20.py -v
+      - name: Recompute prospective functional assay contracts and exact bounds
+        run: |
+          python scripts/anto_functional_assay_identifiability_v20.py --output /tmp/anto_v20.json
+          python - <<'PY'
+          import json
+          from fractions import Fraction as F
+          d=json.load(open('/tmp/anto_v20.json'))
+          assert d['all_source_taxon_functional_assays_currently_unmeasured']
+          assert not d['validated_flower_toolkit_function_measured_by_ANTO']
+          assert not d['ancestral_reexpression_rate_estimated']
+          assert not d['independent_macroevolutionary_regain_clades_replicated_here']
+          assert d['Cirsium_empirical_owner']=='zuizui0223/aza3'
+          source=d['observed_source_only_identification']
+          assert source['difference_unpigmented_minus_pigmented_lower']=='-1'
+          assert source['difference_unpigmented_minus_pigmented_upper']=='1'
+          assert source['difference_identification_width']=='2'
+          assert len(d['source_taxon_panel'])==22
+          assert all(r['flower_functional_joint_toolkit_assay'] is None
+                     and r['assay_admitted'] is False
+                     for r in d['source_taxon_panel'])
+          assert len(d['source_annotation_strata'])==5
+          fic=d['source_annotated_CDS_fictions_not_observed']
+          assert fic['assume_12_annotated_have_confirmed_function']['difference_unpigmented_minus_pigmented_lower']=='-4/7'
+          assert fic['assume_12_annotated_have_confirmed_function']['difference_unpigmented_minus_pigmented_upper']=='2/5'
+          assert fic['additional_5_best_case_unpigmented_higher']['difference_unpigmented_minus_pigmented_lower']=='1/15'
+          assert fic['additional_3_best_case_pigmented_higher']['difference_unpigmented_minus_pigmented_upper']=='-1/35'
+          assert d['unassayed_best_case_first_strict_sign_certificates']['UNPIGMENTED_HIGHER']['minimum_additional_assays']==8
+          assert d['unassayed_best_case_first_strict_sign_certificates']['PIGMENTED_HIGHER']['minimum_additional_assays']==8
+          assert d['after_fictional_12_positives_best_case_additional_certificates']['UNPIGMENTED_HIGHER']['minimum_additional_assays']==5
+          assert d['after_fictional_12_positives_best_case_additional_certificates']['PIGMENTED_HIGHER']['minimum_additional_assays']==3
+          assert d['no_worst_case_nonzero_sign_guarantee_even_after_all_22_if_true_rates_equal']
+          serialized=json.dumps(d,sort_keys=True,separators=(',',':'),ensure_ascii=False)
+          for i in range(0,len(serialized),3500):
+              print('ANTO_V20_RECEIPT_CHUNK',i//3500,serialized[i:i+3500])
+          print('ANTO_V20_SOURCE_AND_ORACLE_GATES_PASS',
+                json.dumps({'taxa':len(d['source_taxon_panel']),
+                            'actual_functional_assays':0,
+                            'conditional_after12_certificates':(5,3),
+                            'same_anatomical_clade_not_independent_macro_replication':True},
+                           sort_keys=True))
+          PY
+      - name: Exact source-result freeze if receipt checked in
+        run: |
+          if [ -f results/anto_v20_functional_assay_identification_20261026.json ]; then
+            python scripts/anto_functional_assay_identifiability_v20.py \
+              --expected results/anto_v20_functional_assay_identification_20261026.json \
+              --output /tmp/anto_v20_exact_replay.json
+          fi
+      - uses: actions/upload-artifact@v4
+        with:
+          name: anto-v20-22taxon-prospective-sharp-bounds-not-plant-rates
+          path: /tmp/anto_v20.json
+          retention-days: 90
