@@ -88,7 +88,7 @@ class FutureStateSufficiencyV16(unittest.TestCase):
                                          enumerated_oracle(w,t,endpoint))
 
     def test_constant_hazard_geometric_closed_form(self):
-        for a,b in self.examples["constant_hidden_retention"]:
+        for a in self.examples["constant_hidden_retention"]:
             for endpoint in ("visible","lineage"):
                 rate=a.induction
                 if endpoint=="lineage":
