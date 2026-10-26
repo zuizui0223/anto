@@ -415,6 +415,8 @@ def main():
         assert_expected_receipt(result,frozen)
     args.output.parent.mkdir(parents=True,exist_ok=True)
     args.output.write_text(json.dumps(result,ensure_ascii=False,sort_keys=True,indent=2)+"\n",encoding="utf-8")
+    print("IOCHROMA_COLOR_CONDITIONED_DETAIL",json.dumps(
+        result["color_conditioned_coexpression"],sort_keys=True))
     print("IOCHROMA_REAL_SOURCE_ADMISSION_PASS",json.dumps({
         "n_samples":result["n_samples_blue"]+result["n_samples_red"],
         "transcripts":result["total_filtered_transcripts"],
