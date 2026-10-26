@@ -9,6 +9,7 @@ from pathlib import Path
 ROOT=Path(__file__).resolve().parents[1]
 sys.path.insert(0,str(ROOT/"scripts"))
 
+from anto_functional_assay_identifiability_v20 import panel_from_original_source, sharp_bounds
 from anto_functional_assay_bounds_v20 import (
     SOURCE_JOIN, GROUP_SIZE, SOURCE_STATUS, read, function_bound,
     earliest_possible_sign_certificate, build_taxon_ledger, design_receipt
@@ -171,6 +172,42 @@ class FunctionalAssayDesignV20(unittest.TestCase):
         d=copy.deepcopy(self.join)
         d["taxon_gene_records"].reverse()
         self.assertEqual(build_taxon_ledger(d),self.result["taxon_enrollment"])
+
+    def test_independent_second_v20_model_agrees_on_all_count_combinations(self):
+        """Both independently written exact implementations agree for every
+        possible measured-positive count combination in the 7/15 panel.
+
+        This is an independent cross-algorithm verification, not additional
+        data or an independent real floral regain replication.
+        """
+        source_panel=panel_from_original_source(self.join)
+        our_panel=self.result["taxon_enrollment"]
+        self.assertEqual({z["taxon"] for z in source_panel},
+                         {z["taxon"] for z in our_panel})
+        taxa_u=sorted(x["taxon"] for x in source_panel
+                      if x["flower_pigment_category"]=="UNPIGMENTED")
+        taxa_p=sorted(x["taxon"] for x in source_panel
+                      if x["flower_pigment_category"]=="PIGMENTED")
+        self.assertEqual((len(taxa_u),len(taxa_p)),(7,15))
+        compared=0
+        for tested_u in range(8):
+            for positive_u in range(tested_u+1):
+                white={name:(i<positive_u)
+                       for i,name in enumerate(taxa_u[:tested_u])}
+                for tested_p in range(16):
+                    for positive_p in range(tested_p+1):
+                        labels={**white,**{name:(i<positive_p)
+                                            for i,name in enumerate(taxa_p[:tested_p])}}
+                        first=function_bound(tested_u,positive_u,tested_p,positive_p)
+                        other=sharp_bounds(source_panel,labels,synthetic=True)
+                        self.assertEqual(
+                            other["difference_unpigmented_minus_pigmented_lower"],
+                            F(first["unpigmented_minus_pigmented_bound"][0]))
+                        self.assertEqual(
+                            other["difference_unpigmented_minus_pigmented_upper"],
+                            F(first["unpigmented_minus_pigmented_bound"][1]))
+                        compared+=1
+        self.assertEqual(compared,4896)
 
     def test_source_all_registered_accessions_not_an_inherited_assay(self):
         taxa=self.result["taxon_enrollment"]
