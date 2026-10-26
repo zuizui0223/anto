@@ -1,0 +1,83 @@
+name: ANTO v21 fallible functional-assay identification
+on:
+  pull_request:
+    paths:
+      - 'scripts/anto_fallible_function_assays_v21.py'
+      - 'tests/test_fallible_function_assays_v21.py'
+      - 'docs/AFTERLIFE_V21_FALLIBLE_FUNCTIONAL_ASSAYS.md'
+      - 'results/afterlife_v21_fallible_assay_design_20261026.json'
+      - '.github/workflows/anto-v21-fallible-functional-assays.yml'
+      - 'README.md'
+  push:
+    branches: [main]
+    paths:
+      - 'scripts/anto_fallible_function_assays_v21.py'
+      - 'tests/test_fallible_function_assays_v21.py'
+      - 'results/afterlife_v21_fallible_assay_design_20261026.json'
+      - '.github/workflows/anto-v21-fallible-functional-assays.yml'
+permissions:
+  contents: read
+jobs:
+  strict-source-and-misclassification-math:
+    runs-on: ubuntu-latest
+    timeout-minutes: 6
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Regress v19 original-source gate
+        run: python -m unittest discover -s tests -p test_afterlife_empirical_admissibility_v19.py -v
+      - name: Regress both independent v20 prospective-function algorithms
+        run: |
+          python -m unittest discover -s tests -p test_afterlife_functional_assay_design_v20.py -v
+          python -m unittest discover -s tests -p test_functional_assay_identifiability_v20.py -v
+      - name: Test all v21 hard-error caps against independent latent-binary assignment oracle
+        run: python -m unittest discover -s tests -p test_fallible_function_assays_v21.py -v
+      - name: Reproduce exact fractions and enforce nonclaim limits
+        run: |
+          python scripts/anto_fallible_function_assays_v21.py --output /tmp/anto_v21.json
+          python - <<'PY'
+          import json
+          from fractions import Fraction as F
+          d=json.load(open('/tmp/anto_v21.json'))
+          assert d['source_taxa_with_new_joint_flower_function_assays']==0
+          assert not d['native_ancestral_trait_regain_or_transgenerational_establishment_measured']
+          assert d['phylogenetically_independent_regain_events_added']==0
+          assert d['Cirsium_organismal_empirical_owner']=='zuizui0223/aza3'
+          assert d['n_original_unpigmented']==7 and d['n_original_pigmented']==15
+          assert d['zero_misclassification_reproduces_v20']['unpigmented_minus_pigmented_lower']=='1/15'
+          assert d['v20_eight_taxon_certificate_after_up_to_one_total_miscall']['difference_lower']=='-8/105'
+          assert not d['v20_eight_taxon_certificate_after_up_to_one_total_miscall']['positive_sign_certified']
+          assert d['ideal_eleven_taxon_certificate_if_each_group_may_have_one_miscall']['unpigmented_minus_pigmented_lower']=='2/35'
+          caps=d['ideal_counterfactual_minima_for_error_caps']
+          for level,num in [('U0_P0',8),('U0_P1',9),('U1_P0',10),('U1_P1',11),('U2_P1',13)]:
+              assert caps[level]['UNPIGMENTED_HIGHER']['minimum_tested_taxa']==num
+              assert caps[level]['PIGMENTED_HIGHER']['minimum_tested_taxa']==num
+          stochastic=d['full_support_random_assay_example_not_a_validation_rate']
+          assert stochastic['full_panel_true_difference_logical_support']==['-1','1']
+          assert not stochastic['deterministic_strict_sign_can_be_proven_from_accuracy_rates_alone']
+          assert not stochastic['hard_miscall_cap_derived_from_sensitivity_specificity']
+          print('ANTO_V21_ERROR_BOUNDS_PASS',json.dumps({
+              'actual_function_assays':0,'source_taxa':22,
+              'ideal_strict_certificate_without_assay_error':8,
+              'ideal_with_one_total_wrong_call':10,
+              'ideal_with_one_wrong_call_per_group':11,
+              'genuine_plant_phenotype_restoration_observed':False
+          },sort_keys=True))
+          compact=json.dumps(d,sort_keys=True,ensure_ascii=False,separators=(',',':'))
+          for i in range(0,len(compact),3000):
+              print('ANTO_V21_EXACT_RECEIPT_CHUNK',i//3000,compact[i:i+3000])
+          PY
+      - name: Verify frozen receipt when added
+        run: |
+          if [ -f results/afterlife_v21_fallible_assay_design_20261026.json ]; then
+            python scripts/anto_fallible_function_assays_v21.py \
+              --output /tmp/anto_v21_again.json \
+              --expected results/afterlife_v21_fallible_assay_design_20261026.json
+          fi
+      - uses: actions/upload-artifact@v4
+        with:
+          name: anto-v21-hypothetical-fallible-functional-assay-sharp-bounds
+          path: /tmp/anto_v21.json
+          retention-days: 90
