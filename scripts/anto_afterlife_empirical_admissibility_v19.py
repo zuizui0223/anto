@@ -82,7 +82,7 @@ def contingency(join):
             raise ValueError("Historical source record is not validated functional reexpression")
         for gene in ("CHI_accession","F3H_accession"):
             accession=r[gene]
-            if not isinstance(accession,str) or not accession.startswith("KT8984"):
+            if not isinstance(accession,str) or not accession.startswith("KT898"):
                 raise ValueError("Original CHI/F3H source accession missing")
             if accession in gene_accessions:
                 raise ValueError("Source accession must be unique, not a replicate")
@@ -185,8 +185,8 @@ def analysis(join, literature, penstemon, iochroma):
         "DFR_CDS_features_annotated_in_new_block":12,
         "DFR_records_with_no_CDS_feature":2,
         "DFR_no_new_KT_accession_species":8,
-        "source_complete_coding_record_unpigmented":3,
-        "source_complete_coding_record_pigmented":9,
+        "new_KT_DFR_records_with_CDS_feature_unpigmented":3,
+        "new_KT_DFR_records_with_CDS_feature_pigmented":9,
         "observed_source_annotation_fraction_unpigmented":str(F(3,7)),
         "observed_source_annotation_fraction_pigmented":str(F(9,15)),
         "observed_annotation_fraction_difference_unpig_minus_pig":str(F(3,7)-F(9,15)),
