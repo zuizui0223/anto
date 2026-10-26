@@ -6,6 +6,7 @@ on:
       - "tests/test_iochroma_2025_osf_myb12_backcross.py"
       - "docs/IOCHROMA_2019_WHITE_MORPH_VS_FIXED_WHITE_AND_2025_MYB12_SOURCE_AUDIT.md"
       - "results/iochroma_2025_24_individual_myb12_16_transcript_source_audit_20261026.json"
+      - "results/iochroma_2025_color_conditioned_coexpression_v2_20261026.json"
       - ".github/workflows/iochroma-2025-backcross-source-audit.yml"
   workflow_dispatch:
   push:
@@ -31,7 +32,8 @@ jobs:
         run: |
           python scripts/audit_iochroma_2025_osf_myb12_backcross.py \
             --output /tmp/iochroma_2025_real_backcross_audit.json \
-            --expected results/iochroma_2025_24_individual_myb12_16_transcript_source_audit_20261026.json
+            --expected results/iochroma_2025_24_individual_myb12_16_transcript_source_audit_20261026.json \
+            --conditioned-expected results/iochroma_2025_color_conditioned_coexpression_v2_20261026.json
           python - <<'PY'
           import json
           x=json.load(open("/tmp/iochroma_2025_real_backcross_audit.json"))
@@ -39,6 +41,12 @@ jobs:
           assert x["total_filtered_transcripts"]==19184
           assert x["n_samples_red"]==12 and x["n_samples_blue"]==12
           assert x["perfect_blue_over_red"]==16 and x["perfect_red_over_blue"]==0
+          c=x["color_conditioned_coexpression"]
+          assert c["other_blue_perfect_transcripts"]==15
+          assert c["pooled_positive"]==15 and c["pooled_negative"]==0
+          assert c["color_centered_negative"]==9 and c["color_centered_positive"]==6
+          assert c["color_centered_undefined"]==0
+          assert c["not_independent_causal_coregulation"]
           assert len(x["perfect_blue_transcript_IDs"])==16
           assert "TRINITY_DN3000_c0_g1_i10.p1" in x["perfect_blue_transcript_IDs"]
           assert x["selected_gene"]["strict_rank_discrimination"]
