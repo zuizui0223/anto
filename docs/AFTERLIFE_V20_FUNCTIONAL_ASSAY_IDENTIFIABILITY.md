@@ -76,7 +76,9 @@ ANTO v19の登録CDS「仮想代理変数」に限る差の補完範囲 [-4/7,2/
 
 - 機械的に再計算可能なソース照合・数学モデル：scripts/anto_functional_assay_bounds_v20.py
 - 22種の将来測定台帳と条件別厳密境界：results/afterlife_v20_functional_assay_design_20261026.json
-- 16件の独立二値補完・不当な機能転記の負の対照：tests/test_afterlife_functional_assay_design_v20.py
+- 17件の厳密境界・独立二値補完・不当な機能転記の負の対照：tests/test_afterlife_functional_assay_design_v20.py
+- 独立実装のより広い仮想アッセイモデル：scripts/anto_functional_assay_identifiability_v20.py（注釈陽性12件を **仮想的に測定した場合** と区間幅の数学的最適化）
+- 別実装の検証：tests/test_functional_assay_identifiability_v20.py。2種類の独立した算式・プログラムを、**7×15分類群の測定・陽性数の全4,896組合せ**について照合し、将来の機能測定そのものが追加されたと誤認しない。
 - 専用GitHub Actions：.github/workflows/anto-v20-functional-assay-design.yml
 
 **適応度、実際の花色再進化率、遺伝子の復元寿命、普遍的な機能保持率は未測定。** アザミの花器官・系統遺伝・採集・充実種子の実証は引き続き [aza3](https://github.com/zuizui0223/aza3) が管理し、この数理的研究設計は採集・操作の承認を与えない。
