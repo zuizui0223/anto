@@ -43,7 +43,7 @@ class PenstemonMechanisticContrastTests(unittest.TestCase):
     def test_phenotypic_loss_of_blue_not_complete_flower_depigmentation(self):
         x=deepcopy(self.source)
         x["trait_target"]="total flower color absent"
-        with self.assertRaisesRegex(ValueError,"white flower"):audit(x)
+        with self.assertRaisesRegex(ValueError,"total floral pigment loss"):audit(x)
     def test_no_false_natural_gene_flow_from_cross(self):
         x=deepcopy(self.source)
         x["reported_source_molecular_results"]["unmeasured_actual_wild_gene_flow"]=False
