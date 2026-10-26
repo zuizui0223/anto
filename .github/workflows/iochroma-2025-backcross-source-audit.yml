@@ -1,0 +1,50 @@
+name: Iochroma 2025 original 24-backcross MYB12 floral RNA source audit
+on:
+  pull_request:
+    paths:
+      - "scripts/audit_iochroma_2025_osf_myb12_backcross.py"
+      - "tests/test_iochroma_2025_osf_myb12_backcross.py"
+      - "docs/IOCHROMA_2019_WHITE_MORPH_VS_FIXED_WHITE_AND_2025_MYB12_SOURCE_AUDIT.md"
+      - ".github/workflows/iochroma-2025-backcross-source-audit.yml"
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - "scripts/audit_iochroma_2025_osf_myb12_backcross.py"
+      - "tests/test_iochroma_2025_osf_myb12_backcross.py"
+      - ".github/workflows/iochroma-2025-backcross-source-audit.yml"
+permissions:
+  contents: read
+jobs:
+  original-floral-samples:
+    runs-on: ubuntu-latest
+    timeout-minutes: 12
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - name: Guard biological units, raw source and no false reversal
+        run: python -m unittest discover -s tests -p test_iochroma_2025_osf_myb12_backcross.py -v
+      - name: Download 2 original author OSF datasets, verify MD5 and calculate
+        run: |
+          python scripts/audit_iochroma_2025_osf_myb12_backcross.py \
+            --output /tmp/iochroma_2025_real_backcross_audit.json
+          python - <<'PY'
+          import json
+          x=json.load(open("/tmp/iochroma_2025_real_backcross_audit.json"))
+          assert x["source"]=="Wheeler et al 2025 original OSF j5m8f"
+          assert x["total_filtered_transcripts"]==19184
+          assert x["n_samples_red"]==12 and x["n_samples_blue"]==12
+          assert x["perfect_blue_over_red"]==16 and x["perfect_red_over_blue"]==0
+          assert x["selected_gene"]["strict_rank_discrimination"]
+          assert not x["trait_loss_then_historical_regain_measured"]
+          assert not x["causal_MYB_gene_demonstrated_by_reanalysis"]
+          print("IOCHROMA_REAL_SOURCE_ADMISSION_PASS",
+                x["selected_gene"]["blue_mean_tpm"],
+                x["selected_gene"]["red_mean_tpm"])
+          PY
+      - uses: actions/upload-artifact@v4
+        with:
+          name: iochroma-2025-original-floral-rna-24-backcross-audit
+          path: /tmp/iochroma_2025_real_backcross_audit.json
