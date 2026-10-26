@@ -15,7 +15,8 @@ ROOT=Path(__file__).resolve().parents[1]
 sys.path.insert(0,str(ROOT/"scripts"))
 from audit_iochroma_2025_osf_myb12_backcross import (
     SOURCE, MYB_ID, parse_manifest, audit_tpm_table, validate_payload,
-    assert_expected_receipt,
+    assert_expected_receipt, coexpression_of_selected_perfect,
+    assert_expected_coexpression,
 )
 
 class IochromaSourceTests(unittest.TestCase):
@@ -109,6 +110,72 @@ class IochromaSourceTests(unittest.TestCase):
         perturbed["selected_gene"]["individuals"][0]["TPM"]+=1
         with self.assertRaisesRegex(ValueError,"receipt"):
             assert_expected_receipt(perturbed,ref)
+
+    def test_pooled_correlation_is_not_within_color_coregulation(self):
+        assigned={"B1":"B","B2":"B","R1":"R","R2":"R"}
+        ids=["B1","R1","B2","R2"]
+        vectors={
+            "MYB":[8,0,9,1],
+            "ANTI":[20,3,10,1],
+            "SAME":[12,0,14,1],
+        }
+        diagnostic=coexpression_of_selected_perfect(vectors,"MYB",ids,assigned)
+        self.assertEqual(diagnostic["other_blue_perfect_transcripts"],2)
+        self.assertEqual(diagnostic["pooled_positive"],2)
+        self.assertEqual(diagnostic["color_centered_negative"],1)
+        self.assertEqual(diagnostic["color_centered_positive"],1)
+        self.assertEqual(diagnostic["color_centered_undefined"],0)
+        rows={v["transcript_id"]:v for v in diagnostic["per_transcript"]}
+        self.assertGreater(rows["ANTI"]["pooled_r"],0)
+        self.assertLess(rows["ANTI"]["within_color_centered_r"],0)
+        self.assertGreater(rows["SAME"]["within_color_centered_r"],0)
+
+    def test_centered_correlation_handles_constant_within_groups_without_false_sign(self):
+        assigned={"B1":"B","B2":"B","R1":"R","R2":"R"}
+        ids=["B1","B2","R1","R2"]
+        vectors={
+            "MYB":[8,9,0,1],
+            "STRONG_BUT_FLAT":[15,15,0,0],
+        }
+        diagnostic=coexpression_of_selected_perfect(vectors,"MYB",ids,assigned)
+        self.assertEqual(diagnostic["pooled_positive"],1)
+        self.assertEqual(diagnostic["color_centered_undefined"],1)
+        self.assertIsNone(diagnostic["per_transcript"][0]["within_color_centered_r"])
+
+    def test_original_24_individual_15_comparator_frozen_source_correlations(self):
+        receipt=json.loads((ROOT/"results/iochroma_2025_color_conditioned_coexpression_v2_20261026.json")
+                           .read_text(encoding="utf-8"))
+        d=receipt["source_verified_descriptive_result"]
+        self.assertEqual(d["original_individuals"],24)
+        self.assertEqual((d["blue_individuals"],d["red_individuals"]),(12,12))
+        self.assertEqual(d["reference_transcript"],MYB_ID)
+        self.assertEqual(d["other_blue_perfect_transcripts"],15)
+        self.assertEqual(d["pooled_positive"],15)
+        self.assertEqual(d["pooled_negative"],0)
+        self.assertEqual(d["color_centered_negative"],9)
+        self.assertEqual(d["color_centered_positive"],6)
+        self.assertEqual(d["color_centered_undefined"],0)
+        self.assertEqual(len({x["transcript_id"] for x in d["per_transcript"]}),15)
+        self.assertTrue(all(x["pooled_r"]>0 for x in d["per_transcript"]))
+        self.assertEqual(sum(x["within_color_centered_r"]<0
+                             for x in d["per_transcript"]),9)
+        self.assertTrue(receipt["no_multiple_testing_corrected_discovery_or_causal_coregulation"])
+        self.assertTrue(receipt["not_ancestral_trait_regain_fitness_or_multigeneration_retention"])
+        self.assertTrue(receipt["do_not_merge_transcript_rows_into_independent_genetic_loci"])
+        assert_expected_coexpression(d,receipt)
+
+        # Counts and all 15 actual transcript coefficients are source-locked.
+        for mode in ("count","positive","negative","id","rho","source_digest"):
+            bad=copy.deepcopy(receipt)
+            entries=bad["source_verified_descriptive_result"]
+            if mode=="count": entries["color_centered_negative"]=8
+            if mode=="positive": entries["pooled_positive"]=14
+            if mode=="negative": entries["color_centered_positive"]=5
+            if mode=="id": entries["per_transcript"][0]["transcript_id"]="SYNTHETIC"
+            if mode=="rho": entries["per_transcript"][0]["pooled_r"]+=.01
+            if mode=="source_digest": bad["source_original_tpm_md5"]="WRONG"
+            with self.assertRaisesRegex(ValueError,"Frozen"):
+                assert_expected_coexpression(d,bad)
 
     def test_source_byte_digest_or_count_fails_closed(self):
         with self.assertRaisesRegex(ValueError,"source"):
