@@ -42,14 +42,15 @@ from anto_fallible_function_assays_v21 import source_panel_no_assays
 ROOT=Path(__file__).resolve().parents[1]
 
 
-def _rate(x,name,*,allow_zero=True):
+def _rate(x,name,*,allow_zero=True,allow_one=False):
     if type(x) is bool:
         raise ValueError(f"{name} cannot be a boolean")
     try:
         value=F(str(x)) if isinstance(x,float) else F(x)
     except (ValueError,TypeError,ZeroDivisionError,OverflowError) as exc:
         raise ValueError(f"{name} must be a finite numeric rational probability") from exc
-    if not (0 <= value < 1 if allow_zero else 0 < value < 1):
+    if not ((0 <= value if allow_zero else 0 < value) and
+            (value <= 1 if allow_one else value < 1)):
         raise ValueError(f"{name} outside allowed probability range")
     return value
 
@@ -117,7 +118,7 @@ def one_taxon_screen(n_individuals:int,repetitions:int,minimum_positives:int,
     k=_positive_int(minimum_positives,"minimum_positives")
     if k>r:
         raise ValueError("Positive-call threshold exceeds repetitions")
-    theta=_rate(within_taxon_competence_fraction,"within_taxon_competence_fraction")
+    theta=_rate(within_taxon_competence_fraction,"within_taxon_competence_fraction",allow_one=True)
     tpr,fpr=individual_call_probabilities(assay,r,k)
     marginal=theta*tpr+(1-theta)*fpr
     any_screen=1-(1-marginal)**n
@@ -174,7 +175,7 @@ def finite_budget_search(total_call_budget:int,theta,assay:HypotheticalAssay,
     sampling recommendation; theta,se,sp,c are all stipulated synthetic.
     """
     budget=_positive_int(total_call_budget,"total_call_budget")
-    theta=_rate(theta,"theta")
+    theta=_rate(theta,"theta",allow_one=True)
     ceiling=F(maximum_false_taxon_screen)
     if not 0<=ceiling<=1:
         raise ValueError("False screen ceiling must lie in [0,1]")
