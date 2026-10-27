@@ -226,7 +226,13 @@ def main():
     parser.add_argument("--expected",type=Path,
                         help="Fail closed if the frozen source acquisition gate has changed")
     args=parser.parse_args()
-    metadata=registered_api_details()
+    metadata=(
+        registered_api_details() if args.from_local_rar is None
+        else {"dataset_metadata_retrieved":False,
+              "version_manifest_retrieved":False,
+              "original_rar_metadata_match":False,
+              "file_metadata_status":"LOCAL_ORIGINAL_MD5_IS_SEPARATE_FROM_LIVE_API"}
+    )
     if args.from_local_rar is not None:
         local=args.from_local_rar
         if not local.is_file() or local.stat().st_size!=REGISTERED_BYTES:
