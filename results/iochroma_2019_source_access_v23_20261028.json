@@ -1,0 +1,49 @@
+{
+  "Cirsium_empirical_owner": "zuizui0223/aza3",
+  "audit_date": "2026-10-28",
+  "biological_2019_expression_reanalysed_in_this_gate": false,
+  "biological_source_admitted_for_future_raw_reanalysis": false,
+  "not_Wheeler2025_red_blue_backcross": true,
+  "original_Dryad_file_ID": 108456,
+  "original_RAR_bytes_verified": false,
+  "original_pub_DOI": "10.1002/dvdy.82",
+  "original_public_dataset_DOI": "10.5061/dryad.p5dq84v",
+  "paper_observational_design": "Larter2019 white morphs and fixed white taxa",
+  "raw_gene_expression_sample_rows_parsed": 0,
+  "registered_source_MD5": "76b46e384fb7c9bf1ef3fbd7d1e5d2f0",
+  "registered_source_bytes": 3054999,
+  "schema": "anto_v23_larter2019_white_morph_fixed_white_original_access_gate",
+  "source_acquisition_attempts": [
+    {
+      "original_md5_matched": false,
+      "retrieval_status": "HTTP_401",
+      "route": "file_API"
+    },
+    {
+      "original_md5_matched": false,
+      "retrieval_status": "HTTP_403",
+      "route": "file_stream"
+    },
+    {
+      "original_md5_matched": false,
+      "retrieval_status": "HTTP_401",
+      "route": "original_dataset_ZIP"
+    }
+  ],
+  "source_assay_functionally_validated": false,
+  "source_file_raw_bytes_rehosted_in_git": false,
+  "source_metadata": {
+    "dataset_metadata_retrieved": true,
+    "dryad_dataset_id": 28109,
+    "file_metadata_status": "VERIFIED_OFFICIAL_MANIFEST",
+    "file_name": "Larter et al 2019 Dvdy Iochrominae development evolution DATA.rar",
+    "original_rar_metadata_match": true,
+    "version_manifest_retrieved": true
+  },
+  "successful_route": null,
+  "technical_blocker_not_biological_negative": true,
+  "trait_regain_or_multigeneration_retention_estimated": false,
+  "white_morph_versus_fixed_white_new_statistical_result": false,
+  "github_live_runner": "https://github.com/zuizui0223/anto/actions/runs/40540170668",
+  "run_status": "COMPLETED_SOURCE_ACCESS_GATE_SUCCESSFUL_ABSTENTION"
+}
