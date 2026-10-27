@@ -1,0 +1,75 @@
+name: ANTO v23 original Larter 2019 Dryad source admission
+on:
+  pull_request:
+    paths:
+      - "scripts/audit_larter_2019_original_dryad_v23.py"
+      - "tests/test_larter_2019_original_dryad_v23.py"
+      - "docs/IOCHROMA_2019_SOURCE_ACCESS_V23.md"
+      - "results/iochroma_2019_source_access_v23_20261028.json"
+      - ".github/workflows/anto-v23-larter2019-source-gate.yml"
+      - "README.md"
+  push:
+    branches: [main]
+    paths:
+      - "scripts/audit_larter_2019_original_dryad_v23.py"
+      - "tests/test_larter_2019_original_dryad_v23.py"
+      - ".github/workflows/anto-v23-larter2019-source-gate.yml"
+permissions:
+  contents: read
+jobs:
+  original-data-access:
+    runs-on: ubuntu-latest
+    timeout-minutes: 6
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - name: Fail-closed original-source, biology and HTML-response tests
+        run: python -m unittest discover -s tests -p test_larter_2019_original_dryad_v23.py -v
+      - name: Probe official published Dryad API and original RAR checksum
+        run: |
+          python scripts/audit_larter_2019_original_dryad_v23.py \
+            --output /tmp/anto_v23_larter2019_source_gate.json \
+            --original-rar /tmp/anto_larter2019_original_verified.rar
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          d=json.load(open('/tmp/anto_v23_larter2019_source_gate.json'))
+          assert d['original_Dryad_file_ID']==108456
+          assert d['registered_source_bytes']==3054999
+          assert d['registered_source_MD5']=='76b46e384fb7c9bf1ef3fbd7d1e5d2f0'
+          assert d['paper_observational_design']=='Larter2019 white morphs and fixed white taxa'
+          assert d['not_Wheeler2025_red_blue_backcross']
+          assert not d['biological_2019_expression_reanalysed_in_this_gate']
+          assert not d['white_morph_versus_fixed_white_new_statistical_result']
+          assert not d['trait_regain_or_multigeneration_retention_estimated']
+          assert d['Cirsium_empirical_owner']=='zuizui0223/aza3'
+          if d['original_RAR_bytes_verified']:
+              from hashlib import md5
+              b=Path('/tmp/anto_larter2019_original_verified.rar').read_bytes()
+              assert len(b)==3054999 and md5(b).hexdigest()==d['registered_source_MD5']
+          else:
+              assert d['technical_blocker_not_biological_negative']
+              assert not Path('/tmp/anto_larter2019_original_verified.rar').exists()
+          print('ANTO_V23_SOURCE_ADMISSION_RECEIPT',
+                json.dumps(d,sort_keys=True,separators=(',',':')))
+          PY
+      - name: List original archive contents only if byte-integrity gate passed
+        run: |
+          if [ -f /tmp/anto_larter2019_original_verified.rar ]; then
+            if command -v 7z >/dev/null; then
+              7z l /tmp/anto_larter2019_original_verified.rar | head -n 100
+            elif command -v bsdtar >/dev/null; then
+              bsdtar -tf /tmp/anto_larter2019_original_verified.rar | head -n 100
+            else
+              echo 'SOURCE_BYTES_VERIFIED_BUT_LISTER_UNAVAILABLE'
+            fi
+          else
+            echo 'SOURCE_BYTES_UNAVAILABLE_NO_ARCHIVE_MEMBERS_INFERRED'
+          fi
+      - uses: actions/upload-artifact@v4
+        with:
+          name: anto-v23-2019-official-source-access-metadata-only
+          path: /tmp/anto_v23_larter2019_source_gate.json
+          retention-days: 90
