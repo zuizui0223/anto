@@ -221,10 +221,37 @@ def main():
     parser=argparse.ArgumentParser()
     parser.add_argument("--output",type=Path,required=True)
     parser.add_argument("--original-rar",type=Path)
+    parser.add_argument("--from-local-rar",type=Path,
+                        help="Optional independently supplied original RAR; always check original MD5")
+    parser.add_argument("--expected",type=Path,
+                        help="Fail closed if the frozen source acquisition gate has changed")
     args=parser.parse_args()
     metadata=registered_api_details()
-    data,route,attempts=attempt_original_source()
+    if args.from_local_rar is not None:
+        local=args.from_local_rar
+        if not local.is_file() or local.stat().st_size!=REGISTERED_BYTES:
+            raise ValueError("Locally supplied archive does not have original registered size")
+        data=local.read_bytes()
+        if not original_bytes_valid(data):
+            raise ValueError("Locally supplied archive failed original MD5 or RAR signature")
+        route="locally_supplied_exact_registered_RAR"
+        attempts=[{"route":route,"retrieval_status":"ADMITTED_ORIGINAL_MD5_RAR",
+                   "returned_bytes":len(data),"original_md5_matched":True}]
+    else:
+        data,route,attempts=attempt_original_source()
     result=receipt(metadata,data,route,attempts)
+    if args.expected is not None:
+        expected=json.loads(args.expected.read_text(encoding="utf-8"))
+        # A new successful retrieval, source version change, or previously
+        # inaccessible endpoint becoming accessible triggers explicit review.
+        keys=("original_public_dataset_DOI","registered_source_bytes",
+              "registered_source_MD5","source_metadata",
+              "source_acquisition_attempts","original_RAR_bytes_verified",
+              "biological_source_admitted_for_future_raw_reanalysis",
+              "technical_blocker_not_biological_negative")
+        if any(result.get(k)!=expected.get(k) for k in keys):
+            raise RuntimeError(
+                "DRYAD_2019_GATE_TRANSITION_REQUIRES_MANUAL_AUDIT")
     if data is not None and args.original_rar:
         args.original_rar.parent.mkdir(parents=True,exist_ok=True)
         args.original_rar.write_bytes(data)
