@@ -1,5 +1,7 @@
 """Do not confuse published source metadata with downloaded data or assays."""
 import io
+import subprocess
+import tempfile
 import json
 import sys
 import unittest
@@ -74,6 +76,32 @@ class OriginalLarter2019DryadGateV23(unittest.TestCase):
         x=registered_api_details(wrong)
         self.assertFalse(x["dataset_metadata_retrieved"])
         self.assertFalse(x["original_rar_metadata_match"])
+
+    def test_invalid_local_archive_is_rejected_without_network(self):
+        """A fake file never qualifies even through the supplied-original route."""
+        with tempfile.TemporaryDirectory() as d:
+            file=Path(d)/"source.rar"
+            file.write_bytes(b"Rar!\x1a\x07\x00"+b"fake")
+            receipt_path=Path(d)/"result.json"
+            command=[sys.executable,str(ROOT/"scripts/audit_larter_2019_original_dryad_v23.py"),
+                     "--from-local-rar",str(file),"--output",str(receipt_path)]
+            result=subprocess.run(command,capture_output=True,text=True,timeout=10)
+            self.assertNotEqual(result.returncode,0)
+            self.assertIn("original registered size",result.stderr)
+            self.assertFalse(receipt_path.exists())
+
+    def test_frozen_access_denial_is_not_an_empirical_negative_result(self):
+        path=ROOT/"results/iochroma_2019_source_access_v23_20261028.json"
+        x=json.loads(path.read_text(encoding="utf-8"))
+        self.assertTrue(x["source_metadata"]["original_rar_metadata_match"])
+        self.assertFalse(x["original_RAR_bytes_verified"])
+        self.assertFalse(x["biological_source_admitted_for_future_raw_reanalysis"])
+        self.assertFalse(x["biological_2019_expression_reanalysed_in_this_gate"])
+        self.assertFalse(x["white_morph_versus_fixed_white_new_statistical_result"])
+        self.assertEqual([z["retrieval_status"] for z in x["source_acquisition_attempts"]],
+                         ["HTTP_401","HTTP_403","HTTP_401"])
+        self.assertTrue(x["technical_blocker_not_biological_negative"])
+        self.assertFalse(x["source_file_raw_bytes_rehosted_in_git"])
 
     def test_study_identity_and_assay_gate_are_separate(self):
         x=receipt({},None,None,[{"route":"file_API",
