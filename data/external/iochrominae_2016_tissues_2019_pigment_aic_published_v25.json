@@ -1,0 +1,265 @@
+{
+  "schema": "anto_v25_original_published_2016_tissue_2019_gene_aic_endpoint_registry",
+  "date": "2026-10-28",
+  "original_published_sources_not_new_assays": true,
+  "source_2019": {
+    "authors": "Larter, Dunbar-Wallis, Berardi & Smith",
+    "year": 2019,
+    "journal": "Developmental Dynamics",
+    "doi": "10.1002/dvdy.82",
+    "pdf": "https://par.nsf.gov/servlets/purl/10431252",
+    "original_table": "Table 2, p. 1096",
+    "table_scope": "Five author-reported best PGLS/OU models of each continuous log(x+1) pigment output. Published original AIC and delta values transcribed manually. Candidate model universe outside five printed winners not audited. No raw individual HPLC/qPCR observations downloaded.",
+    "relative_model_selection_only_not_predictive_holdout": true,
+    "reported_models": [
+      {
+        "response": "anthocyanidins",
+        "models": [
+          {
+            "model": "Chi",
+            "genes": [
+              "CHI"
+            ],
+            "aic": "66.2",
+            "delta_aic": "0.0",
+            "npar": 6
+          },
+          {
+            "model": "F3h",
+            "genes": [
+              "F3H"
+            ],
+            "aic": "78.4",
+            "delta_aic": "12.2",
+            "npar": 6
+          },
+          {
+            "model": "Chi+F3h",
+            "genes": [
+              "CHI",
+              "F3H"
+            ],
+            "aic": "92.0",
+            "delta_aic": "25.8",
+            "npar": 10
+          },
+          {
+            "model": "Chs",
+            "genes": [
+              "CHS"
+            ],
+            "aic": "94.4",
+            "delta_aic": "28.2",
+            "npar": 6
+          },
+          {
+            "model": "Ans",
+            "genes": [
+              "ANS"
+            ],
+            "aic": "119.3",
+            "delta_aic": "53.1",
+            "npar": 6
+          }
+        ]
+      },
+      {
+        "response": "flavonols",
+        "models": [
+          {
+            "model": "Chi",
+            "genes": [
+              "CHI"
+            ],
+            "aic": "65.0",
+            "delta_aic": "0.0",
+            "npar": 6
+          },
+          {
+            "model": "F3h",
+            "genes": [
+              "F3H"
+            ],
+            "aic": "74.9",
+            "delta_aic": "9.9",
+            "npar": 6
+          },
+          {
+            "model": "Chi+F3h",
+            "genes": [
+              "CHI",
+              "F3H"
+            ],
+            "aic": "90.6",
+            "delta_aic": "25.6",
+            "npar": 10
+          },
+          {
+            "model": "Chs",
+            "genes": [
+              "CHS"
+            ],
+            "aic": "94.7",
+            "delta_aic": "29.7",
+            "npar": 6
+          },
+          {
+            "model": "Ans",
+            "genes": [
+              "ANS"
+            ],
+            "aic": "128.0",
+            "delta_aic": "63.0",
+            "npar": 6
+          }
+        ]
+      }
+    ],
+    "original_reported_fixed_white_vs_polymorphic_morph_expression_contrast": {
+      "source_location": "Results section 3.3, Discussion, Fig 5–6; p.1096–1098",
+      "published_author_result": "White fixed species show sharp downstream DFR/ANS expression loss while acyanic polymorphic morphs generally remain within pigmented-species gene-expression space, with named species exceptions.",
+      "claim_type": "original_author_published_qualitative_result_NOT_independent_ANTO_quantitative_reanalysis",
+      "not_identical_to_PGLS_continuous_response": true,
+      "original_white_morph_gene_expression_not_fitted_for_new_classification_here": true
+    },
+    "registered_original_RAR_MD5": "76b46e384fb7c9bf1ef3fbd7d1e5d2f0",
+    "registered_original_RAR_access_still_unverified": true
+  },
+  "source_2016": {
+    "authors": "Berardi, Hildreth, Helm, Winkel & Smith",
+    "year": 2016,
+    "journal": "Phytochemistry",
+    "doi": "10.1016/j.phytochem.2016.05.007",
+    "pdf": "https://www.colorado.edu/smithlab/sites/default/files/attached-files/berardietal2016phytochemistry.pdf",
+    "original_table": "Table 2, preprint PDF page 5; phylogenetic-pPCA correlation matrix",
+    "original_individuals_in_published_phylogenetic_correlation": 26,
+    "original_species_in_published_phylogenetic_correlation": 9,
+    "reported_phylogenetic_lambda": "0.342",
+    "dimension_labels": [
+      "petal_mono_anthocyanidin",
+      "petal_mono_flavonol",
+      "leaf_mono_flavonol",
+      "petal_di_anthocyanidin",
+      "petal_di_flavonol",
+      "leaf_di_flavonol",
+      "petal_tri_anthocyanidin",
+      "petal_tri_flavonol",
+      "leaf_tri_anthocyanidin"
+    ],
+    "original_printed_correlation_matrix": [
+      [
+        "1",
+        "-0.15",
+        "0.16",
+        "-0.13",
+        "-0.18",
+        "0.25",
+        "-0.14",
+        "-0.04",
+        "-0.04"
+      ],
+      [
+        "-0.15",
+        "1",
+        "0.42",
+        "0.40",
+        "0.78",
+        "0.29",
+        "0.13",
+        "0.00",
+        "-0.19"
+      ],
+      [
+        "0.16",
+        "0.42",
+        "1",
+        "0.54",
+        "0.44",
+        "0.96",
+        "0.04",
+        "-0.05",
+        "-0.05"
+      ],
+      [
+        "-0.13",
+        "0.40",
+        "0.54",
+        "1",
+        "0.68",
+        "0.60",
+        "0.22",
+        "-0.08",
+        "-0.07"
+      ],
+      [
+        "-0.18",
+        "0.78",
+        "0.44",
+        "0.68",
+        "1",
+        "0.46",
+        "0.22",
+        "0.13",
+        "-0.20"
+      ],
+      [
+        "0.25",
+        "0.29",
+        "0.96",
+        "0.60",
+        "0.46",
+        "1",
+        "0.06",
+        "-0.03",
+        "-0.04"
+      ],
+      [
+        "-0.14",
+        "0.13",
+        "0.04",
+        "0.22",
+        "0.22",
+        "0.06",
+        "1",
+        "0.52",
+        "-0.17"
+      ],
+      [
+        "-0.04",
+        "0.00",
+        "-0.05",
+        "-0.08",
+        "0.13",
+        "-0.03",
+        "0.52",
+        "1",
+        "-0.15"
+      ],
+      [
+        "-0.04",
+        "-0.19",
+        "-0.05",
+        "-0.07",
+        "-0.20",
+        "-0.04",
+        "-0.17",
+        "-0.15",
+        "1"
+      ]
+    ],
+    "original_matrix_rounded_to_two_decimals": true,
+    "significance_boldface_not_reconstructed": true,
+    "sample_covariance_or_new_phylogenetic_pvalue_not_computed": true,
+    "not_the_same_individual_dataset_as_2019": true,
+    "biological_interpretation_published_by_original_authors": "Floral flavonoid profiles are partially correlated within biochemical branches while leaf flavonoid chemistry is not tightly locked to flower color."
+  },
+  "scope_control": {
+    "same_clade_2016_and_2019_not_two_independent_reversions": true,
+    "no_original_2019_hplc_qpcr_raw_reads": true,
+    "no_new_direct_flower_joint_functional_assays": true,
+    "no_natural_ancestral_colour_regain_rate": true,
+    "no_2019_held_out_prediction_reestimated": true,
+    "no_between_source_causal_transport": true,
+    "Cirsium_empirical_owner": "zuizui0223/aza3"
+  }
+}
