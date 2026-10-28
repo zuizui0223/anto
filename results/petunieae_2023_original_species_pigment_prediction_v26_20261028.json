@@ -1,0 +1,383 @@
+{
+  "Cirsium_organismal_empirical_owner": "zuizui0223/aza3",
+  "fixed_models_no_response_specific_feature_search_or_tuning": [
+    "train_mean_baseline",
+    "CHI_only",
+    "early_three",
+    "late_two",
+    "branch_three",
+    "joint_six"
+  ],
+  "no_external_clade_transfer_or_transgenerational_fitness_validation": true,
+  "no_full_genetic_competence_or_causal_intervention_measured": true,
+  "no_phylogenetically_independent_real_ancestral_recovery": true,
+  "not_a_phenotypic_visible_color_baseline_or_future_regain": true,
+  "original_OSF_project": "zg9cu",
+  "original_author_processed_flower_RNA_and_HPLC": true,
+  "original_sra_RNA_biological_requantification_not_performed": true,
+  "schema": "anto_v26_original_2023_petunieae_species_pigment_expression_prediction",
+  "source_file_hashes_verified": {
+    "expression_gene_mean": {
+      "source_declared_bytes": 30410,
+      "source_registered_md5": "9f2ea379ecd7a8e2a56e739b8e56a3bd",
+      "source_registered_sha256": "6f62a4e385d7c9d12e63fd07f6d33a2c79e469af63223f01cec6e8268e68f5c5"
+    },
+    "expression_pigment_matched": {
+      "source_declared_bytes": 26917,
+      "source_registered_md5": "13a786471791dc1175849d66b2d4a2ef",
+      "source_registered_sha256": "5843d4cd4eb253046f97349fa6bd285ca77e43e7a9c3aaa0e78fae3e8e391edd"
+    },
+    "pigment_mean": {
+      "source_declared_bytes": 7039,
+      "source_registered_md5": "407400bde406e266456ab0b6589f2707",
+      "source_registered_sha256": "74b4d20a383d478266b67bb7b31c20dd4ec7cc949f2ffb612b19fd3a0e7b2d73"
+    }
+  },
+  "source_reconciled": {
+    "Browallia_americana_outgroup_removed": true,
+    "Petunieae_ingroup_species_rows": 59,
+    "molecular_predictors_prespecified": [
+      "ANS",
+      "CHI",
+      "CHS",
+      "DFR",
+      "F35H",
+      "F3H",
+      "F3primeH",
+      "FLS"
+    ],
+    "no_visible_hue_observed_baseline_in_this_table": true,
+    "original_author_processed_species_rows": 60,
+    "source_original_gene_cells_verified_by_independent_table": 480,
+    "source_original_pigment_cells_verified_by_independent_table": 540,
+    "source_species_set_match_all_three_files": true
+  },
+  "source_study_DOI": "10.1098/rspb.2023.0275",
+  "validation": {
+    "first_two_source_code_characters_NOT_accepted_genus": {
+      "code_prefix_is_NOT_verified_taxonomic_genus_or_an_independent_regain_clade": true,
+      "endpoints": {
+        "anthocyanidins_log1p_total": {
+          "fixed_unretuned_ridge_lambda": 10,
+          "models": {
+            "CHI_only": {
+              "n_tested_original_ingroup_species": 59,
+              "out_of_fold_MAE_log1p_mg_per_g": 0.3688148,
+              "out_of_fold_R2_vs_global_mean_not_phylogenetic": -0.25438747,
+              "out_of_fold_RMSE_log1p_mg_per_g": 0.43027219,
+              "relative_RMSE_to_source_LOO_baseline": 1.03173685,
+              "strict_test_species_outside_own_train_set": true
+            },
+            "branch_three": {
+              "n_tested_original_ingroup_species": 59,
+              "out_of_fold_MAE_log1p_mg_per_g": 0.29073847,
+              "out_of_fold_R2_vs_global_mean_not_phylogenetic": 0.14633154,
+              "out_of_fold_RMSE_log1p_mg_per_g": 0.35495397,
+              "relative_RMSE_to_source_LOO_baseline": 0.85113354,
+              "strict_test_species_outside_own_train_set": true
+            },
+            "early_three": {
+              "n_tested_original_ingroup_species": 59,
+              "out_of_fold_MAE_log1p_mg_per_g": 0.35665406,
+              "out_of_fold_R2_vs_global_mean_not_phylogenetic": -0.24867391,
+              "out_of_fold_RMSE_log1p_mg_per_g": 0.42929116,
+              "relative_RMSE_to_source_LOO_baseline": 1.02938446,
+              "strict_test_species_outside_own_train_set": true
+            },
+            "joint_six": {
+              "n_tested_original_ingroup_species": 59,
+              "out_of_fold_MAE_log1p_mg_per_g": 0.29749636,
+              "out_of_fold_R2_vs_global_mean_not_phylogenetic": 0.11526876,
+              "out_of_fold_RMSE_log1p_mg_per_g": 0.3613542,
+              "relative_RMSE_to_source_LOO_baseline": 0.86648045,
+              "strict_test_species_outside_own_train_set": true
+            },
+            "late_two": {
+              "n_tested_original_ingroup_species": 59,
+              "out_of_fold_MAE_log1p_mg_per_g": 0.32761914,
+              "out_of_fold_R2_vs_global_mean_not_phylogenetic": -0.01765536,
+              "out_of_fold_RMSE_log1p_mg_per_g": 0.38755004,
+              "relative_RMSE_to_source_LOO_baseline": 0.92929468,
+              "strict_test_species_outside_own_train_set": true
+            },
+            "train_mean_baseline": {
+              "n_tested_original_ingroup_species": 59,
+              "out_of_fold_MAE_log1p_mg_per_g": 0.3564266,
+              "out_of_fold_R2_vs_global_mean_not_phylogenetic": -0.17840296,
+              "out_of_fold_RMSE_log1p_mg_per_g": 0.41703676,
+              "relative_RMSE_to_source_LOO_baseline": 1,
+              "strict_test_species_outside_own_train_set": true
+            }
+          },
+          "phenotype_mean_log1p_mg_per_g": 0.39286352,
+          "pigment_chemical_response_is_NOT_visual_hue_or_ancestral_reexpression": true,
+          "source_original_zero_total_species": 6
+        },
+        "flavonols_log1p_total": {
+          "fixed_unretuned_ridge_lambda": 10,
+          "models": {
+            "CHI_only": {
+              "n_tested_original_ingroup_species": 59,
+              "out_of_fold_MAE_log1p_mg_per_g": 1.10965868,
+              "out_of_fold_R2_vs_global_mean_not_phylogenetic": -0.09022042,
+              "out_of_fold_RMSE_log1p_mg_per_g": 1.41355532,
+              "relative_RMSE_to_source_LOO_baseline": 1.00621551,
+              "strict_test_species_outside_own_train_set": true
+            },
+            "branch_three": {
+              "n_tested_original_ingroup_species": 59,
+              "out_of_fold_MAE_log1p_mg_per_g": 0.91864123,
+              "out_of_fold_R2_vs_global_mean_not_phylogenetic": 0.21579169,
+              "out_of_fold_RMSE_log1p_mg_per_g": 1.19886801,
+              "relative_RMSE_to_source_LOO_baseline": 0.85339397,
+              "strict_test_species_outside_own_train_set": true
+            },
+            "early_three": {
+              "n_tested_original_ingroup_species": 59,
+              "out_of_fold_MAE_log1p_mg_per_g": 1.23609621,
+              "out_of_fold_R2_vs_global_mean_not_phylogenetic": -0.40140984,
+              "out_of_fold_RMSE_log1p_mg_per_g": 1.60264833,
+              "relative_RMSE_to_source_LOO_baseline": 1.14081817,
+              "strict_test_species_outside_own_train_set": true
+            },
+            "joint_six": {
+              "n_tested_original_ingroup_species": 59,
+              "out_of_fold_MAE_log1p_mg_per_g": 0.96464247,
+              "out_of_fold_R2_vs_global_mean_not_phylogenetic": 0.18243928,
+              "out_of_fold_RMSE_log1p_mg_per_g": 1.22409652,
+              "relative_RMSE_to_source_LOO_baseline": 0.87135246,
+              "strict_test_species_outside_own_train_set": true
+            },
+            "late_two": {
+              "n_tested_original_ingroup_species": 59,
+              "out_of_fold_MAE_log1p_mg_per_g": 1.20715865,
+              "out_of_fold_R2_vs_global_mean_not_phylogenetic": -0.28963117,
+              "out_of_fold_RMSE_log1p_mg_per_g": 1.53740544,
+              "relative_RMSE_to_source_LOO_baseline": 1.09437613,
+              "strict_test_species_outside_own_train_set": true
+            },
+            "train_mean_baseline": {
+              "n_tested_original_ingroup_species": 59,
+              "out_of_fold_MAE_log1p_mg_per_g": 1.09929132,
+              "out_of_fold_R2_vs_global_mean_not_phylogenetic": -0.07679319,
+              "out_of_fold_RMSE_log1p_mg_per_g": 1.40482363,
+              "relative_RMSE_to_source_LOO_baseline": 1,
+              "strict_test_species_outside_own_train_set": true
+            }
+          },
+          "phenotype_mean_log1p_mg_per_g": 4.50552029,
+          "pigment_chemical_response_is_NOT_visual_hue_or_ancestral_reexpression": true,
+          "source_original_zero_total_species": 0
+        }
+      },
+      "fold_test_sizes_sorted": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        2,
+        2,
+        2,
+        2,
+        4,
+        7,
+        9,
+        9,
+        12
+      ],
+      "holdout_type": "first_two_source_code_characters_NOT_accepted_genus",
+      "n_folds": 19,
+      "n_original_ingroup_species": 59,
+      "refitted_train_only_scaling_and_intercept": true
+    },
+    "species_LOO": {
+      "code_prefix_is_NOT_verified_taxonomic_genus_or_an_independent_regain_clade": true,
+      "endpoints": {
+        "anthocyanidins_log1p_total": {
+          "fixed_unretuned_ridge_lambda": 10,
+          "models": {
+            "CHI_only": {
+              "n_tested_original_ingroup_species": 59,
+              "out_of_fold_MAE_log1p_mg_per_g": 0.33959483,
+              "out_of_fold_R2_vs_global_mean_not_phylogenetic": -0.06619333,
+              "out_of_fold_RMSE_log1p_mg_per_g": 0.39668466,
+              "relative_RMSE_to_source_LOO_baseline": 1.01506526,
+              "strict_test_species_outside_own_train_set": true
+            },
+            "branch_three": {
+              "n_tested_original_ingroup_species": 59,
+              "out_of_fold_MAE_log1p_mg_per_g": 0.2749978,
+              "out_of_fold_R2_vs_global_mean_not_phylogenetic": 0.26387734,
+              "out_of_fold_RMSE_log1p_mg_per_g": 0.32961162,
+              "relative_RMSE_to_source_LOO_baseline": 0.84343395,
+              "strict_test_species_outside_own_train_set": true
+            },
+            "early_three": {
+              "n_tested_original_ingroup_species": 59,
+              "out_of_fold_MAE_log1p_mg_per_g": 0.33474728,
+              "out_of_fold_R2_vs_global_mean_not_phylogenetic": -0.11868533,
+              "out_of_fold_RMSE_log1p_mg_per_g": 0.40633235,
+              "relative_RMSE_to_source_LOO_baseline": 1.03975245,
+              "strict_test_species_outside_own_train_set": true
+            },
+            "joint_six": {
+              "n_tested_original_ingroup_species": 59,
+              "out_of_fold_MAE_log1p_mg_per_g": 0.26833275,
+              "out_of_fold_R2_vs_global_mean_not_phylogenetic": 0.2785039,
+              "out_of_fold_RMSE_log1p_mg_per_g": 0.32632055,
+              "relative_RMSE_to_source_LOO_baseline": 0.8350125,
+              "strict_test_species_outside_own_train_set": true
+            },
+            "late_two": {
+              "n_tested_original_ingroup_species": 59,
+              "out_of_fold_MAE_log1p_mg_per_g": 0.29221277,
+              "out_of_fold_R2_vs_global_mean_not_phylogenetic": 0.16890701,
+              "out_of_fold_RMSE_log1p_mg_per_g": 0.3502291,
+              "relative_RMSE_to_source_LOO_baseline": 0.89619144,
+              "strict_test_species_outside_own_train_set": true
+            },
+            "train_mean_baseline": {
+              "n_tested_original_ingroup_species": 59,
+              "out_of_fold_MAE_log1p_mg_per_g": 0.33290785,
+              "out_of_fold_R2_vs_global_mean_not_phylogenetic": -0.03478002,
+              "out_of_fold_RMSE_log1p_mg_per_g": 0.3907972,
+              "relative_RMSE_to_source_LOO_baseline": 1,
+              "strict_test_species_outside_own_train_set": true
+            }
+          },
+          "phenotype_mean_log1p_mg_per_g": 0.39286352,
+          "pigment_chemical_response_is_NOT_visual_hue_or_ancestral_reexpression": true,
+          "source_original_zero_total_species": 6
+        },
+        "flavonols_log1p_total": {
+          "fixed_unretuned_ridge_lambda": 10,
+          "models": {
+            "CHI_only": {
+              "n_tested_original_ingroup_species": 59,
+              "out_of_fold_MAE_log1p_mg_per_g": 1.06285704,
+              "out_of_fold_R2_vs_global_mean_not_phylogenetic": -0.02260535,
+              "out_of_fold_RMSE_log1p_mg_per_g": 1.36901965,
+              "relative_RMSE_to_source_LOO_baseline": 0.99409986,
+              "strict_test_species_outside_own_train_set": true
+            },
+            "branch_three": {
+              "n_tested_original_ingroup_species": 59,
+              "out_of_fold_MAE_log1p_mg_per_g": 0.89878106,
+              "out_of_fold_R2_vs_global_mean_not_phylogenetic": 0.23166053,
+              "out_of_fold_RMSE_log1p_mg_per_g": 1.18667618,
+              "relative_RMSE_to_source_LOO_baseline": 0.86169298,
+              "strict_test_species_outside_own_train_set": true
+            },
+            "early_three": {
+              "n_tested_original_ingroup_species": 59,
+              "out_of_fold_MAE_log1p_mg_per_g": 1.12542784,
+              "out_of_fold_R2_vs_global_mean_not_phylogenetic": -0.2609988,
+              "out_of_fold_RMSE_log1p_mg_per_g": 1.52024292,
+              "relative_RMSE_to_source_LOO_baseline": 1.10390911,
+              "strict_test_species_outside_own_train_set": true
+            },
+            "joint_six": {
+              "n_tested_original_ingroup_species": 59,
+              "out_of_fold_MAE_log1p_mg_per_g": 0.88559008,
+              "out_of_fold_R2_vs_global_mean_not_phylogenetic": 0.2627104,
+              "out_of_fold_RMSE_log1p_mg_per_g": 1.16245114,
+              "relative_RMSE_to_source_LOO_baseline": 0.84410221,
+              "strict_test_species_outside_own_train_set": true
+            },
+            "late_two": {
+              "n_tested_original_ingroup_species": 59,
+              "out_of_fold_MAE_log1p_mg_per_g": 1.11436031,
+              "out_of_fold_R2_vs_global_mean_not_phylogenetic": -0.09388239,
+              "out_of_fold_RMSE_log1p_mg_per_g": 1.41592734,
+              "relative_RMSE_to_source_LOO_baseline": 1.0281614,
+              "strict_test_species_outside_own_train_set": true
+            },
+            "train_mean_baseline": {
+              "n_tested_original_ingroup_species": 59,
+              "out_of_fold_MAE_log1p_mg_per_g": 1.06485371,
+              "out_of_fold_R2_vs_global_mean_not_phylogenetic": -0.03478002,
+              "out_of_fold_RMSE_log1p_mg_per_g": 1.37714501,
+              "relative_RMSE_to_source_LOO_baseline": 1,
+              "strict_test_species_outside_own_train_set": true
+            }
+          },
+          "phenotype_mean_log1p_mg_per_g": 4.50552029,
+          "pigment_chemical_response_is_NOT_visual_hue_or_ancestral_reexpression": true,
+          "source_original_zero_total_species": 0
+        }
+      },
+      "fold_test_sizes_sorted": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "holdout_type": "species_LOO",
+      "n_folds": 59,
+      "n_original_ingroup_species": 59,
+      "refitted_train_only_scaling_and_intercept": true
+    }
+  },
+  "within_one_original_clade_and_author_dataset": true
+}
