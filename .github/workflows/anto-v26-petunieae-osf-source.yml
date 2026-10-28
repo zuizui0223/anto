@@ -1,0 +1,66 @@
+name: ANTO v26 source-only original Petunieae 2023 independent clade inventory
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'scripts/audit_petunieae_2023_osf_source_v26.py'
+      - 'tests/test_petunieae_2023_osf_source_v26.py'
+      - '.github/workflows/anto-v26-petunieae-osf-source.yml'
+  pull_request:
+    paths:
+      - 'scripts/audit_petunieae_2023_osf_source_v26.py'
+      - 'tests/test_petunieae_2023_osf_source_v26.py'
+      - 'docs/PETUNIEAE_2023_ORIGINAL_SOURCE_AND_PREDICTION_GATE_V26.md'
+      - 'results/petunieae_2023_osf_source_inventory_20261028.json'
+      - '.github/workflows/anto-v26-petunieae-osf-source.yml'
+      - 'README.md'
+permissions:
+  contents: read
+jobs:
+  original-osf-source-preflight:
+    runs-on: ubuntu-latest
+    timeout-minutes: 7
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Fail-closed original Petunieae source, taxonomy, path and claims tests
+        run: python -m unittest discover -s tests -p test_petunieae_2023_osf_source_v26.py -v
+      - name: Inspect official OSF 2023 source and unambiguously identify future raw-data tables
+        run: |
+          python scripts/audit_petunieae_2023_osf_source_v26.py --output /tmp/anto_petunieae_2023_inventory.json
+          python - <<'PY'
+          import json
+          d=json.load(open('/tmp/anto_petunieae_2023_inventory.json'))
+          assert d['schema']=='anto_v26_wheeler2023_original_petunieae_osf_qualified_source_inventory'
+          assert d['original_paper_DOI']=='10.1098/rspb.2023.0275'
+          assert d['original_2023_OSF_project']=='zg9cu'
+          assert d['original_author_declared_SRA_raw_RNA']=='PRJNA746328'
+          assert d['original_species_level_joint_expression_and_pigment_rows_parsed']==0
+          assert not d['original_2023_processed_expression_or_HPLC_bytes_downloaded']
+          assert d['new_provenance_matched_plant_functional_assays']==0
+          assert d['independent_evolutionary_regain_events_newly_measured']==0
+          assert d['source_only_not_cross_clade_predictive_validation']
+          assert d['Cirsium_empirical_owner']=='zuizui0223/aza3'
+          if d['source_manifest_admitted']:
+              assert d['node_metadata_available'] and d['folder_inventory_complete']
+              assert d['source_file_count_metadata_only']==len(d['source_file_records'])
+              assert d['small_tabular_candidate_count_metadata_only']==len(d['tabular_candidate_files'])
+          else:
+              assert not d['folder_inventory_complete']
+              assert d['status'].startswith(('SOURCE_NODE_METADATA_','SOURCE_TREE_'))
+          print('ANTO_V26_OSF_REAL_SOURCE_ADMISSION_STATUS',json.dumps({
+            'status':d['status'],
+            'inventory_admitted':d['source_manifest_admitted'],
+            'n_source_files':d.get('source_file_count_metadata_only',0),
+            'n_tabular_candidates':d.get('small_tabular_candidate_count_metadata_only',0),
+            'raw_specimens_analyzed':0,
+            'no_regain_rate_claim':True
+          },sort_keys=True))
+          PY
+      - uses: actions/upload-artifact@v4
+        with:
+          name: anto-v26-original-petunieae-2023-source-manifest-only
+          path: /tmp/anto_petunieae_2023_inventory.json
+          retention-days: 90
