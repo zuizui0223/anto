@@ -1,0 +1,154 @@
+name: ANTO v26 source-only original Petunieae 2023 independent clade inventory
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'scripts/audit_petunieae_2023_osf_source_v26.py'
+      - 'tests/test_petunieae_2023_osf_source_v26.py'
+      - 'scripts/audit_petunieae_2023_processed_files_v26.py'
+      - 'scripts/analyze_original_petunieae_2023_species_prediction_v26.py'
+      - 'tests/test_original_petunieae_2023_species_prediction_v26.py'
+      - 'tests/test_petunieae_2023_processed_files_v26.py'
+      - '.github/workflows/anto-v26-petunieae-osf-source.yml'
+  pull_request:
+    paths:
+      - 'scripts/audit_petunieae_2023_osf_source_v26.py'
+      - 'tests/test_petunieae_2023_osf_source_v26.py'
+      - 'docs/PETUNIEAE_2023_ORIGINAL_SOURCE_AND_PREDICTION_GATE_V26.md'
+      - 'results/petunieae_2023_osf_source_inventory_20261028.json'
+      - 'results/petunieae_2023_original_species_pigment_prediction_v26_20261028.json'
+      - '.github/workflows/anto-v26-petunieae-osf-source.yml'
+      - 'README.md'
+permissions:
+  contents: read
+jobs:
+  original-osf-source-preflight:
+    runs-on: ubuntu-latest
+    timeout-minutes: 7
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Fail-closed original Petunieae source, taxonomy, path and claims tests
+        run: python -m unittest discover -s tests -p test_petunieae_2023_osf_source_v26.py -v
+      - name: Validate exact five original processed file IDs and integrity gates
+        run: python -m unittest discover -s tests -p test_petunieae_2023_processed_files_v26.py -v
+      - name: Download FIVE registered small original processed files only (no raw RNA)
+        run: |
+          python scripts/audit_petunieae_2023_processed_files_v26.py --output /tmp/anto_petunieae_2023_processed_file_preflight.json
+          python - <<'PY'
+          import json
+          d=json.load(open('/tmp/anto_petunieae_2023_processed_file_preflight.json'))
+          assert d['original_paper_DOI']=='10.1098/rspb.2023.0275'
+          assert d['original_processed_file_count_expected']==5
+          assert d['Cirsium_empirical_owner']=='zuizui0223/aza3'
+          assert not d['independent_species_holdout_analysis_PERFORMED']
+          assert not d['full_functional_pathway_or_ancestral_regain_measured']
+          assert not d['natural_selection_heritable_return_or_fitness_estimated']
+          assert not d['original_2019_Iochrominae_RAR_source_restored']
+          if d['complete_joint_expression_pigment_source_verified']:
+              assert all(d['source_file_statuses'][k]['real_source_file_body_hash_verified']
+                         for k in ('expression_pigment_matched','pigment_mean','expression_gene_mean','species_tree_pruned'))
+          print('ANTO_V26_ORIGINAL_FIVE_FILE_SOURCE_STATUS',
+                json.dumps({'verified':{k:v['real_source_file_body_hash_verified'] for k,v in d['source_file_statuses'].items()},
+                            'n_rows_if_verified':{k:v.get('source_structure',{}).get('source_row_count') for k,v in d['source_file_statuses'].items()},
+                            'source_only':True},sort_keys=True))
+          for key,entry in d['source_file_statuses'].items():
+              s=entry.get('source_structure',{})
+              print('ANTO_V26_ORIGINAL_FILE_SCHEMA',json.dumps({
+                    'source':key,'status':entry['status'],
+                    'rows':s.get('source_row_count'),'cols':s.get('source_column_count'),
+                    'header':s.get('original_column_names',[]),
+                    'first_3_rows_first_12_cols':s.get('first_3_original_row_cells_per_column_first_12',[]),
+                    'first_6_firstcol':s.get('first_6_source_first_column_values',[])
+              },sort_keys=True))
+          PY
+      - name: Independent source-row matching, fixed-ridge and no-target-leakage tests
+        run: python -m unittest discover -s tests -p test_original_petunieae_2023_species_prediction_v26.py -v
+      - name: REAL processed 59 species anthocyanidin and flavonol species holdouts
+        run: |
+          python scripts/analyze_original_petunieae_2023_species_prediction_v26.py --output /tmp/anto_petunieae_2023_source_holdouts.json
+          python - <<'PY'
+          import json,math
+          d=json.load(open('/tmp/anto_petunieae_2023_source_holdouts.json'))
+          assert d['schema']=='anto_v26_original_2023_petunieae_species_pigment_expression_prediction'
+          assert d['source_reconciled']['original_author_processed_species_rows']==60
+          assert d['source_reconciled']['Petunieae_ingroup_species_rows']==59
+          assert d['source_reconciled']['Browallia_americana_outgroup_removed']
+          assert d['source_reconciled']['source_species_set_match_all_three_files']
+          assert d['source_reconciled']['source_original_pigment_cells_verified_by_independent_table']==540
+          assert d['source_reconciled']['source_original_gene_cells_verified_by_independent_table']==480
+          assert d['no_full_genetic_competence_or_causal_intervention_measured']
+          assert d['no_external_clade_transfer_or_transgenerational_fitness_validation']
+          assert d['not_a_phenotypic_visible_color_baseline_or_future_regain']
+          assert d['Cirsium_organismal_empirical_owner']=='zuizui0223/aza3'
+          for kind,fold in d['validation'].items():
+              assert fold['n_original_ingroup_species']==59
+              assert fold['refitted_train_only_scaling_and_intercept']
+              assert fold['code_prefix_is_NOT_verified_taxonomic_genus_or_an_independent_regain_clade']
+              for endpoint,info in fold['endpoints'].items():
+                  assert info['fixed_unretuned_ridge_lambda']==10
+                  models=info['models']
+                  assert len(models)==6
+                  assert models['train_mean_baseline']['relative_RMSE_to_source_LOO_baseline']==1.0
+                  assert all(z['n_tested_original_ingroup_species']==59 for z in models.values())
+                  assert all(math.isfinite(z['out_of_fold_RMSE_log1p_mg_per_g']) for z in models.values())
+          print('ANTO_V26_REAL_ORIGINAL_2023_PETUNIEAE_HOLDOUT_PASS',
+                json.dumps({'source_species':60,
+                            'ingroup_tested_once':59,
+                            'outgroup_removed':'BROW',
+                            'real_original_processed_data':True,
+                            'source_pigment_verified_cells':540,
+                            'source_gene_verified_cells':480,
+                            'not_ancestral_trait_regain_or_fitness':True},sort_keys=True))
+          print('ANTO_V26_REAL_SOURCE_HOLDOUT_RECEIPT',json.dumps(d,sort_keys=True,
+                                                         separators=(',',':'),ensure_ascii=False))
+          PY
+      - name: Verify frozen original processed species holdout when checked in
+        run: |
+          if [ -f results/petunieae_2023_original_species_pigment_prediction_v26_20261028.json ]; then
+            python scripts/analyze_original_petunieae_2023_species_prediction_v26.py \
+              --output /tmp/anto_petunieae_2023_source_holdouts_replay.json \
+              --expected results/petunieae_2023_original_species_pigment_prediction_v26_20261028.json
+          fi
+      - name: Inspect official OSF 2023 source and unambiguously identify future raw-data tables
+        run: |
+          python scripts/audit_petunieae_2023_osf_source_v26.py --output /tmp/anto_petunieae_2023_inventory.json
+          python - <<'PY'
+          import json
+          d=json.load(open('/tmp/anto_petunieae_2023_inventory.json'))
+          assert d['schema']=='anto_v26_wheeler2023_original_petunieae_osf_qualified_source_inventory'
+          assert d['original_paper_DOI']=='10.1098/rspb.2023.0275'
+          assert d['original_2023_OSF_project']=='zg9cu'
+          assert d['original_author_declared_SRA_raw_RNA']=='PRJNA746328'
+          assert d['original_species_level_joint_expression_and_pigment_rows_parsed']==0
+          assert not d['original_2023_processed_expression_or_HPLC_bytes_downloaded']
+          assert d['new_provenance_matched_plant_functional_assays']==0
+          assert d['independent_evolutionary_regain_events_newly_measured']==0
+          assert d['source_only_not_cross_clade_predictive_validation']
+          assert d['Cirsium_empirical_owner']=='zuizui0223/aza3'
+          if d['source_manifest_admitted']:
+              assert d['node_metadata_available'] and d['folder_inventory_complete']
+              assert d['source_file_count_metadata_only']==len(d['source_file_records'])
+              assert d['small_tabular_candidate_count_metadata_only']==len(d['tabular_candidate_files'])
+          else:
+              assert not d['folder_inventory_complete']
+              assert d['status'].startswith(('SOURCE_NODE_METADATA_','SOURCE_TREE_'))
+          print('ANTO_V26_OSF_REAL_SOURCE_ADMISSION_STATUS',json.dumps({
+            'status':d['status'],
+            'inventory_admitted':d['source_manifest_admitted'],
+            'n_source_files':d.get('source_file_count_metadata_only',0),
+            'n_tabular_candidates':d.get('small_tabular_candidate_count_metadata_only',0),
+            'raw_specimens_analyzed':0,
+            'no_regain_rate_claim':True
+          },sort_keys=True))
+          PY
+      - uses: actions/upload-artifact@v4
+        with:
+          name: anto-v26-original-petunieae-2023-source-manifest-and-five-byte-preflight
+          path: |
+            /tmp/anto_petunieae_2023_inventory.json
+            /tmp/anto_petunieae_2023_processed_file_preflight.json
+            /tmp/anto_petunieae_2023_source_holdouts.json
+          retention-days: 90
