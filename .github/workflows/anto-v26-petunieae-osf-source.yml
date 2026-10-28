@@ -51,6 +51,15 @@ jobs:
                 json.dumps({'verified':{k:v['real_source_file_body_hash_verified'] for k,v in d['source_file_statuses'].items()},
                             'n_rows_if_verified':{k:v.get('source_structure',{}).get('source_row_count') for k,v in d['source_file_statuses'].items()},
                             'source_only':True},sort_keys=True))
+          for key,entry in d['source_file_statuses'].items():
+              s=entry.get('source_structure',{})
+              print('ANTO_V26_ORIGINAL_FILE_SCHEMA',json.dumps({
+                    'source':key,'status':entry['status'],
+                    'rows':s.get('source_row_count'),'cols':s.get('source_column_count'),
+                    'header':s.get('original_column_names',[]),
+                    'first_3_rows_first_12_cols':s.get('first_3_original_row_cells_per_column_first_12',[]),
+                    'first_6_firstcol':s.get('first_6_source_first_column_values',[])
+              },sort_keys=True))
           PY
       - name: Inspect official OSF 2023 source and unambiguously identify future raw-data tables
         run: |
