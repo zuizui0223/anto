@@ -5,6 +5,8 @@ on:
     paths:
       - 'scripts/audit_petunieae_2023_osf_source_v26.py'
       - 'tests/test_petunieae_2023_osf_source_v26.py'
+      - 'scripts/audit_petunieae_2023_processed_files_v26.py'
+      - 'tests/test_petunieae_2023_processed_files_v26.py'
       - '.github/workflows/anto-v26-petunieae-osf-source.yml'
   pull_request:
     paths:
@@ -27,6 +29,29 @@ jobs:
           python-version: '3.11'
       - name: Fail-closed original Petunieae source, taxonomy, path and claims tests
         run: python -m unittest discover -s tests -p test_petunieae_2023_osf_source_v26.py -v
+      - name: Validate exact five original processed file IDs and integrity gates
+        run: python -m unittest discover -s tests -p test_petunieae_2023_processed_files_v26.py -v
+      - name: Download FIVE registered small original processed files only (no raw RNA)
+        run: |
+          python scripts/audit_petunieae_2023_processed_files_v26.py --output /tmp/anto_petunieae_2023_processed_file_preflight.json
+          python - <<'PY'
+          import json
+          d=json.load(open('/tmp/anto_petunieae_2023_processed_file_preflight.json'))
+          assert d['original_paper_DOI']=='10.1098/rspb.2023.0275'
+          assert d['original_processed_file_count_expected']==5
+          assert d['Cirsium_empirical_owner']=='zuizui0223/aza3'
+          assert not d['independent_species_holdout_analysis_PERFORMED']
+          assert not d['full_functional_pathway_or_ancestral_regain_measured']
+          assert not d['natural_selection_heritable_return_or_fitness_estimated']
+          assert not d['original_2019_Iochrominae_RAR_source_restored']
+          if d['complete_joint_expression_pigment_source_verified']:
+              assert all(d['source_file_statuses'][k]['real_source_file_body_hash_verified']
+                         for k in ('expression_pigment_matched','pigment_mean','expression_gene_mean','species_tree_pruned'))
+          print('ANTO_V26_ORIGINAL_FIVE_FILE_SOURCE_STATUS',
+                json.dumps({'verified':{k:v['real_source_file_body_hash_verified'] for k,v in d['source_file_statuses'].items()},
+                            'n_rows_if_verified':{k:v.get('source_structure',{}).get('source_row_count') for k,v in d['source_file_statuses'].items()},
+                            'source_only':True},sort_keys=True))
+          PY
       - name: Inspect official OSF 2023 source and unambiguously identify future raw-data tables
         run: |
           python scripts/audit_petunieae_2023_osf_source_v26.py --output /tmp/anto_petunieae_2023_inventory.json
@@ -61,6 +86,8 @@ jobs:
           PY
       - uses: actions/upload-artifact@v4
         with:
-          name: anto-v26-original-petunieae-2023-source-manifest-only
-          path: /tmp/anto_petunieae_2023_inventory.json
+          name: anto-v26-original-petunieae-2023-source-manifest-and-five-byte-preflight
+          path: |
+            /tmp/anto_petunieae_2023_inventory.json
+            /tmp/anto_petunieae_2023_processed_file_preflight.json
           retention-days: 90
