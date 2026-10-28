@@ -1,0 +1,154 @@
+{
+  "Cirsium_organismal_empirical_owner": "zuizui0223/aza3",
+  "date": "2026-10-28",
+  "horizon_target_separation": {
+    "ancestral_gene_function_native_vs_donor": "NO QUALIFYING SAME-PLANT CAUSAL EXPERIMENT HERE",
+    "categorical_fixed_white_vs_polymorphic_white_mechanism": "original authors' multivariate results; downstream DFR/ANS-related differences",
+    "continuous_chemical_amount": "original source-published PGLS table for anthocyanidins and flavonols; upstream CHI best among reported models",
+    "multi_generation_trait_reexpression": "NOT OBSERVED OR ESTIMATED",
+    "other_tissue_biochemistry": "2016 separately published original flower-leaf correlation; not a current full flower toolkit assay"
+  },
+  "no_natural_colour_return_or_ancestral_toolkit_function_confirmed": true,
+  "no_original_2019_individual_HPLC_qPCR_data_replayed": true,
+  "not_independent_plant_clades_or_same_original_individuals": true,
+  "not_posterior_gene_causal_probability_or_cross_clade_effect": true,
+  "original_2016_source": "10.1016/j.phytochem.2016.05.007",
+  "original_2019_source": "10.1002/dvdy.82",
+  "published_quantitative_outcomes": {
+    "anthocyanidins": {
+      "all_five": [
+        {
+          "model_weight_is_not_gene_causality_or_heldout_prediction": true,
+          "original_author_model": "Chi",
+          "printed_AIC": "66.2",
+          "reported_delta_AIC": "0.0",
+          "within_five_candidate_conditional_Akaike_weight": 0.997758915569
+        },
+        {
+          "model_weight_is_not_gene_causality_or_heldout_prediction": true,
+          "original_author_model": "F3h",
+          "printed_AIC": "78.4",
+          "reported_delta_AIC": "12.2",
+          "within_five_candidate_conditional_Akaike_weight": 0.002237841264
+        },
+        {
+          "model_weight_is_not_gene_causality_or_heldout_prediction": true,
+          "original_author_model": "Chi+F3h",
+          "printed_AIC": "92.0",
+          "reported_delta_AIC": "25.8",
+          "within_five_candidate_conditional_Akaike_weight": 0.000002492452
+        },
+        {
+          "model_weight_is_not_gene_causality_or_heldout_prediction": true,
+          "original_author_model": "Chs",
+          "printed_AIC": "94.4",
+          "reported_delta_AIC": "28.2",
+          "within_five_candidate_conditional_Akaike_weight": 7.50712e-7
+        },
+        {
+          "model_weight_is_not_gene_causality_or_heldout_prediction": true,
+          "original_author_model": "Ans",
+          "printed_AIC": "119.3",
+          "reported_delta_AIC": "53.1",
+          "within_five_candidate_conditional_Akaike_weight": 3e-12
+        }
+      ],
+      "best_vs_runner_up_delta_AIC": "12.2",
+      "conditional_Chi_weight_among_only_five_printed": 0.997758915569,
+      "full_candidate_set_completeness_unverified": true,
+      "model_fits_not_independently_recomputed": true,
+      "n_listed_candidates": 5,
+      "printed_AIC_values_rounded_to_one_decimal": true,
+      "published_best_model": "Chi",
+      "published_runner_up": "F3h",
+      "relative_best_vs_runner_up_AIC_evidence_ratio": 445.85777,
+      "relative_best_vs_runner_up_ratio_interval_for_rounded_AIC_plusminus_0p05": [
+        424.11303,
+        468.717387
+      ],
+      "response": "anthocyanidins"
+    },
+    "flavonols": {
+      "all_five": [
+        {
+          "model_weight_is_not_gene_causality_or_heldout_prediction": true,
+          "original_author_model": "Chi",
+          "printed_AIC": "65.0",
+          "reported_delta_AIC": "0.0",
+          "within_five_candidate_conditional_Akaike_weight": 0.992963340356
+        },
+        {
+          "model_weight_is_not_gene_causality_or_heldout_prediction": true,
+          "original_author_model": "F3h",
+          "printed_AIC": "74.9",
+          "reported_delta_AIC": "9.9",
+          "within_five_candidate_conditional_Akaike_weight": 0.007033565391
+        },
+        {
+          "model_weight_is_not_gene_causality_or_heldout_prediction": true,
+          "original_author_model": "Chi+F3h",
+          "printed_AIC": "90.6",
+          "reported_delta_AIC": "25.6",
+          "within_five_candidate_conditional_Akaike_weight": 0.000002741346
+        },
+        {
+          "model_weight_is_not_gene_causality_or_heldout_prediction": true,
+          "original_author_model": "Chs",
+          "printed_AIC": "94.7",
+          "reported_delta_AIC": "29.7",
+          "within_five_candidate_conditional_Akaike_weight": 3.52907e-7
+        },
+        {
+          "model_weight_is_not_gene_causality_or_heldout_prediction": true,
+          "original_author_model": "Ans",
+          "printed_AIC": "128.0",
+          "reported_delta_AIC": "63.0",
+          "within_five_candidate_conditional_Akaike_weight": 0
+        }
+      ],
+      "best_vs_runner_up_delta_AIC": "9.9",
+      "conditional_Chi_weight_among_only_five_printed": 0.992963340356,
+      "full_candidate_set_completeness_unverified": true,
+      "model_fits_not_independently_recomputed": true,
+      "n_listed_candidates": 5,
+      "printed_AIC_values_rounded_to_one_decimal": true,
+      "published_best_model": "Chi",
+      "published_runner_up": "F3h",
+      "relative_best_vs_runner_up_AIC_evidence_ratio": 141.174964,
+      "relative_best_vs_runner_up_ratio_interval_for_rounded_AIC_plusminus_0p05": [
+        134.28978,
+        148.413159
+      ],
+      "response": "flavonols"
+    }
+  },
+  "published_tissue_metabolite_correlations": {
+    "between_tissue_pairs_abs_r_at_least_0p5": 2,
+    "flower_to_leaf_cross_tissue_r_not_zero_or_universally_strong": true,
+    "one_published_matrix_not_36_independent_plant_experiments": true,
+    "original_published_matrix_dimensions": 9,
+    "printed_phylogenetic_lambda": "0.342",
+    "published_correlation_biological_individuals": 26,
+    "published_correlation_species": 9,
+    "selected_original_printed_r": {
+      "cross_petal_di_antho_vs_leaf_di_flav": "3/5",
+      "cross_petal_di_antho_vs_leaf_mono_flav": "27/50",
+      "within_leaf_mono_flav_vs_di_flav": "24/25",
+      "within_petal_di_antho_vs_di_flav": "17/25",
+      "within_petal_mono_flav_vs_di_flav": "39/50",
+      "within_petal_tri_antho_vs_tri_flav": "13/25"
+    },
+    "source_pairwise_significance_not_retested": true,
+    "unique_between_tissue_pairs": 18,
+    "unique_within_tissue_pairs": 18,
+    "within_tissue_pairs_abs_r_at_least_0p5": 4
+  },
+  "real_original_published_source_tables": "2016 Berardi Table2 + 2019 Larter Table2",
+  "schema": "anto_v25_original_literature_endpoint_separation_flavonoid_evidence",
+  "source_reported_white_fixed_vs_white_morph_gene_expression_class_contrast": {
+    "does_not_equal_quantitative_pigment_PGLS_ranking": true,
+    "new_held_out_classification_model_fitted_by_ANTO": false,
+    "original_paper_claim": "Fixed-white species show large late DFR/ANS expression reductions; most within-species acyanic morphs resemble pigmented conspecific expression profiles.",
+    "source": "Larter et al. 2019 Results 3.3, Figs. 5 and 6; original author's descriptive/class-separation finding"
+  }
+}
