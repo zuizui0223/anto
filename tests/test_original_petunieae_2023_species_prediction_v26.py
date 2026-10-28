@@ -146,6 +146,7 @@ class OriginalPetunieaeProcessedSpeciesHoldoutV26(unittest.TestCase):
             train,modified,"anthocyanidins_log1p_total",("CHI",)))
         self.assertNotEqual(predicted,ridge_predict(
             train,test,"anthocyanidins_log1p_total",()))
+        self.assertNotEqual(predicted,test["responses"]["anthocyanidins_log1p_total"])
 
     def test_species_and_prefix_group_folds_never_reuse_test_species_as_train(self):
         samples=sample_panel()
