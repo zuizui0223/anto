@@ -26,6 +26,8 @@ Larter, Dunbar-Wallis, Berardi & Smith (2019), *Developmental Dynamics*, DOI [10
 
 取得用[スクリプト](../scripts/audit_larter_2019_original_dryad_v23.py)は、公式3経路だけを利用し、元MD5と正しいファイル長・RAR署名を確認しない限り試料データを認めない。HTMLのアクセス確認画面、途中で途切れた配布、誤ったZIPや偽RARは全て拒否する。RARのバイト列はGitHubに再配布しない。元原本を別経路で適法に得られた場合は、同スクリプトの --from-local-rar オプションで同じ完全性ゲートを実行できる。
 
+**2026-10-28追補：** 原RARが取得不能でも、[原著の公開Table 1の6種のmorph頻度と意図的採集標本数を再集計したv24](IOCHROMA_2019_MORPH_ASCERTAINMENT_V24.md)は完了した。これは**論文で印刷された種別の推定頻度・採集標本数だけ**の計算で、元個体別のRNA/HPLCのデータ取得や再解析を意味しない。
+
 ## 元個体別データが確認できた場合の解析契約（未実施）
 
 1. 元RAR内部の個体ID、種名、種内morph、花器官、採取時期、field/greenhouse、HPLC・qPCRのリンクを復元する。独立な個体、技術反復、種、独立進化事象を混同しない。
