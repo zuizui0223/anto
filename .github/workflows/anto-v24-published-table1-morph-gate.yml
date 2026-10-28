@@ -1,0 +1,92 @@
+name: ANTO v24 original published Larter 2019 morph ascertainment
+on:
+  pull_request:
+    paths:
+      - 'data/external/larter_2019_published_table1_morph_sampling_v24.json'
+      - 'scripts/audit_larter2019_published_morph_sampling_v24.py'
+      - 'tests/test_larter2019_published_morph_sampling_v24.py'
+      - 'results/larter2019_morph_ascertainment_v24_20261028.json'
+      - 'docs/IOCHROMA_2019_MORPH_ASCERTAINMENT_V24.md'
+      - '.github/workflows/anto-v24-published-table1-morph-gate.yml'
+      - 'README.md'
+  push:
+    branches: [main]
+    paths:
+      - 'data/external/larter_2019_published_table1_morph_sampling_v24.json'
+      - 'scripts/audit_larter2019_published_morph_sampling_v24.py'
+      - 'tests/test_larter2019_published_morph_sampling_v24.py'
+      - 'results/larter2019_morph_ascertainment_v24_20261028.json'
+      - '.github/workflows/anto-v24-published-table1-morph-gate.yml'
+permissions:
+  contents: read
+jobs:
+  original-published-source-and-observation-grain:
+    runs-on: ubuntu-latest
+    timeout-minutes: 6
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Recheck original 2016 accession source grain and 2019 source gate
+        run: |
+          python -m unittest discover -s tests -p test_afterlife_empirical_admissibility_v19.py -v
+          python -m unittest discover -s tests -p test_larter_2019_original_dryad_v23.py -v
+      - name: Original published Table1 audit and negative controls
+        run: python -m unittest discover -s tests -p test_larter2019_published_morph_sampling_v24.py -v
+      - name: Independently recompute six species fractions and strict evidence boundary
+        run: |
+          python scripts/audit_larter2019_published_morph_sampling_v24.py --output /tmp/anto_larter2019_v24.json
+          python - <<'PY'
+          import json
+          from fractions import Fraction as F
+          p='/tmp/anto_larter2019_v24.json'
+          d=json.load(open(p))
+          assert d['original_2019_article_DOI']=='10.1002/dvdy.82'
+          assert d['original_2019_table']=='Table 1, original published page 1094'
+          assert d['individually_measured_2019_gene_expression_or_HPLC_obtained'] is False
+          assert d['rar_original_source_gate_currently_blocked']
+          assert d['source_percentages_are_rounded_estimates_not_integer_raw_white_counts']
+          assert d['original_survey_mixed_herbarium_and_field_not_unbiased_iid']
+          assert d['no_new_estimated_genetic_ancestral_regain_or_functional_retention_rate']
+          assert d['2016_original_22taxon_new_KT_panel_overlap_species']==5
+          assert d['2016_unmatched_source_taxon']=='Saracha punctata'
+          rare=d['rare_below_2percent_published_frequency_4_species']
+          all_six=d['all_six_published_polymorphic_species']
+          assert rare['intentionally_recruited_acyanic']==7
+          assert rare['intentionally_recruited_total']==19
+          assert rare['original_mixed_field_herbarium_surveyed_total']==675
+          assert rare['survey_n_weighted_original_PUBLISHED_estimated_frequency']=='1/75'
+          assert rare['relative_acyanic_enrichment_of_experimental_composition']=='525/19'
+          assert all_six['intentionally_recruited_acyanic']==12
+          assert all_six['intentionally_recruited_total']==30
+          assert all_six['original_mixed_field_herbarium_surveyed_total']==1025
+          assert all_six['survey_n_weighted_original_PUBLISHED_estimated_frequency']=='69/410'
+          assert len(d['published_species'])==6
+          yellow=[x for x in d['published_species'] if x['acyanic_morph_is_yellow_not_white']]
+          assert [x['published_2019_taxon'] for x in yellow]==['Iochroma parvifolium']
+          assert d['Cirsium_empirical_owner']=='zuizui0223/aza3'
+          print('ANTO_V24_PUBLISHED_ORIGINAL_SOURCE_TABLE1_PASS',json.dumps({
+             'original_species':6,
+             'mixed_survey_n':1025,
+             'intentionally_recruited_morph_n':30,
+             'rare_morph_sampling_enrichment_ratio':rare['relative_acyanic_enrichment_of_experimental_composition'],
+             '2019_raw_HPLC_reanalyzed':False,
+             'matched_molecular_2016_taxa_not_same_individuals':5,
+          },sort_keys=True))
+          s=json.dumps(d,sort_keys=True,separators=(',',':'),ensure_ascii=False)
+          for i in range(0,len(s),2900):
+              print('ANTO_V24_EXACT_PUBLISHED_TABLE1_RECEIPT_CHUNK',i//2900,s[i:i+2900])
+          PY
+      - name: Strictly compare frozen receipt if checked in
+        run: |
+          if [ -f results/larter2019_morph_ascertainment_v24_20261028.json ]; then
+            python scripts/audit_larter2019_published_morph_sampling_v24.py \
+              --output /tmp/anto_v24_frozen.json \
+              --expected results/larter2019_morph_ascertainment_v24_20261028.json
+          fi
+      - uses: actions/upload-artifact@v4
+        with:
+          name: anto-v24-published-author-table1-ascertainment-not-original-HPLC
+          path: /tmp/anto_larter2019_v24.json
+          retention-days: 90
