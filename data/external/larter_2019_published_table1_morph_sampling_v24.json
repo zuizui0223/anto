@@ -1,0 +1,72 @@
+{
+  "schema": "anto_larter_2019_original_published_table1_acyanic_morph_sampling_v24",
+  "date_extracted": "2026-10-28",
+  "authors": "Larter, Dunbar-Wallis, Berardi and Smith",
+  "year": 2019,
+  "paper_title": "Developmental control of convergent floral pigmentation across evolutionary timescales",
+  "paper_DOI": "10.1002/dvdy.82",
+  "source_type": "published_2019_article_Table_1_manual_source_transcription_not_Dryad_RAR",
+  "source_PDF": "https://par.nsf.gov/servlets/purl/10431252",
+  "source_table_location": "published article page 1094 Table 1; source PDF page index 3",
+  "original_RAR_expected_DOI": "10.5061/dryad.p5dq84v",
+  "source_note": "Original paper reports estimated acyanic morph frequency from herbarium records and natural population observations. Counts in last column are numbers of individuals surveyed, not independent random draws from a uniform natural population. Experimental morph samples are purposeful flower-bud study specimens. Frequencies are originally rounded published estimates and not unrounded raw individual counts.",
+  "phenotype_note": "Paper calls both white and yellow acyanic morphs 'white' for simplicity; Iochroma parvifolium is explicitly purple/yellow, not literal purple/white.",
+  "original_sample_pair_order": "pigmented/acyanic",
+  "survey_frequency_rounding": "original printed percentage, one decimal for first four; whole integer for last two",
+  "rows": [
+    {
+      "published_taxon": "Eriolarynx fasciculata",
+      "color_labels": "purple/white",
+      "pigmented_sampled": 3,
+      "acyanic_sampled": 3,
+      "estimated_acyanic_frequency_percent": "1.8",
+      "surveyed_individuals": 225
+    },
+    {
+      "published_taxon": "Iochroma calycinum",
+      "color_labels": "purple/white",
+      "pigmented_sampled": 3,
+      "acyanic_sampled": 1,
+      "estimated_acyanic_frequency_percent": "0.9",
+      "surveyed_individuals": 225
+    },
+    {
+      "published_taxon": "Iochroma cyaneum",
+      "color_labels": "purple/white",
+      "pigmented_sampled": 3,
+      "acyanic_sampled": 2,
+      "estimated_acyanic_frequency_percent": "1.3",
+      "surveyed_individuals": 150
+    },
+    {
+      "published_taxon": "Iochroma parvifolium",
+      "color_labels": "purple/yellow",
+      "pigmented_sampled": 3,
+      "acyanic_sampled": 1,
+      "estimated_acyanic_frequency_percent": "1.3",
+      "surveyed_individuals": 75
+    },
+    {
+      "published_taxon": "Iochroma umbellatum",
+      "color_labels": "purple/white",
+      "pigmented_sampled": 3,
+      "acyanic_sampled": 3,
+      "estimated_acyanic_frequency_percent": "57",
+      "surveyed_individuals": 200
+    },
+    {
+      "published_taxon": "Saracha punctata",
+      "color_labels": "purple/white",
+      "pigmented_sampled": 3,
+      "acyanic_sampled": 2,
+      "estimated_acyanic_frequency_percent": "33",
+      "surveyed_individuals": 150
+    }
+  ],
+  "raw_2019_individual_HPLC_qPCR_retrieved": false,
+  "original_2019_RAR_bytes_retrieved": false,
+  "new_plant_assays_or_regain_events": false,
+  "no_original_survey_acyanic_counts_inferred_from_rounded_percentages": true,
+  "no_binomial_convenience_interval_from_mixed_survey": true,
+  "Cirsium_empirical_owner": "zuizui0223/aza3"
+}
