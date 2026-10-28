@@ -51,8 +51,8 @@ class Larter2019PublishedMorphAscertainmentV24(unittest.TestCase):
         self.assertEqual(rare["experimental_acyanic_sample_fraction"],F(7,19))
         self.assertEqual(rare["survey_n_weighted_original_PUBLISHED_estimated_frequency"],F(1,75))
         self.assertEqual(rare["relative_acyanic_enrichment_of_experimental_composition"],F(525,19))
-        self.assertGreater(rare["relative_acyanic_enrichment_rounding_interval_not_sampling_CI"][0],26)
-        self.assertLess(rare["relative_acyanic_enrichment_rounding_interval_not_sampling_CI"][1],29)
+        self.assertGreater(rare["relative_enrichment_rounding_interval_not_sampling_CI"][0],26)
+        self.assertLess(rare["relative_enrichment_rounding_interval_not_sampling_CI"][1],29)
         self.assertTrue(rare["not_a_census_or_sampling_based_population_prevalence"])
 
     def test_full_six_morphs_are_fourty_percent_of_targeted_samples_not_population(self):
