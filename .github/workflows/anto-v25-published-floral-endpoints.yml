@@ -1,0 +1,89 @@
+name: ANTO v25 original published tissue-specific pigment endpoints
+on:
+  pull_request:
+    paths:
+      - 'data/external/iochrominae_2016_tissues_2019_pigment_aic_published_v25.json'
+      - 'scripts/audit_published_floral_endpoint_models_v25.py'
+      - 'tests/test_published_floral_endpoint_models_v25.py'
+      - 'docs/IOCHROMINAE_V25_ENDPOINT_SPECIFIC_FLORAL_CHEMISTRY.md'
+      - 'results/iochrominae_published_pathway_endpoint_v25_20261028.json'
+      - '.github/workflows/anto-v25-published-floral-endpoints.yml'
+      - 'README.md'
+  push:
+    branches: [main]
+    paths:
+      - 'data/external/iochrominae_2016_tissues_2019_pigment_aic_published_v25.json'
+      - 'scripts/audit_published_floral_endpoint_models_v25.py'
+      - 'tests/test_published_floral_endpoint_models_v25.py'
+      - 'results/iochrominae_published_pathway_endpoint_v25_20261028.json'
+      - '.github/workflows/anto-v25-published-floral-endpoints.yml'
+permissions:
+  contents: read
+jobs:
+  published-original-source-evidence:
+    runs-on: ubuntu-latest
+    timeout-minutes: 6
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Verify original 2019 Dryad abstention and 2019 printed Table 1
+        run: |
+          python -m unittest discover -s tests -p test_larter_2019_original_dryad_v23.py -v
+          python -m unittest discover -s tests -p test_larter2019_published_morph_sampling_v24.py -v
+      - name: Validate original published 2016 tissue and 2019 pigment model data without refitting
+        run: python -m unittest discover -s tests -p test_published_floral_endpoint_models_v25.py -v
+      - name: Reproduce conditional reported-five AIC evidence and source correlation summary
+        run: |
+          python scripts/audit_published_floral_endpoint_models_v25.py --output /tmp/anto_v25.json
+          python - <<'PY'
+          import json
+          from math import isclose
+          d=json.load(open('/tmp/anto_v25.json'))
+          assert d['schema']=='anto_v25_original_literature_endpoint_separation_flavonoid_evidence'
+          assert d['not_independent_plant_clades_or_same_original_individuals']
+          assert d['no_original_2019_individual_HPLC_qPCR_data_replayed']
+          assert d['no_natural_colour_return_or_ancestral_toolkit_function_confirmed']
+          assert d['not_posterior_gene_causal_probability_or_cross_clade_effect']
+          assert d['Cirsium_organismal_empirical_owner']=='zuizui0223/aza3'
+          a=d['published_quantitative_outcomes']['anthocyanidins']
+          b=d['published_quantitative_outcomes']['flavonols']
+          assert a['published_best_model']==b['published_best_model']=='Chi'
+          assert a['best_vs_runner_up_delta_AIC']=='12.2'
+          assert b['best_vs_runner_up_delta_AIC']=='9.9'
+          assert isclose(a['relative_best_vs_runner_up_AIC_evidence_ratio'],445.857770,abs_tol=1e-5)
+          assert isclose(b['relative_best_vs_runner_up_AIC_evidence_ratio'],141.174964,abs_tol=1e-5)
+          assert a['full_candidate_set_completeness_unverified']
+          assert b['full_candidate_set_completeness_unverified']
+          r=d['published_tissue_metabolite_correlations']
+          assert r['published_correlation_biological_individuals']==26
+          assert r['published_correlation_species']==9
+          assert r['unique_within_tissue_pairs']==18
+          assert r['unique_between_tissue_pairs']==18
+          assert r['selected_original_printed_r']['within_petal_di_antho_vs_di_flav']=='17/25'
+          assert r['selected_original_printed_r']['within_leaf_mono_flav_vs_di_flav']=='24/25'
+          assert d['source_reported_white_fixed_vs_white_morph_gene_expression_class_contrast']['new_held_out_classification_model_fitted_by_ANTO'] is False
+          print('ANTO_V25_PUBLISHED_ENDPOINT_SOURCE_PASS',json.dumps({
+               '2019_anthocyanidin_Chi_F3h_delta_AIC':'12.2',
+               '2019_flavonol_Chi_F3h_delta_AIC':'9.9',
+               '2016_tissue_correlation_individuals':26,
+               '2019_original_RAR_reanalyzed':False,
+               'two_papers_NOT_independent_regain_clades':True
+          },sort_keys=True))
+          compact=json.dumps(d,sort_keys=True,ensure_ascii=False,separators=(',',':'))
+          for i in range(0,len(compact),2900):
+              print('ANTO_V25_EXACT_PUBLISHED_ENDPOINT_RECEIPT_CHUNK',i//2900,compact[i:i+2900])
+          PY
+      - name: Verify frozen machine-readable data once checked in
+        run: |
+          if [ -f results/iochrominae_published_pathway_endpoint_v25_20261028.json ]; then
+            python scripts/audit_published_floral_endpoint_models_v25.py \
+              --output /tmp/anto_v25_again.json \
+              --expected results/iochrominae_published_pathway_endpoint_v25_20261028.json
+          fi
+      - uses: actions/upload-artifact@v4
+        with:
+          name: anto-v25-original-publication-AIC-and-tissue-correlation-no-2019-raw
+          path: /tmp/anto_v25.json
+          retention-days: 90
