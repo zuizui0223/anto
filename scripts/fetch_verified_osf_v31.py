@@ -7,6 +7,7 @@ from __future__ import annotations
 import argparse
 from concurrent.futures import ThreadPoolExecutor
 import json
+import re
 from pathlib import Path
 from urllib.parse import urlsplit
 from urllib.request import Request, urlopen
@@ -30,7 +31,9 @@ def metadata_download(document, record):
             raise ValueError('OSF_METADATA_PROJECT_MISMATCH')
         allowed=(u.hostname=='files.osf.io' and u.path.rstrip('/')==
                  f"/v1/resources/{PROJECT}/providers/osfstorage/{record['file_id']}") or (
-                 u.hostname=='osf.io' and u.path.rstrip('/')==f"/download/{record['file_id']}")
+                 u.hostname=='osf.io' and (
+                     re.fullmatch(r'/download/[A-Za-z0-9]{5,24}/?',u.path) or
+                     re.fullmatch(r'/[A-Za-z0-9]{5}/download/?',u.path)))
         if u.scheme!='https' or u.username or u.password or not allowed:
             raise ValueError('OSF_UNREGISTERED_DOWNLOAD_LINK')
         return link
@@ -64,6 +67,8 @@ def main():
         try:
             raw=retrieve(f"https://api.osf.io/v2/files/{record['file_id']}/",1000000)
             doc=json.loads(raw)
+            status['api_download_host']=urlsplit(doc.get('data',{}).get('links',{}).get('download','')).hostname
+            status['api_download_path']=urlsplit(doc.get('data',{}).get('links',{}).get('download','')).path
             link=metadata_download(doc,record)
             status['metadata_verified']=True
             status['official_download_host']=urlsplit(link).hostname
