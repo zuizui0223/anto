@@ -20,6 +20,11 @@ class SourceTransport(unittest.TestCase):
     def test_original_official_download_link(self):
         self.assertEqual(m.metadata_download(self.doc,self.record),self.doc['data']['links']['download'])
 
+    def test_official_metadata_short_guid_download_still_uses_pinned_body(self):
+        for link in ('https://osf.io/ab12c/download', 'https://osf.io/download/ab12c/'):
+            self.doc['data']['links']['download']=link
+            self.assertEqual(m.metadata_download(self.doc,self.record),link)
+
     def test_foreign_project_or_file_cannot_be_substituted(self):
         self.doc['data']['id']='b'*24
         with self.assertRaises(ValueError):m.metadata_download(self.doc,self.record)
