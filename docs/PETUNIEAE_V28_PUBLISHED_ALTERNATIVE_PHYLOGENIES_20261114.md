@@ -38,3 +38,33 @@ All original source trees, source processed HPLC/RNA observations and unredacted
 **Claim ceiling:** a retrospective published-phylogeny sensitivity of species-level current flower pigment chemistry. No direct causal gene function, phenotype-state regain, 2024 independent chemical study, future floral persistence, or joint ANTO×EGWE×izu-core natural mechanism is identified. The real Cirsium organismal study stays in aza3.
 
 **Pre-readout state: no new v28 model outcomes yet examined.**
+
+
+## Authenticated v28 results and important limitations (2026-11-14)
+
+First original-source GitHub Actions success: https://github.com/zuizui0223/anto/actions/runs/43583999875 . All three Wheeler 2023 original processed CSVs and original Newick are hash-verified, the **previous v26 AND v27 results are reconstructed exactly**, and the Pezzi 2024 ASTRAL tree, IQ-TREE and sample mapping satisfy all author-file byte-length and Git-blob SHA-1 source pins. These are not arbitrary in-code trees. The declared **31 focal species** and **37 including author-OUT species** were recovered exactly. No rejected source data or taxon aliases were silently replaced.
+
+### Main fixed 31 focal-species panel: branch-three versus same-fold training mean
+
+| Published tree definition | Max heldout tips | Heldout blocks / multi-species | Anthocyanidin RMSE reduction | Flavonol RMSE reduction |
+| --- | ---: | ---: | ---: | ---: |
+| Wheeler 2023 original 11-gene tree | 8 | 7 / 6 | **12.6208%** | **9.8195%** |
+| Pezzi 2024 ASTRAL species-assigned | 8 | 7 / 6 | **12.6208%** | **9.8195%** |
+| Pezzi 2024 IQ-TREE first sample/species | 8 | 7 / 6 | **12.5520%** | **10.3590%** |
+| All three tree definitions | 15 | 3 / 3 | **11.1933%** | **10.4002%** |
+
+All **12** predeclared directional comparisons improve, so the narrowly worded **descriptive numerical gate passes**. Alternative original OUT rooting with PLNY, last/middle original IQTREE samples, and all-37-taxon secondary panels also retain positive branch-three RMSE improvement; they are **methodological sensitivities on the exact same original pigment data**, not independent biological confirmations. Keep all other five predictors and all negative cases in the frozen result JSON.
+
+### Crucial post-result identity audit: numerical agreement is largely because the partitions are IDENTICAL
+
+Exact fold membership was compared **after** the original runs, not used to choose cutoffs or models.
+
+- For the **15-tip limit**, all three trees produce **the very same three test blocks** for the 31 shared focal species. Hence the three identical numerical RMSE values are **literally one reused holdout design**, not three independent topology challenges.
+- For the **8-tip limit**, Wheeler 2023 and Pezzi 2024 ASTRAL have **identical seven test blocks**. Only the IQTREE first-sample tree changes some assignments; its predictively modest differences are not enough to establish that uncertain shallow topology is harmless.
+- The alternate published tree samples and roots are not posterior phylogenetic uncertainty draws, and the overlapping focal source is smaller than the original v27 59-species panel. The apparent reduction from v27's 16–18% to v28's 10–13% mixes **changed species sampling and changed heldout partitions**, not a simple decline attributable to phylogeny.
+
+**Therefore a scientifically stronger claim that branch-three pigment predictions are robust across genuinely discordant test clades is NOT justified by this v28 alone.** The positive empirical conclusion is narrower: within these 31 shared focal species and the realized coarse holdout partitions, current chemical totals remain partly predictable from branch-pathway gene expression.
+
+This audit mandates an explicitly **separate, post-v28 exploratory follow-up** at finer tree-defined partitions that actually differ, without silently promoting it into the v28 predeclared test.
+
+Full original-source-derived frozen numerical receipt (all modules, folds, reference digests, secondary negatives): ../results/petunieae_alternative_published_phylogenies_v28_20261114.json . Dedicated workflow: ../.github/workflows/anto-v28-published-phylogenies.yml .
