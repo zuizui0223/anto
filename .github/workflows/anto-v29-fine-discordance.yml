@@ -1,0 +1,64 @@
+name: ANTO v29 fine discordant published clades and destructive-label references
+
+on:
+  push:
+    branches:
+      - 'analysis/anto-v29-*'
+    paths:
+      - 'scripts/analyze_original_petunieae_fine_discordance_v29.py'
+      - 'tests/test_original_petunieae_fine_discordance_v29.py'
+      - 'results/petunieae_fine_discordance_label_reference_v29_20261114.json'
+      - 'docs/PETUNIEAE_V29_DISCORDANT_FINE_FOLDS_20261114.md'
+      - '.github/workflows/anto-v29-fine-discordance.yml'
+  pull_request:
+    paths:
+      - 'scripts/analyze_original_petunieae_fine_discordance_v29.py'
+      - 'tests/test_original_petunieae_fine_discordance_v29.py'
+      - 'results/petunieae_fine_discordance_label_reference_v29_20261114.json'
+      - 'docs/PETUNIEAE_V29_DISCORDANT_FINE_FOLDS_20261114.md'
+      - '.github/workflows/anto-v29-fine-discordance.yml'
+
+permissions:
+  contents: read
+
+jobs:
+  original-tree-discordance:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Adverse topology identity, complete fold, deterministic label-reference tests
+        run: python -m unittest discover -s tests -p test_original_petunieae_fine_discordance_v29.py -v
+      - name: Keep v28 original source checks and species-vs-individual controls
+        run: python -m unittest discover -s tests -p test_original_petunieae_alternative_trees_v28.py -v
+      - name: Authenticate and replay original 2023/2024 sources then evaluate all five fine true-tree cuts
+        run: |
+          python scripts/analyze_original_petunieae_fine_discordance_v29.py \
+            --expected-v26 results/petunieae_2023_original_species_pigment_prediction_v26_20261028.json \
+            --expected-v27 results/petunieae_original_tree_clade_holdout_v27_20261114.json \
+            --expected-v28 results/petunieae_alternative_published_phylogenies_v28_20261114.json \
+            --output /tmp/anto_v29_fine_discordance_and_label_reference.json
+      - name: Verify freeze if derived-only original receipt has been committed
+        run: |
+          if [ -f results/petunieae_fine_discordance_label_reference_v29_20261114.json ]; then
+            python - <<'PY'
+          import json
+          frozen=json.load(open('results/petunieae_fine_discordance_label_reference_v29_20261114.json'))
+          current=json.load(open('/tmp/anto_v29_fine_discordance_and_label_reference.json'))
+          assert frozen==current, 'V29_ORIGINAL_TREE_SOURCE_READOUT_DRIFT'
+          assert current['species_n']==31
+          assert current['pre_frozen_fine_maximum_clade_size_caps']==[2,3,4,5,6]
+          assert all(z['draws_count']==99 for z in current['size_matched_label_random_controls'].values())
+          assert current['original_source_v26_v27_v28_exact_replay_passed']
+          assert current['same_size_random_reference_is_not_a_valid_phylogenetic_permutation_test']
+          print('ANTO_V29_REAL_SOURCE_FINE_FOLDS_LABEL_REFERENCE_REPLAY_VERIFIED')
+          PY
+          fi
+      - uses: actions/upload-artifact@v4
+        with:
+          name: anto-v29-actual-Petunieae-published-discordant-fine-folds-and-size-null
+          path: /tmp/anto_v29_fine_discordance_and_label_reference.json
+          retention-days: 90
