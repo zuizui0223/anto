@@ -35,6 +35,7 @@ BRANCH_GENES = ("F3primeH","F35H","FLS")
 EXPECTED_ORIGINAL_SOURCE_SPECIES = 59
 EXPECTED_SHARED_FOCAL_SPECIES = 31
 PAT_UNIT = "published_2023_Newick_branch_length_units_not_calibrated_years"
+RELATIVE_WITHIN_BLOCK_GAP_RMS_MIN = 1e-6  # numerical resolution guard; not a fitted effect threshold
 
 
 def patristic_pairs(tree):
@@ -155,27 +156,55 @@ def round_or_none(x,digits=7):
 
 
 def within_block_corr(records, xkey, ykey):
+    """Demean within each test fold; refuse near-zero source-distance variance.
+
+    Original *dated* source tree can be effectively ultrametric. In this case
+    all members of a complete heldout clade have virtually identical nearest-
+    train patristic gaps. The tiny differences left by Newick rounding MUST
+    NOT be promoted to a 'within-clade distance effect'.
+    """
     by_fold=defaultdict(list)
     for r in records:
         by_fold[r["fold_id"]].append(r)
     dx=[];dy=[]
     used_blocks=0
+    ranges=[]
     for group in by_fold.values():
         if len(group)<2:
             continue
         used_blocks+=1
-        mx=math.fsum(r[xkey] for r in group)/len(group)
-        my=math.fsum(r[ykey] for r in group)/len(group)
-        dx.extend(r[xkey]-mx for r in group)
-        dy.extend(r[ykey]-my for r in group)
+        xx=[r[xkey] for r in group]
+        yy=[r[ykey] for r in group]
+        ranges.append(max(xx)-min(xx))
+        mx=math.fsum(xx)/len(xx)
+        my=math.fsum(yy)/len(yy)
+        dx.extend(x-mx for x in xx)
+        dy.extend(y-my for y in yy)
+    max_range=max(ranges) if ranges else None
+    total=math.fsum(x*x for x in dx)
+    rms=math.sqrt(total/len(dx)) if dx else 0.0
+    full_scale=max(1.0,abs(math.fsum(r[xkey] for r in records)/len(records)))
+    relative_rms=rms/full_scale
+    # Guard based only on x (original topology/length), before examining
+    # y response. Zero or practically zero source distance dispersion
+    # cannot identify any within-clade distance-error correlation.
+    admissible=(bool(dx) and relative_rms>=RELATIVE_WITHIN_BLOCK_GAP_RMS_MIN)
     return {
         "multi_species_blocks_used":used_blocks,
         "species_in_non_singleton_blocks_used":len(dx),
-        "within_block_x_squared_deviation":round(math.fsum(x*x for x in dx),9),
-        "demeaned_pearson":round_or_none(pearson(dx,dy)),
+        "within_block_x_squared_deviation":float(f"{total:.12g}"),
+        "within_block_x_relative_RMS":float(f"{relative_rms:.12g}"),
+        "max_original_multispecies_block_x_range":(
+            float(f"{max_range:.12g}") if max_range is not None else None),
+        "within_clade_distance_error_identifiable_at_source_precision":admissible,
+        "numerical_identifiability_relative_RMS_gate":
+            RELATIVE_WITHIN_BLOCK_GAP_RMS_MIN,
+        "demeaned_pearson":round_or_none(pearson(dx,dy)) if admissible else None,
+        "nonidentifiability_reason":(
+            None if admissible else
+            "NEAR_ULTRAMETRIC_SOURCE_CLADE_GAP_CONSTANT_OR_NO_MULTITIP_FOLDS"),
         "not_an_independent_cluster_adjusted_regression":True,
     }
-
 
 def source_distances_in_folds(samples, folds, pairwise):
     ids=sorted(samples)
@@ -447,6 +476,8 @@ def analyze(*,expected_v26,expected_v27,expected_v28,expected_v29,
         "original_source_tip_count":len(pairwise),
         "source_tree_path_distance_units":PAT_UNIT,
         "source_only_branch_lengths_not_true_calendar_divergence_time":True,
+        "within_clade_numerical_source_precision_guard_added_after_first_v30_readout":True,
+        "within_clade_gap_relative_RMS_gate":RELATIVE_WITHIN_BLOCK_GAP_RMS_MIN,
         "covariate_definitions":{
             "phylogenetic_gap":"minimum 2023 original complete-tree patristic path to any training species; 2023 original branch units",
             "expression_novelty":"nearest standardized F3primeH/F35H/FLS log1p gene-expression Euclidean training species with within-training scaling",
