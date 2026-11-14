@@ -97,7 +97,7 @@ def patristic_pairs(tree):
 
 
 def training_only_nearest_expression(test,samples,train,genes=BRANCH_GENES):
-    if tuple(genes)!=BRANCH_GENES or set(train)!=set(train.keys()):
+    if tuple(genes)!=BRANCH_GENES or len(train)!=len(set(train)) or test in train:
         raise TreeGateError("MOLECULAR_MODULE_CHANGED")
     if len(train)<10:
         raise TreeGateError("MOLECULAR_TRAINING_SPECIES_TOO_FEW")
