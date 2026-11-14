@@ -73,7 +73,7 @@ def paired_effect(real,controls,folds):
     if any(not np.isfinite(a).all() or np.any(a<0) for a in (rp,rg,cp,cg)):
         raise ValueError('INVALID_PAIRED_LOSS')
     rgain=rp-rg;cgain=cp-cg
-    delta=rgain-cgain.mean(0)
+    delta=(rgain[None,:]-cgain).mean(0)  # subtract before averaging: identical controls stay exact zero
     ppen=float((rp-cp.mean(0)).mean());gpen=float((rg-cg.mean(0)).mean())
     if not math.isclose(float(delta.mean()),ppen-gpen,rel_tol=1e-10,abs_tol=1e-10):
         raise ValueError('LOSS_DECOMPOSITION_DRIFT')
