@@ -153,6 +153,39 @@ class V30SourceAdverse(unittest.TestCase):
         self.assertAlmostEqual(a["demeaned_pearson"],1)
         self.assertTrue(a["not_an_independent_cluster_adjusted_regression"])
 
+    def test_ultrametric_near_constant_within_clade_gap_must_not_create_correlation(self):
+        # Same nearest-external-train gap within a source tree clade,
+        # differing by tiny Newick float precision. No within-fold effect.
+        rows=[
+            {"fold_id":0,"patristic":24.00000000001,"sq":1.0},
+            {"fold_id":0,"patristic":24.0,"sq":2.0},
+            {"fold_id":1,"patristic":36.00000000001,"sq":3.0},
+            {"fold_id":1,"patristic":36.0,"sq":5.0},
+        ]
+        a=m.within_block_corr(rows,"patristic","sq")
+        self.assertIsNone(a["demeaned_pearson"])
+        self.assertFalse(a["within_clade_distance_error_identifiable_at_source_precision"])
+        self.assertIn("NEAR_ULTRAMETRIC",a["nonidentifiability_reason"])
+        self.assertLess(a["within_block_x_relative_RMS"],
+                        m.RELATIVE_WITHIN_BLOCK_GAP_RMS_MIN)
+        # The outcome cannot rescue missing x variation.
+        rows[0]["sq"]=1e10
+        b=m.within_block_corr(rows,"patristic","sq")
+        self.assertIsNone(b["demeaned_pearson"])
+        self.assertEqual(a["within_block_x_relative_RMS"],
+                         b["within_block_x_relative_RMS"])
+
+    def test_actual_within_block_gap_heterogeneity_remains_admissible(self):
+        rows=[
+            {"fold_id":0,"patristic":20.0,"sq":1.0},
+            {"fold_id":0,"patristic":23.0,"sq":2.0},
+            {"fold_id":1,"patristic":40.0,"sq":4.0},
+            {"fold_id":1,"patristic":43.0,"sq":5.0},
+        ]
+        a=m.within_block_corr(rows,"patristic","sq")
+        self.assertTrue(a["within_clade_distance_error_identifiable_at_source_precision"])
+        self.assertAlmostEqual(a["demeaned_pearson"],1)
+
     def test_duplicate_malformed_and_unverifiable_old_source_stop(self):
         _,codes,data,folds,records=synthetic_records()
         with self.assertRaisesRegex(TreeGateError,"V30_UPSTREAM_CV_SAME_RMSE_METRIC_DRIFT"):
