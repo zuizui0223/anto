@@ -1,0 +1,633 @@
+{
+  "Cirsium_empirical_owner": "zuizui0223/aza3",
+  "derived_blocks_can_include_singleton_species_not_new_evolutionary_replication": true,
+  "evaluation": {
+    "max_clade_15": {
+      "all_folds_defined_from_original_tree_without_looking_at_pigment": true,
+      "endpoints": {
+        "anthocyanidins_log1p_total": {
+          "improvement_percent_in_RMSE_vs_same_fold_mean": {
+            "CHI_only": -6.1047,
+            "branch_three": 16.3159,
+            "early_three": -13.167,
+            "joint_six": 14.3449,
+            "late_two": 7.5835,
+            "train_mean_baseline": 0
+          },
+          "models": {
+            "CHI_only": {
+              "MAE_log1p_current_chemical_total": 0.39179321,
+              "RMSE_log1p_current_chemical_total": 0.4534507,
+              "RMSE_relative_to_same_fold_training_mean": 1.06104733,
+              "equal_clade_block_MSE_gain": -0.01880608,
+              "equal_multispecies_block_MSE_gain": -0.01880608,
+              "min_omit_existing_block_mean_MSE_gain": -0.02273512,
+              "n_blocks_with_lower_MSE": 3,
+              "n_multispecies_blocks_with_lower_MSE": 3,
+              "test_species_exactly_once": 59,
+              "training_only_parameters": true
+            },
+            "branch_three": {
+              "MAE_log1p_current_chemical_total": 0.29387053,
+              "RMSE_log1p_current_chemical_total": 0.35763347,
+              "RMSE_relative_to_same_fold_training_mean": 0.83684078,
+              "equal_clade_block_MSE_gain": 0.03860365,
+              "equal_multispecies_block_MSE_gain": 0.03860365,
+              "min_omit_existing_block_mean_MSE_gain": 0.02440002,
+              "n_blocks_with_lower_MSE": 4,
+              "n_multispecies_blocks_with_lower_MSE": 4,
+              "test_species_exactly_once": 59,
+              "training_only_parameters": true
+            },
+            "early_three": {
+              "MAE_log1p_current_chemical_total": 0.39068984,
+              "RMSE_log1p_current_chemical_total": 0.48363193,
+              "RMSE_relative_to_same_fold_training_mean": 1.1316696,
+              "equal_clade_block_MSE_gain": -0.03949854,
+              "equal_multispecies_block_MSE_gain": -0.03949854,
+              "min_omit_existing_block_mean_MSE_gain": -0.05333299,
+              "n_blocks_with_lower_MSE": 3,
+              "n_multispecies_blocks_with_lower_MSE": 3,
+              "test_species_exactly_once": 59,
+              "training_only_parameters": true
+            },
+            "joint_six": {
+              "MAE_log1p_current_chemical_total": 0.30711195,
+              "RMSE_log1p_current_chemical_total": 0.36605687,
+              "RMSE_relative_to_same_fold_training_mean": 0.85655104,
+              "equal_clade_block_MSE_gain": 0.03349365,
+              "equal_multispecies_block_MSE_gain": 0.03349365,
+              "min_omit_existing_block_mean_MSE_gain": 0.01691106,
+              "n_blocks_with_lower_MSE": 4,
+              "n_multispecies_blocks_with_lower_MSE": 4,
+              "test_species_exactly_once": 59,
+              "training_only_parameters": true
+            },
+            "late_two": {
+              "MAE_log1p_current_chemical_total": 0.33570884,
+              "RMSE_log1p_current_chemical_total": 0.39495241,
+              "RMSE_relative_to_same_fold_training_mean": 0.92416485,
+              "equal_clade_block_MSE_gain": 0.0215033,
+              "equal_multispecies_block_MSE_gain": 0.0215033,
+              "min_omit_existing_block_mean_MSE_gain": 0.01041511,
+              "n_blocks_with_lower_MSE": 5,
+              "n_multispecies_blocks_with_lower_MSE": 5,
+              "test_species_exactly_once": 59,
+              "training_only_parameters": true
+            },
+            "train_mean_baseline": {
+              "MAE_log1p_current_chemical_total": 0.36611687,
+              "RMSE_log1p_current_chemical_total": 0.42736142,
+              "RMSE_relative_to_same_fold_training_mean": 1,
+              "test_species_exactly_once": 59,
+              "training_only_parameters": true
+            }
+          }
+        },
+        "flavonols_log1p_total": {
+          "improvement_percent_in_RMSE_vs_same_fold_mean": {
+            "CHI_only": -0.0211,
+            "branch_three": 17.908,
+            "early_three": -10.6357,
+            "joint_six": 16.4166,
+            "late_two": -9.0541,
+            "train_mean_baseline": 0
+          },
+          "models": {
+            "CHI_only": {
+              "MAE_log1p_current_chemical_total": 1.13903596,
+              "RMSE_log1p_current_chemical_total": 1.44294845,
+              "RMSE_relative_to_same_fold_training_mean": 1.00021107,
+              "equal_clade_block_MSE_gain": 0.00684631,
+              "equal_multispecies_block_MSE_gain": 0.00684631,
+              "min_omit_existing_block_mean_MSE_gain": -0.02333252,
+              "n_blocks_with_lower_MSE": 3,
+              "n_multispecies_blocks_with_lower_MSE": 3,
+              "test_species_exactly_once": 59,
+              "training_only_parameters": true
+            },
+            "branch_three": {
+              "MAE_log1p_current_chemical_total": 0.91007665,
+              "RMSE_log1p_current_chemical_total": 1.1842952,
+              "RMSE_relative_to_same_fold_training_mean": 0.82091995,
+              "equal_clade_block_MSE_gain": 0.73956718,
+              "equal_multispecies_block_MSE_gain": 0.73956718,
+              "min_omit_existing_block_mean_MSE_gain": 0.64350664,
+              "n_blocks_with_lower_MSE": 6,
+              "n_multispecies_blocks_with_lower_MSE": 6,
+              "test_species_exactly_once": 59,
+              "training_only_parameters": true
+            },
+            "early_three": {
+              "MAE_log1p_current_chemical_total": 1.26392271,
+              "RMSE_log1p_current_chemical_total": 1.59607902,
+              "RMSE_relative_to_same_fold_training_mean": 1.10635684,
+              "equal_clade_block_MSE_gain": -0.37933735,
+              "equal_multispecies_block_MSE_gain": -0.37933735,
+              "min_omit_existing_block_mean_MSE_gain": -0.47286201,
+              "n_blocks_with_lower_MSE": 2,
+              "n_multispecies_blocks_with_lower_MSE": 2,
+              "test_species_exactly_once": 59,
+              "training_only_parameters": true
+            },
+            "joint_six": {
+              "MAE_log1p_current_chemical_total": 0.94458496,
+              "RMSE_log1p_current_chemical_total": 1.20581024,
+              "RMSE_relative_to_same_fold_training_mean": 0.83583357,
+              "equal_clade_block_MSE_gain": 0.69058013,
+              "equal_multispecies_block_MSE_gain": 0.69058013,
+              "min_omit_existing_block_mean_MSE_gain": 0.57479199,
+              "n_blocks_with_lower_MSE": 6,
+              "n_multispecies_blocks_with_lower_MSE": 6,
+              "test_species_exactly_once": 59,
+              "training_only_parameters": true
+            },
+            "late_two": {
+              "MAE_log1p_current_chemical_total": 1.24585498,
+              "RMSE_log1p_current_chemical_total": 1.5732625,
+              "RMSE_relative_to_same_fold_training_mean": 1.09054108,
+              "equal_clade_block_MSE_gain": -0.4321151,
+              "equal_multispecies_block_MSE_gain": -0.4321151,
+              "min_omit_existing_block_mean_MSE_gain": -0.52629731,
+              "n_blocks_with_lower_MSE": 2,
+              "n_multispecies_blocks_with_lower_MSE": 2,
+              "test_species_exactly_once": 59,
+              "training_only_parameters": true
+            },
+            "train_mean_baseline": {
+              "MAE_log1p_current_chemical_total": 1.14110767,
+              "RMSE_log1p_current_chemical_total": 1.44264396,
+              "RMSE_relative_to_same_fold_training_mean": 1,
+              "test_species_exactly_once": 59,
+              "training_only_parameters": true
+            }
+          }
+        }
+      },
+      "fold_membership": [
+        {
+          "clade_tip_count": 9,
+          "source_tip_ids": [
+            "FABR",
+            "FADE",
+            "FAFR",
+            "FAIM",
+            "FAPA",
+            "FAPE",
+            "FAPU",
+            "FDEN",
+            "PEPA"
+          ]
+        },
+        {
+          "clade_tip_count": 14,
+          "source_tip_ids": [
+            "CACA",
+            "CAEG",
+            "CAEL",
+            "CAHE",
+            "CAHU",
+            "CAIR",
+            "CALI",
+            "CAMI",
+            "CAOV",
+            "CAPU",
+            "CAPY",
+            "CATH",
+            "CPAR",
+            "CSEL"
+          ]
+        },
+        {
+          "clade_tip_count": 8,
+          "source_tip_ids": [
+            "PALT",
+            "PAXI",
+            "PBON",
+            "PCOR",
+            "PEEX",
+            "PINF",
+            "PINT",
+            "PSCH"
+          ]
+        },
+        {
+          "clade_tip_count": 9,
+          "source_tip_ids": [
+            "BRAM",
+            "BRAU",
+            "BRCU",
+            "BRDE",
+            "BRGR",
+            "BRJA",
+            "BRLA",
+            "BRNI",
+            "BRPL"
+          ]
+        },
+        {
+          "clade_tip_count": 15,
+          "source_tip_ids": [
+            "BOAN",
+            "BOER",
+            "HUTE",
+            "NGRA",
+            "NIAR",
+            "NIBR",
+            "NICA",
+            "NILI",
+            "NIPU",
+            "NIRI",
+            "NISC",
+            "NITU",
+            "NIVE",
+            "NRIG",
+            "PLNY"
+          ]
+        },
+        {
+          "clade_tip_count": 4,
+          "source_tip_ids": [
+            "LEAC",
+            "LEAL",
+            "LELI",
+            "LESC"
+          ]
+        }
+      ],
+      "fold_sizes_sorted": [
+        4,
+        8,
+        9,
+        9,
+        14,
+        15
+      ],
+      "label": "max_tree_clade_size_15",
+      "n_multispecies_clade_blocks": 6,
+      "n_phylogeny_defined_blocks": 6,
+      "n_singleton_tips": 0,
+      "n_species_in_multispecies_clade_blocks": 59,
+      "n_species_tested_once": 59,
+      "species_groups_are_mathematically_monophyletic_in_this_source_tree": true
+    },
+    "max_clade_8": {
+      "all_folds_defined_from_original_tree_without_looking_at_pigment": true,
+      "endpoints": {
+        "anthocyanidins_log1p_total": {
+          "improvement_percent_in_RMSE_vs_same_fold_mean": {
+            "CHI_only": -4.5788,
+            "branch_three": 16.3326,
+            "early_three": -5.3482,
+            "joint_six": 16.8953,
+            "late_two": 9.775,
+            "train_mean_baseline": 0
+          },
+          "models": {
+            "CHI_only": {
+              "MAE_log1p_current_chemical_total": 0.35917895,
+              "RMSE_log1p_current_chemical_total": 0.41824385,
+              "RMSE_relative_to_same_fold_training_mean": 1.04578778,
+              "equal_clade_block_MSE_gain": -0.01480101,
+              "equal_multispecies_block_MSE_gain": -0.01598813,
+              "min_omit_existing_block_mean_MSE_gain": -0.01605708,
+              "n_blocks_with_lower_MSE": 7,
+              "n_multispecies_blocks_with_lower_MSE": 7,
+              "test_species_exactly_once": 59,
+              "training_only_parameters": true
+            },
+            "branch_three": {
+              "MAE_log1p_current_chemical_total": 0.27873602,
+              "RMSE_log1p_current_chemical_total": 0.33461242,
+              "RMSE_relative_to_same_fold_training_mean": 0.83667358,
+              "equal_clade_block_MSE_gain": 0.04822662,
+              "equal_multispecies_block_MSE_gain": 0.05375392,
+              "min_omit_existing_block_mean_MSE_gain": 0.0411532,
+              "n_blocks_with_lower_MSE": 10,
+              "n_multispecies_blocks_with_lower_MSE": 9,
+              "test_species_exactly_once": 59,
+              "training_only_parameters": true
+            },
+            "early_three": {
+              "MAE_log1p_current_chemical_total": 0.35008744,
+              "RMSE_log1p_current_chemical_total": 0.421321,
+              "RMSE_relative_to_same_fold_training_mean": 1.05348196,
+              "equal_clade_block_MSE_gain": -0.01969239,
+              "equal_multispecies_block_MSE_gain": -0.02855767,
+              "min_omit_existing_block_mean_MSE_gain": -0.02536518,
+              "n_blocks_with_lower_MSE": 7,
+              "n_multispecies_blocks_with_lower_MSE": 5,
+              "test_species_exactly_once": 59,
+              "training_only_parameters": true
+            },
+            "joint_six": {
+              "MAE_log1p_current_chemical_total": 0.2756993,
+              "RMSE_log1p_current_chemical_total": 0.33236222,
+              "RMSE_relative_to_same_fold_training_mean": 0.83104713,
+              "equal_clade_block_MSE_gain": 0.05227158,
+              "equal_multispecies_block_MSE_gain": 0.05655595,
+              "min_omit_existing_block_mean_MSE_gain": 0.0428297,
+              "n_blocks_with_lower_MSE": 10,
+              "n_multispecies_blocks_with_lower_MSE": 9,
+              "test_species_exactly_once": 59,
+              "training_only_parameters": true
+            },
+            "late_two": {
+              "MAE_log1p_current_chemical_total": 0.30647171,
+              "RMSE_log1p_current_chemical_total": 0.36083839,
+              "RMSE_relative_to_same_fold_training_mean": 0.90224967,
+              "equal_clade_block_MSE_gain": 0.03149983,
+              "equal_multispecies_block_MSE_gain": 0.03521482,
+              "min_omit_existing_block_mean_MSE_gain": 0.02480962,
+              "n_blocks_with_lower_MSE": 11,
+              "n_multispecies_blocks_with_lower_MSE": 10,
+              "test_species_exactly_once": 59,
+              "training_only_parameters": true
+            },
+            "train_mean_baseline": {
+              "MAE_log1p_current_chemical_total": 0.34144431,
+              "RMSE_log1p_current_chemical_total": 0.39993186,
+              "RMSE_relative_to_same_fold_training_mean": 1,
+              "test_species_exactly_once": 59,
+              "training_only_parameters": true
+            }
+          }
+        },
+        "flavonols_log1p_total": {
+          "improvement_percent_in_RMSE_vs_same_fold_mean": {
+            "CHI_only": 1.0029,
+            "branch_three": 15.3748,
+            "early_three": -9.0278,
+            "joint_six": 13.6458,
+            "late_two": -10.9239,
+            "train_mean_baseline": 0
+          },
+          "models": {
+            "CHI_only": {
+              "MAE_log1p_current_chemical_total": 1.07962959,
+              "RMSE_log1p_current_chemical_total": 1.3948076,
+              "RMSE_relative_to_same_fold_training_mean": 0.98997068,
+              "equal_clade_block_MSE_gain": -0.00226937,
+              "equal_multispecies_block_MSE_gain": 0.07183827,
+              "min_omit_existing_block_mean_MSE_gain": -0.02756262,
+              "n_blocks_with_lower_MSE": 9,
+              "n_multispecies_blocks_with_lower_MSE": 9,
+              "test_species_exactly_once": 59,
+              "training_only_parameters": true
+            },
+            "branch_three": {
+              "MAE_log1p_current_chemical_total": 0.89617534,
+              "RMSE_log1p_current_chemical_total": 1.19231655,
+              "RMSE_relative_to_same_fold_training_mean": 0.84625179,
+              "equal_clade_block_MSE_gain": 0.57382839,
+              "equal_multispecies_block_MSE_gain": 0.50061241,
+              "min_omit_existing_block_mean_MSE_gain": 0.52413289,
+              "n_blocks_with_lower_MSE": 12,
+              "n_multispecies_blocks_with_lower_MSE": 10,
+              "test_species_exactly_once": 59,
+              "training_only_parameters": true
+            },
+            "early_three": {
+              "MAE_log1p_current_chemical_total": 1.16403147,
+              "RMSE_log1p_current_chemical_total": 1.53613495,
+              "RMSE_relative_to_same_fold_training_mean": 1.09027838,
+              "equal_clade_block_MSE_gain": -0.43415101,
+              "equal_multispecies_block_MSE_gain": -0.40747895,
+              "min_omit_existing_block_mean_MSE_gain": -0.48797926,
+              "n_blocks_with_lower_MSE": 4,
+              "n_multispecies_blocks_with_lower_MSE": 4,
+              "test_species_exactly_once": 59,
+              "training_only_parameters": true
+            },
+            "joint_six": {
+              "MAE_log1p_current_chemical_total": 0.93514596,
+              "RMSE_log1p_current_chemical_total": 1.21667723,
+              "RMSE_relative_to_same_fold_training_mean": 0.86354189,
+              "equal_clade_block_MSE_gain": 0.51217052,
+              "equal_multispecies_block_MSE_gain": 0.47529371,
+              "min_omit_existing_block_mean_MSE_gain": 0.45391281,
+              "n_blocks_with_lower_MSE": 12,
+              "n_multispecies_blocks_with_lower_MSE": 10,
+              "test_species_exactly_once": 59,
+              "training_only_parameters": true
+            },
+            "late_two": {
+              "MAE_log1p_current_chemical_total": 1.21667069,
+              "RMSE_log1p_current_chemical_total": 1.5628499,
+              "RMSE_relative_to_same_fold_training_mean": 1.10923942,
+              "equal_clade_block_MSE_gain": -0.37556262,
+              "equal_multispecies_block_MSE_gain": -0.43893338,
+              "min_omit_existing_block_mean_MSE_gain": -0.41820815,
+              "n_blocks_with_lower_MSE": 9,
+              "n_multispecies_blocks_with_lower_MSE": 8,
+              "test_species_exactly_once": 59,
+              "training_only_parameters": true
+            },
+            "train_mean_baseline": {
+              "MAE_log1p_current_chemical_total": 1.09457061,
+              "RMSE_log1p_current_chemical_total": 1.40893829,
+              "RMSE_relative_to_same_fold_training_mean": 1,
+              "test_species_exactly_once": 59,
+              "training_only_parameters": true
+            }
+          }
+        }
+      },
+      "fold_membership": [
+        {
+          "clade_tip_count": 8,
+          "source_tip_ids": [
+            "FADE",
+            "FAFR",
+            "FAIM",
+            "FAPA",
+            "FAPE",
+            "FAPU",
+            "FDEN",
+            "PEPA"
+          ]
+        },
+        {
+          "clade_tip_count": 1,
+          "source_tip_ids": [
+            "FABR"
+          ]
+        },
+        {
+          "clade_tip_count": 6,
+          "source_tip_ids": [
+            "CAHE",
+            "CAHU",
+            "CAIR",
+            "CAOV",
+            "CAPU",
+            "CATH"
+          ]
+        },
+        {
+          "clade_tip_count": 4,
+          "source_tip_ids": [
+            "CAEG",
+            "CALI",
+            "CAMI",
+            "CSEL"
+          ]
+        },
+        {
+          "clade_tip_count": 2,
+          "source_tip_ids": [
+            "CACA",
+            "CAEL"
+          ]
+        },
+        {
+          "clade_tip_count": 2,
+          "source_tip_ids": [
+            "CAPY",
+            "CPAR"
+          ]
+        },
+        {
+          "clade_tip_count": 8,
+          "source_tip_ids": [
+            "PALT",
+            "PAXI",
+            "PBON",
+            "PCOR",
+            "PEEX",
+            "PINF",
+            "PINT",
+            "PSCH"
+          ]
+        },
+        {
+          "clade_tip_count": 4,
+          "source_tip_ids": [
+            "BRAU",
+            "BRCU",
+            "BRGR",
+            "BRPL"
+          ]
+        },
+        {
+          "clade_tip_count": 5,
+          "source_tip_ids": [
+            "BRAM",
+            "BRDE",
+            "BRJA",
+            "BRLA",
+            "BRNI"
+          ]
+        },
+        {
+          "clade_tip_count": 4,
+          "source_tip_ids": [
+            "BOAN",
+            "BOER",
+            "HUTE",
+            "PLNY"
+          ]
+        },
+        {
+          "clade_tip_count": 5,
+          "source_tip_ids": [
+            "NGRA",
+            "NIAR",
+            "NIRI",
+            "NIVE",
+            "NRIG"
+          ]
+        },
+        {
+          "clade_tip_count": 5,
+          "source_tip_ids": [
+            "NIBR",
+            "NILI",
+            "NIPU",
+            "NISC",
+            "NITU"
+          ]
+        },
+        {
+          "clade_tip_count": 1,
+          "source_tip_ids": [
+            "NICA"
+          ]
+        },
+        {
+          "clade_tip_count": 4,
+          "source_tip_ids": [
+            "LEAC",
+            "LEAL",
+            "LELI",
+            "LESC"
+          ]
+        }
+      ],
+      "fold_sizes_sorted": [
+        1,
+        1,
+        2,
+        2,
+        4,
+        4,
+        4,
+        4,
+        5,
+        5,
+        5,
+        6,
+        8,
+        8
+      ],
+      "label": "max_tree_clade_size_8",
+      "n_multispecies_clade_blocks": 12,
+      "n_phylogeny_defined_blocks": 14,
+      "n_singleton_tips": 2,
+      "n_species_in_multispecies_clade_blocks": 57,
+      "n_species_tested_once": 59,
+      "species_groups_are_mathematically_monophyletic_in_this_source_tree": true
+    }
+  },
+  "model": "v26 prespecified 6 train-only ridge models, lambda 10, identical chemical endpoints",
+  "no_direct_causal_genotype_function_inference": true,
+  "not_a_new_independent_plant_species_dataset": true,
+  "not_a_phylogenetic_PGLS_or_ancestral_trait_state_reconstruction": true,
+  "not_visible_colour_or_ancestral_reexpression_or_fitness": true,
+  "original_processed_2023_species_data": {
+    "Browallia_americana_outgroup_removed": true,
+    "Petunieae_ingroup_species_rows": 59,
+    "molecular_predictors_prespecified": [
+      "ANS",
+      "CHI",
+      "CHS",
+      "DFR",
+      "F35H",
+      "F3H",
+      "F3primeH",
+      "FLS"
+    ],
+    "no_visible_hue_observed_baseline_in_this_table": true,
+    "original_author_processed_species_rows": 60,
+    "source_original_gene_cells_verified_by_independent_table": 480,
+    "source_original_pigment_cells_verified_by_independent_table": 540,
+    "source_species_set_match_all_three_files": true
+  },
+  "original_source_tree_sha256": "95b4a688d3d71417b712b37a2b04cdc22a9431be3172d6509def4435f5fd8614",
+  "original_tree_hash_and_byte_length_verified": true,
+  "phylogenetic_sensitivity_cut_sizes_predeclared": [
+    8,
+    15
+  ],
+  "schema": "anto_v27_original_petunieae_tree_defined_multispecies_blocked_prediction",
+  "source_osf_project": "zg9cu",
+  "source_paper_doi": "10.1098/rspb.2023.0275",
+  "source_tree_one_topology_only_not_gene_tree_uncertainty": true,
+  "source_tree_tip_audit": {
+    "BROW_outgroup_present_in_original_tree": true,
+    "exact_original_species_code_match_no_prefix_guessing": true,
+    "source_tree_ingroups_reconciled": 59,
+    "source_tree_tips_before_ingroup_prune": 60
+  },
+  "v26_original_species_and_prefix_metrics_unchanged": true
+}
