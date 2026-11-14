@@ -40,6 +40,16 @@ jobs:
           python scripts/analyze_original_petunieae_phylogeny_v27.py \
             --expected-v26 results/petunieae_2023_original_species_pigment_prediction_v26_20261028.json \
             --output /tmp/anto_v27_real_tree_holdout.json
+      - name: Print source-verified derived-only aggregate receipt for long-term commit
+        run: |
+          python - <<'PY'
+          import json
+          r=json.load(open('/tmp/anto_v27_real_tree_holdout.json'))
+          assert r['original_tree_hash_and_byte_length_verified']
+          assert r['source_tree_tip_audit']['source_tree_ingroups_reconciled']==59
+          assert all(v['n_species_tested_once']==59 for v in r['evaluation'].values())
+          print('ANTO_V27_FULL_DERIVED_RECEIPT',json.dumps(r,sort_keys=True,ensure_ascii=False,separators=(',',':')))
+          PY
       - name: Verify frozen v27 original-tree result if present
         run: |
           if [ -f results/petunieae_original_tree_clade_holdout_v27_20261114.json ]; then
