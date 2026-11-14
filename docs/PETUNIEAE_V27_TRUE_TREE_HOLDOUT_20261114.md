@@ -39,3 +39,38 @@ python scripts/analyze_original_petunieae_phylogeny_v27.py \
 CI uses byte-verified original-author tree and processed HPLC + expression files in memory, emits only derived species-code clade membership and aggregates, and retains raw OSF source bytes **off GitHub**.
 
 **Evidence ceiling:** This is retrospective phylogeny-structured within-Petunieae chemical prediction. Genetic access, local pollinator interaction and multigeneration fitness outcomes from ANTO × EGWE × izu-core × SDEA are not tested jointly in these sources, and original Cirsium experimental data stay in aza3.
+
+
+## Source-authenticated outcome after predeclared design (2026-11-14)
+
+**REAL original-data CI:** [Actions run #43581587657](https://github.com/zuizui0223/anto/actions/runs/43581587657) **SUCCESS**. The original 1,481-byte Newick file passed MD5/SHA-256; there are exactly **60 matched tips, including BROW**, and all **59/59 ingroup species** matched the original processed RNA/HPLC species codes without fuzzy or prefix-based relabeling. Prior v26 source reconciliations, both original v26 cross-validation readouts, and new synthetic/adverse tree tests passed without changing v26.
+
+Original source-only rooted topology, tree-defined complete-subtree holdout:
+
+| Fixed maximum block | Monophyletic multi-species blocks / all blocks | Species in multi-species blocks | Fold sizes (sorted) |
+| --- | --- | --- | --- |
+| 8 original tree tips | **12 / 14** (2 single-species leaves) | **57/59** | 1,1,2,2,4,4,4,4,5,5,5,6,8,8 |
+| 15 original tree tips | **6 / 6** | **59/59** | 4,8,9,9,14,15 |
+
+### Species-weighted RMSE on original logged chemical total (smaller better)
+
+| Endpoint | Tree cutoff | Training-only mean null | Branch three (F3′H,F3′5′H,FLS) | Branch-three reduction | Six-gene combination reduction | Positive tree blocks for branch three |
+| --- | --- | ---: | ---: | ---: | ---: | --- |
+| Anthocyanidins | 8 | 0.39993186 | **0.33461242** | **16.33%** | 16.90% | 10/14 (9/12 multispecies) |
+| Flavonols | 8 | 1.40893829 | **1.19231655** | **15.37%** | 13.65% | 12/14 (10/12 multispecies) |
+| Anthocyanidins | 15 | 0.42736142 | **0.35763347** | **16.32%** | 14.34% | 4/6 |
+| Flavonols | 15 | 1.44264396 | **1.18429520** | **17.91%** | 16.42% | 6/6 |
+
+All four branch-three comparisons have a positive species-weighted reduction **and** positive equal-clade mean squared-error gains. Omitting any one existing clade's scored gain (without refitting the other folds) leaves the **mean block gain positive in all four comparisons**. This is a descriptive sensitivity, *not* four biological replications or a valid independent-fold confidence interval.
+
+The predeclared **descriptive within-source original-topology transfer gate PASSES**: both chemical endpoints improve on both cutoffs; each cutoff has >=3 multispecies tree clades and >50% multi-species test coverage. This does **not** establish 16–18% out-of-study generalization, a selection coefficient, a causal molecular pathway or natural ancestral colour regain.
+
+**Important negative controls retained:**
+* `CHI_only` fails anthocyanidin transfer: RMSE **4.58% worse** under 8-tip and **6.10% worse** under 15-tip cuts. In flavonols its results are mixed (**+1.00%** and **−0.02%**). No blanket "CHI biologically unimportant" claim follows.
+* `early_three` is worse than null in **all four** tree-blocked comparisons.
+* `late_two` improves anthocyanidin predictions but worsens flavonol predictions under both cutoffs.
+* The six-gene combination is not uniformly stronger than the branch-three model (e.g. 15-tip anthocyanidin/flavonol and 8-tip flavonol comparisons favour branch-three).
+
+**Provenance:** [immutable tree-derived 59-species fold membership and both endpoints × six models](../results/petunieae_original_tree_clade_holdout_v27_20261114.json) · [analyzer](../scripts/analyze_original_petunieae_phylogeny_v27.py) · [source-authenticated CI](https://github.com/zuizui0223/anto/actions/runs/43581587657). No original author source-level raw RNA/HPLC rows or original Newick bytes are committed. The tree is *one* original 11-gene topology; broader tree uncertainty and taxon-level external transfer remain unresolved. In particular, later phylogenomic work by Pezzi, Wheeler, Freitas and Smith (2024, DOI 10.1016/j.ympev.2024.108136) reported gene-tree discordance associated with incomplete lineage sorting and hybridization among Petunia and related genera. Thus phylogenetic robustness across alternative plausible topologies is the next falsification requirement, **not** automatically implied by this one-tree result.
+
+**Machine inference ceiling:** A within-one-source, topology-aware **current pigment-expression prediction result**, not a universal evolutionary-potential theory, sequence of ancestral losses/regains or an experimentally verified descendant fitness pathway.
