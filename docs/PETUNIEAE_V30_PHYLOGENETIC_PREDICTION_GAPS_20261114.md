@@ -43,3 +43,43 @@ Previous source-authenticated 2023 Petunieae data reanalysis found that a fixed 
 Versioned standalone calculation, adverse tests, and dedicated source-authenticated GitHub Actions, plus aggregate-only derived readout and scientific interpretation. No original processed RNA/HPLC data or original Newick published in ANTO. Draft stacked on v29 PR #39 and earlier PRs; do not merge before review.
 
 **At this protocol commit no v30 distance/error outcomes had been evaluated.**
+
+
+## Source-authenticated results and methodological correction (2026-11-14)
+
+Original full-source GitHub Actions run **43585868525** completed successfully. New source-matched RNA/HPLC and original Newick paths exactly reproduced **all original v26–v29 receipts**. No original pigment chemistry or gene expression values were committed.
+
+### 31 focal species: species-level squared-error / distance Spearman correlations
+
+| 2023 true-tree clade size cap | Anthocyanidin error vs nearest-train patristic gap | Flavonol error vs gap | Branch-three RMSE gain anthocyanidin | Branch-three RMSE gain flavonol |
+| --- | ---: | ---: | ---: | ---: |
+| 2 | −0.1528 | +0.1988 | +7.9257% | +0.2197% |
+| 3 | −0.1644 | +0.1679 | +8.4755% | +0.7612% |
+| 4 | −0.1355 | +0.1557 | +10.0303% | +0.7614% |
+| 5 | −0.1308 | +0.1998 | +10.2781% | +0.8869% |
+| 6 | −0.1676 | +0.1838 | +12.1232% | +2.9231% |
+
+The tested **four** prospective *within-v30 but post-v29 exploratory* cap=3 and cap=5 near/far directional checks **do not jointly pass**: anthocyanidin has far-tier RMSE > near-tier but **negative** overall rank rho (cap3: near 0.3680, far 0.3817; cap5: 0.3361 vs 0.3817); flavonol has **positive** rho but far-tier RMSE is **lower** than near-tier (cap3: near 1.1498, far 1.0868; cap5: near 1.1337 vs 1.0868). The middle-distance flavonol tier has particularly high error (1.8629, 1.8549), so a monotone distance-only explanation is not evident.
+
+In the secondary original **59-species** panel, rank-error direction also changes with the original fold scale: at cap8, anth/flav rho +0.2257/+0.2649, but at cap15 −0.2745/−0.0632. These are **descriptive dependent observations on the same original phylogeny**, not new evolutionary or statistical replicates.
+
+The distance from each heldout species' **three-gene expression vector** to the nearest training vector (with within-training standardization) also fails to yield a consistent positive distance–error relation. For anthocyanidin error in the common 31-species cap3/cap5 cuts, that expression-novelty rho is −0.3077/−0.3044; flavonol values are +0.0347/+0.0815. Thus neither of these two simple scalar gaps is sufficient to predict chemistry error robustly across endpoints and folds.
+
+### Key source-design discovery: within-clade phylogenetic-distance effects are UNIDENTIFIABLE
+
+The authentic Wheeler 2023 **dated tree is effectively ultrametric at the source-reported branch precision**: for every full monophyletic clade holdout, all its member species have practically the **same distance to their nearest training species**. Across *all* 31/59-species caps examined, the **maximum within-multispecies-block range is at most approximately 0.000001 original Newick branch unit**, while typical between-block distances range from roughly 15 to >50 units.
+
+**Consequences:**
+
+- Variation in the nearest-training patristic distance is almost entirely **between heldout clades**, not **within** clades. The source data cannot isolate a phylogenetic-distance slope from clade membership using these holdout partitions. Any per-species correlation is chiefly a between-clade contrast with repeated within-clade tied distances.
+- The initial v30 readout reported nonzero demeaned within-block correlations by exploiting residual *tiny floating/rounded branch-length differences* while displaying within-group distance sums of squares rounded to zero. These were **numerical artefacts** and must **not** be interpreted as biological effects.
+- **Explicit transparent post-readout repair:** a new numerical identifiability gate now requires the **within-multispecies-fold RMS of patristic gap** to be at least **1e−6 of its original-distance scale**; it is based on tree x-dispersion only, not a selected chemical outcome. The observed relative RMS is around **1e−8**, below the gate for **all nine panel × cap designs**. Therefore **all apparent within-clade correlations are correctly reported as null / NOT IDENTIFIABLE**, with the original source dispersion and gate preserved in the frozen readout. Synthetic known heterogeneous-distance tests pass and retain valid non-null diagnostics. This correction is **not** a revised prespecified biological result, nor evidence for a null effect.
+- We do not solve this identification failure by pretending these species are independent replicates, assigning arbitrary random branch lengths, or silently substituting edge counts.
+
+The revised source-verified machine receipt is ../results/petunieae_patristic_prediction_gaps_v30_20261114.json; it includes all original 31/59 panel/cap endpoints and both distance metrics and the explicit no-identification flag, without original RNA/HPLC rows. Recalculation from the same exact original published files plus an independent CI replay is required before merge.
+
+### Scientific inference
+
+The supported scope is **current species-mean flower-pigment chemistry prediction using fixed RNA module measurements**, with strong dependence on which original taxa, heldout clades and chemical endpoints are used. It is **not** demonstrated that increasing evolutionary divergence *causes* a general decline in predictability; the predicted contrast is observational, often nonmonotonic, and the within-clade effect is structurally unidentified under a near-ultrametric complete-clade exclusion design.
+
+A separate future analysis can compare actual original **species leave-one-out** errors against nearest-relative distances (which vary between species), using complete fold-specific baselines, and test independent original RNA/HPLC datasets. Even there, evolutionary causes would remain confounded by clade composition and trait differences without additional independent measurements. No natural ancestral floral regain, genotype function, pollinator-mediated selection, or descendant fitness was observed.
