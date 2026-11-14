@@ -1,0 +1,1406 @@
+{
+  "all_four_distance_patterns_supported": false,
+  "decimal_paths_independently_agree_with_v30": true,
+  "design": "EXPLORATORY_POST_V30_NOT_INDEPENDENT_BIOLOGICAL_REPLICATION",
+  "directional_diagnostics": [
+    {
+      "branch_beats_nearest_rmse_and_mae": true,
+      "distance_pattern": true,
+      "endpoint": "anthocyanidins_log1p_total",
+      "panel": "all_59_primary"
+    },
+    {
+      "branch_beats_nearest_rmse_and_mae": true,
+      "distance_pattern": false,
+      "endpoint": "flavonols_log1p_total",
+      "panel": "all_59_primary"
+    },
+    {
+      "branch_beats_nearest_rmse_and_mae": true,
+      "distance_pattern": false,
+      "endpoint": "anthocyanidins_log1p_total",
+      "panel": "shared_31_secondary"
+    },
+    {
+      "branch_beats_nearest_rmse_and_mae": true,
+      "distance_pattern": false,
+      "endpoint": "flavonols_log1p_total",
+      "panel": "shared_31_secondary"
+    }
+  ],
+  "distance_units": "original_Newick_not_validated_years",
+  "fixed_ridge_lambda": 10,
+  "frozen_v26_59_species_LOO_RMSE_and_MAE_reproduced_all_six_models": true,
+  "mandatory_tolerance_sensitivity": [
+    1e-06,
+    1e-05,
+    0.0001
+  ],
+  "no_causal_p_values_or_new_functional_ancestral_regain_measurement": true,
+  "original_chemical_study_doi": "10.1098/rspb.2023.0275",
+  "original_source_tree_sha256": "95b4a688d3d71417b712b37a2b04cdc22a9431be3172d6509def4435f5fd8614",
+  "panels": {
+    "all_59_primary": {
+      "distance_bands_by_tolerance": {
+        "1e-04": {
+          "band_sizes": [
+            2,
+            2,
+            2,
+            2,
+            1,
+            2,
+            2,
+            2,
+            1,
+            2,
+            2,
+            2,
+            2,
+            2,
+            2,
+            2,
+            1,
+            1,
+            1,
+            2,
+            1,
+            2,
+            2,
+            2,
+            1,
+            1,
+            1,
+            1,
+            1,
+            2,
+            1,
+            1,
+            2,
+            2,
+            2,
+            1,
+            1
+          ],
+          "n_bands": 37,
+          "nearest_training_tie_count_range": [
+            1,
+            10
+          ]
+        },
+        "1e-05": {
+          "band_sizes": [
+            2,
+            2,
+            2,
+            2,
+            1,
+            2,
+            2,
+            2,
+            1,
+            2,
+            2,
+            2,
+            2,
+            2,
+            2,
+            2,
+            1,
+            1,
+            1,
+            2,
+            1,
+            2,
+            2,
+            2,
+            1,
+            1,
+            1,
+            1,
+            1,
+            2,
+            1,
+            1,
+            2,
+            2,
+            2,
+            1,
+            1
+          ],
+          "n_bands": 37,
+          "nearest_training_tie_count_range": [
+            1,
+            10
+          ]
+        },
+        "1e-06": {
+          "band_sizes": [
+            2,
+            2,
+            2,
+            2,
+            1,
+            2,
+            2,
+            2,
+            1,
+            2,
+            2,
+            2,
+            2,
+            2,
+            2,
+            2,
+            1,
+            1,
+            1,
+            2,
+            1,
+            2,
+            2,
+            2,
+            1,
+            1,
+            1,
+            1,
+            1,
+            2,
+            1,
+            1,
+            2,
+            2,
+            2,
+            1,
+            1
+          ],
+          "n_bands": 37,
+          "nearest_training_tie_count_range": [
+            1,
+            10
+          ]
+        }
+      },
+      "endpoints": {
+        "anthocyanidins_log1p_total": {
+          "branch_rmse_gain_vs_mean_pct": 15.65660532,
+          "models": {
+            "CHI_only": {
+              "mae": 0.33959483,
+              "rmse": 0.39668466
+            },
+            "branch_three": {
+              "mae": 0.2749978,
+              "rmse": 0.32961162
+            },
+            "early_three": {
+              "mae": 0.33474728,
+              "rmse": 0.40633235
+            },
+            "joint_six": {
+              "mae": 0.26833275,
+              "rmse": 0.32632055
+            },
+            "late_two": {
+              "mae": 0.29221277,
+              "rmse": 0.3502291
+            },
+            "phylo_nearest_1e-04": {
+              "mae": 0.31611765,
+              "rmse": 0.4250865
+            },
+            "phylo_nearest_1e-05": {
+              "mae": 0.31611765,
+              "rmse": 0.4250865
+            },
+            "phylo_nearest_1e-06": {
+              "mae": 0.31650655,
+              "rmse": 0.4257023
+            },
+            "train_mean_baseline": {
+              "mae": 0.33290785,
+              "rmse": 0.3907972
+            }
+          },
+          "n_species_branch_squared_error_better_than_mean": 37,
+          "raw_distance_rho_branch_squared_error": 0.27799703,
+          "rho_expression_novelty_branch_squared_error": -0.18889538,
+          "rho_expression_novelty_mean_minus_branch_squared_error": 0.31560491,
+          "scored_row_influence": {
+            "already_scored_row_omission_not_refit_or_CI": true,
+            "branch_vs_nearest_rmse_gain_pct_range": [
+              18.45875423,
+              24.82612818
+            ],
+            "n_omissions": 59,
+            "rho_gap_error_range": [
+              0.24970385,
+              0.31598869
+            ]
+          },
+          "tolerance_sensitivity": {
+            "1e-04": {
+              "branch_beats_nearest_in_rmse_and_mae": true,
+              "branch_rmse_gain_vs_nearest_pct": 22.46010595,
+              "distance_pattern_support": true,
+              "n_distance_bands": 37,
+              "n_species_branch_squared_error_better_than_nearest": 29,
+              "rho_equal_band_mean_gap_vs_mean_branch_squared_error": 0.31294452,
+              "rho_gap_branch_squared_error": 0.27799703,
+              "rho_gap_mean_minus_branch_squared_error": 0.02511035,
+              "rho_gap_mean_squared_error": 0.07621777,
+              "tiers": {
+                "far": {
+                  "branch_rmse_gain_vs_mean_pct": 18.63740746,
+                  "branch_rmse_gain_vs_nearest_pct": 29.50850572,
+                  "branch_three": {
+                    "mae": 0.309709,
+                    "rmse": 0.37686055
+                  },
+                  "gap_max": 29.838854,
+                  "gap_min": 18.006364,
+                  "n_species": 19,
+                  "phylo_nearest": {
+                    "mae": 0.45520225,
+                    "rmse": 0.53461847
+                  },
+                  "train_mean": {
+                    "mae": 0.37685368,
+                    "rmse": 0.4631865
+                  }
+                },
+                "middle": {
+                  "branch_rmse_gain_vs_mean_pct": 9.52180959,
+                  "branch_rmse_gain_vs_nearest_pct": 9.58204563,
+                  "branch_three": {
+                    "mae": 0.30901944,
+                    "rmse": 0.35040167
+                  },
+                  "gap_max": 17.321815,
+                  "gap_min": 13.281126,
+                  "n_species": 20,
+                  "phylo_nearest": {
+                    "mae": 0.27680577,
+                    "rmse": 0.3875355
+                  },
+                  "train_mean": {
+                    "mae": 0.35028061,
+                    "rmse": 0.3872775
+                  }
+                },
+                "near": {
+                  "branch_rmse_gain_vs_mean_pct": 19.42937079,
+                  "branch_rmse_gain_vs_nearest_pct": 24.90402148,
+                  "branch_three": {
+                    "mae": 0.20800053,
+                    "rmse": 0.25058984
+                  },
+                  "gap_max": 12.777228,
+                  "gap_min": 6.451538,
+                  "n_species": 20,
+                  "phylo_nearest": {
+                    "mae": 0.22329914,
+                    "rmse": 0.33369275
+                  },
+                  "train_mean": {
+                    "mae": 0.27378656,
+                    "rmse": 0.31101884
+                  }
+                }
+              }
+            },
+            "1e-05": {
+              "branch_beats_nearest_in_rmse_and_mae": true,
+              "branch_rmse_gain_vs_nearest_pct": 22.46010595,
+              "distance_pattern_support": true,
+              "n_distance_bands": 37,
+              "n_species_branch_squared_error_better_than_nearest": 29,
+              "rho_equal_band_mean_gap_vs_mean_branch_squared_error": 0.31294452,
+              "rho_gap_branch_squared_error": 0.27799703,
+              "rho_gap_mean_minus_branch_squared_error": 0.02511035,
+              "rho_gap_mean_squared_error": 0.07621777,
+              "tiers": {
+                "far": {
+                  "branch_rmse_gain_vs_mean_pct": 18.63740746,
+                  "branch_rmse_gain_vs_nearest_pct": 29.50850572,
+                  "branch_three": {
+                    "mae": 0.309709,
+                    "rmse": 0.37686055
+                  },
+                  "gap_max": 29.838854,
+                  "gap_min": 18.006364,
+                  "n_species": 19,
+                  "phylo_nearest": {
+                    "mae": 0.45520225,
+                    "rmse": 0.53461847
+                  },
+                  "train_mean": {
+                    "mae": 0.37685368,
+                    "rmse": 0.4631865
+                  }
+                },
+                "middle": {
+                  "branch_rmse_gain_vs_mean_pct": 9.52180959,
+                  "branch_rmse_gain_vs_nearest_pct": 9.58204563,
+                  "branch_three": {
+                    "mae": 0.30901944,
+                    "rmse": 0.35040167
+                  },
+                  "gap_max": 17.321815,
+                  "gap_min": 13.281126,
+                  "n_species": 20,
+                  "phylo_nearest": {
+                    "mae": 0.27680577,
+                    "rmse": 0.3875355
+                  },
+                  "train_mean": {
+                    "mae": 0.35028061,
+                    "rmse": 0.3872775
+                  }
+                },
+                "near": {
+                  "branch_rmse_gain_vs_mean_pct": 19.42937079,
+                  "branch_rmse_gain_vs_nearest_pct": 24.90402148,
+                  "branch_three": {
+                    "mae": 0.20800053,
+                    "rmse": 0.25058984
+                  },
+                  "gap_max": 12.777228,
+                  "gap_min": 6.451538,
+                  "n_species": 20,
+                  "phylo_nearest": {
+                    "mae": 0.22329914,
+                    "rmse": 0.33369275
+                  },
+                  "train_mean": {
+                    "mae": 0.27378656,
+                    "rmse": 0.31101884
+                  }
+                }
+              }
+            },
+            "1e-06": {
+              "branch_beats_nearest_in_rmse_and_mae": true,
+              "branch_rmse_gain_vs_nearest_pct": 22.57227104,
+              "distance_pattern_support": true,
+              "n_distance_bands": 37,
+              "n_species_branch_squared_error_better_than_nearest": 29,
+              "rho_equal_band_mean_gap_vs_mean_branch_squared_error": 0.31294452,
+              "rho_gap_branch_squared_error": 0.27799703,
+              "rho_gap_mean_minus_branch_squared_error": 0.02511035,
+              "rho_gap_mean_squared_error": 0.07621777,
+              "tiers": {
+                "far": {
+                  "branch_rmse_gain_vs_mean_pct": 18.63740746,
+                  "branch_rmse_gain_vs_nearest_pct": 29.70827481,
+                  "branch_three": {
+                    "mae": 0.309709,
+                    "rmse": 0.37686055
+                  },
+                  "gap_max": 29.838854,
+                  "gap_min": 18.006364,
+                  "n_species": 19,
+                  "phylo_nearest": {
+                    "mae": 0.45640991,
+                    "rmse": 0.53613785
+                  },
+                  "train_mean": {
+                    "mae": 0.37685368,
+                    "rmse": 0.4631865
+                  }
+                },
+                "middle": {
+                  "branch_rmse_gain_vs_mean_pct": 9.52180959,
+                  "branch_rmse_gain_vs_nearest_pct": 9.58204563,
+                  "branch_three": {
+                    "mae": 0.30901944,
+                    "rmse": 0.35040167
+                  },
+                  "gap_max": 17.321815,
+                  "gap_min": 13.281126,
+                  "n_species": 20,
+                  "phylo_nearest": {
+                    "mae": 0.27680577,
+                    "rmse": 0.3875355
+                  },
+                  "train_mean": {
+                    "mae": 0.35028061,
+                    "rmse": 0.3872775
+                  }
+                },
+                "near": {
+                  "branch_rmse_gain_vs_mean_pct": 19.42937079,
+                  "branch_rmse_gain_vs_nearest_pct": 24.90402148,
+                  "branch_three": {
+                    "mae": 0.20800053,
+                    "rmse": 0.25058984
+                  },
+                  "gap_max": 12.777228,
+                  "gap_min": 6.451538,
+                  "n_species": 20,
+                  "phylo_nearest": {
+                    "mae": 0.22329914,
+                    "rmse": 0.33369275
+                  },
+                  "train_mean": {
+                    "mae": 0.27378656,
+                    "rmse": 0.31101884
+                  }
+                }
+              }
+            }
+          }
+        },
+        "flavonols_log1p_total": {
+          "branch_rmse_gain_vs_mean_pct": 13.83070208,
+          "models": {
+            "CHI_only": {
+              "mae": 1.06285704,
+              "rmse": 1.36901965
+            },
+            "branch_three": {
+              "mae": 0.89878106,
+              "rmse": 1.18667618
+            },
+            "early_three": {
+              "mae": 1.12542784,
+              "rmse": 1.52024292
+            },
+            "joint_six": {
+              "mae": 0.88559008,
+              "rmse": 1.16245114
+            },
+            "late_two": {
+              "mae": 1.11436031,
+              "rmse": 1.41592734
+            },
+            "phylo_nearest_1e-04": {
+              "mae": 1.26550032,
+              "rmse": 1.62246709
+            },
+            "phylo_nearest_1e-05": {
+              "mae": 1.26550032,
+              "rmse": 1.62246709
+            },
+            "phylo_nearest_1e-06": {
+              "mae": 1.2376541,
+              "rmse": 1.60385324
+            },
+            "train_mean_baseline": {
+              "mae": 1.06485371,
+              "rmse": 1.37714501
+            }
+          },
+          "n_species_branch_squared_error_better_than_mean": 37,
+          "raw_distance_rho_branch_squared_error": -0.0372709,
+          "rho_expression_novelty_branch_squared_error": 0.07451783,
+          "rho_expression_novelty_mean_minus_branch_squared_error": 0.13530099,
+          "scored_row_influence": {
+            "already_scored_row_omission_not_refit_or_CI": true,
+            "branch_vs_nearest_rmse_gain_pct_range": [
+              24.31954112,
+              30.36357876
+            ],
+            "n_omissions": 59,
+            "rho_gap_error_range": [
+              -0.08369617,
+              0.00763112
+            ]
+          },
+          "tolerance_sensitivity": {
+            "1e-04": {
+              "branch_beats_nearest_in_rmse_and_mae": true,
+              "branch_rmse_gain_vs_nearest_pct": 26.85976861,
+              "distance_pattern_support": false,
+              "n_distance_bands": 37,
+              "n_species_branch_squared_error_better_than_nearest": 36,
+              "rho_equal_band_mean_gap_vs_mean_branch_squared_error": -0.20341394,
+              "rho_gap_branch_squared_error": -0.0372709,
+              "rho_gap_mean_minus_branch_squared_error": -0.13812155,
+              "rho_gap_mean_squared_error": -0.05492707,
+              "tiers": {
+                "far": {
+                  "branch_rmse_gain_vs_mean_pct": 23.08065833,
+                  "branch_rmse_gain_vs_nearest_pct": 37.58001916,
+                  "branch_three": {
+                    "mae": 0.67332026,
+                    "rmse": 0.8351326
+                  },
+                  "gap_max": 29.838854,
+                  "gap_min": 18.006364,
+                  "n_species": 19,
+                  "phylo_nearest": {
+                    "mae": 1.13659,
+                    "rmse": 1.33792512
+                  },
+                  "train_mean": {
+                    "mae": 0.91460563,
+                    "rmse": 1.0857251
+                  }
+                },
+                "middle": {
+                  "branch_rmse_gain_vs_mean_pct": 6.19354646,
+                  "branch_rmse_gain_vs_nearest_pct": 18.63887237,
+                  "branch_three": {
+                    "mae": 1.06281224,
+                    "rmse": 1.36113804
+                  },
+                  "gap_max": 17.321815,
+                  "gap_min": 13.281126,
+                  "n_species": 20,
+                  "phylo_nearest": {
+                    "mae": 1.28959475,
+                    "rmse": 1.67295867
+                  },
+                  "train_mean": {
+                    "mae": 1.04624844,
+                    "rmse": 1.45100682
+                  }
+                },
+                "near": {
+                  "branch_rmse_gain_vs_mean_pct": 16.83272293,
+                  "branch_rmse_gain_vs_nearest_pct": 29.1639332,
+                  "branch_three": {
+                    "mae": 0.94893765,
+                    "rmse": 1.28020317
+                  },
+                  "gap_max": 12.777228,
+                  "gap_min": 6.451538,
+                  "n_species": 20,
+                  "phylo_nearest": {
+                    "mae": 1.36387069,
+                    "rmse": 1.80727591
+                  },
+                  "train_mean": {
+                    "mae": 1.22619466,
+                    "rmse": 1.53931116
+                  }
+                }
+              }
+            },
+            "1e-05": {
+              "branch_beats_nearest_in_rmse_and_mae": true,
+              "branch_rmse_gain_vs_nearest_pct": 26.85976861,
+              "distance_pattern_support": false,
+              "n_distance_bands": 37,
+              "n_species_branch_squared_error_better_than_nearest": 36,
+              "rho_equal_band_mean_gap_vs_mean_branch_squared_error": -0.20341394,
+              "rho_gap_branch_squared_error": -0.0372709,
+              "rho_gap_mean_minus_branch_squared_error": -0.13812155,
+              "rho_gap_mean_squared_error": -0.05492707,
+              "tiers": {
+                "far": {
+                  "branch_rmse_gain_vs_mean_pct": 23.08065833,
+                  "branch_rmse_gain_vs_nearest_pct": 37.58001916,
+                  "branch_three": {
+                    "mae": 0.67332026,
+                    "rmse": 0.8351326
+                  },
+                  "gap_max": 29.838854,
+                  "gap_min": 18.006364,
+                  "n_species": 19,
+                  "phylo_nearest": {
+                    "mae": 1.13659,
+                    "rmse": 1.33792512
+                  },
+                  "train_mean": {
+                    "mae": 0.91460563,
+                    "rmse": 1.0857251
+                  }
+                },
+                "middle": {
+                  "branch_rmse_gain_vs_mean_pct": 6.19354646,
+                  "branch_rmse_gain_vs_nearest_pct": 18.63887237,
+                  "branch_three": {
+                    "mae": 1.06281224,
+                    "rmse": 1.36113804
+                  },
+                  "gap_max": 17.321815,
+                  "gap_min": 13.281126,
+                  "n_species": 20,
+                  "phylo_nearest": {
+                    "mae": 1.28959475,
+                    "rmse": 1.67295867
+                  },
+                  "train_mean": {
+                    "mae": 1.04624844,
+                    "rmse": 1.45100682
+                  }
+                },
+                "near": {
+                  "branch_rmse_gain_vs_mean_pct": 16.83272293,
+                  "branch_rmse_gain_vs_nearest_pct": 29.1639332,
+                  "branch_three": {
+                    "mae": 0.94893765,
+                    "rmse": 1.28020317
+                  },
+                  "gap_max": 12.777228,
+                  "gap_min": 6.451538,
+                  "n_species": 20,
+                  "phylo_nearest": {
+                    "mae": 1.36387069,
+                    "rmse": 1.80727591
+                  },
+                  "train_mean": {
+                    "mae": 1.22619466,
+                    "rmse": 1.53931116
+                  }
+                }
+              }
+            },
+            "1e-06": {
+              "branch_beats_nearest_in_rmse_and_mae": true,
+              "branch_rmse_gain_vs_nearest_pct": 26.01092478,
+              "distance_pattern_support": false,
+              "n_distance_bands": 37,
+              "n_species_branch_squared_error_better_than_nearest": 35,
+              "rho_equal_band_mean_gap_vs_mean_branch_squared_error": -0.20341394,
+              "rho_gap_branch_squared_error": -0.0372709,
+              "rho_gap_mean_minus_branch_squared_error": -0.13812155,
+              "rho_gap_mean_squared_error": -0.05492707,
+              "tiers": {
+                "far": {
+                  "branch_rmse_gain_vs_mean_pct": 23.08065833,
+                  "branch_rmse_gain_vs_nearest_pct": 34.05028758,
+                  "branch_three": {
+                    "mae": 0.67332026,
+                    "rmse": 0.8351326
+                  },
+                  "gap_max": 29.838854,
+                  "gap_min": 18.006364,
+                  "n_species": 19,
+                  "phylo_nearest": {
+                    "mae": 1.05012017,
+                    "rmse": 1.26631728
+                  },
+                  "train_mean": {
+                    "mae": 0.91460563,
+                    "rmse": 1.0857251
+                  }
+                },
+                "middle": {
+                  "branch_rmse_gain_vs_mean_pct": 6.19354646,
+                  "branch_rmse_gain_vs_nearest_pct": 18.63887237,
+                  "branch_three": {
+                    "mae": 1.06281224,
+                    "rmse": 1.36113804
+                  },
+                  "gap_max": 17.321815,
+                  "gap_min": 13.281126,
+                  "n_species": 20,
+                  "phylo_nearest": {
+                    "mae": 1.28959475,
+                    "rmse": 1.67295867
+                  },
+                  "train_mean": {
+                    "mae": 1.04624844,
+                    "rmse": 1.45100682
+                  }
+                },
+                "near": {
+                  "branch_rmse_gain_vs_mean_pct": 16.83272293,
+                  "branch_rmse_gain_vs_nearest_pct": 29.1639332,
+                  "branch_three": {
+                    "mae": 0.94893765,
+                    "rmse": 1.28020317
+                  },
+                  "gap_max": 12.777228,
+                  "gap_min": 6.451538,
+                  "n_species": 20,
+                  "phylo_nearest": {
+                    "mae": 1.36387069,
+                    "rmse": 1.80727591
+                  },
+                  "train_mean": {
+                    "mae": 1.22619466,
+                    "rmse": 1.53931116
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "gap_min_median_max": [
+        6.451538,
+        14.540428,
+        29.838854
+      ],
+      "n_species_scored_once": 59,
+      "n_training_species_per_fold": 58
+    },
+    "shared_31_secondary": {
+      "distance_bands_by_tolerance": {
+        "1e-04": {
+          "band_sizes": [
+            2,
+            2,
+            2,
+            1,
+            1,
+            2,
+            2,
+            2,
+            2,
+            1,
+            1,
+            1,
+            1,
+            2,
+            1,
+            1,
+            2,
+            2,
+            2,
+            1
+          ],
+          "n_bands": 20,
+          "nearest_training_tie_count_range": [
+            1,
+            8
+          ]
+        },
+        "1e-05": {
+          "band_sizes": [
+            2,
+            2,
+            2,
+            1,
+            1,
+            2,
+            2,
+            2,
+            2,
+            1,
+            1,
+            1,
+            1,
+            2,
+            1,
+            1,
+            2,
+            2,
+            2,
+            1
+          ],
+          "n_bands": 20,
+          "nearest_training_tie_count_range": [
+            1,
+            8
+          ]
+        },
+        "1e-06": {
+          "band_sizes": [
+            2,
+            2,
+            2,
+            1,
+            1,
+            2,
+            2,
+            2,
+            2,
+            1,
+            1,
+            1,
+            1,
+            2,
+            1,
+            1,
+            2,
+            2,
+            2,
+            1
+          ],
+          "n_bands": 20,
+          "nearest_training_tie_count_range": [
+            1,
+            8
+          ]
+        }
+      },
+      "endpoints": {
+        "anthocyanidins_log1p_total": {
+          "branch_rmse_gain_vs_mean_pct": 8.76034902,
+          "models": {
+            "CHI_only": {
+              "mae": 0.3539366,
+              "rmse": 0.41457687
+            },
+            "branch_three": {
+              "mae": 0.3204817,
+              "rmse": 0.37445183
+            },
+            "early_three": {
+              "mae": 0.33278441,
+              "rmse": 0.38775449
+            },
+            "joint_six": {
+              "mae": 0.31416593,
+              "rmse": 0.36910697
+            },
+            "late_two": {
+              "mae": 0.30858264,
+              "rmse": 0.36214381
+            },
+            "phylo_nearest_1e-04": {
+              "mae": 0.44008842,
+              "rmse": 0.52401357
+            },
+            "phylo_nearest_1e-05": {
+              "mae": 0.44008842,
+              "rmse": 0.52401357
+            },
+            "phylo_nearest_1e-06": {
+              "mae": 0.4408286,
+              "rmse": 0.52496414
+            },
+            "train_mean_baseline": {
+              "mae": 0.35046319,
+              "rmse": 0.41040472
+            }
+          },
+          "n_species_branch_squared_error_better_than_mean": 19,
+          "raw_distance_rho_branch_squared_error": -0.12372598,
+          "rho_expression_novelty_branch_squared_error": -0.29395161,
+          "rho_expression_novelty_mean_minus_branch_squared_error": 0.2016129,
+          "scored_row_influence": {
+            "already_scored_row_omission_not_refit_or_CI": true,
+            "branch_vs_nearest_rmse_gain_pct_range": [
+              24.29920016,
+              32.86451282
+            ],
+            "n_omissions": 31,
+            "rho_gap_error_range": [
+              -0.22538989,
+              -0.04988867
+            ]
+          },
+          "tolerance_sensitivity": {
+            "1e-04": {
+              "branch_beats_nearest_in_rmse_and_mae": true,
+              "branch_rmse_gain_vs_nearest_pct": 28.54157764,
+              "distance_pattern_support": false,
+              "n_distance_bands": 20,
+              "n_species_branch_squared_error_better_than_nearest": 20,
+              "rho_equal_band_mean_gap_vs_mean_branch_squared_error": -0.23308271,
+              "rho_gap_branch_squared_error": -0.12372598,
+              "rho_gap_mean_minus_branch_squared_error": -0.01089919,
+              "rho_gap_mean_squared_error": -0.13401966,
+              "tiers": {
+                "far": {
+                  "branch_rmse_gain_vs_mean_pct": 5.40639885,
+                  "branch_rmse_gain_vs_nearest_pct": 39.30084038,
+                  "branch_three": {
+                    "mae": 0.32776236,
+                    "rmse": 0.40964888
+                  },
+                  "gap_max": 29.838854,
+                  "gap_min": 22.388547,
+                  "n_species": 9,
+                  "phylo_nearest": {
+                    "mae": 0.62208198,
+                    "rmse": 0.67488395
+                  },
+                  "train_mean": {
+                    "mae": 0.32552718,
+                    "rmse": 0.43306194
+                  }
+                },
+                "middle": {
+                  "branch_rmse_gain_vs_mean_pct": 13.64495537,
+                  "branch_rmse_gain_vs_nearest_pct": 19.92790605,
+                  "branch_three": {
+                    "mae": 0.31477893,
+                    "rmse": 0.35426681
+                  },
+                  "gap_max": 20.094262,
+                  "gap_min": 16.52096,
+                  "n_species": 12,
+                  "phylo_nearest": {
+                    "mae": 0.36218899,
+                    "rmse": 0.4424348
+                  },
+                  "train_mean": {
+                    "mae": 0.35423903,
+                    "rmse": 0.41024449
+                  }
+                },
+                "near": {
+                  "branch_rmse_gain_vs_mean_pct": 6.26087624,
+                  "branch_rmse_gain_vs_nearest_pct": 19.72051236,
+                  "branch_three": {
+                    "mae": 0.32077244,
+                    "rmse": 0.36472864
+                  },
+                  "gap_max": 16.225212,
+                  "gap_min": 12.777228,
+                  "n_species": 10,
+                  "phylo_nearest": {
+                    "mae": 0.36977355,
+                    "rmse": 0.45432358
+                  },
+                  "train_mean": {
+                    "mae": 0.36837457,
+                    "rmse": 0.38908902
+                  }
+                }
+              }
+            },
+            "1e-05": {
+              "branch_beats_nearest_in_rmse_and_mae": true,
+              "branch_rmse_gain_vs_nearest_pct": 28.54157764,
+              "distance_pattern_support": false,
+              "n_distance_bands": 20,
+              "n_species_branch_squared_error_better_than_nearest": 20,
+              "rho_equal_band_mean_gap_vs_mean_branch_squared_error": -0.23308271,
+              "rho_gap_branch_squared_error": -0.12372598,
+              "rho_gap_mean_minus_branch_squared_error": -0.01089919,
+              "rho_gap_mean_squared_error": -0.13401966,
+              "tiers": {
+                "far": {
+                  "branch_rmse_gain_vs_mean_pct": 5.40639885,
+                  "branch_rmse_gain_vs_nearest_pct": 39.30084038,
+                  "branch_three": {
+                    "mae": 0.32776236,
+                    "rmse": 0.40964888
+                  },
+                  "gap_max": 29.838854,
+                  "gap_min": 22.388547,
+                  "n_species": 9,
+                  "phylo_nearest": {
+                    "mae": 0.62208198,
+                    "rmse": 0.67488395
+                  },
+                  "train_mean": {
+                    "mae": 0.32552718,
+                    "rmse": 0.43306194
+                  }
+                },
+                "middle": {
+                  "branch_rmse_gain_vs_mean_pct": 13.64495537,
+                  "branch_rmse_gain_vs_nearest_pct": 19.92790605,
+                  "branch_three": {
+                    "mae": 0.31477893,
+                    "rmse": 0.35426681
+                  },
+                  "gap_max": 20.094262,
+                  "gap_min": 16.52096,
+                  "n_species": 12,
+                  "phylo_nearest": {
+                    "mae": 0.36218899,
+                    "rmse": 0.4424348
+                  },
+                  "train_mean": {
+                    "mae": 0.35423903,
+                    "rmse": 0.41024449
+                  }
+                },
+                "near": {
+                  "branch_rmse_gain_vs_mean_pct": 6.26087624,
+                  "branch_rmse_gain_vs_nearest_pct": 19.72051236,
+                  "branch_three": {
+                    "mae": 0.32077244,
+                    "rmse": 0.36472864
+                  },
+                  "gap_max": 16.225212,
+                  "gap_min": 12.777228,
+                  "n_species": 10,
+                  "phylo_nearest": {
+                    "mae": 0.36977355,
+                    "rmse": 0.45432358
+                  },
+                  "train_mean": {
+                    "mae": 0.36837457,
+                    "rmse": 0.38908902
+                  }
+                }
+              }
+            },
+            "1e-06": {
+              "branch_beats_nearest_in_rmse_and_mae": true,
+              "branch_rmse_gain_vs_nearest_pct": 28.67096985,
+              "distance_pattern_support": false,
+              "n_distance_bands": 20,
+              "n_species_branch_squared_error_better_than_nearest": 20,
+              "rho_equal_band_mean_gap_vs_mean_branch_squared_error": -0.23308271,
+              "rho_gap_branch_squared_error": -0.12372598,
+              "rho_gap_mean_minus_branch_squared_error": -0.01089919,
+              "rho_gap_mean_squared_error": -0.13401966,
+              "tiers": {
+                "far": {
+                  "branch_rmse_gain_vs_mean_pct": 5.40639885,
+                  "branch_rmse_gain_vs_nearest_pct": 39.30084038,
+                  "branch_three": {
+                    "mae": 0.32776236,
+                    "rmse": 0.40964888
+                  },
+                  "gap_max": 29.838854,
+                  "gap_min": 22.388547,
+                  "n_species": 9,
+                  "phylo_nearest": {
+                    "mae": 0.62208198,
+                    "rmse": 0.67488395
+                  },
+                  "train_mean": {
+                    "mae": 0.32552718,
+                    "rmse": 0.43306194
+                  }
+                },
+                "middle": {
+                  "branch_rmse_gain_vs_mean_pct": 13.64495537,
+                  "branch_rmse_gain_vs_nearest_pct": 20.44960873,
+                  "branch_three": {
+                    "mae": 0.31477893,
+                    "rmse": 0.35426681
+                  },
+                  "gap_max": 20.094262,
+                  "gap_min": 16.52096,
+                  "n_species": 12,
+                  "phylo_nearest": {
+                    "mae": 0.36410111,
+                    "rmse": 0.44533635
+                  },
+                  "train_mean": {
+                    "mae": 0.35423903,
+                    "rmse": 0.41024449
+                  }
+                },
+                "near": {
+                  "branch_rmse_gain_vs_mean_pct": 6.26087624,
+                  "branch_rmse_gain_vs_nearest_pct": 19.72051236,
+                  "branch_three": {
+                    "mae": 0.32077244,
+                    "rmse": 0.36472864
+                  },
+                  "gap_max": 16.225212,
+                  "gap_min": 12.777228,
+                  "n_species": 10,
+                  "phylo_nearest": {
+                    "mae": 0.36977355,
+                    "rmse": 0.45432358
+                  },
+                  "train_mean": {
+                    "mae": 0.36837457,
+                    "rmse": 0.38908902
+                  }
+                }
+              }
+            }
+          }
+        },
+        "flavonols_log1p_total": {
+          "branch_rmse_gain_vs_mean_pct": 5.9644817,
+          "models": {
+            "CHI_only": {
+              "mae": 1.04315323,
+              "rmse": 1.40168014
+            },
+            "branch_three": {
+              "mae": 0.97609439,
+              "rmse": 1.31218756
+            },
+            "early_three": {
+              "mae": 0.9867334,
+              "rmse": 1.37383478
+            },
+            "joint_six": {
+              "mae": 1.00485227,
+              "rmse": 1.35484125
+            },
+            "late_two": {
+              "mae": 1.16402365,
+              "rmse": 1.56443981
+            },
+            "phylo_nearest_1e-04": {
+              "mae": 1.28499242,
+              "rmse": 1.60579913
+            },
+            "phylo_nearest_1e-05": {
+              "mae": 1.28499242,
+              "rmse": 1.60579913
+            },
+            "phylo_nearest_1e-06": {
+              "mae": 1.23199479,
+              "rmse": 1.56980702
+            },
+            "train_mean_baseline": {
+              "mae": 1.02765264,
+              "rmse": 1.39541695
+            }
+          },
+          "n_species_branch_squared_error_better_than_mean": 17,
+          "raw_distance_rho_branch_squared_error": -0.01412858,
+          "rho_expression_novelty_branch_squared_error": -0.04112903,
+          "rho_expression_novelty_mean_minus_branch_squared_error": -0.07782258,
+          "scored_row_influence": {
+            "already_scored_row_omission_not_refit_or_CI": true,
+            "branch_vs_nearest_rmse_gain_pct_range": [
+              12.39006297,
+              24.29718131
+            ],
+            "n_omissions": 31,
+            "rho_gap_error_range": [
+              -0.11158136,
+              0.08151453
+            ]
+          },
+          "tolerance_sensitivity": {
+            "1e-04": {
+              "branch_beats_nearest_in_rmse_and_mae": true,
+              "branch_rmse_gain_vs_nearest_pct": 18.28445178,
+              "distance_pattern_support": false,
+              "n_distance_bands": 20,
+              "n_species_branch_squared_error_better_than_nearest": 19,
+              "rho_equal_band_mean_gap_vs_mean_branch_squared_error": -0.18496241,
+              "rho_gap_branch_squared_error": -0.01412858,
+              "rho_gap_mean_minus_branch_squared_error": 0.22282787,
+              "rho_gap_mean_squared_error": 0.01715613,
+              "tiers": {
+                "far": {
+                  "branch_rmse_gain_vs_mean_pct": 23.79926013,
+                  "branch_rmse_gain_vs_nearest_pct": 22.08000922,
+                  "branch_three": {
+                    "mae": 0.89519214,
+                    "rmse": 1.11408154
+                  },
+                  "gap_max": 29.838854,
+                  "gap_min": 22.388547,
+                  "n_species": 9,
+                  "phylo_nearest": {
+                    "mae": 1.25769532,
+                    "rmse": 1.42977628
+                  },
+                  "train_mean": {
+                    "mae": 1.25937184,
+                    "rmse": 1.46203507
+                  }
+                },
+                "middle": {
+                  "branch_rmse_gain_vs_mean_pct": -4.82622241,
+                  "branch_rmse_gain_vs_nearest_pct": 34.00105318,
+                  "branch_three": {
+                    "mae": 0.85777762,
+                    "rmse": 1.14398428
+                  },
+                  "gap_max": 20.094262,
+                  "gap_min": 16.52096,
+                  "n_species": 12,
+                  "phylo_nearest": {
+                    "mae": 1.31119217,
+                    "rmse": 1.73333718
+                  },
+                  "train_mean": {
+                    "mae": 0.69773813,
+                    "rmse": 1.09131499
+                  }
+                },
+                "near": {
+                  "branch_rmse_gain_vs_mean_pct": 0.61939708,
+                  "branch_rmse_gain_vs_nearest_pct": -1.9766625,
+                  "branch_three": {
+                    "mae": 1.19088654,
+                    "rmse": 1.6279411
+                  },
+                  "gap_max": 16.225212,
+                  "gap_min": 12.777228,
+                  "n_species": 10,
+                  "phylo_nearest": {
+                    "mae": 1.27812012,
+                    "rmse": 1.59638594
+                  },
+                  "train_mean": {
+                    "mae": 1.21500276,
+                    "rmse": 1.63808736
+                  }
+                }
+              }
+            },
+            "1e-05": {
+              "branch_beats_nearest_in_rmse_and_mae": true,
+              "branch_rmse_gain_vs_nearest_pct": 18.28445178,
+              "distance_pattern_support": false,
+              "n_distance_bands": 20,
+              "n_species_branch_squared_error_better_than_nearest": 19,
+              "rho_equal_band_mean_gap_vs_mean_branch_squared_error": -0.18496241,
+              "rho_gap_branch_squared_error": -0.01412858,
+              "rho_gap_mean_minus_branch_squared_error": 0.22282787,
+              "rho_gap_mean_squared_error": 0.01715613,
+              "tiers": {
+                "far": {
+                  "branch_rmse_gain_vs_mean_pct": 23.79926013,
+                  "branch_rmse_gain_vs_nearest_pct": 22.08000922,
+                  "branch_three": {
+                    "mae": 0.89519214,
+                    "rmse": 1.11408154
+                  },
+                  "gap_max": 29.838854,
+                  "gap_min": 22.388547,
+                  "n_species": 9,
+                  "phylo_nearest": {
+                    "mae": 1.25769532,
+                    "rmse": 1.42977628
+                  },
+                  "train_mean": {
+                    "mae": 1.25937184,
+                    "rmse": 1.46203507
+                  }
+                },
+                "middle": {
+                  "branch_rmse_gain_vs_mean_pct": -4.82622241,
+                  "branch_rmse_gain_vs_nearest_pct": 34.00105318,
+                  "branch_three": {
+                    "mae": 0.85777762,
+                    "rmse": 1.14398428
+                  },
+                  "gap_max": 20.094262,
+                  "gap_min": 16.52096,
+                  "n_species": 12,
+                  "phylo_nearest": {
+                    "mae": 1.31119217,
+                    "rmse": 1.73333718
+                  },
+                  "train_mean": {
+                    "mae": 0.69773813,
+                    "rmse": 1.09131499
+                  }
+                },
+                "near": {
+                  "branch_rmse_gain_vs_mean_pct": 0.61939708,
+                  "branch_rmse_gain_vs_nearest_pct": -1.9766625,
+                  "branch_three": {
+                    "mae": 1.19088654,
+                    "rmse": 1.6279411
+                  },
+                  "gap_max": 16.225212,
+                  "gap_min": 12.777228,
+                  "n_species": 10,
+                  "phylo_nearest": {
+                    "mae": 1.27812012,
+                    "rmse": 1.59638594
+                  },
+                  "train_mean": {
+                    "mae": 1.21500276,
+                    "rmse": 1.63808736
+                  }
+                }
+              }
+            },
+            "1e-06": {
+              "branch_beats_nearest_in_rmse_and_mae": true,
+              "branch_rmse_gain_vs_nearest_pct": 16.41090004,
+              "distance_pattern_support": false,
+              "n_distance_bands": 20,
+              "n_species_branch_squared_error_better_than_nearest": 18,
+              "rho_equal_band_mean_gap_vs_mean_branch_squared_error": -0.18496241,
+              "rho_gap_branch_squared_error": -0.01412858,
+              "rho_gap_mean_minus_branch_squared_error": 0.22282787,
+              "rho_gap_mean_squared_error": 0.01715613,
+              "tiers": {
+                "far": {
+                  "branch_rmse_gain_vs_mean_pct": 23.79926013,
+                  "branch_rmse_gain_vs_nearest_pct": 22.08000922,
+                  "branch_three": {
+                    "mae": 0.89519214,
+                    "rmse": 1.11408154
+                  },
+                  "gap_max": 29.838854,
+                  "gap_min": 22.388547,
+                  "n_species": 9,
+                  "phylo_nearest": {
+                    "mae": 1.25769532,
+                    "rmse": 1.42977628
+                  },
+                  "train_mean": {
+                    "mae": 1.25937184,
+                    "rmse": 1.46203507
+                  }
+                },
+                "middle": {
+                  "branch_rmse_gain_vs_mean_pct": -4.82622241,
+                  "branch_rmse_gain_vs_nearest_pct": 30.49753103,
+                  "branch_three": {
+                    "mae": 0.85777762,
+                    "rmse": 1.14398428
+                  },
+                  "gap_max": 20.094262,
+                  "gap_min": 16.52096,
+                  "n_species": 12,
+                  "phylo_nearest": {
+                    "mae": 1.17428161,
+                    "rmse": 1.64596208
+                  },
+                  "train_mean": {
+                    "mae": 0.69773813,
+                    "rmse": 1.09131499
+                  }
+                },
+                "near": {
+                  "branch_rmse_gain_vs_mean_pct": 0.61939708,
+                  "branch_rmse_gain_vs_nearest_pct": -1.9766625,
+                  "branch_three": {
+                    "mae": 1.19088654,
+                    "rmse": 1.6279411
+                  },
+                  "gap_max": 16.225212,
+                  "gap_min": 12.777228,
+                  "n_species": 10,
+                  "phylo_nearest": {
+                    "mae": 1.27812012,
+                    "rmse": 1.59638594
+                  },
+                  "train_mean": {
+                    "mae": 1.21500276,
+                    "rmse": 1.63808736
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "gap_min_median_max": [
+        12.777228,
+        18.006364,
+        29.838854
+      ],
+      "n_species_scored_once": 31,
+      "n_training_species_per_fold": 30
+    }
+  },
+  "parent_commit": "967dfb39c048301612f291d102309720f9ba31e0",
+  "primary_tolerance": 1e-05,
+  "raw_original_observations_not_redistributed": true,
+  "same_distance_bands_are_not_independent_lineages": true,
+  "schema": "anto_v31_source_verified_species_loo_distance_nearest_neighbor",
+  "source_authentication_v26_to_v30_exact_replay": true,
+  "source_file_hashes": {
+    "expression_gene_mean": {
+      "bytes": 30410,
+      "md5": "9f2ea379ecd7a8e2a56e739b8e56a3bd",
+      "sha256": "6f62a4e385d7c9d12e63fd07f6d33a2c79e469af63223f01cec6e8268e68f5c5"
+    },
+    "expression_pigment_matched": {
+      "bytes": 26917,
+      "md5": "13a786471791dc1175849d66b2d4a2ef",
+      "sha256": "5843d4cd4eb253046f97349fa6bd285ca77e43e7a9c3aaa0e78fae3e8e391edd"
+    },
+    "pigment_mean": {
+      "bytes": 7039,
+      "md5": "407400bde406e266456ab0b6589f2707",
+      "sha256": "74b4d20a383d478266b67bb7b31c20dd4ec7cc949f2ffb612b19fd3a0e7b2d73"
+    },
+    "species_tree_pruned": {
+      "bytes": 1481,
+      "md5": "f270feef2909dec19a67eefe15efcb2f",
+      "sha256": "95b4a688d3d71417b712b37a2b04cdc22a9431be3172d6509def4435f5fd8614"
+    }
+  },
+  "upstream_receipt_sha256": {
+    "26": "901d8ddc13af0516f261e75b31da96d20156cf4e145a4e12a7f103b4dcc8a4cb",
+    "27": "ca5b714b06cde5d41d6a80658b37a235cbc694fbd54e32744cdc7480fd860f7b",
+    "28": "5deb39ff8201b9589079d70a2e718d3b5aa8bdf192a0fdd3b8b4779e32decbbb",
+    "29": "128c1f5b47fe394a6514e13f4a247c82d70900321603ed5db72c7b6657cd8ee8",
+    "30": "f5d2ecb8b0c8517205c74bcb2a4c16718e4ef504729f20238a663ac32fe45943"
+  }
+}
