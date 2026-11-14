@@ -1,0 +1,65 @@
+name: ANTO v28 source-authenticated published alternative phylogenies
+
+on:
+  push:
+    branches:
+      - 'analysis/anto-v28-*'
+    paths:
+      - 'scripts/analyze_original_petunieae_alternative_trees_v28.py'
+      - 'tests/test_original_petunieae_alternative_trees_v28.py'
+      - 'results/petunieae_alternative_published_phylogenies_v28_20261114.json'
+      - 'docs/PETUNIEAE_V28_PUBLISHED_ALTERNATIVE_PHYLOGENIES_20261114.md'
+      - '.github/workflows/anto-v28-published-phylogenies.yml'
+  pull_request:
+    paths:
+      - 'scripts/analyze_original_petunieae_alternative_trees_v28.py'
+      - 'tests/test_original_petunieae_alternative_trees_v28.py'
+      - 'results/petunieae_alternative_published_phylogenies_v28_20261114.json'
+      - 'docs/PETUNIEAE_V28_PUBLISHED_ALTERNATIVE_PHYLOGENIES_20261114.md'
+      - '.github/workflows/anto-v28-published-phylogenies.yml'
+
+permissions:
+  contents: read
+
+jobs:
+  authentic-published-alternative-trees:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Negative controls for source identities, taxon splits and tree-only folds
+        run: python -m unittest discover -s tests -p test_original_petunieae_alternative_trees_v28.py -v
+      - name: Verify prior genuine original Petunieae tree code and models
+        run: |
+          python -m unittest discover -s tests -p test_original_petunieae_phylogeny_v27.py -v
+          python -m unittest discover -s tests -p test_original_petunieae_2023_species_prediction_v26.py -v
+      - name: Recalculate actual 2023 RNA HPLC across authenticated 2024 ASTRAL and IQtree
+        run: |
+          python scripts/analyze_original_petunieae_alternative_trees_v28.py \
+            --expected-v26 results/petunieae_2023_original_species_pigment_prediction_v26_20261028.json \
+            --expected-v27 results/petunieae_original_tree_clade_holdout_v27_20261114.json \
+            --output /tmp/anto_v28_original_published_alternative_trees.json
+      - name: Compare committed scientific readout to real source computation if frozen
+        run: |
+          if [ -f results/petunieae_alternative_published_phylogenies_v28_20261114.json ]; then
+            python - <<'PY'
+          import json
+          frozen=json.load(open('results/petunieae_alternative_published_phylogenies_v28_20261114.json'))
+          actual=json.load(open('/tmp/anto_v28_original_published_alternative_trees.json'))
+          assert frozen==actual, 'V28_SOURCE_DERIVED_FROZEN_METRIC_DRIFT'
+          assert actual['source_2023_v26_and_v27_readouts_exactly_reproduced']
+          assert actual['source_intersection']['primary_common_focal_taxa_count']==31
+          assert actual['source_intersection']['secondary_shared_including_OUT_count']==37
+          assert len(actual['primary_original_vs_two_published_alternative_definitions'])==3
+          assert actual['Cirsium_organismal_empirical_owner']=='zuizui0223/aza3'
+          print('ANTO_V28_REAL_2024_TREE_SOURCE_READOUT_FROZEN_PASS')
+          PY
+          fi
+      - uses: actions/upload-artifact@v4
+        with:
+          name: anto-v28-published-alternative-trees-2023-2024-actual-same-taxa-results
+          path: /tmp/anto_v28_original_published_alternative_trees.json
+          retention-days: 90
