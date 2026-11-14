@@ -6,14 +6,14 @@ on:
       - 'scripts/analyze_phylo_expression_v32.py'
       - 'tests/test_phylo_expression_v32.py'
       - 'docs/PETUNIEAE_V32*'
-      - 'results/petunieae_phylo_expression_v32_20261114.json'
+      - 'results/petunieae_phylo_expression_v32_20261114*'
       - '.github/workflows/anto-v32-phylogeny-plus-expression.yml'
   pull_request:
     paths:
       - 'scripts/analyze_phylo_expression_v32.py'
       - 'tests/test_phylo_expression_v32.py'
       - 'docs/PETUNIEAE_V32*'
-      - 'results/petunieae_phylo_expression_v32_20261114.json'
+      - 'results/petunieae_phylo_expression_v32_20261114*'
       - '.github/workflows/anto-v32-phylogeny-plus-expression.yml'
 permissions:
   contents: read
@@ -48,13 +48,34 @@ jobs:
             --status /tmp/anto_v32_source_status.json
       - name: Replay v31 and fit nested phylogeny-only and phylogeny-plus-expression
         run: |
-          EXTRA=()
-          if [ -f results/petunieae_phylo_expression_v32_20261114.json ]; then
-            EXTRA=(--expected results/petunieae_phylo_expression_v32_20261114.json)
-          fi
           python scripts/analyze_phylo_expression_v32.py \
             --source-cache /tmp/anto_v32_source_cache \
-            --output /tmp/anto_v32_result.json "${EXTRA[@]}"
+            --output /tmp/anto_v32_result.json
+      - name: Verify full regenerated record and compact receipt without changing scientific files
+        run: |
+          python - <<'PY'
+          import hashlib,json
+          from pathlib import Path
+          path=Path('results/petunieae_phylo_expression_v32_20261114.receipt.json')
+          if path.exists():
+              receipt=json.loads(path.read_text())
+              raw=Path('/tmp/anto_v32_result.json').read_bytes()
+              assert len(raw)==receipt['full_result_bytes'],'V32_FULL_RESULT_SIZE_DRIFT'
+              assert hashlib.sha256(raw).hexdigest()==receipt['full_result_sha256'],'V32_FULL_RESULT_DIGEST_DRIFT'
+              result=json.loads(raw)
+              assert result['primary_both_endpoints_improve_rmse_and_mae']==receipt['primary_gate']
+              assert len(receipt['comparisons'])==8
+              for row in receipt['comparisons']:
+                  actual=result['designs'][row['design']]['endpoints'][row['endpoint']]
+                  assert all(actual['risks'][key]==value for key,value in row['models'].items())
+                  assert actual['added_expression']['RMSE_reduction_pct']==row['RMSE_reduction_pct']
+                  assert actual['added_expression']['n_species_lower_squared_error']==row['positive_species']
+                  assert actual['added_expression']['n_folds_positive']==row['positive_folds']
+                  assert actual['added_expression']['equal_fold_MSE_gain']==row['equal_fold_MSE_gain']
+                  assert actual['selected_eta_counts']==row['selected_eta_counts']
+                  assert {k:v['RMSE_reduction_pct'] for k,v in actual['fixed_eta_sensitivity'].items()}==row['fixed_eta_RMSE_gains']
+              print('ANTO_V32_FULL_RESULT_SHA256_AND_COMPACT_RECEIPT_REPLAY_PASS')
+          PY
       - uses: actions/upload-artifact@v4
         if: always()
         with:
