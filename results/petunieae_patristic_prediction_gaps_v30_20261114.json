@@ -123,18 +123,28 @@
             },
             "within_fold_demeaned": {
               "gap_vs_branch_sq_error": {
-                "demeaned_pearson": 0.0318099,
+                "demeaned_pearson": null,
+                "max_original_multispecies_block_x_range": 0.00000100000000458,
                 "multi_species_blocks_used": 3,
+                "nonidentifiability_reason": "NEAR_ULTRAMETRIC_SOURCE_CLADE_GAP_CONSTANT_OR_NO_MULTITIP_FOLDS",
                 "not_an_independent_cluster_adjusted_regression": true,
+                "numerical_identifiability_relative_RMS_gate": 0.000001,
                 "species_in_non_singleton_blocks_used": 31,
-                "within_block_x_squared_deviation": 0
+                "within_block_x_relative_RMS": 1.13365508396e-8,
+                "within_block_x_squared_deviation": 5.85714288001e-12,
+                "within_clade_distance_error_identifiable_at_source_precision": false
               },
               "gap_vs_null_minus_branch_sq_gain": {
-                "demeaned_pearson": -0.334377,
+                "demeaned_pearson": null,
+                "max_original_multispecies_block_x_range": 0.00000100000000458,
                 "multi_species_blocks_used": 3,
+                "nonidentifiability_reason": "NEAR_ULTRAMETRIC_SOURCE_CLADE_GAP_CONSTANT_OR_NO_MULTITIP_FOLDS",
                 "not_an_independent_cluster_adjusted_regression": true,
+                "numerical_identifiability_relative_RMS_gate": 0.000001,
                 "species_in_non_singleton_blocks_used": 31,
-                "within_block_x_squared_deviation": 0
+                "within_block_x_relative_RMS": 1.13365508396e-8,
+                "within_block_x_squared_deviation": 5.85714288001e-12,
+                "within_clade_distance_error_identifiable_at_source_precision": false
               }
             }
           },
@@ -194,18 +204,28 @@
             },
             "within_fold_demeaned": {
               "gap_vs_branch_sq_error": {
-                "demeaned_pearson": 0.1186206,
+                "demeaned_pearson": null,
+                "max_original_multispecies_block_x_range": 0.00000100000000458,
                 "multi_species_blocks_used": 3,
+                "nonidentifiability_reason": "NEAR_ULTRAMETRIC_SOURCE_CLADE_GAP_CONSTANT_OR_NO_MULTITIP_FOLDS",
                 "not_an_independent_cluster_adjusted_regression": true,
+                "numerical_identifiability_relative_RMS_gate": 0.000001,
                 "species_in_non_singleton_blocks_used": 31,
-                "within_block_x_squared_deviation": 0
+                "within_block_x_relative_RMS": 1.13365508396e-8,
+                "within_block_x_squared_deviation": 5.85714288001e-12,
+                "within_clade_distance_error_identifiable_at_source_precision": false
               },
               "gap_vs_null_minus_branch_sq_gain": {
-                "demeaned_pearson": 0.5150586,
+                "demeaned_pearson": null,
+                "max_original_multispecies_block_x_range": 0.00000100000000458,
                 "multi_species_blocks_used": 3,
+                "nonidentifiability_reason": "NEAR_ULTRAMETRIC_SOURCE_CLADE_GAP_CONSTANT_OR_NO_MULTITIP_FOLDS",
                 "not_an_independent_cluster_adjusted_regression": true,
+                "numerical_identifiability_relative_RMS_gate": 0.000001,
                 "species_in_non_singleton_blocks_used": 31,
-                "within_block_x_squared_deviation": 0
+                "within_block_x_relative_RMS": 1.13365508396e-8,
+                "within_block_x_squared_deviation": 5.85714288001e-12,
+                "within_clade_distance_error_identifiable_at_source_precision": false
               }
             }
           }
@@ -284,18 +304,28 @@
             },
             "within_fold_demeaned": {
               "gap_vs_branch_sq_error": {
-                "demeaned_pearson": 0.3128954,
+                "demeaned_pearson": null,
+                "max_original_multispecies_block_x_range": 0.00000100000000103,
                 "multi_species_blocks_used": 11,
+                "nonidentifiability_reason": "NEAR_ULTRAMETRIC_SOURCE_CLADE_GAP_CONSTANT_OR_NO_MULTITIP_FOLDS",
                 "not_an_independent_cluster_adjusted_regression": true,
+                "numerical_identifiability_relative_RMS_gate": 0.000001,
                 "species_in_non_singleton_blocks_used": 22,
-                "within_block_x_squared_deviation": 0
+                "within_block_x_relative_RMS": 6.8662755707e-9,
+                "within_block_x_squared_deviation": 5.00000001028e-13,
+                "within_clade_distance_error_identifiable_at_source_precision": false
               },
               "gap_vs_null_minus_branch_sq_gain": {
-                "demeaned_pearson": -0.1865745,
+                "demeaned_pearson": null,
+                "max_original_multispecies_block_x_range": 0.00000100000000103,
                 "multi_species_blocks_used": 11,
+                "nonidentifiability_reason": "NEAR_ULTRAMETRIC_SOURCE_CLADE_GAP_CONSTANT_OR_NO_MULTITIP_FOLDS",
                 "not_an_independent_cluster_adjusted_regression": true,
+                "numerical_identifiability_relative_RMS_gate": 0.000001,
                 "species_in_non_singleton_blocks_used": 22,
-                "within_block_x_squared_deviation": 0
+                "within_block_x_relative_RMS": 6.8662755707e-9,
+                "within_block_x_squared_deviation": 5.00000001028e-13,
+                "within_clade_distance_error_identifiable_at_source_precision": false
               }
             }
           },
@@ -355,18 +385,28 @@
             },
             "within_fold_demeaned": {
               "gap_vs_branch_sq_error": {
-                "demeaned_pearson": 0.5358501,
+                "demeaned_pearson": null,
+                "max_original_multispecies_block_x_range": 0.00000100000000103,
                 "multi_species_blocks_used": 11,
+                "nonidentifiability_reason": "NEAR_ULTRAMETRIC_SOURCE_CLADE_GAP_CONSTANT_OR_NO_MULTITIP_FOLDS",
                 "not_an_independent_cluster_adjusted_regression": true,
+                "numerical_identifiability_relative_RMS_gate": 0.000001,
                 "species_in_non_singleton_blocks_used": 22,
-                "within_block_x_squared_deviation": 0
+                "within_block_x_relative_RMS": 6.8662755707e-9,
+                "within_block_x_squared_deviation": 5.00000001028e-13,
+                "within_clade_distance_error_identifiable_at_source_precision": false
               },
               "gap_vs_null_minus_branch_sq_gain": {
-                "demeaned_pearson": -0.0226961,
+                "demeaned_pearson": null,
+                "max_original_multispecies_block_x_range": 0.00000100000000103,
                 "multi_species_blocks_used": 11,
+                "nonidentifiability_reason": "NEAR_ULTRAMETRIC_SOURCE_CLADE_GAP_CONSTANT_OR_NO_MULTITIP_FOLDS",
                 "not_an_independent_cluster_adjusted_regression": true,
+                "numerical_identifiability_relative_RMS_gate": 0.000001,
                 "species_in_non_singleton_blocks_used": 22,
-                "within_block_x_squared_deviation": 0
+                "within_block_x_relative_RMS": 6.8662755707e-9,
+                "within_block_x_squared_deviation": 5.00000001028e-13,
+                "within_clade_distance_error_identifiable_at_source_precision": false
               }
             }
           }
@@ -445,18 +485,28 @@
             },
             "within_fold_demeaned": {
               "gap_vs_branch_sq_error": {
-                "demeaned_pearson": 0.1993096,
+                "demeaned_pearson": null,
+                "max_original_multispecies_block_x_range": 0.00000100000000103,
                 "multi_species_blocks_used": 11,
+                "nonidentifiability_reason": "NEAR_ULTRAMETRIC_SOURCE_CLADE_GAP_CONSTANT_OR_NO_MULTITIP_FOLDS",
                 "not_an_independent_cluster_adjusted_regression": true,
+                "numerical_identifiability_relative_RMS_gate": 0.000001,
                 "species_in_non_singleton_blocks_used": 26,
-                "within_block_x_squared_deviation": 0
+                "within_block_x_relative_RMS": 1.1759651705e-8,
+                "within_block_x_squared_deviation": 1.8333333371e-12,
+                "within_clade_distance_error_identifiable_at_source_precision": false
               },
               "gap_vs_null_minus_branch_sq_gain": {
-                "demeaned_pearson": -0.3240088,
+                "demeaned_pearson": null,
+                "max_original_multispecies_block_x_range": 0.00000100000000103,
                 "multi_species_blocks_used": 11,
+                "nonidentifiability_reason": "NEAR_ULTRAMETRIC_SOURCE_CLADE_GAP_CONSTANT_OR_NO_MULTITIP_FOLDS",
                 "not_an_independent_cluster_adjusted_regression": true,
+                "numerical_identifiability_relative_RMS_gate": 0.000001,
                 "species_in_non_singleton_blocks_used": 26,
-                "within_block_x_squared_deviation": 0
+                "within_block_x_relative_RMS": 1.1759651705e-8,
+                "within_block_x_squared_deviation": 1.8333333371e-12,
+                "within_clade_distance_error_identifiable_at_source_precision": false
               }
             }
           },
@@ -516,18 +566,28 @@
             },
             "within_fold_demeaned": {
               "gap_vs_branch_sq_error": {
-                "demeaned_pearson": 0.4200071,
+                "demeaned_pearson": null,
+                "max_original_multispecies_block_x_range": 0.00000100000000103,
                 "multi_species_blocks_used": 11,
+                "nonidentifiability_reason": "NEAR_ULTRAMETRIC_SOURCE_CLADE_GAP_CONSTANT_OR_NO_MULTITIP_FOLDS",
                 "not_an_independent_cluster_adjusted_regression": true,
+                "numerical_identifiability_relative_RMS_gate": 0.000001,
                 "species_in_non_singleton_blocks_used": 26,
-                "within_block_x_squared_deviation": 0
+                "within_block_x_relative_RMS": 1.1759651705e-8,
+                "within_block_x_squared_deviation": 1.8333333371e-12,
+                "within_clade_distance_error_identifiable_at_source_precision": false
               },
               "gap_vs_null_minus_branch_sq_gain": {
-                "demeaned_pearson": 0.4880345,
+                "demeaned_pearson": null,
+                "max_original_multispecies_block_x_range": 0.00000100000000103,
                 "multi_species_blocks_used": 11,
+                "nonidentifiability_reason": "NEAR_ULTRAMETRIC_SOURCE_CLADE_GAP_CONSTANT_OR_NO_MULTITIP_FOLDS",
                 "not_an_independent_cluster_adjusted_regression": true,
+                "numerical_identifiability_relative_RMS_gate": 0.000001,
                 "species_in_non_singleton_blocks_used": 26,
-                "within_block_x_squared_deviation": 0
+                "within_block_x_relative_RMS": 1.1759651705e-8,
+                "within_block_x_squared_deviation": 1.8333333371e-12,
+                "within_clade_distance_error_identifiable_at_source_precision": false
               }
             }
           }
@@ -606,18 +666,28 @@
             },
             "within_fold_demeaned": {
               "gap_vs_branch_sq_error": {
-                "demeaned_pearson": 0.1612699,
+                "demeaned_pearson": null,
+                "max_original_multispecies_block_x_range": 0.00000100000000103,
                 "multi_species_blocks_used": 10,
+                "nonidentifiability_reason": "NEAR_ULTRAMETRIC_SOURCE_CLADE_GAP_CONSTANT_OR_NO_MULTITIP_FOLDS",
                 "not_an_independent_cluster_adjusted_regression": true,
+                "numerical_identifiability_relative_RMS_gate": 0.000001,
                 "species_in_non_singleton_blocks_used": 28,
-                "within_block_x_squared_deviation": 0
+                "within_block_x_relative_RMS": 1.27221288131e-8,
+                "within_block_x_squared_deviation": 2.41666666453e-12,
+                "within_clade_distance_error_identifiable_at_source_precision": false
               },
               "gap_vs_null_minus_branch_sq_gain": {
-                "demeaned_pearson": -0.4032275,
+                "demeaned_pearson": null,
+                "max_original_multispecies_block_x_range": 0.00000100000000103,
                 "multi_species_blocks_used": 10,
+                "nonidentifiability_reason": "NEAR_ULTRAMETRIC_SOURCE_CLADE_GAP_CONSTANT_OR_NO_MULTITIP_FOLDS",
                 "not_an_independent_cluster_adjusted_regression": true,
+                "numerical_identifiability_relative_RMS_gate": 0.000001,
                 "species_in_non_singleton_blocks_used": 28,
-                "within_block_x_squared_deviation": 0
+                "within_block_x_relative_RMS": 1.27221288131e-8,
+                "within_block_x_squared_deviation": 2.41666666453e-12,
+                "within_clade_distance_error_identifiable_at_source_precision": false
               }
             }
           },
@@ -677,18 +747,28 @@
             },
             "within_fold_demeaned": {
               "gap_vs_branch_sq_error": {
-                "demeaned_pearson": 0.5157186,
+                "demeaned_pearson": null,
+                "max_original_multispecies_block_x_range": 0.00000100000000103,
                 "multi_species_blocks_used": 10,
+                "nonidentifiability_reason": "NEAR_ULTRAMETRIC_SOURCE_CLADE_GAP_CONSTANT_OR_NO_MULTITIP_FOLDS",
                 "not_an_independent_cluster_adjusted_regression": true,
+                "numerical_identifiability_relative_RMS_gate": 0.000001,
                 "species_in_non_singleton_blocks_used": 28,
-                "within_block_x_squared_deviation": 0
+                "within_block_x_relative_RMS": 1.27221288131e-8,
+                "within_block_x_squared_deviation": 2.41666666453e-12,
+                "within_clade_distance_error_identifiable_at_source_precision": false
               },
               "gap_vs_null_minus_branch_sq_gain": {
-                "demeaned_pearson": 0.4875433,
+                "demeaned_pearson": null,
+                "max_original_multispecies_block_x_range": 0.00000100000000103,
                 "multi_species_blocks_used": 10,
+                "nonidentifiability_reason": "NEAR_ULTRAMETRIC_SOURCE_CLADE_GAP_CONSTANT_OR_NO_MULTITIP_FOLDS",
                 "not_an_independent_cluster_adjusted_regression": true,
+                "numerical_identifiability_relative_RMS_gate": 0.000001,
                 "species_in_non_singleton_blocks_used": 28,
-                "within_block_x_squared_deviation": 0
+                "within_block_x_relative_RMS": 1.27221288131e-8,
+                "within_block_x_squared_deviation": 2.41666666453e-12,
+                "within_clade_distance_error_identifiable_at_source_precision": false
               }
             }
           }
@@ -767,18 +847,28 @@
             },
             "within_fold_demeaned": {
               "gap_vs_branch_sq_error": {
-                "demeaned_pearson": 0.1605958,
+                "demeaned_pearson": null,
+                "max_original_multispecies_block_x_range": 0.00000100000000103,
                 "multi_species_blocks_used": 10,
+                "nonidentifiability_reason": "NEAR_ULTRAMETRIC_SOURCE_CLADE_GAP_CONSTANT_OR_NO_MULTITIP_FOLDS",
                 "not_an_independent_cluster_adjusted_regression": true,
+                "numerical_identifiability_relative_RMS_gate": 0.000001,
                 "species_in_non_singleton_blocks_used": 29,
-                "within_block_x_squared_deviation": 0
+                "within_block_x_relative_RMS": 1.24886496597e-8,
+                "within_block_x_squared_deviation": 2.41666666453e-12,
+                "within_clade_distance_error_identifiable_at_source_precision": false
               },
               "gap_vs_null_minus_branch_sq_gain": {
-                "demeaned_pearson": -0.3752184,
+                "demeaned_pearson": null,
+                "max_original_multispecies_block_x_range": 0.00000100000000103,
                 "multi_species_blocks_used": 10,
+                "nonidentifiability_reason": "NEAR_ULTRAMETRIC_SOURCE_CLADE_GAP_CONSTANT_OR_NO_MULTITIP_FOLDS",
                 "not_an_independent_cluster_adjusted_regression": true,
+                "numerical_identifiability_relative_RMS_gate": 0.000001,
                 "species_in_non_singleton_blocks_used": 29,
-                "within_block_x_squared_deviation": 0
+                "within_block_x_relative_RMS": 1.24886496597e-8,
+                "within_block_x_squared_deviation": 2.41666666453e-12,
+                "within_clade_distance_error_identifiable_at_source_precision": false
               }
             }
           },
@@ -838,18 +928,28 @@
             },
             "within_fold_demeaned": {
               "gap_vs_branch_sq_error": {
-                "demeaned_pearson": 0.5157357,
+                "demeaned_pearson": null,
+                "max_original_multispecies_block_x_range": 0.00000100000000103,
                 "multi_species_blocks_used": 10,
+                "nonidentifiability_reason": "NEAR_ULTRAMETRIC_SOURCE_CLADE_GAP_CONSTANT_OR_NO_MULTITIP_FOLDS",
                 "not_an_independent_cluster_adjusted_regression": true,
+                "numerical_identifiability_relative_RMS_gate": 0.000001,
                 "species_in_non_singleton_blocks_used": 29,
-                "within_block_x_squared_deviation": 0
+                "within_block_x_relative_RMS": 1.24886496597e-8,
+                "within_block_x_squared_deviation": 2.41666666453e-12,
+                "within_clade_distance_error_identifiable_at_source_precision": false
               },
               "gap_vs_null_minus_branch_sq_gain": {
-                "demeaned_pearson": 0.4446749,
+                "demeaned_pearson": null,
+                "max_original_multispecies_block_x_range": 0.00000100000000103,
                 "multi_species_blocks_used": 10,
+                "nonidentifiability_reason": "NEAR_ULTRAMETRIC_SOURCE_CLADE_GAP_CONSTANT_OR_NO_MULTITIP_FOLDS",
                 "not_an_independent_cluster_adjusted_regression": true,
+                "numerical_identifiability_relative_RMS_gate": 0.000001,
                 "species_in_non_singleton_blocks_used": 29,
-                "within_block_x_squared_deviation": 0
+                "within_block_x_relative_RMS": 1.24886496597e-8,
+                "within_block_x_squared_deviation": 2.41666666453e-12,
+                "within_clade_distance_error_identifiable_at_source_precision": false
               }
             }
           }
@@ -928,18 +1028,28 @@
             },
             "within_fold_demeaned": {
               "gap_vs_branch_sq_error": {
-                "demeaned_pearson": 0.1145522,
+                "demeaned_pearson": null,
+                "max_original_multispecies_block_x_range": 0.00000100000000103,
                 "multi_species_blocks_used": 8,
+                "nonidentifiability_reason": "NEAR_ULTRAMETRIC_SOURCE_CLADE_GAP_CONSTANT_OR_NO_MULTITIP_FOLDS",
                 "not_an_independent_cluster_adjusted_regression": true,
+                "numerical_identifiability_relative_RMS_gate": 0.000001,
                 "species_in_non_singleton_blocks_used": 30,
-                "within_block_x_squared_deviation": 0
+                "within_block_x_relative_RMS": 1.41231891625e-8,
+                "within_block_x_squared_deviation": 3.41666666659e-12,
+                "within_clade_distance_error_identifiable_at_source_precision": false
               },
               "gap_vs_null_minus_branch_sq_gain": {
-                "demeaned_pearson": -0.3950954,
+                "demeaned_pearson": null,
+                "max_original_multispecies_block_x_range": 0.00000100000000103,
                 "multi_species_blocks_used": 8,
+                "nonidentifiability_reason": "NEAR_ULTRAMETRIC_SOURCE_CLADE_GAP_CONSTANT_OR_NO_MULTITIP_FOLDS",
                 "not_an_independent_cluster_adjusted_regression": true,
+                "numerical_identifiability_relative_RMS_gate": 0.000001,
                 "species_in_non_singleton_blocks_used": 30,
-                "within_block_x_squared_deviation": 0
+                "within_block_x_relative_RMS": 1.41231891625e-8,
+                "within_block_x_squared_deviation": 3.41666666659e-12,
+                "within_clade_distance_error_identifiable_at_source_precision": false
               }
             }
           },
@@ -999,18 +1109,28 @@
             },
             "within_fold_demeaned": {
               "gap_vs_branch_sq_error": {
-                "demeaned_pearson": 0.5049662,
+                "demeaned_pearson": null,
+                "max_original_multispecies_block_x_range": 0.00000100000000103,
                 "multi_species_blocks_used": 8,
+                "nonidentifiability_reason": "NEAR_ULTRAMETRIC_SOURCE_CLADE_GAP_CONSTANT_OR_NO_MULTITIP_FOLDS",
                 "not_an_independent_cluster_adjusted_regression": true,
+                "numerical_identifiability_relative_RMS_gate": 0.000001,
                 "species_in_non_singleton_blocks_used": 30,
-                "within_block_x_squared_deviation": 0
+                "within_block_x_relative_RMS": 1.41231891625e-8,
+                "within_block_x_squared_deviation": 3.41666666659e-12,
+                "within_clade_distance_error_identifiable_at_source_precision": false
               },
               "gap_vs_null_minus_branch_sq_gain": {
-                "demeaned_pearson": 0.5926745,
+                "demeaned_pearson": null,
+                "max_original_multispecies_block_x_range": 0.00000100000000103,
                 "multi_species_blocks_used": 8,
+                "nonidentifiability_reason": "NEAR_ULTRAMETRIC_SOURCE_CLADE_GAP_CONSTANT_OR_NO_MULTITIP_FOLDS",
                 "not_an_independent_cluster_adjusted_regression": true,
+                "numerical_identifiability_relative_RMS_gate": 0.000001,
                 "species_in_non_singleton_blocks_used": 30,
-                "within_block_x_squared_deviation": 0
+                "within_block_x_relative_RMS": 1.41231891625e-8,
+                "within_block_x_squared_deviation": 3.41666666659e-12,
+                "within_clade_distance_error_identifiable_at_source_precision": false
               }
             }
           }
@@ -1089,18 +1209,28 @@
             },
             "within_fold_demeaned": {
               "gap_vs_branch_sq_error": {
-                "demeaned_pearson": 0.095583,
+                "demeaned_pearson": null,
+                "max_original_multispecies_block_x_range": 0.00000100000000458,
                 "multi_species_blocks_used": 6,
+                "nonidentifiability_reason": "NEAR_ULTRAMETRIC_SOURCE_CLADE_GAP_CONSTANT_OR_NO_MULTITIP_FOLDS",
                 "not_an_independent_cluster_adjusted_regression": true,
+                "numerical_identifiability_relative_RMS_gate": 0.000001,
                 "species_in_non_singleton_blocks_used": 30,
-                "within_block_x_squared_deviation": 0
+                "within_block_x_relative_RMS": 1.20285920015e-8,
+                "within_block_x_squared_deviation": 3.75000000771e-12,
+                "within_clade_distance_error_identifiable_at_source_precision": false
               },
               "gap_vs_null_minus_branch_sq_gain": {
-                "demeaned_pearson": -0.3893662,
+                "demeaned_pearson": null,
+                "max_original_multispecies_block_x_range": 0.00000100000000458,
                 "multi_species_blocks_used": 6,
+                "nonidentifiability_reason": "NEAR_ULTRAMETRIC_SOURCE_CLADE_GAP_CONSTANT_OR_NO_MULTITIP_FOLDS",
                 "not_an_independent_cluster_adjusted_regression": true,
+                "numerical_identifiability_relative_RMS_gate": 0.000001,
                 "species_in_non_singleton_blocks_used": 30,
-                "within_block_x_squared_deviation": 0
+                "within_block_x_relative_RMS": 1.20285920015e-8,
+                "within_block_x_squared_deviation": 3.75000000771e-12,
+                "within_clade_distance_error_identifiable_at_source_precision": false
               }
             }
           },
@@ -1160,18 +1290,28 @@
             },
             "within_fold_demeaned": {
               "gap_vs_branch_sq_error": {
-                "demeaned_pearson": 0.3483021,
+                "demeaned_pearson": null,
+                "max_original_multispecies_block_x_range": 0.00000100000000458,
                 "multi_species_blocks_used": 6,
+                "nonidentifiability_reason": "NEAR_ULTRAMETRIC_SOURCE_CLADE_GAP_CONSTANT_OR_NO_MULTITIP_FOLDS",
                 "not_an_independent_cluster_adjusted_regression": true,
+                "numerical_identifiability_relative_RMS_gate": 0.000001,
                 "species_in_non_singleton_blocks_used": 30,
-                "within_block_x_squared_deviation": 0
+                "within_block_x_relative_RMS": 1.20285920015e-8,
+                "within_block_x_squared_deviation": 3.75000000771e-12,
+                "within_clade_distance_error_identifiable_at_source_precision": false
               },
               "gap_vs_null_minus_branch_sq_gain": {
-                "demeaned_pearson": 0.6515711,
+                "demeaned_pearson": null,
+                "max_original_multispecies_block_x_range": 0.00000100000000458,
                 "multi_species_blocks_used": 6,
+                "nonidentifiability_reason": "NEAR_ULTRAMETRIC_SOURCE_CLADE_GAP_CONSTANT_OR_NO_MULTITIP_FOLDS",
                 "not_an_independent_cluster_adjusted_regression": true,
+                "numerical_identifiability_relative_RMS_gate": 0.000001,
                 "species_in_non_singleton_blocks_used": 30,
-                "within_block_x_squared_deviation": 0
+                "within_block_x_relative_RMS": 1.20285920015e-8,
+                "within_block_x_squared_deviation": 3.75000000771e-12,
+                "within_clade_distance_error_identifiable_at_source_precision": false
               }
             }
           }
@@ -1252,18 +1392,28 @@
             },
             "within_fold_demeaned": {
               "gap_vs_branch_sq_error": {
-                "demeaned_pearson": 0.0168403,
+                "demeaned_pearson": null,
+                "max_original_multispecies_block_x_range": 0.00000100000000458,
                 "multi_species_blocks_used": 6,
+                "nonidentifiability_reason": "NEAR_ULTRAMETRIC_SOURCE_CLADE_GAP_CONSTANT_OR_NO_MULTITIP_FOLDS",
                 "not_an_independent_cluster_adjusted_regression": true,
+                "numerical_identifiability_relative_RMS_gate": 0.000001,
                 "species_in_non_singleton_blocks_used": 59,
-                "within_block_x_squared_deviation": 0
+                "within_block_x_relative_RMS": 1.05214069364e-8,
+                "within_block_x_squared_deviation": 1.16793650842e-11,
+                "within_clade_distance_error_identifiable_at_source_precision": false
               },
               "gap_vs_null_minus_branch_sq_gain": {
-                "demeaned_pearson": -0.3181018,
+                "demeaned_pearson": null,
+                "max_original_multispecies_block_x_range": 0.00000100000000458,
                 "multi_species_blocks_used": 6,
+                "nonidentifiability_reason": "NEAR_ULTRAMETRIC_SOURCE_CLADE_GAP_CONSTANT_OR_NO_MULTITIP_FOLDS",
                 "not_an_independent_cluster_adjusted_regression": true,
+                "numerical_identifiability_relative_RMS_gate": 0.000001,
                 "species_in_non_singleton_blocks_used": 59,
-                "within_block_x_squared_deviation": 0
+                "within_block_x_relative_RMS": 1.05214069364e-8,
+                "within_block_x_squared_deviation": 1.16793650842e-11,
+                "within_clade_distance_error_identifiable_at_source_precision": false
               }
             }
           },
@@ -1323,18 +1473,28 @@
             },
             "within_fold_demeaned": {
               "gap_vs_branch_sq_error": {
-                "demeaned_pearson": 0.0141438,
+                "demeaned_pearson": null,
+                "max_original_multispecies_block_x_range": 0.00000100000000458,
                 "multi_species_blocks_used": 6,
+                "nonidentifiability_reason": "NEAR_ULTRAMETRIC_SOURCE_CLADE_GAP_CONSTANT_OR_NO_MULTITIP_FOLDS",
                 "not_an_independent_cluster_adjusted_regression": true,
+                "numerical_identifiability_relative_RMS_gate": 0.000001,
                 "species_in_non_singleton_blocks_used": 59,
-                "within_block_x_squared_deviation": 0
+                "within_block_x_relative_RMS": 1.05214069364e-8,
+                "within_block_x_squared_deviation": 1.16793650842e-11,
+                "within_clade_distance_error_identifiable_at_source_precision": false
               },
               "gap_vs_null_minus_branch_sq_gain": {
-                "demeaned_pearson": 0.2388419,
+                "demeaned_pearson": null,
+                "max_original_multispecies_block_x_range": 0.00000100000000458,
                 "multi_species_blocks_used": 6,
+                "nonidentifiability_reason": "NEAR_ULTRAMETRIC_SOURCE_CLADE_GAP_CONSTANT_OR_NO_MULTITIP_FOLDS",
                 "not_an_independent_cluster_adjusted_regression": true,
+                "numerical_identifiability_relative_RMS_gate": 0.000001,
                 "species_in_non_singleton_blocks_used": 59,
-                "within_block_x_squared_deviation": 0
+                "within_block_x_relative_RMS": 1.05214069364e-8,
+                "within_block_x_squared_deviation": 1.16793650842e-11,
+                "within_clade_distance_error_identifiable_at_source_precision": false
               }
             }
           }
@@ -1413,18 +1573,28 @@
             },
             "within_fold_demeaned": {
               "gap_vs_branch_sq_error": {
-                "demeaned_pearson": 0.0108729,
+                "demeaned_pearson": null,
+                "max_original_multispecies_block_x_range": 0.00000100000000458,
                 "multi_species_blocks_used": 12,
+                "nonidentifiability_reason": "NEAR_ULTRAMETRIC_SOURCE_CLADE_GAP_CONSTANT_OR_NO_MULTITIP_FOLDS",
                 "not_an_independent_cluster_adjusted_regression": true,
+                "numerical_identifiability_relative_RMS_gate": 0.000001,
                 "species_in_non_singleton_blocks_used": 57,
-                "within_block_x_squared_deviation": 0
+                "within_block_x_relative_RMS": 9.22448460829e-9,
+                "within_block_x_squared_deviation": 3.75000000771e-12,
+                "within_clade_distance_error_identifiable_at_source_precision": false
               },
               "gap_vs_null_minus_branch_sq_gain": {
-                "demeaned_pearson": -0.1671865,
+                "demeaned_pearson": null,
+                "max_original_multispecies_block_x_range": 0.00000100000000458,
                 "multi_species_blocks_used": 12,
+                "nonidentifiability_reason": "NEAR_ULTRAMETRIC_SOURCE_CLADE_GAP_CONSTANT_OR_NO_MULTITIP_FOLDS",
                 "not_an_independent_cluster_adjusted_regression": true,
+                "numerical_identifiability_relative_RMS_gate": 0.000001,
                 "species_in_non_singleton_blocks_used": 57,
-                "within_block_x_squared_deviation": 0
+                "within_block_x_relative_RMS": 9.22448460829e-9,
+                "within_block_x_squared_deviation": 3.75000000771e-12,
+                "within_clade_distance_error_identifiable_at_source_precision": false
               }
             }
           },
@@ -1484,18 +1654,28 @@
             },
             "within_fold_demeaned": {
               "gap_vs_branch_sq_error": {
-                "demeaned_pearson": 0.4213716,
+                "demeaned_pearson": null,
+                "max_original_multispecies_block_x_range": 0.00000100000000458,
                 "multi_species_blocks_used": 12,
+                "nonidentifiability_reason": "NEAR_ULTRAMETRIC_SOURCE_CLADE_GAP_CONSTANT_OR_NO_MULTITIP_FOLDS",
                 "not_an_independent_cluster_adjusted_regression": true,
+                "numerical_identifiability_relative_RMS_gate": 0.000001,
                 "species_in_non_singleton_blocks_used": 57,
-                "within_block_x_squared_deviation": 0
+                "within_block_x_relative_RMS": 9.22448460829e-9,
+                "within_block_x_squared_deviation": 3.75000000771e-12,
+                "within_clade_distance_error_identifiable_at_source_precision": false
               },
               "gap_vs_null_minus_branch_sq_gain": {
-                "demeaned_pearson": 0.3427435,
+                "demeaned_pearson": null,
+                "max_original_multispecies_block_x_range": 0.00000100000000458,
                 "multi_species_blocks_used": 12,
+                "nonidentifiability_reason": "NEAR_ULTRAMETRIC_SOURCE_CLADE_GAP_CONSTANT_OR_NO_MULTITIP_FOLDS",
                 "not_an_independent_cluster_adjusted_regression": true,
+                "numerical_identifiability_relative_RMS_gate": 0.000001,
                 "species_in_non_singleton_blocks_used": 57,
-                "within_block_x_squared_deviation": 0
+                "within_block_x_relative_RMS": 9.22448460829e-9,
+                "within_block_x_squared_deviation": 3.75000000771e-12,
+                "within_clade_distance_error_identifiable_at_source_precision": false
               }
             }
           }
@@ -1522,5 +1702,7 @@
   "source_only_branch_lengths_not_true_calendar_divergence_time": true,
   "source_only_real_original_RNA_HPLC_and_Newick": true,
   "source_tree_path_distance_units": "published_2023_Newick_branch_length_units_not_calibrated_years",
-  "species_and_repeated_clade_folds_not_independent_genetic_events": true
+  "species_and_repeated_clade_folds_not_independent_genetic_events": true,
+  "within_clade_gap_relative_RMS_gate": 0.000001,
+  "within_clade_numerical_source_precision_guard_added_after_first_v30_readout": true
 }
