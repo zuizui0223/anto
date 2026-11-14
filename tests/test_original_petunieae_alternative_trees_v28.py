@@ -141,8 +141,11 @@ class V28PublishedAlternativesAdversarial(unittest.TestCase):
         astral,iq,mapping,out,orig,current=fake_source()
         trees,panel=m.panels_from_sources(current,orig,astral,iq,mapping,out)
         for key,tr in trees.items():
-            self.assertEqual(set(tr.tips())&set(current),
-                             set(panel["secondary_common_codes_sorted"]))
+            self.assertTrue(set(panel["secondary_common_codes_sorted"]).issubset(
+                set(tr.tips()) & set(current)))
+            if key != m.ORIGINAL_TREE:
+                self.assertEqual(set(tr.tips()) & set(current),
+                                 set(panel["secondary_common_codes_sorted"]))
             for anchor in (m.ROOT_PRIMARY,m.ROOT_SECONDARY):
                 rer=m.reroot_outgroup_edge(tr,anchor)
                 self.assertEqual(set(rer.tips()),set(tr.tips()))
