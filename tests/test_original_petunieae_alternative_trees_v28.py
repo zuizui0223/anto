@@ -25,7 +25,7 @@ def binary_nwk(names):
 
 def fake_source():
     """43 external species/117 individual IDs, with 31+6 shared synthetic data."""
-    focal=["FC"+f"{i:02d}" for i in range(37)]
+    focal=["F"+chr(65+i//26)+chr(65+i%26)+"Q" for i in range(37)]
     out=list(sorted(m.OUTGROUP_CODES))
     species=focal+out
     source_lines=[]
@@ -45,7 +45,7 @@ def fake_source():
     measured=set(focal[:31]+out)
     # External 43 species has six focal additional not measured; 2023 contains
     # measured 37 plus 22 other four-character symbols.
-    other=["U"+f"{i:03d}" for i in range(22)]
+    other=["Z"+chr(65+i//26)+chr(65+i%26)+"Q" for i in range(22)]
     original=parse_newick("(BROW:0.2,"+binary_nwk(sorted(measured)+other)+");")
     current={}
     gene_names=set(x for genes in m.MODELS.values() for x in genes)
@@ -111,9 +111,9 @@ class V28PublishedAlternativesAdversarial(unittest.TestCase):
         with self.assertRaisesRegex(TreeGateError,"IQTREE_INDIVIDUAL_SAMPLE_MAP_MISMATCH"):
             m.published_tree_admission(astral,iq,d,out)
         with self.assertRaisesRegex(TreeGateError,"SOURCE_SAMPLE_MAP_DUPLICATE"):
-            m.sample_map("FC001\tFC00\nFC001\tFC00\n")
+            m.sample_map("FAAQ1\tFAAQ\nFAAQ1\tFAAQ\n")
         with self.assertRaisesRegex(TreeGateError,"SOURCE_SAMPLE_MAP_SPECIES_DISAGREEMENT"):
-            m.sample_map("FC001\tWRONG\n")
+            m.sample_map("FAAQ1\tWRONG\n")
 
     def test_2024_ASTAL_and_IQtree_not_same_observation_grain(self):
         astral,iq,mapping,out,orig,current=fake_source()
@@ -133,7 +133,7 @@ class V28PublishedAlternativesAdversarial(unittest.TestCase):
         self.assertEqual(len(panel["primary_common_focal_codes_sorted"]),31)
         self.assertEqual(len(panel["secondary_common_codes_sorted"]),37)
         d=copy.deepcopy(current)
-        del d["FC00"]
+        del d["FAAQ"]
         with self.assertRaisesRegex(TreeGateError,"REGISTERED_31_FOCAL_37_SHARED_PANELS_DRIFT"):
             m.panels_from_sources(d,orig,astral,iq,mapping,out)
 
