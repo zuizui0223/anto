@@ -258,6 +258,11 @@ def report(tree_bytes,receipt):
     }
 
 
+def canonical_result(obj):
+    """Normalize the JSON storage boundary: Python tuples become JSON arrays."""
+    return json.loads(json.dumps(obj,sort_keys=True,allow_nan=False))
+
+
 def main():
     parser=argparse.ArgumentParser()
     parser.add_argument("--verified-original-tree",required=True,type=Path)
@@ -266,7 +271,7 @@ def main():
     parser.add_argument("--output",required=True,type=Path)
     parser.add_argument("--expected",type=Path)
     args=parser.parse_args()
-    result=report(args.verified_original_tree.read_bytes(),json.loads(args.v33_receipt.read_text()))
+    result=canonical_result(report(args.verified_original_tree.read_bytes(),json.loads(args.v33_receipt.read_text())))
     if args.expected:
         frozen=json.loads(args.expected.read_text())
         if frozen!=result:
