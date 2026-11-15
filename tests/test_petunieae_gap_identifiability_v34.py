@@ -1,5 +1,6 @@
 """Adversarial support tests for matched nearest-gap control identifiability."""
 import copy
+import json
 import math
 import sys
 import unittest
@@ -42,6 +43,13 @@ class GapFeasibilityTests(unittest.TestCase):
         self.assertEqual(m.TOLERANCES["abs_1e-5"],("absolute",1e-5))
         self.assertEqual(m.TOLERANCES["rel_20pct"],("relative",0.20))
         self.assertEqual(m.EXPECTED_INGROUP,59)
+
+    def test_frozen_tolerance_tuple_json_serialization_is_canonical(self):
+        original={"modes":m.TOLERANCES}
+        encoded=m.canonical_result(original)
+        self.assertEqual(encoded["modes"]["abs_1e-5"],["absolute",1e-5])
+        self.assertEqual(encoded,m.canonical_result(encoded))
+        self.assertEqual(encoded,json.loads(json.dumps(original)))
 
     def test_true_complete_ultrametric_clade_has_unique_exact_match(self):
         root,ids,held=original_ultrametric_toy()
