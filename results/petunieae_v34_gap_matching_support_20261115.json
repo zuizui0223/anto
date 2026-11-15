@@ -1,0 +1,5041 @@
+{
+  "design": "POST_V33_EXPLORATORY_TOPOLOGICAL_POSITIVITY_AUDIT",
+  "n_statistically_independent_empirical_studies_added": 0,
+  "no_inference_about_gene_effect_or_ancestral_regain": true,
+  "no_numeric_predictive_model_was_refitted": true,
+  "old_v33_original_clade_membership_sha256_matched": true,
+  "original_newick_md5_sha256_and_size_verified": true,
+  "original_source_species_n": 59,
+  "original_study_DOI": "10.1098/rspb.2023.0275",
+  "original_tree_sha256": "95b4a688d3d71417b712b37a2b04cdc22a9431be3172d6509def4435f5fd8614",
+  "original_tree_source_osf": "zg9cu",
+  "per_clade_cap": {
+    "max_clade_15": {
+      "clade_sizes_sorted": [
+        4,
+        8,
+        9,
+        9,
+        14,
+        15
+      ],
+      "n_original_clades": 6,
+      "no_model_fit_or_pigment_expression_values_used": true,
+      "per_target_structural_feasibility": [
+        {
+          "boundary": 14,
+          "clade_index": 0,
+          "closer_forced": 8,
+          "mode": "abs_1e-5",
+          "original_gap": 36.715534,
+          "other_than_original_admissible": "0",
+          "target": "FABR",
+          "train_species": 50
+        },
+        {
+          "boundary": 14,
+          "clade_index": 0,
+          "closer_forced": 8,
+          "mode": "abs_1e-5",
+          "original_gap": 36.715535,
+          "other_than_original_admissible": "0",
+          "target": "FADE",
+          "train_species": 50
+        },
+        {
+          "boundary": 14,
+          "clade_index": 0,
+          "closer_forced": 8,
+          "mode": "abs_1e-5",
+          "original_gap": 36.715535,
+          "other_than_original_admissible": "0",
+          "target": "FAFR",
+          "train_species": 50
+        },
+        {
+          "boundary": 14,
+          "clade_index": 0,
+          "closer_forced": 8,
+          "mode": "abs_1e-5",
+          "original_gap": 36.715535,
+          "other_than_original_admissible": "0",
+          "target": "FAIM",
+          "train_species": 50
+        },
+        {
+          "boundary": 14,
+          "clade_index": 0,
+          "closer_forced": 8,
+          "mode": "abs_1e-5",
+          "original_gap": 36.715535,
+          "other_than_original_admissible": "0",
+          "target": "FAPA",
+          "train_species": 50
+        },
+        {
+          "boundary": 14,
+          "clade_index": 0,
+          "closer_forced": 8,
+          "mode": "abs_1e-5",
+          "original_gap": 36.715534,
+          "other_than_original_admissible": "0",
+          "target": "FAPE",
+          "train_species": 50
+        },
+        {
+          "boundary": 14,
+          "clade_index": 0,
+          "closer_forced": 8,
+          "mode": "abs_1e-5",
+          "original_gap": 36.715535,
+          "other_than_original_admissible": "0",
+          "target": "FAPU",
+          "train_species": 50
+        },
+        {
+          "boundary": 14,
+          "clade_index": 0,
+          "closer_forced": 8,
+          "mode": "abs_1e-5",
+          "original_gap": 36.715534,
+          "other_than_original_admissible": "0",
+          "target": "FDEN",
+          "train_species": 50
+        },
+        {
+          "boundary": 14,
+          "clade_index": 0,
+          "closer_forced": 8,
+          "mode": "abs_1e-5",
+          "original_gap": 36.715535,
+          "other_than_original_admissible": "0",
+          "target": "PEPA",
+          "train_species": 50
+        },
+        {
+          "boundary": 9,
+          "clade_index": 1,
+          "closer_forced": 13,
+          "mode": "abs_1e-5",
+          "original_gap": 36.715535,
+          "other_than_original_admissible": "0",
+          "target": "CACA",
+          "train_species": 45
+        },
+        {
+          "boundary": 9,
+          "clade_index": 1,
+          "closer_forced": 13,
+          "mode": "abs_1e-5",
+          "original_gap": 36.715534,
+          "other_than_original_admissible": "0",
+          "target": "CAEG",
+          "train_species": 45
+        },
+        {
+          "boundary": 9,
+          "clade_index": 1,
+          "closer_forced": 13,
+          "mode": "abs_1e-5",
+          "original_gap": 36.715535,
+          "other_than_original_admissible": "0",
+          "target": "CAEL",
+          "train_species": 45
+        },
+        {
+          "boundary": 9,
+          "clade_index": 1,
+          "closer_forced": 13,
+          "mode": "abs_1e-5",
+          "original_gap": 36.715535,
+          "other_than_original_admissible": "0",
+          "target": "CAHE",
+          "train_species": 45
+        },
+        {
+          "boundary": 9,
+          "clade_index": 1,
+          "closer_forced": 13,
+          "mode": "abs_1e-5",
+          "original_gap": 36.715535,
+          "other_than_original_admissible": "0",
+          "target": "CAHU",
+          "train_species": 45
+        },
+        {
+          "boundary": 9,
+          "clade_index": 1,
+          "closer_forced": 13,
+          "mode": "abs_1e-5",
+          "original_gap": 36.715535,
+          "other_than_original_admissible": "0",
+          "target": "CAIR",
+          "train_species": 45
+        },
+        {
+          "boundary": 9,
+          "clade_index": 1,
+          "closer_forced": 13,
+          "mode": "abs_1e-5",
+          "original_gap": 36.715534,
+          "other_than_original_admissible": "0",
+          "target": "CALI",
+          "train_species": 45
+        },
+        {
+          "boundary": 9,
+          "clade_index": 1,
+          "closer_forced": 13,
+          "mode": "abs_1e-5",
+          "original_gap": 36.715534,
+          "other_than_original_admissible": "0",
+          "target": "CAMI",
+          "train_species": 45
+        },
+        {
+          "boundary": 9,
+          "clade_index": 1,
+          "closer_forced": 13,
+          "mode": "abs_1e-5",
+          "original_gap": 36.715535,
+          "other_than_original_admissible": "0",
+          "target": "CAOV",
+          "train_species": 45
+        },
+        {
+          "boundary": 9,
+          "clade_index": 1,
+          "closer_forced": 13,
+          "mode": "abs_1e-5",
+          "original_gap": 36.715535,
+          "other_than_original_admissible": "0",
+          "target": "CAPU",
+          "train_species": 45
+        },
+        {
+          "boundary": 9,
+          "clade_index": 1,
+          "closer_forced": 13,
+          "mode": "abs_1e-5",
+          "original_gap": 36.715535,
+          "other_than_original_admissible": "0",
+          "target": "CAPY",
+          "train_species": 45
+        },
+        {
+          "boundary": 9,
+          "clade_index": 1,
+          "closer_forced": 13,
+          "mode": "abs_1e-5",
+          "original_gap": 36.715535,
+          "other_than_original_admissible": "0",
+          "target": "CATH",
+          "train_species": 45
+        },
+        {
+          "boundary": 9,
+          "clade_index": 1,
+          "closer_forced": 13,
+          "mode": "abs_1e-5",
+          "original_gap": 36.715535,
+          "other_than_original_admissible": "0",
+          "target": "CPAR",
+          "train_species": 45
+        },
+        {
+          "boundary": 9,
+          "clade_index": 1,
+          "closer_forced": 13,
+          "mode": "abs_1e-5",
+          "original_gap": 36.715535,
+          "other_than_original_admissible": "0",
+          "target": "CSEL",
+          "train_species": 45
+        },
+        {
+          "boundary": 23,
+          "clade_index": 2,
+          "closer_forced": 7,
+          "mode": "abs_1e-5",
+          "original_gap": 43.020264,
+          "other_than_original_admissible": "0",
+          "target": "PALT",
+          "train_species": 51
+        },
+        {
+          "boundary": 23,
+          "clade_index": 2,
+          "closer_forced": 7,
+          "mode": "abs_1e-5",
+          "original_gap": 43.020263,
+          "other_than_original_admissible": "0",
+          "target": "PAXI",
+          "train_species": 51
+        },
+        {
+          "boundary": 23,
+          "clade_index": 2,
+          "closer_forced": 7,
+          "mode": "abs_1e-5",
+          "original_gap": 43.020264,
+          "other_than_original_admissible": "0",
+          "target": "PBON",
+          "train_species": 51
+        },
+        {
+          "boundary": 23,
+          "clade_index": 2,
+          "closer_forced": 7,
+          "mode": "abs_1e-5",
+          "original_gap": 43.020263,
+          "other_than_original_admissible": "0",
+          "target": "PCOR",
+          "train_species": 51
+        },
+        {
+          "boundary": 23,
+          "clade_index": 2,
+          "closer_forced": 7,
+          "mode": "abs_1e-5",
+          "original_gap": 43.020263,
+          "other_than_original_admissible": "0",
+          "target": "PEEX",
+          "train_species": 51
+        },
+        {
+          "boundary": 23,
+          "clade_index": 2,
+          "closer_forced": 7,
+          "mode": "abs_1e-5",
+          "original_gap": 43.020263,
+          "other_than_original_admissible": "0",
+          "target": "PINF",
+          "train_species": 51
+        },
+        {
+          "boundary": 23,
+          "clade_index": 2,
+          "closer_forced": 7,
+          "mode": "abs_1e-5",
+          "original_gap": 43.020263,
+          "other_than_original_admissible": "0",
+          "target": "PINT",
+          "train_species": 51
+        },
+        {
+          "boundary": 23,
+          "clade_index": 2,
+          "closer_forced": 7,
+          "mode": "abs_1e-5",
+          "original_gap": 43.020263,
+          "other_than_original_admissible": "0",
+          "target": "PSCH",
+          "train_species": 51
+        },
+        {
+          "boundary": 19,
+          "clade_index": 3,
+          "closer_forced": 8,
+          "mode": "abs_1e-5",
+          "original_gap": 53.629754,
+          "other_than_original_admissible": "0",
+          "target": "BRAM",
+          "train_species": 50
+        },
+        {
+          "boundary": 19,
+          "clade_index": 3,
+          "closer_forced": 8,
+          "mode": "abs_1e-5",
+          "original_gap": 53.629755,
+          "other_than_original_admissible": "0",
+          "target": "BRAU",
+          "train_species": 50
+        },
+        {
+          "boundary": 19,
+          "clade_index": 3,
+          "closer_forced": 8,
+          "mode": "abs_1e-5",
+          "original_gap": 53.629755,
+          "other_than_original_admissible": "0",
+          "target": "BRCU",
+          "train_species": 50
+        },
+        {
+          "boundary": 19,
+          "clade_index": 3,
+          "closer_forced": 8,
+          "mode": "abs_1e-5",
+          "original_gap": 53.629754,
+          "other_than_original_admissible": "0",
+          "target": "BRDE",
+          "train_species": 50
+        },
+        {
+          "boundary": 19,
+          "clade_index": 3,
+          "closer_forced": 8,
+          "mode": "abs_1e-5",
+          "original_gap": 53.629755,
+          "other_than_original_admissible": "0",
+          "target": "BRGR",
+          "train_species": 50
+        },
+        {
+          "boundary": 19,
+          "clade_index": 3,
+          "closer_forced": 8,
+          "mode": "abs_1e-5",
+          "original_gap": 53.629754,
+          "other_than_original_admissible": "0",
+          "target": "BRJA",
+          "train_species": 50
+        },
+        {
+          "boundary": 19,
+          "clade_index": 3,
+          "closer_forced": 8,
+          "mode": "abs_1e-5",
+          "original_gap": 53.629754,
+          "other_than_original_admissible": "0",
+          "target": "BRLA",
+          "train_species": 50
+        },
+        {
+          "boundary": 19,
+          "clade_index": 3,
+          "closer_forced": 8,
+          "mode": "abs_1e-5",
+          "original_gap": 53.629754,
+          "other_than_original_admissible": "0",
+          "target": "BRNI",
+          "train_species": 50
+        },
+        {
+          "boundary": 19,
+          "clade_index": 3,
+          "closer_forced": 8,
+          "mode": "abs_1e-5",
+          "original_gap": 53.629755,
+          "other_than_original_admissible": "0",
+          "target": "BRPL",
+          "train_species": 50
+        },
+        {
+          "boundary": 4,
+          "clade_index": 4,
+          "closer_forced": 14,
+          "mode": "abs_1e-5",
+          "original_gap": 43.350661,
+          "other_than_original_admissible": "0",
+          "target": "BOAN",
+          "train_species": 44
+        },
+        {
+          "boundary": 4,
+          "clade_index": 4,
+          "closer_forced": 14,
+          "mode": "abs_1e-5",
+          "original_gap": 43.350661,
+          "other_than_original_admissible": "0",
+          "target": "BOER",
+          "train_species": 44
+        },
+        {
+          "boundary": 4,
+          "clade_index": 4,
+          "closer_forced": 14,
+          "mode": "abs_1e-5",
+          "original_gap": 43.350661,
+          "other_than_original_admissible": "0",
+          "target": "HUTE",
+          "train_species": 44
+        },
+        {
+          "boundary": 4,
+          "clade_index": 4,
+          "closer_forced": 14,
+          "mode": "abs_1e-5",
+          "original_gap": 43.350661,
+          "other_than_original_admissible": "0",
+          "target": "NGRA",
+          "train_species": 44
+        },
+        {
+          "boundary": 4,
+          "clade_index": 4,
+          "closer_forced": 14,
+          "mode": "abs_1e-5",
+          "original_gap": 43.350661,
+          "other_than_original_admissible": "0",
+          "target": "NIAR",
+          "train_species": 44
+        },
+        {
+          "boundary": 4,
+          "clade_index": 4,
+          "closer_forced": 14,
+          "mode": "abs_1e-5",
+          "original_gap": 43.350662,
+          "other_than_original_admissible": "0",
+          "target": "NIBR",
+          "train_species": 44
+        },
+        {
+          "boundary": 4,
+          "clade_index": 4,
+          "closer_forced": 14,
+          "mode": "abs_1e-5",
+          "original_gap": 43.350662,
+          "other_than_original_admissible": "0",
+          "target": "NICA",
+          "train_species": 44
+        },
+        {
+          "boundary": 4,
+          "clade_index": 4,
+          "closer_forced": 14,
+          "mode": "abs_1e-5",
+          "original_gap": 43.350662,
+          "other_than_original_admissible": "0",
+          "target": "NILI",
+          "train_species": 44
+        },
+        {
+          "boundary": 4,
+          "clade_index": 4,
+          "closer_forced": 14,
+          "mode": "abs_1e-5",
+          "original_gap": 43.350662,
+          "other_than_original_admissible": "0",
+          "target": "NIPU",
+          "train_species": 44
+        },
+        {
+          "boundary": 4,
+          "clade_index": 4,
+          "closer_forced": 14,
+          "mode": "abs_1e-5",
+          "original_gap": 43.350661,
+          "other_than_original_admissible": "0",
+          "target": "NIRI",
+          "train_species": 44
+        },
+        {
+          "boundary": 4,
+          "clade_index": 4,
+          "closer_forced": 14,
+          "mode": "abs_1e-5",
+          "original_gap": 43.350662,
+          "other_than_original_admissible": "0",
+          "target": "NISC",
+          "train_species": 44
+        },
+        {
+          "boundary": 4,
+          "clade_index": 4,
+          "closer_forced": 14,
+          "mode": "abs_1e-5",
+          "original_gap": 43.350662,
+          "other_than_original_admissible": "0",
+          "target": "NITU",
+          "train_species": 44
+        },
+        {
+          "boundary": 4,
+          "clade_index": 4,
+          "closer_forced": 14,
+          "mode": "abs_1e-5",
+          "original_gap": 43.350661,
+          "other_than_original_admissible": "0",
+          "target": "NIVE",
+          "train_species": 44
+        },
+        {
+          "boundary": 4,
+          "clade_index": 4,
+          "closer_forced": 14,
+          "mode": "abs_1e-5",
+          "original_gap": 43.350661,
+          "other_than_original_admissible": "0",
+          "target": "NRIG",
+          "train_species": 44
+        },
+        {
+          "boundary": 4,
+          "clade_index": 4,
+          "closer_forced": 14,
+          "mode": "abs_1e-5",
+          "original_gap": 43.350661,
+          "other_than_original_admissible": "0",
+          "target": "PLNY",
+          "train_species": 44
+        },
+        {
+          "boundary": 15,
+          "clade_index": 5,
+          "closer_forced": 3,
+          "mode": "abs_1e-5",
+          "original_gap": 43.350661,
+          "other_than_original_admissible": "0",
+          "target": "LEAC",
+          "train_species": 55
+        },
+        {
+          "boundary": 15,
+          "clade_index": 5,
+          "closer_forced": 3,
+          "mode": "abs_1e-5",
+          "original_gap": 43.350661,
+          "other_than_original_admissible": "0",
+          "target": "LEAL",
+          "train_species": 55
+        },
+        {
+          "boundary": 15,
+          "clade_index": 5,
+          "closer_forced": 3,
+          "mode": "abs_1e-5",
+          "original_gap": 43.350661,
+          "other_than_original_admissible": "0",
+          "target": "LELI",
+          "train_species": 55
+        },
+        {
+          "boundary": 15,
+          "clade_index": 5,
+          "closer_forced": 3,
+          "mode": "abs_1e-5",
+          "original_gap": 43.350661,
+          "other_than_original_admissible": "0",
+          "target": "LESC",
+          "train_species": 55
+        },
+        {
+          "boundary": 14,
+          "clade_index": 0,
+          "closer_forced": 8,
+          "mode": "rel_05pct",
+          "original_gap": 36.715534,
+          "other_than_original_admissible": "0",
+          "target": "FABR",
+          "train_species": 50
+        },
+        {
+          "boundary": 14,
+          "clade_index": 0,
+          "closer_forced": 8,
+          "mode": "rel_05pct",
+          "original_gap": 36.715535,
+          "other_than_original_admissible": "0",
+          "target": "FADE",
+          "train_species": 50
+        },
+        {
+          "boundary": 14,
+          "clade_index": 0,
+          "closer_forced": 8,
+          "mode": "rel_05pct",
+          "original_gap": 36.715535,
+          "other_than_original_admissible": "0",
+          "target": "FAFR",
+          "train_species": 50
+        },
+        {
+          "boundary": 14,
+          "clade_index": 0,
+          "closer_forced": 8,
+          "mode": "rel_05pct",
+          "original_gap": 36.715535,
+          "other_than_original_admissible": "0",
+          "target": "FAIM",
+          "train_species": 50
+        },
+        {
+          "boundary": 14,
+          "clade_index": 0,
+          "closer_forced": 8,
+          "mode": "rel_05pct",
+          "original_gap": 36.715535,
+          "other_than_original_admissible": "0",
+          "target": "FAPA",
+          "train_species": 50
+        },
+        {
+          "boundary": 14,
+          "clade_index": 0,
+          "closer_forced": 8,
+          "mode": "rel_05pct",
+          "original_gap": 36.715534,
+          "other_than_original_admissible": "0",
+          "target": "FAPE",
+          "train_species": 50
+        },
+        {
+          "boundary": 14,
+          "clade_index": 0,
+          "closer_forced": 8,
+          "mode": "rel_05pct",
+          "original_gap": 36.715535,
+          "other_than_original_admissible": "0",
+          "target": "FAPU",
+          "train_species": 50
+        },
+        {
+          "boundary": 14,
+          "clade_index": 0,
+          "closer_forced": 8,
+          "mode": "rel_05pct",
+          "original_gap": 36.715534,
+          "other_than_original_admissible": "0",
+          "target": "FDEN",
+          "train_species": 50
+        },
+        {
+          "boundary": 14,
+          "clade_index": 0,
+          "closer_forced": 8,
+          "mode": "rel_05pct",
+          "original_gap": 36.715535,
+          "other_than_original_admissible": "0",
+          "target": "PEPA",
+          "train_species": 50
+        },
+        {
+          "boundary": 9,
+          "clade_index": 1,
+          "closer_forced": 13,
+          "mode": "rel_05pct",
+          "original_gap": 36.715535,
+          "other_than_original_admissible": "0",
+          "target": "CACA",
+          "train_species": 45
+        },
+        {
+          "boundary": 9,
+          "clade_index": 1,
+          "closer_forced": 13,
+          "mode": "rel_05pct",
+          "original_gap": 36.715534,
+          "other_than_original_admissible": "0",
+          "target": "CAEG",
+          "train_species": 45
+        },
+        {
+          "boundary": 9,
+          "clade_index": 1,
+          "closer_forced": 13,
+          "mode": "rel_05pct",
+          "original_gap": 36.715535,
+          "other_than_original_admissible": "0",
+          "target": "CAEL",
+          "train_species": 45
+        },
+        {
+          "boundary": 9,
+          "clade_index": 1,
+          "closer_forced": 13,
+          "mode": "rel_05pct",
+          "original_gap": 36.715535,
+          "other_than_original_admissible": "0",
+          "target": "CAHE",
+          "train_species": 45
+        },
+        {
+          "boundary": 9,
+          "clade_index": 1,
+          "closer_forced": 13,
+          "mode": "rel_05pct",
+          "original_gap": 36.715535,
+          "other_than_original_admissible": "0",
+          "target": "CAHU",
+          "train_species": 45
+        },
+        {
+          "boundary": 9,
+          "clade_index": 1,
+          "closer_forced": 13,
+          "mode": "rel_05pct",
+          "original_gap": 36.715535,
+          "other_than_original_admissible": "0",
+          "target": "CAIR",
+          "train_species": 45
+        },
+        {
+          "boundary": 9,
+          "clade_index": 1,
+          "closer_forced": 13,
+          "mode": "rel_05pct",
+          "original_gap": 36.715534,
+          "other_than_original_admissible": "0",
+          "target": "CALI",
+          "train_species": 45
+        },
+        {
+          "boundary": 9,
+          "clade_index": 1,
+          "closer_forced": 13,
+          "mode": "rel_05pct",
+          "original_gap": 36.715534,
+          "other_than_original_admissible": "0",
+          "target": "CAMI",
+          "train_species": 45
+        },
+        {
+          "boundary": 9,
+          "clade_index": 1,
+          "closer_forced": 13,
+          "mode": "rel_05pct",
+          "original_gap": 36.715535,
+          "other_than_original_admissible": "0",
+          "target": "CAOV",
+          "train_species": 45
+        },
+        {
+          "boundary": 9,
+          "clade_index": 1,
+          "closer_forced": 13,
+          "mode": "rel_05pct",
+          "original_gap": 36.715535,
+          "other_than_original_admissible": "0",
+          "target": "CAPU",
+          "train_species": 45
+        },
+        {
+          "boundary": 9,
+          "clade_index": 1,
+          "closer_forced": 13,
+          "mode": "rel_05pct",
+          "original_gap": 36.715535,
+          "other_than_original_admissible": "0",
+          "target": "CAPY",
+          "train_species": 45
+        },
+        {
+          "boundary": 9,
+          "clade_index": 1,
+          "closer_forced": 13,
+          "mode": "rel_05pct",
+          "original_gap": 36.715535,
+          "other_than_original_admissible": "0",
+          "target": "CATH",
+          "train_species": 45
+        },
+        {
+          "boundary": 9,
+          "clade_index": 1,
+          "closer_forced": 13,
+          "mode": "rel_05pct",
+          "original_gap": 36.715535,
+          "other_than_original_admissible": "0",
+          "target": "CPAR",
+          "train_species": 45
+        },
+        {
+          "boundary": 9,
+          "clade_index": 1,
+          "closer_forced": 13,
+          "mode": "rel_05pct",
+          "original_gap": 36.715535,
+          "other_than_original_admissible": "0",
+          "target": "CSEL",
+          "train_species": 45
+        },
+        {
+          "boundary": 23,
+          "clade_index": 2,
+          "closer_forced": 7,
+          "mode": "rel_05pct",
+          "original_gap": 43.020264,
+          "other_than_original_admissible": "0",
+          "target": "PALT",
+          "train_species": 51
+        },
+        {
+          "boundary": 23,
+          "clade_index": 2,
+          "closer_forced": 7,
+          "mode": "rel_05pct",
+          "original_gap": 43.020263,
+          "other_than_original_admissible": "0",
+          "target": "PAXI",
+          "train_species": 51
+        },
+        {
+          "boundary": 23,
+          "clade_index": 2,
+          "closer_forced": 7,
+          "mode": "rel_05pct",
+          "original_gap": 43.020264,
+          "other_than_original_admissible": "0",
+          "target": "PBON",
+          "train_species": 51
+        },
+        {
+          "boundary": 23,
+          "clade_index": 2,
+          "closer_forced": 7,
+          "mode": "rel_05pct",
+          "original_gap": 43.020263,
+          "other_than_original_admissible": "0",
+          "target": "PCOR",
+          "train_species": 51
+        },
+        {
+          "boundary": 23,
+          "clade_index": 2,
+          "closer_forced": 7,
+          "mode": "rel_05pct",
+          "original_gap": 43.020263,
+          "other_than_original_admissible": "0",
+          "target": "PEEX",
+          "train_species": 51
+        },
+        {
+          "boundary": 23,
+          "clade_index": 2,
+          "closer_forced": 7,
+          "mode": "rel_05pct",
+          "original_gap": 43.020263,
+          "other_than_original_admissible": "0",
+          "target": "PINF",
+          "train_species": 51
+        },
+        {
+          "boundary": 23,
+          "clade_index": 2,
+          "closer_forced": 7,
+          "mode": "rel_05pct",
+          "original_gap": 43.020263,
+          "other_than_original_admissible": "0",
+          "target": "PINT",
+          "train_species": 51
+        },
+        {
+          "boundary": 23,
+          "clade_index": 2,
+          "closer_forced": 7,
+          "mode": "rel_05pct",
+          "original_gap": 43.020263,
+          "other_than_original_admissible": "0",
+          "target": "PSCH",
+          "train_species": 51
+        },
+        {
+          "boundary": 19,
+          "clade_index": 3,
+          "closer_forced": 8,
+          "mode": "rel_05pct",
+          "original_gap": 53.629754,
+          "other_than_original_admissible": "0",
+          "target": "BRAM",
+          "train_species": 50
+        },
+        {
+          "boundary": 19,
+          "clade_index": 3,
+          "closer_forced": 8,
+          "mode": "rel_05pct",
+          "original_gap": 53.629755,
+          "other_than_original_admissible": "0",
+          "target": "BRAU",
+          "train_species": 50
+        },
+        {
+          "boundary": 19,
+          "clade_index": 3,
+          "closer_forced": 8,
+          "mode": "rel_05pct",
+          "original_gap": 53.629755,
+          "other_than_original_admissible": "0",
+          "target": "BRCU",
+          "train_species": 50
+        },
+        {
+          "boundary": 19,
+          "clade_index": 3,
+          "closer_forced": 8,
+          "mode": "rel_05pct",
+          "original_gap": 53.629754,
+          "other_than_original_admissible": "0",
+          "target": "BRDE",
+          "train_species": 50
+        },
+        {
+          "boundary": 19,
+          "clade_index": 3,
+          "closer_forced": 8,
+          "mode": "rel_05pct",
+          "original_gap": 53.629755,
+          "other_than_original_admissible": "0",
+          "target": "BRGR",
+          "train_species": 50
+        },
+        {
+          "boundary": 19,
+          "clade_index": 3,
+          "closer_forced": 8,
+          "mode": "rel_05pct",
+          "original_gap": 53.629754,
+          "other_than_original_admissible": "0",
+          "target": "BRJA",
+          "train_species": 50
+        },
+        {
+          "boundary": 19,
+          "clade_index": 3,
+          "closer_forced": 8,
+          "mode": "rel_05pct",
+          "original_gap": 53.629754,
+          "other_than_original_admissible": "0",
+          "target": "BRLA",
+          "train_species": 50
+        },
+        {
+          "boundary": 19,
+          "clade_index": 3,
+          "closer_forced": 8,
+          "mode": "rel_05pct",
+          "original_gap": 53.629754,
+          "other_than_original_admissible": "0",
+          "target": "BRNI",
+          "train_species": 50
+        },
+        {
+          "boundary": 19,
+          "clade_index": 3,
+          "closer_forced": 8,
+          "mode": "rel_05pct",
+          "original_gap": 53.629755,
+          "other_than_original_admissible": "0",
+          "target": "BRPL",
+          "train_species": 50
+        },
+        {
+          "boundary": 4,
+          "clade_index": 4,
+          "closer_forced": 14,
+          "mode": "rel_05pct",
+          "original_gap": 43.350661,
+          "other_than_original_admissible": "0",
+          "target": "BOAN",
+          "train_species": 44
+        },
+        {
+          "boundary": 4,
+          "clade_index": 4,
+          "closer_forced": 14,
+          "mode": "rel_05pct",
+          "original_gap": 43.350661,
+          "other_than_original_admissible": "0",
+          "target": "BOER",
+          "train_species": 44
+        },
+        {
+          "boundary": 4,
+          "clade_index": 4,
+          "closer_forced": 14,
+          "mode": "rel_05pct",
+          "original_gap": 43.350661,
+          "other_than_original_admissible": "0",
+          "target": "HUTE",
+          "train_species": 44
+        },
+        {
+          "boundary": 4,
+          "clade_index": 4,
+          "closer_forced": 14,
+          "mode": "rel_05pct",
+          "original_gap": 43.350661,
+          "other_than_original_admissible": "0",
+          "target": "NGRA",
+          "train_species": 44
+        },
+        {
+          "boundary": 4,
+          "clade_index": 4,
+          "closer_forced": 14,
+          "mode": "rel_05pct",
+          "original_gap": 43.350661,
+          "other_than_original_admissible": "0",
+          "target": "NIAR",
+          "train_species": 44
+        },
+        {
+          "boundary": 4,
+          "clade_index": 4,
+          "closer_forced": 14,
+          "mode": "rel_05pct",
+          "original_gap": 43.350662,
+          "other_than_original_admissible": "0",
+          "target": "NIBR",
+          "train_species": 44
+        },
+        {
+          "boundary": 4,
+          "clade_index": 4,
+          "closer_forced": 14,
+          "mode": "rel_05pct",
+          "original_gap": 43.350662,
+          "other_than_original_admissible": "0",
+          "target": "NICA",
+          "train_species": 44
+        },
+        {
+          "boundary": 4,
+          "clade_index": 4,
+          "closer_forced": 14,
+          "mode": "rel_05pct",
+          "original_gap": 43.350662,
+          "other_than_original_admissible": "0",
+          "target": "NILI",
+          "train_species": 44
+        },
+        {
+          "boundary": 4,
+          "clade_index": 4,
+          "closer_forced": 14,
+          "mode": "rel_05pct",
+          "original_gap": 43.350662,
+          "other_than_original_admissible": "0",
+          "target": "NIPU",
+          "train_species": 44
+        },
+        {
+          "boundary": 4,
+          "clade_index": 4,
+          "closer_forced": 14,
+          "mode": "rel_05pct",
+          "original_gap": 43.350661,
+          "other_than_original_admissible": "0",
+          "target": "NIRI",
+          "train_species": 44
+        },
+        {
+          "boundary": 4,
+          "clade_index": 4,
+          "closer_forced": 14,
+          "mode": "rel_05pct",
+          "original_gap": 43.350662,
+          "other_than_original_admissible": "0",
+          "target": "NISC",
+          "train_species": 44
+        },
+        {
+          "boundary": 4,
+          "clade_index": 4,
+          "closer_forced": 14,
+          "mode": "rel_05pct",
+          "original_gap": 43.350662,
+          "other_than_original_admissible": "0",
+          "target": "NITU",
+          "train_species": 44
+        },
+        {
+          "boundary": 4,
+          "clade_index": 4,
+          "closer_forced": 14,
+          "mode": "rel_05pct",
+          "original_gap": 43.350661,
+          "other_than_original_admissible": "0",
+          "target": "NIVE",
+          "train_species": 44
+        },
+        {
+          "boundary": 4,
+          "clade_index": 4,
+          "closer_forced": 14,
+          "mode": "rel_05pct",
+          "original_gap": 43.350661,
+          "other_than_original_admissible": "0",
+          "target": "NRIG",
+          "train_species": 44
+        },
+        {
+          "boundary": 4,
+          "clade_index": 4,
+          "closer_forced": 14,
+          "mode": "rel_05pct",
+          "original_gap": 43.350661,
+          "other_than_original_admissible": "0",
+          "target": "PLNY",
+          "train_species": 44
+        },
+        {
+          "boundary": 15,
+          "clade_index": 5,
+          "closer_forced": 3,
+          "mode": "rel_05pct",
+          "original_gap": 43.350661,
+          "other_than_original_admissible": "0",
+          "target": "LEAC",
+          "train_species": 55
+        },
+        {
+          "boundary": 15,
+          "clade_index": 5,
+          "closer_forced": 3,
+          "mode": "rel_05pct",
+          "original_gap": 43.350661,
+          "other_than_original_admissible": "0",
+          "target": "LEAL",
+          "train_species": 55
+        },
+        {
+          "boundary": 15,
+          "clade_index": 5,
+          "closer_forced": 3,
+          "mode": "rel_05pct",
+          "original_gap": 43.350661,
+          "other_than_original_admissible": "0",
+          "target": "LELI",
+          "train_species": 55
+        },
+        {
+          "boundary": 15,
+          "clade_index": 5,
+          "closer_forced": 3,
+          "mode": "rel_05pct",
+          "original_gap": 43.350661,
+          "other_than_original_admissible": "0",
+          "target": "LESC",
+          "train_species": 55
+        },
+        {
+          "boundary": 14,
+          "clade_index": 0,
+          "closer_forced": 8,
+          "mode": "rel_10pct",
+          "original_gap": 36.715534,
+          "other_than_original_admissible": "0",
+          "target": "FABR",
+          "train_species": 50
+        },
+        {
+          "boundary": 14,
+          "clade_index": 0,
+          "closer_forced": 8,
+          "mode": "rel_10pct",
+          "original_gap": 36.715535,
+          "other_than_original_admissible": "0",
+          "target": "FADE",
+          "train_species": 50
+        },
+        {
+          "boundary": 14,
+          "clade_index": 0,
+          "closer_forced": 8,
+          "mode": "rel_10pct",
+          "original_gap": 36.715535,
+          "other_than_original_admissible": "0",
+          "target": "FAFR",
+          "train_species": 50
+        },
+        {
+          "boundary": 14,
+          "clade_index": 0,
+          "closer_forced": 8,
+          "mode": "rel_10pct",
+          "original_gap": 36.715535,
+          "other_than_original_admissible": "0",
+          "target": "FAIM",
+          "train_species": 50
+        },
+        {
+          "boundary": 14,
+          "clade_index": 0,
+          "closer_forced": 8,
+          "mode": "rel_10pct",
+          "original_gap": 36.715535,
+          "other_than_original_admissible": "0",
+          "target": "FAPA",
+          "train_species": 50
+        },
+        {
+          "boundary": 14,
+          "clade_index": 0,
+          "closer_forced": 8,
+          "mode": "rel_10pct",
+          "original_gap": 36.715534,
+          "other_than_original_admissible": "0",
+          "target": "FAPE",
+          "train_species": 50
+        },
+        {
+          "boundary": 14,
+          "clade_index": 0,
+          "closer_forced": 8,
+          "mode": "rel_10pct",
+          "original_gap": 36.715535,
+          "other_than_original_admissible": "0",
+          "target": "FAPU",
+          "train_species": 50
+        },
+        {
+          "boundary": 14,
+          "clade_index": 0,
+          "closer_forced": 8,
+          "mode": "rel_10pct",
+          "original_gap": 36.715534,
+          "other_than_original_admissible": "0",
+          "target": "FDEN",
+          "train_species": 50
+        },
+        {
+          "boundary": 14,
+          "clade_index": 0,
+          "closer_forced": 8,
+          "mode": "rel_10pct",
+          "original_gap": 36.715535,
+          "other_than_original_admissible": "0",
+          "target": "PEPA",
+          "train_species": 50
+        },
+        {
+          "boundary": 9,
+          "clade_index": 1,
+          "closer_forced": 13,
+          "mode": "rel_10pct",
+          "original_gap": 36.715535,
+          "other_than_original_admissible": "0",
+          "target": "CACA",
+          "train_species": 45
+        },
+        {
+          "boundary": 9,
+          "clade_index": 1,
+          "closer_forced": 13,
+          "mode": "rel_10pct",
+          "original_gap": 36.715534,
+          "other_than_original_admissible": "0",
+          "target": "CAEG",
+          "train_species": 45
+        },
+        {
+          "boundary": 9,
+          "clade_index": 1,
+          "closer_forced": 13,
+          "mode": "rel_10pct",
+          "original_gap": 36.715535,
+          "other_than_original_admissible": "0",
+          "target": "CAEL",
+          "train_species": 45
+        },
+        {
+          "boundary": 9,
+          "clade_index": 1,
+          "closer_forced": 13,
+          "mode": "rel_10pct",
+          "original_gap": 36.715535,
+          "other_than_original_admissible": "0",
+          "target": "CAHE",
+          "train_species": 45
+        },
+        {
+          "boundary": 9,
+          "clade_index": 1,
+          "closer_forced": 13,
+          "mode": "rel_10pct",
+          "original_gap": 36.715535,
+          "other_than_original_admissible": "0",
+          "target": "CAHU",
+          "train_species": 45
+        },
+        {
+          "boundary": 9,
+          "clade_index": 1,
+          "closer_forced": 13,
+          "mode": "rel_10pct",
+          "original_gap": 36.715535,
+          "other_than_original_admissible": "0",
+          "target": "CAIR",
+          "train_species": 45
+        },
+        {
+          "boundary": 9,
+          "clade_index": 1,
+          "closer_forced": 13,
+          "mode": "rel_10pct",
+          "original_gap": 36.715534,
+          "other_than_original_admissible": "0",
+          "target": "CALI",
+          "train_species": 45
+        },
+        {
+          "boundary": 9,
+          "clade_index": 1,
+          "closer_forced": 13,
+          "mode": "rel_10pct",
+          "original_gap": 36.715534,
+          "other_than_original_admissible": "0",
+          "target": "CAMI",
+          "train_species": 45
+        },
+        {
+          "boundary": 9,
+          "clade_index": 1,
+          "closer_forced": 13,
+          "mode": "rel_10pct",
+          "original_gap": 36.715535,
+          "other_than_original_admissible": "0",
+          "target": "CAOV",
+          "train_species": 45
+        },
+        {
+          "boundary": 9,
+          "clade_index": 1,
+          "closer_forced": 13,
+          "mode": "rel_10pct",
+          "original_gap": 36.715535,
+          "other_than_original_admissible": "0",
+          "target": "CAPU",
+          "train_species": 45
+        },
+        {
+          "boundary": 9,
+          "clade_index": 1,
+          "closer_forced": 13,
+          "mode": "rel_10pct",
+          "original_gap": 36.715535,
+          "other_than_original_admissible": "0",
+          "target": "CAPY",
+          "train_species": 45
+        },
+        {
+          "boundary": 9,
+          "clade_index": 1,
+          "closer_forced": 13,
+          "mode": "rel_10pct",
+          "original_gap": 36.715535,
+          "other_than_original_admissible": "0",
+          "target": "CATH",
+          "train_species": 45
+        },
+        {
+          "boundary": 9,
+          "clade_index": 1,
+          "closer_forced": 13,
+          "mode": "rel_10pct",
+          "original_gap": 36.715535,
+          "other_than_original_admissible": "0",
+          "target": "CPAR",
+          "train_species": 45
+        },
+        {
+          "boundary": 9,
+          "clade_index": 1,
+          "closer_forced": 13,
+          "mode": "rel_10pct",
+          "original_gap": 36.715535,
+          "other_than_original_admissible": "0",
+          "target": "CSEL",
+          "train_species": 45
+        },
+        {
+          "boundary": 23,
+          "clade_index": 2,
+          "closer_forced": 7,
+          "mode": "rel_10pct",
+          "original_gap": 43.020264,
+          "other_than_original_admissible": "0",
+          "target": "PALT",
+          "train_species": 51
+        },
+        {
+          "boundary": 23,
+          "clade_index": 2,
+          "closer_forced": 7,
+          "mode": "rel_10pct",
+          "original_gap": 43.020263,
+          "other_than_original_admissible": "0",
+          "target": "PAXI",
+          "train_species": 51
+        },
+        {
+          "boundary": 23,
+          "clade_index": 2,
+          "closer_forced": 7,
+          "mode": "rel_10pct",
+          "original_gap": 43.020264,
+          "other_than_original_admissible": "0",
+          "target": "PBON",
+          "train_species": 51
+        },
+        {
+          "boundary": 23,
+          "clade_index": 2,
+          "closer_forced": 7,
+          "mode": "rel_10pct",
+          "original_gap": 43.020263,
+          "other_than_original_admissible": "0",
+          "target": "PCOR",
+          "train_species": 51
+        },
+        {
+          "boundary": 23,
+          "clade_index": 2,
+          "closer_forced": 7,
+          "mode": "rel_10pct",
+          "original_gap": 43.020263,
+          "other_than_original_admissible": "0",
+          "target": "PEEX",
+          "train_species": 51
+        },
+        {
+          "boundary": 23,
+          "clade_index": 2,
+          "closer_forced": 7,
+          "mode": "rel_10pct",
+          "original_gap": 43.020263,
+          "other_than_original_admissible": "0",
+          "target": "PINF",
+          "train_species": 51
+        },
+        {
+          "boundary": 23,
+          "clade_index": 2,
+          "closer_forced": 7,
+          "mode": "rel_10pct",
+          "original_gap": 43.020263,
+          "other_than_original_admissible": "0",
+          "target": "PINT",
+          "train_species": 51
+        },
+        {
+          "boundary": 23,
+          "clade_index": 2,
+          "closer_forced": 7,
+          "mode": "rel_10pct",
+          "original_gap": 43.020263,
+          "other_than_original_admissible": "0",
+          "target": "PSCH",
+          "train_species": 51
+        },
+        {
+          "boundary": 50,
+          "clade_index": 3,
+          "closer_forced": 8,
+          "mode": "rel_10pct",
+          "original_gap": 53.629754,
+          "other_than_original_admissible": "0",
+          "target": "BRAM",
+          "train_species": 50
+        },
+        {
+          "boundary": 50,
+          "clade_index": 3,
+          "closer_forced": 8,
+          "mode": "rel_10pct",
+          "original_gap": 53.629755,
+          "other_than_original_admissible": "0",
+          "target": "BRAU",
+          "train_species": 50
+        },
+        {
+          "boundary": 50,
+          "clade_index": 3,
+          "closer_forced": 8,
+          "mode": "rel_10pct",
+          "original_gap": 53.629755,
+          "other_than_original_admissible": "0",
+          "target": "BRCU",
+          "train_species": 50
+        },
+        {
+          "boundary": 50,
+          "clade_index": 3,
+          "closer_forced": 8,
+          "mode": "rel_10pct",
+          "original_gap": 53.629754,
+          "other_than_original_admissible": "0",
+          "target": "BRDE",
+          "train_species": 50
+        },
+        {
+          "boundary": 50,
+          "clade_index": 3,
+          "closer_forced": 8,
+          "mode": "rel_10pct",
+          "original_gap": 53.629755,
+          "other_than_original_admissible": "0",
+          "target": "BRGR",
+          "train_species": 50
+        },
+        {
+          "boundary": 50,
+          "clade_index": 3,
+          "closer_forced": 8,
+          "mode": "rel_10pct",
+          "original_gap": 53.629754,
+          "other_than_original_admissible": "0",
+          "target": "BRJA",
+          "train_species": 50
+        },
+        {
+          "boundary": 50,
+          "clade_index": 3,
+          "closer_forced": 8,
+          "mode": "rel_10pct",
+          "original_gap": 53.629754,
+          "other_than_original_admissible": "0",
+          "target": "BRLA",
+          "train_species": 50
+        },
+        {
+          "boundary": 50,
+          "clade_index": 3,
+          "closer_forced": 8,
+          "mode": "rel_10pct",
+          "original_gap": 53.629754,
+          "other_than_original_admissible": "0",
+          "target": "BRNI",
+          "train_species": 50
+        },
+        {
+          "boundary": 50,
+          "clade_index": 3,
+          "closer_forced": 8,
+          "mode": "rel_10pct",
+          "original_gap": 53.629755,
+          "other_than_original_admissible": "0",
+          "target": "BRPL",
+          "train_species": 50
+        },
+        {
+          "boundary": 4,
+          "clade_index": 4,
+          "closer_forced": 14,
+          "mode": "rel_10pct",
+          "original_gap": 43.350661,
+          "other_than_original_admissible": "0",
+          "target": "BOAN",
+          "train_species": 44
+        },
+        {
+          "boundary": 4,
+          "clade_index": 4,
+          "closer_forced": 14,
+          "mode": "rel_10pct",
+          "original_gap": 43.350661,
+          "other_than_original_admissible": "0",
+          "target": "BOER",
+          "train_species": 44
+        },
+        {
+          "boundary": 4,
+          "clade_index": 4,
+          "closer_forced": 14,
+          "mode": "rel_10pct",
+          "original_gap": 43.350661,
+          "other_than_original_admissible": "0",
+          "target": "HUTE",
+          "train_species": 44
+        },
+        {
+          "boundary": 4,
+          "clade_index": 4,
+          "closer_forced": 14,
+          "mode": "rel_10pct",
+          "original_gap": 43.350661,
+          "other_than_original_admissible": "0",
+          "target": "NGRA",
+          "train_species": 44
+        },
+        {
+          "boundary": 4,
+          "clade_index": 4,
+          "closer_forced": 14,
+          "mode": "rel_10pct",
+          "original_gap": 43.350661,
+          "other_than_original_admissible": "0",
+          "target": "NIAR",
+          "train_species": 44
+        },
+        {
+          "boundary": 4,
+          "clade_index": 4,
+          "closer_forced": 14,
+          "mode": "rel_10pct",
+          "original_gap": 43.350662,
+          "other_than_original_admissible": "0",
+          "target": "NIBR",
+          "train_species": 44
+        },
+        {
+          "boundary": 4,
+          "clade_index": 4,
+          "closer_forced": 14,
+          "mode": "rel_10pct",
+          "original_gap": 43.350662,
+          "other_than_original_admissible": "0",
+          "target": "NICA",
+          "train_species": 44
+        },
+        {
+          "boundary": 4,
+          "clade_index": 4,
+          "closer_forced": 14,
+          "mode": "rel_10pct",
+          "original_gap": 43.350662,
+          "other_than_original_admissible": "0",
+          "target": "NILI",
+          "train_species": 44
+        },
+        {
+          "boundary": 4,
+          "clade_index": 4,
+          "closer_forced": 14,
+          "mode": "rel_10pct",
+          "original_gap": 43.350662,
+          "other_than_original_admissible": "0",
+          "target": "NIPU",
+          "train_species": 44
+        },
+        {
+          "boundary": 4,
+          "clade_index": 4,
+          "closer_forced": 14,
+          "mode": "rel_10pct",
+          "original_gap": 43.350661,
+          "other_than_original_admissible": "0",
+          "target": "NIRI",
+          "train_species": 44
+        },
+        {
+          "boundary": 4,
+          "clade_index": 4,
+          "closer_forced": 14,
+          "mode": "rel_10pct",
+          "original_gap": 43.350662,
+          "other_than_original_admissible": "0",
+          "target": "NISC",
+          "train_species": 44
+        },
+        {
+          "boundary": 4,
+          "clade_index": 4,
+          "closer_forced": 14,
+          "mode": "rel_10pct",
+          "original_gap": 43.350662,
+          "other_than_original_admissible": "0",
+          "target": "NITU",
+          "train_species": 44
+        },
+        {
+          "boundary": 4,
+          "clade_index": 4,
+          "closer_forced": 14,
+          "mode": "rel_10pct",
+          "original_gap": 43.350661,
+          "other_than_original_admissible": "0",
+          "target": "NIVE",
+          "train_species": 44
+        },
+        {
+          "boundary": 4,
+          "clade_index": 4,
+          "closer_forced": 14,
+          "mode": "rel_10pct",
+          "original_gap": 43.350661,
+          "other_than_original_admissible": "0",
+          "target": "NRIG",
+          "train_species": 44
+        },
+        {
+          "boundary": 4,
+          "clade_index": 4,
+          "closer_forced": 14,
+          "mode": "rel_10pct",
+          "original_gap": 43.350661,
+          "other_than_original_admissible": "0",
+          "target": "PLNY",
+          "train_species": 44
+        },
+        {
+          "boundary": 15,
+          "clade_index": 5,
+          "closer_forced": 3,
+          "mode": "rel_10pct",
+          "original_gap": 43.350661,
+          "other_than_original_admissible": "0",
+          "target": "LEAC",
+          "train_species": 55
+        },
+        {
+          "boundary": 15,
+          "clade_index": 5,
+          "closer_forced": 3,
+          "mode": "rel_10pct",
+          "original_gap": 43.350661,
+          "other_than_original_admissible": "0",
+          "target": "LEAL",
+          "train_species": 55
+        },
+        {
+          "boundary": 15,
+          "clade_index": 5,
+          "closer_forced": 3,
+          "mode": "rel_10pct",
+          "original_gap": 43.350661,
+          "other_than_original_admissible": "0",
+          "target": "LELI",
+          "train_species": 55
+        },
+        {
+          "boundary": 15,
+          "clade_index": 5,
+          "closer_forced": 3,
+          "mode": "rel_10pct",
+          "original_gap": 43.350661,
+          "other_than_original_admissible": "0",
+          "target": "LESC",
+          "train_species": 55
+        },
+        {
+          "boundary": 30,
+          "clade_index": 0,
+          "closer_forced": 0,
+          "mode": "rel_20pct",
+          "original_gap": 36.715534,
+          "other_than_original_admissible": "1916797310",
+          "target": "FABR",
+          "train_species": 50
+        },
+        {
+          "boundary": 23,
+          "clade_index": 0,
+          "closer_forced": 7,
+          "mode": "rel_20pct",
+          "original_gap": 36.715535,
+          "other_than_original_admissible": "50",
+          "target": "FADE",
+          "train_species": 50
+        },
+        {
+          "boundary": 23,
+          "clade_index": 0,
+          "closer_forced": 7,
+          "mode": "rel_20pct",
+          "original_gap": 36.715535,
+          "other_than_original_admissible": "50",
+          "target": "FAFR",
+          "train_species": 50
+        },
+        {
+          "boundary": 23,
+          "clade_index": 0,
+          "closer_forced": 7,
+          "mode": "rel_20pct",
+          "original_gap": 36.715535,
+          "other_than_original_admissible": "50",
+          "target": "FAIM",
+          "train_species": 50
+        },
+        {
+          "boundary": 23,
+          "clade_index": 0,
+          "closer_forced": 7,
+          "mode": "rel_20pct",
+          "original_gap": 36.715535,
+          "other_than_original_admissible": "50",
+          "target": "FAPA",
+          "train_species": 50
+        },
+        {
+          "boundary": 23,
+          "clade_index": 0,
+          "closer_forced": 7,
+          "mode": "rel_20pct",
+          "original_gap": 36.715534,
+          "other_than_original_admissible": "50",
+          "target": "FAPE",
+          "train_species": 50
+        },
+        {
+          "boundary": 23,
+          "clade_index": 0,
+          "closer_forced": 7,
+          "mode": "rel_20pct",
+          "original_gap": 36.715535,
+          "other_than_original_admissible": "50",
+          "target": "FAPU",
+          "train_species": 50
+        },
+        {
+          "boundary": 23,
+          "clade_index": 0,
+          "closer_forced": 7,
+          "mode": "rel_20pct",
+          "original_gap": 36.715534,
+          "other_than_original_admissible": "50",
+          "target": "FDEN",
+          "train_species": 50
+        },
+        {
+          "boundary": 23,
+          "clade_index": 0,
+          "closer_forced": 7,
+          "mode": "rel_20pct",
+          "original_gap": 36.715535,
+          "other_than_original_admissible": "50",
+          "target": "PEPA",
+          "train_species": 50
+        },
+        {
+          "boundary": 19,
+          "clade_index": 1,
+          "closer_forced": 11,
+          "mode": "rel_20pct",
+          "original_gap": 36.715535,
+          "other_than_original_admissible": "1080",
+          "target": "CACA",
+          "train_species": 45
+        },
+        {
+          "boundary": 19,
+          "clade_index": 1,
+          "closer_forced": 11,
+          "mode": "rel_20pct",
+          "original_gap": 36.715534,
+          "other_than_original_admissible": "1080",
+          "target": "CAEG",
+          "train_species": 45
+        },
+        {
+          "boundary": 19,
+          "clade_index": 1,
+          "closer_forced": 11,
+          "mode": "rel_20pct",
+          "original_gap": 36.715535,
+          "other_than_original_admissible": "1080",
+          "target": "CAEL",
+          "train_species": 45
+        },
+        {
+          "boundary": 19,
+          "clade_index": 1,
+          "closer_forced": 11,
+          "mode": "rel_20pct",
+          "original_gap": 36.715535,
+          "other_than_original_admissible": "1080",
+          "target": "CAHE",
+          "train_species": 45
+        },
+        {
+          "boundary": 19,
+          "clade_index": 1,
+          "closer_forced": 11,
+          "mode": "rel_20pct",
+          "original_gap": 36.715535,
+          "other_than_original_admissible": "1080",
+          "target": "CAHU",
+          "train_species": 45
+        },
+        {
+          "boundary": 19,
+          "clade_index": 1,
+          "closer_forced": 11,
+          "mode": "rel_20pct",
+          "original_gap": 36.715535,
+          "other_than_original_admissible": "1080",
+          "target": "CAIR",
+          "train_species": 45
+        },
+        {
+          "boundary": 19,
+          "clade_index": 1,
+          "closer_forced": 11,
+          "mode": "rel_20pct",
+          "original_gap": 36.715534,
+          "other_than_original_admissible": "1080",
+          "target": "CALI",
+          "train_species": 45
+        },
+        {
+          "boundary": 19,
+          "clade_index": 1,
+          "closer_forced": 11,
+          "mode": "rel_20pct",
+          "original_gap": 36.715534,
+          "other_than_original_admissible": "1080",
+          "target": "CAMI",
+          "train_species": 45
+        },
+        {
+          "boundary": 19,
+          "clade_index": 1,
+          "closer_forced": 11,
+          "mode": "rel_20pct",
+          "original_gap": 36.715535,
+          "other_than_original_admissible": "1080",
+          "target": "CAOV",
+          "train_species": 45
+        },
+        {
+          "boundary": 19,
+          "clade_index": 1,
+          "closer_forced": 11,
+          "mode": "rel_20pct",
+          "original_gap": 36.715535,
+          "other_than_original_admissible": "1080",
+          "target": "CAPU",
+          "train_species": 45
+        },
+        {
+          "boundary": 29,
+          "clade_index": 1,
+          "closer_forced": 1,
+          "mode": "rel_20pct",
+          "original_gap": 36.715535,
+          "other_than_original_admissible": "707285522579",
+          "target": "CAPY",
+          "train_species": 45
+        },
+        {
+          "boundary": 19,
+          "clade_index": 1,
+          "closer_forced": 11,
+          "mode": "rel_20pct",
+          "original_gap": 36.715535,
+          "other_than_original_admissible": "1080",
+          "target": "CATH",
+          "train_species": 45
+        },
+        {
+          "boundary": 29,
+          "clade_index": 1,
+          "closer_forced": 1,
+          "mode": "rel_20pct",
+          "original_gap": 36.715535,
+          "other_than_original_admissible": "707285522579",
+          "target": "CPAR",
+          "train_species": 45
+        },
+        {
+          "boundary": 19,
+          "clade_index": 1,
+          "closer_forced": 11,
+          "mode": "rel_20pct",
+          "original_gap": 36.715535,
+          "other_than_original_admissible": "1080",
+          "target": "CSEL",
+          "train_species": 45
+        },
+        {
+          "boundary": 23,
+          "clade_index": 2,
+          "closer_forced": 7,
+          "mode": "rel_20pct",
+          "original_gap": 43.020264,
+          "other_than_original_admissible": "0",
+          "target": "PALT",
+          "train_species": 51
+        },
+        {
+          "boundary": 23,
+          "clade_index": 2,
+          "closer_forced": 7,
+          "mode": "rel_20pct",
+          "original_gap": 43.020263,
+          "other_than_original_admissible": "0",
+          "target": "PAXI",
+          "train_species": 51
+        },
+        {
+          "boundary": 23,
+          "clade_index": 2,
+          "closer_forced": 7,
+          "mode": "rel_20pct",
+          "original_gap": 43.020264,
+          "other_than_original_admissible": "0",
+          "target": "PBON",
+          "train_species": 51
+        },
+        {
+          "boundary": 23,
+          "clade_index": 2,
+          "closer_forced": 7,
+          "mode": "rel_20pct",
+          "original_gap": 43.020263,
+          "other_than_original_admissible": "0",
+          "target": "PCOR",
+          "train_species": 51
+        },
+        {
+          "boundary": 23,
+          "clade_index": 2,
+          "closer_forced": 7,
+          "mode": "rel_20pct",
+          "original_gap": 43.020263,
+          "other_than_original_admissible": "0",
+          "target": "PEEX",
+          "train_species": 51
+        },
+        {
+          "boundary": 23,
+          "clade_index": 2,
+          "closer_forced": 7,
+          "mode": "rel_20pct",
+          "original_gap": 43.020263,
+          "other_than_original_admissible": "0",
+          "target": "PINF",
+          "train_species": 51
+        },
+        {
+          "boundary": 23,
+          "clade_index": 2,
+          "closer_forced": 7,
+          "mode": "rel_20pct",
+          "original_gap": 43.020263,
+          "other_than_original_admissible": "0",
+          "target": "PINT",
+          "train_species": 51
+        },
+        {
+          "boundary": 23,
+          "clade_index": 2,
+          "closer_forced": 7,
+          "mode": "rel_20pct",
+          "original_gap": 43.020263,
+          "other_than_original_admissible": "0",
+          "target": "PSCH",
+          "train_species": 51
+        },
+        {
+          "boundary": 50,
+          "clade_index": 3,
+          "closer_forced": 8,
+          "mode": "rel_20pct",
+          "original_gap": 53.629754,
+          "other_than_original_admissible": "0",
+          "target": "BRAM",
+          "train_species": 50
+        },
+        {
+          "boundary": 50,
+          "clade_index": 3,
+          "closer_forced": 8,
+          "mode": "rel_20pct",
+          "original_gap": 53.629755,
+          "other_than_original_admissible": "0",
+          "target": "BRAU",
+          "train_species": 50
+        },
+        {
+          "boundary": 50,
+          "clade_index": 3,
+          "closer_forced": 8,
+          "mode": "rel_20pct",
+          "original_gap": 53.629755,
+          "other_than_original_admissible": "0",
+          "target": "BRCU",
+          "train_species": 50
+        },
+        {
+          "boundary": 50,
+          "clade_index": 3,
+          "closer_forced": 8,
+          "mode": "rel_20pct",
+          "original_gap": 53.629754,
+          "other_than_original_admissible": "0",
+          "target": "BRDE",
+          "train_species": 50
+        },
+        {
+          "boundary": 50,
+          "clade_index": 3,
+          "closer_forced": 8,
+          "mode": "rel_20pct",
+          "original_gap": 53.629755,
+          "other_than_original_admissible": "0",
+          "target": "BRGR",
+          "train_species": 50
+        },
+        {
+          "boundary": 50,
+          "clade_index": 3,
+          "closer_forced": 8,
+          "mode": "rel_20pct",
+          "original_gap": 53.629754,
+          "other_than_original_admissible": "0",
+          "target": "BRJA",
+          "train_species": 50
+        },
+        {
+          "boundary": 50,
+          "clade_index": 3,
+          "closer_forced": 8,
+          "mode": "rel_20pct",
+          "original_gap": 53.629754,
+          "other_than_original_admissible": "0",
+          "target": "BRLA",
+          "train_species": 50
+        },
+        {
+          "boundary": 50,
+          "clade_index": 3,
+          "closer_forced": 8,
+          "mode": "rel_20pct",
+          "original_gap": 53.629754,
+          "other_than_original_admissible": "0",
+          "target": "BRNI",
+          "train_species": 50
+        },
+        {
+          "boundary": 50,
+          "clade_index": 3,
+          "closer_forced": 8,
+          "mode": "rel_20pct",
+          "original_gap": 53.629755,
+          "other_than_original_admissible": "0",
+          "target": "BRPL",
+          "train_species": 50
+        },
+        {
+          "boundary": 4,
+          "clade_index": 4,
+          "closer_forced": 14,
+          "mode": "rel_20pct",
+          "original_gap": 43.350661,
+          "other_than_original_admissible": "0",
+          "target": "BOAN",
+          "train_species": 44
+        },
+        {
+          "boundary": 4,
+          "clade_index": 4,
+          "closer_forced": 14,
+          "mode": "rel_20pct",
+          "original_gap": 43.350661,
+          "other_than_original_admissible": "0",
+          "target": "BOER",
+          "train_species": 44
+        },
+        {
+          "boundary": 4,
+          "clade_index": 4,
+          "closer_forced": 14,
+          "mode": "rel_20pct",
+          "original_gap": 43.350661,
+          "other_than_original_admissible": "0",
+          "target": "HUTE",
+          "train_species": 44
+        },
+        {
+          "boundary": 4,
+          "clade_index": 4,
+          "closer_forced": 14,
+          "mode": "rel_20pct",
+          "original_gap": 43.350661,
+          "other_than_original_admissible": "0",
+          "target": "NGRA",
+          "train_species": 44
+        },
+        {
+          "boundary": 4,
+          "clade_index": 4,
+          "closer_forced": 14,
+          "mode": "rel_20pct",
+          "original_gap": 43.350661,
+          "other_than_original_admissible": "0",
+          "target": "NIAR",
+          "train_species": 44
+        },
+        {
+          "boundary": 4,
+          "clade_index": 4,
+          "closer_forced": 14,
+          "mode": "rel_20pct",
+          "original_gap": 43.350662,
+          "other_than_original_admissible": "0",
+          "target": "NIBR",
+          "train_species": 44
+        },
+        {
+          "boundary": 4,
+          "clade_index": 4,
+          "closer_forced": 14,
+          "mode": "rel_20pct",
+          "original_gap": 43.350662,
+          "other_than_original_admissible": "0",
+          "target": "NICA",
+          "train_species": 44
+        },
+        {
+          "boundary": 4,
+          "clade_index": 4,
+          "closer_forced": 14,
+          "mode": "rel_20pct",
+          "original_gap": 43.350662,
+          "other_than_original_admissible": "0",
+          "target": "NILI",
+          "train_species": 44
+        },
+        {
+          "boundary": 4,
+          "clade_index": 4,
+          "closer_forced": 14,
+          "mode": "rel_20pct",
+          "original_gap": 43.350662,
+          "other_than_original_admissible": "0",
+          "target": "NIPU",
+          "train_species": 44
+        },
+        {
+          "boundary": 4,
+          "clade_index": 4,
+          "closer_forced": 14,
+          "mode": "rel_20pct",
+          "original_gap": 43.350661,
+          "other_than_original_admissible": "0",
+          "target": "NIRI",
+          "train_species": 44
+        },
+        {
+          "boundary": 4,
+          "clade_index": 4,
+          "closer_forced": 14,
+          "mode": "rel_20pct",
+          "original_gap": 43.350662,
+          "other_than_original_admissible": "0",
+          "target": "NISC",
+          "train_species": 44
+        },
+        {
+          "boundary": 4,
+          "clade_index": 4,
+          "closer_forced": 14,
+          "mode": "rel_20pct",
+          "original_gap": 43.350662,
+          "other_than_original_admissible": "0",
+          "target": "NITU",
+          "train_species": 44
+        },
+        {
+          "boundary": 4,
+          "clade_index": 4,
+          "closer_forced": 14,
+          "mode": "rel_20pct",
+          "original_gap": 43.350661,
+          "other_than_original_admissible": "0",
+          "target": "NIVE",
+          "train_species": 44
+        },
+        {
+          "boundary": 4,
+          "clade_index": 4,
+          "closer_forced": 14,
+          "mode": "rel_20pct",
+          "original_gap": 43.350661,
+          "other_than_original_admissible": "0",
+          "target": "NRIG",
+          "train_species": 44
+        },
+        {
+          "boundary": 4,
+          "clade_index": 4,
+          "closer_forced": 14,
+          "mode": "rel_20pct",
+          "original_gap": 43.350661,
+          "other_than_original_admissible": "0",
+          "target": "PLNY",
+          "train_species": 44
+        },
+        {
+          "boundary": 15,
+          "clade_index": 5,
+          "closer_forced": 3,
+          "mode": "rel_20pct",
+          "original_gap": 43.350661,
+          "other_than_original_admissible": "0",
+          "target": "LEAC",
+          "train_species": 55
+        },
+        {
+          "boundary": 15,
+          "clade_index": 5,
+          "closer_forced": 3,
+          "mode": "rel_20pct",
+          "original_gap": 43.350661,
+          "other_than_original_admissible": "0",
+          "target": "LEAL",
+          "train_species": 55
+        },
+        {
+          "boundary": 15,
+          "clade_index": 5,
+          "closer_forced": 3,
+          "mode": "rel_20pct",
+          "original_gap": 43.350661,
+          "other_than_original_admissible": "0",
+          "target": "LELI",
+          "train_species": 55
+        },
+        {
+          "boundary": 15,
+          "clade_index": 5,
+          "closer_forced": 3,
+          "mode": "rel_20pct",
+          "original_gap": 43.350661,
+          "other_than_original_admissible": "0",
+          "target": "LESC",
+          "train_species": 55
+        }
+      ],
+      "primary_exact_gap_conditional_comparison_identifiable": false,
+      "species_scored_once": 59,
+      "tolerance_results": {
+        "abs_1e-5": {
+          "forced_nearer_exclusions_min_median_max": [
+            3,
+            8,
+            14
+          ],
+          "fraction_targets_with_alternative": 0,
+          "multi_clade_and_species_independence_not_established": true,
+          "n_alternative_sets_min_max_exact_as_strings": [
+            "0",
+            "0"
+          ],
+          "n_not_admitted": 0,
+          "n_only_original_training_set": 59,
+          "n_original_clades": 6,
+          "n_original_clades_with_any_alternative": 0,
+          "n_targets": 59,
+          "n_targets_with_alternative": 0,
+          "n_targets_without_alternative": 59,
+          "nearest_actual_gap_min_median_max": [
+            36.715534,
+            43.020264,
+            53.629755
+          ],
+          "remaining_exclusion_slots_min_median_max": [
+            0,
+            0,
+            0
+          ]
+        },
+        "rel_05pct": {
+          "forced_nearer_exclusions_min_median_max": [
+            3,
+            8,
+            14
+          ],
+          "fraction_targets_with_alternative": 0,
+          "multi_clade_and_species_independence_not_established": true,
+          "n_alternative_sets_min_max_exact_as_strings": [
+            "0",
+            "0"
+          ],
+          "n_not_admitted": 0,
+          "n_only_original_training_set": 59,
+          "n_original_clades": 6,
+          "n_original_clades_with_any_alternative": 0,
+          "n_targets": 59,
+          "n_targets_with_alternative": 0,
+          "n_targets_without_alternative": 59,
+          "nearest_actual_gap_min_median_max": [
+            36.715534,
+            43.020264,
+            53.629755
+          ],
+          "remaining_exclusion_slots_min_median_max": [
+            0,
+            0,
+            0
+          ]
+        },
+        "rel_10pct": {
+          "forced_nearer_exclusions_min_median_max": [
+            3,
+            8,
+            14
+          ],
+          "fraction_targets_with_alternative": 0,
+          "multi_clade_and_species_independence_not_established": true,
+          "n_alternative_sets_min_max_exact_as_strings": [
+            "0",
+            "0"
+          ],
+          "n_not_admitted": 0,
+          "n_only_original_training_set": 59,
+          "n_original_clades": 6,
+          "n_original_clades_with_any_alternative": 0,
+          "n_targets": 59,
+          "n_targets_with_alternative": 0,
+          "n_targets_without_alternative": 59,
+          "nearest_actual_gap_min_median_max": [
+            36.715534,
+            43.020264,
+            53.629755
+          ],
+          "remaining_exclusion_slots_min_median_max": [
+            0,
+            0,
+            0
+          ]
+        },
+        "rel_20pct": {
+          "forced_nearer_exclusions_min_median_max": [
+            0,
+            8,
+            14
+          ],
+          "fraction_targets_with_alternative": 0.38983051,
+          "multi_clade_and_species_independence_not_established": true,
+          "n_alternative_sets_min_max_exact_as_strings": [
+            "0",
+            "707285522579"
+          ],
+          "n_not_admitted": 0,
+          "n_only_original_training_set": 36,
+          "n_original_clades": 6,
+          "n_original_clades_with_any_alternative": 2,
+          "n_targets": 59,
+          "n_targets_with_alternative": 23,
+          "n_targets_without_alternative": 36,
+          "nearest_actual_gap_min_median_max": [
+            36.715534,
+            43.020264,
+            53.629755
+          ],
+          "remaining_exclusion_slots_min_median_max": [
+            0,
+            0,
+            12
+          ]
+        }
+      }
+    },
+    "max_clade_8": {
+      "clade_sizes_sorted": [
+        1,
+        1,
+        2,
+        2,
+        4,
+        4,
+        4,
+        4,
+        5,
+        5,
+        5,
+        6,
+        8,
+        8
+      ],
+      "n_original_clades": 14,
+      "no_model_fit_or_pigment_expression_values_used": true,
+      "per_target_structural_feasibility": [
+        {
+          "boundary": 1,
+          "clade_index": 0,
+          "closer_forced": 7,
+          "mode": "abs_1e-5",
+          "original_gap": 29.838855,
+          "other_than_original_admissible": "0",
+          "target": "FADE",
+          "train_species": 51
+        },
+        {
+          "boundary": 1,
+          "clade_index": 0,
+          "closer_forced": 7,
+          "mode": "abs_1e-5",
+          "original_gap": 29.838855,
+          "other_than_original_admissible": "0",
+          "target": "FAFR",
+          "train_species": 51
+        },
+        {
+          "boundary": 1,
+          "clade_index": 0,
+          "closer_forced": 7,
+          "mode": "abs_1e-5",
+          "original_gap": 29.838855,
+          "other_than_original_admissible": "0",
+          "target": "FAIM",
+          "train_species": 51
+        },
+        {
+          "boundary": 1,
+          "clade_index": 0,
+          "closer_forced": 7,
+          "mode": "abs_1e-5",
+          "original_gap": 29.838855,
+          "other_than_original_admissible": "0",
+          "target": "FAPA",
+          "train_species": 51
+        },
+        {
+          "boundary": 1,
+          "clade_index": 0,
+          "closer_forced": 7,
+          "mode": "abs_1e-5",
+          "original_gap": 29.838854,
+          "other_than_original_admissible": "0",
+          "target": "FAPE",
+          "train_species": 51
+        },
+        {
+          "boundary": 1,
+          "clade_index": 0,
+          "closer_forced": 7,
+          "mode": "abs_1e-5",
+          "original_gap": 29.838855,
+          "other_than_original_admissible": "0",
+          "target": "FAPU",
+          "train_species": 51
+        },
+        {
+          "boundary": 1,
+          "clade_index": 0,
+          "closer_forced": 7,
+          "mode": "abs_1e-5",
+          "original_gap": 29.838854,
+          "other_than_original_admissible": "0",
+          "target": "FDEN",
+          "train_species": 51
+        },
+        {
+          "boundary": 1,
+          "clade_index": 0,
+          "closer_forced": 7,
+          "mode": "abs_1e-5",
+          "original_gap": 29.838855,
+          "other_than_original_admissible": "0",
+          "target": "PEPA",
+          "train_species": 51
+        },
+        {
+          "boundary": 8,
+          "clade_index": 1,
+          "closer_forced": 0,
+          "mode": "abs_1e-5",
+          "original_gap": 29.838854,
+          "other_than_original_admissible": "0",
+          "target": "FABR",
+          "train_species": 58
+        },
+        {
+          "boundary": 4,
+          "clade_index": 2,
+          "closer_forced": 5,
+          "mode": "abs_1e-5",
+          "original_gap": 18.294201,
+          "other_than_original_admissible": "0",
+          "target": "CAHE",
+          "train_species": 53
+        },
+        {
+          "boundary": 4,
+          "clade_index": 2,
+          "closer_forced": 5,
+          "mode": "abs_1e-5",
+          "original_gap": 18.294201,
+          "other_than_original_admissible": "0",
+          "target": "CAHU",
+          "train_species": 53
+        },
+        {
+          "boundary": 4,
+          "clade_index": 2,
+          "closer_forced": 5,
+          "mode": "abs_1e-5",
+          "original_gap": 18.294201,
+          "other_than_original_admissible": "0",
+          "target": "CAIR",
+          "train_species": 53
+        },
+        {
+          "boundary": 4,
+          "clade_index": 2,
+          "closer_forced": 5,
+          "mode": "abs_1e-5",
+          "original_gap": 18.294201,
+          "other_than_original_admissible": "0",
+          "target": "CAOV",
+          "train_species": 53
+        },
+        {
+          "boundary": 4,
+          "clade_index": 2,
+          "closer_forced": 5,
+          "mode": "abs_1e-5",
+          "original_gap": 18.294201,
+          "other_than_original_admissible": "0",
+          "target": "CAPU",
+          "train_species": 53
+        },
+        {
+          "boundary": 4,
+          "clade_index": 2,
+          "closer_forced": 5,
+          "mode": "abs_1e-5",
+          "original_gap": 18.294201,
+          "other_than_original_admissible": "0",
+          "target": "CATH",
+          "train_species": 53
+        },
+        {
+          "boundary": 6,
+          "clade_index": 3,
+          "closer_forced": 3,
+          "mode": "abs_1e-5",
+          "original_gap": 18.294201,
+          "other_than_original_admissible": "0",
+          "target": "CAEG",
+          "train_species": 55
+        },
+        {
+          "boundary": 6,
+          "clade_index": 3,
+          "closer_forced": 3,
+          "mode": "abs_1e-5",
+          "original_gap": 18.294201,
+          "other_than_original_admissible": "0",
+          "target": "CALI",
+          "train_species": 55
+        },
+        {
+          "boundary": 6,
+          "clade_index": 3,
+          "closer_forced": 3,
+          "mode": "abs_1e-5",
+          "original_gap": 18.294201,
+          "other_than_original_admissible": "0",
+          "target": "CAMI",
+          "train_species": 55
+        },
+        {
+          "boundary": 6,
+          "clade_index": 3,
+          "closer_forced": 3,
+          "mode": "abs_1e-5",
+          "original_gap": 18.294202,
+          "other_than_original_admissible": "0",
+          "target": "CSEL",
+          "train_species": 55
+        },
+        {
+          "boundary": 10,
+          "clade_index": 4,
+          "closer_forced": 1,
+          "mode": "abs_1e-5",
+          "original_gap": 26.951249,
+          "other_than_original_admissible": "0",
+          "target": "CACA",
+          "train_species": 57
+        },
+        {
+          "boundary": 10,
+          "clade_index": 4,
+          "closer_forced": 1,
+          "mode": "abs_1e-5",
+          "original_gap": 26.951249,
+          "other_than_original_admissible": "0",
+          "target": "CAEL",
+          "train_species": 57
+        },
+        {
+          "boundary": 12,
+          "clade_index": 5,
+          "closer_forced": 1,
+          "mode": "abs_1e-5",
+          "original_gap": 30.809463,
+          "other_than_original_admissible": "0",
+          "target": "CAPY",
+          "train_species": 57
+        },
+        {
+          "boundary": 12,
+          "clade_index": 5,
+          "closer_forced": 1,
+          "mode": "abs_1e-5",
+          "original_gap": 30.809463,
+          "other_than_original_admissible": "0",
+          "target": "CPAR",
+          "train_species": 57
+        },
+        {
+          "boundary": 23,
+          "clade_index": 6,
+          "closer_forced": 7,
+          "mode": "abs_1e-5",
+          "original_gap": 43.020264,
+          "other_than_original_admissible": "0",
+          "target": "PALT",
+          "train_species": 51
+        },
+        {
+          "boundary": 23,
+          "clade_index": 6,
+          "closer_forced": 7,
+          "mode": "abs_1e-5",
+          "original_gap": 43.020263,
+          "other_than_original_admissible": "0",
+          "target": "PAXI",
+          "train_species": 51
+        },
+        {
+          "boundary": 23,
+          "clade_index": 6,
+          "closer_forced": 7,
+          "mode": "abs_1e-5",
+          "original_gap": 43.020264,
+          "other_than_original_admissible": "0",
+          "target": "PBON",
+          "train_species": 51
+        },
+        {
+          "boundary": 23,
+          "clade_index": 6,
+          "closer_forced": 7,
+          "mode": "abs_1e-5",
+          "original_gap": 43.020263,
+          "other_than_original_admissible": "0",
+          "target": "PCOR",
+          "train_species": 51
+        },
+        {
+          "boundary": 23,
+          "clade_index": 6,
+          "closer_forced": 7,
+          "mode": "abs_1e-5",
+          "original_gap": 43.020263,
+          "other_than_original_admissible": "0",
+          "target": "PEEX",
+          "train_species": 51
+        },
+        {
+          "boundary": 23,
+          "clade_index": 6,
+          "closer_forced": 7,
+          "mode": "abs_1e-5",
+          "original_gap": 43.020263,
+          "other_than_original_admissible": "0",
+          "target": "PINF",
+          "train_species": 51
+        },
+        {
+          "boundary": 23,
+          "clade_index": 6,
+          "closer_forced": 7,
+          "mode": "abs_1e-5",
+          "original_gap": 43.020263,
+          "other_than_original_admissible": "0",
+          "target": "PINT",
+          "train_species": 51
+        },
+        {
+          "boundary": 23,
+          "clade_index": 6,
+          "closer_forced": 7,
+          "mode": "abs_1e-5",
+          "original_gap": 43.020263,
+          "other_than_original_admissible": "0",
+          "target": "PSCH",
+          "train_species": 51
+        },
+        {
+          "boundary": 5,
+          "clade_index": 7,
+          "closer_forced": 3,
+          "mode": "abs_1e-5",
+          "original_gap": 24.219339,
+          "other_than_original_admissible": "0",
+          "target": "BRAU",
+          "train_species": 55
+        },
+        {
+          "boundary": 5,
+          "clade_index": 7,
+          "closer_forced": 3,
+          "mode": "abs_1e-5",
+          "original_gap": 24.219339,
+          "other_than_original_admissible": "0",
+          "target": "BRCU",
+          "train_species": 55
+        },
+        {
+          "boundary": 5,
+          "clade_index": 7,
+          "closer_forced": 3,
+          "mode": "abs_1e-5",
+          "original_gap": 24.219339,
+          "other_than_original_admissible": "0",
+          "target": "BRGR",
+          "train_species": 55
+        },
+        {
+          "boundary": 5,
+          "clade_index": 7,
+          "closer_forced": 3,
+          "mode": "abs_1e-5",
+          "original_gap": 24.219339,
+          "other_than_original_admissible": "0",
+          "target": "BRPL",
+          "train_species": 55
+        },
+        {
+          "boundary": 4,
+          "clade_index": 8,
+          "closer_forced": 4,
+          "mode": "abs_1e-5",
+          "original_gap": 24.219339,
+          "other_than_original_admissible": "0",
+          "target": "BRAM",
+          "train_species": 54
+        },
+        {
+          "boundary": 4,
+          "clade_index": 8,
+          "closer_forced": 4,
+          "mode": "abs_1e-5",
+          "original_gap": 24.219339,
+          "other_than_original_admissible": "0",
+          "target": "BRDE",
+          "train_species": 54
+        },
+        {
+          "boundary": 4,
+          "clade_index": 8,
+          "closer_forced": 4,
+          "mode": "abs_1e-5",
+          "original_gap": 24.219339,
+          "other_than_original_admissible": "0",
+          "target": "BRJA",
+          "train_species": 54
+        },
+        {
+          "boundary": 4,
+          "clade_index": 8,
+          "closer_forced": 4,
+          "mode": "abs_1e-5",
+          "original_gap": 24.219339,
+          "other_than_original_admissible": "0",
+          "target": "BRLA",
+          "train_species": 54
+        },
+        {
+          "boundary": 4,
+          "clade_index": 8,
+          "closer_forced": 4,
+          "mode": "abs_1e-5",
+          "original_gap": 24.219339,
+          "other_than_original_admissible": "0",
+          "target": "BRNI",
+          "train_species": 54
+        },
+        {
+          "boundary": 11,
+          "clade_index": 9,
+          "closer_forced": 3,
+          "mode": "abs_1e-5",
+          "original_gap": 33.856408,
+          "other_than_original_admissible": "0",
+          "target": "BOAN",
+          "train_species": 55
+        },
+        {
+          "boundary": 11,
+          "clade_index": 9,
+          "closer_forced": 3,
+          "mode": "abs_1e-5",
+          "original_gap": 33.856408,
+          "other_than_original_admissible": "0",
+          "target": "BOER",
+          "train_species": 55
+        },
+        {
+          "boundary": 11,
+          "clade_index": 9,
+          "closer_forced": 3,
+          "mode": "abs_1e-5",
+          "original_gap": 33.856408,
+          "other_than_original_admissible": "0",
+          "target": "HUTE",
+          "train_species": 55
+        },
+        {
+          "boundary": 11,
+          "clade_index": 9,
+          "closer_forced": 3,
+          "mode": "abs_1e-5",
+          "original_gap": 33.856408,
+          "other_than_original_admissible": "0",
+          "target": "PLNY",
+          "train_species": 55
+        },
+        {
+          "boundary": 5,
+          "clade_index": 10,
+          "closer_forced": 4,
+          "mode": "abs_1e-5",
+          "original_gap": 18.278187,
+          "other_than_original_admissible": "0",
+          "target": "NGRA",
+          "train_species": 54
+        },
+        {
+          "boundary": 5,
+          "clade_index": 10,
+          "closer_forced": 4,
+          "mode": "abs_1e-5",
+          "original_gap": 18.278187,
+          "other_than_original_admissible": "0",
+          "target": "NIAR",
+          "train_species": 54
+        },
+        {
+          "boundary": 5,
+          "clade_index": 10,
+          "closer_forced": 4,
+          "mode": "abs_1e-5",
+          "original_gap": 18.278187,
+          "other_than_original_admissible": "0",
+          "target": "NIRI",
+          "train_species": 54
+        },
+        {
+          "boundary": 5,
+          "clade_index": 10,
+          "closer_forced": 4,
+          "mode": "abs_1e-5",
+          "original_gap": 18.278187,
+          "other_than_original_admissible": "0",
+          "target": "NIVE",
+          "train_species": 54
+        },
+        {
+          "boundary": 5,
+          "clade_index": 10,
+          "closer_forced": 4,
+          "mode": "abs_1e-5",
+          "original_gap": 18.278187,
+          "other_than_original_admissible": "0",
+          "target": "NRIG",
+          "train_species": 54
+        },
+        {
+          "boundary": 5,
+          "clade_index": 11,
+          "closer_forced": 4,
+          "mode": "abs_1e-5",
+          "original_gap": 18.278187,
+          "other_than_original_admissible": "0",
+          "target": "NIBR",
+          "train_species": 54
+        },
+        {
+          "boundary": 5,
+          "clade_index": 11,
+          "closer_forced": 4,
+          "mode": "abs_1e-5",
+          "original_gap": 18.278187,
+          "other_than_original_admissible": "0",
+          "target": "NILI",
+          "train_species": 54
+        },
+        {
+          "boundary": 5,
+          "clade_index": 11,
+          "closer_forced": 4,
+          "mode": "abs_1e-5",
+          "original_gap": 18.278187,
+          "other_than_original_admissible": "0",
+          "target": "NIPU",
+          "train_species": 54
+        },
+        {
+          "boundary": 5,
+          "clade_index": 11,
+          "closer_forced": 4,
+          "mode": "abs_1e-5",
+          "original_gap": 18.278187,
+          "other_than_original_admissible": "0",
+          "target": "NISC",
+          "train_species": 54
+        },
+        {
+          "boundary": 5,
+          "clade_index": 11,
+          "closer_forced": 4,
+          "mode": "abs_1e-5",
+          "original_gap": 18.278187,
+          "other_than_original_admissible": "0",
+          "target": "NITU",
+          "train_species": 54
+        },
+        {
+          "boundary": 10,
+          "clade_index": 12,
+          "closer_forced": 0,
+          "mode": "abs_1e-5",
+          "original_gap": 19.785419,
+          "other_than_original_admissible": "0",
+          "target": "NICA",
+          "train_species": 58
+        },
+        {
+          "boundary": 15,
+          "clade_index": 13,
+          "closer_forced": 3,
+          "mode": "abs_1e-5",
+          "original_gap": 43.350661,
+          "other_than_original_admissible": "0",
+          "target": "LEAC",
+          "train_species": 55
+        },
+        {
+          "boundary": 15,
+          "clade_index": 13,
+          "closer_forced": 3,
+          "mode": "abs_1e-5",
+          "original_gap": 43.350661,
+          "other_than_original_admissible": "0",
+          "target": "LEAL",
+          "train_species": 55
+        },
+        {
+          "boundary": 15,
+          "clade_index": 13,
+          "closer_forced": 3,
+          "mode": "abs_1e-5",
+          "original_gap": 43.350661,
+          "other_than_original_admissible": "0",
+          "target": "LELI",
+          "train_species": 55
+        },
+        {
+          "boundary": 15,
+          "clade_index": 13,
+          "closer_forced": 3,
+          "mode": "abs_1e-5",
+          "original_gap": 43.350661,
+          "other_than_original_admissible": "0",
+          "target": "LESC",
+          "train_species": 55
+        },
+        {
+          "boundary": 1,
+          "clade_index": 0,
+          "closer_forced": 7,
+          "mode": "rel_05pct",
+          "original_gap": 29.838855,
+          "other_than_original_admissible": "0",
+          "target": "FADE",
+          "train_species": 51
+        },
+        {
+          "boundary": 1,
+          "clade_index": 0,
+          "closer_forced": 7,
+          "mode": "rel_05pct",
+          "original_gap": 29.838855,
+          "other_than_original_admissible": "0",
+          "target": "FAFR",
+          "train_species": 51
+        },
+        {
+          "boundary": 1,
+          "clade_index": 0,
+          "closer_forced": 7,
+          "mode": "rel_05pct",
+          "original_gap": 29.838855,
+          "other_than_original_admissible": "0",
+          "target": "FAIM",
+          "train_species": 51
+        },
+        {
+          "boundary": 1,
+          "clade_index": 0,
+          "closer_forced": 7,
+          "mode": "rel_05pct",
+          "original_gap": 29.838855,
+          "other_than_original_admissible": "0",
+          "target": "FAPA",
+          "train_species": 51
+        },
+        {
+          "boundary": 1,
+          "clade_index": 0,
+          "closer_forced": 7,
+          "mode": "rel_05pct",
+          "original_gap": 29.838854,
+          "other_than_original_admissible": "0",
+          "target": "FAPE",
+          "train_species": 51
+        },
+        {
+          "boundary": 1,
+          "clade_index": 0,
+          "closer_forced": 7,
+          "mode": "rel_05pct",
+          "original_gap": 29.838855,
+          "other_than_original_admissible": "0",
+          "target": "FAPU",
+          "train_species": 51
+        },
+        {
+          "boundary": 1,
+          "clade_index": 0,
+          "closer_forced": 7,
+          "mode": "rel_05pct",
+          "original_gap": 29.838854,
+          "other_than_original_admissible": "0",
+          "target": "FDEN",
+          "train_species": 51
+        },
+        {
+          "boundary": 1,
+          "clade_index": 0,
+          "closer_forced": 7,
+          "mode": "rel_05pct",
+          "original_gap": 29.838855,
+          "other_than_original_admissible": "0",
+          "target": "PEPA",
+          "train_species": 51
+        },
+        {
+          "boundary": 8,
+          "clade_index": 1,
+          "closer_forced": 0,
+          "mode": "rel_05pct",
+          "original_gap": 29.838854,
+          "other_than_original_admissible": "0",
+          "target": "FABR",
+          "train_species": 58
+        },
+        {
+          "boundary": 9,
+          "clade_index": 2,
+          "closer_forced": 0,
+          "mode": "rel_05pct",
+          "original_gap": 18.294201,
+          "other_than_original_admissible": "4582115",
+          "target": "CAHE",
+          "train_species": 53
+        },
+        {
+          "boundary": 6,
+          "clade_index": 2,
+          "closer_forced": 3,
+          "mode": "rel_05pct",
+          "original_gap": 18.294201,
+          "other_than_original_admissible": "1484",
+          "target": "CAHU",
+          "train_species": 53
+        },
+        {
+          "boundary": 9,
+          "clade_index": 2,
+          "closer_forced": 0,
+          "mode": "rel_05pct",
+          "original_gap": 18.294201,
+          "other_than_original_admissible": "4582115",
+          "target": "CAIR",
+          "train_species": 53
+        },
+        {
+          "boundary": 6,
+          "clade_index": 2,
+          "closer_forced": 3,
+          "mode": "rel_05pct",
+          "original_gap": 18.294201,
+          "other_than_original_admissible": "1484",
+          "target": "CAOV",
+          "train_species": 53
+        },
+        {
+          "boundary": 6,
+          "clade_index": 2,
+          "closer_forced": 3,
+          "mode": "rel_05pct",
+          "original_gap": 18.294201,
+          "other_than_original_admissible": "1484",
+          "target": "CAPU",
+          "train_species": 53
+        },
+        {
+          "boundary": 6,
+          "clade_index": 2,
+          "closer_forced": 3,
+          "mode": "rel_05pct",
+          "original_gap": 18.294201,
+          "other_than_original_admissible": "1484",
+          "target": "CATH",
+          "train_species": 53
+        },
+        {
+          "boundary": 9,
+          "clade_index": 3,
+          "closer_forced": 0,
+          "mode": "rel_05pct",
+          "original_gap": 18.294201,
+          "other_than_original_admissible": "30855",
+          "target": "CAEG",
+          "train_species": 55
+        },
+        {
+          "boundary": 8,
+          "clade_index": 3,
+          "closer_forced": 1,
+          "mode": "rel_05pct",
+          "original_gap": 18.294201,
+          "other_than_original_admissible": "1595",
+          "target": "CALI",
+          "train_species": 55
+        },
+        {
+          "boundary": 9,
+          "clade_index": 3,
+          "closer_forced": 0,
+          "mode": "rel_05pct",
+          "original_gap": 18.294201,
+          "other_than_original_admissible": "30855",
+          "target": "CAMI",
+          "train_species": 55
+        },
+        {
+          "boundary": 8,
+          "clade_index": 3,
+          "closer_forced": 1,
+          "mode": "rel_05pct",
+          "original_gap": 18.294202,
+          "other_than_original_admissible": "1595",
+          "target": "CSEL",
+          "train_species": 55
+        },
+        {
+          "boundary": 11,
+          "clade_index": 4,
+          "closer_forced": 0,
+          "mode": "rel_05pct",
+          "original_gap": 26.951249,
+          "other_than_original_admissible": "57",
+          "target": "CACA",
+          "train_species": 57
+        },
+        {
+          "boundary": 11,
+          "clade_index": 4,
+          "closer_forced": 0,
+          "mode": "rel_05pct",
+          "original_gap": 26.951249,
+          "other_than_original_admissible": "57",
+          "target": "CAEL",
+          "train_species": 57
+        },
+        {
+          "boundary": 12,
+          "clade_index": 5,
+          "closer_forced": 1,
+          "mode": "rel_05pct",
+          "original_gap": 30.809463,
+          "other_than_original_admissible": "0",
+          "target": "CAPY",
+          "train_species": 57
+        },
+        {
+          "boundary": 12,
+          "clade_index": 5,
+          "closer_forced": 1,
+          "mode": "rel_05pct",
+          "original_gap": 30.809463,
+          "other_than_original_admissible": "0",
+          "target": "CPAR",
+          "train_species": 57
+        },
+        {
+          "boundary": 23,
+          "clade_index": 6,
+          "closer_forced": 7,
+          "mode": "rel_05pct",
+          "original_gap": 43.020264,
+          "other_than_original_admissible": "0",
+          "target": "PALT",
+          "train_species": 51
+        },
+        {
+          "boundary": 23,
+          "clade_index": 6,
+          "closer_forced": 7,
+          "mode": "rel_05pct",
+          "original_gap": 43.020263,
+          "other_than_original_admissible": "0",
+          "target": "PAXI",
+          "train_species": 51
+        },
+        {
+          "boundary": 23,
+          "clade_index": 6,
+          "closer_forced": 7,
+          "mode": "rel_05pct",
+          "original_gap": 43.020264,
+          "other_than_original_admissible": "0",
+          "target": "PBON",
+          "train_species": 51
+        },
+        {
+          "boundary": 23,
+          "clade_index": 6,
+          "closer_forced": 7,
+          "mode": "rel_05pct",
+          "original_gap": 43.020263,
+          "other_than_original_admissible": "0",
+          "target": "PCOR",
+          "train_species": 51
+        },
+        {
+          "boundary": 23,
+          "clade_index": 6,
+          "closer_forced": 7,
+          "mode": "rel_05pct",
+          "original_gap": 43.020263,
+          "other_than_original_admissible": "0",
+          "target": "PEEX",
+          "train_species": 51
+        },
+        {
+          "boundary": 23,
+          "clade_index": 6,
+          "closer_forced": 7,
+          "mode": "rel_05pct",
+          "original_gap": 43.020263,
+          "other_than_original_admissible": "0",
+          "target": "PINF",
+          "train_species": 51
+        },
+        {
+          "boundary": 23,
+          "clade_index": 6,
+          "closer_forced": 7,
+          "mode": "rel_05pct",
+          "original_gap": 43.020263,
+          "other_than_original_admissible": "0",
+          "target": "PINT",
+          "train_species": 51
+        },
+        {
+          "boundary": 23,
+          "clade_index": 6,
+          "closer_forced": 7,
+          "mode": "rel_05pct",
+          "original_gap": 43.020263,
+          "other_than_original_admissible": "0",
+          "target": "PSCH",
+          "train_species": 51
+        },
+        {
+          "boundary": 5,
+          "clade_index": 7,
+          "closer_forced": 3,
+          "mode": "rel_05pct",
+          "original_gap": 24.219339,
+          "other_than_original_admissible": "0",
+          "target": "BRAU",
+          "train_species": 55
+        },
+        {
+          "boundary": 5,
+          "clade_index": 7,
+          "closer_forced": 3,
+          "mode": "rel_05pct",
+          "original_gap": 24.219339,
+          "other_than_original_admissible": "0",
+          "target": "BRCU",
+          "train_species": 55
+        },
+        {
+          "boundary": 5,
+          "clade_index": 7,
+          "closer_forced": 3,
+          "mode": "rel_05pct",
+          "original_gap": 24.219339,
+          "other_than_original_admissible": "0",
+          "target": "BRGR",
+          "train_species": 55
+        },
+        {
+          "boundary": 5,
+          "clade_index": 7,
+          "closer_forced": 3,
+          "mode": "rel_05pct",
+          "original_gap": 24.219339,
+          "other_than_original_admissible": "0",
+          "target": "BRPL",
+          "train_species": 55
+        },
+        {
+          "boundary": 4,
+          "clade_index": 8,
+          "closer_forced": 4,
+          "mode": "rel_05pct",
+          "original_gap": 24.219339,
+          "other_than_original_admissible": "0",
+          "target": "BRAM",
+          "train_species": 54
+        },
+        {
+          "boundary": 4,
+          "clade_index": 8,
+          "closer_forced": 4,
+          "mode": "rel_05pct",
+          "original_gap": 24.219339,
+          "other_than_original_admissible": "0",
+          "target": "BRDE",
+          "train_species": 54
+        },
+        {
+          "boundary": 4,
+          "clade_index": 8,
+          "closer_forced": 4,
+          "mode": "rel_05pct",
+          "original_gap": 24.219339,
+          "other_than_original_admissible": "0",
+          "target": "BRJA",
+          "train_species": 54
+        },
+        {
+          "boundary": 4,
+          "clade_index": 8,
+          "closer_forced": 4,
+          "mode": "rel_05pct",
+          "original_gap": 24.219339,
+          "other_than_original_admissible": "0",
+          "target": "BRLA",
+          "train_species": 54
+        },
+        {
+          "boundary": 4,
+          "clade_index": 8,
+          "closer_forced": 4,
+          "mode": "rel_05pct",
+          "original_gap": 24.219339,
+          "other_than_original_admissible": "0",
+          "target": "BRNI",
+          "train_species": 54
+        },
+        {
+          "boundary": 11,
+          "clade_index": 9,
+          "closer_forced": 3,
+          "mode": "rel_05pct",
+          "original_gap": 33.856408,
+          "other_than_original_admissible": "0",
+          "target": "BOAN",
+          "train_species": 55
+        },
+        {
+          "boundary": 11,
+          "clade_index": 9,
+          "closer_forced": 3,
+          "mode": "rel_05pct",
+          "original_gap": 33.856408,
+          "other_than_original_admissible": "0",
+          "target": "BOER",
+          "train_species": 55
+        },
+        {
+          "boundary": 11,
+          "clade_index": 9,
+          "closer_forced": 3,
+          "mode": "rel_05pct",
+          "original_gap": 33.856408,
+          "other_than_original_admissible": "0",
+          "target": "HUTE",
+          "train_species": 55
+        },
+        {
+          "boundary": 11,
+          "clade_index": 9,
+          "closer_forced": 3,
+          "mode": "rel_05pct",
+          "original_gap": 33.856408,
+          "other_than_original_admissible": "0",
+          "target": "PLNY",
+          "train_species": 55
+        },
+        {
+          "boundary": 5,
+          "clade_index": 10,
+          "closer_forced": 4,
+          "mode": "rel_05pct",
+          "original_gap": 18.278187,
+          "other_than_original_admissible": "0",
+          "target": "NGRA",
+          "train_species": 54
+        },
+        {
+          "boundary": 5,
+          "clade_index": 10,
+          "closer_forced": 4,
+          "mode": "rel_05pct",
+          "original_gap": 18.278187,
+          "other_than_original_admissible": "0",
+          "target": "NIAR",
+          "train_species": 54
+        },
+        {
+          "boundary": 5,
+          "clade_index": 10,
+          "closer_forced": 4,
+          "mode": "rel_05pct",
+          "original_gap": 18.278187,
+          "other_than_original_admissible": "0",
+          "target": "NIRI",
+          "train_species": 54
+        },
+        {
+          "boundary": 5,
+          "clade_index": 10,
+          "closer_forced": 4,
+          "mode": "rel_05pct",
+          "original_gap": 18.278187,
+          "other_than_original_admissible": "0",
+          "target": "NIVE",
+          "train_species": 54
+        },
+        {
+          "boundary": 5,
+          "clade_index": 10,
+          "closer_forced": 4,
+          "mode": "rel_05pct",
+          "original_gap": 18.278187,
+          "other_than_original_admissible": "0",
+          "target": "NRIG",
+          "train_species": 54
+        },
+        {
+          "boundary": 5,
+          "clade_index": 11,
+          "closer_forced": 4,
+          "mode": "rel_05pct",
+          "original_gap": 18.278187,
+          "other_than_original_admissible": "0",
+          "target": "NIBR",
+          "train_species": 54
+        },
+        {
+          "boundary": 5,
+          "clade_index": 11,
+          "closer_forced": 4,
+          "mode": "rel_05pct",
+          "original_gap": 18.278187,
+          "other_than_original_admissible": "0",
+          "target": "NILI",
+          "train_species": 54
+        },
+        {
+          "boundary": 5,
+          "clade_index": 11,
+          "closer_forced": 4,
+          "mode": "rel_05pct",
+          "original_gap": 18.278187,
+          "other_than_original_admissible": "0",
+          "target": "NIPU",
+          "train_species": 54
+        },
+        {
+          "boundary": 5,
+          "clade_index": 11,
+          "closer_forced": 4,
+          "mode": "rel_05pct",
+          "original_gap": 18.278187,
+          "other_than_original_admissible": "0",
+          "target": "NISC",
+          "train_species": 54
+        },
+        {
+          "boundary": 5,
+          "clade_index": 11,
+          "closer_forced": 4,
+          "mode": "rel_05pct",
+          "original_gap": 18.278187,
+          "other_than_original_admissible": "0",
+          "target": "NITU",
+          "train_species": 54
+        },
+        {
+          "boundary": 10,
+          "clade_index": 12,
+          "closer_forced": 0,
+          "mode": "rel_05pct",
+          "original_gap": 19.785419,
+          "other_than_original_admissible": "0",
+          "target": "NICA",
+          "train_species": 58
+        },
+        {
+          "boundary": 15,
+          "clade_index": 13,
+          "closer_forced": 3,
+          "mode": "rel_05pct",
+          "original_gap": 43.350661,
+          "other_than_original_admissible": "0",
+          "target": "LEAC",
+          "train_species": 55
+        },
+        {
+          "boundary": 15,
+          "clade_index": 13,
+          "closer_forced": 3,
+          "mode": "rel_05pct",
+          "original_gap": 43.350661,
+          "other_than_original_admissible": "0",
+          "target": "LEAL",
+          "train_species": 55
+        },
+        {
+          "boundary": 15,
+          "clade_index": 13,
+          "closer_forced": 3,
+          "mode": "rel_05pct",
+          "original_gap": 43.350661,
+          "other_than_original_admissible": "0",
+          "target": "LELI",
+          "train_species": 55
+        },
+        {
+          "boundary": 15,
+          "clade_index": 13,
+          "closer_forced": 3,
+          "mode": "rel_05pct",
+          "original_gap": 43.350661,
+          "other_than_original_admissible": "0",
+          "target": "LESC",
+          "train_species": 55
+        },
+        {
+          "boundary": 6,
+          "clade_index": 0,
+          "closer_forced": 2,
+          "mode": "rel_10pct",
+          "original_gap": 29.838855,
+          "other_than_original_admissible": "3819815",
+          "target": "FADE",
+          "train_species": 51
+        },
+        {
+          "boundary": 6,
+          "clade_index": 0,
+          "closer_forced": 2,
+          "mode": "rel_10pct",
+          "original_gap": 29.838855,
+          "other_than_original_admissible": "3819815",
+          "target": "FAFR",
+          "train_species": 51
+        },
+        {
+          "boundary": 7,
+          "clade_index": 0,
+          "closer_forced": 1,
+          "mode": "rel_10pct",
+          "original_gap": 29.838855,
+          "other_than_original_admissible": "36288251",
+          "target": "FAIM",
+          "train_species": 51
+        },
+        {
+          "boundary": 6,
+          "clade_index": 0,
+          "closer_forced": 2,
+          "mode": "rel_10pct",
+          "original_gap": 29.838855,
+          "other_than_original_admissible": "3819815",
+          "target": "FAPA",
+          "train_species": 51
+        },
+        {
+          "boundary": 6,
+          "clade_index": 0,
+          "closer_forced": 2,
+          "mode": "rel_10pct",
+          "original_gap": 29.838854,
+          "other_than_original_admissible": "3819815",
+          "target": "FAPE",
+          "train_species": 51
+        },
+        {
+          "boundary": 6,
+          "clade_index": 0,
+          "closer_forced": 2,
+          "mode": "rel_10pct",
+          "original_gap": 29.838855,
+          "other_than_original_admissible": "3819815",
+          "target": "FAPU",
+          "train_species": 51
+        },
+        {
+          "boundary": 6,
+          "clade_index": 0,
+          "closer_forced": 2,
+          "mode": "rel_10pct",
+          "original_gap": 29.838854,
+          "other_than_original_admissible": "3819815",
+          "target": "FDEN",
+          "train_species": 51
+        },
+        {
+          "boundary": 7,
+          "clade_index": 0,
+          "closer_forced": 1,
+          "mode": "rel_10pct",
+          "original_gap": 29.838855,
+          "other_than_original_admissible": "36288251",
+          "target": "PEPA",
+          "train_species": 51
+        },
+        {
+          "boundary": 8,
+          "clade_index": 1,
+          "closer_forced": 0,
+          "mode": "rel_10pct",
+          "original_gap": 29.838854,
+          "other_than_original_admissible": "0",
+          "target": "FABR",
+          "train_species": 58
+        },
+        {
+          "boundary": 9,
+          "clade_index": 2,
+          "closer_forced": 0,
+          "mode": "rel_10pct",
+          "original_gap": 18.294201,
+          "other_than_original_admissible": "4582115",
+          "target": "CAHE",
+          "train_species": 53
+        },
+        {
+          "boundary": 6,
+          "clade_index": 2,
+          "closer_forced": 3,
+          "mode": "rel_10pct",
+          "original_gap": 18.294201,
+          "other_than_original_admissible": "1484",
+          "target": "CAHU",
+          "train_species": 53
+        },
+        {
+          "boundary": 9,
+          "clade_index": 2,
+          "closer_forced": 0,
+          "mode": "rel_10pct",
+          "original_gap": 18.294201,
+          "other_than_original_admissible": "4582115",
+          "target": "CAIR",
+          "train_species": 53
+        },
+        {
+          "boundary": 6,
+          "clade_index": 2,
+          "closer_forced": 3,
+          "mode": "rel_10pct",
+          "original_gap": 18.294201,
+          "other_than_original_admissible": "1484",
+          "target": "CAOV",
+          "train_species": 53
+        },
+        {
+          "boundary": 6,
+          "clade_index": 2,
+          "closer_forced": 3,
+          "mode": "rel_10pct",
+          "original_gap": 18.294201,
+          "other_than_original_admissible": "1484",
+          "target": "CAPU",
+          "train_species": 53
+        },
+        {
+          "boundary": 6,
+          "clade_index": 2,
+          "closer_forced": 3,
+          "mode": "rel_10pct",
+          "original_gap": 18.294201,
+          "other_than_original_admissible": "1484",
+          "target": "CATH",
+          "train_species": 53
+        },
+        {
+          "boundary": 9,
+          "clade_index": 3,
+          "closer_forced": 0,
+          "mode": "rel_10pct",
+          "original_gap": 18.294201,
+          "other_than_original_admissible": "30855",
+          "target": "CAEG",
+          "train_species": 55
+        },
+        {
+          "boundary": 9,
+          "clade_index": 3,
+          "closer_forced": 0,
+          "mode": "rel_10pct",
+          "original_gap": 18.294201,
+          "other_than_original_admissible": "30855",
+          "target": "CALI",
+          "train_species": 55
+        },
+        {
+          "boundary": 9,
+          "clade_index": 3,
+          "closer_forced": 0,
+          "mode": "rel_10pct",
+          "original_gap": 18.294201,
+          "other_than_original_admissible": "30855",
+          "target": "CAMI",
+          "train_species": 55
+        },
+        {
+          "boundary": 9,
+          "clade_index": 3,
+          "closer_forced": 0,
+          "mode": "rel_10pct",
+          "original_gap": 18.294202,
+          "other_than_original_admissible": "30855",
+          "target": "CSEL",
+          "train_species": 55
+        },
+        {
+          "boundary": 11,
+          "clade_index": 4,
+          "closer_forced": 0,
+          "mode": "rel_10pct",
+          "original_gap": 26.951249,
+          "other_than_original_admissible": "57",
+          "target": "CACA",
+          "train_species": 57
+        },
+        {
+          "boundary": 11,
+          "clade_index": 4,
+          "closer_forced": 0,
+          "mode": "rel_10pct",
+          "original_gap": 26.951249,
+          "other_than_original_admissible": "57",
+          "target": "CAEL",
+          "train_species": 57
+        },
+        {
+          "boundary": 12,
+          "clade_index": 5,
+          "closer_forced": 1,
+          "mode": "rel_10pct",
+          "original_gap": 30.809463,
+          "other_than_original_admissible": "0",
+          "target": "CAPY",
+          "train_species": 57
+        },
+        {
+          "boundary": 12,
+          "clade_index": 5,
+          "closer_forced": 1,
+          "mode": "rel_10pct",
+          "original_gap": 30.809463,
+          "other_than_original_admissible": "0",
+          "target": "CPAR",
+          "train_species": 57
+        },
+        {
+          "boundary": 23,
+          "clade_index": 6,
+          "closer_forced": 7,
+          "mode": "rel_10pct",
+          "original_gap": 43.020264,
+          "other_than_original_admissible": "0",
+          "target": "PALT",
+          "train_species": 51
+        },
+        {
+          "boundary": 23,
+          "clade_index": 6,
+          "closer_forced": 7,
+          "mode": "rel_10pct",
+          "original_gap": 43.020263,
+          "other_than_original_admissible": "0",
+          "target": "PAXI",
+          "train_species": 51
+        },
+        {
+          "boundary": 23,
+          "clade_index": 6,
+          "closer_forced": 7,
+          "mode": "rel_10pct",
+          "original_gap": 43.020264,
+          "other_than_original_admissible": "0",
+          "target": "PBON",
+          "train_species": 51
+        },
+        {
+          "boundary": 23,
+          "clade_index": 6,
+          "closer_forced": 7,
+          "mode": "rel_10pct",
+          "original_gap": 43.020263,
+          "other_than_original_admissible": "0",
+          "target": "PCOR",
+          "train_species": 51
+        },
+        {
+          "boundary": 23,
+          "clade_index": 6,
+          "closer_forced": 7,
+          "mode": "rel_10pct",
+          "original_gap": 43.020263,
+          "other_than_original_admissible": "0",
+          "target": "PEEX",
+          "train_species": 51
+        },
+        {
+          "boundary": 23,
+          "clade_index": 6,
+          "closer_forced": 7,
+          "mode": "rel_10pct",
+          "original_gap": 43.020263,
+          "other_than_original_admissible": "0",
+          "target": "PINF",
+          "train_species": 51
+        },
+        {
+          "boundary": 23,
+          "clade_index": 6,
+          "closer_forced": 7,
+          "mode": "rel_10pct",
+          "original_gap": 43.020263,
+          "other_than_original_admissible": "0",
+          "target": "PINT",
+          "train_species": 51
+        },
+        {
+          "boundary": 23,
+          "clade_index": 6,
+          "closer_forced": 7,
+          "mode": "rel_10pct",
+          "original_gap": 43.020263,
+          "other_than_original_admissible": "0",
+          "target": "PSCH",
+          "train_species": 51
+        },
+        {
+          "boundary": 5,
+          "clade_index": 7,
+          "closer_forced": 3,
+          "mode": "rel_10pct",
+          "original_gap": 24.219339,
+          "other_than_original_admissible": "0",
+          "target": "BRAU",
+          "train_species": 55
+        },
+        {
+          "boundary": 5,
+          "clade_index": 7,
+          "closer_forced": 3,
+          "mode": "rel_10pct",
+          "original_gap": 24.219339,
+          "other_than_original_admissible": "0",
+          "target": "BRCU",
+          "train_species": 55
+        },
+        {
+          "boundary": 5,
+          "clade_index": 7,
+          "closer_forced": 3,
+          "mode": "rel_10pct",
+          "original_gap": 24.219339,
+          "other_than_original_admissible": "0",
+          "target": "BRGR",
+          "train_species": 55
+        },
+        {
+          "boundary": 5,
+          "clade_index": 7,
+          "closer_forced": 3,
+          "mode": "rel_10pct",
+          "original_gap": 24.219339,
+          "other_than_original_admissible": "0",
+          "target": "BRPL",
+          "train_species": 55
+        },
+        {
+          "boundary": 4,
+          "clade_index": 8,
+          "closer_forced": 4,
+          "mode": "rel_10pct",
+          "original_gap": 24.219339,
+          "other_than_original_admissible": "0",
+          "target": "BRAM",
+          "train_species": 54
+        },
+        {
+          "boundary": 4,
+          "clade_index": 8,
+          "closer_forced": 4,
+          "mode": "rel_10pct",
+          "original_gap": 24.219339,
+          "other_than_original_admissible": "0",
+          "target": "BRDE",
+          "train_species": 54
+        },
+        {
+          "boundary": 4,
+          "clade_index": 8,
+          "closer_forced": 4,
+          "mode": "rel_10pct",
+          "original_gap": 24.219339,
+          "other_than_original_admissible": "0",
+          "target": "BRJA",
+          "train_species": 54
+        },
+        {
+          "boundary": 4,
+          "clade_index": 8,
+          "closer_forced": 4,
+          "mode": "rel_10pct",
+          "original_gap": 24.219339,
+          "other_than_original_admissible": "0",
+          "target": "BRLA",
+          "train_species": 54
+        },
+        {
+          "boundary": 4,
+          "clade_index": 8,
+          "closer_forced": 4,
+          "mode": "rel_10pct",
+          "original_gap": 24.219339,
+          "other_than_original_admissible": "0",
+          "target": "BRNI",
+          "train_species": 54
+        },
+        {
+          "boundary": 11,
+          "clade_index": 9,
+          "closer_forced": 3,
+          "mode": "rel_10pct",
+          "original_gap": 33.856408,
+          "other_than_original_admissible": "0",
+          "target": "BOAN",
+          "train_species": 55
+        },
+        {
+          "boundary": 11,
+          "clade_index": 9,
+          "closer_forced": 3,
+          "mode": "rel_10pct",
+          "original_gap": 33.856408,
+          "other_than_original_admissible": "0",
+          "target": "BOER",
+          "train_species": 55
+        },
+        {
+          "boundary": 11,
+          "clade_index": 9,
+          "closer_forced": 3,
+          "mode": "rel_10pct",
+          "original_gap": 33.856408,
+          "other_than_original_admissible": "0",
+          "target": "HUTE",
+          "train_species": 55
+        },
+        {
+          "boundary": 11,
+          "clade_index": 9,
+          "closer_forced": 3,
+          "mode": "rel_10pct",
+          "original_gap": 33.856408,
+          "other_than_original_admissible": "0",
+          "target": "PLNY",
+          "train_species": 55
+        },
+        {
+          "boundary": 8,
+          "clade_index": 10,
+          "closer_forced": 2,
+          "mode": "rel_10pct",
+          "original_gap": 18.278187,
+          "other_than_original_admissible": "1539",
+          "target": "NGRA",
+          "train_species": 54
+        },
+        {
+          "boundary": 9,
+          "clade_index": 10,
+          "closer_forced": 1,
+          "mode": "rel_10pct",
+          "original_gap": 18.278187,
+          "other_than_original_admissible": "29259",
+          "target": "NIAR",
+          "train_species": 54
+        },
+        {
+          "boundary": 8,
+          "clade_index": 10,
+          "closer_forced": 2,
+          "mode": "rel_10pct",
+          "original_gap": 18.278187,
+          "other_than_original_admissible": "1539",
+          "target": "NIRI",
+          "train_species": 54
+        },
+        {
+          "boundary": 9,
+          "clade_index": 10,
+          "closer_forced": 1,
+          "mode": "rel_10pct",
+          "original_gap": 18.278187,
+          "other_than_original_admissible": "29259",
+          "target": "NIVE",
+          "train_species": 54
+        },
+        {
+          "boundary": 8,
+          "clade_index": 10,
+          "closer_forced": 2,
+          "mode": "rel_10pct",
+          "original_gap": 18.278187,
+          "other_than_original_admissible": "1539",
+          "target": "NRIG",
+          "train_species": 54
+        },
+        {
+          "boundary": 8,
+          "clade_index": 11,
+          "closer_forced": 2,
+          "mode": "rel_10pct",
+          "original_gap": 18.278187,
+          "other_than_original_admissible": "1539",
+          "target": "NIBR",
+          "train_species": 54
+        },
+        {
+          "boundary": 9,
+          "clade_index": 11,
+          "closer_forced": 1,
+          "mode": "rel_10pct",
+          "original_gap": 18.278187,
+          "other_than_original_admissible": "29259",
+          "target": "NILI",
+          "train_species": 54
+        },
+        {
+          "boundary": 8,
+          "clade_index": 11,
+          "closer_forced": 2,
+          "mode": "rel_10pct",
+          "original_gap": 18.278187,
+          "other_than_original_admissible": "1539",
+          "target": "NIPU",
+          "train_species": 54
+        },
+        {
+          "boundary": 9,
+          "clade_index": 11,
+          "closer_forced": 1,
+          "mode": "rel_10pct",
+          "original_gap": 18.278187,
+          "other_than_original_admissible": "29259",
+          "target": "NISC",
+          "train_species": 54
+        },
+        {
+          "boundary": 8,
+          "clade_index": 11,
+          "closer_forced": 2,
+          "mode": "rel_10pct",
+          "original_gap": 18.278187,
+          "other_than_original_admissible": "1539",
+          "target": "NITU",
+          "train_species": 54
+        },
+        {
+          "boundary": 10,
+          "clade_index": 12,
+          "closer_forced": 0,
+          "mode": "rel_10pct",
+          "original_gap": 19.785419,
+          "other_than_original_admissible": "0",
+          "target": "NICA",
+          "train_species": 58
+        },
+        {
+          "boundary": 15,
+          "clade_index": 13,
+          "closer_forced": 3,
+          "mode": "rel_10pct",
+          "original_gap": 43.350661,
+          "other_than_original_admissible": "0",
+          "target": "LEAC",
+          "train_species": 55
+        },
+        {
+          "boundary": 15,
+          "clade_index": 13,
+          "closer_forced": 3,
+          "mode": "rel_10pct",
+          "original_gap": 43.350661,
+          "other_than_original_admissible": "0",
+          "target": "LEAL",
+          "train_species": 55
+        },
+        {
+          "boundary": 15,
+          "clade_index": 13,
+          "closer_forced": 3,
+          "mode": "rel_10pct",
+          "original_gap": 43.350661,
+          "other_than_original_admissible": "0",
+          "target": "LELI",
+          "train_species": 55
+        },
+        {
+          "boundary": 15,
+          "clade_index": 13,
+          "closer_forced": 3,
+          "mode": "rel_10pct",
+          "original_gap": 43.350661,
+          "other_than_original_admissible": "0",
+          "target": "LESC",
+          "train_species": 55
+        },
+        {
+          "boundary": 7,
+          "clade_index": 0,
+          "closer_forced": 1,
+          "mode": "rel_20pct",
+          "original_gap": 29.838855,
+          "other_than_original_admissible": "36288251",
+          "target": "FADE",
+          "train_species": 51
+        },
+        {
+          "boundary": 8,
+          "clade_index": 0,
+          "closer_forced": 0,
+          "mode": "rel_20pct",
+          "original_gap": 29.838855,
+          "other_than_original_admissible": "300674087",
+          "target": "FAFR",
+          "train_species": 51
+        },
+        {
+          "boundary": 8,
+          "clade_index": 0,
+          "closer_forced": 0,
+          "mode": "rel_20pct",
+          "original_gap": 29.838855,
+          "other_than_original_admissible": "300674087",
+          "target": "FAIM",
+          "train_species": 51
+        },
+        {
+          "boundary": 7,
+          "clade_index": 0,
+          "closer_forced": 1,
+          "mode": "rel_20pct",
+          "original_gap": 29.838855,
+          "other_than_original_admissible": "36288251",
+          "target": "FAPA",
+          "train_species": 51
+        },
+        {
+          "boundary": 6,
+          "clade_index": 0,
+          "closer_forced": 2,
+          "mode": "rel_20pct",
+          "original_gap": 29.838854,
+          "other_than_original_admissible": "3819815",
+          "target": "FAPE",
+          "train_species": 51
+        },
+        {
+          "boundary": 6,
+          "clade_index": 0,
+          "closer_forced": 2,
+          "mode": "rel_20pct",
+          "original_gap": 29.838855,
+          "other_than_original_admissible": "3819815",
+          "target": "FAPU",
+          "train_species": 51
+        },
+        {
+          "boundary": 6,
+          "clade_index": 0,
+          "closer_forced": 2,
+          "mode": "rel_20pct",
+          "original_gap": 29.838854,
+          "other_than_original_admissible": "3819815",
+          "target": "FDEN",
+          "train_species": 51
+        },
+        {
+          "boundary": 8,
+          "clade_index": 0,
+          "closer_forced": 0,
+          "mode": "rel_20pct",
+          "original_gap": 29.838855,
+          "other_than_original_admissible": "300674087",
+          "target": "PEPA",
+          "train_species": 51
+        },
+        {
+          "boundary": 8,
+          "clade_index": 1,
+          "closer_forced": 0,
+          "mode": "rel_20pct",
+          "original_gap": 29.838854,
+          "other_than_original_admissible": "0",
+          "target": "FABR",
+          "train_species": 58
+        },
+        {
+          "boundary": 9,
+          "clade_index": 2,
+          "closer_forced": 0,
+          "mode": "rel_20pct",
+          "original_gap": 18.294201,
+          "other_than_original_admissible": "4582115",
+          "target": "CAHE",
+          "train_species": 53
+        },
+        {
+          "boundary": 8,
+          "clade_index": 2,
+          "closer_forced": 1,
+          "mode": "rel_20pct",
+          "original_gap": 18.294201,
+          "other_than_original_admissible": "395009",
+          "target": "CAHU",
+          "train_species": 53
+        },
+        {
+          "boundary": 9,
+          "clade_index": 2,
+          "closer_forced": 0,
+          "mode": "rel_20pct",
+          "original_gap": 18.294201,
+          "other_than_original_admissible": "4582115",
+          "target": "CAIR",
+          "train_species": 53
+        },
+        {
+          "boundary": 9,
+          "clade_index": 2,
+          "closer_forced": 0,
+          "mode": "rel_20pct",
+          "original_gap": 18.294201,
+          "other_than_original_admissible": "4582115",
+          "target": "CAOV",
+          "train_species": 53
+        },
+        {
+          "boundary": 9,
+          "clade_index": 2,
+          "closer_forced": 0,
+          "mode": "rel_20pct",
+          "original_gap": 18.294201,
+          "other_than_original_admissible": "4582115",
+          "target": "CAPU",
+          "train_species": 53
+        },
+        {
+          "boundary": 8,
+          "clade_index": 2,
+          "closer_forced": 1,
+          "mode": "rel_20pct",
+          "original_gap": 18.294201,
+          "other_than_original_admissible": "395009",
+          "target": "CATH",
+          "train_species": 53
+        },
+        {
+          "boundary": 9,
+          "clade_index": 3,
+          "closer_forced": 0,
+          "mode": "rel_20pct",
+          "original_gap": 18.294201,
+          "other_than_original_admissible": "30855",
+          "target": "CAEG",
+          "train_species": 55
+        },
+        {
+          "boundary": 9,
+          "clade_index": 3,
+          "closer_forced": 0,
+          "mode": "rel_20pct",
+          "original_gap": 18.294201,
+          "other_than_original_admissible": "30855",
+          "target": "CALI",
+          "train_species": 55
+        },
+        {
+          "boundary": 9,
+          "clade_index": 3,
+          "closer_forced": 0,
+          "mode": "rel_20pct",
+          "original_gap": 18.294201,
+          "other_than_original_admissible": "30855",
+          "target": "CAMI",
+          "train_species": 55
+        },
+        {
+          "boundary": 9,
+          "clade_index": 3,
+          "closer_forced": 0,
+          "mode": "rel_20pct",
+          "original_gap": 18.294202,
+          "other_than_original_admissible": "30855",
+          "target": "CSEL",
+          "train_species": 55
+        },
+        {
+          "boundary": 13,
+          "clade_index": 4,
+          "closer_forced": 0,
+          "mode": "rel_20pct",
+          "original_gap": 26.951249,
+          "other_than_original_admissible": "57",
+          "target": "CACA",
+          "train_species": 57
+        },
+        {
+          "boundary": 13,
+          "clade_index": 4,
+          "closer_forced": 0,
+          "mode": "rel_20pct",
+          "original_gap": 26.951249,
+          "other_than_original_admissible": "57",
+          "target": "CAEL",
+          "train_species": 57
+        },
+        {
+          "boundary": 22,
+          "clade_index": 5,
+          "closer_forced": 0,
+          "mode": "rel_20pct",
+          "original_gap": 30.809463,
+          "other_than_original_admissible": "57",
+          "target": "CAPY",
+          "train_species": 57
+        },
+        {
+          "boundary": 22,
+          "clade_index": 5,
+          "closer_forced": 0,
+          "mode": "rel_20pct",
+          "original_gap": 30.809463,
+          "other_than_original_admissible": "57",
+          "target": "CPAR",
+          "train_species": 57
+        },
+        {
+          "boundary": 23,
+          "clade_index": 6,
+          "closer_forced": 7,
+          "mode": "rel_20pct",
+          "original_gap": 43.020264,
+          "other_than_original_admissible": "0",
+          "target": "PALT",
+          "train_species": 51
+        },
+        {
+          "boundary": 23,
+          "clade_index": 6,
+          "closer_forced": 7,
+          "mode": "rel_20pct",
+          "original_gap": 43.020263,
+          "other_than_original_admissible": "0",
+          "target": "PAXI",
+          "train_species": 51
+        },
+        {
+          "boundary": 23,
+          "clade_index": 6,
+          "closer_forced": 7,
+          "mode": "rel_20pct",
+          "original_gap": 43.020264,
+          "other_than_original_admissible": "0",
+          "target": "PBON",
+          "train_species": 51
+        },
+        {
+          "boundary": 23,
+          "clade_index": 6,
+          "closer_forced": 7,
+          "mode": "rel_20pct",
+          "original_gap": 43.020263,
+          "other_than_original_admissible": "0",
+          "target": "PCOR",
+          "train_species": 51
+        },
+        {
+          "boundary": 23,
+          "clade_index": 6,
+          "closer_forced": 7,
+          "mode": "rel_20pct",
+          "original_gap": 43.020263,
+          "other_than_original_admissible": "0",
+          "target": "PEEX",
+          "train_species": 51
+        },
+        {
+          "boundary": 23,
+          "clade_index": 6,
+          "closer_forced": 7,
+          "mode": "rel_20pct",
+          "original_gap": 43.020263,
+          "other_than_original_admissible": "0",
+          "target": "PINF",
+          "train_species": 51
+        },
+        {
+          "boundary": 23,
+          "clade_index": 6,
+          "closer_forced": 7,
+          "mode": "rel_20pct",
+          "original_gap": 43.020263,
+          "other_than_original_admissible": "0",
+          "target": "PINT",
+          "train_species": 51
+        },
+        {
+          "boundary": 23,
+          "clade_index": 6,
+          "closer_forced": 7,
+          "mode": "rel_20pct",
+          "original_gap": 43.020263,
+          "other_than_original_admissible": "0",
+          "target": "PSCH",
+          "train_species": 51
+        },
+        {
+          "boundary": 5,
+          "clade_index": 7,
+          "closer_forced": 3,
+          "mode": "rel_20pct",
+          "original_gap": 24.219339,
+          "other_than_original_admissible": "0",
+          "target": "BRAU",
+          "train_species": 55
+        },
+        {
+          "boundary": 5,
+          "clade_index": 7,
+          "closer_forced": 3,
+          "mode": "rel_20pct",
+          "original_gap": 24.219339,
+          "other_than_original_admissible": "0",
+          "target": "BRCU",
+          "train_species": 55
+        },
+        {
+          "boundary": 5,
+          "clade_index": 7,
+          "closer_forced": 3,
+          "mode": "rel_20pct",
+          "original_gap": 24.219339,
+          "other_than_original_admissible": "0",
+          "target": "BRGR",
+          "train_species": 55
+        },
+        {
+          "boundary": 5,
+          "clade_index": 7,
+          "closer_forced": 3,
+          "mode": "rel_20pct",
+          "original_gap": 24.219339,
+          "other_than_original_admissible": "0",
+          "target": "BRPL",
+          "train_species": 55
+        },
+        {
+          "boundary": 4,
+          "clade_index": 8,
+          "closer_forced": 4,
+          "mode": "rel_20pct",
+          "original_gap": 24.219339,
+          "other_than_original_admissible": "0",
+          "target": "BRAM",
+          "train_species": 54
+        },
+        {
+          "boundary": 4,
+          "clade_index": 8,
+          "closer_forced": 4,
+          "mode": "rel_20pct",
+          "original_gap": 24.219339,
+          "other_than_original_admissible": "0",
+          "target": "BRDE",
+          "train_species": 54
+        },
+        {
+          "boundary": 4,
+          "clade_index": 8,
+          "closer_forced": 4,
+          "mode": "rel_20pct",
+          "original_gap": 24.219339,
+          "other_than_original_admissible": "0",
+          "target": "BRJA",
+          "train_species": 54
+        },
+        {
+          "boundary": 4,
+          "clade_index": 8,
+          "closer_forced": 4,
+          "mode": "rel_20pct",
+          "original_gap": 24.219339,
+          "other_than_original_admissible": "0",
+          "target": "BRLA",
+          "train_species": 54
+        },
+        {
+          "boundary": 4,
+          "clade_index": 8,
+          "closer_forced": 4,
+          "mode": "rel_20pct",
+          "original_gap": 24.219339,
+          "other_than_original_admissible": "0",
+          "target": "BRNI",
+          "train_species": 54
+        },
+        {
+          "boundary": 11,
+          "clade_index": 9,
+          "closer_forced": 3,
+          "mode": "rel_20pct",
+          "original_gap": 33.856408,
+          "other_than_original_admissible": "0",
+          "target": "BOAN",
+          "train_species": 55
+        },
+        {
+          "boundary": 11,
+          "clade_index": 9,
+          "closer_forced": 3,
+          "mode": "rel_20pct",
+          "original_gap": 33.856408,
+          "other_than_original_admissible": "0",
+          "target": "BOER",
+          "train_species": 55
+        },
+        {
+          "boundary": 11,
+          "clade_index": 9,
+          "closer_forced": 3,
+          "mode": "rel_20pct",
+          "original_gap": 33.856408,
+          "other_than_original_admissible": "0",
+          "target": "HUTE",
+          "train_species": 55
+        },
+        {
+          "boundary": 11,
+          "clade_index": 9,
+          "closer_forced": 3,
+          "mode": "rel_20pct",
+          "original_gap": 33.856408,
+          "other_than_original_admissible": "0",
+          "target": "PLNY",
+          "train_species": 55
+        },
+        {
+          "boundary": 10,
+          "clade_index": 10,
+          "closer_forced": 0,
+          "mode": "rel_20pct",
+          "original_gap": 18.278187,
+          "other_than_original_admissible": "424269",
+          "target": "NGRA",
+          "train_species": 54
+        },
+        {
+          "boundary": 9,
+          "clade_index": 10,
+          "closer_forced": 1,
+          "mode": "rel_20pct",
+          "original_gap": 18.278187,
+          "other_than_original_admissible": "29259",
+          "target": "NIAR",
+          "train_species": 54
+        },
+        {
+          "boundary": 9,
+          "clade_index": 10,
+          "closer_forced": 1,
+          "mode": "rel_20pct",
+          "original_gap": 18.278187,
+          "other_than_original_admissible": "29259",
+          "target": "NIRI",
+          "train_species": 54
+        },
+        {
+          "boundary": 9,
+          "clade_index": 10,
+          "closer_forced": 1,
+          "mode": "rel_20pct",
+          "original_gap": 18.278187,
+          "other_than_original_admissible": "29259",
+          "target": "NIVE",
+          "train_species": 54
+        },
+        {
+          "boundary": 9,
+          "clade_index": 10,
+          "closer_forced": 1,
+          "mode": "rel_20pct",
+          "original_gap": 18.278187,
+          "other_than_original_admissible": "29259",
+          "target": "NRIG",
+          "train_species": 54
+        },
+        {
+          "boundary": 8,
+          "clade_index": 11,
+          "closer_forced": 2,
+          "mode": "rel_20pct",
+          "original_gap": 18.278187,
+          "other_than_original_admissible": "1539",
+          "target": "NIBR",
+          "train_species": 54
+        },
+        {
+          "boundary": 9,
+          "clade_index": 11,
+          "closer_forced": 1,
+          "mode": "rel_20pct",
+          "original_gap": 18.278187,
+          "other_than_original_admissible": "29259",
+          "target": "NILI",
+          "train_species": 54
+        },
+        {
+          "boundary": 8,
+          "clade_index": 11,
+          "closer_forced": 2,
+          "mode": "rel_20pct",
+          "original_gap": 18.278187,
+          "other_than_original_admissible": "1539",
+          "target": "NIPU",
+          "train_species": 54
+        },
+        {
+          "boundary": 9,
+          "clade_index": 11,
+          "closer_forced": 1,
+          "mode": "rel_20pct",
+          "original_gap": 18.278187,
+          "other_than_original_admissible": "29259",
+          "target": "NISC",
+          "train_species": 54
+        },
+        {
+          "boundary": 8,
+          "clade_index": 11,
+          "closer_forced": 2,
+          "mode": "rel_20pct",
+          "original_gap": 18.278187,
+          "other_than_original_admissible": "1539",
+          "target": "NITU",
+          "train_species": 54
+        },
+        {
+          "boundary": 10,
+          "clade_index": 12,
+          "closer_forced": 0,
+          "mode": "rel_20pct",
+          "original_gap": 19.785419,
+          "other_than_original_admissible": "0",
+          "target": "NICA",
+          "train_species": 58
+        },
+        {
+          "boundary": 15,
+          "clade_index": 13,
+          "closer_forced": 3,
+          "mode": "rel_20pct",
+          "original_gap": 43.350661,
+          "other_than_original_admissible": "0",
+          "target": "LEAC",
+          "train_species": 55
+        },
+        {
+          "boundary": 15,
+          "clade_index": 13,
+          "closer_forced": 3,
+          "mode": "rel_20pct",
+          "original_gap": 43.350661,
+          "other_than_original_admissible": "0",
+          "target": "LEAL",
+          "train_species": 55
+        },
+        {
+          "boundary": 15,
+          "clade_index": 13,
+          "closer_forced": 3,
+          "mode": "rel_20pct",
+          "original_gap": 43.350661,
+          "other_than_original_admissible": "0",
+          "target": "LELI",
+          "train_species": 55
+        },
+        {
+          "boundary": 15,
+          "clade_index": 13,
+          "closer_forced": 3,
+          "mode": "rel_20pct",
+          "original_gap": 43.350661,
+          "other_than_original_admissible": "0",
+          "target": "LESC",
+          "train_species": 55
+        }
+      ],
+      "primary_exact_gap_conditional_comparison_identifiable": false,
+      "species_scored_once": 59,
+      "tolerance_results": {
+        "abs_1e-5": {
+          "forced_nearer_exclusions_min_median_max": [
+            0,
+            4,
+            7
+          ],
+          "fraction_targets_with_alternative": 0,
+          "multi_clade_and_species_independence_not_established": true,
+          "n_alternative_sets_min_max_exact_as_strings": [
+            "0",
+            "0"
+          ],
+          "n_not_admitted": 0,
+          "n_only_original_training_set": 59,
+          "n_original_clades": 14,
+          "n_original_clades_with_any_alternative": 0,
+          "n_targets": 59,
+          "n_targets_with_alternative": 0,
+          "n_targets_without_alternative": 59,
+          "nearest_actual_gap_min_median_max": [
+            18.278187,
+            24.219339,
+            43.350661
+          ],
+          "remaining_exclusion_slots_min_median_max": [
+            0,
+            0,
+            0
+          ]
+        },
+        "rel_05pct": {
+          "forced_nearer_exclusions_min_median_max": [
+            0,
+            4,
+            7
+          ],
+          "fraction_targets_with_alternative": 0.20338983,
+          "multi_clade_and_species_independence_not_established": true,
+          "n_alternative_sets_min_max_exact_as_strings": [
+            "0",
+            "4582115"
+          ],
+          "n_not_admitted": 0,
+          "n_only_original_training_set": 47,
+          "n_original_clades": 14,
+          "n_original_clades_with_any_alternative": 3,
+          "n_targets": 59,
+          "n_targets_with_alternative": 12,
+          "n_targets_without_alternative": 47,
+          "nearest_actual_gap_min_median_max": [
+            18.278187,
+            24.219339,
+            43.350661
+          ],
+          "remaining_exclusion_slots_min_median_max": [
+            0,
+            0,
+            5
+          ]
+        },
+        "rel_10pct": {
+          "forced_nearer_exclusions_min_median_max": [
+            0,
+            2,
+            7
+          ],
+          "fraction_targets_with_alternative": 0.50847458,
+          "multi_clade_and_species_independence_not_established": true,
+          "n_alternative_sets_min_max_exact_as_strings": [
+            "0",
+            "36288251"
+          ],
+          "n_not_admitted": 0,
+          "n_only_original_training_set": 29,
+          "n_original_clades": 14,
+          "n_original_clades_with_any_alternative": 6,
+          "n_targets": 59,
+          "n_targets_with_alternative": 30,
+          "n_targets_without_alternative": 29,
+          "nearest_actual_gap_min_median_max": [
+            18.278187,
+            24.219339,
+            43.350661
+          ],
+          "remaining_exclusion_slots_min_median_max": [
+            0,
+            1,
+            6
+          ]
+        },
+        "rel_20pct": {
+          "forced_nearer_exclusions_min_median_max": [
+            0,
+            2,
+            7
+          ],
+          "fraction_targets_with_alternative": 0.54237288,
+          "multi_clade_and_species_independence_not_established": true,
+          "n_alternative_sets_min_max_exact_as_strings": [
+            "0",
+            "300674087"
+          ],
+          "n_not_admitted": 0,
+          "n_only_original_training_set": 27,
+          "n_original_clades": 14,
+          "n_original_clades_with_any_alternative": 7,
+          "n_targets": 59,
+          "n_targets_with_alternative": 32,
+          "n_targets_without_alternative": 27,
+          "nearest_actual_gap_min_median_max": [
+            18.278187,
+            24.219339,
+            43.350661
+          ],
+          "remaining_exclusion_slots_min_median_max": [
+            0,
+            1,
+            7
+          ]
+        }
+      }
+    }
+  },
+  "pre_frozen_absolute_and_relative_matching_tolerances": {
+    "abs_1e-5": [
+      "absolute",
+      0.00001
+    ],
+    "rel_05pct": [
+      "relative",
+      0.05
+    ],
+    "rel_10pct": [
+      "relative",
+      0.1
+    ],
+    "rel_20pct": [
+      "relative",
+      0.2
+    ]
+  },
+  "previous_v33_full_derived_result_sha256_authenticated_by_compact_receipt": "a61d5c7c7e0552a45356f0f966a2dbdbecd91e47a3980a06bc06d078ed312042",
+  "previous_v33_result_recomputed_in_this_run": false,
+  "schema": "anto_v34_original_tree_matched_training_count_and_nearest_gap_structural_support",
+  "strict_identifiability_verdict": "NO_SOURCE_TREE_TARGET_HAS_ALTERNATIVE_EXACT_GAP_COUNT_MATCH",
+  "under_band_relaxation_distance_and_composition_still_change": true
+}
