@@ -1,0 +1,68 @@
+name: ANTO v35 external white-flower molecular-state evidence audit
+
+on:
+  push:
+    branches: ['analysis/anto-v35-*']
+    paths:
+      - 'scripts/audit_external_white_flower_v35.py'
+      - 'tests/test_external_white_flower_v35.py'
+      - 'data/external/anto_v35_white_flower_cross_family_published_source_registry_20261115.json'
+      - 'results/anto_v35_white_flower_source_state_audit_20261115.json'
+      - 'docs/ANTO_V35*'
+      - '.github/workflows/anto-v35-white-flower-cross-family.yml'
+  pull_request:
+    paths:
+      - 'scripts/audit_external_white_flower_v35.py'
+      - 'tests/test_external_white_flower_v35.py'
+      - 'data/external/anto_v35_white_flower_cross_family_published_source_registry_20261115.json'
+      - 'results/anto_v35_white_flower_source_state_audit_20261115.json'
+      - 'docs/ANTO_V35*'
+      - '.github/workflows/anto-v35-white-flower-cross-family.yml'
+
+permissions:
+  contents: read
+
+jobs:
+  source-grain-claim-firewall:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Test external paper program identity and unsupported-claim negative cases
+        run: python -m unittest discover -s tests -p test_external_white_flower_v35.py -v
+      - name: Install inherited scientific test libraries
+        run: python -m pip install numpy scipy biopython
+      - name: Verify entire existing ANTO unit-test suite
+        run: |
+          python -m unittest discover -s tests -v > /tmp/anto_v35_tests.log 2>&1 || {
+            tail -60 /tmp/anto_v35_tests.log
+            exit 1
+          }
+          tail -6 /tmp/anto_v35_tests.log
+      - name: Rebuild external literature evidence state from registered original paper claims
+        run: |
+          EXTRA=()
+          if [ -f results/anto_v35_white_flower_source_state_audit_20261115.json ]; then
+            EXTRA=(--expected results/anto_v35_white_flower_source_state_audit_20261115.json)
+          fi
+          python scripts/audit_external_white_flower_v35.py --output /tmp/anto_v35_source_evidence_state.json "${EXTRA[@]}"
+          python - <<'PY'
+          import json
+          x=json.load(open('/tmp/anto_v35_source_evidence_state.json'))
+          assert x['n_external_independent_study_programs']==2
+          assert x['white_colour_does_not_uniquely_identify_regulatory_state']
+          assert x['new_source_raw_expression_rows_fitted']==0
+          assert not x['independent_quantitative_meta_analysis_possible']
+          assert not x['original_ancestral_gene_function_demonstrated']
+          print('ANTO_V35_EXTERNAL_PAPER_SOURCE_GRAIN_FIREWALL_PASS')
+          PY
+      - uses: actions/upload-artifact@v4
+        with:
+          name: anto-v35-published-independent-family-evidence-state
+          path: |
+            /tmp/anto_v35_source_evidence_state.json
+            /tmp/anto_v35_tests.log
+          retention-days: 90
