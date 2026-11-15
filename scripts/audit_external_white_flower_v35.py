@@ -58,6 +58,18 @@ def review(source):
             or ip["reported_hplc_purple_I_lacunosa_individuals"]!=3
             or ip["reported_hplc_purple_I_cordatotriloba_individuals"]!=2):
         raise ValueError("SOURCE_IPOMOEA_SAMPLE_OR_GENE_DRIFT")
+    DFR_STATES={
+        "hirado_azalea_2020":
+            "WHITE_DFR_DETECTED_SIMILAR_TO_COLORED_PUBLISHED_DESCRIPTION",
+        "ipomoea_lacunosa_2020":
+            "WHITE_DFR_OVER_100_FOLD_DOWN_VS_PURPLE_PUBLISHED_DESCRIPTION",
+    }
+    if {x["id"]:x.get("common_DFR_relative_to_colored_reference") for x in rows}!=DFR_STATES:
+        raise ValueError("SOURCE_COMMON_DFR_RELATIVE_CONTRAST_DRIFT")
+    if (any("DFR" not in x["measured_genes"] for x in rows)
+            or source.get("scientific_ceilings",{}).get(
+                "same_DFR_gene_reported_but_assays_and_reference_taxa_not_harmonized") is not True):
+        raise ValueError("COMMON_DFR_ASSAY_ADMISSIBILITY_DRIFT")
     if ip["approx_expression_change_white_relative_purple"]!={
             "CHS":"APPROXIMATELY_100_FOLD_LOWER",
             "DFR":"GREATER_THAN_100_FOLD_LOWER",
@@ -119,6 +131,11 @@ def review(source):
             "pigment_reporting":r["white_anthocyanin_observation"],
             "not_functional_enzyme_validation":True,
         } for r in rows],
+        "common_DFR_is_measured_in_both_original_programs":True,
+        "source_reported_DFR_relative_contrasts_differ":True,
+        "common_DFR_within_study_descriptions":DFR_STATES,
+        "absolute_DFR_expression_is_cross_study_comparable":False,
+        "common_DFR_relative_contrast_does_not_prove_nonoverlap_of_absolute_expression":True,
         "original_ancestral_gene_function_demonstrated":False,
         "intergenerational_natural_regain_demonstrated":False,
         "same_individual_HPLC_RNA_matched_comparison_computed":False,
