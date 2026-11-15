@@ -267,8 +267,28 @@ def main():
     parser.add_argument("--expected",type=Path)
     args=parser.parse_args()
     result=report(args.verified_original_tree.read_bytes(),json.loads(args.v33_receipt.read_text()))
-    if args.expected and json.loads(args.expected.read_text())!=result:
-        raise ValueError("V34_SOURCE_DERIVED_FROZEN_RESULT_DRIFT")
+    if args.expected:
+        frozen=json.loads(args.expected.read_text())
+        if frozen!=result:
+            def first_diff(a,b,where="$"):
+                if type(a)!=type(b):
+                    return where + " type " + type(a).__name__ + "/" + type(b).__name__
+                if isinstance(a,dict):
+                    if set(a)!=set(b):
+                        return where + " keys mismatch " + repr(sorted(set(a)^set(b))[:6])
+                    for key in sorted(a):
+                        if a[key]!=b[key]:
+                            return first_diff(a[key],b[key],where+"."+str(key))
+                elif isinstance(a,list):
+                    if len(a)!=len(b):
+                        return where+" list length "+str(len(a))+"/"+str(len(b))
+                    for i,(x,y) in enumerate(zip(a,b)):
+                        if x!=y:
+                            return first_diff(x,y,where+"["+str(i)+"]")
+                else:
+                    return where+" frozen="+repr(a)+" computed="+repr(b)
+                return where+" unknown drift"
+            raise ValueError("V34_SOURCE_DERIVED_FROZEN_RESULT_DRIFT: "+first_diff(frozen,result))
     args.output.parent.mkdir(parents=True,exist_ok=True)
     args.output.write_text(json.dumps(result,indent=2,sort_keys=True)+"\n")
     small={}
