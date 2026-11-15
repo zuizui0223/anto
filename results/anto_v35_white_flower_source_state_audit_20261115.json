@@ -1,0 +1,74 @@
+{
+  "ANTOv33_exact_F3Hprime_F3H5prime_FLS_model_externally_replayed": false,
+  "all_primary_programs_share_visible_white_state": true,
+  "author_published_dois": [
+    "10.1371/journal.pone.0231263",
+    "10.2503/hortj.UTD-142"
+  ],
+  "distinct_documented_white_transcription_state_classes": 2,
+  "gene_expression_units_and_pigment_methods_not_poolable": true,
+  "independent_family_names": [
+    "Convolvulaceae",
+    "Ericaceae"
+  ],
+  "independent_quantitative_meta_analysis_possible": false,
+  "intergenerational_natural_regain_demonstrated": false,
+  "n_context_prior_studies_not_new_reanalyses": 2,
+  "n_external_independent_study_programs": 2,
+  "n_independent_original_family_groups": 2,
+  "new_source_raw_expression_rows_fitted": 0,
+  "numeric_cross_study_effect_size": null,
+  "observed_pairwise_evidence_states": [
+    {
+      "doi": "10.2503/hortj.UTD-142",
+      "family": "Ericaceae",
+      "gene_expression_reporting": "F3HPRIME_F3H5PRIME_DFR_ANS_TRANSCRIPTS_DETECTED_IN_WHITE",
+      "not_functional_enzyme_validation": true,
+      "pigment_reporting": "NO_VISIBLE_ANTHOCYANIN;_FLAVONOL_PRESENT",
+      "published_assay_genes": [
+        "F3'H",
+        "F3'5'H",
+        "DFR",
+        "ANS"
+      ],
+      "visible_state": "WHITE"
+    },
+    {
+      "doi": "10.1371/journal.pone.0231263",
+      "family": "Convolvulaceae",
+      "gene_expression_reporting": "CHS_DFR_MYB1_STRONGLY_DOWNREGULATED_IN_WHITE",
+      "not_functional_enzyme_validation": true,
+      "pigment_reporting": "FLORAL_ANTHOCYANIN_REDUCED_OR_ABSENT_IN_WHITE",
+      "published_assay_genes": [
+        "CHS",
+        "DFR",
+        "MYB1"
+      ],
+      "visible_state": "WHITE"
+    }
+  ],
+  "original_ancestral_gene_function_demonstrated": false,
+  "original_source_input_schema": "anto_v35_published_original_white_flower_expression_hplc_source_registry",
+  "raw_joint_individual_HPLC_qPCR_data_unavailable_in_registry": true,
+  "same_individual_HPLC_RNA_matched_comparison_computed": false,
+  "same_visible_white_class_different_expression_reporting": true,
+  "schema": "anto_v35_original_published_white_flower_state_nonuniqueness_audit",
+  "source_provenance_original_2020_articles_not_original_assay_files": true,
+  "study_observation_grains": {
+    "hirado_azalea_2020": {
+      "HPLC_samples": 31,
+      "distinct_species_count_not_31": true,
+      "individual_HPLC_RNA_join_not_verified": true,
+      "n_author_named_white_Hirado_cultivars": 4,
+      "qPCR_samples": 24
+    },
+    "ipomoea_lacunosa_2020": {
+      "I_lacunosa_HPLC_individuals": 6,
+      "additional_I_cordatotriloba_HPLC_individuals": 2,
+      "field_qpcr_individuals": 8,
+      "individual_HPLC_RNA_join_not_verified": true
+    }
+  },
+  "white_colour_does_not_uniquely_identify_regulatory_state": true,
+  "white_state_nonuniqueness_is_observational_across_studies_not_ancestral_regain": true
+}
