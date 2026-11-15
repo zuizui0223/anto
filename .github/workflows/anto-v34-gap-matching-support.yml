@@ -1,0 +1,87 @@
+name: ANTO v34 exact-nearest-gap matching identifiability
+on:
+  push:
+    branches: ['analysis/anto-v34-*']
+    paths:
+      - 'scripts/audit_petunieae_gap_identifiability_v34.py'
+      - 'tests/test_petunieae_gap_identifiability_v34.py'
+      - 'results/petunieae_v34_gap_matching_support_20261115.json'
+      - 'docs/PETUNIEAE_V34*'
+      - '.github/workflows/anto-v34-gap-matching-support.yml'
+  pull_request:
+    paths:
+      - 'scripts/audit_petunieae_gap_identifiability_v34.py'
+      - 'tests/test_petunieae_gap_identifiability_v34.py'
+      - 'results/petunieae_v34_gap_matching_support_20261115.json'
+      - 'docs/PETUNIEAE_V34*'
+      - '.github/workflows/anto-v34-gap-matching-support.yml'
+permissions:
+  contents: read
+
+jobs:
+  original-source-structural-positivity:
+    runs-on: ubuntu-latest
+    timeout-minutes: 12
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Source topology and conditional combinatorial tests
+        run: python -m unittest discover -s tests -p test_petunieae_gap_identifiability_v34.py -v
+      - name: Install inherited repository test dependencies
+        run: python -m pip install numpy scipy biopython
+      - name: All repository unit tests without network assumptions
+        run: |
+          python -m unittest discover -s tests -v > /tmp/anto_v34_complete_tests.log 2>&1 || { tail -60 /tmp/anto_v34_complete_tests.log; exit 1; }
+          tail -6 /tmp/anto_v34_complete_tests.log
+      - name: Fetch only original published Newick from verified public OSF API
+        run: |
+          python - <<'PY'
+          import json,sys,time
+          from pathlib import Path
+          from urllib.error import HTTPError,URLError
+          sys.path.insert(0,'scripts')
+          from audit_petunieae_2023_processed_files_v26 import FILES,verify_original
+          from fetch_verified_osf_v31 import metadata_download,retrieve
+          record=FILES['species_tree_pruned']
+          last=None
+          for attempt in range(1,5):
+              try:
+                  doc=json.loads(retrieve('https://api.osf.io/v2/files/'+record['file_id']+'/',1000000))
+                  link=metadata_download(doc,record)
+                  data=retrieve(link,1000000)
+                  verify_original(data,record)
+                  Path('/tmp/anto_v34_original_tree.raw').write_bytes(data)
+                  print('ANTO_V34_TRUE_ORIGINAL_TREE_SHA256_MD5_SIZE_VERIFIED',len(data),'attempt',attempt)
+                  break
+              except HTTPError as exc:
+                  last=exc
+                  if exc.code in (401,403):
+                      raise SystemExit('OSF_ACCESS_DENIED_NO_PERMISSION_BYPASS')
+                  if exc.code not in (429,500,502,503,504):
+                      raise
+              except (TimeoutError,URLError) as exc:
+                  last=exc
+              if attempt==4:
+                  raise SystemExit('ORIGINAL_SOURCE_TRANSPORT_NOT_ADMITTED: '+repr(last))
+              time.sleep(2)
+          PY
+      - name: Source-original exact counterfactual count feasibility and no outcome use
+        run: |
+          EXTRA=()
+          if [ -f results/petunieae_v34_gap_matching_support_20261115.json ]; then
+            EXTRA=(--expected results/petunieae_v34_gap_matching_support_20261115.json)
+          fi
+          python scripts/audit_petunieae_gap_identifiability_v34.py \
+            --verified-original-tree /tmp/anto_v34_original_tree.raw \
+            --v33-receipt results/petunieae_target_size_control_v33_20261114.receipt.json \
+            --output /tmp/anto_v34_gap_matching_support.json "${EXTRA[@]}"
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: anto-v34-authentic-tree-gap-matching-identifiability
+          path: |
+            /tmp/anto_v34_gap_matching_support.json
+            /tmp/anto_v34_complete_tests.log
+          retention-days: 90
