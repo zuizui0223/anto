@@ -70,5 +70,13 @@
     }
   },
   "white_colour_does_not_uniquely_identify_regulatory_state": true,
-  "white_state_nonuniqueness_is_observational_across_studies_not_ancestral_regain": true
+  "white_state_nonuniqueness_is_observational_across_studies_not_ancestral_regain": true,
+  "common_DFR_is_measured_in_both_original_programs": true,
+  "source_reported_DFR_relative_contrasts_differ": true,
+  "common_DFR_within_study_descriptions": {
+    "hirado_azalea_2020": "WHITE_DFR_DETECTED_SIMILAR_TO_COLORED_PUBLISHED_DESCRIPTION",
+    "ipomoea_lacunosa_2020": "WHITE_DFR_OVER_100_FOLD_DOWN_VS_PURPLE_PUBLISHED_DESCRIPTION"
+  },
+  "absolute_DFR_expression_is_cross_study_comparable": false,
+  "common_DFR_relative_contrast_does_not_prove_nonoverlap_of_absolute_expression": true
 }
