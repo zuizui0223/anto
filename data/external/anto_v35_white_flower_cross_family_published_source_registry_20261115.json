@@ -1,0 +1,132 @@
+{
+  "schema": "anto_v35_published_original_white_flower_expression_hplc_source_registry",
+  "registry_date": "2026-11-15",
+  "source_basis": "PUBLISHED_AUTHOR_REPORTED_ASSAYS_NOT_REANALYZED_RAW_HPLC_QPCR",
+  "external_independent_primary_study_programs": [
+    {
+      "id": "hirado_azalea_2020",
+      "doi": "10.2503/hortj.UTD-142",
+      "url": "https://www.jstage.jst.go.jp/article/hortj/89/3/89_UTD-142/_html/-char/en",
+      "authors": "Meanchaipiboon, Kobayashi & Nakatsuka",
+      "year": 2020,
+      "plant_family": "Ericaceae",
+      "primary_organism": "Rhododendron Hirado azalea cultivars and wild relatives",
+      "primary_observation_unit": "named accession/cultivar or wild specimen; NOT a distinct species",
+      "reported_hplc_wild_samples": 6,
+      "reported_hplc_cultivar_samples": 25,
+      "reported_qpcr_wild_samples": 6,
+      "reported_qpcr_cultivar_samples": 18,
+      "white_hirado_cultivars_author_named": [
+        "Hakuhō",
+        "Shiro-kujyaku",
+        "Tanima-no-yuki",
+        "Hatsuyuki"
+      ],
+      "additional_white_old_cultivar": "Shiro-ryūkyū",
+      "original_paper_figures_tables": [
+        "Table 1",
+        "Table 2",
+        "Figure 3",
+        "Discussion"
+      ],
+      "visible_flower_class": "WHITE",
+      "white_anthocyanin_observation": "NO_VISIBLE_ANTHOCYANIN;_FLAVONOL_PRESENT",
+      "white_anthocyanidin_aglycone_exception": "SMALL_DETECTABLE_PEAKS_REPORTED_FOR_SHIRO_RYUKYU",
+      "transcription_state": "F3HPRIME_F3H5PRIME_DFR_ANS_TRANSCRIPTS_DETECTED_IN_WHITE",
+      "measured_genes": [
+        "F3'H",
+        "F3'5'H",
+        "DFR",
+        "ANS"
+      ],
+      "absent_from_measured_gene_set": [
+        "FLS"
+      ],
+      "source_reported_interpretation": "White petals still show qRT-PCR transcription of anthocyanin-pathway genes; downstream completion or accumulation cannot be inferred from transcription detection alone.",
+      "hplc_rna_same_biological_individuals_confirmed": false,
+      "hplc_and_qpcr_same_flower_development_stage": false,
+      "enzyme_function_or_ancestral_reversal_measured": false,
+      "new_species_holdout_prediction_from_author_raw_data": false,
+      "common_DFR_relative_to_colored_reference": "WHITE_DFR_DETECTED_SIMILAR_TO_COLORED_PUBLISHED_DESCRIPTION",
+      "common_DFR_contrast_evidence": "Authors report white flowers express four assayed genes similarly to colored flowers; gene-specific matched fold coefficients not re-estimated here"
+    },
+    {
+      "id": "ipomoea_lacunosa_2020",
+      "doi": "10.1371/journal.pone.0231263",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC7153891/",
+      "authors": "Duncan & Rausher",
+      "year": 2020,
+      "plant_family": "Convolvulaceae",
+      "primary_organism": "Ipomoea lacunosa white versus purple flower-throat morphs",
+      "primary_observation_unit": "source field individuals and separate crossing descendants within one original study",
+      "reported_field_qpcr_white_individuals": 4,
+      "reported_field_qpcr_purple_individuals": 4,
+      "reported_hplc_white_I_lacunosa_individuals": 3,
+      "reported_hplc_purple_I_lacunosa_individuals": 3,
+      "reported_hplc_purple_I_cordatotriloba_individuals": 2,
+      "original_paper_figures_tables": [
+        "Figure 2",
+        "Methods: qPCR",
+        "Methods: HPLC",
+        "Genetics of flower color"
+      ],
+      "visible_flower_class": "WHITE",
+      "white_anthocyanin_observation": "FLORAL_ANTHOCYANIN_REDUCED_OR_ABSENT_IN_WHITE",
+      "transcription_state": "CHS_DFR_MYB1_STRONGLY_DOWNREGULATED_IN_WHITE",
+      "measured_genes": [
+        "CHS",
+        "DFR",
+        "MYB1"
+      ],
+      "approx_expression_change_white_relative_purple": {
+        "CHS": "APPROXIMATELY_100_FOLD_LOWER",
+        "DFR": "GREATER_THAN_100_FOLD_LOWER",
+        "MYB1": "APPROXIMATELY_100_FOLD_LOWER"
+      },
+      "original_paper_reported_genetic_relation": "Flower color co-segregation with MYB regulatory variation; does not validate ANTO ancestor-function re-expression rate.",
+      "hplc_rna_same_biological_individuals_confirmed": false,
+      "enzyme_function_or_ancestral_reversal_measured": false,
+      "new_species_holdout_prediction_from_author_raw_data": false,
+      "common_DFR_relative_to_colored_reference": "WHITE_DFR_OVER_100_FOLD_DOWN_VS_PURPLE_PUBLISHED_DESCRIPTION",
+      "common_DFR_contrast_evidence": "Authors report IlacDfr >100-fold lower in field-collected white than purple flower throats; individual values not re-analyzed here"
+    }
+  ],
+  "context_not_new_independent_primary_qpcr_hplc_reanalysis": [
+    {
+      "id": "iochrominae_2018_2019",
+      "source_dois": [
+        "10.1093/molbev/msy117",
+        "10.1002/dvdy.82"
+      ],
+      "plant_family": "Solanaceae",
+      "reporting_unit": "Iochrominae cross-species and polymorphic-morph studies; overlapping author source cohort",
+      "raw_qpcr_HPLC_reparsed_in_v35": false,
+      "original_dryad_RAR_access": "PREVIOUS_V23_HTTP_401_403",
+      "reported_result": "Fixed-white versus polymorphic-white downstream gene-expression differences",
+      "no_extra_independent_program_count": true
+    },
+    {
+      "id": "petunieae_2023",
+      "source_dois": [
+        "10.1098/rspb.2023.0275"
+      ],
+      "plant_family": "Solanaceae",
+      "reporting_unit": "original Petunieae floral RNA/HPLC species means, already analyzed in v26-v34",
+      "raw_qpcr_HPLC_reparsed_in_v35": false,
+      "original_source_raw_requantification": false,
+      "reported_result": "Some externally pale-looking corollas have anthocyanins in localized floral veins",
+      "no_extra_independent_program_count": true
+    }
+  ],
+  "scientific_ceilings": {
+    "gene_transcript_abundance_not_functional_competence": true,
+    "white_phenotype_not_unique_pathway_regulatory_state": true,
+    "no_cross_source_pooled_gene_effect": true,
+    "no_cross_source_harmonized_RMSE": true,
+    "no_ancestral_regain_reexpression_or_descendant_fitness_measured": true,
+    "no_2019_Dryad_original_RAR_availability_claim": true,
+    "no_conflation_of_species_cultivars_individuals": true,
+    "no_claim_of_source_individual_HPLC_RNA_join": true,
+    "same_DFR_gene_reported_but_assays_and_reference_taxa_not_harmonized": true
+  }
+}
