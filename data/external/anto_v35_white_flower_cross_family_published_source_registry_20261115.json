@@ -46,7 +46,9 @@
       "hplc_rna_same_biological_individuals_confirmed": false,
       "hplc_and_qpcr_same_flower_development_stage": false,
       "enzyme_function_or_ancestral_reversal_measured": false,
-      "new_species_holdout_prediction_from_author_raw_data": false
+      "new_species_holdout_prediction_from_author_raw_data": false,
+      "common_DFR_relative_to_colored_reference": "WHITE_DFR_DETECTED_SIMILAR_TO_COLORED_PUBLISHED_DESCRIPTION",
+      "common_DFR_contrast_evidence": "Authors report white flowers express four assayed genes similarly to colored flowers; gene-specific matched fold coefficients not re-estimated here"
     },
     {
       "id": "ipomoea_lacunosa_2020",
@@ -84,7 +86,9 @@
       "original_paper_reported_genetic_relation": "Flower color co-segregation with MYB regulatory variation; does not validate ANTO ancestor-function re-expression rate.",
       "hplc_rna_same_biological_individuals_confirmed": false,
       "enzyme_function_or_ancestral_reversal_measured": false,
-      "new_species_holdout_prediction_from_author_raw_data": false
+      "new_species_holdout_prediction_from_author_raw_data": false,
+      "common_DFR_relative_to_colored_reference": "WHITE_DFR_OVER_100_FOLD_DOWN_VS_PURPLE_PUBLISHED_DESCRIPTION",
+      "common_DFR_contrast_evidence": "Authors report IlacDfr >100-fold lower in field-collected white than purple flower throats; individual values not re-analyzed here"
     }
   ],
   "context_not_new_independent_primary_qpcr_hplc_reanalysis": [
@@ -122,6 +126,7 @@
     "no_ancestral_regain_reexpression_or_descendant_fitness_measured": true,
     "no_2019_Dryad_original_RAR_availability_claim": true,
     "no_conflation_of_species_cultivars_individuals": true,
-    "no_claim_of_source_individual_HPLC_RNA_join": true
+    "no_claim_of_source_individual_HPLC_RNA_join": true,
+    "same_DFR_gene_reported_but_assays_and_reference_taxa_not_harmonized": true
   }
 }
