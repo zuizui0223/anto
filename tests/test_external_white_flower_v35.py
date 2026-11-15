@@ -100,6 +100,22 @@ class V35ExternalEvidence(unittest.TestCase):
         with self.assertRaisesRegex(ValueError,"ANTHOCYANIDIN_TRACE"):
             v.review(d)
 
+    def test_shared_DFR_relative_to_colored_comparison_is_explicit_but_not_cross_calibrated(self):
+        result=v.review(self.data)
+        self.assertTrue(result["common_DFR_is_measured_in_both_original_programs"])
+        self.assertTrue(result["source_reported_DFR_relative_contrasts_differ"])
+        self.assertFalse(result["absolute_DFR_expression_is_cross_study_comparable"])
+        descriptions=result["common_DFR_within_study_descriptions"]
+        self.assertIn("WHITE_DFR_DETECTED_SIMILAR_TO_COLORED_PUBLISHED_DESCRIPTION",
+                      list(descriptions.values()))
+        self.assertIn("WHITE_DFR_OVER_100_FOLD_DOWN_VS_PURPLE_PUBLISHED_DESCRIPTION",
+                      list(descriptions.values()))
+        wrong=copy.deepcopy(self.data)
+        wrong["external_independent_primary_study_programs"][0][
+            "common_DFR_relative_to_colored_reference"]="SAME_AS_IPOMOEA"
+        with self.assertRaisesRegex(ValueError,"SOURCE_COMMON_DFR_RELATIVE_CONTRAST_DRIFT"):
+            v.review(wrong)
+
     def test_intergenerational_regain_not_claimed(self):
         result=v.review(self.data)
         self.assertFalse(result["intergenerational_natural_regain_demonstrated"])
