@@ -25,8 +25,34 @@
       },
       "reported_mechanism": "pollen receipt depended most on visit count; pollen export best predicted by time inside flower; assortative visits aligned with offspring allele/genotype frequency departures",
       "raw_individual_data_acquired_by_ANTO_v39": false,
-      "source_measurement_bridge": "same_original_experimental_arrays_visitor_pollen_offspring",
-      "direct_flower_gene_edit_to_fitness": false
+      "source_measurement_bridge": "1997_within_array_visits_and_offspring;1994_1995_separate_pollen_receipt_export_arrays",
+      "direct_flower_gene_edit_to_fitness": false,
+      "original_measurement_cohort_mapping": {
+        "1994_Barr": "visit_counts_durations_pollen_receipt_export_and_dye;RED_AND_YELLOW_COMMERCIAL",
+        "1995_Avery": "visit_counts_durations_pollen_receipt_export_and_dye;WHITE_AND_YELLOW_BACKCROSS",
+        "1997_Rosy": "same_array_visit_behavior_and_offspring_genotypes;WHITE_YELLOW_NO_NECTAR_AUGMENTATION",
+        "1997_Barr": "same_array_visit_behavior_and_offspring_genotypes;WHITE_YELLOW_YELLOW_NECTAR_SUPPLEMENTED",
+        "pollen_receipt_export_and_1997_offspring_not_exactly_same_array_and_flower": true
+      },
+      "original_author_1997_offspring_frequencies": {
+        "Rosy": {
+          "initial_sulfurea_allele_frequency": 0.5,
+          "offspring_sulfurea_allele_frequency": 0.44,
+          "initial_heterozygote_fraction": 0.5,
+          "offspring_heterozygote_fraction": 0.41,
+          "nectar_supplemented_to_yellow": false,
+          "original_field_array_year": 1997
+        },
+        "Barr": {
+          "initial_sulfurea_allele_frequency": 0.5,
+          "offspring_sulfurea_allele_frequency": 0.52,
+          "initial_heterozygote_fraction": 0.5,
+          "offspring_heterozygote_fraction": 0.43,
+          "nectar_supplemented_to_yellow": true,
+          "original_field_array_year": 1997
+        }
+      },
+      "original_interpretation_limit": "Colour morph frequency, plant size/floral display, nectar supplementation, selfing and pollinator movement not individually isolated as a single colour-only causal coefficient."
     },
     {
       "id": "phlox_2012_reinforcement",
