@@ -1,0 +1,128 @@
+{
+  "Actinidia_white_hybrid_MYB110a_petal_rescue": {
+    "GFP_control_negative": true,
+    "host_white_genotype": "21-05-09e",
+    "introduced_gene": "MYB110a",
+    "local_cells_pigmented": true,
+    "source": "10.1186/1471-2164-14-28",
+    "stable_intergenerational_inheritance_established": false
+  },
+  "Petunia_axillaris_AN2_petal_rescue": {
+    "gene_donor": "Petunia integrifolia",
+    "original_white_host": "Petunia axillaris",
+    "regulator": "AN2",
+    "source": "10.1105/tpc.106.048694",
+    "spontaneous_ancestral_pseudogene_repair": false
+  },
+  "Petunia_axillaris_DPL_petal_rescue": {
+    "HPLC_control_plants": 3,
+    "HPLC_transgenic_plants": 6,
+    "corolla_pigmentation_restored": true,
+    "independent_lines_created": 9,
+    "lines_assayed_for_chemistry": 2,
+    "not_longitudinal_ancestral_reversal": true,
+    "source": "10.1093/plcell/koab114",
+    "transgenic_plants_per_assayed_line": 3
+  },
+  "all_white_flowering_plants_functionally_restorable": false,
+  "combined_causal_genotype_to_wild_fitness_across_programs": false,
+  "cross_source_pooled_regain_effect": null,
+  "exact_v33_F3Hprime_F3H5prime_FLS_RMSE_externally_replayed": false,
+  "independent_original_raw_sequence_reanalysis_count": 0,
+  "measured_natural_outcrossing_advantage": false,
+  "n_distinct_petunia_radiations": 1,
+  "n_families_with_native_white_petal_complementation": 2,
+  "n_independent_botanical_families": 2,
+  "n_original_native_white_petal_complementation_studies": 3,
+  "n_original_publications": 4,
+  "n_stable_native_white_petal_complementation_studies": 2,
+  "n_transient_local_native_white_petal_complementation_studies": 1,
+  "native_white_petal_restorations": [
+    {
+      "experiment_type": "STABLE_35S_OVEREXPRESSION",
+      "family": "Solanaceae",
+      "natural_historical_reversion": false,
+      "original_study": "10.1093/plcell/koab114",
+      "original_white_host": "Petunia axillaris",
+      "regulator": "DPL"
+    },
+    {
+      "experiment_type": "STABLE_TRANSFORMED_FUNCTIONAL_AN2_CDNA",
+      "family": "Solanaceae",
+      "natural_historical_reversion": false,
+      "original_study": "10.1105/tpc.106.048694",
+      "original_white_host": "Petunia axillaris",
+      "regulator": "AN2"
+    },
+    {
+      "experiment_type": "TRANSIENT_AGROBACTERIUM_35S_EXPRESSION_IN_WHITE_PETAL_EDGE",
+      "family": "Actinidiaceae",
+      "natural_historical_reversion": false,
+      "original_study": "10.1186/1471-2164-14-28",
+      "original_white_host": "Actinidia F2 backcross hybrid white petal genotype 21-05-09e",
+      "regulator": "MYB110a"
+    }
+  ],
+  "natural_AN2_repair": {
+    "gene": "AN2",
+    "indel": "2_BASE_PAIR_COMPENSATORY_DELETION",
+    "species": "Petunia secreta",
+    "state": "READING_FRAME_RESTORED"
+  },
+  "natural_DPL_paralog_redeployment": {
+    "AN2_still_nonfunctional": true,
+    "native_DPL_silencing_white_sectors": true,
+    "other_pathway_changes": [
+      "MYB-FL",
+      "F3'H/HT1",
+      "F3'5'H/HF1",
+      "F3'5'H/HF2",
+      "AAT"
+    ],
+    "red_colour_assumed_pelargonidin": false,
+    "regulator": "DPL",
+    "spatial_expression_change": "DPL_IN_PETAL_LIMBS",
+    "species": "Petunia exserta"
+  },
+  "natural_regain_mechanism_count": 2,
+  "natural_regain_probability": null,
+  "natural_regain_route_by_species": {
+    "Petunia exserta": "PARALOG_DPL_REDEPLOYMENT_WITH_OTHER_PATHWAY_CHANGES",
+    "Petunia secreta": "AN2_FRAME_RESTORATION"
+  },
+  "natural_regain_source_species": [
+    "Petunia exserta",
+    "Petunia secreta"
+  ],
+  "natural_regain_source_study_count": 2,
+  "not_independent_phylogenetic_radiation_level_replicates": true,
+  "observed_in_real_time_ancestral_to_descendant_reversion": false,
+  "original_assays_and_evolutionary_history_are_distinct_grains": true,
+  "original_pollinator_preference": {
+    "Bombus_author_p": 0.017,
+    "Bombus_direction": "AN2_COLOURED_P_AXILLARIS",
+    "Bombus_n_trials": 12,
+    "Manduca_author_p_less_than": 0.0001,
+    "Manduca_exact_binomial_null": "equal_first_choice_probability_0.5",
+    "Manduca_exact_two_sided_binomial_p": 0.00006960169412195683,
+    "Manduca_first_choose_coloured": 6,
+    "Manduca_first_choose_white": 30,
+    "Manduca_n": 36,
+    "experimental_scope": "controlled greenhouse first-choice/visit behavior, not wild fitness",
+    "field_seed_set_or_offspring_fitness_measured": false,
+    "not_phylogenetic_or_fitness_p_value": true,
+    "original_study_count": 1,
+    "source": "10.1105/tpc.106.048694"
+  },
+  "original_source_registry": "data/external/anto_v37_natural_regain_and_native_reactivation_original_sources_20261116.json",
+  "pollinator_choices_equivalent_to_seed_fitness": false,
+  "registered_original_DOIs": [
+    "10.1016/j.cub.2018.10.019",
+    "10.1093/plcell/koab114",
+    "10.1105/tpc.106.048694",
+    "10.1186/1471-2164-14-28"
+  ],
+  "related_Petunia_studies_not_independent_macro_evolutionary_replicates": true,
+  "schema": "anto_v37_original_published_natural_regain_white_petal_rescue_pollinator_evidence",
+  "source_values_author_published_not_remeasured": true
+}
