@@ -1,0 +1,23 @@
+{
+  "schema": "anto_v39_original_phlox_PNAS2026_dryad_source_access",
+  "audit_date": "2026-11-16",
+  "dataset_DOI": "10.5061/dryad.zgmsbccr3",
+  "latest_published_paper_DOI": "10.1073/pnas.2525299123",
+  "verified_original_CSV_downloads": 0,
+  "attempted_original_small_CSV_files": [
+    "vigs_fruitset.csv",
+    "vigs_pollentubes.csv",
+    "vigs_qpcr.csv",
+    "diallelcross_fruitdata.csv",
+    "diallelcross_pollentubedata.csv"
+  ],
+  "original_Dryad_official_API_response": "SOURCE_ACCESS_RESTRICTED_HTTP_401",
+  "technical_access_failure_not_biological_negative": true,
+  "study_biological_results_from_peer_reviewed_author_paper_only": true,
+  "row_level_fruit_pollen_tubes_reanalysis_completed": false,
+  "new_PdPIRK_gene_allele_fruit_effect_estimated": false,
+  "no_raw_data_substitution_or_permission_bypass": true,
+  "source_verification_tests_successful": 9,
+  "GitHub_source_run_id": 43887461675,
+  "next_requirement": "Authorised official Dryad dataset/file access; validate original version/file digests then re-run original row-level genotype-stratified analysis"
+}
