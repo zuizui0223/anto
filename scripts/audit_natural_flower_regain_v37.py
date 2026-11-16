@@ -7,6 +7,7 @@ publication, shared radiation, native white petal restoration, and fitness.
 from __future__ import annotations
 import argparse
 import json
+import math
 from pathlib import Path
 
 ROOT=Path(__file__).resolve().parents[1]
@@ -171,6 +172,13 @@ def review(data):
     mapping={s["natural_colour_regain"]["species"]:s["natural_colour_regain"]["molecular_channel"]
              for s in natural}
     require(mapping==NATURAL_ROUTES,"ORIGINAL_REGAIN_CHANNEL_DRIFT")
+    # Independent, strictly binomial arithmetic on the authors' already
+    # published greenhouse FIRST-CHOICE counts only. Not a genetic/fecundity P.
+    moth_n=pol["moth_first_choice_total"]
+    moth_extreme=pol["moth_first_choice_white_P_axillaris"]
+    binomial_p=2*math.fsum(math.comb(moth_n,k) for k in range(moth_extreme,moth_n+1))/(2**moth_n)
+    require(binomial_p < pol["moth_source_p_upper_bound"],
+            "ORIGINAL_BINOMIAL_BOUND_NOT_REPRODUCED")
     return {
         "schema":"anto_v37_original_published_natural_regain_white_petal_rescue_pollinator_evidence",
         "original_source_registry":"data/external/anto_v37_natural_regain_and_native_reactivation_original_sources_20261116.json",
@@ -233,6 +241,9 @@ def review(data):
             "Manduca_first_choose_coloured":pol["moth_first_choice_ANT2_restored_P_axillaris"],
             "Manduca_n":pol["moth_first_choice_total"],
             "Manduca_author_p_less_than":pol["moth_source_p_upper_bound"],
+            "Manduca_exact_two_sided_binomial_p":binomial_p,
+            "Manduca_exact_binomial_null":"equal_first_choice_probability_0.5",
+            "not_phylogenetic_or_fitness_p_value":True,
             "Bombus_n_trials":pol["bee_n_trials"],
             "Bombus_direction":"AN2_COLOURED_P_AXILLARIS",
             "Bombus_author_p":pol["bee_author_reported_p"],
