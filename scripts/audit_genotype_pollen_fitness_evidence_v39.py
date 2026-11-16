@@ -107,6 +107,33 @@ def review(source,access):
             and p["raw_individual_data_acquired_by_ANTO_v39"] is False,
             "PHLOX_REINFORCEMENT_SOURCE_DRIFT")
 
+    pub=p["original_author_2012_field_denominators"]
+    require(pub["common_garden_seeds_planted"]==2720
+            and pub["survival_outcome_figure_n"]==1909
+            and pub["fruit_production_figure_n"]==1240
+            and pub["hybridization_paternity_figure_n"]==931
+            and pub["female_fitness_genotype_direct_significant_difference_detected"] is False
+            and pub["paternity_reference_hybridization_min"]==.28
+            and pub["paternity_reference_hybridization_max"]==.44
+            and pub["paternity_mean_reference_hybridization_used_in_selection_model"]==.43
+            and pub["interspecific_hybrids_assumed_sterility_for_model"]==.90
+            and pub["dark_intensity_allele_reported_hybridization_reduction"]=="GREATER_THAN_50_PERCENT"
+            and pub["author_derived_selection_coefficient_dark_allele"]==.32
+            and pub["hue_red_allele_hybridization_effect_detected"] is False
+            and p["conditional_selection_cannot_be_merged_with_red_hue_effect"] is True,
+            "PHLOX_DARK_INTENSITY_NOT_RED_HUE_SELECTION_SOURCE_DRIFT")
+    poll=p["original_author_2012_pollinator_array_denominators"]
+    require(poll["observed_pollinators"]==181
+            and poll["observed_total_transitions_between_plants"]==2301
+            and poll["Battus_philenor_pollinators"]==108
+            and poll["skippers_Hesperiidae_pollinators"]==73
+            and poll["Battus_philenor_pollinators"]+poll["skippers_Hesperiidae_pollinators"]==
+                poll["observed_pollinators"]
+            and poll["visitation_tracking_arrangement"]==
+               "THREE_OBSERVATIONAL_ARRAYS_SEPARATE_FROM_FOUR_PATERNITY_GARDEN_BLOCKS"
+            and poll["pollinator_movement_events_not_one_to_one_linked_to_genotyped_seeds"] is True,
+            "PHLOX_2012_POLLINATOR_EVENT_GRAIN_DRIFT")
+
     w=rows["wahlenbergia_2013"]
     wm=w["measurements"]
     require(w["genus"]=="Wahlenbergia"
@@ -196,6 +223,14 @@ def review(source,access):
             "phlox_2012_reinforcement":{
                 "field_selection_and_hybridization_reported":True,
                 "pollinator_interspecific_movement":True,
+                "author_reported_dark_allele_selection_coefficient":pub["author_derived_selection_coefficient_dark_allele"],
+                "inferred_coefficient_assumes_hybrid_sterility":pub["interspecific_hybrids_assumed_sterility_for_model"],
+                "dark_allele_hybridization_reduction_more_than_half":True,
+                "red_hue_allele_hybridization_reduction_detected":False,
+                "original_paternity_genotyped_seeds_n":pub["hybridization_paternity_figure_n"],
+                "source_pollinator_individuals":poll["observed_pollinators"],
+                "source_interplant_transitions":poll["observed_total_transitions_between_plants"],
+                "paternity_and_visitor_arrays_same_plants":False,
                 "allopatric_reinforcing_selection_detected":False,
                 "natural_ancestral_colour_regain_observed":False,
             },
@@ -233,6 +268,27 @@ def review(source,access):
         },
         "Antirrhinum_pollen_arrays_1994_1995_not_same_year_as_1997_offspring":True,
         "Antirrhinum_1997_neither_colour_only_causal_effect_nor_multigeneration_selection_estimated":True,
+        "Phlox_2012_author_derived_dark_intensity_selection":{
+            "source_DOI":p["doi"],
+            "dark_intensity_allele_s_author_inferred":.32,
+            "hybrid_sterility_assumption_for_s":.90,
+            "paternity_reference_hybridization_range":[.28,.44],
+            "mean_reference_hybridization_in_author_model":.43,
+            "original_paternity_figure_seeds_genotyped_n":931,
+            "dark_intensity_hybridization_lower_by_more_than_half":True,
+            "hue_red_allele_hybridization_effect_detected":False,
+            "direct_female_fecundity_genotype_significant_difference_detected":False,
+            "raw_individual_seed_genotype_data_reanalyzed":False,
+            "original_2012_field_common_garden_seeds_planted":2720,
+            "different_field_arrays_used_for_pollen_movement_and_seed_paternity":True
+        },
+        "Phlox_2012_pollinator_source_count":{
+            "total_pollinator_individuals":181,
+            "Battus_philenor":108,
+            "skippers":73,
+            "interplant_transitions":2301,
+            "not_same_unit_as_paternity_genotyped_seeds":True
+        },
         "sympatry_specific_fitness_selection_not_universal_colour_benefit":True,
         "source_wahlenbergia_original_response":"SEED_OUTPUT",
         "author_published_43_percent":43,
