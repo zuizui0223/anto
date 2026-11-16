@@ -1,0 +1,83 @@
+{
+  "2025_bioRxiv_is_duplicate_not_new_paper": true,
+  "all_five_stages_same_gene_plant_cohort_demonstrated": false,
+  "author_published_43_percent": 43,
+  "author_published_studies_not_original_assay_bytes_remeasured": true,
+  "confirmed_natural_ancestral_colour_regain_rate": false,
+  "cross_study_genetic_pollen_fitness_pooled_beta": null,
+  "different_Phlox_microsatellite_Dryad_not_fitness_reanalysis": true,
+  "identical_gene_colour_treatment_replicated_across_all_studies": false,
+  "n_distinct_current_plant_families": 3,
+  "n_original_Phlox_studies_same_genus": 2,
+  "n_original_published_study_programs": 4,
+  "n_same_AN2_colour_gene_to_wild_seedset_new_replicates": 0,
+  "new_original_PdPIRK_allele_specific_fruit_risk_ratio": null,
+  "one_locus_mendelian_colour_state_in_original_Antirrhinum": true,
+  "original_Antirrhinum_colour_gene_causal_nucleotide_identified_v39": false,
+  "original_Phlox2026_Dryad_source_status": "SOURCE_ACCESS_RESTRICTED_HTTP_401",
+  "original_papers_not_independent_phylogenetic_transition_events": true,
+  "original_source_DOIs_sorted": [
+    "10.1073/pnas.2525299123",
+    "10.1111/1365-2435.12131",
+    "10.1126/science.1215198",
+    "10.2307/2657109"
+  ],
+  "prior_Petunia_v38_separate_and_not_overridden": true,
+  "published_2026_PNAS_DOI": "10.1073/pnas.2525299123",
+  "raw_Phlox2026_fruit_pollen_tube_rows_reanalyzed": 0,
+  "same_study_confirmed_processes": {
+    "Antirrhinum_array_visit_to_pollen_to_offspring_allele": {
+      "doi": "10.2307/2657109",
+      "flower_colour_locus_inherited": true,
+      "genic_nucleotide_identity_or_transgenic_phenotype_not_tested": true,
+      "long_term_allele_fixation_not_observed": true,
+      "offspring_genotypes_measured": true,
+      "visit_time_and_pollen_receipt_export_measured": true
+    },
+    "Phlox_SI_receptor_allele_to_controlled_pollen_to_fruit_original_authors": {
+      "DFR_petal_bleaching_is_reporter_not_Fruit_gene": true,
+      "allele_specific_PdPIRK_pistil_RNA_silencing": true,
+      "doi": "10.1073/pnas.2525299123",
+      "natural_free_foraging_visitation_NOT_measured": true,
+      "new_same_individual_gene_colour_seed_effect_computed": false,
+      "original_source_rows_authenticated_for_new_fit": false,
+      "pollen_tubes_and_fruit_original_author_measured": true
+    }
+  },
+  "schema": "anto_v39_cross_family_colour_pollinator_mating_fitness_chain_source_audit",
+  "source_stage_matrix": {
+    "antirrhinum_2001": {
+      "natural_multigeneration_fixation_measured": false,
+      "natural_pollinator_visits": true,
+      "offspring_allele_genotype_measured": true,
+      "original_flower_colour_gene_edited": false,
+      "original_within_array_visits_pollen_offspring_chain": true,
+      "pollen_receipt_and_export": true
+    },
+    "phlox_2012_reinforcement": {
+      "allopatric_reinforcing_selection_detected": false,
+      "field_selection_and_hybridization_reported": true,
+      "natural_ancestral_colour_regain_observed": false,
+      "pollinator_interspecific_movement": true
+    },
+    "phlox_2026_si": {
+      "DFR_flower_colour_causally_changes_compatibility_demonstrated": false,
+      "DFR_petal_bleaching_is_visible_silencing_reporter": true,
+      "allele_specific_receptor_intervention_reported": true,
+      "controlled_cross_fruit_binary_outcome": true,
+      "free_foraging_pollinator_choice_study": false,
+      "hand_cross_pollen_genotype_and_pollen_tubes": true
+    },
+    "wahlenbergia_2013": {
+      "floral_colour_selection_proved_pollen_receipt_mediated": false,
+      "genotyped_flower_colour_locus": false,
+      "pollen_limited_seed_production": true,
+      "published_mean_pollen_supplementation_seed_increase_percent": 43,
+      "selection_on_whiteness_stronger_with_excess_pollen": true
+    }
+  },
+  "source_wahlenbergia_original_response": "SEED_OUTPUT",
+  "subprocesses_identified_but_not_one_connected_experiment": true,
+  "sympatry_specific_fitness_selection_not_universal_colour_benefit": true,
+  "technical_source_failure_not_biological_zero_effect": true
+}
