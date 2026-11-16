@@ -1,0 +1,68 @@
+name: ANTO v39 original Phlox 2026 PNAS dryad small-source admission
+on:
+  push:
+    branches: ['analysis/anto-v39-*']
+    paths:
+      - 'scripts/fetch_original_Phlox_PdPIRK_Dryad_v39.py'
+      - 'tests/test_Phlox_PdPIRK_Dryad_source_v39.py'
+      - 'docs/ANTO_V39*'
+      - '.github/workflows/anto-v39-original-dryad-source.yml'
+  pull_request:
+    paths:
+      - 'scripts/fetch_original_Phlox_PdPIRK_Dryad_v39.py'
+      - 'tests/test_Phlox_PdPIRK_Dryad_source_v39.py'
+      - 'docs/ANTO_V39*'
+      - '.github/workflows/anto-v39-original-dryad-source.yml'
+permissions:
+  contents: read
+jobs:
+  source_admission:
+    runs-on: ubuntu-latest
+    timeout-minutes: 12
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Fake-source admission negative controls
+        run: python -m unittest discover -s tests -p test_Phlox_PdPIRK_Dryad_source_v39.py -v
+      - name: Obtain and hash only five official Dryad CSVs (no 1.74GB archive)
+        run: |
+          set +e
+          python scripts/fetch_original_Phlox_PdPIRK_Dryad_v39.py --cache /tmp/anto_v39_phlox_source --status /tmp/anto_v39_source_status.json
+          CODE=$?
+          if [ "$CODE" -ne 0 ]; then
+            python - <<'PY'
+          import json
+          r=json.load(open('/tmp/anto_v39_source_status.json'))
+          assert not r['source_files_admitted'] and not r['original_biological_result_recomputed']
+          print('ANTO_V39_SOURCE_TECHNICAL_BLOCK_NOT_BIOLOGICAL_NEGATIVE',r['reason'])
+          PY
+          fi
+          exit 0
+      - name: Show registered CSV headers and observed source-grain categories if admitted
+        run: |
+          python - <<'PY'
+          from pathlib import Path
+          import csv,json,collections
+          p=Path('/tmp/anto_v39_phlox_source')
+          r=json.load(open('/tmp/anto_v39_source_status.json'))
+          if not r.get('all_five_original_files_source_digest_verified'):
+              print('ANTO_V39_NO_DATA_REANALYSIS_UNTIL_ORIGINAL_SOURCE_ADMITTED')
+          else:
+              for file in p.glob('*.csv'):
+                  with file.open(newline='') as fh:
+                      rows=list(csv.DictReader(fh))
+                  summary={'rows':len(rows),'columns':list(rows[0]) if rows else []}
+                  if file.name.startswith('vigs_'):
+                      for col in ('TRV2-vector','Treatment','Flower_Color','Pistil_Genotype','Pollen_Genotype'):
+                          if rows and col in rows[0]:
+                              summary[col]=dict(collections.Counter(x[col] for x in rows))
+                  print('ANTO_V39_REAL_SOURCE_CSV_SCHEMA_ONLY',file.name,json.dumps(summary,sort_keys=True))
+          PY
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: anto-v39-original-dryad-source-schema-status-only
+          path: /tmp/anto_v39_source_status.json
+          retention-days: 90
