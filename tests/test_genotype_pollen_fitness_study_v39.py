@@ -63,6 +63,35 @@ class StageEvidenceV39(unittest.TestCase):
         self.assertFalse(x["natural_ancestral_colour_regain_observed"])
         self.assertTrue(self.out["sympatry_specific_fitness_selection_not_universal_colour_benefit"])
 
+    def test_phlox_original_931_genotyped_seeds_and_dark_not_hue_selective_component(self):
+        x=self.out["Phlox_2012_author_derived_dark_intensity_selection"]
+        self.assertEqual(x["original_paternity_figure_seeds_genotyped_n"],931)
+        self.assertAlmostEqual(x["dark_intensity_allele_s_author_inferred"],.32)
+        self.assertEqual(x["hybrid_sterility_assumption_for_s"],.90)
+        self.assertEqual(x["paternity_reference_hybridization_range"],[.28,.44])
+        self.assertTrue(x["dark_intensity_hybridization_lower_by_more_than_half"])
+        self.assertFalse(x["hue_red_allele_hybridization_effect_detected"])
+        self.assertFalse(x["direct_female_fecundity_genotype_significant_difference_detected"])
+        self.assertTrue(x["different_field_arrays_used_for_pollen_movement_and_seed_paternity"])
+
+    def test_phlox_original_181_pollinators_2301_transitions_are_not_931_paternity_seeds(self):
+        p=self.out["Phlox_2012_pollinator_source_count"]
+        self.assertEqual(p["total_pollinator_individuals"],181)
+        self.assertEqual(p["Battus_philenor"],108)
+        self.assertEqual(p["skippers"],73)
+        self.assertEqual(p["interplant_transitions"],2301)
+        self.assertTrue(p["not_same_unit_as_paternity_genotyped_seeds"])
+
+    def test_fake_red_hue_selection_or_doubled_paternity_sample_fails(self):
+        for change in ("hue_red_allele_hybridization_effect_detected",
+                       "hybridization_paternity_figure_n",
+                       "author_derived_selection_coefficient_dark_allele"):
+            d=copy.deepcopy(self.registry)
+            pub=d["studies"][1]["original_author_2012_field_denominators"]
+            pub[change]=True if change=="hue_red_allele_hybridization_effect_detected" else 1862 if change=="hybridization_paternity_figure_n" else .64
+            with self.assertRaisesRegex(ValueError,"PHLOX_DARK_INTENSITY_NOT_RED_HUE_SELECTION_SOURCE_DRIFT"):
+                m.review(d,self.access)
+
     def test_wahlenbergia_pollen_43pct_but_color_selection_nonpollen(self):
         x=self.out["source_stage_matrix"]["wahlenbergia_2013"]
         self.assertEqual(x["published_mean_pollen_supplementation_seed_increase_percent"],43)
