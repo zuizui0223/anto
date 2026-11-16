@@ -1,0 +1,65 @@
+name: ANTO v37 original AN2 and DPL regain, white-petal rescue and pollinator-choice evidence
+on:
+  push:
+    branches: ['analysis/anto-v37-*']
+    paths:
+      - 'scripts/audit_natural_flower_regain_v37.py'
+      - 'tests/test_natural_flower_regain_v37.py'
+      - 'data/external/anto_v37_natural_regain_and_native_reactivation_original_sources_20261116.json'
+      - 'results/anto_v37_original_natural_regain_native_rescue_20261116.json'
+      - 'docs/ANTO_V37*'
+      - '.github/workflows/anto-v37-natural-regain-rescue.yml'
+  pull_request:
+    paths:
+      - 'scripts/audit_natural_flower_regain_v37.py'
+      - 'tests/test_natural_flower_regain_v37.py'
+      - 'data/external/anto_v37_natural_regain_and_native_reactivation_original_sources_20261116.json'
+      - 'results/anto_v37_original_natural_regain_native_rescue_20261116.json'
+      - 'docs/ANTO_V37*'
+      - '.github/workflows/anto-v37-natural-regain-rescue.yml'
+permissions:
+  contents: read
+jobs:
+  original-author-mechanism-audit:
+    runs-on: ubuntu-latest
+    timeout-minutes: 12
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Original original-study functional perturbation and lineage-gating tests
+        run: python -m unittest discover -s tests -p test_natural_flower_regain_v37.py -v
+      - name: Install existing scientific test libraries
+        run: python -m pip install numpy scipy biopython
+      - name: Complete ANTO repository regression tests
+        run: |
+          python -m unittest discover -s tests -v > /tmp/anto_v37_full_tests.log 2>&1 || { tail -65 /tmp/anto_v37_full_tests.log; exit 1; }
+          tail -8 /tmp/anto_v37_full_tests.log
+      - name: Source-original natural and restoration claim-tier audit
+        run: |
+          EXTRA=()
+          if [ -f results/anto_v37_original_natural_regain_native_rescue_20261116.json ]; then
+            EXTRA=(--expected results/anto_v37_original_natural_regain_native_rescue_20261116.json)
+          fi
+          python scripts/audit_natural_flower_regain_v37.py --output /tmp/anto_v37_regain_original_source_audit.json "${EXTRA[@]}"
+          python - <<'PY'
+          import json
+          d=json.load(open('/tmp/anto_v37_regain_original_source_audit.json'))
+          assert d['n_original_publications']==4
+          assert d['n_independent_botanical_families']==2
+          assert d['n_distinct_petunia_radiations']==1
+          assert d['natural_regain_mechanism_count']==2
+          assert d['n_original_native_white_petal_complementation_studies']==3
+          assert d['original_pollinator_preference']['Manduca_n']==36
+          assert d['original_pollinator_preference']['field_seed_set_or_offspring_fitness_measured'] is False
+          assert d['natural_regain_probability'] is None
+          print('ANTO_V37_AUTHOR_ORIGINAL_LITERATURE_FUNCTIONAL_MECHANISM_FIREWALL_PASS')
+          PY
+      - uses: actions/upload-artifact@v4
+        with:
+          name: anto-v37-original-reversals-native-complementation-pollinator-evidence
+          path: |
+            /tmp/anto_v37_regain_original_source_audit.json
+            /tmp/anto_v37_full_tests.log
+          retention-days: 90
