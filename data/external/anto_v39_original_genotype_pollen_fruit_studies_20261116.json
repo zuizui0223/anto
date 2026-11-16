@@ -1,0 +1,121 @@
+{
+  "schema": "anto_v39_original_cross_family_colour_pollination_reproduction_evidence_registry",
+  "date": "2026-11-16",
+  "units": "Original paper programs, not independent evolutionary lineages",
+  "studies": [
+    {
+      "id": "antirrhinum_2001",
+      "doi": "10.2307/2657109",
+      "year": 2001,
+      "family_current": "Plantaginaceae",
+      "family_historical_original": "Scrophulariaceae",
+      "genus": "Antirrhinum",
+      "original_url": "https://bsapubs.onlinelibrary.wiley.com/doi/10.2307/2657109",
+      "experimental_context": "outdoor experimental single-locus floral colour arrays with freely foraging Bombus",
+      "measurements": {
+        "heritable_flower_colour": true,
+        "genetically_engineered_flower_colour": false,
+        "pollinator_visit_number": true,
+        "visit_duration": true,
+        "pollen_receipt": true,
+        "pollen_export": true,
+        "offspring_allele_genotype_frequencies": true,
+        "flower_fruit_seed_count_directly_reported_in_abstract": false,
+        "longitudinal_ancestral_reversal": false
+      },
+      "reported_mechanism": "pollen receipt depended most on visit count; pollen export best predicted by time inside flower; assortative visits aligned with offspring allele/genotype frequency departures",
+      "raw_individual_data_acquired_by_ANTO_v39": false,
+      "source_measurement_bridge": "same_original_experimental_arrays_visitor_pollen_offspring",
+      "direct_flower_gene_edit_to_fitness": false
+    },
+    {
+      "id": "phlox_2012_reinforcement",
+      "doi": "10.1126/science.1215198",
+      "year": 2012,
+      "family_current": "Polemoniaceae",
+      "genus": "Phlox",
+      "original_url": "https://pubmed.ncbi.nlm.nih.gov/22300852/",
+      "experimental_context": "wild and common-garden Phlox drummondii in the presence/absence of sympatric Phlox cuspidata",
+      "flower_colour_genetics": [
+        "F3'5'H hue",
+        "R2R3-MYB intensity"
+      ],
+      "measurements": {
+        "flower_colour_genotype": true,
+        "pollinator_inter_species_movement": true,
+        "hybridization": true,
+        "selection_field_context": true,
+        "floral_gene_edit_no": false,
+        "independent_multigeneration_colour_revival": false
+      },
+      "reported_mechanism": "derived increased pigment intensity favors reproductive isolation by fewer interspecies pollinator movements only when congeners coexist",
+      "allopatric_reinforcing_selection_detected": false,
+      "cannot_infer_absolute_maternal_seed_advantage_from_selection_metric": true,
+      "do_not_use_different_Dryad_8792d_as_fitness_data": true,
+      "raw_individual_data_acquired_by_ANTO_v39": false
+    },
+    {
+      "id": "wahlenbergia_2013",
+      "doi": "10.1111/1365-2435.12131",
+      "year": 2013,
+      "family_current": "Campanulaceae",
+      "genus": "Wahlenbergia",
+      "original_url": "https://besjournals.onlinelibrary.wiley.com/doi/10.1111/1365-2435.12131",
+      "experimental_context": "flower petal reflectance × intact-ramet pollen supplementation/reduction for seed output",
+      "measurements": {
+        "visible_colour_quantification": true,
+        "floral_colour_gene_manipulation": false,
+        "pollen_hand_supplementation": true,
+        "pollen_reduction": true,
+        "per_plant_seed_production": true,
+        "pollinator_direct_pollen_grain_receipt_assayed": false,
+        "ancestral_trait_regain": false
+      },
+      "original_author_reported_added_pollen_seed_increase_fraction": 0.43,
+      "selection_favors_whiter_flowers": true,
+      "selection_white_stronger_under_added_pollen": true,
+      "source_mechanism": "pollen_limitation_observed_but_colour_selection_not_explained_by_pollen_receipt",
+      "resource_mechanism_proven": false,
+      "raw_individual_data_acquired_by_ANTO_v39": false
+    },
+    {
+      "id": "phlox_2026_si",
+      "doi": "10.1073/pnas.2525299123",
+      "year": 2026,
+      "family_current": "Polemoniaceae",
+      "genus": "Phlox",
+      "original_url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC12933113/",
+      "publication_preprint_superseded": "10.1101/2025.06.17.660178",
+      "experimental_context": "allele-specific virus silencing of pistil self-incompatibility receptor in Phlox drummondii with DFR bleaching visible reporter, manually applied pollen",
+      "measurements": {
+        "targeted_PdPIRK_silencing": true,
+        "DFR_white_colour_reporter": true,
+        "hand_crossed_pollen_allele_genotype": true,
+        "stigma_pollen_tubes": true,
+        "fruit_binary": true,
+        "free_flying_pollinator_choice": false,
+        "observed_plant_multigeneration_colour_regain": false
+      },
+      "original_gene_causality": "PdPIRK allele-specific pollen recognition gene, not DFR flower-color gene",
+      "data_repository": "https://datadryad.org/dataset/doi%3A10.5061/dryad.zgmsbccr3",
+      "data_doi": "10.5061/dryad.zgmsbccr3",
+      "original_version_publication": "2025-07-09",
+      "source_files_to_authenticate": [
+        "vigs_fruitset.csv",
+        "vigs_pollentubes.csv",
+        "vigs_qpcr.csv",
+        "diallelcross_fruitdata.csv",
+        "diallelcross_pollentubedata.csv"
+      ],
+      "source_raw_reanalysis_status": "TO_BE_COMPUTED_IF_OFFICIAL_DRYAD_BYTES_ACCESSIBLE",
+      "data_grain": "flower cross with Pistil_ID, Flower_Number, Flower_Color, Treatment, TRV2-vector, Pistil/Pollen Genotype and Fruit or Pollen tubes",
+      "gene_colour_reporter_is_not_same_as_pistil_recognition_gene": true
+    }
+  ],
+  "family_replicate_count": 3,
+  "original_paper_program_count": 4,
+  "original_phlox_papers_are_one_shared_genus_not_independent_radiations": true,
+  "no_pooled_effect_size_assumption": true,
+  "same_species_controlled_color_gene_to_free_pollinator_to_seedset_chain_measured": false,
+  "prior_v38_original_source_untouched": true
+}
