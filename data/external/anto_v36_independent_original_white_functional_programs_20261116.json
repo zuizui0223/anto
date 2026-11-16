@@ -1,0 +1,159 @@
+{
+  "schema": "anto_v36_independent_original_white_flower_biochemical_genetic_intervention_registry",
+  "as_of": "2026-11-16",
+  "method": "ORIGINAL_PUBLISHED_EXPERIMENTAL_RESULTS_RECORDED_NOT_RAW_GENETIC_OR_HPLC_REFIT",
+  "original_programs": [
+    {
+      "id": "ipomoea_2020",
+      "family": "Convolvulaceae",
+      "doi": "10.1371/journal.pone.0231263",
+      "paper_url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC7153891/",
+      "study": "Duncan & Rausher (2020)",
+      "species_pair": "Ipomoea lacunosa white and purple floral morphs",
+      "chemistry": {
+        "assay": "HPLC identification of anthocyanidin hydrolysis products",
+        "white_individuals": 3,
+        "purple_individuals": 3,
+        "white_corolla_anthocyanidins_detected": false,
+        "white_stem_anthocyanidins_detected": true,
+        "purple_corolla_anthocyanidins_detected": true,
+        "purple_stem_anthocyanidins_detected": true,
+        "reference": "original Table 1",
+        "white_corolla_failure_does_not_equal_whole_plant_loss": true
+      },
+      "expression": {
+        "field_white_individuals": 4,
+        "field_purple_individuals": 4,
+        "genes": [
+          "CHS",
+          "DFR",
+          "MYB1"
+        ],
+        "white_vs_purple_source_verbal_effects": {
+          "CHS": "ABOUT_100_FOLD_LOWER",
+          "DFR": "MORE_THAN_100_FOLD_LOWER",
+          "MYB1": "ABOUT_100_FOLD_LOWER"
+        },
+        "reference": "original Fig 2, field derived qPCR; not same specimens as HPLC",
+        "same_individual_as_HPLC_not_demonstrated": true,
+        "direct_molecular_gene_editing": false
+      },
+      "crossing": {
+        "published_individually_genotyped_MYB_offspring": {
+          "family_1_3_B2": 41,
+          "family_4_F3": 12,
+          "purple_phenotype_with_purple_MYB_marker": 23,
+          "white_phenotype_with_white_MYB_marker": 30,
+          "discordant_marker_phenotype_pairs": 0,
+          "reference": "original Table 3",
+          "DFR_marker_did_not_cosegregate": true
+        },
+        "separate_original_S2_throat_phenotypes": {
+          "total": 732,
+          "purple": 530,
+          "white": 202,
+          "reference": "original Results Flower color genetics"
+        },
+        "allele_specific_expression_F1_individuals": 3,
+        "MYB_cis_regulatory_interpretation": "ORIGINAL_AUTHORS_SUPPORTED_NOT_DIRECT_SITE_EDIT",
+        "direct_native_white_to_purple_restoration_experiment": false
+      },
+      "heterologous_regulator_perturbation": null,
+      "independent_paper_program_count": 1
+    },
+    {
+      "id": "iochroma_MYBL1_2018",
+      "family": "Solanaceae",
+      "doi": "10.1111/nph.14830",
+      "paper_url": "https://www.colorado.edu/smithlab/sites/default/files/attached-files/gatesetal2017.pdf",
+      "study": "Gates, Olson, Clemente & Smith (2018; online 2017)",
+      "species_pair": "white Iochroma loxense × blue Iochroma cyaneum",
+      "chemistry": {
+        "assay": "530-nm absorbance from acid methanol extracts of corollas",
+        "white_I_loxense_floral_anthocyanin_detectable": false,
+        "heterologous_tobacco_not_same_HPLC_response": true,
+        "reference": "original Fig 1 and Fig 5"
+      },
+      "expression": {
+        "upregulated_repressor": "MYBL1",
+        "downstream_anthocyanin_genes_suppressed_in_white_and_pale_pools": true,
+        "not_full_individual_gene_to_HPLC_matrix": true,
+        "native_causal_nucleotide_directly_identified": false,
+        "source": "original pooled RNA, qPCR, discussion"
+      },
+      "crossing": {
+        "backcross_to_blue": {
+          "blue": 35,
+          "pale_F1like": 38
+        },
+        "backcross_to_white": {
+          "white": 8,
+          "pale_F1like": 11
+        },
+        "original_floral_color_segregation": true,
+        "native_single_causal_MYBL1_variant_genetically_edited": false,
+        "pooled_genotype_association_not_individual_site_rescue": true
+      },
+      "heterologous_regulator_perturbation": {
+        "donor": "Iochroma loxense",
+        "transformed_host": "Nicotiana tabacum",
+        "transgene": "MYBL1 R3-MYB repressor",
+        "transformed_lines_grown": 20,
+        "transformed_lines_white_author_reported": true,
+        "original_host_wildtype_comparator": true,
+        "author_reported_floral_absorbance_fold_lower_mean": 14,
+        "author_reported_floral_absorbance_fold_lower_min": 11,
+        "author_reported_floral_absorbance_fold_lower_max": 20,
+        "assay": "530-nm light absorbance per gram fresh corolla tissue",
+        "functional_conclusion": "HETEROLOGOUS_SUFFICIENCY_FOR_PIGMENT_REPRESSION",
+        "not_endogenous_Iochroma_rescue": true,
+        "no_evidence_of_restored_ancestral_blue_flower": true,
+        "reference": "original Fig 5 and Results R3 MYB acts as functional floral anthocyanin repressor in Nicotiana"
+      },
+      "independent_paper_program_count": 1
+    },
+    {
+      "id": "azalea_2020",
+      "family": "Ericaceae",
+      "doi": "10.2503/hortj.UTD-142",
+      "paper_url": "https://www.jstage.jst.go.jp/article/hortj/89/3/89_UTD-142/_html/-char/en",
+      "study": "Meanchaipiboon, Kobayashi & Nakatsuka (2020)",
+      "species_pair": "wild Rhododendron accessions and white/pigmented Hirado azalea cultivars",
+      "chemistry": {
+        "assay": "HPLC flavonoid profiles / anthocyanidin precursors",
+        "wild_origin_samples": 6,
+        "cultivar_samples": 25,
+        "white_cultivars_flavonol_present": true,
+        "reported_white_anthocyanidin_precursor_exception": "SHIRO_RYUKYU_AND_WHITE_HIRADO_REPORTED",
+        "named_white_cultivars": [
+          "Hakuhō",
+          "Shiro-kujyaku",
+          "Tanima-no-yuki",
+          "Hatsuyuki"
+        ],
+        "not_31_independent_species": true
+      },
+      "expression": {
+        "wild_origin_samples": 6,
+        "cultivar_samples": 18,
+        "white_detected_genes": [
+          "F3'H",
+          "F3'5'H",
+          "DFR",
+          "ANS"
+        ],
+        "FLS_assayed": false,
+        "not_original_enzyme_functional_test": true,
+        "RNA_HPLC_individual_pairing_not_verified": true
+      },
+      "crossing": null,
+      "heterologous_regulator_perturbation": null,
+      "independent_paper_program_count": 1,
+      "already_in_v35": true
+    }
+  ],
+  "no_current_original_species_white_to_pigmented_rescue_in_any_program": true,
+  "no_natural_ancestral_loss_then_regain_trajectory_measured": true,
+  "do_not_mix_Nicotiana_transgenic_lines_with_original_species_reversions": true,
+  "do_not_pool_crossstudy_gene_effects_or_absorbance_with_HPLC": true
+}
