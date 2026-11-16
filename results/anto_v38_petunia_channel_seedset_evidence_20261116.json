@@ -1,0 +1,133 @@
+{
+  "AN2_NIL_secondary_guild_sources": {
+    "axillaris_bumblebee_hives": 4,
+    "axillaris_field_bee_days": 7,
+    "inflata_bumblebee_hives": 4,
+    "inflata_field_bee_days": 7,
+    "new_guild_can_be_attracted_without_detectable_old_guild_loss": true,
+    "non_significance_proves_equal_original_guild_visits": false
+  },
+  "author_published_count_rechecks": {
+    "2013_axillaris_author_chi_square_p": 0.85268,
+    "2013_axillaris_coloured_first": 15,
+    "2013_axillaris_exact_binomial_two_sided_p": 1,
+    "2013_axillaris_total_first": 29,
+    "2013_axillaris_white_first": 14,
+    "2013_inflata_author_chi_square_p": 0.005,
+    "2013_inflata_exact_binomial_two_sided_p": 0.007537841796875,
+    "2013_inflata_purple_first": 3,
+    "2013_inflata_total_first": 18,
+    "2013_inflata_white_first": 15,
+    "hoballah2007_exact_binomial_two_sided_p": 0.00006960169412195683,
+    "hoballah2007_moth_coloured": 6,
+    "hoballah2007_moth_n": 36,
+    "hoballah2007_moth_white": 30
+  },
+  "cannot_infer_causal_same_gene_reproductive_assurance": true,
+  "experimental_contrast_observation_matrix": {
+    "Brandenburg2012_low_nectar_not_colour": {
+      "gene_colour_manipulated": false,
+      "low_nectar_introgression": true,
+      "nectar_supplementation_test": true,
+      "not_AN2_colour_seed_set": true,
+      "pollinator_probing_time_measured": true,
+      "same_trait_seed_set_measured": true
+    },
+    "DellOlivo2013_axillaris_AN2_gain": {
+      "AN2_colour_changed": true,
+      "gene_colour_manipulated": true,
+      "pollinator_first_choice_measured": true,
+      "same_genotype_field_capsule_or_seed_number_measured": false,
+      "same_genotype_pollen_deposition_count_measured": false
+    },
+    "DellOlivo2013_inflata_AN2_loss": {
+      "AN2_colour_changed": true,
+      "gene_colour_manipulated": true,
+      "pollinator_first_choice_measured": true,
+      "same_genotype_field_capsule_or_seed_number_measured": false,
+      "same_genotype_pollen_deposition_count_measured": false
+    },
+    "Hoballah2007_AN2_transformed_colour": {
+      "AN2_colour_changed": true,
+      "gene_colour_manipulated": true,
+      "pollinator_first_choice_measured": true,
+      "same_genotype_field_capsule_or_seed_number_measured": false,
+      "same_genotype_pollen_deposition_count_measured": false,
+      "same_genotype_wild_population_genetic_persistence_measured": false
+    },
+    "Hoballah2007_wild_pollinator_exclusion": {
+      "gene_colour_manipulated": false,
+      "outcome": "WILD_CAPSULE_FORMATION_NOT_AN2_TRANSGENE",
+      "pollinator_first_choice_measured": false,
+      "wild_day_and_night_both_yielded_capsules": true
+    },
+    "Rodrigues2018_wild_Psecreta_pollen_contacts": {
+      "gene_colour_manipulated": false,
+      "same_flowers_seed_set_measured": false,
+      "same_visit_pollen_deposition_quantified": false,
+      "wild_reproductive_structure_contact_observed": true
+    }
+  },
+  "fully_linked_AN2_molecular_to_long_term_fitness_verdict": "NOT_IDENTIFIED_SAME_TREATMENT_END_TO_END",
+  "hoballah2007_existing_v37_study_deduplicated": true,
+  "independent_genetic_fitness_effects_for_meta_analysis": 0,
+  "joint_intergenerational_genetic_colour_to_fitness_chains": 0,
+  "n_botanical_families": 1,
+  "n_independent_petunia_radiations": 1,
+  "n_new_genetically_independent_colour_evolution_experiments": 0,
+  "n_original_programs_with_colour_AN2_first_choice_manipulation": 2,
+  "n_original_programs_with_real_capsule_or_seed_outcome": 2,
+  "n_original_publications_in_v38_registry": 4,
+  "n_same_colour_AN2_intervention_with_direct_reproductive_output": 0,
+  "natural_ancestral_allele_recovery_caused_contact_verified_in_same_individuals": false,
+  "nectar_service_efficiency_source": {
+    "initial_attraction_difference_not_detected": true,
+    "low_nectar_seed_production_reduced": true,
+    "nectar_supplementation_recovered_seed_set": true,
+    "original_seed_count_rows_recomputed": 0,
+    "probing_duration_reduced": true,
+    "relative_nectar": "APPROXIMATELY_ONE_THIRD_VOLUME",
+    "seed_set_model_p_value": null,
+    "seed_set_numeric_risk_ratio": null,
+    "source_DOI": "10.1016/j.cub.2012.06.058",
+    "this_is_AN2_colour_perturbation": false
+  },
+  "new_externally_replicated_v33_species_RNA_HPLC_model": false,
+  "no_meta_analytic_effect_size_or_pseudoreplicate_reversal_rate": true,
+  "non_significant_old_guild_preference_is_equivalence_evidence": false,
+  "original_primary_publication_count": 4,
+  "parent_v37_first_choice_reproduced_unchanged": true,
+  "registered_original_DOIs_sorted": [
+    "10.1016/j.cub.2012.06.058",
+    "10.1093/aobpla/ply057",
+    "10.1105/tpc.106.048694",
+    "10.1111/evo.12178"
+  ],
+  "same_AN2_colour_perturbation_field_capsule_or_seedset_measured": false,
+  "schema": "anto_v38_original_Petunia_channel_addition_effectiveness_and_seedset_gap",
+  "source_chi_square_p_does_not_need_equal_exact_binomial_p": true,
+  "source_reported_events_not_raw_assays_or_new_wetlab": true,
+  "wild_Psecreta_pollen_reproductive_contact": {
+    "ancestral_AN2_reactivation_experiment_on_field_plants": false,
+    "corresponding_visited_flowers_seedset_measured": false,
+    "descriptive_fraction_of_observed_visits_with_contact": 0.5789473684210527,
+    "observed_reproductive_contact_visits": 22,
+    "source_DOI": "10.1093/aobpla/ply057",
+    "successful_pollen_deposition_per_visit_confirmed": false,
+    "total_observed_pollinator_visits": 38
+  },
+  "wild_field_capsule_published_source": {
+    "capsules_day_visitor_access_observed": true,
+    "capsules_night_visitor_access_observed": true,
+    "carmelo_original_Mann_Whitney_p": 0.167,
+    "day_night_equal_effectiveness_established": false,
+    "integrifolia_capsules_without_day_visits": false,
+    "jose_ignacio_original_Mann_Whitney_p": 0.477,
+    "measured_seed_counts": false,
+    "n_source_localities_P_axillaris": 2,
+    "n_source_reported_replicates_per_locality": 4,
+    "source_DOI": "10.1105/tpc.106.048694",
+    "species_specific_pollinator_channel_availability": true,
+    "transgenic_AN2_colour_was_the_field_exclusion_treatment": false
+  }
+}
