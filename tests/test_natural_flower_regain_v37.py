@@ -95,6 +95,16 @@ class OriginalPublishedRegainTests(unittest.TestCase):
         self.assertEqual(p["Bombus_direction"],"AN2_COLOURED_P_AXILLARIS")
         self.assertFalse(p["field_seed_set_or_offspring_fitness_measured"])
 
+    def test_independent_exact_binomial_recomputation_matches_author_bound(self):
+        # n=36 first choices from the original published green-house data,
+        # NOT independent evolutionary transitions or realised seed-set.
+        result=v.review(self.source)
+        poll=result["original_pollinator_preference"]
+        self.assertAlmostEqual(poll["Manduca_exact_two_sided_binomial_p"],0.00006960169412195683,places=16)
+        self.assertLess(poll["Manduca_exact_two_sided_binomial_p"],poll["Manduca_author_p_less_than"])
+        self.assertEqual(poll["Manduca_exact_binomial_null"],"equal_first_choice_probability_0.5")
+        self.assertTrue(poll["not_phylogenetic_or_fitness_p_value"])
+
     def test_original_moth_30_6_not_replaced_by_pooled_trials(self):
         d=copy.deepcopy(self.source)
         p=next(s["controlled_pollinator_preference"] for s in d["original_study_programs"]
