@@ -1,0 +1,172 @@
+{
+  "schema": "anto_v38_original_petunia_pollinator_channel_effectiveness_and_seed_source_registry",
+  "as_of": "2026-11-16",
+  "biology": "Original published studies; not new raw observations or direct AN2 fitness estimate",
+  "programs": [
+    {
+      "id": "hoballah2007_AN2",
+      "doi": "10.1105/tpc.106.048694",
+      "year": 2007,
+      "original_url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC1867374/",
+      "family": "Solanaceae",
+      "shared_radiation": "Petunia",
+      "n_original_studies": 1,
+      "experimental_substudies": {
+        "transgenic_colour_choice": {
+          "species": "Petunia axillaris",
+          "intervention": "STABLE_FUNCTIONAL_AN2_ADD_TO_WHITE",
+          "readout": "GREENHOUSE_FIRST_CHOICE",
+          "moth": "Manduca sexta",
+          "moth_first_choice_wild_white": 30,
+          "moth_first_choice_transgenic_coloured": 6,
+          "n_first_choices": 36,
+          "author_p_upper": 0.0001,
+          "study_specific_colour_contrast": true,
+          "same_treatment_stigma_pollen_deposition_measured": false,
+          "same_treatment_capsule_or_seedset_measured": false,
+          "same_treatment_heritable_natural_population_frequency_measured": false
+        },
+        "independent_wild_native_pollinator_exclusion": {
+          "population_taxa": [
+            "Petunia axillaris",
+            "Petunia integrifolia"
+          ],
+          "genetic_intervention": "NONE_IN_NATURAL_POPULATIONS",
+          "organism_genotype_equivalent_to_transgenic_color_choice": false,
+          "p_axillaris_Jose_Ignacio": {
+            "day_exclusion_and_night_exclusion_both_made_capsules": true,
+            "original_Mann_Whitney_Z": -0.711,
+            "original_Mann_Whitney_p": 0.477,
+            "reported_original_replicates": 4
+          },
+          "p_axillaris_Carmelo": {
+            "day_exclusion_and_night_exclusion_both_made_capsules": true,
+            "original_Mann_Whitney_Z": -1.38,
+            "original_Mann_Whitney_p": 0.167,
+            "reported_original_replicates": 4
+          },
+          "p_integrifolia_night_only": {
+            "original_sites": [
+              "Puerto Viejo",
+              "Rivera"
+            ],
+            "capsule_formation_in_night_only": false,
+            "reported_original_replicates": 4
+          },
+          "measurement": "CAPSULE_FORMATION_NOT_SEED_NUMBER",
+          "separate_wild_genotypes_not_edited_AN2_colour_contrast": true
+        }
+      }
+    },
+    {
+      "id": "dellolivo2013_AN2",
+      "doi": "10.1111/evo.12178",
+      "year": 2013,
+      "original_url": "https://onlinelibrary.wiley.com/doi/full/10.1111/evo.12178",
+      "family": "Solanaceae",
+      "shared_radiation": "Petunia",
+      "n_original_studies": 1,
+      "experimental_substudies": {
+        "axillaris_colour_gain": {
+          "species": "Petunia axillaris",
+          "intervention": "NIL_FUNCTIONAL_AN2_GAIN_WHITE_TO_COLOURED",
+          "moth_first_choice_An2plus_coloured": 15,
+          "moth_first_choice_original_white": 14,
+          "moth_n_first_choices": 29,
+          "author_chi_square_p": 0.85268,
+          "moth_established_guild_difference_detected": false,
+          "greenhouse_bumblebee_genotype_preference": "AN2PLUS_COLOURED",
+          "greenhouse_bumblebee_original_hives": 4,
+          "greenhouse_bumblebee_author_p": 0.001,
+          "native_solitary_bee_genotype_preference": "AN2PLUS_COLOURED",
+          "field_bee_original_observation_days": 7,
+          "field_bee_author_p": 0.001,
+          "stigma_pollen_deposition_measured": false,
+          "same_NIL_seedset_measured": false,
+          "moth_equivalence_proved": false
+        },
+        "inflata_colour_loss": {
+          "species": "Petunia inflata",
+          "intervention": "NIL_NONFUNCTIONAL_AN2_LOSS_PURPLE_TO_WHITE",
+          "moth_first_choice_An2minus_white": 15,
+          "moth_first_choice_original_purple": 3,
+          "moth_n_first_choices": 18,
+          "author_chi_square_p": 0.005,
+          "moth_novel_guild_increased_visitation": true,
+          "greenhouse_bumblebee_genotype_difference_detected": false,
+          "greenhouse_bumblebee_original_hives": 4,
+          "greenhouse_bumblebee_author_p": 0.525,
+          "native_solitary_bee_genotype_difference_detected": false,
+          "field_bee_original_observation_days": 7,
+          "field_bee_author_p": 0.277,
+          "additional_flower_projected_area_change": "AN2MINUS_INFLATA_PROJECTED_AREA_28_PERCENT_SMALLER_THAN_PARENT",
+          "stigma_pollen_deposition_measured": false,
+          "same_NIL_seedset_measured": false,
+          "wild_natural_evolution_observed_over_time": false
+        },
+        "no_direct_evidence_of_new_guild_reproductive_assurance_in_same_NIL": true
+      }
+    },
+    {
+      "id": "brandenburg2012_nectar",
+      "doi": "10.1016/j.cub.2012.06.058",
+      "year": 2012,
+      "original_url": "https://pubmed.ncbi.nlm.nih.gov/22840518/",
+      "family": "Solanaceae",
+      "shared_radiation": "Petunia",
+      "n_original_studies": 1,
+      "experimental_substudies": {
+        "low_nectar_introgression": {
+          "species": "Petunia axillaris",
+          "intervention": "LOW_NECTAR_INTROGRESSION_NOT_AN2_COLOUR",
+          "low_nectar_relative_wildtype": "APPROXIMATELY_ONE_THIRD_VOLUME",
+          "initial_attraction_discrimination_detected": false,
+          "probing_duration_low_nectar": "SHORTER",
+          "seed_set_low_nectar_under_moth_service": "LOWER_THAN_NORMAL_NECTAR",
+          "low_nectar_manual_hand_pollination_reproductive_potential": "HIGHER_THAN_MOTH_SERVICE",
+          "supplementation_to_parental_nectar_level": "RESTORED_SEED_SET_NEAR_HAND_POLLINATION",
+          "original_paper_raw_seed_set_counts_recomputed_here": false,
+          "novel_flower_colour_or_AN2_perturbation": false,
+          "main_original_conclusion": "PROBING_DURATION_MEDIATES_REPRODUCTIVE_OUTPUT"
+        }
+      }
+    },
+    {
+      "id": "rodrigues2018_secreta",
+      "doi": "10.1093/aobpla/ply057",
+      "year": 2018,
+      "original_url": "https://academic.oup.com/aobpla/article/10/5/ply057/5113022",
+      "family": "Solanaceae",
+      "shared_radiation": "Petunia",
+      "n_original_studies": 1,
+      "experimental_substudies": {
+        "natural_pink_Psecreta": {
+          "species": "Petunia secreta",
+          "field_study_years": [
+            2014,
+            2015
+          ],
+          "original_bee_genus": "Pseudagapostemon",
+          "total_observed_bee_visits": 38,
+          "bee_visits_with_documented_reproductive_structure_contact": 22,
+          "pollen_collection": true,
+          "viable_pollen_deposition_determined_per_visit": false,
+          "measured_capsule_set_from_same_visited_flowers": false,
+          "measured_seed_set_from_same_visited_flowers": false,
+          "AN2_causal_gene_editing_in_the_wild_field_study": false,
+          "naturally_regained_pigment_phylogenetic_inference_from_different_Esfeld2018_study": true,
+          "other_visitors_birds_and_bees_occur": true,
+          "source_replication_unit": "VISITS_NOT_DISTINCT_FLOWER_GENOTYPES"
+        }
+      }
+    }
+  ],
+  "parent_v37_doi": "10.1105/tpc.106.048694",
+  "duplicate_study_policy": "HOBALLAH_2007_ALREADY_IN_V37_DO_NOT_COUNT_AS_INDEPENDENT_NEW_STUDY",
+  "no_original_raw_pollen_or_seed_numbers_reconstructed": true,
+  "no_equivalence_claim_from_non_significant_P_values": true,
+  "no_direct_AN2_colour_change_to_field_seedset_link": true,
+  "no_source_has_natural_genetic_trait_frequency_time_series": true,
+  "no_multi_study_numeric_effect_pooling": true,
+  "all_four_papers_one_shared_Petunia_radiation": true
+}
