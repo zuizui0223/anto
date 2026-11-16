@@ -1,0 +1,69 @@
+name: ANTO v38 pollinator channel gain, effective service and seed-output linkage
+on:
+  push:
+    branches: ['analysis/anto-v38-*']
+    paths:
+      - 'scripts/audit_petunia_pollinator_channel_v38.py'
+      - 'tests/test_petunia_pollinator_channel_v38.py'
+      - 'data/external/anto_v38_petunia_original_pollinator_seed_set_programs_20261116.json'
+      - 'results/anto_v38_petunia_channel_seedset_evidence_20261116.json'
+      - 'docs/ANTO_V38*'
+      - '.github/workflows/anto-v38-pollinator-channel.yml'
+  pull_request:
+    paths:
+      - 'scripts/audit_petunia_pollinator_channel_v38.py'
+      - 'tests/test_petunia_pollinator_channel_v38.py'
+      - 'data/external/anto_v38_petunia_original_pollinator_seed_set_programs_20261116.json'
+      - 'results/anto_v38_petunia_channel_seedset_evidence_20261116.json'
+      - 'docs/ANTO_V38*'
+      - '.github/workflows/anto-v38-pollinator-channel.yml'
+permissions:
+  contents: read
+
+jobs:
+  original-source-channel-and-fecundity-gates:
+    runs-on: ubuntu-latest
+    timeout-minutes: 14
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Original published source and missing AN2 same-genotype fitness negative controls
+        run: python -m unittest discover -s tests -p test_petunia_pollinator_channel_v38.py -v
+      - name: Inherited science test packages
+        run: python -m pip install numpy scipy biopython
+      - name: Entire ANTO repository unittest regression suite
+        run: |
+          python -m unittest discover -s tests -v > /tmp/anto_v38_complete_tests.log 2>&1 || {
+            tail -70 /tmp/anto_v38_complete_tests.log
+            exit 1
+          }
+          tail -8 /tmp/anto_v38_complete_tests.log
+      - name: Publish source-bounded original first choice, capsule, effective probing and seed outcome stage map
+        run: |
+          EXTRA=()
+          if [ -f results/anto_v38_petunia_channel_seedset_evidence_20261116.json ]; then
+            EXTRA=(--expected results/anto_v38_petunia_channel_seedset_evidence_20261116.json)
+          fi
+          python scripts/audit_petunia_pollinator_channel_v38.py \
+            --output /tmp/anto_v38_source_original_channel_seedset.json "${EXTRA[@]}"
+          python - <<'PY'
+          import json
+          d=json.load(open('/tmp/anto_v38_source_original_channel_seedset.json'))
+          assert d["n_original_publications_in_v38_registry"]==4
+          assert d["n_independent_petunia_radiations"]==1
+          assert d["n_original_programs_with_colour_AN2_first_choice_manipulation"]==2
+          assert d["n_same_colour_AN2_intervention_with_direct_reproductive_output"]==0
+          assert d["n_original_programs_with_real_capsule_or_seed_outcome"]==2
+          assert d["fully_linked_AN2_molecular_to_long_term_fitness_verdict"]=="NOT_IDENTIFIED_SAME_TREATMENT_END_TO_END"
+          assert abs(d["author_published_count_rechecks"]["2013_inflata_exact_binomial_two_sided_p"]-0.007537841796875)<1e-14
+          print("ANTO_V38_SOURCE_REPORTED_BIOLOGICAL_STAGE_SEPARATION_PASS")
+          PY
+      - uses: actions/upload-artifact@v4
+        with:
+          name: anto-v38-original-published-AN2-channel-vs-seed-evidence
+          path: |
+            /tmp/anto_v38_source_original_channel_seedset.json
+            /tmp/anto_v38_complete_tests.log
+          retention-days: 90
