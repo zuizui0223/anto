@@ -32,7 +32,8 @@
       "genic_nucleotide_identity_or_transgenic_phenotype_not_tested": true,
       "long_term_allele_fixation_not_observed": true,
       "offspring_genotypes_measured": true,
-      "visit_time_and_pollen_receipt_export_measured": true
+      "visit_time_and_pollen_receipt_export_measured": true,
+      "pollen_measurements_1994_1995_separate_from_offspring_1997": true
     },
     "Phlox_SI_receptor_allele_to_controlled_pollen_to_fruit_original_authors": {
       "DFR_petal_bleaching_is_reporter_not_Fruit_gene": true,
@@ -51,8 +52,10 @@
       "natural_pollinator_visits": true,
       "offspring_allele_genotype_measured": true,
       "original_flower_colour_gene_edited": false,
-      "original_within_array_visits_pollen_offspring_chain": true,
-      "pollen_receipt_and_export": true
+      "original_within_array_visits_pollen_offspring_chain": false,
+      "pollen_receipt_and_export": true,
+      "original_within_1997_arrays_visitation_and_offspring_genotypes": true,
+      "pollen_receipt_export_from_1994_1995_other_arrays": true
     },
     "phlox_2012_reinforcement": {
       "allopatric_reinforcing_selection_detected": false,
@@ -79,5 +82,29 @@
   "source_wahlenbergia_original_response": "SEED_OUTPUT",
   "subprocesses_identified_but_not_one_connected_experiment": true,
   "sympatry_specific_fitness_selection_not_universal_colour_benefit": true,
-  "technical_source_failure_not_biological_zero_effect": true
+  "technical_source_failure_not_biological_zero_effect": true,
+  "Antirrhinum_1997_original_author_array_allele_shifts": {
+    "Barr": {
+      "field_year": 1997,
+      "nectar_supplemented_on_yellow": true,
+      "sulfurea_allele_initial": 0.5,
+      "sulfurea_allele_offspring": 0.52,
+      "sulfurea_delta_offspring_minus_initial": 0.02,
+      "heterozygote_initial": 0.5,
+      "heterozygote_offspring": 0.43,
+      "heterozygote_delta_offspring_minus_initial": -0.07
+    },
+    "Rosy": {
+      "field_year": 1997,
+      "nectar_supplemented_on_yellow": false,
+      "sulfurea_allele_initial": 0.5,
+      "sulfurea_allele_offspring": 0.44,
+      "sulfurea_delta_offspring_minus_initial": -0.06,
+      "heterozygote_initial": 0.5,
+      "heterozygote_offspring": 0.41,
+      "heterozygote_delta_offspring_minus_initial": -0.09
+    }
+  },
+  "Antirrhinum_pollen_arrays_1994_1995_not_same_year_as_1997_offspring": true,
+  "Antirrhinum_1997_neither_colour_only_causal_effect_nor_multigeneration_selection_estimated": true
 }
