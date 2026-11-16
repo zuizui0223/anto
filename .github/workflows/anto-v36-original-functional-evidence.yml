@@ -1,0 +1,65 @@
+name: ANTO v36 original white-flower functional evidence ladder
+on:
+  push:
+    branches: ['analysis/anto-v36-*']
+    paths:
+      - 'scripts/audit_flower_colour_function_v36.py'
+      - 'tests/test_flower_colour_function_v36.py'
+      - 'data/external/anto_v36_independent_original_white_functional_programs_20261116.json'
+      - 'results/anto_v36_white_flower_functional_evidence_20261116.json'
+      - 'docs/ANTO_V36*'
+      - '.github/workflows/anto-v36-original-functional-evidence.yml'
+  pull_request:
+    paths:
+      - 'scripts/audit_flower_colour_function_v36.py'
+      - 'tests/test_flower_colour_function_v36.py'
+      - 'data/external/anto_v36_independent_original_white_functional_programs_20261116.json'
+      - 'results/anto_v36_white_flower_functional_evidence_20261116.json'
+      - 'docs/ANTO_V36*'
+      - '.github/workflows/anto-v36-original-functional-evidence.yml'
+
+permissions:
+  contents: read
+jobs:
+  original-experimental-evidence-firewall:
+    runs-on: ubuntu-latest
+    timeout-minutes: 12
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Explicit three-program experimental evidence and forged-rescue tests
+        run: python -m unittest discover -s tests -p test_flower_colour_function_v36.py -v
+      - name: Install inherited ANTO numerical test libraries
+        run: python -m pip install numpy scipy biopython
+      - name: Entire ANTO offline unittest suite
+        run: |
+          python -m unittest discover -s tests -v > /tmp/anto_v36_full_tests.log 2>&1 || { tail -80 /tmp/anto_v36_full_tests.log; exit 1; }
+          tail -7 /tmp/anto_v36_full_tests.log
+      - name: Rebuild source-bounded original experimental evidence and compare frozen result if committed
+        run: |
+          EXTRA=()
+          if [ -f results/anto_v36_white_flower_functional_evidence_20261116.json ]; then
+            EXTRA=(--expected results/anto_v36_white_flower_functional_evidence_20261116.json)
+          fi
+          python scripts/audit_flower_colour_function_v36.py --output /tmp/anto_v36_original_experimental_evidence.json "${EXTRA[@]}"
+          python - <<'PY'
+          import json
+          d=json.load(open('/tmp/anto_v36_original_experimental_evidence.json'))
+          assert d['original_study_programs']==3
+          assert d['distinct_plant_families']==3
+          assert d['ipomoea_MYB_genotype_phenotype_original_table3']['total_genotyped']==53
+          assert d['ipomoea_MYB_genotype_phenotype_original_table3']['discordant']==0
+          assert not d['direct_native_gene_edit_rescue_confirmed']
+          assert d['cross_tissue_white_flower_stem_anthocyanidin']['white_stem_detected']
+          assert d['functional_interventions']['Iochroma_MYBL1_heterologous_in_Nicotiana']['source_transformed_lines_grown']==20
+          print('ANTO_V36_ORIGINAL_SOURCE_CLAIM_FIREWALL_PASS')
+          PY
+      - uses: actions/upload-artifact@v4
+        with:
+          name: anto-v36-three-original-experimental-programs-aggregate-only
+          path: |
+            /tmp/anto_v36_original_experimental_evidence.json
+            /tmp/anto_v36_full_tests.log
+          retention-days: 90
