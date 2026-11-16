@@ -27,9 +27,33 @@ class StageEvidenceV39(unittest.TestCase):
         self.assertTrue(x["natural_pollinator_visits"])
         self.assertTrue(x["pollen_receipt_and_export"])
         self.assertTrue(x["offspring_allele_genotype_measured"])
-        self.assertTrue(x["original_within_array_visits_pollen_offspring_chain"])
+        self.assertFalse(x["original_within_array_visits_pollen_offspring_chain"])
+        self.assertTrue(x["original_within_1997_arrays_visitation_and_offspring_genotypes"])
+        self.assertTrue(x["pollen_receipt_export_from_1994_1995_other_arrays"])
         self.assertFalse(x["original_flower_colour_gene_edited"])
         self.assertFalse(x["natural_multigeneration_fixation_measured"])
+
+    def test_1997_offspring_allele_and_heterozygote_changes_from_author_arrays(self):
+        a=self.out["Antirrhinum_1997_original_author_array_allele_shifts"]
+        self.assertAlmostEqual(a["Rosy"]["sulfurea_delta_offspring_minus_initial"],-.06)
+        self.assertAlmostEqual(a["Rosy"]["heterozygote_delta_offspring_minus_initial"],-.09)
+        self.assertAlmostEqual(a["Barr"]["sulfurea_delta_offspring_minus_initial"],.02)
+        self.assertAlmostEqual(a["Barr"]["heterozygote_delta_offspring_minus_initial"],-.07)
+        self.assertFalse(a["Rosy"]["nectar_supplemented_on_yellow"])
+        self.assertTrue(a["Barr"]["nectar_supplemented_on_yellow"])
+        self.assertTrue(self.out["Antirrhinum_pollen_arrays_1994_1995_not_same_year_as_1997_offspring"])
+
+    def test_forged_same_cohort_pollen_offspring_and_frequency_fails(self):
+        d=copy.deepcopy(self.registry)
+        d["studies"][0]["original_measurement_cohort_mapping"][
+          "pollen_receipt_export_and_1997_offspring_not_exactly_same_array_and_flower"]=False
+        with self.assertRaisesRegex(ValueError,"ANTIRRHINUM_FIELD_YEAR_COHORT_LINK_DRIFT"):
+            m.review(d,self.access)
+        d=copy.deepcopy(self.registry)
+        d["studies"][0]["original_author_1997_offspring_frequencies"]["Barr"][
+            "offspring_sulfurea_allele_frequency"]=0.72
+        with self.assertRaisesRegex(ValueError,"ANTIRRHINUM_AUTHOR_1997_OFFSPRING_FREQUENCY_DRIFT"):
+            m.review(d,self.access)
 
     def test_phlox_field_context_selection_not_regain(self):
         x=self.out["source_stage_matrix"]["phlox_2012_reinforcement"]
