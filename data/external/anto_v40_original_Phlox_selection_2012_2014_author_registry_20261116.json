@@ -1,0 +1,120 @@
+{
+  "schema": "anto_v40_Phlox_original_reinforcement_assumptions_and_allopatry_source_registry",
+  "registered_date": "2026-11-16",
+  "one_shared_Phlox_drumondii_phylogenetic_radiation": true,
+  "independent_original_publication_count": 2,
+  "source_papers": [
+    {
+      "id": "phlox_2012_sympatric_reinforcement",
+      "doi": "10.1126/science.1215198",
+      "journal": "Science",
+      "year": 2012,
+      "original_author_PDF_url": "https://hopkins-lab.org/wp-content/uploads/2014/12/Hopkins-and-Rausher_2012.pdf",
+      "original_Science_supporting_material": "science.1215198.DC1",
+      "experimental_context": "FOCAL_PATERNITY_BLOCKS_WITH_P_CUSPIDATA_COEXISTENCE",
+      "species": "Phlox drummondii",
+      "congener": "Phlox cuspidata",
+      "original_measurements": {
+        "light_reference_hybrid_paternity_fraction": 0.43,
+        "dark_focal_hybrid_paternity_fraction": 0.21,
+        "reference_hybridization_four_blocks_range": [
+          0.28,
+          0.44
+        ],
+        "hybrid_sterility_assumed_from_earlier_studies": 0.9,
+        "original_selection_coefficient_rounded": 0.32,
+        "paternity_figure_seeds_genotyped": 931,
+        "original_field_paternity_blocks": 4,
+        "separate_pollinator_individuals_observed": 181,
+        "separate_interplant_pollinator_transitions": 2301,
+        "original_author_relative_seed_viability_formula": "W=1-q*h",
+        "original_author_s_definition": "(1-q*h_dark)/(1-q*h_light)-1",
+        "observed_dark_reduces_interspecific_hybridization_more_than_half": true,
+        "hue_red_F3prime5primeH_locus_hybridization_reduction_detected": false,
+        "dark_intensity_locus": "R2R3-MYB_UPREGULATED_INTENSITY",
+        "source_maternal_fitness_in_congener_absent_common_garden_difference_detected": false,
+        "same_observed_visitation_and_paternity_individuals_joined": false,
+        "first_paper_s_is_author_model_estimate_not_observed_allele_frequency_change": true
+      }
+    },
+    {
+      "id": "phlox_2014_allopatric_pollinator_cost",
+      "doi": "10.1086/675495",
+      "journal": "The American Naturalist",
+      "year": 2014,
+      "original_author_PDF_url": "https://hopkins-lab.org/wp-content/uploads/2015/03/HopkinsRausher_2014.pdf",
+      "original_Dryad_DOI": "10.5061/dryad.f710n",
+      "experimental_context": "ALLOPATRIC_NATIVE_P_DRUMMONDII_FLOWER_COLOUR_2010_2011_FIELD_AND_POLLINATORS",
+      "species": "Phlox drummondii",
+      "congener": "Phlox cuspidata",
+      "original_measurements": {
+        "original_field_years": [
+          2010,
+          2011
+        ],
+        "total_observed_pollinators_all_arrays": 278,
+        "total_observed_visits_all_arrays": 1000,
+        "arrays": [
+          {
+            "focal_derived_colour": "light_red",
+            "original_pollinators_in_table4": 84,
+            "share_visits_to_ancestral_light_blue": 0.619,
+            "author_bootstrap_95ci": [
+              0.571,
+              0.666
+            ]
+          },
+          {
+            "focal_derived_colour": "dark_blue",
+            "original_pollinators_in_table4": 118,
+            "share_visits_to_ancestral_light_blue": 0.603,
+            "author_bootstrap_95ci": [
+              0.553,
+              0.653
+            ]
+          },
+          {
+            "focal_derived_colour": "dark_red",
+            "original_pollinators_in_table4": 74,
+            "share_visits_to_ancestral_light_blue": 0.682,
+            "author_bootstrap_95ci": [
+              0.634,
+              0.732
+            ]
+          }
+        ],
+        "array_n_sum_can_differ_from_original_total_278": true,
+        "all_three_pollinator_comparisons_ancestral_light_blue_preferred": true,
+        "year2010_2011_maternal_fitness_point_estimates_and_weather_differ": true,
+        "year2011_derived_allele_net_invasion_depends_on_fecundity_definition_and_male_assumptions": true,
+        "original_field_paternity_sire_genotypes_not_directly_measured": true,
+        "original_author_CI_are_clustered_bootstrap_not_simple_binomial": true,
+        "not_same_2012_selection_model_or_original_2012_field_population": true,
+        "source_underlying_2014_Dryad_rows_reanalyzed_in_v40": false
+      }
+    }
+  ],
+  "fixed_scenario_q_grid": [
+    0,
+    0.25,
+    0.5,
+    0.75,
+    0.9,
+    1
+  ],
+  "fixed_scenario_nonhybrid_dark_cost_grid": [
+    0,
+    0.05,
+    0.1,
+    0.15,
+    0.2,
+    0.25,
+    0.3
+  ],
+  "no_uncertainty_intervals_computed": true,
+  "cost_is_hypothetical_not_measured_dark_allele_penalty": true,
+  "no_independent_RNA_HPLC_or_natural_regain_measured": true,
+  "no_new_2014_original_Dryad_raw_data_acquired": true,
+  "no_numerical_meta_analysis_between_the_two_studies": true,
+  "no_2012_and_2014_independent_radiation_claim": true
+}
