@@ -1,0 +1,111 @@
+{
+  "Iochroma_published_crossing_design": {
+    "all_crossing_offspring": 92,
+    "backcross_blue_parent_offspring": 73,
+    "backcross_white_parent_offspring": 19,
+    "not_independent_mutational_origins": true,
+    "source": "10.1111/nph.14830"
+  },
+  "assays_and_original_published_counts_not_independent_phylogenetic_replications": true,
+  "azalea_original_grain": {
+    "FLS_gene_assayed": false,
+    "HPLC_wild_plus_cultivar": 31,
+    "cultivars_not_independent_species": true,
+    "native_gene_function_verified": false,
+    "qPCR_wild_plus_cultivar": 24,
+    "source": "10.2503/hortj.UTD-142"
+  },
+  "cross_family_pooled_molecular_effect": null,
+  "cross_tissue_white_flower_stem_anthocyanidin": {
+    "native_white_flower_reactivation_not_tested": true,
+    "purple_flower_detected": true,
+    "purple_plants_assayed": 3,
+    "purple_stem_detected": true,
+    "source": "10.1371/journal.pone.0231263",
+    "white_flower_detected": false,
+    "white_plants_assayed": 3,
+    "white_stem_detected": true
+  },
+  "direct_native_gene_edit_rescue_confirmed": false,
+  "distinct_plant_families": 3,
+  "exact_v33_three_gene_FLS_model_replicated": false,
+  "functional_interventions": {
+    "Iochroma_MYBL1_heterologous_in_Nicotiana": {
+      "absorbance_not_HPLC_concentration": true,
+      "author_reported_all_transgenic_lines_white": true,
+      "donor": "Iochroma loxense",
+      "endogenous_Iochroma_anthocyanin_restoration": false,
+      "functionally_active_regulator_not_direct_restoration": true,
+      "line_fold_lower_reported_range": [
+        11,
+        20
+      ],
+      "mean_fold_lower_reported": 14,
+      "source": "10.1111/nph.14830",
+      "source_transformed_lines_grown": 20,
+      "target_process": "PIGMENT_REPRESSION",
+      "transgenic_host": "Nicotiana tabacum"
+    }
+  },
+  "genotyped_offspring_not_independent_reversion_events": true,
+  "heterologous_pigment_repression_not_endogenous_ancestral_regain": true,
+  "ipomoea_MYB_genotype_phenotype_original_table3": {
+    "B2_genotyped": 41,
+    "DFR_marker_did_not_cosegregate": true,
+    "F3_genotyped": 12,
+    "concordant": 53,
+    "discordant": 0,
+    "not_an_editing_experiment": true,
+    "purple_marker_and_flower": 23,
+    "source": "10.1371/journal.pone.0231263",
+    "total_genotyped": 53,
+    "white_marker_and_flower": 30
+  },
+  "native_corolla_reexpression_experiment_count": 0,
+  "no_direct_cross_study_identical_gene_HPLC_prediction": true,
+  "no_source_original_raw_expression_HPLC_refit": true,
+  "original_dois_sorted": [
+    "10.1111/nph.14830",
+    "10.1371/journal.pone.0231263",
+    "10.2503/hortj.UTD-142"
+  ],
+  "original_study_programs": 3,
+  "quantitatively_poolable_study_effects": false,
+  "regain_probability_estimated": false,
+  "schema": "anto_v36_original_study_white_flower_functional_evidence_ladder",
+  "separate_Ipomoea_S2_throat_phenotyping": {
+    "not_genotyped_Table3_53": true,
+    "offspring": 732,
+    "purple": 530,
+    "white": 202
+  },
+  "source_evidence_levels": {
+    "cross_tissue_white_flower_stem_biochemistry": [
+      "ipomoea_2020"
+    ],
+    "heterologous_gene_pigment_suppression": [
+      "iochroma_MYBL1_2018"
+    ],
+    "native_original_floral_colour_segmentation_backcrosses": [
+      "iochroma_MYBL1_2018",
+      "ipomoea_2020"
+    ],
+    "native_white_flower_restoration": [],
+    "natural_ancestral_reacquisition_with_persistence": [],
+    "original_flower_chemical_assay": [
+      "azalea_2020",
+      "iochroma_MYBL1_2018",
+      "ipomoea_2020"
+    ],
+    "original_flower_transcript_assay": [
+      "azalea_2020",
+      "iochroma_MYBL1_2018",
+      "ipomoea_2020"
+    ],
+    "original_genotype_flower_cosegregation": [
+      "ipomoea_2020"
+    ]
+  },
+  "source_registry": "data/external/anto_v36_independent_original_white_functional_programs_20261116.json",
+  "white_phenotype_not_equivalent_to_whole_plant_pathway_loss": true
+}
