@@ -49,6 +49,7 @@ class OriginalDryadSourceTests(unittest.TestCase):
         self.assertTrue(a["vigs_fruitset.csv"]["download_url"].startswith("https://datadryad.org/api/v2/files/"))
     def test_missing_duplicate_or_paginated_files_stop(self):
         x=fake_meta();x["_embedded"]["stash:files"].pop()
+        x["total"]=len(x["_embedded"]["stash:files"])
         with self.assertRaisesRegex(src.SourceGateError,"SOURCE_CSV_SET_INCOMPLETE"):
             src.original_file_inventory(x)
         x=fake_meta();x["_embedded"]["stash:files"].append(copy.deepcopy(x["_embedded"]["stash:files"][0]))
