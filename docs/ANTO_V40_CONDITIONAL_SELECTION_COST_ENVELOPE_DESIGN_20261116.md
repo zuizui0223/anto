@@ -1,0 +1,43 @@
+# ANTO v40 — Condition-gated reinforcing selection and the cost of flower-colour change
+
+**2026-11-16 | Frozen source-first counterfactual sensitivity protocol, BEFORE any v40 repo computation.** This is a retrospective analytical audit of two ORIGINAL Phlox publications within ONE related radiation. It is neither individual-level model refit nor an independent ecological replication of 2012 estimates.
+
+## Scientific questions
+
+When an anthocyanin intensity allele lowers costly interspecific hybridization, how much of its inferred reproductive advantage is conditional on hybrid sterility? How large a hypothetical **countervailing nonhybrid fitness cost** can the allele tolerate? Do original allopatric experiments provide independent directional evidence for opposing flower-colour preference, without proving an identical genotype-specific selection coefficient?
+
+**The model is always named: published 2012 viable-hybrid-offspring approximation + clearly hypothetical sensitivity scenarios.** Neither a dark allele's net cost in allopatry nor the local hybrid-sterility distribution is known from the 2012 published field data.
+
+## Source registration and denominators (fixed before v40 calculation)
+
+1. **Hopkins & Rausher 2012** Science 335:1090–1092, DOI [10.1126/science.1215198](https://doi.org/10.1126/science.1215198), authors' original hosted PDF https://hopkins-lab.org/wp-content/uploads/2014/12/Hopkins-and-Rausher_2012.pdf; supporting original Science supplementary materials (original source Fig1D/Table S5).
+   - Published aggregate reference light-blue **h_L=0.43** (proportion of seeds with *P. cuspidata* paternal genotype) and dark focal **h_D=0.21**; these are original **aggregated paternity proportions**, not original raw per-flower crosses. The original field report used **931 genotyped seed paternities** in Fig1D across four blocks (not 931 independent maternal lineages). Separate pollinator arrays: **181 observed individual pollinators** and **2,301 interplant transitions**, not plant/genotyped-seed joins.
+   - Published assumed hybrid sterility **q=0.90**, based on earlier empirical studies (not newly measured in the paternity field experiment). Authors modeled viable-fitness proxy `W(h)=1−q h` and `s=(1−q*h_D)/(1−q*h_L)−1 ≈0.32`. The intensity locus *R2R3-MYB* allele has the reported >50% hybridization reduction; hue locus *F3′5′H* red allele did **not** exhibit that detectable hybridization effect. The latter is a genuine locus-specific negative that must stay visible.
+   - The common-garden experiment without a competing congener found no statistically detectable phenotype differences in female components, which is **not** proof of zero cost under every environment.
+2. **Hopkins & Rausher 2014** American Naturalist 183:693–710, DOI [10.1086/675495](https://doi.org/10.1086/675495), authors' PDF https://hopkins-lab.org/wp-content/uploads/2015/03/HopkinsRausher_2014.pdf; source original Fig1C and Table4.
+   - **Independent 2014 allopatric study of the SAME Phlox species/radiation**, not 2012 data replay. Original 2010 and 2011 common-garden contrasts are separate years (different climate), and original allopatric pollinator observations had **278 insects and 1,000 total visits**, with **Table4 array units N=84 light-red, N=118 dark-blue, N=74 dark-red** (these array N sum to 276, not necessarily all original 278 total insects).
+   - Original author Table4 light-blue *share of pollinator visitation* versus a focal derived colour: light-red **0.619** (bootstrap 95%CI 0.571–0.666); dark-blue **0.603** (0.553–0.653); dark-red **0.682** (0.634–0.732). Record **authors' actual bootstrap intervals**, not independent binomial CIs (visits clustered within insects/days). Author data show light-blue favored in all three allopatric comparisons; **2014 study did NOT directly measure paternal paternity or dark selection coefficient using identical viable-seed proxy**. Maternal fitness estimates and model conclusions can vary between 2010/2011 and fitness assumptions; do not claim dark always loses in allopatry. Model simulations in original study generally favor ancestral light-blue at rarity for basic assumptions, but some alternative 2011 models permit derived allele invasion.
+   - 2014 Dryad [10.5061/dryad.f710n](https://doi.org/10.5061/dryad.f710n) is a different source from original Phlox 2026 PNAS Dryad; original raw 2014 data are **NOT fetched/reanalyzed in v40**, so no claimed new bootstrap interval, extra source effect size, or genotype frequency recurrence.
+
+## Fixed mathematical analysis
+
+Let `h_L=0.43`, `h_D=0.21` be the published 2012 mating outcomes and `q` the hypothetical fraction of hybrid offspring reproductively inviable. Define `W_L=1−q*h_L`, `W_D=1−q*h_D` and `s_hybrid = W_D/W_L−1`. This equals `q*(h_L−h_D)/(1−q*h_L)` when `W_L>0`.
+
+- **Original 2012 reconstruction:** q=.90, get `W_L=.613`, `W_D=.811`, `s=.32300163`, round to 0.32 as authors did. Explain the **32.3% relative viable reproductive output** interpretation as an assumed viability model, NOT actually measured 32.3% increase in seed number.
+- **Prespecified q scenario grid** `[0,.25,.50,.75,.90,1]`, hold published h's fixed. Include q=0 => **s=0** (no hybrid sterility means no reinforcing advantage in this one-channel model); q=1 maximum.
+- **Prespecified countervailing nonhybrid cost c grid** `[0,.05,.10,.15,.20,.25,.30]`, (W_D^∗=(1-c)(1-qh_D)); `s_net=W_D^*/W_L−1`. Assume cost multiplicative on dark genotype only (an analytical scenario, NOT measured original cost). For each q and c report effect and sign; do not treat the q×c grid as biological replicates or confidence intervals.
+- **Break-even cost** `c_star=1−W_L/W_D=q*(h_L−h_D)/(1−q*h_D)`. At q=.90 this is ~**24.4%**; a hypothetical >~24.4% dark-specific nonhybrid cost cancels its modeled hybrid-avoidance advantage. This is not a historical estimate of pigment production cost or male fitness.
+- **Minimum q required for positive net advantage at a specified c** `q_threshold(c)=c/[h_L−(1−c)*h_D]` (undefined / unreachable if denominator <=0, or >1 for biologically impossible under [0,1]). At c=0, equality at q=0; at c=.10 and .20 report exact minimum q, and whether q=.90 exceeds each threshold. Use no observed q distributions or pseudo-frequentist P values.
+- **Identity negative controls:** `h_D=h_L` => s=0 when c=0; `q=0` => s=0; `c=c_star` => s_net approximately zero. `h_D>h_L` reverses advantage, not a valid dark-hybridization-reduction claim. Any `W_L<=0` makes relative ratio undefined (fail closed, not inf). For 2012 fixed h_L=.43, this cannot occur for q<=1.
+- **Original allopatric preferences** kept separately: register the three author bootstrap share intervals and descriptive percent shares, but **never plug those into q or h_D as if they were hybridization or female fitness**, nor combine their N with 2012 paternity seedlings. Count two original papers but one Phlox radiation.
+- **Status in 2014 alternative assumptions**: context that male preference favors light-blue while net selection depends on year, maternal survival/fecundity, dominance and pollen success. Do not claim universal geographic sign flip of **measured net selection**, only different pollinator preference and hybrid-avoidance selection components.
+
+## Claim ceiling / scientific design
+
+2012 s=0.32 is a **conditional original author model estimate**, not observed natural net allele frequency increase, and 2014 preferential allopatric visitation is an independently measured component, not an identical 2012 selection coefficient. The new 2D q×c envelope/threshold is exact deterministic arithmetic; **no new HPLC, seed genotypes, genotype engineering or natural allele trajectories**. No pooled meta-analytic effect size, bootstrap CI, cross-species independence, or estimated actual c.
+
+The important falsifiable ecological hypothesis: a derived floral intensity allele is favored when **avoided heterospecific mating costs exceed countervailing mating/resource costs**. To establish this naturally, independently estimate q, hybridization rates by allele, male mating success, female seed fitness and migration for the same populations. This source audit cannot supply them.
+
+## Technical
+
+Implement source registry, analytical standard-library module, 15+ adversarial tests, derived-only frozen JSON, CI whole ANTO tests, summary and Draft stacked on v39 PR #49. If source numbers, DOI, fold grain, hue-null or 2014 preference intervals are altered, fail closed before computation. Source PDF not redistributed. Preserve all v26–v39 source/result files and prior claims exactly.

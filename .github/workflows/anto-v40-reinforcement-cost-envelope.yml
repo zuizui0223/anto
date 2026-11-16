@@ -1,0 +1,69 @@
+name: ANTO v40 original Phlox reinforcement and allopatric opposing preference sensitivity
+on:
+  push:
+    branches: ['analysis/anto-v40-*']
+    paths:
+      - 'scripts/analyze_Phlox_reinforcement_selection_v40.py'
+      - 'tests/test_Phlox_reinforcement_selection_v40.py'
+      - 'data/external/anto_v40_original_Phlox_selection_2012_2014_author_registry_20261116.json'
+      - 'results/anto_v40_Phlox_reinforcement_cost_selection_envelope_20261116.json'
+      - 'docs/ANTO_V40*'
+      - '.github/workflows/anto-v40-reinforcement-cost-envelope.yml'
+  pull_request:
+    paths:
+      - 'scripts/analyze_Phlox_reinforcement_selection_v40.py'
+      - 'tests/test_Phlox_reinforcement_selection_v40.py'
+      - 'data/external/anto_v40_original_Phlox_selection_2012_2014_author_registry_20261116.json'
+      - 'results/anto_v40_Phlox_reinforcement_cost_selection_envelope_20261116.json'
+      - 'docs/ANTO_V40*'
+      - '.github/workflows/anto-v40-reinforcement-cost-envelope.yml'
+permissions:
+  contents: read
+jobs:
+  original_Phlox_reinforcement_fitness:
+    runs-on: ubuntu-latest
+    timeout-minutes: 12
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Exact source-paper and counterfactual-selection negative tests
+        run: python -m unittest discover -s tests -p test_Phlox_reinforcement_selection_v40.py -v
+      - name: Install inherited ANTO science test libraries
+        run: python -m pip install numpy scipy biopython
+      - name: Full ANTO original-source and theoretical regression tests
+        run: |
+          python -m unittest discover -s tests -v > /tmp/anto_v40_full_tests.log 2>&1 || {
+            tail -75 /tmp/anto_v40_full_tests.log
+            exit 1
+          }
+          tail -10 /tmp/anto_v40_full_tests.log
+      - name: Rebuild exact 2012 selection plus 2014 author preference and deterministic q-cost scenarios
+        run: |
+          EXTRA=()
+          if [ -f results/anto_v40_Phlox_reinforcement_cost_selection_envelope_20261116.json ]; then
+            EXTRA=(--expected results/anto_v40_Phlox_reinforcement_cost_selection_envelope_20261116.json)
+          fi
+          python scripts/analyze_Phlox_reinforcement_selection_v40.py \
+            --output /tmp/anto_v40_original_Phlox_selection_envelope.json "${EXTRA[@]}"
+          python - <<'PY'
+          import json,math
+          d=json.load(open('/tmp/anto_v40_original_Phlox_selection_envelope.json'))
+          assert d['n_original_published_papers']==2
+          assert d['n_independent_phylogenetic_radiations']==1
+          assert math.isclose(d['reproduced_original_2012_author_selection']['source_relative_selection_coefficient'],.32300163132137016)
+          assert .24<d['hypothetical_break_even_dark_nonhybrid_cost_for_q_0_90']['cost_fraction']<.25
+          assert d['original_2012_hue_red_locus_no_detected_hybridization_reduction']
+          assert not d['2014_allopatry_direct_dark_paternal_siring_success_measured']
+          assert d['original_2014_allopatric_dark_allele_cost_empirically_measured'] is None
+          assert len(d['q_by_hypothetical_dark_nonhybrid_cost_grid'])==42
+          print('ANTO_V40_ORIGINAL_2012_FORMULA_2014_SOURCE_FITNESS_FIREWALL_PASS')
+          PY
+      - uses: actions/upload-artifact@v4
+        with:
+          name: anto-v40-original-Phlox-reinforcement-cost-source-envelope
+          path: |
+            /tmp/anto_v40_original_Phlox_selection_envelope.json
+            /tmp/anto_v40_full_tests.log
+          retention-days: 90
