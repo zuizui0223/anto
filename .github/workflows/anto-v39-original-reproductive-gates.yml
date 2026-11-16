@@ -1,0 +1,66 @@
+name: ANTO v39 original colour, pollen, offspring and reproductive-gate evidence
+on:
+  push:
+    branches: ['analysis/anto-v39-*']
+    paths:
+      - 'scripts/audit_genotype_pollen_fitness_evidence_v39.py'
+      - 'tests/test_genotype_pollen_fitness_study_v39.py'
+      - 'data/external/anto_v39_original_genotype_pollen_fruit_studies_20261116.json'
+      - 'results/anto_v39*'
+      - 'docs/ANTO_V39*'
+      - '.github/workflows/anto-v39-original-reproductive-gates.yml'
+  pull_request:
+    paths:
+      - 'scripts/audit_genotype_pollen_fitness_evidence_v39.py'
+      - 'tests/test_genotype_pollen_fitness_study_v39.py'
+      - 'data/external/anto_v39_original_genotype_pollen_fruit_studies_20261116.json'
+      - 'results/anto_v39*'
+      - 'docs/ANTO_V39*'
+      - '.github/workflows/anto-v39-original-reproductive-gates.yml'
+permissions:
+  contents: read
+jobs:
+  author_published_reproductive_stage_audit:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Original field and genetic stage evidence negative controls
+        run: python -m unittest discover -s tests -p test_genotype_pollen_fitness_study_v39.py -v
+      - name: Install inherited scientific test dependencies
+        run: python -m pip install numpy scipy biopython
+      - name: Entire ANTO source-grain and numerical regression suite
+        run: |
+          python -m unittest discover -s tests -v > /tmp/anto_v39_full_tests.log 2>&1 || { tail -70 /tmp/anto_v39_full_tests.log; exit 1; }
+          tail -10 /tmp/anto_v39_full_tests.log
+      - name: Recalculate original-author evidence, preserve Dryad restricted-source abstention
+        run: |
+          EXTRA=()
+          if [ -f results/anto_v39_genotype_pollen_fitness_source_evidence_20261116.json ]; then
+            EXTRA=(--expected results/anto_v39_genotype_pollen_fitness_source_evidence_20261116.json)
+          fi
+          python scripts/audit_genotype_pollen_fitness_evidence_v39.py \
+            --output /tmp/anto_v39_original_studies_qualitative_evidence.json "${EXTRA[@]}"
+          python - <<'PY'
+          import json
+          p=json.load(open('/tmp/anto_v39_original_studies_qualitative_evidence.json'))
+          assert p['n_original_published_study_programs']==4
+          assert p['n_distinct_current_plant_families']==3
+          assert p['author_published_43_percent']==43
+          assert p['raw_Phlox2026_fruit_pollen_tube_rows_reanalyzed']==0
+          assert p['original_Phlox2026_Dryad_source_status']=='SOURCE_ACCESS_RESTRICTED_HTTP_401'
+          assert not p['all_five_stages_same_gene_plant_cohort_demonstrated']
+          assert p['subprocesses_identified_but_not_one_connected_experiment']
+          print('ANTO_V39_ORIGINAL_MEASUREMENT_CHAIN_FIREWALL_PASS')
+          PY
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: anto-v39-original-source-program-reproductive-gates
+          path: |
+            /tmp/anto_v39_original_studies_qualitative_evidence.json
+            /tmp/anto_v39_full_tests.log
+          retention-days: 90
