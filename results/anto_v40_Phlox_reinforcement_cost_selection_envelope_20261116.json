@@ -1,0 +1,622 @@
+{
+  "2012_paternity_931_seed_rows_reanalyzed": false,
+  "2014_2010_2011_net_predictions_depend_on_fecundity_model": true,
+  "2014_Dryad_original_individual_rows_reanalyzed": false,
+  "2014_allopatry_direct_dark_paternal_siring_success_measured": false,
+  "2014_allopatry_net_colour_selection_same_as_2012_s": false,
+  "allopatry_pollinator_visit_share_is_hybridization_rate": false,
+  "hypothetical_break_even_dark_nonhybrid_cost_for_q_0_90": {
+    "cost_fraction": 0.24414303329223175,
+    "net_dark_fitness_advantage_at_cost": 0,
+    "not_a_measured_actual_metabolic_or_mating_cost": true,
+    "relative_cost_percent": 24.414303329223173
+  },
+  "independent_2014_author_allopatry_pollinator_preferences": {
+    "2010_and_2011_maternal_component_estimates_and_fecundity_model_matter": true,
+    "all_three_original_table4_light_blue_bootstrap_intervals_above_0_5": true,
+    "arrays": [
+      {
+        "NOT_same_as_paternal_fitness_or_paternity_hybridization_rate": true,
+        "author_bootstrap_95CI": [
+          0.571,
+          0.666
+        ],
+        "author_original_array_N": 84,
+        "author_reported_bootstrap_CI_excludes_50pct": true,
+        "derived_flower_colour": "light_red",
+        "light_blue_visit_share": 0.619,
+        "light_blue_vs_focal_visit_share_ratio": 1.6246719160104985,
+        "other_derived_colour_visit_share_complement": 0.381,
+        "source_individual_visits_not_all_independent": true
+      },
+      {
+        "NOT_same_as_paternal_fitness_or_paternity_hybridization_rate": true,
+        "author_bootstrap_95CI": [
+          0.553,
+          0.653
+        ],
+        "author_original_array_N": 118,
+        "author_reported_bootstrap_CI_excludes_50pct": true,
+        "derived_flower_colour": "dark_blue",
+        "light_blue_visit_share": 0.603,
+        "light_blue_vs_focal_visit_share_ratio": 1.5188916876574305,
+        "other_derived_colour_visit_share_complement": 0.397,
+        "source_individual_visits_not_all_independent": true
+      },
+      {
+        "NOT_same_as_paternal_fitness_or_paternity_hybridization_rate": true,
+        "author_bootstrap_95CI": [
+          0.634,
+          0.732
+        ],
+        "author_original_array_N": 74,
+        "author_reported_bootstrap_CI_excludes_50pct": true,
+        "derived_flower_colour": "dark_red",
+        "light_blue_visit_share": 0.682,
+        "light_blue_vs_focal_visit_share_ratio": 2.144654088050315,
+        "other_derived_colour_visit_share_complement": 0.31799999999999995,
+        "source_individual_visits_not_all_independent": true
+      }
+    ],
+    "author_CIs_not_recalculated_from_independent_binomial_visits": true,
+    "original_DOI": "10.1086/675495",
+    "same_2012_paternity_blocks_not_used": true,
+    "sum_of_three_table4_array_N": 276,
+    "total_original_pollinators_reported": 278,
+    "total_original_visits_reported": 1000
+  },
+  "n_independent_phylogenetic_radiations": 1,
+  "n_original_published_papers": 2,
+  "no_new_species_phylogenetic_replication_or_direct_colour_regain": true,
+  "numerical_sensitivity_scenarios_not_independent_observed_genotypes": true,
+  "observed_allele_fixation_rate": null,
+  "original_2012_derived_s_transferred_to_red_hue_allele": false,
+  "original_2012_hue_red_locus_no_detected_hybridization_reduction": true,
+  "original_2012_interplant_transitions_separate_from_paternity": 2301,
+  "original_2012_pollinator_individuals_separate_from_paternity": 181,
+  "original_2014_allopatric_dark_allele_cost_empirically_measured": null,
+  "original_cross_paper_quantitative_meta_selection_effect": null,
+  "original_paternity_figure_seeds_genotyped": 931,
+  "original_source_registry": "data/external/anto_v40_original_Phlox_selection_2012_2014_author_registry_20261116.json",
+  "q_by_hypothetical_dark_nonhybrid_cost_grid": [
+    {
+      "dark_intensity_allele_modelled_advantage_sign": "ZERO",
+      "hybrid_sterility_fraction": 0,
+      "hypothetical_dark_nonhybrid_cost_fraction": 0,
+      "modelled_dark_viability_after_hypothetical_cost": 1,
+      "modelled_light_viability_proxy": 1,
+      "not_an_independent_genotype_experiment": true,
+      "not_empirical_confidence_interval": true,
+      "relative_net_selection": 0
+    },
+    {
+      "dark_intensity_allele_modelled_advantage_sign": "NEGATIVE",
+      "hybrid_sterility_fraction": 0,
+      "hypothetical_dark_nonhybrid_cost_fraction": 0.05,
+      "modelled_dark_viability_after_hypothetical_cost": 0.95,
+      "modelled_light_viability_proxy": 1,
+      "not_an_independent_genotype_experiment": true,
+      "not_empirical_confidence_interval": true,
+      "relative_net_selection": -0.050000000000000044
+    },
+    {
+      "dark_intensity_allele_modelled_advantage_sign": "NEGATIVE",
+      "hybrid_sterility_fraction": 0,
+      "hypothetical_dark_nonhybrid_cost_fraction": 0.1,
+      "modelled_dark_viability_after_hypothetical_cost": 0.9,
+      "modelled_light_viability_proxy": 1,
+      "not_an_independent_genotype_experiment": true,
+      "not_empirical_confidence_interval": true,
+      "relative_net_selection": -0.09999999999999998
+    },
+    {
+      "dark_intensity_allele_modelled_advantage_sign": "NEGATIVE",
+      "hybrid_sterility_fraction": 0,
+      "hypothetical_dark_nonhybrid_cost_fraction": 0.15,
+      "modelled_dark_viability_after_hypothetical_cost": 0.85,
+      "modelled_light_viability_proxy": 1,
+      "not_an_independent_genotype_experiment": true,
+      "not_empirical_confidence_interval": true,
+      "relative_net_selection": -0.15000000000000002
+    },
+    {
+      "dark_intensity_allele_modelled_advantage_sign": "NEGATIVE",
+      "hybrid_sterility_fraction": 0,
+      "hypothetical_dark_nonhybrid_cost_fraction": 0.2,
+      "modelled_dark_viability_after_hypothetical_cost": 0.8,
+      "modelled_light_viability_proxy": 1,
+      "not_an_independent_genotype_experiment": true,
+      "not_empirical_confidence_interval": true,
+      "relative_net_selection": -0.19999999999999996
+    },
+    {
+      "dark_intensity_allele_modelled_advantage_sign": "NEGATIVE",
+      "hybrid_sterility_fraction": 0,
+      "hypothetical_dark_nonhybrid_cost_fraction": 0.25,
+      "modelled_dark_viability_after_hypothetical_cost": 0.75,
+      "modelled_light_viability_proxy": 1,
+      "not_an_independent_genotype_experiment": true,
+      "not_empirical_confidence_interval": true,
+      "relative_net_selection": -0.25
+    },
+    {
+      "dark_intensity_allele_modelled_advantage_sign": "NEGATIVE",
+      "hybrid_sterility_fraction": 0,
+      "hypothetical_dark_nonhybrid_cost_fraction": 0.3,
+      "modelled_dark_viability_after_hypothetical_cost": 0.7,
+      "modelled_light_viability_proxy": 1,
+      "not_an_independent_genotype_experiment": true,
+      "not_empirical_confidence_interval": true,
+      "relative_net_selection": -0.30000000000000004
+    },
+    {
+      "dark_intensity_allele_modelled_advantage_sign": "POSITIVE",
+      "hybrid_sterility_fraction": 0.25,
+      "hypothetical_dark_nonhybrid_cost_fraction": 0,
+      "modelled_dark_viability_after_hypothetical_cost": 0.9475,
+      "modelled_light_viability_proxy": 0.8925,
+      "not_an_independent_genotype_experiment": true,
+      "not_empirical_confidence_interval": true,
+      "relative_net_selection": 0.06162464985994398
+    },
+    {
+      "dark_intensity_allele_modelled_advantage_sign": "POSITIVE",
+      "hybrid_sterility_fraction": 0.25,
+      "hypothetical_dark_nonhybrid_cost_fraction": 0.05,
+      "modelled_dark_viability_after_hypothetical_cost": 0.900125,
+      "modelled_light_viability_proxy": 0.8925,
+      "not_an_independent_genotype_experiment": true,
+      "not_empirical_confidence_interval": true,
+      "relative_net_selection": 0.008543417366946748
+    },
+    {
+      "dark_intensity_allele_modelled_advantage_sign": "NEGATIVE",
+      "hybrid_sterility_fraction": 0.25,
+      "hypothetical_dark_nonhybrid_cost_fraction": 0.1,
+      "modelled_dark_viability_after_hypothetical_cost": 0.85275,
+      "modelled_light_viability_proxy": 0.8925,
+      "not_an_independent_genotype_experiment": true,
+      "not_empirical_confidence_interval": true,
+      "relative_net_selection": -0.04453781512605037
+    },
+    {
+      "dark_intensity_allele_modelled_advantage_sign": "NEGATIVE",
+      "hybrid_sterility_fraction": 0.25,
+      "hypothetical_dark_nonhybrid_cost_fraction": 0.15,
+      "modelled_dark_viability_after_hypothetical_cost": 0.805375,
+      "modelled_light_viability_proxy": 0.8925,
+      "not_an_independent_genotype_experiment": true,
+      "not_empirical_confidence_interval": true,
+      "relative_net_selection": -0.0976190476190476
+    },
+    {
+      "dark_intensity_allele_modelled_advantage_sign": "NEGATIVE",
+      "hybrid_sterility_fraction": 0.25,
+      "hypothetical_dark_nonhybrid_cost_fraction": 0.2,
+      "modelled_dark_viability_after_hypothetical_cost": 0.758,
+      "modelled_light_viability_proxy": 0.8925,
+      "not_an_independent_genotype_experiment": true,
+      "not_empirical_confidence_interval": true,
+      "relative_net_selection": -0.15070028011204473
+    },
+    {
+      "dark_intensity_allele_modelled_advantage_sign": "NEGATIVE",
+      "hybrid_sterility_fraction": 0.25,
+      "hypothetical_dark_nonhybrid_cost_fraction": 0.25,
+      "modelled_dark_viability_after_hypothetical_cost": 0.7106250000000001,
+      "modelled_light_viability_proxy": 0.8925,
+      "not_an_independent_genotype_experiment": true,
+      "not_empirical_confidence_interval": true,
+      "relative_net_selection": -0.20378151260504196
+    },
+    {
+      "dark_intensity_allele_modelled_advantage_sign": "NEGATIVE",
+      "hybrid_sterility_fraction": 0.25,
+      "hypothetical_dark_nonhybrid_cost_fraction": 0.3,
+      "modelled_dark_viability_after_hypothetical_cost": 0.66325,
+      "modelled_light_viability_proxy": 0.8925,
+      "not_an_independent_genotype_experiment": true,
+      "not_empirical_confidence_interval": true,
+      "relative_net_selection": -0.2568627450980392
+    },
+    {
+      "dark_intensity_allele_modelled_advantage_sign": "POSITIVE",
+      "hybrid_sterility_fraction": 0.5,
+      "hypothetical_dark_nonhybrid_cost_fraction": 0,
+      "modelled_dark_viability_after_hypothetical_cost": 0.895,
+      "modelled_light_viability_proxy": 0.785,
+      "not_an_independent_genotype_experiment": true,
+      "not_empirical_confidence_interval": true,
+      "relative_net_selection": 0.14012738853503182
+    },
+    {
+      "dark_intensity_allele_modelled_advantage_sign": "POSITIVE",
+      "hybrid_sterility_fraction": 0.5,
+      "hypothetical_dark_nonhybrid_cost_fraction": 0.05,
+      "modelled_dark_viability_after_hypothetical_cost": 0.85025,
+      "modelled_light_viability_proxy": 0.785,
+      "not_an_independent_genotype_experiment": true,
+      "not_empirical_confidence_interval": true,
+      "relative_net_selection": 0.08312101910828007
+    },
+    {
+      "dark_intensity_allele_modelled_advantage_sign": "POSITIVE",
+      "hybrid_sterility_fraction": 0.5,
+      "hypothetical_dark_nonhybrid_cost_fraction": 0.1,
+      "modelled_dark_viability_after_hypothetical_cost": 0.8055,
+      "modelled_light_viability_proxy": 0.785,
+      "not_an_independent_genotype_experiment": true,
+      "not_empirical_confidence_interval": true,
+      "relative_net_selection": 0.026114649681528546
+    },
+    {
+      "dark_intensity_allele_modelled_advantage_sign": "NEGATIVE",
+      "hybrid_sterility_fraction": 0.5,
+      "hypothetical_dark_nonhybrid_cost_fraction": 0.15,
+      "modelled_dark_viability_after_hypothetical_cost": 0.76075,
+      "modelled_light_viability_proxy": 0.785,
+      "not_an_independent_genotype_experiment": true,
+      "not_empirical_confidence_interval": true,
+      "relative_net_selection": -0.030891719745222868
+    },
+    {
+      "dark_intensity_allele_modelled_advantage_sign": "NEGATIVE",
+      "hybrid_sterility_fraction": 0.5,
+      "hypothetical_dark_nonhybrid_cost_fraction": 0.2,
+      "modelled_dark_viability_after_hypothetical_cost": 0.7160000000000001,
+      "modelled_light_viability_proxy": 0.785,
+      "not_an_independent_genotype_experiment": true,
+      "not_empirical_confidence_interval": true,
+      "relative_net_selection": -0.0878980891719745
+    },
+    {
+      "dark_intensity_allele_modelled_advantage_sign": "NEGATIVE",
+      "hybrid_sterility_fraction": 0.5,
+      "hypothetical_dark_nonhybrid_cost_fraction": 0.25,
+      "modelled_dark_viability_after_hypothetical_cost": 0.67125,
+      "modelled_light_viability_proxy": 0.785,
+      "not_an_independent_genotype_experiment": true,
+      "not_empirical_confidence_interval": true,
+      "relative_net_selection": -0.14490445859872614
+    },
+    {
+      "dark_intensity_allele_modelled_advantage_sign": "NEGATIVE",
+      "hybrid_sterility_fraction": 0.5,
+      "hypothetical_dark_nonhybrid_cost_fraction": 0.3,
+      "modelled_dark_viability_after_hypothetical_cost": 0.6265,
+      "modelled_light_viability_proxy": 0.785,
+      "not_an_independent_genotype_experiment": true,
+      "not_empirical_confidence_interval": true,
+      "relative_net_selection": -0.20191082802547777
+    },
+    {
+      "dark_intensity_allele_modelled_advantage_sign": "POSITIVE",
+      "hybrid_sterility_fraction": 0.75,
+      "hypothetical_dark_nonhybrid_cost_fraction": 0,
+      "modelled_dark_viability_after_hypothetical_cost": 0.8425,
+      "modelled_light_viability_proxy": 0.6775,
+      "not_an_independent_genotype_experiment": true,
+      "not_empirical_confidence_interval": true,
+      "relative_net_selection": 0.24354243542435428
+    },
+    {
+      "dark_intensity_allele_modelled_advantage_sign": "POSITIVE",
+      "hybrid_sterility_fraction": 0.75,
+      "hypothetical_dark_nonhybrid_cost_fraction": 0.05,
+      "modelled_dark_viability_after_hypothetical_cost": 0.800375,
+      "modelled_light_viability_proxy": 0.6775,
+      "not_an_independent_genotype_experiment": true,
+      "not_empirical_confidence_interval": true,
+      "relative_net_selection": 0.18136531365313657
+    },
+    {
+      "dark_intensity_allele_modelled_advantage_sign": "POSITIVE",
+      "hybrid_sterility_fraction": 0.75,
+      "hypothetical_dark_nonhybrid_cost_fraction": 0.1,
+      "modelled_dark_viability_after_hypothetical_cost": 0.7582500000000001,
+      "modelled_light_viability_proxy": 0.6775,
+      "not_an_independent_genotype_experiment": true,
+      "not_empirical_confidence_interval": true,
+      "relative_net_selection": 0.11918819188191887
+    },
+    {
+      "dark_intensity_allele_modelled_advantage_sign": "POSITIVE",
+      "hybrid_sterility_fraction": 0.75,
+      "hypothetical_dark_nonhybrid_cost_fraction": 0.15,
+      "modelled_dark_viability_after_hypothetical_cost": 0.716125,
+      "modelled_light_viability_proxy": 0.6775,
+      "not_an_independent_genotype_experiment": true,
+      "not_empirical_confidence_interval": true,
+      "relative_net_selection": 0.05701107011070117
+    },
+    {
+      "dark_intensity_allele_modelled_advantage_sign": "NEGATIVE",
+      "hybrid_sterility_fraction": 0.75,
+      "hypothetical_dark_nonhybrid_cost_fraction": 0.2,
+      "modelled_dark_viability_after_hypothetical_cost": 0.674,
+      "modelled_light_viability_proxy": 0.6775,
+      "not_an_independent_genotype_experiment": true,
+      "not_empirical_confidence_interval": true,
+      "relative_net_selection": -0.005166051660516535
+    },
+    {
+      "dark_intensity_allele_modelled_advantage_sign": "NEGATIVE",
+      "hybrid_sterility_fraction": 0.75,
+      "hypothetical_dark_nonhybrid_cost_fraction": 0.25,
+      "modelled_dark_viability_after_hypothetical_cost": 0.631875,
+      "modelled_light_viability_proxy": 0.6775,
+      "not_an_independent_genotype_experiment": true,
+      "not_empirical_confidence_interval": true,
+      "relative_net_selection": -0.06734317343173435
+    },
+    {
+      "dark_intensity_allele_modelled_advantage_sign": "NEGATIVE",
+      "hybrid_sterility_fraction": 0.75,
+      "hypothetical_dark_nonhybrid_cost_fraction": 0.3,
+      "modelled_dark_viability_after_hypothetical_cost": 0.58975,
+      "modelled_light_viability_proxy": 0.6775,
+      "not_an_independent_genotype_experiment": true,
+      "not_empirical_confidence_interval": true,
+      "relative_net_selection": -0.12952029520295205
+    },
+    {
+      "dark_intensity_allele_modelled_advantage_sign": "POSITIVE",
+      "hybrid_sterility_fraction": 0.9,
+      "hypothetical_dark_nonhybrid_cost_fraction": 0,
+      "modelled_dark_viability_after_hypothetical_cost": 0.8109999999999999,
+      "modelled_light_viability_proxy": 0.613,
+      "not_an_independent_genotype_experiment": true,
+      "not_empirical_confidence_interval": true,
+      "relative_net_selection": 0.32300163132137016
+    },
+    {
+      "dark_intensity_allele_modelled_advantage_sign": "POSITIVE",
+      "hybrid_sterility_fraction": 0.9,
+      "hypothetical_dark_nonhybrid_cost_fraction": 0.05,
+      "modelled_dark_viability_after_hypothetical_cost": 0.7704499999999999,
+      "modelled_light_viability_proxy": 0.613,
+      "not_an_independent_genotype_experiment": true,
+      "not_empirical_confidence_interval": true,
+      "relative_net_selection": 0.25685154975530167
+    },
+    {
+      "dark_intensity_allele_modelled_advantage_sign": "POSITIVE",
+      "hybrid_sterility_fraction": 0.9,
+      "hypothetical_dark_nonhybrid_cost_fraction": 0.1,
+      "modelled_dark_viability_after_hypothetical_cost": 0.7299,
+      "modelled_light_viability_proxy": 0.613,
+      "not_an_independent_genotype_experiment": true,
+      "not_empirical_confidence_interval": true,
+      "relative_net_selection": 0.1907014681892334
+    },
+    {
+      "dark_intensity_allele_modelled_advantage_sign": "POSITIVE",
+      "hybrid_sterility_fraction": 0.9,
+      "hypothetical_dark_nonhybrid_cost_fraction": 0.15,
+      "modelled_dark_viability_after_hypothetical_cost": 0.6893499999999999,
+      "modelled_light_viability_proxy": 0.613,
+      "not_an_independent_genotype_experiment": true,
+      "not_empirical_confidence_interval": true,
+      "relative_net_selection": 0.12455138662316467
+    },
+    {
+      "dark_intensity_allele_modelled_advantage_sign": "POSITIVE",
+      "hybrid_sterility_fraction": 0.9,
+      "hypothetical_dark_nonhybrid_cost_fraction": 0.2,
+      "modelled_dark_viability_after_hypothetical_cost": 0.6488,
+      "modelled_light_viability_proxy": 0.613,
+      "not_an_independent_genotype_experiment": true,
+      "not_empirical_confidence_interval": true,
+      "relative_net_selection": 0.0584013050570964
+    },
+    {
+      "dark_intensity_allele_modelled_advantage_sign": "NEGATIVE",
+      "hybrid_sterility_fraction": 0.9,
+      "hypothetical_dark_nonhybrid_cost_fraction": 0.25,
+      "modelled_dark_viability_after_hypothetical_cost": 0.60825,
+      "modelled_light_viability_proxy": 0.613,
+      "not_an_independent_genotype_experiment": true,
+      "not_empirical_confidence_interval": true,
+      "relative_net_selection": -0.0077487765089723215
+    },
+    {
+      "dark_intensity_allele_modelled_advantage_sign": "NEGATIVE",
+      "hybrid_sterility_fraction": 0.9,
+      "hypothetical_dark_nonhybrid_cost_fraction": 0.3,
+      "modelled_dark_viability_after_hypothetical_cost": 0.5676999999999999,
+      "modelled_light_viability_proxy": 0.613,
+      "not_an_independent_genotype_experiment": true,
+      "not_empirical_confidence_interval": true,
+      "relative_net_selection": -0.07389885807504093
+    },
+    {
+      "dark_intensity_allele_modelled_advantage_sign": "POSITIVE",
+      "hybrid_sterility_fraction": 1,
+      "hypothetical_dark_nonhybrid_cost_fraction": 0,
+      "modelled_dark_viability_after_hypothetical_cost": 0.79,
+      "modelled_light_viability_proxy": 0.5700000000000001,
+      "not_an_independent_genotype_experiment": true,
+      "not_empirical_confidence_interval": true,
+      "relative_net_selection": 0.3859649122807016
+    },
+    {
+      "dark_intensity_allele_modelled_advantage_sign": "POSITIVE",
+      "hybrid_sterility_fraction": 1,
+      "hypothetical_dark_nonhybrid_cost_fraction": 0.05,
+      "modelled_dark_viability_after_hypothetical_cost": 0.7505,
+      "modelled_light_viability_proxy": 0.5700000000000001,
+      "not_an_independent_genotype_experiment": true,
+      "not_empirical_confidence_interval": true,
+      "relative_net_selection": 0.31666666666666643
+    },
+    {
+      "dark_intensity_allele_modelled_advantage_sign": "POSITIVE",
+      "hybrid_sterility_fraction": 1,
+      "hypothetical_dark_nonhybrid_cost_fraction": 0.1,
+      "modelled_dark_viability_after_hypothetical_cost": 0.7110000000000001,
+      "modelled_light_viability_proxy": 0.5700000000000001,
+      "not_an_independent_genotype_experiment": true,
+      "not_empirical_confidence_interval": true,
+      "relative_net_selection": 0.24736842105263168
+    },
+    {
+      "dark_intensity_allele_modelled_advantage_sign": "POSITIVE",
+      "hybrid_sterility_fraction": 1,
+      "hypothetical_dark_nonhybrid_cost_fraction": 0.15,
+      "modelled_dark_viability_after_hypothetical_cost": 0.6715,
+      "modelled_light_viability_proxy": 0.5700000000000001,
+      "not_an_independent_genotype_experiment": true,
+      "not_empirical_confidence_interval": true,
+      "relative_net_selection": 0.17807017543859627
+    },
+    {
+      "dark_intensity_allele_modelled_advantage_sign": "POSITIVE",
+      "hybrid_sterility_fraction": 1,
+      "hypothetical_dark_nonhybrid_cost_fraction": 0.2,
+      "modelled_dark_viability_after_hypothetical_cost": 0.6320000000000001,
+      "modelled_light_viability_proxy": 0.5700000000000001,
+      "not_an_independent_genotype_experiment": true,
+      "not_empirical_confidence_interval": true,
+      "relative_net_selection": 0.10877192982456152
+    },
+    {
+      "dark_intensity_allele_modelled_advantage_sign": "POSITIVE",
+      "hybrid_sterility_fraction": 1,
+      "hypothetical_dark_nonhybrid_cost_fraction": 0.25,
+      "modelled_dark_viability_after_hypothetical_cost": 0.5925,
+      "modelled_light_viability_proxy": 0.5700000000000001,
+      "not_an_independent_genotype_experiment": true,
+      "not_empirical_confidence_interval": true,
+      "relative_net_selection": 0.03947368421052633
+    },
+    {
+      "dark_intensity_allele_modelled_advantage_sign": "NEGATIVE",
+      "hybrid_sterility_fraction": 1,
+      "hypothetical_dark_nonhybrid_cost_fraction": 0.3,
+      "modelled_dark_viability_after_hypothetical_cost": 0.5529999999999999,
+      "modelled_light_viability_proxy": 0.5700000000000001,
+      "not_an_independent_genotype_experiment": true,
+      "not_empirical_confidence_interval": true,
+      "relative_net_selection": -0.029824561403508976
+    }
+  ],
+  "q_required_by_cost_scenarios": [
+    {
+      "fixed_original_q_0_90_net_dark_allele_favored": true,
+      "hypothetical_dark_nonhybrid_cost_fraction": 0,
+      "not_a_measured_cost_or_empirical_site_sterility": true,
+      "required_q_for_positive_dark_net_selection": 0,
+      "threshold_admissible_q_LE_1": true
+    },
+    {
+      "fixed_original_q_0_90_net_dark_allele_favored": true,
+      "hypothetical_dark_nonhybrid_cost_fraction": 0.05,
+      "not_a_measured_cost_or_empirical_site_sterility": true,
+      "required_q_for_positive_dark_net_selection": 0.21691973969631237,
+      "threshold_admissible_q_LE_1": true
+    },
+    {
+      "fixed_original_q_0_90_net_dark_allele_favored": true,
+      "hypothetical_dark_nonhybrid_cost_fraction": 0.1,
+      "not_a_measured_cost_or_empirical_site_sterility": true,
+      "required_q_for_positive_dark_net_selection": 0.4149377593360996,
+      "threshold_admissible_q_LE_1": true
+    },
+    {
+      "fixed_original_q_0_90_net_dark_allele_favored": true,
+      "hypothetical_dark_nonhybrid_cost_fraction": 0.15,
+      "not_a_measured_cost_or_empirical_site_sterility": true,
+      "required_q_for_positive_dark_net_selection": 0.5964214711729622,
+      "threshold_admissible_q_LE_1": true
+    },
+    {
+      "fixed_original_q_0_90_net_dark_allele_favored": true,
+      "hypothetical_dark_nonhybrid_cost_fraction": 0.2,
+      "not_a_measured_cost_or_empirical_site_sterility": true,
+      "required_q_for_positive_dark_net_selection": 0.7633587786259542,
+      "threshold_admissible_q_LE_1": true
+    },
+    {
+      "fixed_original_q_0_90_net_dark_allele_favored": false,
+      "hypothetical_dark_nonhybrid_cost_fraction": 0.25,
+      "not_a_measured_cost_or_empirical_site_sterility": true,
+      "required_q_for_positive_dark_net_selection": 0.9174311926605506,
+      "threshold_admissible_q_LE_1": true
+    },
+    {
+      "fixed_original_q_0_90_net_dark_allele_favored": false,
+      "hypothetical_dark_nonhybrid_cost_fraction": 0.3,
+      "not_a_measured_cost_or_empirical_site_sterility": true,
+      "required_q_for_positive_dark_net_selection": 1.0600706713780916,
+      "threshold_admissible_q_LE_1": false
+    }
+  ],
+  "reproduced_original_2012_author_selection": {
+    "actual_net_population_allele_frequency_increase_measured": false,
+    "dark_hybrid_paternity_fraction": 0.21,
+    "dark_viable_fitness_proxy": 0.8109999999999999,
+    "hybrid_sterility_fraction_original_assumption": 0.9,
+    "hybridization_reduction_fraction": 0.5116279069767442,
+    "light_viable_fitness_proxy": 0.613,
+    "model_not_directly_observed_32pct_seed_number_gain": true,
+    "reference_light_hybrid_paternity_fraction": 0.43,
+    "source_relative_selection_coefficient": 0.32300163132137016,
+    "source_selection_rounded_by_original_authors": 0.32
+  },
+  "schema": "anto_v40_original_Phlox_conditional_reinforcement_and_nonhybrid_cost_envelope",
+  "source_DOIs": [
+    "10.1126/science.1215198",
+    "10.1086/675495"
+  ],
+  "source_parameter_q_sensitivity": [
+    {
+      "hybrid_sterility_fraction": 0,
+      "modelled_dark_viability_proxy": 1,
+      "modelled_light_viability_proxy": 1,
+      "modelled_selection": 0,
+      "not_a_new_original_study_observation": true,
+      "original_study_estimate_only_if_q_is_0_90": false
+    },
+    {
+      "hybrid_sterility_fraction": 0.25,
+      "modelled_dark_viability_proxy": 0.9475,
+      "modelled_light_viability_proxy": 0.8925,
+      "modelled_selection": 0.06162464985994398,
+      "not_a_new_original_study_observation": true,
+      "original_study_estimate_only_if_q_is_0_90": false
+    },
+    {
+      "hybrid_sterility_fraction": 0.5,
+      "modelled_dark_viability_proxy": 0.895,
+      "modelled_light_viability_proxy": 0.785,
+      "modelled_selection": 0.14012738853503182,
+      "not_a_new_original_study_observation": true,
+      "original_study_estimate_only_if_q_is_0_90": false
+    },
+    {
+      "hybrid_sterility_fraction": 0.75,
+      "modelled_dark_viability_proxy": 0.8425,
+      "modelled_light_viability_proxy": 0.6775,
+      "modelled_selection": 0.24354243542435428,
+      "not_a_new_original_study_observation": true,
+      "original_study_estimate_only_if_q_is_0_90": false
+    },
+    {
+      "hybrid_sterility_fraction": 0.9,
+      "modelled_dark_viability_proxy": 0.8109999999999999,
+      "modelled_light_viability_proxy": 0.613,
+      "modelled_selection": 0.32300163132137016,
+      "not_a_new_original_study_observation": true,
+      "original_study_estimate_only_if_q_is_0_90": true
+    },
+    {
+      "hybrid_sterility_fraction": 1,
+      "modelled_dark_viability_proxy": 0.79,
+      "modelled_light_viability_proxy": 0.5700000000000001,
+      "modelled_selection": 0.3859649122807016,
+      "not_a_new_original_study_observation": true,
+      "original_study_estimate_only_if_q_is_0_90": false
+    }
+  ],
+  "two_papers_counted_as_independent_phylogenetic_reacquisitions": false
+}
