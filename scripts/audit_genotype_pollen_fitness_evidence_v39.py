@@ -61,13 +61,36 @@ def review(source,access):
             "ANTIRRHINUM_CAUSAL_EDIT_NOT_PRESENT")
     require(am["longitudinal_ancestral_reversal"] is False
             and am["flower_fruit_seed_count_directly_reported_in_abstract"] is False
-            and a["source_measurement_bridge"]=="same_original_experimental_arrays_visitor_pollen_offspring"
+            and a["source_measurement_bridge"]==
+                "1997_within_array_visits_and_offspring;1994_1995_separate_pollen_receipt_export_arrays"
             and a["direct_flower_gene_edit_to_fitness"] is False
             and a["raw_individual_data_acquired_by_ANTO_v39"] is False,
             "ANTIRRHINUM_VISIT_POLLEN_OFFSPRING_GRAIN_DRIFT")
     require(a["reported_mechanism"]==
             "pollen receipt depended most on visit count; pollen export best predicted by time inside flower; assortative visits aligned with offspring allele/genotype frequency departures",
             "ANTIRRHINUM_AUTHOR_MECHANISM_DRIFT")
+    expected_a={
+        "1994_Barr":"visit_counts_durations_pollen_receipt_export_and_dye;RED_AND_YELLOW_COMMERCIAL",
+        "1995_Avery":"visit_counts_durations_pollen_receipt_export_and_dye;WHITE_AND_YELLOW_BACKCROSS",
+        "1997_Rosy":"same_array_visit_behavior_and_offspring_genotypes;WHITE_YELLOW_NO_NECTAR_AUGMENTATION",
+        "1997_Barr":"same_array_visit_behavior_and_offspring_genotypes;WHITE_YELLOW_YELLOW_NECTAR_SUPPLEMENTED",
+        "pollen_receipt_export_and_1997_offspring_not_exactly_same_array_and_flower":True,
+    }
+    require(a["original_measurement_cohort_mapping"]==expected_a
+            and "not individually isolated" in a["original_interpretation_limit"],
+            "ANTIRRHINUM_FIELD_YEAR_COHORT_LINK_DRIFT")
+    outcomes=a["original_author_1997_offspring_frequencies"]
+    exp={"Rosy":(.5,.44,.5,.41,False),"Barr":(.5,.52,.5,.43,True)}
+    require(set(outcomes)==set(exp),"ANTIRRHINUM_SOURCE_ARRAY_SET_DRIFT")
+    for key,(p0,p1,h0,h1,nectar) in exp.items():
+        o=outcomes[key]
+        require(o["initial_sulfurea_allele_frequency"]==p0
+                and o["offspring_sulfurea_allele_frequency"]==p1
+                and o["initial_heterozygote_fraction"]==h0
+                and o["offspring_heterozygote_fraction"]==h1
+                and o["nectar_supplemented_to_yellow"] is nectar
+                and o["original_field_array_year"]==1997,
+                "ANTIRRHINUM_AUTHOR_1997_OFFSPRING_FREQUENCY_DRIFT")
 
     p=rows["phlox_2012_reinforcement"]
     pm=p["measurements"]
@@ -144,6 +167,7 @@ def review(source,access):
                 "doi":a["doi"],
                 "flower_colour_locus_inherited":True,
                 "visit_time_and_pollen_receipt_export_measured":True,
+                "pollen_measurements_1994_1995_separate_from_offspring_1997":True,
                 "offspring_genotypes_measured":True,
                 "genic_nucleotide_identity_or_transgenic_phenotype_not_tested":True,
                 "long_term_allele_fixation_not_observed":True,
@@ -163,7 +187,9 @@ def review(source,access):
                 "natural_pollinator_visits":True,
                 "pollen_receipt_and_export":True,
                 "offspring_allele_genotype_measured":True,
-                "original_within_array_visits_pollen_offspring_chain":True,
+                "original_within_array_visits_pollen_offspring_chain":False,
+                "original_within_1997_arrays_visitation_and_offspring_genotypes":True,
+                "pollen_receipt_export_from_1994_1995_other_arrays":True,
                 "original_flower_colour_gene_edited":False,
                 "natural_multigeneration_fixation_measured":False,
             },
@@ -189,6 +215,24 @@ def review(source,access):
                 "free_foraging_pollinator_choice_study":False,
             }
         },
+        "Antirrhinum_1997_original_author_array_allele_shifts":{
+            key:{
+                "field_year":1997,
+                "nectar_supplemented_on_yellow":item["nectar_supplemented_to_yellow"],
+                "sulfurea_allele_initial":item["initial_sulfurea_allele_frequency"],
+                "sulfurea_allele_offspring":item["offspring_sulfurea_allele_frequency"],
+                "sulfurea_delta_offspring_minus_initial":round(
+                    item["offspring_sulfurea_allele_frequency"]-
+                    item["initial_sulfurea_allele_frequency"],8),
+                "heterozygote_initial":item["initial_heterozygote_fraction"],
+                "heterozygote_offspring":item["offspring_heterozygote_fraction"],
+                "heterozygote_delta_offspring_minus_initial":round(
+                    item["offspring_heterozygote_fraction"]-
+                    item["initial_heterozygote_fraction"],8),
+            } for key,item in sorted(outcomes.items())
+        },
+        "Antirrhinum_pollen_arrays_1994_1995_not_same_year_as_1997_offspring":True,
+        "Antirrhinum_1997_neither_colour_only_causal_effect_nor_multigeneration_selection_estimated":True,
         "sympatry_specific_fitness_selection_not_universal_colour_benefit":True,
         "source_wahlenbergia_original_response":"SEED_OUTPUT",
         "author_published_43_percent":43,
