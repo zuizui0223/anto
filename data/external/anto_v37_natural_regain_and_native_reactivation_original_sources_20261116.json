@@ -1,0 +1,143 @@
+{
+  "schema": "anto_v37_original_petunia_regain_actinidia_reactivation_ecological_evidence_registry",
+  "audit_date": "2026-11-16",
+  "original_study_programs": [
+    {
+      "id": "Esfeld2018_Psecreta",
+      "doi": "10.1016/j.cub.2018.10.019",
+      "year": 2018,
+      "family": "Solanaceae",
+      "shared_radiation": "Petunia_long_tube_clade",
+      "source_url": "https://pubmed.ncbi.nlm.nih.gov/30472000/",
+      "natural_colour_regain": {
+        "species": "Petunia secreta",
+        "visible_colour": "PURPLE",
+        "ancestor_reconstructed": "WHITE_NONFUNCTIONAL_AN2",
+        "molecular_channel": "AN2_FRAME_RESTORATION",
+        "function_restoration": "AN2_CODING_READING_FRAME",
+        "indel": "2_BASE_PAIR_COMPENSATORY_DELETION",
+        "direct_historical_transition_observed_in_real_time": false,
+        "source_evidence": "original author comparative sequence / phylogenetic inference"
+      },
+      "original_white_petal_transformation": null,
+      "controlled_pollinator_preference": null,
+      "one_independent_original_study": true
+    },
+    {
+      "id": "Berardi2021_Pexserta",
+      "doi": "10.1093/plcell/koab114",
+      "year": 2021,
+      "family": "Solanaceae",
+      "shared_radiation": "Petunia_long_tube_clade",
+      "source_url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC8364234/",
+      "natural_colour_regain": {
+        "species": "Petunia exserta",
+        "visible_colour": "RED",
+        "ancestor_reconstructed": "WHITE_NONFUNCTIONAL_AN2",
+        "molecular_channel": "PARALOG_DPL_REDEPLOYMENT_WITH_OTHER_PATHWAY_CHANGES",
+        "AN2_still_nonfunctional": true,
+        "used_regulator": "DPL",
+        "regulatory_spatial_shift": "DPL_IN_PETAL_LIMBS",
+        "additional_required_pathway_changes": [
+          "MYB-FL",
+          "F3'H/HT1",
+          "F3'5'H/HF1",
+          "F3'5'H/HF2",
+          "AAT"
+        ],
+        "original_red_chemical_components_not_pelargonidin": true,
+        "petal_red_anthocyanidins": [
+          "cyanidin",
+          "delphinidin"
+        ],
+        "DPL_native_VIGS_white_sectors": true,
+        "direct_historical_transition_observed_in_real_time": false,
+        "source_evidence": "original RNA/HPLC and VIGS plus ancestral-state inference"
+      },
+      "original_white_petal_transformation": {
+        "native_white_species": "Petunia axillaris",
+        "regulator": "DPL",
+        "design": "STABLE_35S_OVEREXPRESSION",
+        "generated_independent_transgenic_lines": 9,
+        "lines_selected_for_chemical_assay": 2,
+        "HPLC_nontransgenic_samples": 3,
+        "HPLC_transgenic_samples": 6,
+        "HPLC_transgenics_per_assayed_line": 3,
+        "white_to_coloured_corolla_restored": true,
+        "anthocyanidin_increase_original_assay": true,
+        "other_plant_traits_assumed_unchanged": false,
+        "natural_ancestral_reversal": false,
+        "reference": "original Figure 5 and DPL restoration results"
+      },
+      "controlled_pollinator_preference": null,
+      "one_independent_original_study": true
+    },
+    {
+      "id": "Hoballah2007_AN2_pollinators",
+      "doi": "10.1105/tpc.106.048694",
+      "year": 2007,
+      "family": "Solanaceae",
+      "shared_radiation": "Petunia_long_tube_clade",
+      "source_url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC1867374/",
+      "natural_colour_regain": null,
+      "original_white_petal_transformation": {
+        "native_white_species": "Petunia axillaris",
+        "donor_of_functional_regulator": "Petunia integrifolia",
+        "regulator": "AN2",
+        "design": "STABLE_TRANSFORMED_FUNCTIONAL_AN2_CDNA",
+        "white_to_coloured_corolla_restored": true,
+        "pigment_functional_complementation": true,
+        "not_spontaneous_pseudogene_resurrection": true,
+        "pollinator_assay_same_plant_genotype_contrast": true,
+        "reference": "original Figure 5"
+      },
+      "controlled_pollinator_preference": {
+        "study_organisms": [
+          "Manduca sexta",
+          "Bombus terrestris"
+        ],
+        "setup": "CONTROLLED_GREENHOUSE",
+        "moth_first_choice_white_P_axillaris": 30,
+        "moth_first_choice_ANT2_restored_P_axillaris": 6,
+        "moth_first_choice_total": 36,
+        "moth_source_p_upper_bound": 0.0001,
+        "bee_n_trials": 12,
+        "bee_direction": "PREFERENCE_AN2_RESTORED_COLOURED_P_AXILLARIS",
+        "bee_author_reported_p": 0.017,
+        "moth_direction": "PREFERENCE_WILD_WHITE_P_AXILLARIS",
+        "other_flower_traits_experimentally_proved_identical_everywhere": false,
+        "field_pollination_or_seed_set_measured": false,
+        "reference": "original Figure 5 G-H"
+      },
+      "one_independent_original_study": true
+    },
+    {
+      "id": "Fraser2013_Actinidia_MYB110a",
+      "doi": "10.1186/1471-2164-14-28",
+      "year": 2013,
+      "family": "Actinidiaceae",
+      "shared_radiation": "Actinidia_chinensis_eriantha_hybrid_backcross",
+      "source_url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC3618344/",
+      "natural_colour_regain": null,
+      "original_white_petal_transformation": {
+        "native_white_material": "Actinidia F2 backcross hybrid white petal genotype 21-05-09e",
+        "regulator": "MYB110a",
+        "design": "TRANSIENT_AGROBACTERIUM_35S_EXPRESSION_IN_WHITE_PETAL_EDGE",
+        "white_to_coloured_corolla_restored": true,
+        "pigmented_cells_local_to_infiltration": true,
+        "control": "35S_GFP_NEGATIVE_NO_PIGMENT",
+        "long_term_stable_transgenic_plant_established": false,
+        "natural_ancestral_reversal": false,
+        "number_of_independent_Petunia_natural_color_regains_added": 0,
+        "reference": "original Figure 9"
+      },
+      "controlled_pollinator_preference": null,
+      "one_independent_original_study": true
+    }
+  ],
+  "do_not_count_independent_Petunia_studies_as_independent_macro_radiations": true,
+  "no_crossstudy_numeric_RMSE_or_regain_rate": true,
+  "no_4_study_independent_evolutionary_event_claim": true,
+  "no_native_ancestral_gene_resurrection_rate_estimated": true,
+  "pollinator_visits_not_equivalent_to_fitness": true
+}
