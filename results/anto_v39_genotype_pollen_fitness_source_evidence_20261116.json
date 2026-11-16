@@ -61,7 +61,15 @@
       "allopatric_reinforcing_selection_detected": false,
       "field_selection_and_hybridization_reported": true,
       "natural_ancestral_colour_regain_observed": false,
-      "pollinator_interspecific_movement": true
+      "pollinator_interspecific_movement": true,
+      "author_reported_dark_allele_selection_coefficient": 0.32,
+      "inferred_coefficient_assumes_hybrid_sterility": 0.9,
+      "dark_allele_hybridization_reduction_more_than_half": true,
+      "red_hue_allele_hybridization_reduction_detected": false,
+      "original_paternity_genotyped_seeds_n": 931,
+      "source_pollinator_individuals": 181,
+      "source_interplant_transitions": 2301,
+      "paternity_and_visitor_arrays_same_plants": false
     },
     "phlox_2026_si": {
       "DFR_flower_colour_causally_changes_compatibility_demonstrated": false,
@@ -106,5 +114,29 @@
     }
   },
   "Antirrhinum_pollen_arrays_1994_1995_not_same_year_as_1997_offspring": true,
-  "Antirrhinum_1997_neither_colour_only_causal_effect_nor_multigeneration_selection_estimated": true
+  "Antirrhinum_1997_neither_colour_only_causal_effect_nor_multigeneration_selection_estimated": true,
+  "Phlox_2012_author_derived_dark_intensity_selection": {
+    "source_DOI": "10.1126/science.1215198",
+    "dark_intensity_allele_s_author_inferred": 0.32,
+    "hybrid_sterility_assumption_for_s": 0.9,
+    "paternity_reference_hybridization_range": [
+      0.28,
+      0.44
+    ],
+    "mean_reference_hybridization_in_author_model": 0.43,
+    "original_paternity_figure_seeds_genotyped_n": 931,
+    "dark_intensity_hybridization_lower_by_more_than_half": true,
+    "hue_red_allele_hybridization_effect_detected": false,
+    "direct_female_fecundity_genotype_significant_difference_detected": false,
+    "raw_individual_seed_genotype_data_reanalyzed": false,
+    "original_2012_field_common_garden_seeds_planted": 2720,
+    "different_field_arrays_used_for_pollen_movement_and_seed_paternity": true
+  },
+  "Phlox_2012_pollinator_source_count": {
+    "total_pollinator_individuals": 181,
+    "Battus_philenor": 108,
+    "skippers": 73,
+    "interplant_transitions": 2301,
+    "not_same_unit_as_paternity_genotyped_seeds": true
+  }
 }
