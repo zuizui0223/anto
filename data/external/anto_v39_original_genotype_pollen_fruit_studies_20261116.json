@@ -78,7 +78,33 @@
       "allopatric_reinforcing_selection_detected": false,
       "cannot_infer_absolute_maternal_seed_advantage_from_selection_metric": true,
       "do_not_use_different_Dryad_8792d_as_fitness_data": true,
-      "raw_individual_data_acquired_by_ANTO_v39": false
+      "raw_individual_data_acquired_by_ANTO_v39": false,
+      "original_author_2012_field_denominators": {
+        "common_garden_seeds_planted": 2720,
+        "survival_outcome_figure_n": 1909,
+        "fruit_production_figure_n": 1240,
+        "hybridization_paternity_figure_n": 931,
+        "female_fitness_genotype_direct_significant_difference_detected": false,
+        "paternity_reference_hybridization_min": 0.28,
+        "paternity_reference_hybridization_max": 0.44,
+        "paternity_mean_reference_hybridization_used_in_selection_model": 0.43,
+        "interspecific_hybrids_assumed_sterility_for_model": 0.9,
+        "dark_intensity_allele_reported_hybridization_reduction": "GREATER_THAN_50_PERCENT",
+        "author_derived_selection_coefficient_dark_allele": 0.32,
+        "hue_red_allele_hybridization_effect_detected": false,
+        "author_interpretation": "SELECTION_ON_DARK_INTENSITY_ALLELE_NOT_DETECTABLE_ON_RED_HUE_ALLELE",
+        "source": "original Science 2012 Fig1 and paragraphs on paternity and reinforcing selection"
+      },
+      "original_author_2012_pollinator_array_denominators": {
+        "observed_pollinators": 181,
+        "observed_total_transitions_between_plants": 2301,
+        "Battus_philenor_pollinators": 108,
+        "skippers_Hesperiidae_pollinators": 73,
+        "visitation_tracking_arrangement": "THREE_OBSERVATIONAL_ARRAYS_SEPARATE_FROM_FOUR_PATERNITY_GARDEN_BLOCKS",
+        "pollinator_movement_events_not_one_to_one_linked_to_genotyped_seeds": true,
+        "source": "original Science 2012 Table1 and field choice arrays"
+      },
+      "conditional_selection_cannot_be_merged_with_red_hue_effect": true
     },
     {
       "id": "wahlenbergia_2013",
