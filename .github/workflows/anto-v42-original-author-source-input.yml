@@ -1,0 +1,79 @@
+name: ANTO v42 original PhloxSelection author Git input SHA-verified replay
+on:
+  push:
+    branches: ['analysis/anto-v42-*']
+    paths:
+      - 'scripts/audit_original_PhloxSelection_author_inputs_v42.py'
+      - 'tests/test_original_PhloxSelection_inputs_v42.py'
+      - 'data/external/anto_v42_original_PhloxSelection_author_git_manifest_20261117.json'
+      - 'results/anto_v42_original_author_input_replay_20261117.json'
+      - 'docs/ANTO_V42*'
+      - '.github/workflows/anto-v42-original-author-source-input.yml'
+  pull_request:
+    paths:
+      - 'scripts/audit_original_PhloxSelection_author_inputs_v42.py'
+      - 'tests/test_original_PhloxSelection_inputs_v42.py'
+      - 'data/external/anto_v42_original_PhloxSelection_author_git_manifest_20261117.json'
+      - 'results/anto_v42_original_author_input_replay_20261117.json'
+      - 'docs/ANTO_V42*'
+      - '.github/workflows/anto-v42-original-author-source-input.yml'
+permissions:
+  contents: read
+jobs:
+  original_author_input_source_replay:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Pure synthetic original blob and family-source negative tests
+        run: python -m unittest discover -s tests -p test_original_PhloxSelection_inputs_v42.py -v
+      - name: Fetch original authors public C++ input repository at exact historical commit
+        run: |
+          git clone --quiet --no-tags https://github.com/PhloxHopkins/PhloxSelection.git /tmp/anto_v42_original_author_checkout
+          git -C /tmp/anto_v42_original_author_checkout checkout --quiet --detach 60ff508170f1be592bbc6fe7ed46ac6e5b459026
+          test "$(git -C /tmp/anto_v42_original_author_checkout rev-parse HEAD)" = 60ff508170f1be592bbc6fe7ed46ac6e5b459026
+          echo ANTO_V42_AUTHOR_2014_CODE_PINNED_GIT_COMMIT_OK
+      - name: Validate source blobs and reproduce original adult and offspring matrix denominators
+        run: |
+          EXTRA=()
+          if [ -f results/anto_v42_original_author_input_replay_20261117.json ]; then
+            EXTRA=(--expected results/anto_v42_original_author_input_replay_20261117.json)
+          fi
+          python scripts/audit_original_PhloxSelection_author_inputs_v42.py \
+            --author-git-checkout /tmp/anto_v42_original_author_checkout \
+            --output /tmp/anto_v42_original_author_aggregate.json "${EXTRA[@]}"
+          python - <<'PY'
+          import json
+          d=json.load(open('/tmp/anto_v42_original_author_aggregate.json'))
+          assert d['source_2014_all_32_S1_phenotype_rows_exactly_match_independent_v41_manual_transcription']
+          assert d['n_adult_populations']==32
+          assert d['adult_phenotype_total_original_author_code_example']==11379
+          assert d['mother_source_family_row_total']==371
+          assert d['source_offspring_phenotype_total']==2496
+          assert d['source_populations_with_no_example_maternal_records']==[330,332]
+          assert d['published_main_minus_author_example_input']=={
+              'adult_main_minus_example':645,
+              'maternal_main_minus_example':11,
+              'offspring_main_minus_example':85}
+          assert not d['entire_original_manuscript_2014_MCMC_likelihood_reproduced']
+          print('ANTO_V42_2014_ORIGINAL_AUTHOR_SOURCE_HASH_COUNTS_AND_V41_FULL_TABLE_ROWS_MATCH')
+          PY
+      - name: Install prior ANTO full regression suite dependencies
+        run: python -m pip install numpy scipy biopython
+      - name: Run ALL ANTO source and theory unit tests
+        run: |
+          python -m unittest discover -s tests -v > /tmp/anto_v42_full_tests.log 2>&1 || {
+            tail -90 /tmp/anto_v42_full_tests.log
+            exit 1
+          }
+          tail -8 /tmp/anto_v42_full_tests.log
+      - uses: actions/upload-artifact@v4
+        with:
+          name: anto-v42-authenticated-PhloxSelection-original-author-input-aggregates
+          path: |
+            /tmp/anto_v42_original_author_aggregate.json
+            /tmp/anto_v42_full_tests.log
+          retention-days: 90
