@@ -31,6 +31,8 @@ COMPAT_HEADER=(
     "#ifndef ANTO_V43_MINIMAL_NR3_TYPE_ALIAS\n"
     "#define ANTO_V43_MINIMAL_NR3_TYPE_ALIAS\n"
     "#include <vector>\n"
+    "#include <iostream>\n"
+    "using std::cerr;\n"
     "typedef std::vector<double> VecDoub;\n"
     "typedef const VecDoub& VecDoub_I;\n"
     "typedef double Doub;\n"
