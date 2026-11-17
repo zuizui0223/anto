@@ -1,0 +1,192 @@
+{
+  "ANTO_authored_single_run_driver_sha256": "2ae13880e11b3f83f2634247e675f9ef6e2422048dc89e3666ffcfdb8f1d5c45",
+  "CXX_compilation_warnings_present": false,
+  "CXX_compilation_warnings_tail": "",
+  "CXX_compiler": "g++",
+  "CXX_compiler_version_first_line": "g++ (Ubuntu 15.2.0-16ubuntu1) 15.2.0",
+  "actual_data_original_forward_output": {
+    "all_transects": {
+      "max_normalization_error": 2.886579864025407e-15,
+      "n_adults": 11379,
+      "n_mothers": 371,
+      "n_offspring": 2496,
+      "n_populations": 32,
+      "original_model_adult_component_log_likelihood": -8098.322108745898,
+      "original_model_family_component_log_likelihood": -1769.2080181486392,
+      "original_total_log_likelihood": -9867.530126894539
+    },
+    "per_transect": [
+      {
+        "independent_origin_program_family_component_log_like": -516.3474595798544,
+        "independent_origin_program_flower_component_log_like": -3820.475680270638,
+        "maximum_component_probability_row_sum_deviation": 1.7763568394002505e-15,
+        "n_adult_phenotype_observations": 4562,
+        "n_maternal_family_rows": 121,
+        "n_offspring_phenotypes": 649,
+        "n_populations": 9,
+        "observed_adult_number_weighted_expected_phenotype_fraction_DB_DR_LB_LR": [
+          0.11494247924515759,
+          0.4997087292447413,
+          0.29518588620992153,
+          0.09016290530017967
+        ],
+        "observed_child_number_weighted_expected_progeny_fraction_DB_DR_LB_LR": [
+          0.18115648033431697,
+          0.5497213456904679,
+          0.182758851359646,
+          0.08636332261556931
+        ],
+        "original_model_log_likelihood": -4336.823139850492,
+        "source_model_generations_until_convergence": 748,
+        "transect": 1
+      },
+      {
+        "independent_origin_program_family_component_log_like": -311.2480370603234,
+        "independent_origin_program_flower_component_log_like": -901.9554977119338,
+        "maximum_component_probability_row_sum_deviation": 2.886579864025407e-15,
+        "n_adult_phenotype_observations": 1744,
+        "n_maternal_family_rows": 87,
+        "n_offspring_phenotypes": 630,
+        "n_populations": 7,
+        "observed_adult_number_weighted_expected_phenotype_fraction_DB_DR_LB_LR": [
+          0.11206015290547698,
+          0.4259167479114546,
+          0.3671705643060053,
+          0.09485253487706313
+        ],
+        "observed_child_number_weighted_expected_progeny_fraction_DB_DR_LB_LR": [
+          0.11419266766487574,
+          0.2705021615901929,
+          0.5277261412987387,
+          0.0875790294461927
+        ],
+        "original_model_log_likelihood": -1213.2035347722572,
+        "source_model_generations_until_convergence": 623,
+        "transect": 2
+      },
+      {
+        "independent_origin_program_family_component_log_like": -375.9046628432259,
+        "independent_origin_program_flower_component_log_like": -1345.7890000049213,
+        "maximum_component_probability_row_sum_deviation": 1.7763568394002505e-15,
+        "n_adult_phenotype_observations": 2300,
+        "n_maternal_family_rows": 56,
+        "n_offspring_phenotypes": 407,
+        "n_populations": 6,
+        "observed_adult_number_weighted_expected_phenotype_fraction_DB_DR_LB_LR": [
+          0.13724287118766257,
+          0.33199048829049155,
+          0.4332214808092024,
+          0.09754515971264358
+        ],
+        "observed_child_number_weighted_expected_progeny_fraction_DB_DR_LB_LR": [
+          0.22461121680297305,
+          0.3004598690054504,
+          0.338934475540576,
+          0.13599443865100033
+        ],
+        "original_model_log_likelihood": -1721.6936628481471,
+        "source_model_generations_until_convergence": 574,
+        "transect": 3
+      },
+      {
+        "independent_origin_program_family_component_log_like": -484.18519640321017,
+        "independent_origin_program_flower_component_log_like": -1069.7481964140943,
+        "maximum_component_probability_row_sum_deviation": 2.6645352591003757e-15,
+        "n_adult_phenotype_observations": 1424,
+        "n_maternal_family_rows": 78,
+        "n_offspring_phenotypes": 586,
+        "n_populations": 6,
+        "observed_adult_number_weighted_expected_phenotype_fraction_DB_DR_LB_LR": [
+          0.13324343424700127,
+          0.31201776011537796,
+          0.4654943263164078,
+          0.0892444793212133
+        ],
+        "observed_child_number_weighted_expected_progeny_fraction_DB_DR_LB_LR": [
+          0.17629257304028983,
+          0.2874707117264015,
+          0.42459305326732094,
+          0.11164366196598809
+        ],
+        "original_model_log_likelihood": -1553.9333928173046,
+        "source_model_generations_until_convergence": 634,
+        "transect": 4
+      },
+      {
+        "independent_origin_program_family_component_log_like": -81.5226622620254,
+        "independent_origin_program_flower_component_log_like": -960.3537343443105,
+        "maximum_component_probability_row_sum_deviation": 2.3314683517128287e-15,
+        "n_adult_phenotype_observations": 1349,
+        "n_maternal_family_rows": 29,
+        "n_offspring_phenotypes": 224,
+        "n_populations": 4,
+        "observed_adult_number_weighted_expected_phenotype_fraction_DB_DR_LB_LR": [
+          0.11408294465291895,
+          0.2880848466487953,
+          0.5066211999668994,
+          0.0912110087313866
+        ],
+        "observed_child_number_weighted_expected_progeny_fraction_DB_DR_LB_LR": [
+          0.08744799439051856,
+          0.1709546645632609,
+          0.6844299467368302,
+          0.057167394309389774
+        ],
+        "original_model_log_likelihood": -1041.876396606336,
+        "source_model_generations_until_convergence": 676,
+        "transect": 5
+      }
+    ]
+  },
+  "all_original_nonblank_source_rows_unchanged": true,
+  "author_original_Git_commit": "60ff508170f1be592bbc6fe7ed46ac6e5b459026",
+  "external_temp_compatibility_nr3_header_sha256": "a54ec287dd6d1968088551a91ac4cee893c4f4bdd82baa5a509cf9ec4abc7346",
+  "independent_CXX_component_log_likelihood_matches_original_calcTotLike": true,
+  "model_is_original_2014_forward_one_fixed_set_not_MCMC": true,
+  "natural_ancestral_phenotype_reversion_or_retention_probability_inferred": null,
+  "new_empirical_selection_coefficients_inferred": null,
+  "original_13_start_parameters_from_author_seedSet": [
+    0.279,
+    0.362,
+    0.612,
+    0.639,
+    0.362,
+    0,
+    0.72,
+    0.88,
+    0.91,
+    0.9,
+    3.7,
+    6.3,
+    5.5
+  ],
+  "original_2014_author_EXAMPLE_input_11379_371_2496_replayed": true,
+  "original_2014_full_75000_step_MCMC_posterior_replayed": false,
+  "original_2014_main_paper_full_12024_382_2581_cohort_replayed": false,
+  "original_author_code_unmodified_except_external_type_compatibility_header": true,
+  "original_author_missing_nr3_and_Rseeds_not_silently_fabricated": true,
+  "original_paper_DOI": "10.1016/j.cub.2014.07.027",
+  "parent_v42_original_full_derived_receipt_replayed_exactly": true,
+  "schema": "anto_v43_exact_git_pinned_original_PhloxSelection_fixed_start_likelihood",
+  "source_forward_cpp_translation_units_from_exact_author_commit": [
+    "World.cpp",
+    "Deme.cpp",
+    "initialfreq.cpp",
+    "simulate.cpp",
+    "WorldOutput.cpp",
+    "Params.cpp",
+    "utilities.cpp",
+    "likelihood.cpp"
+  ],
+  "source_original_raw_records_not_redistributed": true,
+  "source_original_valid_author_input_families_count": 371,
+  "source_predicted_probabilities_valid_at_declared_precision": true,
+  "temporary_working_copy_only_all_blank_maternal_padding_lines_removed": {
+    "inPhlox_Fam_T1.data": 0,
+    "inPhlox_Fam_T2.data": 0,
+    "inPhlox_Fam_T3.data": 0,
+    "inPhlox_Fam_T4.data": 299,
+    "inPhlox_Fam_T5.data": 0
+  },
+  "two_runs_identical_source_prediction_and_likelihood": true
+}
