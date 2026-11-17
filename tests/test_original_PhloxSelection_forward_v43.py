@@ -119,7 +119,12 @@ class OriginalFixedCPPTests(unittest.TestCase):
 
     def test_author_source_likelihood_log_not_positive(self):
         good=fake_valid_log()
-        wrong=good.replace("-5211 -4562 -649","1 -4562 -649")
+        original=next(x for x in good.splitlines() if x.startswith(
+            v.TAG_WORLD+" 1 "))
+        fields=original.split()
+        self.assertEqual(float(fields[7]),-5211.0)
+        fields[7]="1.0"
+        wrong=good.replace(original," ".join(fields))
         with self.assertRaises(v.FixedForwardError):
             v.parse_original_driver_output(wrong,self.parent)
 
@@ -141,7 +146,7 @@ class OriginalFixedCPPTests(unittest.TestCase):
         self.assertIn("ORIGINAL_SEEDSET_VALUES_DRIFT",driver)
         self.assertIn("calcTotLike",driver)
         self.assertIn("MakeLikelihood",driver)
-        self.assertIn("ORIGINAL_MODEL_LIKELIHOOD_COMPONENTS_DISAGREE",driver)
+        self.assertIn("SOURCE_ORIGINAL_LIKELIHOOD_COMPONENTS_DISAGREE",driver)
         self.assertNotIn("Mchain",driver)
         self.assertNotIn("mcmcStep",driver)
 
