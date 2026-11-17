@@ -1,0 +1,86 @@
+name: ANTO v43 original Phlox C++ fixed-start forward likelihood
+on:
+  push:
+    branches: ['analysis/anto-v43-*']
+    paths:
+      - 'scripts/PhloxFixedSourceForwardDriver_v43.cpp'
+      - 'scripts/run_original_PhloxSelection_fixed_forward_v43.py'
+      - 'tests/test_original_PhloxSelection_forward_v43.py'
+      - 'results/anto_v43_original_Phlox_fixed_forward_likelihood_20261117.json'
+      - 'docs/ANTO_V43*'
+      - '.github/workflows/anto-v43-original-fixed-forward.yml'
+  pull_request:
+    paths:
+      - 'scripts/PhloxFixedSourceForwardDriver_v43.cpp'
+      - 'scripts/run_original_PhloxSelection_fixed_forward_v43.py'
+      - 'tests/test_original_PhloxSelection_forward_v43.py'
+      - 'results/anto_v43_original_Phlox_fixed_forward_likelihood_20261117.json'
+      - 'docs/ANTO_V43*'
+      - '.github/workflows/anto-v43-original-fixed-forward.yml'
+permissions:
+  contents: read
+jobs:
+  original_forward_one_fixed_likelihood:
+    runs-on: ubuntu-latest
+    timeout-minutes: 18
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Source-independent numerical, missing-cohort and technical adverse tests
+        run: python -m unittest discover -s tests -p test_original_PhloxSelection_forward_v43.py -v
+      - name: Make C++ Boost headers available when not preinstalled
+        run: |
+          g++ --version | head -1
+          if [ ! -f /usr/include/boost/random.hpp ]; then
+            sudo apt-get update -qq
+            sudo apt-get install -y libboost-dev
+          fi
+          test -f /usr/include/boost/random.hpp
+      - name: Fetch immutable actual 2014 original author source repo
+        run: |
+          git clone --quiet --no-tags https://github.com/PhloxHopkins/PhloxSelection.git /tmp/anto_v43_source
+          git -C /tmp/anto_v43_source checkout --quiet --detach 60ff508170f1be592bbc6fe7ed46ac6e5b459026
+          test "$(git -C /tmp/anto_v43_source rev-parse HEAD)" = 60ff508170f1be592bbc6fe7ed46ac6e5b459026
+          echo ANTO_V43_EXACT_2014_HISTORICAL_SOURCE_GIT_COMMIT_PINNED
+      - name: Compile original unchanged forward translation units with minimal nr3 alias shim and run exact source START once twice
+        run: |
+          EXTRA=()
+          if [ -f results/anto_v43_original_Phlox_fixed_forward_likelihood_20261117.json ]; then
+            EXTRA=(--expected results/anto_v43_original_Phlox_fixed_forward_likelihood_20261117.json)
+          fi
+          python scripts/run_original_PhloxSelection_fixed_forward_v43.py \
+            --author-git-checkout /tmp/anto_v43_source \
+            --timeout-seconds 160 \
+            --output /tmp/anto_v43_source_likelihood.json "${EXTRA[@]}"
+          python - <<'PY'
+          import json,math
+          x=json.load(open('/tmp/anto_v43_source_likelihood.json'))
+          assert x['model_is_original_2014_forward_one_fixed_set_not_MCMC']
+          assert x['parent_v42_original_full_derived_receipt_replayed_exactly']
+          assert x['source_predicted_probabilities_valid_at_declared_precision']
+          assert x['independent_CXX_component_log_likelihood_matches_original_calcTotLike']
+          assert x['two_runs_identical_source_prediction_and_likelihood']
+          assert len(x['actual_data_original_forward_output']['per_transect'])==5
+          assert x['original_2014_full_75000_step_MCMC_posterior_replayed'] is False
+          assert x['new_empirical_selection_coefficients_inferred'] is None
+          print('ANTO_V43_CXX_FIXED_START_ORIGINAL_SOURCE_SOURCE_AND_LIKELIHOOD_VERIFIED')
+          PY
+      - name: Install inherited ANTO numerical test requirements
+        run: python -m pip install numpy scipy biopython
+      - name: All original-source, numerical and theory regression tests
+        run: |
+          python -m unittest discover -s tests -v > /tmp/anto_v43_all_tests.log 2>&1 || {
+            tail -90 /tmp/anto_v43_all_tests.log
+            exit 1
+          }
+          tail -8 /tmp/anto_v43_all_tests.log
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: anto-v43-original-CXX-fixed-start-five-transects-likelihood
+          path: |
+            /tmp/anto_v43_source_likelihood.json
+            /tmp/anto_v43_all_tests.log
+          retention-days: 90
