@@ -1,0 +1,183 @@
+{
+  "adult_by_color": {
+    "DB": 1396,
+    "DR": 4607,
+    "LB": 4292,
+    "LR": 1084
+  },
+  "adult_phenotype_total_original_author_code_example": 11379,
+  "entire_original_manuscript_2014_MCMC_likelihood_reproduced": false,
+  "independent_ancestor_gene_phenotype_fitness_causality_newly_measured": false,
+  "main_article_reported_original_observation_counts": {
+    "adult": 12024,
+    "maternal_plants": 382,
+    "offspring": 2581,
+    "populations": 32,
+    "transects": 5
+  },
+  "maternal_phenotype_not_original_maternal_genotype_haplotype": true,
+  "mother_source_family_row_total": 371,
+  "mother_source_rows_without_unique_maternal_plant_ID": true,
+  "n_adult_populations": 32,
+  "n_source_populations_with_mothers": 30,
+  "no_arbitrary_filling_of_645_11_85_missing_observation_counts": true,
+  "no_new_Phylo_Phlox_allele_selection_or_regain_probability": true,
+  "original_2014_initial_parameter_values_not_fitted_original_posterior": [
+    0.279,
+    0.362,
+    0.612,
+    0.639,
+    0.362,
+    0,
+    0.72,
+    0.88,
+    0.91,
+    0.9,
+    3.7,
+    6.3,
+    5.5
+  ],
+  "original_author_source": {
+    "GitHub_repository": "PhloxHopkins/PhloxSelection",
+    "all_source_digests_verified_from_pinned_original_checkout": true,
+    "main_source_default_75000_MCMC_steps_not_executed": true,
+    "original_author_readme_labels_inputs_as_examples": true,
+    "original_code_commit_pinned": "60ff508170f1be592bbc6fe7ed46ac6e5b459026",
+    "original_git_blob_sha1_verification_count": 20,
+    "original_source_code_not_copied_to_ANTO": true,
+    "phen_and_init_same_five_files_not_independent_data": true,
+    "publication_DOI": "10.1016/j.cub.2014.07.027",
+    "source_supplement_links_GitHub_at_historical_owner": true
+  },
+  "per_transect_source_counts": [
+    {
+      "family_source_populations": 9,
+      "n_adult_phenotype_counts": 4562,
+      "n_adult_populations": 9,
+      "n_offspring_counted": 649,
+      "n_original_family_rows": 121,
+      "phen_source_first_and_last_populations": [
+        301,
+        314
+      ],
+      "transect": 1
+    },
+    {
+      "family_source_populations": 7,
+      "n_adult_phenotype_counts": 1744,
+      "n_adult_populations": 7,
+      "n_offspring_counted": 630,
+      "n_original_family_rows": 87,
+      "phen_source_first_and_last_populations": [
+        325,
+        329
+      ],
+      "transect": 2
+    },
+    {
+      "family_source_populations": 4,
+      "n_adult_phenotype_counts": 2300,
+      "n_adult_populations": 6,
+      "n_offspring_counted": 407,
+      "n_original_family_rows": 56,
+      "phen_source_first_and_last_populations": [
+        330,
+        332
+      ],
+      "transect": 3
+    },
+    {
+      "family_source_populations": 6,
+      "n_adult_phenotype_counts": 1424,
+      "n_adult_populations": 6,
+      "n_offspring_counted": 586,
+      "n_original_family_rows": 78,
+      "phen_source_first_and_last_populations": [
+        335,
+        318
+      ],
+      "transect": 4
+    },
+    {
+      "family_source_populations": 4,
+      "n_adult_phenotype_counts": 1349,
+      "n_adult_populations": 4,
+      "n_offspring_counted": 224,
+      "n_original_family_rows": 29,
+      "phen_source_first_and_last_populations": [
+        324,
+        320
+      ],
+      "transect": 5
+    }
+  ],
+  "published_main_minus_author_example_input": {
+    "adult_main_minus_example": 645,
+    "maternal_main_minus_example": 11,
+    "offspring_main_minus_example": 85
+  },
+  "schema": "anto_v42_original_author_PhloxSelection_example_inputs_integrity_and_population_offspring_counts",
+  "sibling_offspring_not_independent_evolutionary_lineages": true,
+  "source_2014_all_32_S1_phenotype_rows_exactly_match_independent_v41_manual_transcription": true,
+  "source_adult_populations_that_have_no_mother_row_are_not_absent_from_manuscript": true,
+  "source_cohort_reconciliation_state": "AUTHOR_INPUT_EXAMPLE_DOES_NOT_RECONCILE_PUBLISHED_MAIN_COHORT",
+  "source_mother_by_offspring_color": {
+    "DB": {
+      "children_by_colour": {
+        "DB": 180,
+        "DR": 38,
+        "LB": 152,
+        "LR": 37
+      },
+      "n_source_family_rows": 59,
+      "offspring_n": 407
+    },
+    "DR": {
+      "children_by_colour": {
+        "DB": 47,
+        "DR": 673,
+        "LB": 22,
+        "LR": 70
+      },
+      "n_source_family_rows": 128,
+      "offspring_n": 812
+    },
+    "LB": {
+      "children_by_colour": {
+        "DB": 126,
+        "DR": 34,
+        "LB": 853,
+        "LR": 64
+      },
+      "n_source_family_rows": 151,
+      "offspring_n": 1077
+    },
+    "LR": {
+      "children_by_colour": {
+        "DB": 22,
+        "DR": 31,
+        "LB": 66,
+        "LR": 81
+      },
+      "n_source_family_rows": 33,
+      "offspring_n": 200
+    }
+  },
+  "source_mother_codes": {
+    "0": "DB",
+    "1": "DR",
+    "2": "LB",
+    "3": "LR"
+  },
+  "source_offspring_by_color": {
+    "DB": 375,
+    "DR": 776,
+    "LB": 1093,
+    "LR": 252
+  },
+  "source_offspring_phenotype_total": 2496,
+  "source_populations_with_no_example_maternal_records": [
+    330,
+    332
+  ]
+}
