@@ -58,7 +58,7 @@ jobs:
           import json
           x=json.load(open('/tmp/anto_v44_seven_scenarios_source_derived.json'))
           assert x['parent_v43_original_cpp_fixed_baseline_likelihood_reproduced']
-          assert x['source_original_32p_11379adults_371families_2496offspring']
+          assert x['original_source_32p_11379adults_371families_2496offspring']
           assert x['n_source_scenarios_admitted']+x['n_source_scenarios_technically_blocked']==7
           assert x['scenarios']['baseline']['status']=='ADMITTED_ORIGINAL_FORWARD_SOURCE'
           assert len(x['scenarios']['baseline']['output']['per_transect'])==5
