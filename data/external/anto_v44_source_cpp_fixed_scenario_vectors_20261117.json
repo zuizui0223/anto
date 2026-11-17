@@ -1,0 +1,206 @@
+{
+  "schema": "anto_v44_original_2014_author_cpp_predeclared_parameter_ablation_vectors",
+  "freeze_date": "2026-11-17",
+  "source_original_paper_doi": "10.1016/j.cub.2014.07.027",
+  "source_original_repo": "PhloxHopkins/PhloxSelection",
+  "source_original_git_sha": "60ff508170f1be592bbc6fe7ed46ac6e5b459026",
+  "parent_v43_source_start_parameter_vector": [
+    0.279,
+    0.362,
+    0.612,
+    0.639,
+    0.362,
+    0,
+    0.72,
+    0.88,
+    0.91,
+    0.9,
+    3.7,
+    6.3,
+    5.5
+  ],
+  "model_original_parameter_indices": {
+    "border_1_to_5": [
+      0,
+      1,
+      2,
+      3,
+      4
+    ],
+    "assortative_mating_a": 5,
+    "source_geometric_pollen_dispersal_m": 6,
+    "zone0_fitness_DB_DR_LR": [
+      7,
+      8,
+      9
+    ],
+    "zone1_fitness_DB_DR_LR": [
+      10,
+      11,
+      12
+    ]
+  },
+  "source_baseline_original_loglike": -9867.530126894539,
+  "source_model_is_original_2014_forward_not_fitted_MCMC": true,
+  "source_32p_11379adult_371mother_2496offspring_unchanged": true,
+  "model_demography_convergence_original_tolerance": 1e-8,
+  "scenario_ids_fixed_in_order": [
+    "baseline",
+    "fitness_neutral",
+    "fitness_uniform_zone0",
+    "epistasis_zero",
+    "dispersal_half",
+    "dispersal_double",
+    "assortative_25pct"
+  ],
+  "scenarios": {
+    "baseline": {
+      "changed_zero_based_parameter_positions": [],
+      "parameter_13_vector": [
+        0.279,
+        0.362,
+        0.612,
+        0.639,
+        0.362,
+        0,
+        0.72,
+        0.88,
+        0.91,
+        0.9,
+        3.7,
+        6.3,
+        5.5
+      ]
+    },
+    "fitness_neutral": {
+      "changed_zero_based_parameter_positions": [
+        7,
+        8,
+        9,
+        10,
+        11,
+        12
+      ],
+      "parameter_13_vector": [
+        0.279,
+        0.362,
+        0.612,
+        0.639,
+        0.362,
+        0,
+        0.72,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ]
+    },
+    "fitness_uniform_zone0": {
+      "changed_zero_based_parameter_positions": [
+        10,
+        11,
+        12
+      ],
+      "parameter_13_vector": [
+        0.279,
+        0.362,
+        0.612,
+        0.639,
+        0.362,
+        0,
+        0.72,
+        0.88,
+        0.91,
+        0.9,
+        0.88,
+        0.91,
+        0.9
+      ]
+    },
+    "epistasis_zero": {
+      "changed_zero_based_parameter_positions": [
+        8,
+        11
+      ],
+      "parameter_13_vector": [
+        0.279,
+        0.362,
+        0.612,
+        0.639,
+        0.362,
+        0,
+        0.72,
+        0.88,
+        0.78,
+        0.9,
+        3.7,
+        8.2,
+        5.5
+      ]
+    },
+    "dispersal_half": {
+      "changed_zero_based_parameter_positions": [
+        6
+      ],
+      "parameter_13_vector": [
+        0.279,
+        0.362,
+        0.612,
+        0.639,
+        0.362,
+        0,
+        0.36,
+        0.88,
+        0.91,
+        0.9,
+        3.7,
+        6.3,
+        5.5
+      ]
+    },
+    "dispersal_double": {
+      "changed_zero_based_parameter_positions": [
+        6
+      ],
+      "parameter_13_vector": [
+        0.279,
+        0.362,
+        0.612,
+        0.639,
+        0.362,
+        0,
+        1.44,
+        0.88,
+        0.91,
+        0.9,
+        3.7,
+        6.3,
+        5.5
+      ]
+    },
+    "assortative_25pct": {
+      "changed_zero_based_parameter_positions": [
+        5
+      ],
+      "parameter_13_vector": [
+        0.279,
+        0.362,
+        0.612,
+        0.639,
+        0.362,
+        0.25,
+        0.72,
+        0.88,
+        0.91,
+        0.9,
+        3.7,
+        6.3,
+        5.5
+      ]
+    }
+  },
+  "strict_negative_outcome_gate": "scenario failure recorded technical, no zero ecological effect",
+  "no_source_biological_fitness_or_allele_frequency_reestimated": true
+}

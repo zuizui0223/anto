@@ -1,0 +1,85 @@
+name: ANTO v44 original Phlox C++ fixed-source component ablations
+on:
+  push:
+    branches: ['analysis/anto-v44-*']
+    paths:
+      - 'scripts/analyze_Phlox_original_CPP_source_ablations_v44.py'
+      - 'tests/test_Phlox_original_CPP_source_ablation_v44.py'
+      - 'data/external/anto_v44_source_cpp_fixed_scenario_vectors_20261117.json'
+      - 'results/anto_v44_original_CPP_seven_scenarios_likelihood_20261117.json'
+      - 'docs/ANTO_V44*'
+      - '.github/workflows/anto-v44-original-cpp-scenarios.yml'
+  pull_request:
+    paths:
+      - 'scripts/analyze_Phlox_original_CPP_source_ablations_v44.py'
+      - 'tests/test_Phlox_original_CPP_source_ablation_v44.py'
+      - 'data/external/anto_v44_source_cpp_fixed_scenario_vectors_20261117.json'
+      - 'results/anto_v44_original_CPP_seven_scenarios_likelihood_20261117.json'
+      - 'docs/ANTO_V44*'
+      - '.github/workflows/anto-v44-original-cpp-scenarios.yml'
+permissions:
+  contents: read
+jobs:
+  pinned_original_CXX_scenarios:
+    runs-on: ubuntu-latest
+    timeout-minutes: 24
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: All seven fixed scenarios, original C++ source/parameter and inference-limits unit tests
+        run: python -m unittest discover -s tests -p test_Phlox_original_CPP_source_ablation_v44.py -v
+      - name: Check exact original author code dependencies
+        run: |
+          g++ --version | head -1
+          if [ ! -f /usr/include/boost/random.hpp ]; then
+            sudo apt-get update -qq
+            sudo apt-get install -y libboost-dev
+          fi
+          test -f /usr/include/boost/random.hpp
+      - name: Clone immutable 2014 authors' original code and example-source records
+        run: |
+          git clone --quiet --no-tags https://github.com/PhloxHopkins/PhloxSelection.git /tmp/anto_v44_original_Phlox_source
+          git -C /tmp/anto_v44_original_Phlox_source checkout --quiet --detach 60ff508170f1be592bbc6fe7ed46ac6e5b459026
+          test "$(git -C /tmp/anto_v44_original_Phlox_source rev-parse HEAD)" = 60ff508170f1be592bbc6fe7ed46ac6e5b459026
+          echo ANTO_V44_ORIGINAL_AUTHOR_2014_GIT_COMMIT_SOURCE_PINNED
+      - name: Compile once and run seven frozen scenarios with true-convergence and v43 loglike gates
+        run: |
+          EXTRA=()
+          if [ -f results/anto_v44_original_CPP_seven_scenarios_likelihood_20261117.json ]; then
+            EXTRA=(--expected results/anto_v44_original_CPP_seven_scenarios_likelihood_20261117.json)
+          fi
+          python scripts/analyze_Phlox_original_CPP_source_ablations_v44.py \
+            --author-git-checkout /tmp/anto_v44_original_Phlox_source \
+            --timeout-seconds 160 \
+            --output /tmp/anto_v44_seven_scenarios_source_derived.json "${EXTRA[@]}"
+          python - <<'PY'
+          import json
+          x=json.load(open('/tmp/anto_v44_seven_scenarios_source_derived.json'))
+          assert x['parent_v43_original_cpp_fixed_baseline_likelihood_reproduced']
+          assert x['original_source_32p_11379adults_371families_2496offspring']
+          assert x['n_source_scenarios_admitted']+x['n_source_scenarios_technically_blocked']==7
+          assert x['scenarios']['baseline']['status']=='ADMITTED_ORIGINAL_FORWARD_SOURCE'
+          assert len(x['scenarios']['baseline']['output']['per_transect'])==5
+          assert x['original_2014_75000_step_MCMC_performed'] is False
+          assert x['actual_empirical_selection_or_migration_estimated'] is False
+          print('ANTO_V44_REAL_SOURCE_FIXED_PARAMETER_SENSITIVITY_AND_LIMITS_GATE_PASS')
+          PY
+      - name: Install existing ANTO original-science test dependencies
+        run: python -m pip install numpy scipy biopython
+      - name: Whole ANTO repository source and inference regression suite
+        run: |
+          python -m unittest discover -s tests -v > /tmp/anto_v44_all_tests.log 2>&1 || {
+            tail -100 /tmp/anto_v44_all_tests.log
+            exit 1
+          }
+          tail -8 /tmp/anto_v44_all_tests.log
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: anto-v44-seven-original-Phlox-fixed-source-scenario-likelihoods
+          path: |
+            /tmp/anto_v44_seven_scenarios_source_derived.json
+            /tmp/anto_v44_all_tests.log
+          retention-days: 90
