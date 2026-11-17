@@ -1,0 +1,68 @@
+name: ANTO v41 natural Phlox clines and two-locus epistasis source audit
+on:
+  push:
+    branches: ['analysis/anto-v41-*']
+    paths:
+      - 'scripts/audit_Phlox2014_spatial_two_locus_source_v41.py'
+      - 'tests/test_Phlox2014_spatial_two_locus_source_v41.py'
+      - 'data/external/anto_v41_Phlox2014_original_spatial_study_tableS1_provisional_20261117.json'
+      - 'results/anto_v41_Phlox2014_two_locus_original_spatial_source_20261117.json'
+      - 'docs/ANTO_V41*'
+      - '.github/workflows/anto-v41-natural-cline-source.yml'
+  pull_request:
+    paths:
+      - 'scripts/audit_Phlox2014_spatial_two_locus_source_v41.py'
+      - 'tests/test_Phlox2014_spatial_two_locus_source_v41.py'
+      - 'data/external/anto_v41_Phlox2014_original_spatial_study_tableS1_provisional_20261117.json'
+      - 'results/anto_v41_Phlox2014_two_locus_original_spatial_source_20261117.json'
+      - 'docs/ANTO_V41*'
+      - '.github/workflows/anto-v41-natural-cline-source.yml'
+permissions:
+  contents: read
+jobs:
+  original_two_locus_fitness_source_grain:
+    runs-on: ubuntu-latest
+    timeout-minutes: 12
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Original Table1 epistasis and TableS1 unreconciled population-count adverse tests
+        run: python -m unittest discover -s tests -p test_Phlox2014_spatial_two_locus_source_v41.py -v
+      - name: Install all inherited ANTO scientific dependencies
+        run: python -m pip install numpy scipy biopython
+      - name: Full ANTO original-source and theoretical regression suite
+        run: |
+          python -m unittest discover -s tests -v > /tmp/anto_v41_all_tests.log 2>&1 || {
+            tail -85 /tmp/anto_v41_all_tests.log
+            exit 1
+          }
+          tail -8 /tmp/anto_v41_all_tests.log
+      - name: Published 2014 original spatial model and provisional TableS1 arithmetic audit
+        run: |
+          EXTRA=()
+          if [ -f results/anto_v41_Phlox2014_two_locus_original_spatial_source_20261117.json ]; then
+            EXTRA=(--expected results/anto_v41_Phlox2014_two_locus_original_spatial_source_20261117.json)
+          fi
+          python scripts/audit_Phlox2014_spatial_two_locus_source_v41.py \
+            --output /tmp/anto_v41_published_2014_spatial_audit.json "${EXTRA[@]}"
+          python - <<'PY'
+          import json
+          a=json.load(open('/tmp/anto_v41_published_2014_spatial_audit.json'))
+          assert a['original_main_article_observation_denominators']['adult_phenotypes_main_paper_reported']==12024
+          assert a['provisional_original_S1_text_transcription']['n_populations_digitized']==32
+          assert a['provisional_original_S1_text_transcription']['total_digitized_flower_count_entries']==11379
+          assert a['source_denominator_reconciliation']['main_minus_S1_digitized']==645
+          assert a['source_denominator_reconciliation']['state']=='SOURCE_ADULT_DENOMINATOR_NOT_RECONCILED'
+          assert a['fitness_epistasis_changes_sign_across_regions']
+          assert not a['independent_full_2014_MCMC_reestimated']
+          print('ANTO_V41_SOURCE_ACTUAL_COUNTS_AND_AUTHOR_MODEL_SCOPE_VERIFIED')
+          PY
+      - uses: actions/upload-artifact@v4
+        with:
+          name: anto-v41-original-2014-two-locus-spatial-source-audit
+          path: |
+            /tmp/anto_v41_published_2014_spatial_audit.json
+            /tmp/anto_v41_all_tests.log
+          retention-days: 90
