@@ -1,0 +1,372 @@
+{
+  "schema": "anto_v41_original2014_Phlox_spatial_population_selection_source_registry",
+  "source_original": {
+    "doi": "10.1016/j.cub.2014.07.027",
+    "publication": "Hopkins Guerrero Rausher Kirkpatrick 2014 Current Biology 24 1995–1999",
+    "original_author_pdf": "https://people.duke.edu/~mrausher/Hopkins%20et%20al.%202014.pdf",
+    "original_supplement_text_mirror": "https://citeseerx.ist.psu.edu/document?doi=e97477246cc95302de8f7778f4f03b23460d04cb&repid=rep1&type=pdf",
+    "study_design": "5 transects of 36 spatial demes, two-locus diploid selection/pollen-migration equilibrium maximum-likelihood MCMC",
+    "main_article_claim_adult_survey_total": 12024,
+    "main_article_populations": 32,
+    "main_article_transects": 5,
+    "main_article_offspring_colored_count": 2581,
+    "main_article_maternal_field_plants": 382,
+    "original_published_light_cline_width_km": 4,
+    "original_published_red_cline_width_km": 3.7,
+    "source_supplement_pollen_kernel_variance_km2": 0.83,
+    "natural_multigeneration_allele_frequency_time_series_measured": false,
+    "exact_original_MCMC_model_reimplemented_in_v41": false,
+    "replay_of_full_offspring_Table_S2_completed": false
+  },
+  "original_study_published_model": {
+    "original_relative_fitness_per_environment_normalized_separately": {
+      "allopatry": {
+        "LB": 1,
+        "DB": 0.86,
+        "LR": 0.89,
+        "DR": 0.9
+      },
+      "sympatry": {
+        "LB": 0.17,
+        "DB": 0.53,
+        "LR": 0.86,
+        "DR": 1
+      }
+    },
+    "original_table1_locus_selection": {
+      "allopatry": {
+        "red_hue_allele_h": {
+          "estimate": -0.11,
+          "author_interval_95": [
+            -0.14,
+            -0.08
+          ]
+        },
+        "dark_intensity_allele_I": {
+          "estimate": -0.14,
+          "author_interval_95": [
+            -0.17,
+            -0.1
+          ]
+        }
+      },
+      "sympatry": {
+        "ancestral_blue_allele_H": {
+          "estimate": -0.14,
+          "author_interval_95": [
+            -0.19,
+            -0.09
+          ]
+        },
+        "ancestral_light_intensity_allele_i": {
+          "estimate": -0.47,
+          "author_interval_95": [
+            -0.69,
+            -0.3
+          ]
+        }
+      }
+    },
+    "epistasis_original_table1": {
+      "allopatry": {
+        "estimate": 0.15,
+        "author_interval_95": [
+          0.11,
+          0.19
+        ]
+      },
+      "sympatry": {
+        "estimate": -0.22,
+        "author_interval_95": [
+          -0.37,
+          0
+        ]
+      }
+    },
+    "original_authors_spatial_model_selective_cause_not_uniquely_identified": true,
+    "original_authors_different_selection_and_migration_models_validated": true,
+    "original_2012_field_red_hue_allele_hybridization_reduction_not_detected": true,
+    "original_2014_model_ancestral_blue_hue_selection_significant": true,
+    "two_source_hue_effects_distinct_study_and_estimand": true,
+    "not_2012_s_hybrid_proxy": 0.32300163132137016
+  },
+  "source_transcription": {
+    "method": "MANUAL_FROM_PUBLISHED_SUPPLEMENT_TABLE_S1_PDF_TEXT_EXTRACTION_NOT_IMAGE_VERIFIED",
+    "source_excerpt_table": "Supplement Table S1 32 populations ordered per transect; first block population301 final population320",
+    "source_original_page_image_independently_verified": false,
+    "original_file_byte_checksum_authenticated": false,
+    "source_count_denominator_reconciliation_status": "TABLE_S1_TEXT_DIGITIZATION_UNRECONCILED",
+    "transcribed_rows_are_not_complete_verified_original_mcmc_input": true,
+    "columns": [
+      "transect",
+      "source_population_id",
+      "LB",
+      "DB",
+      "LR",
+      "DR"
+    ],
+    "population_phenotype_counts": [
+      [
+        1,
+        301,
+        515,
+        29,
+        11,
+        0
+      ],
+      [
+        1,
+        302,
+        280,
+        109,
+        106,
+        44
+      ],
+      [
+        1,
+        303,
+        102,
+        154,
+        81,
+        122
+      ],
+      [
+        1,
+        304,
+        114,
+        143,
+        121,
+        137
+      ],
+      [
+        1,
+        305,
+        115,
+        214,
+        77,
+        128
+      ],
+      [
+        1,
+        306,
+        0,
+        75,
+        23,
+        435
+      ],
+      [
+        1,
+        307,
+        1,
+        13,
+        41,
+        506
+      ],
+      [
+        1,
+        308,
+        0,
+        0,
+        0,
+        500
+      ],
+      [
+        1,
+        314,
+        0,
+        0,
+        0,
+        366
+      ],
+      [
+        2,
+        325,
+        398,
+        5,
+        0,
+        0
+      ],
+      [
+        2,
+        326,
+        202,
+        6,
+        1,
+        0
+      ],
+      [
+        2,
+        327,
+        35,
+        2,
+        8,
+        0
+      ],
+      [
+        2,
+        333,
+        123,
+        54,
+        25,
+        3
+      ],
+      [
+        2,
+        334,
+        4,
+        23,
+        44,
+        229
+      ],
+      [
+        2,
+        328,
+        2,
+        13,
+        37,
+        231
+      ],
+      [
+        2,
+        329,
+        0,
+        0,
+        6,
+        293
+      ],
+      [
+        3,
+        330,
+        162,
+        0,
+        0,
+        0
+      ],
+      [
+        3,
+        311,
+        512,
+        16,
+        11,
+        1
+      ],
+      [
+        3,
+        312,
+        268,
+        34,
+        26,
+        1
+      ],
+      [
+        3,
+        310,
+        165,
+        193,
+        99,
+        89
+      ],
+      [
+        3,
+        309,
+        5,
+        6,
+        0,
+        305
+      ],
+      [
+        3,
+        332,
+        0,
+        0,
+        15,
+        392
+      ],
+      [
+        4,
+        335,
+        125,
+        0,
+        0,
+        0
+      ],
+      [
+        4,
+        317,
+        200,
+        43,
+        29,
+        14
+      ],
+      [
+        4,
+        316,
+        206,
+        98,
+        32,
+        11
+      ],
+      [
+        4,
+        315,
+        72,
+        86,
+        85,
+        61
+      ],
+      [
+        4,
+        319,
+        0,
+        0,
+        0,
+        99
+      ],
+      [
+        4,
+        318,
+        0,
+        0,
+        0,
+        263
+      ],
+      [
+        5,
+        324,
+        355,
+        3,
+        5,
+        0
+      ],
+      [
+        5,
+        323,
+        193,
+        23,
+        13,
+        1
+      ],
+      [
+        5,
+        322,
+        136,
+        40,
+        153,
+        68
+      ],
+      [
+        5,
+        320,
+        2,
+        14,
+        35,
+        308
+      ]
+    ],
+    "preliminary_text_extraction_count_mismatch_known_before_script": true,
+    "main_paper_sample_total_do_not_replace_with_transcription": true
+  },
+  "no_molecular_resurrection_probability_in_this_source": true,
+  "one_original_P_drumondii_radiation_not_new_35_evolutionary_events": true,
+  "no_empirical_coloured_AN2_restoration_rate_measured": true
+}

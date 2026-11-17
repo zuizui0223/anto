@@ -1,0 +1,155 @@
+{
+  "2012_hue_field_hybridization_effect_not_detected": true,
+  "2014_spatial_hue_allele_selection_author_inferred": true,
+  "author_original_table1_epistasis": {
+    "allopatry": {
+      "author_interval_95": [
+        0.11,
+        0.19
+      ],
+      "estimate": 0.15
+    },
+    "sympatry": {
+      "author_interval_95": [
+        -0.37,
+        0
+      ],
+      "estimate": -0.22
+    }
+  },
+  "author_original_table1_locus_selection": {
+    "allopatry": {
+      "dark_intensity_allele_I": {
+        "author_interval_95": [
+          -0.17,
+          -0.1
+        ],
+        "estimate": -0.14
+      },
+      "red_hue_allele_h": {
+        "author_interval_95": [
+          -0.14,
+          -0.08
+        ],
+        "estimate": -0.11
+      }
+    },
+    "sympatry": {
+      "ancestral_blue_allele_H": {
+        "author_interval_95": [
+          -0.19,
+          -0.09
+        ],
+        "estimate": -0.14
+      },
+      "ancestral_light_intensity_allele_i": {
+        "author_interval_95": [
+          -0.69,
+          -0.3
+        ],
+        "estimate": -0.47
+      }
+    }
+  },
+  "author_published_fitness_per_region": {
+    "allopatry": {
+      "DB": 0.86,
+      "DR": 0.9,
+      "LB": 1,
+      "LR": 0.89
+    },
+    "sympatry": {
+      "DB": 0.53,
+      "DR": 1,
+      "LB": 0.17,
+      "LR": 0.86
+    }
+  },
+  "cross_sectional_population_and_one_offspring_generation_source": true,
+  "dark_red_relative_to_light_blue_by_environment": {
+    "allopatry": 0.9,
+    "sympatry": 5.88235294117647
+  },
+  "different_2012_and_2014_hue_estimands": true,
+  "fitness_epistasis_changes_sign_across_regions": true,
+  "independent_arithmetic_on_original_published_epistasis": {
+    "allopatry": 0.15,
+    "not_a_new_MCMC_posterior_estimate": true,
+    "sympatry": -0.22,
+    "sympatry_minus_allopatry": -0.37
+  },
+  "independent_full_2014_MCMC_reestimated": false,
+  "independent_offspring_tableS2_reparsed": false,
+  "n_original_studies": 1,
+  "new_field_evolutionary_time_series_fitted": false,
+  "new_original_selection_coefficient_estimate": null,
+  "new_parent_offspring_likelihood_fit": false,
+  "not_independent_repeat_of_v40_2012_hybrid_viability_selection": true,
+  "only_original_author_reported_2014_model_inference": true,
+  "original_main_article_observation_denominators": {
+    "adult_phenotypes_main_paper_reported": 12024,
+    "field_maternal_plants_reported": 382,
+    "field_populations": 32,
+    "offspring_phenotypes_author_reported": 2581,
+    "transects": 5
+  },
+  "original_publication_doi": "10.1016/j.cub.2014.07.027",
+  "provisional_original_S1_text_transcription": {
+    "by_colour": {
+      "DB": 1396,
+      "DR": 4607,
+      "LB": 4292,
+      "LR": 1084
+    },
+    "first_population_code": 301,
+    "last_population_code": 320,
+    "n_populations_digitized": 32,
+    "not_equivalent_to_genotyped_haplotypes": true,
+    "recombinant_fraction": 0.21794533790315493,
+    "recombinant_morph_count": 2480,
+    "sites_with_all_four_colours": 17,
+    "sites_with_both_LB_and_DR": 18,
+    "source_status": "TEXT_EXTRACTED_PROVISIONAL_TABLE_S1_NOT_IMAGE_VERIFIED",
+    "total_digitized_flower_count_entries": 11379,
+    "transect_colour_sample_totals": {
+      "1": 4562,
+      "2": 1744,
+      "3": 2300,
+      "4": 1424,
+      "5": 1349
+    },
+    "transect_populations": {
+      "1": 9,
+      "2": 7,
+      "3": 6,
+      "4": 6,
+      "5": 4
+    }
+  },
+  "regionally_normalized_fitness_as_common_absolute_seed_numbers": false,
+  "schema": "anto_v41_source_reported_spatial_two_locus_fitness_and_population_digitization_audit",
+  "source_2014_intensity_coefficient_not_2012_viability_proxy_s": true,
+  "source_denominator_reconciliation": {
+    "S1_digitized_count": 11379,
+    "full_original_2014_survey_reproduced": false,
+    "main_minus_S1_digitized": 645,
+    "main_paper_claim_adults": 12024,
+    "not_claimed_original_publication_error": true,
+    "original_S1_PDF_page_image_independently_checked": false,
+    "requires_official_supplement_image_or_original_csv_before_inferential_refit": true,
+    "state": "SOURCE_ADULT_DENOMINATOR_NOT_RECONCILED"
+  },
+  "source_primary_2014_original_main_and_supplement_urls": [
+    "https://people.duke.edu/~mrausher/Hopkins%20et%20al.%202014.pdf",
+    "https://citeseerx.ist.psu.edu/document?doi=e97477246cc95302de8f7778f4f03b23460d04cb&repid=rep1&type=pdf"
+  ],
+  "source_spatial_model_metadata": {
+    "demes_per_transect": 36,
+    "gene_flow_parameter_newly_estimated_from_S1": false,
+    "light_cline_km": 4,
+    "n_transects": 5,
+    "pollen_dispersal_variance_km2": 0.83,
+    "red_cline_km": 3.7,
+    "weak_selection_one_locus_reconstructed": false
+  }
+}
