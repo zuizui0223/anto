@@ -1,0 +1,358 @@
+{
+  "analysis_type": "POSTHOC_SOURCE_FROZEN_TRANSECT_INFLUENCE_NOT_INFERENCE",
+  "v44_parent_git_blob_sha1": "92d940d60051f57bad023e290e0dd5fbff5b9822",
+  "original_programs_added": 0,
+  "original_2014_full_paper_cohort_reconciled": false,
+  "new_forward_model_executions": 0,
+  "new_optimization_or_MCMC": false,
+  "n_transects": 5,
+  "n_adult_records_example": 11379,
+  "n_mother_families_example": 371,
+  "n_offspring_example": 2496,
+  "source_technical_nonadmissions": {
+    "fitness_uniform_zone0": "ORIGINAL_CPP_STABILITY_STOP_WITH_NONZERO_FINAL_CHANGE",
+    "assortative_25pct": "ORIGINAL_CPP_PROBABILITY_INVALID"
+  },
+  "scenarios": {
+    "fitness_neutral": {
+      "global_delta_logL": {
+        "adult": -9655.42570093468,
+        "offspring": -994.2131158620748,
+        "total": -10649.638816796754
+      },
+      "global_adult_offspring_opposite": false,
+      "source_per_transect": [
+        {
+          "transect": 1,
+          "adult": -3387.046078569223,
+          "offspring": -209.34774697863895,
+          "total": -3596.3938255478624,
+          "adult_offspring_opposite": false
+        },
+        {
+          "transect": 2,
+          "adult": -1930.9697692855166,
+          "offspring": -402.738799218977,
+          "total": -2333.7085685044935,
+          "adult_offspring_opposite": false
+        },
+        {
+          "transect": 3,
+          "adult": -2004.3581611299394,
+          "offspring": -87.83751666024989,
+          "total": -2092.195677790189,
+          "adult_offspring_opposite": false
+        },
+        {
+          "transect": 4,
+          "adult": -986.7757915834709,
+          "offspring": -129.66854576447543,
+          "total": -1116.4443373479462,
+          "adult_offspring_opposite": false
+        },
+        {
+          "transect": 5,
+          "adult": -1346.2759003665315,
+          "offspring": -164.62050723973363,
+          "total": -1510.896407606265,
+          "adult_offspring_opposite": false
+        }
+      ],
+      "within_transect_opposite_count": 0,
+      "delete_one_transect_remaining_delta_logL": [
+        {
+          "omitted_transect": 1,
+          "adult": -6268.379622365457,
+          "offspring": -784.8653688834358,
+          "total": -7053.244991248892
+        },
+        {
+          "omitted_transect": 2,
+          "adult": -7724.455931649163,
+          "offspring": -591.4743166430978,
+          "total": -8315.930248292261
+        },
+        {
+          "omitted_transect": 3,
+          "adult": -7651.067539804741,
+          "offspring": -906.3755992018249,
+          "total": -8557.443139006566
+        },
+        {
+          "omitted_transect": 4,
+          "adult": -8668.64990935121,
+          "offspring": -864.5445700975994,
+          "total": -9533.194479448808
+        },
+        {
+          "omitted_transect": 5,
+          "adult": -8309.14980056815,
+          "offspring": -829.5926086223412,
+          "total": -9138.742409190489
+        }
+      ],
+      "sign_reversals_under_one_transect_deletion": {
+        "adult": [],
+        "offspring": [],
+        "total": []
+      }
+    },
+    "epistasis_zero": {
+      "global_delta_logL": {
+        "adult": -261.2908382055839,
+        "offspring": 4.473881447046097,
+        "total": -256.8169567585355
+      },
+      "global_adult_offspring_opposite": true,
+      "source_per_transect": [
+        {
+          "transect": 1,
+          "adult": -219.21984619850264,
+          "offspring": -7.867811929440222,
+          "total": -227.08765812794263,
+          "adult_offspring_opposite": false
+        },
+        {
+          "transect": 2,
+          "adult": 30.89343496916672,
+          "offspring": 11.926602417771335,
+          "total": 42.82003738693811,
+          "adult_offspring_opposite": false
+        },
+        {
+          "transect": 3,
+          "adult": 29.349940107472776,
+          "offspring": -0.05477411354041806,
+          "total": 29.295165993932414,
+          "adult_offspring_opposite": true
+        },
+        {
+          "transect": 4,
+          "adult": -43.112716529325326,
+          "offspring": -1.0151499471081706,
+          "total": -44.12786647643338,
+          "adult_offspring_opposite": false
+        },
+        {
+          "transect": 5,
+          "adult": -59.20165055439429,
+          "offspring": 1.4850150193637859,
+          "total": -57.71663553503049,
+          "adult_offspring_opposite": true
+        }
+      ],
+      "within_transect_opposite_count": 2,
+      "delete_one_transect_remaining_delta_logL": [
+        {
+          "omitted_transect": 1,
+          "adult": -42.07099200708126,
+          "offspring": 12.341693376486319,
+          "total": -29.729298630592893
+        },
+        {
+          "omitted_transect": 2,
+          "adult": -292.1842731747506,
+          "offspring": -7.452720970725238,
+          "total": -299.63699414547364
+        },
+        {
+          "omitted_transect": 3,
+          "adult": -290.64077831305667,
+          "offspring": 4.528655560586515,
+          "total": -286.11212275246794
+        },
+        {
+          "omitted_transect": 4,
+          "adult": -218.17812167625857,
+          "offspring": 5.489031394154267,
+          "total": -212.68909028210214
+        },
+        {
+          "omitted_transect": 5,
+          "adult": -202.0891876511896,
+          "offspring": 2.9888664276823107,
+          "total": -199.10032122350503
+        }
+      ],
+      "sign_reversals_under_one_transect_deletion": {
+        "adult": [],
+        "offspring": [
+          2
+        ],
+        "total": []
+      }
+    },
+    "dispersal_half": {
+      "global_delta_logL": {
+        "adult": -432.2132967088628,
+        "offspring": 8.674136874292344,
+        "total": -423.53915983456864
+      },
+      "global_adult_offspring_opposite": true,
+      "source_per_transect": [
+        {
+          "transect": 1,
+          "adult": -459.78247869437837,
+          "offspring": -9.010490403226754,
+          "total": -468.79296909760524,
+          "adult_offspring_opposite": false
+        },
+        {
+          "transect": 2,
+          "adult": 89.17503104901755,
+          "offspring": 25.73840591426614,
+          "total": 114.91343696328363,
+          "adult_offspring_opposite": false
+        },
+        {
+          "transect": 3,
+          "adult": 62.92861687271875,
+          "offspring": 8.511333669830208,
+          "total": 71.43995054254901,
+          "adult_offspring_opposite": false
+        },
+        {
+          "transect": 4,
+          "adult": -87.73807013376472,
+          "offspring": -15.463102071717799,
+          "total": -103.20117220548241,
+          "adult_offspring_opposite": false
+        },
+        {
+          "transect": 5,
+          "adult": -36.79639580245566,
+          "offspring": -1.1020102348595344,
+          "total": -37.898406037315226,
+          "adult_offspring_opposite": false
+        }
+      ],
+      "within_transect_opposite_count": 0,
+      "delete_one_transect_remaining_delta_logL": [
+        {
+          "omitted_transect": 1,
+          "adult": 27.56918198551557,
+          "offspring": 17.6846272775191,
+          "total": 45.2538092630366
+        },
+        {
+          "omitted_transect": 2,
+          "adult": -521.3883277578803,
+          "offspring": -17.064269039973794,
+          "total": -538.4525967978523
+        },
+        {
+          "omitted_transect": 3,
+          "adult": -495.14191358158155,
+          "offspring": 0.16280320446213636,
+          "total": -494.97911037711765
+        },
+        {
+          "omitted_transect": 4,
+          "adult": -344.4752265750981,
+          "offspring": 24.137238946010143,
+          "total": -320.33798762908623
+        },
+        {
+          "omitted_transect": 5,
+          "adult": -395.41690090640714,
+          "offspring": 9.776147109151879,
+          "total": -385.6407537972534
+        }
+      ],
+      "sign_reversals_under_one_transect_deletion": {
+        "adult": [
+          1
+        ],
+        "offspring": [
+          2
+        ],
+        "total": [
+          1
+        ]
+      }
+    },
+    "dispersal_double": {
+      "global_delta_logL": {
+        "adult": -437.57356795933356,
+        "offspring": -89.80211252466984,
+        "total": -527.3756804840032
+      },
+      "global_adult_offspring_opposite": false,
+      "source_per_transect": [
+        {
+          "transect": 1,
+          "adult": -35.25406495202833,
+          "offspring": -16.793118447619577,
+          "total": -52.04718339964802,
+          "adult_offspring_opposite": false
+        },
+        {
+          "transect": 2,
+          "adult": -159.2606884232431,
+          "offspring": -43.49365074258509,
+          "total": -202.75433916582824,
+          "adult_offspring_opposite": false
+        },
+        {
+          "transect": 3,
+          "adult": -171.24775472763235,
+          "offspring": -15.013901488301883,
+          "total": -186.26165621593418,
+          "adult_offspring_opposite": false
+        },
+        {
+          "transect": 4,
+          "adult": -19.336705831423842,
+          "offspring": -4.804189086757958,
+          "total": -24.14089491818163,
+          "adult_offspring_opposite": false
+        },
+        {
+          "transect": 5,
+          "adult": -52.47435402500571,
+          "offspring": -9.697252759405472,
+          "total": -62.1716067844111,
+          "adult_offspring_opposite": false
+        }
+      ],
+      "within_transect_opposite_count": 0,
+      "delete_one_transect_remaining_delta_logL": [
+        {
+          "omitted_transect": 1,
+          "adult": -402.31950300730523,
+          "offspring": -73.00899407705026,
+          "total": -475.32849708435515
+        },
+        {
+          "omitted_transect": 2,
+          "adult": -278.31287953609046,
+          "offspring": -46.30846178208475,
+          "total": -324.6213413181749
+        },
+        {
+          "omitted_transect": 3,
+          "adult": -266.3258132317012,
+          "offspring": -74.78821103636795,
+          "total": -341.114024268069
+        },
+        {
+          "omitted_transect": 4,
+          "adult": -418.2368621279097,
+          "offspring": -84.99792343791188,
+          "total": -503.23478556582154
+        },
+        {
+          "omitted_transect": 5,
+          "adult": -385.09921393432785,
+          "offspring": -80.10485976526437,
+          "total": -465.2040736995921
+        }
+      ],
+      "sign_reversals_under_one_transect_deletion": {
+        "adult": [],
+        "offspring": [],
+        "total": []
+      }
+    }
+  }
+}
