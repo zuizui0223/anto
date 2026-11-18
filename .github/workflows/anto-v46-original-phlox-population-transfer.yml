@@ -1,0 +1,49 @@
+name: ANTO v46 original Phlox 2024 source-population transfer
+on:
+  push:
+    branches: ['analysis/anto-v46-*']
+    paths:
+      - 'scripts/analyze_original_Phlox_2024_population_holdout_v46.py'
+      - 'tests/test_original_Phlox_2024_population_holdout_v46.py'
+      - 'data/external/anto_v46_phlox2024_source_registry_20261118.json'
+      - 'docs/ANTO_V46*'
+      - 'results/anto_v46_phlox2024_population_heldout_20261118.json'
+      - '.github/workflows/anto-v46-original-phlox-population-transfer.yml'
+  pull_request:
+    branches: ['analysis/anto-v45-*']
+permissions:
+  contents: read
+jobs:
+  original2024_population_heldout:
+    runs-on: ubuntu-latest
+    timeout-minutes: 18
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Fetch pinned original 2024 author CSV without redistributing its rows
+        shell: bash
+        run: |
+          curl --fail --location --retry 3 --max-time 120 --silent --show-error \
+            'https://raw.githubusercontent.com/PhloxHopkins/PhloxFieldAdaptation/d792fe58cce36721394adfd97e9f412396578e86/Dataset_fitness_leaftraits_distance_lat_long.csv' \
+            -o "$RUNNER_TEMP/phlox2024_original.csv"
+          python scripts/analyze_original_Phlox_2024_population_holdout_v46.py \
+            --source "$RUNNER_TEMP/phlox2024_original.csv" > "$RUNNER_TEMP/phlox_v46_result.json"
+      - name: Run original-source and synthetic nonleakage test cases
+        env:
+          PHLOX_V46_SOURCE: ${{ runner.temp }}/phlox2024_original.csv
+        run: python -m unittest discover -s tests -p 'test_original_Phlox_2024_population_holdout_v46.py' -v
+      - name: Verify frozen source-derived receipt or expose initial exact diagnostic
+        shell: bash
+        run: |
+          if [ -f results/anto_v46_phlox2024_population_heldout_20261118.json ]; then
+            python scripts/analyze_original_Phlox_2024_population_holdout_v46.py \
+              --source "$RUNNER_TEMP/phlox2024_original.csv" --check
+          else
+            python - <<'PY'
+          import json, os
+          p=os.environ['RUNNER_TEMP']+'/phlox_v46_result.json'
+          print('V46_SOURCE_EXACT_READOUT='+json.dumps(json.load(open(p)),separators=(',',':'),sort_keys=True))
+          PY
+          fi

@@ -1,0 +1,801 @@
+{
+  "analysis_type": "ORIGINAL_2024_SOURCE_POPULATION_HELDOUT_PREDICTION",
+  "source_git_blob_sha1": "4c780b0abe644ac69dae86a0450eb598c160626b",
+  "source_commit": "d792fe58cce36721394adfd97e9f412396578e86",
+  "distinct_original_programs_added": 1,
+  "independent_evolutionary_radiations_added": 0,
+  "original_2014_Phlox_selection_source_used_for_model_fit": false,
+  "measured_floral_color_or_pollinator_or_reproductive_alleles": false,
+  "source_original_grain": {
+    "rows": 963,
+    "genotypes": 284,
+    "populations": 20,
+    "populations_by_taxon": {
+      "amoena": 8,
+      "deamii": 3,
+      "pilosa": 9
+    },
+    "gardens": {
+      "1-Amoena-PB": 321,
+      "2-Deamii-JC": 321,
+      "3-Pilosa-LBL": 321
+    },
+    "biomass_original_negative_n": 13,
+    "biomass_original_minimum": -233
+  },
+  "holdout": "20 source populations, all genotype clones held out in three original gardens",
+  "fixed_models": [
+    "B0",
+    "G",
+    "T",
+    "E",
+    "TE"
+  ],
+  "fixed_ridge_lambda": 10,
+  "primary_fruit_transfer_pass_models": [],
+  "nonadmitted_secondary_biomass": {
+    "status": "BLOCKED_PREDECLARED_LOG1P_DOMAIN",
+    "reason": "13 original signed biomass observations below zero; no clipping, deletion, shift or alternative transformation",
+    "negative_source_rows": 13,
+    "minimum_original_biomass": -233,
+    "numerical_scores_calculated": false
+  },
+  "endpoints": {
+    "fruits_2019": {
+      "role": "PRIMARY",
+      "scale": "log1p_original_count",
+      "model_results": {
+        "B0": {
+          "population_equal_mse": 2.20305469,
+          "ramet_record_weighted_mse": 2.07599011,
+          "relative_population_equal_gain": 0,
+          "relative_record_weighted_gain": 0,
+          "positive_population_folds": 0,
+          "n_source_population_folds": 20,
+          "by_taxon": {
+            "amoena": {
+              "n_source_populations": 8,
+              "relative_equal_population_mse_gain": 0,
+              "positive_population_folds": 0
+            },
+            "deamii": {
+              "n_source_populations": 3,
+              "relative_equal_population_mse_gain": 0,
+              "positive_population_folds": 0
+            },
+            "pilosa": {
+              "n_source_populations": 9,
+              "relative_equal_population_mse_gain": 0,
+              "positive_population_folds": 0
+            }
+          },
+          "predeclared_primary_fruit_decision": "NOT_ESTABLISHED"
+        },
+        "G": {
+          "population_equal_mse": 1.99623884,
+          "ramet_record_weighted_mse": 1.97493048,
+          "relative_population_equal_gain": 0.09387686,
+          "relative_record_weighted_gain": 0.04868021,
+          "positive_population_folds": 13,
+          "n_source_population_folds": 20,
+          "by_taxon": {
+            "amoena": {
+              "n_source_populations": 8,
+              "relative_equal_population_mse_gain": 0.09934529,
+              "positive_population_folds": 6
+            },
+            "deamii": {
+              "n_source_populations": 3,
+              "relative_equal_population_mse_gain": -0.09825698,
+              "positive_population_folds": 0
+            },
+            "pilosa": {
+              "n_source_populations": 9,
+              "relative_equal_population_mse_gain": 0.13754659,
+              "positive_population_folds": 7
+            }
+          },
+          "predeclared_primary_fruit_decision": "NOT_ESTABLISHED"
+        },
+        "T": {
+          "population_equal_mse": 1.99282047,
+          "ramet_record_weighted_mse": 1.96739313,
+          "relative_population_equal_gain": 0.09542851,
+          "relative_record_weighted_gain": 0.05231093,
+          "positive_population_folds": 13,
+          "n_source_population_folds": 20,
+          "by_taxon": {
+            "amoena": {
+              "n_source_populations": 8,
+              "relative_equal_population_mse_gain": 0.09564765,
+              "positive_population_folds": 6
+            },
+            "deamii": {
+              "n_source_populations": 3,
+              "relative_equal_population_mse_gain": -0.0399086,
+              "positive_population_folds": 0
+            },
+            "pilosa": {
+              "n_source_populations": 9,
+              "relative_equal_population_mse_gain": 0.12840786,
+              "positive_population_folds": 7
+            }
+          },
+          "predeclared_primary_fruit_decision": "NOT_ESTABLISHED"
+        },
+        "E": {
+          "population_equal_mse": 1.99530422,
+          "ramet_record_weighted_mse": 1.97451925,
+          "relative_population_equal_gain": 0.0943011,
+          "relative_record_weighted_gain": 0.0488783,
+          "positive_population_folds": 13,
+          "n_source_population_folds": 20,
+          "by_taxon": {
+            "amoena": {
+              "n_source_populations": 8,
+              "relative_equal_population_mse_gain": 0.08979837,
+              "positive_population_folds": 6
+            },
+            "deamii": {
+              "n_source_populations": 3,
+              "relative_equal_population_mse_gain": -0.09250256,
+              "positive_population_folds": 0
+            },
+            "pilosa": {
+              "n_source_populations": 9,
+              "relative_equal_population_mse_gain": 0.14275694,
+              "positive_population_folds": 7
+            }
+          },
+          "predeclared_primary_fruit_decision": "NOT_ESTABLISHED"
+        },
+        "TE": {
+          "population_equal_mse": 1.9688487,
+          "ramet_record_weighted_mse": 1.95181795,
+          "relative_population_equal_gain": 0.10630966,
+          "relative_record_weighted_gain": 0.05981347,
+          "positive_population_folds": 13,
+          "n_source_population_folds": 20,
+          "by_taxon": {
+            "amoena": {
+              "n_source_populations": 8,
+              "relative_equal_population_mse_gain": 0.08988621,
+              "positive_population_folds": 5
+            },
+            "deamii": {
+              "n_source_populations": 3,
+              "relative_equal_population_mse_gain": -0.02798815,
+              "positive_population_folds": 1
+            },
+            "pilosa": {
+              "n_source_populations": 9,
+              "relative_equal_population_mse_gain": 0.14919979,
+              "positive_population_folds": 7
+            }
+          },
+          "predeclared_primary_fruit_decision": "NOT_ESTABLISHED"
+        }
+      },
+      "per_population_holdout": [
+        {
+          "population": "1701",
+          "taxon": "amoena",
+          "n_ramets": 45,
+          "mse_by_model": {
+            "B0": 4.0081771,
+            "G": 3.25152686,
+            "T": 3.06574243,
+            "E": 3.33523826,
+            "TE": 3.11041093
+          }
+        },
+        {
+          "population": "1704",
+          "taxon": "pilosa",
+          "n_ramets": 18,
+          "mse_by_model": {
+            "B0": 4.08200991,
+            "G": 2.41964728,
+            "T": 2.42853618,
+            "E": 2.40182399,
+            "TE": 2.12343429
+          }
+        },
+        {
+          "population": "1708",
+          "taxon": "pilosa",
+          "n_ramets": 21,
+          "mse_by_model": {
+            "B0": 3.05596437,
+            "G": 1.82054963,
+            "T": 1.78296475,
+            "E": 1.8242593,
+            "TE": 1.63252905
+          }
+        },
+        {
+          "population": "1712",
+          "taxon": "pilosa",
+          "n_ramets": 36,
+          "mse_by_model": {
+            "B0": 3.25386642,
+            "G": 2.7990614,
+            "T": 2.82218131,
+            "E": 2.75895389,
+            "TE": 2.78430475
+          }
+        },
+        {
+          "population": "1713",
+          "taxon": "pilosa",
+          "n_ramets": 48,
+          "mse_by_model": {
+            "B0": 2.19685004,
+            "G": 2.01073023,
+            "T": 2.02143692,
+            "E": 1.99669028,
+            "TE": 2.05903438
+          }
+        },
+        {
+          "population": "1714",
+          "taxon": "pilosa",
+          "n_ramets": 48,
+          "mse_by_model": {
+            "B0": 1.94313585,
+            "G": 1.7830176,
+            "T": 1.87766945,
+            "E": 1.73175948,
+            "TE": 1.823768
+          }
+        },
+        {
+          "population": "1715",
+          "taxon": "amoena",
+          "n_ramets": 48,
+          "mse_by_model": {
+            "B0": 1.2464009,
+            "G": 1.28733595,
+            "T": 1.44302252,
+            "E": 1.31279612,
+            "TE": 1.43683662
+          }
+        },
+        {
+          "population": "1716",
+          "taxon": "amoena",
+          "n_ramets": 48,
+          "mse_by_model": {
+            "B0": 1.55581579,
+            "G": 1.27826128,
+            "T": 1.35433095,
+            "E": 1.31807863,
+            "TE": 1.28357617
+          }
+        },
+        {
+          "population": "1718",
+          "taxon": "pilosa",
+          "n_ramets": 54,
+          "mse_by_model": {
+            "B0": 2.71796839,
+            "G": 2.98558311,
+            "T": 3.03407947,
+            "E": 3.01065367,
+            "TE": 3.0419066
+          }
+        },
+        {
+          "population": "1719",
+          "taxon": "deamii",
+          "n_ramets": 66,
+          "mse_by_model": {
+            "B0": 1.87923907,
+            "G": 2.06614716,
+            "T": 1.98283234,
+            "E": 2.05017063,
+            "TE": 1.97888129
+          }
+        },
+        {
+          "population": "1720",
+          "taxon": "deamii",
+          "n_ramets": 108,
+          "mse_by_model": {
+            "B0": 1.70133263,
+            "G": 1.83219454,
+            "T": 1.82586404,
+            "E": 1.82713107,
+            "TE": 1.78249464
+          }
+        },
+        {
+          "population": "1721",
+          "taxon": "deamii",
+          "n_ramets": 48,
+          "mse_by_model": {
+            "B0": 2.22959299,
+            "G": 2.48271222,
+            "T": 2.23334382,
+            "E": 2.47031811,
+            "TE": 2.21140448
+          }
+        },
+        {
+          "population": "1723",
+          "taxon": "pilosa",
+          "n_ramets": 60,
+          "mse_by_model": {
+            "B0": 2.15720392,
+            "G": 2.11117751,
+            "T": 2.10832811,
+            "E": 2.11547188,
+            "TE": 2.10693662
+          }
+        },
+        {
+          "population": "1724",
+          "taxon": "amoena",
+          "n_ramets": 48,
+          "mse_by_model": {
+            "B0": 1.08585227,
+            "G": 0.94489108,
+            "T": 0.8392674,
+            "E": 0.96166417,
+            "TE": 0.84719848
+          }
+        },
+        {
+          "population": "1726",
+          "taxon": "amoena",
+          "n_ramets": 48,
+          "mse_by_model": {
+            "B0": 1.15991022,
+            "G": 1.07359082,
+            "T": 1.06131151,
+            "E": 1.07372942,
+            "TE": 1.01276067
+          }
+        },
+        {
+          "population": "1727",
+          "taxon": "amoena",
+          "n_ramets": 57,
+          "mse_by_model": {
+            "B0": 1.84543884,
+            "G": 1.62112674,
+            "T": 1.53303311,
+            "E": 1.62512422,
+            "TE": 1.55929111
+          }
+        },
+        {
+          "population": "1728",
+          "taxon": "pilosa",
+          "n_ramets": 48,
+          "mse_by_model": {
+            "B0": 2.51159906,
+            "G": 2.46434401,
+            "T": 2.46668058,
+            "E": 2.43769491,
+            "TE": 2.50077495
+          }
+        },
+        {
+          "population": "1729_amo",
+          "taxon": "amoena",
+          "n_ramets": 45,
+          "mse_by_model": {
+            "B0": 1.78900371,
+            "G": 1.88063919,
+            "T": 2.00913653,
+            "E": 1.85221924,
+            "TE": 1.97981543
+          }
+        },
+        {
+          "population": "1729_pil",
+          "taxon": "pilosa",
+          "n_ramets": 42,
+          "mse_by_model": {
+            "B0": 1.82814406,
+            "G": 2.08634779,
+            "T": 2.15559682,
+            "E": 2.07942251,
+            "TE": 2.13104435
+          }
+        },
+        {
+          "population": "1733",
+          "taxon": "amoena",
+          "n_ramets": 27,
+          "mse_by_model": {
+            "B0": 1.81358821,
+            "G": 1.72589239,
+            "T": 1.81105121,
+            "E": 1.72288457,
+            "TE": 1.97057121
+          }
+        }
+      ]
+    },
+    "flowers_2019": {
+      "role": "SECONDARY_EXPLORATORY",
+      "scale": "log1p_original_count",
+      "model_results": {
+        "B0": {
+          "population_equal_mse": 2.49135145,
+          "ramet_record_weighted_mse": 2.30798122,
+          "relative_population_equal_gain": 0,
+          "relative_record_weighted_gain": 0,
+          "positive_population_folds": 0,
+          "n_source_population_folds": 20,
+          "by_taxon": {
+            "amoena": {
+              "n_source_populations": 8,
+              "relative_equal_population_mse_gain": 0,
+              "positive_population_folds": 0
+            },
+            "deamii": {
+              "n_source_populations": 3,
+              "relative_equal_population_mse_gain": 0,
+              "positive_population_folds": 0
+            },
+            "pilosa": {
+              "n_source_populations": 9,
+              "relative_equal_population_mse_gain": 0,
+              "positive_population_folds": 0
+            }
+          },
+          "predeclared_primary_fruit_decision": "NOT_PRIMARY_ENDPOINT"
+        },
+        "G": {
+          "population_equal_mse": 2.20114309,
+          "ramet_record_weighted_mse": 2.16829966,
+          "relative_population_equal_gain": 0.11648632,
+          "relative_record_weighted_gain": 0.0605211,
+          "positive_population_folds": 13,
+          "n_source_population_folds": 20,
+          "by_taxon": {
+            "amoena": {
+              "n_source_populations": 8,
+              "relative_equal_population_mse_gain": 0.10084181,
+              "positive_population_folds": 6
+            },
+            "deamii": {
+              "n_source_populations": 3,
+              "relative_equal_population_mse_gain": -0.12541778,
+              "positive_population_folds": 0
+            },
+            "pilosa": {
+              "n_source_populations": 9,
+              "relative_equal_population_mse_gain": 0.1815989,
+              "positive_population_folds": 7
+            }
+          },
+          "predeclared_primary_fruit_decision": "NOT_PRIMARY_ENDPOINT"
+        },
+        "T": {
+          "population_equal_mse": 2.19279552,
+          "ramet_record_weighted_mse": 2.15509123,
+          "relative_population_equal_gain": 0.11983694,
+          "relative_record_weighted_gain": 0.06624403,
+          "positive_population_folds": 10,
+          "n_source_population_folds": 20,
+          "by_taxon": {
+            "amoena": {
+              "n_source_populations": 8,
+              "relative_equal_population_mse_gain": 0.07661865,
+              "positive_population_folds": 4
+            },
+            "deamii": {
+              "n_source_populations": 3,
+              "relative_equal_population_mse_gain": -0.01133536,
+              "positive_population_folds": 1
+            },
+            "pilosa": {
+              "n_source_populations": 9,
+              "relative_equal_population_mse_gain": 0.17954798,
+              "positive_population_folds": 5
+            }
+          },
+          "predeclared_primary_fruit_decision": "NOT_PRIMARY_ENDPOINT"
+        },
+        "E": {
+          "population_equal_mse": 2.19498077,
+          "ramet_record_weighted_mse": 2.16262698,
+          "relative_population_equal_gain": 0.1189598,
+          "relative_record_weighted_gain": 0.06297895,
+          "positive_population_folds": 12,
+          "n_source_population_folds": 20,
+          "by_taxon": {
+            "amoena": {
+              "n_source_populations": 8,
+              "relative_equal_population_mse_gain": 0.11014053,
+              "positive_population_folds": 6
+            },
+            "deamii": {
+              "n_source_populations": 3,
+              "relative_equal_population_mse_gain": -0.11194947,
+              "positive_population_folds": 0
+            },
+            "pilosa": {
+              "n_source_populations": 9,
+              "relative_equal_population_mse_gain": 0.17681731,
+              "positive_population_folds": 6
+            }
+          },
+          "predeclared_primary_fruit_decision": "NOT_PRIMARY_ENDPOINT"
+        },
+        "TE": {
+          "population_equal_mse": 2.20403149,
+          "ramet_record_weighted_mse": 2.16308201,
+          "relative_population_equal_gain": 0.11532695,
+          "relative_record_weighted_gain": 0.06278179,
+          "positive_population_folds": 12,
+          "n_source_population_folds": 20,
+          "by_taxon": {
+            "amoena": {
+              "n_source_populations": 8,
+              "relative_equal_population_mse_gain": 0.08060638,
+              "positive_population_folds": 6
+            },
+            "deamii": {
+              "n_source_populations": 3,
+              "relative_equal_population_mse_gain": -0.00999052,
+              "positive_population_folds": 1
+            },
+            "pilosa": {
+              "n_source_populations": 9,
+              "relative_equal_population_mse_gain": 0.16775786,
+              "positive_population_folds": 5
+            }
+          },
+          "predeclared_primary_fruit_decision": "NOT_PRIMARY_ENDPOINT"
+        }
+      },
+      "per_population_holdout": [
+        {
+          "population": "1701",
+          "taxon": "amoena",
+          "n_ramets": 45,
+          "mse_by_model": {
+            "B0": 5.01788551,
+            "G": 4.06310401,
+            "T": 4.07205747,
+            "E": 4.02627299,
+            "TE": 4.12357484
+          }
+        },
+        {
+          "population": "1704",
+          "taxon": "pilosa",
+          "n_ramets": 18,
+          "mse_by_model": {
+            "B0": 5.43241716,
+            "G": 3.04984136,
+            "T": 2.92901058,
+            "E": 3.03817575,
+            "TE": 2.97220459
+          }
+        },
+        {
+          "population": "1708",
+          "taxon": "pilosa",
+          "n_ramets": 21,
+          "mse_by_model": {
+            "B0": 4.04037572,
+            "G": 2.20197277,
+            "T": 2.08733032,
+            "E": 2.19622182,
+            "TE": 2.21090391
+          }
+        },
+        {
+          "population": "1712",
+          "taxon": "pilosa",
+          "n_ramets": 36,
+          "mse_by_model": {
+            "B0": 3.22492113,
+            "G": 2.75328477,
+            "T": 2.70138284,
+            "E": 2.77253014,
+            "TE": 2.7439463
+          }
+        },
+        {
+          "population": "1713",
+          "taxon": "pilosa",
+          "n_ramets": 48,
+          "mse_by_model": {
+            "B0": 2.40766239,
+            "G": 2.38513454,
+            "T": 2.4183454,
+            "E": 2.33773567,
+            "TE": 2.45535058
+          }
+        },
+        {
+          "population": "1714",
+          "taxon": "pilosa",
+          "n_ramets": 48,
+          "mse_by_model": {
+            "B0": 1.81330519,
+            "G": 1.79110365,
+            "T": 1.84473454,
+            "E": 1.73151426,
+            "TE": 1.85303852
+          }
+        },
+        {
+          "population": "1715",
+          "taxon": "amoena",
+          "n_ramets": 48,
+          "mse_by_model": {
+            "B0": 2.15696681,
+            "G": 2.169595,
+            "T": 2.31290799,
+            "E": 2.19739975,
+            "TE": 2.3753601
+          }
+        },
+        {
+          "population": "1716",
+          "taxon": "amoena",
+          "n_ramets": 48,
+          "mse_by_model": {
+            "B0": 2.22531251,
+            "G": 1.64209374,
+            "T": 1.7578419,
+            "E": 1.64973057,
+            "TE": 1.79739439
+          }
+        },
+        {
+          "population": "1718",
+          "taxon": "pilosa",
+          "n_ramets": 54,
+          "mse_by_model": {
+            "B0": 2.1611287,
+            "G": 2.38997638,
+            "T": 2.5507478,
+            "E": 2.45710778,
+            "TE": 2.5718267
+          }
+        },
+        {
+          "population": "1719",
+          "taxon": "deamii",
+          "n_ramets": 66,
+          "mse_by_model": {
+            "B0": 1.80305579,
+            "G": 2.00181206,
+            "T": 1.81320611,
+            "E": 1.97862764,
+            "TE": 1.81799939
+          }
+        },
+        {
+          "population": "1720",
+          "taxon": "deamii",
+          "n_ramets": 108,
+          "mse_by_model": {
+            "B0": 1.8839044,
+            "G": 2.0720982,
+            "T": 1.94385744,
+            "E": 2.08066745,
+            "TE": 1.98507083
+          }
+        },
+        {
+          "population": "1721",
+          "taxon": "deamii",
+          "n_ramets": 48,
+          "mse_by_model": {
+            "B0": 2.10020065,
+            "G": 2.43906343,
+            "T": 2.09569684,
+            "E": 2.37573537,
+            "TE": 2.04190736
+          }
+        },
+        {
+          "population": "1723",
+          "taxon": "pilosa",
+          "n_ramets": 60,
+          "mse_by_model": {
+            "B0": 1.96352007,
+            "G": 1.93700969,
+            "T": 1.95648327,
+            "E": 1.97326256,
+            "TE": 1.95328496
+          }
+        },
+        {
+          "population": "1724",
+          "taxon": "amoena",
+          "n_ramets": 48,
+          "mse_by_model": {
+            "B0": 1.51848404,
+            "G": 1.51613953,
+            "T": 1.58033582,
+            "E": 1.43116104,
+            "TE": 1.46204269
+          }
+        },
+        {
+          "population": "1726",
+          "taxon": "amoena",
+          "n_ramets": 48,
+          "mse_by_model": {
+            "B0": 1.31156716,
+            "G": 1.30120901,
+            "T": 1.35395239,
+            "E": 1.2474719,
+            "TE": 1.26466967
+          }
+        },
+        {
+          "population": "1727",
+          "taxon": "amoena",
+          "n_ramets": 57,
+          "mse_by_model": {
+            "B0": 2.69035327,
+            "G": 2.43352366,
+            "T": 2.38764155,
+            "E": 2.39174875,
+            "TE": 2.34259904
+          }
+        },
+        {
+          "population": "1728",
+          "taxon": "pilosa",
+          "n_ramets": 48,
+          "mse_by_model": {
+            "B0": 2.58241995,
+            "G": 2.24538631,
+            "T": 2.22915164,
+            "E": 2.28868694,
+            "TE": 2.26569756
+          }
+        },
+        {
+          "population": "1729_amo",
+          "taxon": "amoena",
+          "n_ramets": 45,
+          "mse_by_model": {
+            "B0": 1.79014527,
+            "G": 1.85080953,
+            "T": 1.90320182,
+            "E": 1.86599016,
+            "TE": 1.93092475
+          }
+        },
+        {
+          "population": "1729_pil",
+          "taxon": "pilosa",
+          "n_ramets": 42,
+          "mse_by_model": {
+            "B0": 2.24095555,
+            "G": 2.41563097,
+            "T": 2.50520463,
+            "E": 2.49778954,
+            "TE": 2.5011096
+          }
+        },
+        {
+          "population": "1733",
+          "taxon": "amoena",
+          "n_ramets": 27,
+          "mse_by_model": {
+            "B0": 1.46244767,
+            "G": 1.36407318,
+            "T": 1.41282006,
+            "E": 1.36178534,
+            "TE": 1.41172393
+          }
+        }
+      ]
+    }
+  }
+}
