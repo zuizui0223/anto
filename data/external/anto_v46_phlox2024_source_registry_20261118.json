@@ -1,0 +1,65 @@
+{
+  "frozen_protocol_date": "2026-11-18",
+  "reference": "Goulet-Scott et al 2024 Nat Commun 15 4661",
+  "doi": "10.1038/s41467-024-49075-6",
+  "source_doi": "10.5061/dryad.gxd2547sx",
+  "source_repo": "PhloxHopkins/PhloxFieldAdaptation",
+  "source_commit": "d792fe58cce36721394adfd97e9f412396578e86",
+  "source_file": "Dataset_fitness_leaftraits_distance_lat_long.csv",
+  "source_git_blob_sha1": "4c780b0abe644ac69dae86a0450eb598c160626b",
+  "source_size": 175377,
+  "rows": 963,
+  "columns": 26,
+  "genotypes": 284,
+  "populations": 20,
+  "garden_counts": {
+    "1-Amoena-PB": 321,
+    "2-Deamii-JC": 321,
+    "3-Pilosa-LBL": 321
+  },
+  "taxon_counts": {
+    "amoena": 366,
+    "deamii": 222,
+    "pilosa": 375
+  },
+  "populations_by_taxon": {
+    "amoena": 8,
+    "deamii": 3,
+    "pilosa": 9
+  },
+  "garden_taxon_count_per_garden": {
+    "amoena": 122,
+    "deamii": 74,
+    "pilosa": 125
+  },
+  "features": [
+    "leaf_traits_pc1",
+    "leaf_traits_pc2"
+  ],
+  "primary": "fruits_2019",
+  "secondary": [
+    "flowers_2019",
+    "biomass_2019"
+  ],
+  "transform": "natural_log_1_plus",
+  "fold_group": "population",
+  "clonal_group": "genotype",
+  "baseline_group": "garden x taxon",
+  "models": [
+    "B0",
+    "G",
+    "T",
+    "E",
+    "TE"
+  ],
+  "ridge_alpha": 10,
+  "min_gain_equal_population": 0.02,
+  "min_gain_record_weighted": 0.02,
+  "min_positive_source_population_folds": 12,
+  "require_positive_equal_population_gain_in_each_taxon": true,
+  "new_original_study_count": 1,
+  "cross_family_replication": false,
+  "flower_colour_assay": false,
+  "trait_ancestral_regain_assay": false,
+  "independent_original_2014_sample": false
+}
