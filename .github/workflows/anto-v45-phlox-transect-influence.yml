@@ -1,0 +1,27 @@
+name: ANTO v45 source-locked Phlox transect influence
+on:
+  push:
+    branches: ['analysis/anto-v45-*']
+    paths:
+      - 'scripts/analyze_Phlox_transect_influence_v45.py'
+      - 'tests/test_Phlox_transect_influence_v45.py'
+      - 'results/anto_v45_phlox_transect_influence_20261118.json'
+      - 'docs/ANTO_V45_PHLOX_TRANSECT_INFLUENCE_20261118.md'
+      - '.github/workflows/anto-v45-phlox-transect-influence.yml'
+  pull_request:
+    branches: ['analysis/anto-v44-*']
+permissions:
+  contents: read
+jobs:
+  frozen_parent_transect_influence:
+    runs-on: ubuntu-latest
+    timeout-minutes: 8
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Adversarial transect/source tests
+        run: python -m unittest discover -s tests -p 'test_Phlox_transect_influence_v45.py' -v
+      - name: Recalculate exact v45 derived summary without refitting original C++
+        run: python scripts/analyze_Phlox_transect_influence_v45.py --check
