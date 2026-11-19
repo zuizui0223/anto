@@ -17,7 +17,13 @@ sys.path.insert(0,str(ROOT/"scripts"))
 import audit_independent_pollinator_reproduction_sources_v53 as base
 
 def read_csv(raw):
-    reader=csv.DictReader(io.StringIO(raw.decode("utf-8-sig")))
+    text=raw.decode("utf-8-sig")
+    try:
+        delim=csv.Sniffer().sniff(text[:16000],delimiters=",;\\t").delimiter
+    except csv.Error:
+        delim=","
+    reader=csv.DictReader(io.StringIO(text),delimiter=delim)
+    assert reader.fieldnames is not None and "Year" in reader.fieldnames and "Field_code" in reader.fieldnames, "V53_SOURCE_FIELD_YEAR_COLUMNS_MISSING"
     return list(reader)
 
 def field_keys(rows):
