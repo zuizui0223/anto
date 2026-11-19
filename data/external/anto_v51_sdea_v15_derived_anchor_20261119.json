@@ -1,0 +1,59 @@
+{
+  "source_original_study": "Castellanos et al 2023 Ulex original single continuous regional population, six sampling sites",
+  "sdea_parent_original_receipt_blob_sha1": "1fb22c1028388e720f388f2345c168270b065af4",
+  "source_zenodo_record": 7761289,
+  "source_md5": {
+    "README.md": "9a6d62c907a93fe7b67268922f756995",
+    "floral.traits.csv": "14216bb46af39bfd0b959c1aa092485b",
+    "fruits.and.mean.floral.traits.csv": "8ca72b7d9721f6d6279e793a1526c43e",
+    "pollinator.census.csv": "78494af547de11c1800af50a74c5642f",
+    "relatedness.matrix.csv": "ecaa79680ffa25cb45ebdb73c11fe407"
+  },
+  "source_matched_individuals": 202,
+  "original_six_sampling_sites_not_genetically_independent": true,
+  "original_site_folds": [
+    {
+      "site": "AresM",
+      "n": 32,
+      "m0": 0.006819274980451126,
+      "m1": 0.003723129857058354
+    },
+    {
+      "site": "Cheste",
+      "n": 37,
+      "m0": 0.011160555962190375,
+      "m1": 0.010700763035468713
+    },
+    {
+      "site": "Chiva",
+      "n": 33,
+      "m0": 0.0033444921750312505,
+      "m1": 0.0021094446630776655
+    },
+    {
+      "site": "Montserrat",
+      "n": 37,
+      "m0": 0.015413429603395118,
+      "m1": 0.015325290458524824
+    },
+    {
+      "site": "Simat",
+      "n": 37,
+      "m0": 0.009118220714727857,
+      "m1": 0.009310544061747791
+    },
+    {
+      "site": "Sot.Chera",
+      "n": 26,
+      "m0": 0.006549841605580245,
+      "m1": 0.005111954919802316
+    }
+  ],
+  "existing_sdea_v15_frozen_trait_increment": {
+    "descriptive_readiness_gate": "NO_UNIVERSAL_SITE_TRANSFER",
+    "equal_site_mean_mse_gain": 0.0010207813409493843,
+    "individual_weighted_mse_gain": 0.0009424543984278608,
+    "site_count": 6,
+    "sites_with_positive_gain": 5
+  }
+}
