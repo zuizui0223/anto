@@ -1,0 +1,50 @@
+{
+  "analysis_type": "POST_GATE_ORIGINAL_MOTA_NUMERIC_SOURCE_INTEGRITY_DIAGNOSTIC_ONLY",
+  "explanation": "This count-only source audit follows v54 fail-closed source gate; not evidence of a zero biological effect.",
+  "maximum_absolute_author_seed_identity_difference": 0,
+  "maximum_absolute_author_visitation_identity_difference": 9,
+  "original_file_md5": {
+    "Database_Productivity.csv": "aeea30a21e495498295241bcfd8c693d",
+    "Database_Visitation_rates.csv": "e13131ad60b133cc6ab25e20bbd3554b",
+    "README_file.txt": "479b26d3cebb72c8491b0ec00609c08c"
+  },
+  "original_matched_fieldyears": 80,
+  "original_matched_harvest_rows": 2217,
+  "original_matched_visit_rows": 11682,
+  "original_row_values_or_identifiers_exported": false,
+  "original_v54_preregistered_source_identity_guard_modified": false,
+  "per_source_numeric_column_statuses": {
+    "harvest_No_Aborts_Total": {
+      "MISSING": 1056,
+      "OK": 1161
+    },
+    "harvest_No_Seeds_Total": {
+      "OK": 2217
+    },
+    "harvest_No_rep_units": {
+      "OK": 2217
+    },
+    "visits_No_Interactions_APIS": {
+      "OK": 11682
+    },
+    "visits_No_Interactions_TOTAL": {
+      "OK": 11682
+    },
+    "visits_No_Interactions_WILD": {
+      "OK": 11682
+    },
+    "visits_Total_no_monitored_units": {
+      "OK": 11682
+    }
+  },
+  "predictive_effect_or_visitor_seed_association_computed": false,
+  "source": 6671199,
+  "source_count_categories": {
+    "harvest_matched_rows": 2217,
+    "harvest_rows_any_numeric_not_admitted": 1056,
+    "visits_discrepancy_direction_APIS_WILD_EXCEEDS_TOTAL": 1933,
+    "visits_discrepancy_direction_TOTAL_EXCEEDS_APIS_WILD": 2154,
+    "visits_matched_rows": 11682,
+    "visits_rows_total_vs_apis_wild_disagree": 4087
+  }
+}
