@@ -68,9 +68,9 @@ class OriginalFieldYearSunflowerBenchmark(unittest.TestCase):
             v.distance_key(row)
 
     @staticmethod
-    def synthetic():
+    def synthetic(n=65):
         rows=[]
-        for i in range(65):
+        for i in range(n):
             row={"year":"2017" if i%2==0 else "2018",
                  "region":"Burgos" if i%3 else "Cuenca",
                  "field_type":v.TYPES[i%3],
