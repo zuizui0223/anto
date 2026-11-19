@@ -1,0 +1,305 @@
+{
+  "analysis_type": "V53_INDEPENDENT_SOURCE_IDENTITY_AND_GRAIN_ONLY_NO_OUTCOME_READOUT",
+  "no_independent_original_fitted_predictive_studies_added": true,
+  "no_original_reproductive_or_visitor_values_parsed_for_effect": true,
+  "no_plant_visitor_reproductive_same_ID_automatically_admitted": true,
+  "previous_traine_access_stop_respected": true,
+  "records": [
+    {
+      "candidate": "Pardee2019",
+      "direct_individual_plant_visitation_to_seed_set_join_ADMITTED": false,
+      "heldout_block_and_temporal_semantics_verified": false,
+      "n_source_files_exact_MD5_verified": 7,
+      "n_unverified_raw_token_overlaps_at_least_30": 0,
+      "original_data_doi": "10.5061/dryad.kd1r166",
+      "original_data_used_for_numerical_model": false,
+      "same_token_plant_key_candidate_comparisons": [],
+      "source_access_status": "ALL_ORIGINAL_SOURCE_MD5_AUTHENTICATED_HEADERS_AND_KEYS_ONLY",
+      "source_files_schema": [
+        {
+          "bytes": 28081,
+          "candidate_plant_fields": [],
+          "delimiter": "','",
+          "file": "AllSpeciesPhenology.csv",
+          "n_original_source_rows": 319,
+          "no_numeric_flower_visit_or_fruit_seed_outcomes_examined": true,
+          "original_column_names": [
+            "Plot",
+            "Year",
+            "SnowTreat",
+            "FrostTreat",
+            "Species",
+            "FirstDate",
+            "JulianFirstDate",
+            "PeakDate",
+            "JulianPeakDate",
+            "LastDate",
+            "JuilianLastDate",
+            "PeakFloralAbundance",
+            "BloomDuration(days)",
+            "PropFrostDamage"
+          ],
+          "original_file_md5": "baab9d097cc98daf270b8d54dd3faf70",
+          "parsed_as_csv": true,
+          "potential_identity_or_block_field_cardinality": {
+            "BloomDuration(days)": 42,
+            "FirstDate": 48,
+            "JuilianLastDate": 41,
+            "JulianFirstDate": 49,
+            "JulianPeakDate": 32,
+            "LastDate": 41,
+            "PeakDate": 28,
+            "Plot": 40,
+            "Species": 4,
+            "Year": 2
+          }
+        },
+        {
+          "bytes": 17694,
+          "candidate_plant_fields": [],
+          "delimiter": "','",
+          "file": "AllSpeciesVisitation.csv",
+          "n_original_source_rows": 320,
+          "no_numeric_flower_visit_or_fruit_seed_outcomes_examined": true,
+          "original_column_names": [
+            "year",
+            "Plot",
+            "species",
+            "SnowTreat",
+            "FrostTreat",
+            "Total_visitors",
+            "Total_flower_visited",
+            "Total_Time_sec"
+          ],
+          "original_file_md5": "5b7ec80a6183546b203a4830311157df",
+          "parsed_as_csv": true,
+          "potential_identity_or_block_field_cardinality": {
+            "Plot": 40,
+            "species": 4,
+            "year": 2
+          }
+        },
+        {
+          "bytes": 11647,
+          "candidate_plant_fields": [],
+          "delimiter": "','",
+          "file": "Claytonia_SeedSet.csv",
+          "n_original_source_rows": 231,
+          "no_numeric_flower_visit_or_fruit_seed_outcomes_examined": true,
+          "original_column_names": [
+            "Plot",
+            "SnowTreat",
+            "FrostTreat",
+            "Plant_num",
+            "Pollen_supplemented",
+            "Bud_aborts",
+            "Total_fruits",
+            "Successful_fruits",
+            "Flower_aborts",
+            "Dehisced",
+            "Total_seeds",
+            "Prop_fruit_set",
+            "Mean_seeds"
+          ],
+          "original_file_md5": "8ececdc7e4711c155d51d92733791ef3",
+          "parsed_as_csv": true,
+          "potential_identity_or_block_field_cardinality": {
+            "Plant_num": 15,
+            "Plot": 39
+          }
+        },
+        {
+          "bytes": 10490,
+          "candidate_plant_fields": [],
+          "delimiter": "','",
+          "file": "Delphinium_SeedSet.csv",
+          "n_original_source_rows": 229,
+          "no_numeric_flower_visit_or_fruit_seed_outcomes_examined": true,
+          "original_column_names": [
+            "Plot",
+            "SnowTreat",
+            "FrostTreat",
+            "Plant_num",
+            "Pollen_supplemented",
+            "Flower_aborts",
+            "Successful_fruits",
+            "Total_fruits",
+            "Total_pods",
+            "Total_seeds",
+            "Prop_fruit_set",
+            "Mean_seeds"
+          ],
+          "original_file_md5": "ed31af34e704d15d23d6897001d999fd",
+          "parsed_as_csv": true,
+          "potential_identity_or_block_field_cardinality": {
+            "Plant_num": 8,
+            "Plot": 34
+          }
+        },
+        {
+          "bytes": 11291,
+          "candidate_plant_fields": [],
+          "delimiter": "','",
+          "file": "Mertensia_SeedSet.csv",
+          "n_original_source_rows": 243,
+          "no_numeric_flower_visit_or_fruit_seed_outcomes_examined": true,
+          "original_column_names": [
+            "Plot",
+            "SnowTreat",
+            "FrostTreat",
+            "Plant_num",
+            "Flowers_left",
+            "Bud_aborts",
+            "Flower_aborts",
+            "Dehisced",
+            "Successful_Fruits",
+            "Prop_Fruit_set",
+            "Total_seeds"
+          ],
+          "original_file_md5": "c18f19a5c5ba7ee9b9ba942a278dfe04",
+          "parsed_as_csv": true,
+          "potential_identity_or_block_field_cardinality": {
+            "Plant_num": 8,
+            "Plot": 39
+          }
+        },
+        {
+          "bytes": 14107,
+          "candidate_plant_fields": [],
+          "delimiter": "','",
+          "file": "Potentilla_SeedSet.csv",
+          "n_original_source_rows": 260,
+          "no_numeric_flower_visit_or_fruit_seed_outcomes_examined": true,
+          "original_column_names": [
+            "Plot",
+            "SnowTreat",
+            "FrostTreat",
+            "Plant_num",
+            "Pollen_supplemented",
+            "Flower_abort",
+            "Bud_aborts",
+            "Dehisced",
+            "Successful_fruits",
+            "Total_fruits",
+            "Total_seeds",
+            "Prop_fruit_set",
+            "Mean_Seeds"
+          ],
+          "original_file_md5": "046df7b111a30effc245c68889023073",
+          "parsed_as_csv": true,
+          "potential_identity_or_block_field_cardinality": {
+            "Plant_num": 8,
+            "Plot": 39
+          }
+        },
+        {
+          "bytes": 55492,
+          "file": "MetaData.xlsx",
+          "original_binary_values_parsed": false,
+          "original_file_md5": "69f7e248e121931d62e8465dc46ef442",
+          "parsed_as_csv": false
+        }
+      ],
+      "source_visit_or_reproductive_values_modeled": false,
+      "zenodo_record_id": 4970401
+    },
+    {
+      "candidate": "Mota2022",
+      "direct_individual_plant_visitation_to_seed_set_join_ADMITTED": false,
+      "heldout_block_and_temporal_semantics_verified": false,
+      "n_source_files_exact_MD5_verified": 3,
+      "n_unverified_raw_token_overlaps_at_least_30": 0,
+      "original_data_doi": "10.5061/dryad.h18931zpg",
+      "original_data_used_for_numerical_model": false,
+      "same_token_plant_key_candidate_comparisons": [],
+      "source_access_status": "ALL_ORIGINAL_SOURCE_MD5_AUTHENTICATED_HEADERS_AND_KEYS_ONLY",
+      "source_files_schema": [
+        {
+          "bytes": 263456,
+          "candidate_plant_fields": [],
+          "delimiter": "';'",
+          "file": "Database_Productivity.csv",
+          "n_original_source_rows": 2875,
+          "no_numeric_flower_visit_or_fruit_seed_outcomes_examined": true,
+          "original_column_names": [
+            "IR",
+            "Region",
+            "Year",
+            "Field_code_original",
+            "Field_code",
+            "Field_Type",
+            "Variety",
+            "Distance",
+            "No_Seeds_Total",
+            "No_Aborts_Total",
+            "No_rep_units",
+            "Total_weight",
+            "Weight_100_seeds",
+            "Seed_set",
+            "WxS"
+          ],
+          "original_file_md5": "aeea30a21e495498295241bcfd8c693d",
+          "parsed_as_csv": true,
+          "potential_identity_or_block_field_cardinality": {
+            "Field_Type": 4,
+            "Field_code": 102,
+            "Field_code_original": 62,
+            "No_rep_units": 622,
+            "Year": 2
+          }
+        },
+        {
+          "bytes": 891651,
+          "candidate_plant_fields": [],
+          "delimiter": "';'",
+          "file": "Database_Visitation_rates.csv",
+          "n_original_source_rows": 11683,
+          "no_numeric_flower_visit_or_fruit_seed_outcomes_examined": true,
+          "original_column_names": [
+            "Observer",
+            "Year",
+            "Region",
+            "Field_ID",
+            "Field_code",
+            "Field_Type",
+            "Distance",
+            "Hour",
+            "Total_no_monitored_units",
+            "No_Individuals_TOTAL",
+            "No_Individuals_APIS",
+            "No_Individuals_WILD",
+            "No_Interactions_TOTAL",
+            "No_Interactions_APIS",
+            "No_Interactions_WILD",
+            "Visitation_TOTAL",
+            "Visitation_APIS",
+            "Visitation_WILD",
+            "No_Species"
+          ],
+          "original_file_md5": "e13131ad60b133cc6ab25e20bbd3554b",
+          "parsed_as_csv": true,
+          "potential_identity_or_block_field_cardinality": {
+            "Field_ID": 51,
+            "Field_Type": 3,
+            "Field_code": 81,
+            "No_Individuals_APIS": 18,
+            "No_Individuals_TOTAL": 18,
+            "No_Individuals_WILD": 11,
+            "No_Species": 6,
+            "Year": 2
+          }
+        },
+        {
+          "bytes": 3026,
+          "file": "README_file.txt",
+          "original_binary_values_parsed": false,
+          "original_file_md5": "479b26d3cebb72c8491b0ec00609c08c",
+          "parsed_as_csv": false
+        }
+      ],
+      "source_visit_or_reproductive_values_modeled": false,
+      "zenodo_record_id": 6671199
+    }
+  ],
+  "registered_candidates_count": 2
+}
