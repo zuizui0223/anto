@@ -117,7 +117,7 @@ def prior_source():
     r=read_registry()
     require(p["parent_git_blob_sha1"]==
             r["sdea_v17_prior_derived_receipt_git_blob_sha1"]
-            and p["source_zenodo_record"]==7335086
+            and p["original_source_zenodo_record"]==7335086
             and p["original_file_MD5"]==r["author_source_MD5"]
             and p["source_n_plants"]==53
             and p["source_n_visitor_group_rows"]==427
