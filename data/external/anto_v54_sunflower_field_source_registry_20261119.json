@@ -1,0 +1,99 @@
+{
+  "analysis_type": "ORIGINAL_MOTA_SUNFLOWER_LEAVE_PHYSICAL_FIELD_OUT_VISIT_VS_SEED_SET",
+  "freeze_date": "2026-11-19",
+  "paper": "Mota et al 2022",
+  "source_data_doi": "10.5061/dryad.h18931zpg",
+  "zenodo_record_id": 6671199,
+  "original_files_md5": {
+    "Database_Productivity.csv": "aeea30a21e495498295241bcfd8c693d",
+    "Database_Visitation_rates.csv": "e13131ad60b133cc6ab25e20bbd3554b",
+    "README_file.txt": "479b26d3cebb72c8491b0ec00609c08c"
+  },
+  "prior_original_v53_fieldyear_receipt_git_blob_sha1": "7a4fb27c7f26abfa8400d23b041e1a3d3e3424c9",
+  "original_source_productivity_rows": 2875,
+  "original_source_visitation_census_rows": 11683,
+  "original_matched_fieldyears": 80,
+  "original_matched_productivity_rows": 2217,
+  "original_matched_visitation_rows": 11682,
+  "original_matched_physical_fields": 51,
+  "original_matched_fieldyears_by_year": {
+    "2017": 41,
+    "2018": 39
+  },
+  "original_matched_fieldyears_by_region": {
+    "Burgos": 38,
+    "Cuenca": 42
+  },
+  "original_matched_fieldyears_by_field_type": {
+    "NonV": 10,
+    "SNV": 32,
+    "WFS": 38
+  },
+  "original_common_distance_band_counts": {
+    "3": 1,
+    "4": 79
+  },
+  "original_distance_bands": [
+    "0",
+    "15",
+    "30",
+    "60"
+  ],
+  "original_field_type_categories": [
+    "NonV",
+    "SNV",
+    "WFS"
+  ],
+  "original_regions": [
+    "Burgos",
+    "Cuenca"
+  ],
+  "years": [
+    "2017",
+    "2018"
+  ],
+  "source_seed_set_numerator": "No_Seeds_Total",
+  "source_seed_set_denominator": "No_rep_units",
+  "source_seed_set_identity": "No_rep_units = No_Seeds_Total + No_Aborts_Total",
+  "visitor_per_one_minute_source_total": "No_Interactions_TOTAL",
+  "visitor_source_apis": "No_Interactions_APIS",
+  "visitor_source_wild": "No_Interactions_WILD",
+  "source_visitation_denominator": "Total_no_monitored_units",
+  "source_visitation_identity": "No_Interactions_TOTAL = No_Interactions_APIS + No_Interactions_WILD",
+  "within_distance_band_counts_then_equal_band_average": true,
+  "source_missing_records_max_fraction": 0.05,
+  "min_fieldyears_valid": 70,
+  "min_physical_fields_valid": 45,
+  "min_common_distance_bands": 3,
+  "holdout_unit": "original physical field (Region, Field_code_original) all years grouped",
+  "models": [
+    "B0",
+    "B1",
+    "B2"
+  ],
+  "B0": "unpenalized intercept + Year2018, RegionCuenca, FieldTypeSNV and FieldTypeWFS ridge 8",
+  "B1": "B0 + source total bee visits / monitored sunflower minute, log1p, train-only-standardized",
+  "B2": "B0 + separately train-only-standardized log1p Apis rate and wild bee rate",
+  "original_outcome": "source fieldyear seed set fraction, distance-band-equal average",
+  "original_year_predictor_measured_during_same_season": true,
+  "ridge_lambda": 8,
+  "prediction_clip_unit_interval": true,
+  "primary_comparison": "B0 MSE - B1 MSE physical-field-equal",
+  "permutations": 200,
+  "permutation_seed": 20261119,
+  "permutation_stratum": "Region×Year×Field_Type original fieldyear",
+  "descriptive_gate": {
+    "positive_equal_physical_field_mse": true,
+    "positive_fieldyear_weighted_mse": true,
+    "more_than_half_physical_fields_positive": true,
+    "positive_in_both_regions": true,
+    "positive_in_at_least_two_of_three_field_types": true,
+    "observed_exceeds_200_shuffles_q975": true
+  },
+  "original_individual_sunflower_visitation_linked_to_harvest": false,
+  "same_original_study_as_sinapis": false,
+  "new_original_independent_studies_vs_v53_source_gate": 0,
+  "study_is_posthoc": true,
+  "valid_randomization_p_value": false,
+  "numerical_original_seed_or_visitation_outcomes_inspected_before_freeze": false
+}

@@ -1,0 +1,34 @@
+name: ANTO v54 original sunflower physical-field visitor information
+on:
+  push:
+    branches: ['analysis/anto-v54-*']
+    paths:
+      - 'data/external/anto_v54*'
+      - 'docs/ANTO_V54*'
+      - 'scripts/analyze_original_Mota_sunflower_field_holdout_v54.py'
+      - 'tests/test_original_Mota_sunflower_field_holdout_v54.py'
+      - 'results/anto_v54_original_sunflower_field_heldout_20261119.json'
+      - '.github/workflows/anto-v54-original-sunflower-field-transfer.yml'
+  pull_request:
+    branches: ['analysis/anto-v53-*']
+permissions:
+  contents: read
+jobs:
+  original2022_sunflower_physical_field_holdout:
+    runs-on: ubuntu-latest
+    timeout-minutes: 28
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Adversarial source, year leakage and prediction tests
+        run: python -m unittest discover -s tests -p 'test_original_Mota_sunflower_field_holdout_v54.py' -v
+      - name: Source-authenticated 3 original MD5 sunflower files and physical-field heldouts
+        shell: bash
+        run: |
+          if [ -f results/anto_v54_original_sunflower_field_heldout_20261119.json ]; then
+            python scripts/analyze_original_Mota_sunflower_field_holdout_v54.py --check
+          else
+            python scripts/analyze_original_Mota_sunflower_field_holdout_v54.py
+          fi
