@@ -1,0 +1,53 @@
+{
+  "analysis_type": "V53_INDEPENDENT_SOURCE_IDENTITY_AND_GRAIN_ONLY_NO_OUTCOME_READOUT",
+  "date": "2026-11-19",
+  "prior_sinapis_original_study": "Hoefer et al 2022, ANTO PR62, one original field trial",
+  "prior_brassica_traine_egwe_access_stop": {
+    "dataset_doi": "10.5061/dryad.2ngf1vj15",
+    "source_repo": "zuizui0223/egwe",
+    "prior_workflow_run": 37788113341,
+    "original_dryad_file_id": 4644044,
+    "original_metadata_digest_sha256": "4c9162866b4d90afd31c847e19e9de39514ab168088de4ba57e7f3c70d37af77",
+    "exact_file_stream_status": 403,
+    "original_csv_accessed": false,
+    "should_retry_unauthenticated": false
+  },
+  "candidates": [
+    {
+      "code": "Pardee2019",
+      "zenodo_record_id": 4970401,
+      "original_data_doi": "10.5061/dryad.kd1r166",
+      "source_study": "Pardee et al 2019 four subalpine wildflower species one snowmelt/frost experiment",
+      "files_md5": {
+        "AllSpeciesPhenology.csv": "baab9d097cc98daf270b8d54dd3faf70",
+        "AllSpeciesVisitation.csv": "5b7ec80a6183546b203a4830311157df",
+        "Claytonia_SeedSet.csv": "8ececdc7e4711c155d51d92733791ef3",
+        "Delphinium_SeedSet.csv": "ed31af34e704d15d23d6897001d999fd",
+        "Mertensia_SeedSet.csv": "c18f19a5c5ba7ee9b9ba942a278dfe04",
+        "Potentilla_SeedSet.csv": "046df7b111a30effc245c68889023073",
+        "MetaData.xlsx": "69f7e248e121931d62e8465dc46ef442"
+      }
+    },
+    {
+      "code": "Mota2022",
+      "zenodo_record_id": 6671199,
+      "original_data_doi": "10.5061/dryad.h18931zpg",
+      "source_study": "Mota et al 2022 sunflower productivity and visitation one crop experiment",
+      "files_md5": {
+        "Database_Productivity.csv": "aeea30a21e495498295241bcfd8c693d",
+        "Database_Visitation_rates.csv": "e13131ad60b133cc6ab25e20bbd3554b",
+        "README_file.txt": "479b26d3cebb72c8491b0ec00609c08c"
+      }
+    }
+  ],
+  "max_bytes_per_file": 2000000,
+  "per_plant_same_id_join_min": 30,
+  "min_independent_heldout_blocks": 3,
+  "min_linked_plants_per_block": 5,
+  "only_metadata_columns_counts_identifiers": true,
+  "may_read_reproductive_outcome_values": false,
+  "fit_any_model": false,
+  "source_scope": "two new original candidate experiments, eligibility only",
+  "this_is_not_biological_replication": true,
+  "valid_p_value": false
+}
