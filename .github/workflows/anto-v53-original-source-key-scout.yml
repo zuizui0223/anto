@@ -1,0 +1,34 @@
+name: ANTO v53 source-only independent study join and grain audit
+on:
+  push:
+    branches: ['analysis/anto-v53-*']
+    paths:
+      - 'data/external/anto_v53*'
+      - 'docs/ANTO_V53*'
+      - 'scripts/audit_independent_pollinator_reproduction_sources_v53.py'
+      - 'tests/test_independent_original_source_grain_v53.py'
+      - 'results/anto_v53_original_source_grain_audit_20261119.json'
+      - '.github/workflows/anto-v53-original-source-key-scout.yml'
+  pull_request:
+    branches: ['analysis/anto-v52-*']
+permissions:
+  contents: read
+jobs:
+  no_fitted_outcome_original_source_gate:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Adverse source-integrity, join and no-outcome tests
+        run: python -m unittest discover -s tests -p 'test_independent_original_source_grain_v53.py' -v
+      - name: Authenticate two original Zenodo source records and inspect identity schema only
+        shell: bash
+        run: |
+          if [ -f results/anto_v53_original_source_grain_audit_20261119.json ]; then
+            python scripts/audit_independent_pollinator_reproduction_sources_v53.py --check
+          else
+            python scripts/audit_independent_pollinator_reproduction_sources_v53.py
+          fi
