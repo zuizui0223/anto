@@ -166,5 +166,38 @@ class V49MultiTaxonOriginal2024Holdouts(unittest.TestCase):
         self.assertFalse(output["new_p_values_or_confidence_intervals"])
 
 
+    def test_posthoc_v48_v49_baseline_parity_846_folds(self):
+        """After-result diagnostic: same B0, but slopes use other taxa in v49."""
+        earlier = ROOT / "results/anto_v48_phlox2024_train2_matched_source_20261119.json"
+        newer = v.RECEIPT
+        if not newer.exists():
+            self.skipTest("v49 receipt not frozen for baseline-parity diagnostic")
+        self.assertEqual(
+            v.git_blob_sha1(earlier.read_bytes()),
+            "e07fb43c92a6ef3fd5c790720daab8047f937803")
+        old = json.loads(earlier.read_text())
+        now = json.loads(newer.read_text())
+        self.assertEqual(old["new_source_model_fits"], 423)
+        self.assertEqual(now["source_population_model_fits"], 423)
+        index = {(p["taxon"], tuple(p["three_source_populations"])): p
+                 for p in old["all_panels"]}
+        self.assertEqual(len(index), 141)
+        seen = 0
+        for panel in now["original_panel_fit_details"]:
+            key = (panel["taxon"], tuple(panel["three_focal_population_ids"]))
+            self.assertIn(key, index)
+            orig = index[key]
+            for fold in panel["heldout_folds"]:
+                prior = next(q for q in orig["three_folds_one_source_pop_out"]
+                             if q["heldout_source_population"] == fold["heldout"])
+                self.assertEqual(fold["n_test_ramets"], prior["n_heldout_ramets"])
+                for endpoint in v.ENDPOINTS:
+                    self.assertAlmostEqual(
+                        fold["loss"][endpoint]["B0"],
+                        prior["loss"][endpoint]["B0"], delta=1e-8)
+                    seen += 1
+        self.assertEqual(seen, 846)
+
+
 if __name__ == "__main__":
     unittest.main()
