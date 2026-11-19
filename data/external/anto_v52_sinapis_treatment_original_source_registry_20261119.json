@@ -1,0 +1,85 @@
+{
+  "analysis_type": "POSTHOC_ORIGINAL_SINAPIS_THREE_TREATMENT_HELDOUT_VISITOR_INFORMATION",
+  "protocol_freeze_date": "2026-11-19",
+  "original_publication": "Höfer et al 2022 Functional Ecology",
+  "original_publication_doi": "10.1111/1365-2435.14233",
+  "source_data_doi": "10.5061/dryad.66t1g1k5f",
+  "zenodo_record_id": 7335086,
+  "author_source_MD5": {
+    "Floral_traits.csv": "24f1f01435fa22faa832c415bbd0b77e",
+    "Int_data.csv": "d67c32cc5aa357fe6e6d952a801ea38f",
+    "Plantlist.csv": "630eb7d3d7c871f65c2bd62890e1597c",
+    "README.md": "68bf11faaa9786fbb39f9e32006b336d"
+  },
+  "sdea_repo": "zuizui0223/SDEA",
+  "sdea_original_source_commit": "a8990f5255b1b27ed5fec85587bf09ef6390882a",
+  "sdea_original_parser_file": "src/sdea/sinapis_process.py",
+  "sdea_original_parser_git_blob_sha1": "5f797c1d891c8f8de711909a56ae26530841a2ba",
+  "sdea_v17_prior_derived_receipt_file": "results/v17_sinapis_process.json",
+  "sdea_v17_prior_derived_receipt_git_blob_sha1": "fa2419d32b74f22f67ea9cbfd79123109db4fdf0",
+  "original_total_plant_records": 53,
+  "original_visitor_group_rows": 427,
+  "original_complete_case_plants": 52,
+  "original_shelter_counts": {
+    "1": 11,
+    "2": 9,
+    "3": 8,
+    "4": 12,
+    "5": 12
+  },
+  "original_treatments": [
+    "Control",
+    "Drought",
+    "PrecipRed"
+  ],
+  "original_rain_shelters": 5,
+  "treatment_holdout_folds": 3,
+  "model_names": [
+    "U0",
+    "U1",
+    "U2",
+    "U3"
+  ],
+  "U0": [
+    "log_flower"
+  ],
+  "U1": [
+    "log_flower",
+    "display",
+    "petal_width"
+  ],
+  "U2": [
+    "log_flower",
+    "display",
+    "petal_width",
+    "log_visit_rate"
+  ],
+  "U3": [
+    "log_flower",
+    "log_visit_rate"
+  ],
+  "model_treatment_indicators_excluded": true,
+  "reason_treatment_dummies_removed": "treatment category absent from corresponding training fold",
+  "training_only_standardization": true,
+  "training_ridge_penalty": 4,
+  "original_sdea_shelter_20_cell_mse_abs_tolerance": 1e-8,
+  "primary_comparison": "U1_MSE minus U2_MSE",
+  "secondary_morphology_comparison": "U0_MSE minus U1_MSE",
+  "secondary_visit_only_comparison": "U0_MSE minus U3_MSE",
+  "placebo_seed": 20261119,
+  "placebo_replicates": 200,
+  "placebo_shuffle_stratum": "original shelter×treatment plant",
+  "pass_requirements": {
+    "equal_treatment_mse_gain_positive": true,
+    "plant_weighted_mse_gain_positive": true,
+    "improved_treatments_at_least": 2,
+    "observed_gain_exceeds_placebo_q975": true
+  },
+  "new_original_biological_studies_vs_sdea_v17": 0,
+  "new_original_biological_studies_vs_anto_phlox_ulex": 1,
+  "randomization_causal_p_value": false,
+  "source_is_posthoc": true,
+  "no_molecular_genotype": true,
+  "no_pollen_deposition_measured": true,
+  "no_ancestral_flower_regain_measured": true
+}
