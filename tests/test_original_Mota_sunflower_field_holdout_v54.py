@@ -117,11 +117,11 @@ class OriginalFieldYearSunflowerBenchmark(unittest.TestCase):
         self.assertEqual(field["heldout_fieldyear_years"],["2017","2018"])
 
     def test_prediction_saturation_metadata_retained(self):
-        data=self.synthetic()
+        data=self.synthetic(75)
         scored=v.leave_field_out(data)
         s=v.score_summary(scored)
-        self.assertEqual(s["original_heldout_physical_fields"],65)
-        self.assertEqual(s["original_heldout_fieldyears"],65)
+        self.assertEqual(s["original_heldout_physical_fields"],75)
+        self.assertEqual(s["original_heldout_fieldyears"],75)
         self.assertIn("total_raw_below_zero",s["models"]["B1"])
 
     def test_incorrect_training_source_denominator_blocks(self):
