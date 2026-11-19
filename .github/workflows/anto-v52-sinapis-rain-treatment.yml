@@ -1,0 +1,55 @@
+name: ANTO v52 original Sinapis cross-rainfall-treatment visitor information
+on:
+  push:
+    branches: ['analysis/anto-v52-*']
+    paths:
+      - 'data/external/anto_v52*'
+      - 'docs/ANTO_V52*'
+      - 'scripts/analyze_original_Sinapis_treatment_holdout_v52.py'
+      - 'tests/test_original_Sinapis_treatment_holdout_v52.py'
+      - 'results/anto_v52_sinapis_treatment_heldout_original_source_20261119.json'
+      - '.github/workflows/anto-v52-sinapis-rain-treatment.yml'
+  pull_request:
+    branches: ['analysis/anto-v51-*']
+permissions:
+  contents: read
+jobs:
+  original_sinapis_three_treatment_folds:
+    runs-on: ubuntu-latest
+    timeout-minutes: 18
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Retrieve immutable prior SDEA v17 original source parser
+        shell: bash
+        run: |
+          curl --fail --location --retry 3 --max-time 120 --silent --show-error \
+            'https://raw.githubusercontent.com/zuizui0223/SDEA/a8990f5255b1b27ed5fec85587bf09ef6390882a/src/sdea/sinapis_process.py' \
+            --output "$RUNNER_TEMP/sdea_original_sinapis_v17.py"
+      - name: Synthetic source-grain and ridge-no-leakage tests
+        run: python -m unittest discover -s tests -p 'test_original_Sinapis_treatment_holdout_v52.py' -v
+      - name: Fetch four canonical original Zenodo source files through pinned SDEA v17 and MD5 audit
+        shell: bash
+        run: |
+          python scripts/analyze_original_Sinapis_treatment_holdout_v52.py \
+            --sdea-script "$RUNNER_TEMP/sdea_original_sinapis_v17.py" \
+            --fetch-source-to "$RUNNER_TEMP/sinapis_orig"
+      - name: Re-evaluate original 5 x 4 SDEA shelter MSE and source/stratum tests
+        env:
+          SDEA_V52_PINNED_SOURCE_CODE: ${{ runner.temp }}/sdea_original_sinapis_v17.py
+          SINAPIS_V52_SOURCE_ROOT: ${{ runner.temp }}/sinapis_orig
+        run: python -m unittest discover -s tests -p 'test_original_Sinapis_treatment_holdout_v52.py' -v
+      - name: Original 52-plant leave-treatment-out and source-preserving 200 visitor placebos
+        shell: bash
+        run: |
+          if [ -f results/anto_v52_sinapis_treatment_heldout_original_source_20261119.json ]; then
+            python scripts/analyze_original_Sinapis_treatment_holdout_v52.py \
+              --sdea-script "$RUNNER_TEMP/sdea_original_sinapis_v17.py" \
+              --source-root "$RUNNER_TEMP/sinapis_orig" --check
+          else
+            python scripts/analyze_original_Sinapis_treatment_holdout_v52.py \
+              --sdea-script "$RUNNER_TEMP/sdea_original_sinapis_v17.py" \
+              --source-root "$RUNNER_TEMP/sinapis_orig"
+          fi
