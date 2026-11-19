@@ -1,0 +1,31 @@
+{
+  "analysis_type": "POST_OUTCOME_ULEX_V51_FAR_PAIR_PREDICTION_CLIP_DIAGNOSTIC",
+  "source_original_v51_result_git_blob_sha1": "8f1d5435d2d14c2b2c999671ff9801cffab01a71",
+  "original_zenodo_record_id": 7761289,
+  "original_source_individuals": 202,
+  "original_sampling_sites": 6,
+  "regimes": [
+    "FULL5",
+    "NEAR2",
+    "FAR2"
+  ],
+  "models": [
+    "M0",
+    "M1"
+  ],
+  "original_source_fields": [
+    "elev",
+    "area",
+    "weight",
+    "fruit_set"
+  ],
+  "original_prediction_link": "raw linear ridge score before original [0,1] clipping",
+  "original_ridge_alpha": 5,
+  "full_parent_mse_parity_abs_tolerance": 1e-10,
+  "origin_of_research_question": "AFTER original v51 observed FAR2 identical M0/M1 MSE",
+  "independently_sampled_original_studies_added": 0,
+  "new_original_genetic_populations_added": 0,
+  "external_pollinator_individual_joined": false,
+  "retrospective_posthoc": true,
+  "valid_randomization_p_value": false
+}

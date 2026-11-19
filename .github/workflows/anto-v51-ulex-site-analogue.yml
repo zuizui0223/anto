@@ -1,0 +1,71 @@
+name: ANTO v51 original Ulex 2023 site analogue transfer
+on:
+  push:
+    branches: ['analysis/anto-v51-*']
+    paths:
+      - 'scripts/analyze_original_Ulex_elevation_analogues_v51.py'
+      - 'tests/test_original_Ulex_elevation_analogues_v51.py'
+      - 'scripts/audit_original_Ulex_v51_clipping_posthoc.py'
+      - 'tests/test_Ulex_v51_clipping_posthoc.py'
+      - 'results/anto_v51_posthoc_Ulex_clipping_audit_20261119.json'
+      - 'data/external/anto_v51*'
+      - 'docs/ANTO_V51*'
+      - 'results/anto_v51_ulex_six_site_elevation_analogue_20261119.json'
+      - '.github/workflows/anto-v51-ulex-site-analogue.yml'
+  pull_request:
+    branches: ['analysis/anto-v50-*']
+permissions:
+  contents: read
+jobs:
+  original_ulex_six_sites_one_population:
+    runs-on: ubuntu-latest
+    timeout-minutes: 18
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Source-grain and pure numerical adversarial tests
+        run: python -m unittest discover -s tests -p 'test_original_Ulex_elevation_analogues_v51.py' -v
+      - name: Fetch exact original 2023 Zenodo source and pin checksums
+        shell: bash
+        run: |
+          mkdir -p "$RUNNER_TEMP/ulex"
+          python - <<'PY'
+          import json, pathlib, sys
+          sys.path.insert(0,'scripts')
+          import analyze_original_Ulex_elevation_analogues_v51 as v
+          r=v.source_registry()
+          p=v.download_source(r)
+          root=pathlib.Path(__import__('os').environ['RUNNER_TEMP'])/'ulex'
+          for name,body in p.items(): (root/name).write_bytes(body)
+          print('V51_ORIGINAL_ZENODO_MD5_SOURCE_AUTHENTICATED',len(p))
+          PY
+      - name: Source-gated original site and SDEA-v15 strict replay tests
+        env:
+          ULEX_V51_SOURCE_ROOT: ${{ runner.temp }}/ulex
+        run: python -m unittest discover -s tests -p 'test_original_Ulex_elevation_analogues_v51.py' -v
+      - name: Run exact six-site and all sixty two-site pair analysis
+        shell: bash
+        run: |
+          if [ -f results/anto_v51_ulex_six_site_elevation_analogue_20261119.json ]; then
+            python scripts/analyze_original_Ulex_elevation_analogues_v51.py \
+              --source-root "$RUNNER_TEMP/ulex" --check
+          else
+            python scripts/analyze_original_Ulex_elevation_analogues_v51.py \
+              --source-root "$RUNNER_TEMP/ulex"
+          fi
+      - name: Post-outcome original raw-score clipping adverse checks
+        env:
+          ULEX_V51_SOURCE_ROOT: ${{ runner.temp }}/ulex
+        run: python -m unittest discover -s tests -p 'test_Ulex_v51_clipping_posthoc.py' -v
+      - name: Post-outcome original same-site clipping audit, original primary unchanged
+        shell: bash
+        run: |
+          if [ -f results/anto_v51_posthoc_Ulex_clipping_audit_20261119.json ]; then
+            python scripts/audit_original_Ulex_v51_clipping_posthoc.py \
+              --source-root "$RUNNER_TEMP/ulex" --check
+          else
+            python scripts/audit_original_Ulex_v51_clipping_posthoc.py \
+              --source-root "$RUNNER_TEMP/ulex"
+          fi

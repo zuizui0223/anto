@@ -1,0 +1,1012 @@
+{
+  "all_models_original_fixed_ridge_penalty": 5,
+  "all_site_group_heldout_no_individual_replicate_pseudoreplication": true,
+  "analysis_type": "POSTHOC_ULEX_ORIGINAL_SIX_SAMPLING_SITES_ELEVATION_ANALOGUE_TRANSFER",
+  "far2_vs_full5_M1_sites_better": 0,
+  "n_distinct_original_population_genetic_replicates_in_2023_Ulex": 1,
+  "n_exact_train_two_site_pair_fits": 60,
+  "n_independent_Ulex_original_studies_added_vs_SDEA_v15": 0,
+  "n_original_site_holdouts": 6,
+  "near2_vs_full5_M1_sites_better": 1,
+  "new_causal_genetic_selection_or_ancestral_flower_reexpression": false,
+  "original_SDEA_v15_full5_max_absolute_MSE_parity_error": 1.214306433183765e-17,
+  "original_source_audit": {
+    "joined_original_plant_individuals": 202,
+    "new_biological_original_studies_vs_sdea_v15": 0,
+    "original_patch_census_rows_quarantined": 569,
+    "original_repeated_flower_rows": 1125,
+    "sampling_sites_are_distinct_genetic_populations": false,
+    "site_counts": {
+      "AresM": 32,
+      "Cheste": 37,
+      "Chiva": 33,
+      "Montserrat": 37,
+      "Simat": 37,
+      "Sot.Chera": 26
+    },
+    "six_sites_within_one_continuous_original_population": true,
+    "source_genotyped_individual_ids": 225,
+    "source_spreadsheet_formula_error_cells": 1,
+    "tagged_original_plants": 240,
+    "usable_original_fruit_trait_plants": 212
+  },
+  "parent_SDEA_v15_derived_result_git_blob_sha1": "1fb22c1028388e720f388f2345c168270b065af4",
+  "per_original_site_complete_scores": [
+    {
+      "FAR2": {
+        "M0": 0.972552723255,
+        "M1": 0.972552723255,
+        "elevation_mean_gap_average": 649.109037162162,
+        "rank_among_ten_two_site_pairs_M1": 10,
+        "training_n_original_individuals": 74,
+        "training_sites": [
+          "Cheste",
+          "Montserrat"
+        ],
+        "trait_mse_increment_M0_minus_M1": 0
+      },
+      "FULL5": {
+        "M0": 0.00681927498,
+        "M1": 0.003723129857,
+        "training_n_original_individuals": 170,
+        "training_sites": [
+          "Cheste",
+          "Chiva",
+          "Montserrat",
+          "Simat",
+          "Sot.Chera"
+        ],
+        "trait_mse_increment_M0_minus_M1": 0.003096145123
+      },
+      "NEAR2": {
+        "M0": 0.006769941067,
+        "M1": 0.003055453992,
+        "elevation_mean_gap_average": 86.418181818182,
+        "rank_among_ten_two_site_pairs_M1": 3,
+        "training_n_original_individuals": 59,
+        "training_sites": [
+          "Chiva",
+          "Sot.Chera"
+        ],
+        "trait_mse_increment_M0_minus_M1": 0.003714487075
+      },
+      "all_ten_source_train_pair_scores": [
+        {
+          "M0": 0.005607291014,
+          "M1": 0.011000647038,
+          "elevation_mean_gap_average": 369.773587223587,
+          "training_n_original_individuals": 70,
+          "training_sites": [
+            "Cheste",
+            "Chiva"
+          ],
+          "trait_mse_increment_M0_minus_M1": -0.005393356024
+        },
+        {
+          "M0": 0.972552723255,
+          "M1": 0.972552723255,
+          "elevation_mean_gap_average": 649.109037162162,
+          "training_n_original_individuals": 74,
+          "training_sites": [
+            "Cheste",
+            "Montserrat"
+          ],
+          "trait_mse_increment_M0_minus_M1": 0
+        },
+        {
+          "M0": 0.020254544186,
+          "M1": 0.03401035844,
+          "elevation_mean_gap_average": 569.646875,
+          "training_n_original_individuals": 74,
+          "training_sites": [
+            "Cheste",
+            "Simat"
+          ],
+          "trait_mse_increment_M0_minus_M1": -0.013755814254
+        },
+        {
+          "M0": 0.009018300699,
+          "M1": 0.013015552125,
+          "elevation_mean_gap_average": 371.252280405405,
+          "training_n_original_individuals": 63,
+          "training_sites": [
+            "Cheste",
+            "Sot.Chera"
+          ],
+          "trait_mse_increment_M0_minus_M1": -0.003997251426
+        },
+        {
+          "M0": 0.006519780344,
+          "M1": 0.002860852731,
+          "elevation_mean_gap_average": 364.274938574939,
+          "training_n_original_individuals": 70,
+          "training_sites": [
+            "Chiva",
+            "Montserrat"
+          ],
+          "trait_mse_increment_M0_minus_M1": 0.003658927613
+        },
+        {
+          "M0": 0.006079690972,
+          "M1": 0.005670471706,
+          "elevation_mean_gap_average": 284.812776412776,
+          "training_n_original_individuals": 70,
+          "training_sites": [
+            "Chiva",
+            "Simat"
+          ],
+          "trait_mse_increment_M0_minus_M1": 0.000409219266
+        },
+        {
+          "M0": 0.006769941067,
+          "M1": 0.003055453992,
+          "elevation_mean_gap_average": 86.418181818182,
+          "training_n_original_individuals": 59,
+          "training_sites": [
+            "Chiva",
+            "Sot.Chera"
+          ],
+          "trait_mse_increment_M0_minus_M1": 0.003714487075
+        },
+        {
+          "M0": 0.001417254671,
+          "M1": 0.000578622991,
+          "elevation_mean_gap_average": 564.148226351351,
+          "training_n_original_individuals": 74,
+          "training_sites": [
+            "Montserrat",
+            "Simat"
+          ],
+          "trait_mse_increment_M0_minus_M1": 0.000838631679
+        },
+        {
+          "M0": 0.008338492893,
+          "M1": 0.00332158164,
+          "elevation_mean_gap_average": 365.753631756757,
+          "training_n_original_individuals": 63,
+          "training_sites": [
+            "Montserrat",
+            "Sot.Chera"
+          ],
+          "trait_mse_increment_M0_minus_M1": 0.005016911254
+        },
+        {
+          "M0": 0.008905367305,
+          "M1": 0.003748707355,
+          "elevation_mean_gap_average": 286.291469594595,
+          "training_n_original_individuals": 63,
+          "training_sites": [
+            "Simat",
+            "Sot.Chera"
+          ],
+          "trait_mse_increment_M0_minus_M1": 0.00515665995
+        }
+      ],
+      "heldout_site": "AresM",
+      "heldout_site_mean_elevation": 833.796875,
+      "n_original_heldout_genotyped_plants": 32
+    },
+    {
+      "FAR2": {
+        "M0": 0.019148650084,
+        "M1": 0.019148650084,
+        "elevation_mean_gap_average": 697.077430128993,
+        "rank_among_ten_two_site_pairs_M1": 10,
+        "training_n_original_individuals": 65,
+        "training_sites": [
+          "AresM",
+          "Chiva"
+        ],
+        "trait_mse_increment_M0_minus_M1": 0
+      },
+      "FULL5": {
+        "M0": 0.011160555962,
+        "M1": 0.010700763035,
+        "training_n_original_individuals": 165,
+        "training_sites": [
+          "AresM",
+          "Chiva",
+          "Montserrat",
+          "Simat",
+          "Sot.Chera"
+        ],
+        "trait_mse_increment_M0_minus_M1": 0.000459792927
+      },
+      "NEAR2": {
+        "M0": 0.01154584397,
+        "M1": 0.011430351084,
+        "elevation_mean_gap_average": 90.459459459459,
+        "rank_among_ten_two_site_pairs_M1": 5,
+        "training_n_original_individuals": 74,
+        "training_sites": [
+          "Montserrat",
+          "Simat"
+        ],
+        "trait_mse_increment_M0_minus_M1": 0.000115492886
+      },
+      "all_ten_source_train_pair_scores": [
+        {
+          "M0": 0.019148650084,
+          "M1": 0.019148650084,
+          "elevation_mean_gap_average": 697.077430128993,
+          "training_n_original_individuals": 65,
+          "training_sites": [
+            "AresM",
+            "Chiva"
+          ],
+          "trait_mse_increment_M0_minus_M1": 0
+        },
+        {
+          "M0": 0.011402389285,
+          "M1": 0.011482918766,
+          "elevation_mean_gap_average": 332.802491554054,
+          "training_n_original_individuals": 69,
+          "training_sites": [
+            "AresM",
+            "Montserrat"
+          ],
+          "trait_mse_increment_M0_minus_M1": -0.000080529481
+        },
+        {
+          "M0": 0.011756908449,
+          "M1": 0.011172536755,
+          "elevation_mean_gap_average": 412.264653716216,
+          "training_n_original_individuals": 69,
+          "training_sites": [
+            "AresM",
+            "Simat"
+          ],
+          "trait_mse_increment_M0_minus_M1": 0.000584371694
+        },
+        {
+          "M0": 0.096879814036,
+          "M1": 0.012497173973,
+          "elevation_mean_gap_average": 610.659248310811,
+          "training_n_original_individuals": 58,
+          "training_sites": [
+            "AresM",
+            "Sot.Chera"
+          ],
+          "trait_mse_increment_M0_minus_M1": 0.084382640063
+        },
+        {
+          "M0": 0.011481556698,
+          "M1": 0.011446847632,
+          "elevation_mean_gap_average": 375.272235872236,
+          "training_n_original_individuals": 70,
+          "training_sites": [
+            "Chiva",
+            "Montserrat"
+          ],
+          "trait_mse_increment_M0_minus_M1": 0.000034709066
+        },
+        {
+          "M0": 0.010320889559,
+          "M1": 0.010404897608,
+          "elevation_mean_gap_average": 454.734398034398,
+          "training_n_original_individuals": 70,
+          "training_sites": [
+            "Chiva",
+            "Simat"
+          ],
+          "trait_mse_increment_M0_minus_M1": -0.000084008049
+        },
+        {
+          "M0": 0.011116364029,
+          "M1": 0.010783584987,
+          "elevation_mean_gap_average": 653.128992628993,
+          "training_n_original_individuals": 59,
+          "training_sites": [
+            "Chiva",
+            "Sot.Chera"
+          ],
+          "trait_mse_increment_M0_minus_M1": 0.000332779042
+        },
+        {
+          "M0": 0.01154584397,
+          "M1": 0.011430351084,
+          "elevation_mean_gap_average": 90.459459459459,
+          "training_n_original_individuals": 74,
+          "training_sites": [
+            "Montserrat",
+            "Simat"
+          ],
+          "trait_mse_increment_M0_minus_M1": 0.000115492886
+        },
+        {
+          "M0": 0.011441656561,
+          "M1": 0.011780982784,
+          "elevation_mean_gap_average": 288.854054054054,
+          "training_n_original_individuals": 63,
+          "training_sites": [
+            "Montserrat",
+            "Sot.Chera"
+          ],
+          "trait_mse_increment_M0_minus_M1": -0.000339326223
+        },
+        {
+          "M0": 0.010070035226,
+          "M1": 0.01006421905,
+          "elevation_mean_gap_average": 368.316216216216,
+          "training_n_original_individuals": 63,
+          "training_sites": [
+            "Simat",
+            "Sot.Chera"
+          ],
+          "trait_mse_increment_M0_minus_M1": 0.000005816176
+        }
+      ],
+      "heldout_site": "Cheste",
+      "heldout_site_mean_elevation": 179.189189189189,
+      "n_original_heldout_genotyped_plants": 37
+    },
+    {
+      "FAR2": {
+        "M0": 0.840636480828,
+        "M1": 0.840636480828,
+        "elevation_mean_gap_average": 734.048525798526,
+        "rank_among_ten_two_site_pairs_M1": 10,
+        "training_n_original_individuals": 74,
+        "training_sites": [
+          "Cheste",
+          "Montserrat"
+        ],
+        "trait_mse_increment_M0_minus_M1": 0
+      },
+      "FULL5": {
+        "M0": 0.003344492175,
+        "M1": 0.002109444663,
+        "training_n_original_individuals": 169,
+        "training_sites": [
+          "AresM",
+          "Cheste",
+          "Montserrat",
+          "Simat",
+          "Sot.Chera"
+        ],
+        "trait_mse_increment_M0_minus_M1": 0.001235047512
+      },
+      "NEAR2": {
+        "M0": 0.00863182469,
+        "M1": 0.002520129598,
+        "elevation_mean_gap_average": 128.887926136363,
+        "rank_among_ten_two_site_pairs_M1": 4,
+        "training_n_original_individuals": 58,
+        "training_sites": [
+          "AresM",
+          "Sot.Chera"
+        ],
+        "trait_mse_increment_M0_minus_M1": 0.006111695091
+      },
+      "all_ten_source_train_pair_scores": [
+        {
+          "M0": 0.007492424804,
+          "M1": 0.006414256724,
+          "elevation_mean_gap_average": 412.243331541769,
+          "training_n_original_individuals": 69,
+          "training_sites": [
+            "AresM",
+            "Cheste"
+          ],
+          "trait_mse_increment_M0_minus_M1": 0.001078168081
+        },
+        {
+          "M0": 0.008070585391,
+          "M1": 0.005728547136,
+          "elevation_mean_gap_average": 406.74468289312,
+          "training_n_original_individuals": 69,
+          "training_sites": [
+            "AresM",
+            "Montserrat"
+          ],
+          "trait_mse_increment_M0_minus_M1": 0.002342038255
+        },
+        {
+          "M0": 0.008296310117,
+          "M1": 0.006281461002,
+          "elevation_mean_gap_average": 327.282520730958,
+          "training_n_original_individuals": 69,
+          "training_sites": [
+            "AresM",
+            "Simat"
+          ],
+          "trait_mse_increment_M0_minus_M1": 0.002014849115
+        },
+        {
+          "M0": 0.00863182469,
+          "M1": 0.002520129598,
+          "elevation_mean_gap_average": 128.887926136363,
+          "training_n_original_individuals": 58,
+          "training_sites": [
+            "AresM",
+            "Sot.Chera"
+          ],
+          "trait_mse_increment_M0_minus_M1": 0.006111695091
+        },
+        {
+          "M0": 0.840636480828,
+          "M1": 0.840636480828,
+          "elevation_mean_gap_average": 734.048525798526,
+          "training_n_original_individuals": 74,
+          "training_sites": [
+            "Cheste",
+            "Montserrat"
+          ],
+          "trait_mse_increment_M0_minus_M1": 0
+        },
+        {
+          "M0": 0.007704953172,
+          "M1": 0.020540994853,
+          "elevation_mean_gap_average": 654.586363636364,
+          "training_n_original_individuals": 74,
+          "training_sites": [
+            "Cheste",
+            "Simat"
+          ],
+          "trait_mse_increment_M0_minus_M1": -0.012836041682
+        },
+        {
+          "M0": 0.00214946492,
+          "M1": 0.002060503168,
+          "elevation_mean_gap_average": 456.191769041769,
+          "training_n_original_individuals": 63,
+          "training_sites": [
+            "Cheste",
+            "Sot.Chera"
+          ],
+          "trait_mse_increment_M0_minus_M1": 0.000088961752
+        },
+        {
+          "M0": 0.004202966061,
+          "M1": 0.00653187631,
+          "elevation_mean_gap_average": 649.087714987715,
+          "training_n_original_individuals": 74,
+          "training_sites": [
+            "Montserrat",
+            "Simat"
+          ],
+          "trait_mse_increment_M0_minus_M1": -0.002328910249
+        },
+        {
+          "M0": 0.001787168547,
+          "M1": 0.002221778332,
+          "elevation_mean_gap_average": 450.69312039312,
+          "training_n_original_individuals": 63,
+          "training_sites": [
+            "Montserrat",
+            "Sot.Chera"
+          ],
+          "trait_mse_increment_M0_minus_M1": -0.000434609785
+        },
+        {
+          "M0": 0.002026917703,
+          "M1": 0.001817001605,
+          "elevation_mean_gap_average": 371.230958230958,
+          "training_n_original_individuals": 63,
+          "training_sites": [
+            "Simat",
+            "Sot.Chera"
+          ],
+          "trait_mse_increment_M0_minus_M1": 0.000209916099
+        }
+      ],
+      "heldout_site": "Chiva",
+      "heldout_site_mean_elevation": 918.736363636364,
+      "n_original_heldout_genotyped_plants": 33
+    },
+    {
+      "FAR2": {
+        "M0": 0.03341123994,
+        "M1": 0.03341123994,
+        "elevation_mean_gap_average": 686.080132831695,
+        "rank_among_ten_two_site_pairs_M1": 10,
+        "training_n_original_individuals": 65,
+        "training_sites": [
+          "AresM",
+          "Chiva"
+        ],
+        "trait_mse_increment_M0_minus_M1": 0
+      },
+      "FULL5": {
+        "M0": 0.015413429603,
+        "M1": 0.015325290459,
+        "training_n_original_individuals": 165,
+        "training_sites": [
+          "AresM",
+          "Cheste",
+          "Chiva",
+          "Simat",
+          "Sot.Chera"
+        ],
+        "trait_mse_increment_M0_minus_M1": 0.000088139145
+      },
+      "NEAR2": {
+        "M0": 0.015982414743,
+        "M1": 0.015809766979,
+        "elevation_mean_gap_average": 84.960810810811,
+        "rank_among_ten_two_site_pairs_M1": 5,
+        "training_n_original_individuals": 74,
+        "training_sites": [
+          "Cheste",
+          "Simat"
+        ],
+        "trait_mse_increment_M0_minus_M1": 0.000172647764
+      },
+      "all_ten_source_train_pair_scores": [
+        {
+          "M0": 0.01643862994,
+          "M1": 0.016178396313,
+          "elevation_mean_gap_average": 327.303842905405,
+          "training_n_original_individuals": 69,
+          "training_sites": [
+            "AresM",
+            "Cheste"
+          ],
+          "trait_mse_increment_M0_minus_M1": 0.000260233627
+        },
+        {
+          "M0": 0.03341123994,
+          "M1": 0.03341123994,
+          "elevation_mean_gap_average": 686.080132831695,
+          "training_n_original_individuals": 65,
+          "training_sites": [
+            "AresM",
+            "Chiva"
+          ],
+          "trait_mse_increment_M0_minus_M1": 0
+        },
+        {
+          "M0": 0.014379413948,
+          "M1": 0.01441237244,
+          "elevation_mean_gap_average": 401.267356418919,
+          "training_n_original_individuals": 69,
+          "training_sites": [
+            "AresM",
+            "Simat"
+          ],
+          "trait_mse_increment_M0_minus_M1": -0.000032958492
+        },
+        {
+          "M0": 0.075643212361,
+          "M1": 0.015754622887,
+          "elevation_mean_gap_average": 599.661951013514,
+          "training_n_original_individuals": 58,
+          "training_sites": [
+            "AresM",
+            "Sot.Chera"
+          ],
+          "trait_mse_increment_M0_minus_M1": 0.059888589473
+        },
+        {
+          "M0": 0.016135143498,
+          "M1": 0.016580395023,
+          "elevation_mean_gap_average": 369.773587223587,
+          "training_n_original_individuals": 70,
+          "training_sites": [
+            "Cheste",
+            "Chiva"
+          ],
+          "trait_mse_increment_M0_minus_M1": -0.000445251524
+        },
+        {
+          "M0": 0.015982414743,
+          "M1": 0.015809766979,
+          "elevation_mean_gap_average": 84.960810810811,
+          "training_n_original_individuals": 74,
+          "training_sites": [
+            "Cheste",
+            "Simat"
+          ],
+          "trait_mse_increment_M0_minus_M1": 0.000172647764
+        },
+        {
+          "M0": 0.016115045461,
+          "M1": 0.016589428887,
+          "elevation_mean_gap_average": 283.355405405405,
+          "training_n_original_individuals": 63,
+          "training_sites": [
+            "Cheste",
+            "Sot.Chera"
+          ],
+          "trait_mse_increment_M0_minus_M1": -0.000474383427
+        },
+        {
+          "M0": 0.014767518943,
+          "M1": 0.014748283247,
+          "elevation_mean_gap_average": 443.737100737101,
+          "training_n_original_individuals": 70,
+          "training_sites": [
+            "Chiva",
+            "Simat"
+          ],
+          "trait_mse_increment_M0_minus_M1": 0.000019235696
+        },
+        {
+          "M0": 0.014405912209,
+          "M1": 0.016272575671,
+          "elevation_mean_gap_average": 642.131695331695,
+          "training_n_original_individuals": 59,
+          "training_sites": [
+            "Chiva",
+            "Sot.Chera"
+          ],
+          "trait_mse_increment_M0_minus_M1": -0.001866663462
+        },
+        {
+          "M0": 0.015060497937,
+          "M1": 0.015067921936,
+          "elevation_mean_gap_average": 357.318918918919,
+          "training_n_original_individuals": 63,
+          "training_sites": [
+            "Simat",
+            "Sot.Chera"
+          ],
+          "trait_mse_increment_M0_minus_M1": -0.000007423999
+        }
+      ],
+      "heldout_site": "Montserrat",
+      "heldout_site_mean_elevation": 190.186486486486,
+      "n_original_heldout_genotyped_plants": 37
+    },
+    {
+      "FAR2": {
+        "M0": 0.021539423138,
+        "M1": 0.021539423138,
+        "elevation_mean_gap_average": 527.155808507371,
+        "rank_among_ten_two_site_pairs_M1": 9,
+        "training_n_original_individuals": 65,
+        "training_sites": [
+          "AresM",
+          "Chiva"
+        ],
+        "trait_mse_increment_M0_minus_M1": 0
+      },
+      "FULL5": {
+        "M0": 0.009118220715,
+        "M1": 0.009310544062,
+        "training_n_original_individuals": 165,
+        "training_sites": [
+          "AresM",
+          "Cheste",
+          "Chiva",
+          "Montserrat",
+          "Sot.Chera"
+        ],
+        "trait_mse_increment_M0_minus_M1": -0.000192323347
+      },
+      "NEAR2": {
+        "M0": 0.182387241732,
+        "M1": 0.141154623946,
+        "elevation_mean_gap_average": 164.422972972973,
+        "rank_among_ten_two_site_pairs_M1": 10,
+        "training_n_original_individuals": 74,
+        "training_sites": [
+          "Cheste",
+          "Montserrat"
+        ],
+        "trait_mse_increment_M0_minus_M1": 0.041232617786
+      },
+      "all_ten_source_train_pair_scores": [
+        {
+          "M0": 0.010491831997,
+          "M1": 0.010034877012,
+          "elevation_mean_gap_average": 327.303842905405,
+          "training_n_original_individuals": 69,
+          "training_sites": [
+            "AresM",
+            "Cheste"
+          ],
+          "trait_mse_increment_M0_minus_M1": 0.000456954985
+        },
+        {
+          "M0": 0.021539423138,
+          "M1": 0.021539423138,
+          "elevation_mean_gap_average": 527.155808507371,
+          "training_n_original_individuals": 65,
+          "training_sites": [
+            "AresM",
+            "Chiva"
+          ],
+          "trait_mse_increment_M0_minus_M1": 0
+        },
+        {
+          "M0": 0.009107821299,
+          "M1": 0.008833092673,
+          "elevation_mean_gap_average": 321.805194256757,
+          "training_n_original_individuals": 69,
+          "training_sites": [
+            "AresM",
+            "Montserrat"
+          ],
+          "trait_mse_increment_M0_minus_M1": 0.000274728625
+        },
+        {
+          "M0": 0.043983105908,
+          "M1": 0.013812790527,
+          "elevation_mean_gap_average": 440.737626689189,
+          "training_n_original_individuals": 58,
+          "training_sites": [
+            "AresM",
+            "Sot.Chera"
+          ],
+          "trait_mse_increment_M0_minus_M1": 0.030170315382
+        },
+        {
+          "M0": 0.009375468886,
+          "M1": 0.010177394003,
+          "elevation_mean_gap_average": 369.773587223587,
+          "training_n_original_individuals": 70,
+          "training_sites": [
+            "Cheste",
+            "Chiva"
+          ],
+          "trait_mse_increment_M0_minus_M1": -0.000801925117
+        },
+        {
+          "M0": 0.182387241732,
+          "M1": 0.141154623946,
+          "elevation_mean_gap_average": 164.422972972973,
+          "training_n_original_individuals": 74,
+          "training_sites": [
+            "Cheste",
+            "Montserrat"
+          ],
+          "trait_mse_increment_M0_minus_M1": 0.041232617786
+        },
+        {
+          "M0": 0.009203281206,
+          "M1": 0.011376997692,
+          "elevation_mean_gap_average": 283.355405405405,
+          "training_n_original_individuals": 63,
+          "training_sites": [
+            "Cheste",
+            "Sot.Chera"
+          ],
+          "trait_mse_increment_M0_minus_M1": -0.002173716486
+        },
+        {
+          "M0": 0.009226171166,
+          "M1": 0.009247944736,
+          "elevation_mean_gap_average": 364.274938574939,
+          "training_n_original_individuals": 70,
+          "training_sites": [
+            "Chiva",
+            "Montserrat"
+          ],
+          "trait_mse_increment_M0_minus_M1": -0.00002177357
+        },
+        {
+          "M0": 0.009149867135,
+          "M1": 0.009797322542,
+          "elevation_mean_gap_average": 483.207371007371,
+          "training_n_original_individuals": 59,
+          "training_sites": [
+            "Chiva",
+            "Sot.Chera"
+          ],
+          "trait_mse_increment_M0_minus_M1": -0.000647455407
+        },
+        {
+          "M0": 0.009295338287,
+          "M1": 0.009333174174,
+          "elevation_mean_gap_average": 277.856756756757,
+          "training_n_original_individuals": 63,
+          "training_sites": [
+            "Montserrat",
+            "Sot.Chera"
+          ],
+          "trait_mse_increment_M0_minus_M1": -0.000037835887
+        }
+      ],
+      "heldout_site": "Simat",
+      "heldout_site_mean_elevation": 349.110810810811,
+      "n_original_heldout_genotyped_plants": 37
+    },
+    {
+      "FAR2": {
+        "M0": 0.807210038607,
+        "M1": 0.807210038607,
+        "elevation_mean_gap_average": 561.212162162162,
+        "rank_among_ten_two_site_pairs_M1": 10,
+        "training_n_original_individuals": 74,
+        "training_sites": [
+          "Cheste",
+          "Montserrat"
+        ],
+        "trait_mse_increment_M0_minus_M1": 0
+      },
+      "FULL5": {
+        "M0": 0.006549841606,
+        "M1": 0.00511195492,
+        "training_n_original_individuals": 176,
+        "training_sites": [
+          "AresM",
+          "Cheste",
+          "Chiva",
+          "Montserrat",
+          "Simat"
+        ],
+        "trait_mse_increment_M0_minus_M1": 0.001437886686
+      },
+      "NEAR2": {
+        "M0": 0.015850519434,
+        "M1": 0.015850519434,
+        "elevation_mean_gap_average": 130.366619318182,
+        "rank_among_ten_two_site_pairs_M1": 9,
+        "training_n_original_individuals": 65,
+        "training_sites": [
+          "AresM",
+          "Chiva"
+        ],
+        "trait_mse_increment_M0_minus_M1": 0
+      },
+      "all_ten_source_train_pair_scores": [
+        {
+          "M0": 0.011084726504,
+          "M1": 0.009522619703,
+          "elevation_mean_gap_average": 327.303842905405,
+          "training_n_original_individuals": 69,
+          "training_sites": [
+            "AresM",
+            "Cheste"
+          ],
+          "trait_mse_increment_M0_minus_M1": 0.001562106801
+        },
+        {
+          "M0": 0.015850519434,
+          "M1": 0.015850519434,
+          "elevation_mean_gap_average": 130.366619318182,
+          "training_n_original_individuals": 65,
+          "training_sites": [
+            "AresM",
+            "Chiva"
+          ],
+          "trait_mse_increment_M0_minus_M1": 0
+        },
+        {
+          "M0": 0.010173964139,
+          "M1": 0.00753700472,
+          "elevation_mean_gap_average": 321.805194256757,
+          "training_n_original_individuals": 69,
+          "training_sites": [
+            "AresM",
+            "Montserrat"
+          ],
+          "trait_mse_increment_M0_minus_M1": 0.002636959419
+        },
+        {
+          "M0": 0.010205035632,
+          "M1": 0.00859287628,
+          "elevation_mean_gap_average": 242.343032094595,
+          "training_n_original_individuals": 69,
+          "training_sites": [
+            "AresM",
+            "Simat"
+          ],
+          "trait_mse_increment_M0_minus_M1": 0.001612159352
+        },
+        {
+          "M0": 0.005285574227,
+          "M1": 0.005020474769,
+          "elevation_mean_gap_average": 369.773587223587,
+          "training_n_original_individuals": 70,
+          "training_sites": [
+            "Cheste",
+            "Chiva"
+          ],
+          "trait_mse_increment_M0_minus_M1": 0.000265099459
+        },
+        {
+          "M0": 0.807210038607,
+          "M1": 0.807210038607,
+          "elevation_mean_gap_average": 561.212162162162,
+          "training_n_original_individuals": 74,
+          "training_sites": [
+            "Cheste",
+            "Montserrat"
+          ],
+          "trait_mse_increment_M0_minus_M1": 0
+        },
+        {
+          "M0": 0.006666873457,
+          "M1": 0.011983164495,
+          "elevation_mean_gap_average": 481.75,
+          "training_n_original_individuals": 74,
+          "training_sites": [
+            "Cheste",
+            "Simat"
+          ],
+          "trait_mse_increment_M0_minus_M1": -0.005316291038
+        },
+        {
+          "M0": 0.005119648843,
+          "M1": 0.004698985946,
+          "elevation_mean_gap_average": 364.274938574939,
+          "training_n_original_individuals": 70,
+          "training_sites": [
+            "Chiva",
+            "Montserrat"
+          ],
+          "trait_mse_increment_M0_minus_M1": 0.000420662897
+        },
+        {
+          "M0": 0.005167507092,
+          "M1": 0.005040538809,
+          "elevation_mean_gap_average": 284.812776412776,
+          "training_n_original_individuals": 70,
+          "training_sites": [
+            "Chiva",
+            "Simat"
+          ],
+          "trait_mse_increment_M0_minus_M1": 0.000126968283
+        },
+        {
+          "M0": 0.00742094295,
+          "M1": 0.008181664777,
+          "elevation_mean_gap_average": 476.251351351351,
+          "training_n_original_individuals": 74,
+          "training_sites": [
+            "Montserrat",
+            "Simat"
+          ],
+          "trait_mse_increment_M0_minus_M1": -0.000760721827
+        }
+      ],
+      "heldout_site": "Sot.Chera",
+      "heldout_site_mean_elevation": 745.9,
+      "n_original_heldout_genotyped_plants": 26
+    }
+  ],
+  "pollinator_patch_level_data_never_plant_joined": true,
+  "randomization_p_values_or_confidence_intervals_calculated": false,
+  "site_mean_elevation_by_original_site": {
+    "AresM": 833.796875,
+    "Cheste": 179.189189189189,
+    "Chiva": 918.736363636364,
+    "Montserrat": 190.186486486486,
+    "Simat": 349.110810810811,
+    "Sot.Chera": 745.9
+  },
+  "six_sites_within_one_continuous_original_population": true,
+  "source_original_file_MD5": {
+    "README.md": "9a6d62c907a93fe7b67268922f756995",
+    "floral.traits.csv": "14216bb46af39bfd0b959c1aa092485b",
+    "fruits.and.mean.floral.traits.csv": "8ca72b7d9721f6d6279e793a1526c43e",
+    "pollinator.census.csv": "78494af547de11c1800af50a74c5642f",
+    "relatedness.matrix.csv": "ecaa79680ffa25cb45ebdb73c11fe407"
+  },
+  "source_original_zenodo_record": 7761289,
+  "summary_by_training_support": {
+    "FAR2": {
+      "equal_site_M0_MSE": 0.449083092642,
+      "equal_site_M1_MSE": 0.449083092642,
+      "equal_site_absolute_trait_MSE_gain": 0,
+      "equal_site_relative_trait_MSE_gain": 0,
+      "individual_weighted_relative_trait_MSE_gain": 0,
+      "n_heldout_original_sampling_sites": 6,
+      "n_unique_original_individuals_heldout_once_in_regime": 202,
+      "sites_with_M1_better_than_M0": 0
+    },
+    "FULL5": {
+      "equal_site_M0_MSE": 0.008734302507,
+      "equal_site_M1_MSE": 0.007713521166,
+      "equal_site_absolute_trait_MSE_gain": 0.001020781341,
+      "equal_site_relative_trait_MSE_gain": 0.116870390055,
+      "individual_weighted_relative_trait_MSE_gain": 0.104631254416,
+      "n_heldout_original_sampling_sites": 6,
+      "n_unique_original_individuals_heldout_once_in_regime": 202,
+      "sites_with_M1_better_than_M0": 5
+    },
+    "NEAR2": {
+      "equal_site_M0_MSE": 0.040194630939,
+      "equal_site_M1_MSE": 0.031636807505,
+      "equal_site_absolute_trait_MSE_gain": 0.008557823434,
+      "equal_site_relative_trait_MSE_gain": 0.212909615883,
+      "individual_weighted_relative_trait_MSE_gain": 0.213907362392,
+      "n_heldout_original_sampling_sites": 6,
+      "n_unique_original_individuals_heldout_once_in_regime": 202,
+      "sites_with_M1_better_than_M0": 5
+    }
+  },
+  "target_site_elevation_is_used_transductively_without_target_fruit_outcome": true
+}
