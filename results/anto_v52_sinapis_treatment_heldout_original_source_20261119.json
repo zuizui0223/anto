@@ -1,0 +1,226 @@
+{
+  "analysis_type": "POSTHOC_ORIGINAL_SINAPIS_THREE_TREATMENT_HELDOUT_VISITOR_INFORMATION",
+  "fixed_exploratory_process_transfer_verdict": "DESCRIPTIVE_WITHIN_SINGLE_TRIAL_CROSS_TREATMENT_VISITOR_INFORMATION",
+  "full_gene_pollinator_fitness_ancestral_regain_mechanism_identified": false,
+  "heldout_rainfall_treatment_summary": {
+    "increments": {
+      "morphology_U0_to_U1": {
+        "equal_treatment_absolute_mse_gain": -0.04697434866912429,
+        "per_treatment_signed_mse_gains": {
+          "Control": -0.0570951186730182,
+          "Drought": -0.016204535091876415,
+          "PrecipRed": -0.06762339224247826
+        },
+        "plant_weighted_absolute_mse_gain": -0.047573912460332254,
+        "positive_heldout_treatments": 0
+      },
+      "visitation_conditional_on_morphology_U1_to_U2": {
+        "equal_treatment_absolute_mse_gain": 0.07856855933109674,
+        "per_treatment_signed_mse_gains": {
+          "Control": 0.07251121686436812,
+          "Drought": 0.10353110751778535,
+          "PrecipRed": 0.059663353611136755
+        },
+        "plant_weighted_absolute_mse_gain": 0.07795792338930461,
+        "positive_heldout_treatments": 3
+      },
+      "visitation_without_morphology_U0_to_U3": {
+        "equal_treatment_absolute_mse_gain": 0.057717210150544006,
+        "per_treatment_signed_mse_gains": {
+          "Control": 0.03729772477214316,
+          "Drought": 0.07888570287484609,
+          "PrecipRed": 0.056968202804642765
+        },
+        "plant_weighted_absolute_mse_gain": 0.05808108458682474,
+        "positive_heldout_treatments": 3
+      }
+    },
+    "models": {
+      "U0": {
+        "equal_treatment_mse": 0.23189598186939295,
+        "plant_weighted_mse": 0.22684256962770874
+      },
+      "U1": {
+        "equal_treatment_mse": 0.27887033053851723,
+        "plant_weighted_mse": 0.274416482088041
+      },
+      "U2": {
+        "equal_treatment_mse": 0.20030177120742051,
+        "plant_weighted_mse": 0.1964585586987364
+      },
+      "U3": {
+        "equal_treatment_mse": 0.1741787717188489,
+        "plant_weighted_mse": 0.168761485040884
+      }
+    }
+  },
+  "model_training_ridge_alpha": 4,
+  "model_treatment_labels_excluded_because_level_heldout": true,
+  "models": {
+    "U0": [
+      "log_flower"
+    ],
+    "U1": [
+      "log_flower",
+      "display",
+      "petal_width"
+    ],
+    "U2": [
+      "log_flower",
+      "display",
+      "petal_width",
+      "log_visit_rate"
+    ],
+    "U3": [
+      "log_flower",
+      "log_visit_rate"
+    ]
+  },
+  "n_new_original_biological_studies_vs_sdea_v17": 0,
+  "new_causal_p_values_or_confidence_intervals": false,
+  "new_holdout_axis": "original rainfall treatment fully withheld across all 5 shelters",
+  "original_file_md5": {
+    "Floral_traits.csv": "24f1f01435fa22faa832c415bbd0b77e",
+    "Int_data.csv": "d67c32cc5aa357fe6e6d952a801ea38f",
+    "Plantlist.csv": "630eb7d3d7c871f65c2bd62890e1597c",
+    "README.md": "68bf11faaa9786fbb39f9e32006b336d"
+  },
+  "original_study_year": "2020",
+  "original_three_complete_treatment_folds": [
+    {
+      "heldout_treatment": "Control",
+      "mse": {
+        "U0": 0.3575321019704349,
+        "U1": 0.4146272206434531,
+        "U2": 0.34211600377908497,
+        "U3": 0.32023437719829173
+      },
+      "n_heldout_original_plants": 16,
+      "n_training_original_plants": 36,
+      "original_heldout_shelters": {
+        "1": 3,
+        "2": 3,
+        "3": 2,
+        "4": 4,
+        "5": 4
+      },
+      "original_train_treatments": [
+        "Drought",
+        "PrecipRed"
+      ]
+    },
+    {
+      "heldout_treatment": "Drought",
+      "mse": {
+        "U0": 0.17483052000161853,
+        "U1": 0.19103505509349494,
+        "U2": 0.08750394757570959,
+        "U3": 0.09594481712677244
+      },
+      "n_heldout_original_plants": 17,
+      "n_training_original_plants": 35,
+      "original_heldout_shelters": {
+        "1": 4,
+        "2": 2,
+        "3": 3,
+        "4": 4,
+        "5": 4
+      },
+      "original_train_treatments": [
+        "Control",
+        "PrecipRed"
+      ]
+    },
+    {
+      "heldout_treatment": "PrecipRed",
+      "mse": {
+        "U0": 0.16332532363612537,
+        "U1": 0.23094871587860363,
+        "U2": 0.17128536226746688,
+        "U3": 0.1063571208314826
+      },
+      "n_heldout_original_plants": 19,
+      "n_training_original_plants": 33,
+      "original_heldout_shelters": {
+        "1": 4,
+        "2": 4,
+        "3": 3,
+        "4": 4,
+        "5": 4
+      },
+      "original_train_treatments": [
+        "Control",
+        "Drought"
+      ]
+    }
+  ],
+  "previous_original_sdea_v17_result_is_new_study": false,
+  "previous_sdea_v17_shelter_holdout_replayed": true,
+  "source_audit": {
+    "n_original_rain_shelters": 5,
+    "original_author_plant_rows": 53,
+    "original_complete_plant_rows": 52,
+    "original_sdea_v17_5_shelter_20_mse_max_absolute_error": 0,
+    "original_source_molecular_genotype_measured": false,
+    "original_source_visitor_effort_once_per_plant": true,
+    "original_visitor_group_rows": 427,
+    "same_original_biological_study_not_independent_replicate": true,
+    "shelter_eligible_plant_counts": {
+      "1": 11,
+      "2": 9,
+      "3": 8,
+      "4": 12,
+      "5": 12
+    },
+    "shelter_treatment_eligible_cell_sizes": {
+      "1": {
+        "Control": 3,
+        "Drought": 4,
+        "PrecipRed": 4
+      },
+      "2": {
+        "Control": 3,
+        "Drought": 2,
+        "PrecipRed": 4
+      },
+      "3": {
+        "Control": 2,
+        "Drought": 3,
+        "PrecipRed": 3
+      },
+      "4": {
+        "Control": 4,
+        "Drought": 4,
+        "PrecipRed": 4
+      },
+      "5": {
+        "Control": 4,
+        "Drought": 4,
+        "PrecipRed": 4
+      }
+    },
+    "treatment_eligible_plant_counts": {
+      "Control": 16,
+      "Drought": 17,
+      "PrecipRed": 19
+    }
+  },
+  "source_individual_plant_records_redistributed": false,
+  "source_original_zenodo_record": 7335086,
+  "source_sdea_v17_derived_git_blob_sha1": "fa2419d32b74f22f67ea9cbfd79123109db4fdf0",
+  "source_sdea_v17_parser_git_blob_sha1": "5f797c1d891c8f8de711909a56ae26530841a2ba",
+  "source_visit_identity_placebo": {
+    "n_placebo_gains_at_or_above_observed": 0,
+    "observed_equal_treatment_gain": 0.07856855933109674,
+    "permutation_replicates": 200,
+    "placebo_max": 0.035190836581479666,
+    "placebo_median": -0.002631796721957444,
+    "placebo_min": -0.09179618760401424,
+    "placebo_q025": -0.026648148097109848,
+    "placebo_q975": 0.022032374130957478,
+    "same_plant_seed_and_floral_data_unchanged": true,
+    "seed": 20261119,
+    "unit": "original plant visit rate shuffled only within original shelter×treatment source cell",
+    "valid_randomized_causal_p_value": false
+  }
+}
