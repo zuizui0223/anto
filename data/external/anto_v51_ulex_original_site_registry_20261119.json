@@ -1,0 +1,64 @@
+{
+  "analysis_type": "POSTHOC_ULEX_ORIGINAL_SIX_SAMPLING_SITES_ELEVATION_ANALOGUE_TRANSFER",
+  "original_publication": "Castellanos et al. 2023 Proceedings B",
+  "original_paper_doi": "10.1098/rspb.2023.0141",
+  "original_data_doi": "10.5061/dryad.9zw3r22jp",
+  "zenodo_record_id": 7761289,
+  "zenodo_url": "https://zenodo.org/api/records/7761289",
+  "source_md5": {
+    "fruits.and.mean.floral.traits.csv": "8ca72b7d9721f6d6279e793a1526c43e",
+    "floral.traits.csv": "14216bb46af39bfd0b959c1aa092485b",
+    "relatedness.matrix.csv": "ecaa79680ffa25cb45ebdb73c11fe407",
+    "pollinator.census.csv": "78494af547de11c1800af50a74c5642f",
+    "README.md": "9a6d62c907a93fe7b67268922f756995"
+  },
+  "sdea_v15_repo": "zuizui0223/SDEA",
+  "sdea_v15_result_git_blob_sha1": "1fb22c1028388e720f388f2345c168270b065af4",
+  "source_original_tagged_individuals": 240,
+  "source_eligible_fruit_trait_individuals": 212,
+  "source_relatedness_matrix_genotypes": 225,
+  "source_matched_individuals": 202,
+  "source_sites": {
+    "AresM": 32,
+    "Cheste": 37,
+    "Chiva": 33,
+    "Montserrat": 37,
+    "Simat": 37,
+    "Sot.Chera": 26
+  },
+  "source_pollinator_census_n": 569,
+  "six_sites_are_separate_genetic_populations": false,
+  "sites_within_one_continuous_population": true,
+  "heldout_unit": "sampling site, NOT distinct population",
+  "response": "twig fruits / original flower scars",
+  "predictors": [
+    "elev",
+    "area",
+    "weight"
+  ],
+  "models": [
+    "M0",
+    "M1"
+  ],
+  "ridge_alpha": 5,
+  "prediction_clamp": true,
+  "site_train_regimes": [
+    "FULL5",
+    "NEAR2",
+    "FAR2",
+    "ALL2"
+  ],
+  "full_site_train_count": 5,
+  "nearest_or_farthest_site_train_count": 2,
+  "n_site_holdouts": 6,
+  "n_training_pairs_per_heldout": 10,
+  "n_all_pairs": 60,
+  "reference_parity_abs_tolerance": 1e-7,
+  "nearest_site_distance": "absolute difference in original eligible-site mean elevation; alphabetical tie break",
+  "target_test_covariate_available": true,
+  "n_independent_original_studies_added_vs_phlox": 1,
+  "n_independent_original_studies_added_vs_sdea_v15": 0,
+  "new_evolutionary_radiations_tested_as_independent_replicates": 0,
+  "source_is_posthoc": true,
+  "valid_randomization_p_value": false
+}
