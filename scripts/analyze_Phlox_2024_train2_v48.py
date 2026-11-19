@@ -324,9 +324,13 @@ def main():
                 "V48_EXACT_SOURCE_REGENERATED_RECEIPT_DIFFERS")
         print("V48_ORIGINAL_AUTHOR_SHA_AND_ALL_423_FITS_EXACT_PASS")
     else:
-        print("V48_SOURCE_READOUT_JSON=" +
-              json.dumps(output, sort_keys=True, separators=(",", ":"),
-                         ensure_ascii=False))
+        source_json = json.dumps(output, sort_keys=True,
+                                 separators=(",", ":"), ensure_ascii=True)
+        n_chunks = (len(source_json) + 3999) // 4000
+        for k in range(n_chunks):
+            part = source_json[k*4000:(k+1)*4000]
+            print("V48_SOURCE_READOUT_CHUNK_%03d_OF_%03d=" %
+                  (k+1, n_chunks) + part)
 
 
 if __name__ == "__main__":
