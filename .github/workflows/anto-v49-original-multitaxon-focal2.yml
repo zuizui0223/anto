@@ -1,0 +1,44 @@
+name: ANTO v49 original Phlox multi-taxon model held under focal 2-pop support
+on:
+  push:
+    branches: ['analysis/anto-v49-*']
+    paths:
+      - 'data/external/anto_v49_multi_taxon_focal2_registry_20261119.json'
+      - 'docs/ANTO_V49*'
+      - 'scripts/analyze_Phlox_2024_multitaxon_focal2_v49.py'
+      - 'tests/test_Phlox_2024_multitaxon_focal2_v49.py'
+      - 'results/anto_v49_original_Phlox_multitaxon_focal2_20261119.json'
+      - '.github/workflows/anto-v49-original-multitaxon-focal2.yml'
+  pull_request:
+    branches: ['analysis/anto-v48-*']
+permissions:
+  contents: read
+jobs:
+  original2024_v46_multitaxon_focal_pop_2:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Retrieve exact immutable original 2024 Phlox author CSV into ephemeral runner
+        shell: bash
+        run: |
+          curl --fail --location --retry 3 --max-time 120 --silent --show-error \
+            'https://raw.githubusercontent.com/PhloxHopkins/PhloxFieldAdaptation/d792fe58cce36721394adfd97e9f412396578e86/Dataset_fitness_leaftraits_distance_lat_long.csv' \
+            --output "$RUNNER_TEMP/phlox2024_author.csv"
+      - name: Adversarial frozen-parent, nine-cell model and original deamii parity tests
+        env:
+          PHLOX_V49_SOURCE: ${{ runner.temp }}/phlox2024_author.csv
+        run: python -m unittest discover -s tests -p 'test_Phlox_2024_multitaxon_focal2_v49.py' -v
+      - name: Source SHA verified 423 heldouts and exact frozen receipt (or source first readout)
+        shell: bash
+        run: |
+          if [ -f results/anto_v49_original_Phlox_multitaxon_focal2_20261119.json ]; then
+            python scripts/analyze_Phlox_2024_multitaxon_focal2_v49.py \
+              --source "$RUNNER_TEMP/phlox2024_author.csv" --check
+          else
+            python scripts/analyze_Phlox_2024_multitaxon_focal2_v49.py \
+              --source "$RUNNER_TEMP/phlox2024_author.csv"
+          fi

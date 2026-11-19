@@ -1,0 +1,59 @@
+{
+  "analysis_type": "POSTHOC_MULTI_TAXON_FOCAL_2_TRAIN_SOURCE_POP_REFIT",
+  "frozen_date": "2026-11-19",
+  "original_publication_doi": "10.1038/s41467-024-49075-6",
+  "source_repo": "PhloxHopkins/PhloxFieldAdaptation",
+  "source_git_commit": "d792fe58cce36721394adfd97e9f412396578e86",
+  "source_CSV_path": "Dataset_fitness_leaftraits_distance_lat_long.csv",
+  "source_CSV_git_blob_sha1": "4c780b0abe644ac69dae86a0450eb598c160626b",
+  "source_CSV_bytes": 175377,
+  "v46_derived_result_git_blob_sha1": "f03b0eb0177f807317ee1f8a7c0e65ee408d903b",
+  "n_original_ramets": 963,
+  "n_original_clonal_genotypes": 284,
+  "n_original_source_populations": 20,
+  "original_taxon_source_population_counts": {
+    "amoena": 8,
+    "deamii": 3,
+    "pilosa": 9
+  },
+  "original_gardens": [
+    "1-Amoena-PB",
+    "2-Deamii-JC",
+    "3-Pilosa-LBL"
+  ],
+  "models": [
+    "B0",
+    "G",
+    "T",
+    "E",
+    "TE"
+  ],
+  "original_v46_ridge_penalty": 10,
+  "model_implementation": "import v46.fit_train and v46.prediction without modification",
+  "target_taxon_training_pops": 2,
+  "heldout_focal_source_populations": 1,
+  "nonfocal_source_pops_training": "ALL original nonfocal source populations",
+  "panels_by_taxon": {
+    "amoena": 56,
+    "deamii": 1,
+    "pilosa": 84
+  },
+  "n_source_triplet_panels": 141,
+  "n_holdout_folds": 423,
+  "n_reference_panels": 140,
+  "primary_endpoint": "fruits_2019",
+  "secondary_endpoint": "flowers_2019",
+  "response_transform": "log1p",
+  "biomass_technical_nonadmission": true,
+  "negative_biomass_n": 13,
+  "negative_biomass_min": -233,
+  "deamii_v46_mse_replay_tolerance": 1e-7,
+  "reference_comparison_tolerance": 1e-10,
+  "n_additional_original_studies": 0,
+  "flower_pigment_measured": false,
+  "pollinator_measured": false,
+  "genetic_fitness_measured": false,
+  "primary_v46_all_taxon_transfer_established": false,
+  "is_posthoc": true,
+  "valid_randomization_p": false
+}
