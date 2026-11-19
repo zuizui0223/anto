@@ -1,0 +1,89 @@
+{
+  "scope": "POSTHOC_ORIGINAL_2024_PHLOX_FROZEN_SOURCE_RIDGE_AND_SHARING_DECOMPOSITION",
+  "frozen_date": "2026-11-19",
+  "original_authors": "Goulet-Scott et al. 2024 Nature Communications",
+  "original_doi": "10.1038/s41467-024-49075-6",
+  "source_repo": "PhloxHopkins/PhloxFieldAdaptation",
+  "source_commit": "d792fe58cce36721394adfd97e9f412396578e86",
+  "original_csv": "Dataset_fitness_leaftraits_distance_lat_long.csv",
+  "source_git_blob_sha1": "4c780b0abe644ac69dae86a0450eb598c160626b",
+  "source_size_bytes": 175377,
+  "v49_result_blob_sha1": "94947d03e85766a3c5c1f82fde2bb076f2ca42e8",
+  "n_ramets": 963,
+  "n_genotypes": 284,
+  "n_source_populations": 20,
+  "n_gardens": 3,
+  "n_source_populations_by_taxon": {
+    "amoena": 8,
+    "deamii": 3,
+    "pilosa": 9
+  },
+  "panels_by_taxon": {
+    "amoena": 56,
+    "deamii": 1,
+    "pilosa": 84
+  },
+  "n_panels": 141,
+  "n_folds": 423,
+  "original_v46_models": [
+    "B0",
+    "G",
+    "T",
+    "E",
+    "TE"
+  ],
+  "primary_endpoint": "fruits_2019",
+  "secondary_endpoint": "flowers_2019",
+  "scenarios": [
+    {
+      "name": "STD_R0",
+      "coordinate": "standardized",
+      "lambda": 0
+    },
+    {
+      "name": "STD_R1",
+      "coordinate": "standardized",
+      "lambda": 1
+    },
+    {
+      "name": "STD_R10",
+      "coordinate": "standardized",
+      "lambda": 10
+    },
+    {
+      "name": "STD_R100",
+      "coordinate": "standardized",
+      "lambda": 100
+    },
+    {
+      "name": "RAW_R0",
+      "coordinate": "raw",
+      "lambda": 0
+    },
+    {
+      "name": "RAW_R10",
+      "coordinate": "raw",
+      "lambda": 10
+    },
+    {
+      "name": "RAW_EQUIV_R10",
+      "coordinate": "raw_equivalent",
+      "lambda": 10
+    }
+  ],
+  "reference_comparison_tol": 1e-10,
+  "source_mse_parity_tolerance": 1e-7,
+  "center_group": "garden×taxon",
+  "standardize_train_only": true,
+  "ridge_standardization_transform": "raw penalty diag(lambda * global_training_SD_PC^2) equals standardized ridge lambda",
+  "original_biomass_log1p_blocked": true,
+  "n_negative_biomass": 13,
+  "min_biomass": -233,
+  "original_v46_all_taxa_transfer_falsified": true,
+  "new_original_biological_studies": 0,
+  "new_flower_colour_data": false,
+  "new_pollinator_data": false,
+  "new_genetic_persistence": false,
+  "is_posthoc": true,
+  "valid_randomization_p": false
+}

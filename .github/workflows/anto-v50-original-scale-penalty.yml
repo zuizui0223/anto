@@ -1,0 +1,44 @@
+name: ANTO v50 source-locked Phlox 2024 sharing vs ridge coordinate controls
+on:
+  push:
+    branches: ['analysis/anto-v50-*']
+    paths:
+      - 'data/external/anto_v50_ridge_sharing_original_source_registry_20261119.json'
+      - 'docs/ANTO_V50*'
+      - 'scripts/analyze_Phlox_original_scale_penalty_v50.py'
+      - 'tests/test_Phlox_original_scale_penalty_v50.py'
+      - 'results/anto_v50_sharing_penalty_source_sensitivity_20261119.json'
+      - '.github/workflows/anto-v50-original-scale-penalty.yml'
+  pull_request:
+    branches: ['analysis/anto-v49-*']
+permissions:
+  contents: read
+jobs:
+  pinned_original2024_ridge_coordinate_diagnostics:
+    runs-on: ubuntu-latest
+    timeout-minutes: 22
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Retrieve pinned original author source without rehosting records
+        shell: bash
+        run: |
+          curl --fail --location --retry 3 --max-time 120 --silent --show-error \
+            'https://raw.githubusercontent.com/PhloxHopkins/PhloxFieldAdaptation/d792fe58cce36721394adfd97e9f412396578e86/Dataset_fitness_leaftraits_distance_lat_long.csv' \
+            --output "$RUNNER_TEMP/phlox2024_author.csv"
+      - name: Test original SHA, author population grain and coordinate-equivariance
+        env:
+          PHLOX_V50_SOURCE: ${{ runner.temp }}/phlox2024_author.csv
+        run: python -m unittest discover -s tests -p 'test_Phlox_original_scale_penalty_v50.py' -v
+      - name: Execute all 423 holdouts and verify full original-derived frozen result
+        shell: bash
+        run: |
+          if [ -f results/anto_v50_sharing_penalty_source_sensitivity_20261119.json ]; then
+            python scripts/analyze_Phlox_original_scale_penalty_v50.py \
+              --source "$RUNNER_TEMP/phlox2024_author.csv" --check
+          else
+            python scripts/analyze_Phlox_original_scale_penalty_v50.py \
+              --source "$RUNNER_TEMP/phlox2024_author.csv"
+          fi
