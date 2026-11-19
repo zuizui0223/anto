@@ -1,0 +1,85 @@
+{
+  "source_repo": "zuizui0223/SDEA",
+  "source_study": "Höfer et al 2022 Sinapis arvensis",
+  "original_source_zenodo_record": 7335086,
+  "parent_git_blob_sha1": "fa2419d32b74f22f67ea9cbfd79123109db4fdf0",
+  "original_file_MD5": {
+    "Floral_traits.csv": "24f1f01435fa22faa832c415bbd0b77e",
+    "Int_data.csv": "d67c32cc5aa357fe6e6d952a801ea38f",
+    "Plantlist.csv": "630eb7d3d7c871f65c2bd62890e1597c",
+    "README.md": "68bf11faaa9786fbb39f9e32006b336d"
+  },
+  "source_n_plants": 53,
+  "source_n_flower_rows": 53,
+  "source_n_visitor_group_rows": 427,
+  "source_n_complete_plant_rows": 52,
+  "source_shelters": {
+    "1": 11,
+    "2": 9,
+    "3": 8,
+    "4": 12,
+    "5": 12
+  },
+  "original_shelter_heldout_folds": [
+    {
+      "shelter": "1",
+      "n": 11,
+      "models": {
+        "M0": 0.5388784032140574,
+        "M1": 0.5604315579589465,
+        "M2": 0.4581369691702575,
+        "M3": 0.46528142555268076
+      }
+    },
+    {
+      "shelter": "2",
+      "n": 9,
+      "models": {
+        "M0": 0.07494072135119367,
+        "M1": 0.0889840146727754,
+        "M2": 0.07471760961692417,
+        "M3": 0.06349073307581468
+      }
+    },
+    {
+      "shelter": "3",
+      "n": 8,
+      "models": {
+        "M0": 0.17398882691519119,
+        "M1": 0.15803449617570903,
+        "M2": 0.05766954130623424,
+        "M3": 0.07066378190981541
+      }
+    },
+    {
+      "shelter": "4",
+      "n": 12,
+      "models": {
+        "M0": 0.2580658858394215,
+        "M1": 0.28604667860678046,
+        "M2": 0.3108513814290011,
+        "M3": 0.20998050013979555
+      }
+    },
+    {
+      "shelter": "5",
+      "n": 12,
+      "models": {
+        "M0": 0.13317828252418193,
+        "M1": 0.2007277329282071,
+        "M2": 0.07723960408464052,
+        "M3": 0.0796253876120765
+      }
+    }
+  ],
+  "previous_original_process_gain_m1_to_m2": {
+    "equal_shelter": 0.06312187494707219,
+    "improved_shelters": 4,
+    "individual_weighted": 0.062322286026734425
+  },
+  "previous_original_process_readiness": "PROCESS_ADDS_PORTABLE_INFORMATION_IN_FIVE_SHELTERS",
+  "previous_process_visit_placebo_observed": 0.06312187494707219,
+  "previous_process_visit_placebo_q975": 0.011570695918685118,
+  "this_is_prior_replay_not_new_evidence": true,
+  "individual_original_source_records_included": false
+}
