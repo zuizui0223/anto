@@ -5,6 +5,9 @@ on:
     paths:
       - 'scripts/analyze_original_Ulex_elevation_analogues_v51.py'
       - 'tests/test_original_Ulex_elevation_analogues_v51.py'
+      - 'scripts/audit_original_Ulex_v51_clipping_posthoc.py'
+      - 'tests/test_Ulex_v51_clipping_posthoc.py'
+      - 'results/anto_v51_posthoc_Ulex_clipping_audit_20261119.json'
       - 'data/external/anto_v51*'
       - 'docs/ANTO_V51*'
       - 'results/anto_v51_ulex_six_site_elevation_analogue_20261119.json'
@@ -50,5 +53,19 @@ jobs:
               --source-root "$RUNNER_TEMP/ulex" --check
           else
             python scripts/analyze_original_Ulex_elevation_analogues_v51.py \
+              --source-root "$RUNNER_TEMP/ulex"
+          fi
+      - name: Post-outcome original raw-score clipping adverse checks
+        env:
+          ULEX_V51_SOURCE_ROOT: ${{ runner.temp }}/ulex
+        run: python -m unittest discover -s tests -p 'test_Ulex_v51_clipping_posthoc.py' -v
+      - name: Post-outcome original same-site clipping audit, original primary unchanged
+        shell: bash
+        run: |
+          if [ -f results/anto_v51_posthoc_Ulex_clipping_audit_20261119.json ]; then
+            python scripts/audit_original_Ulex_v51_clipping_posthoc.py \
+              --source-root "$RUNNER_TEMP/ulex" --check
+          else
+            python scripts/audit_original_Ulex_v51_clipping_posthoc.py \
               --source-root "$RUNNER_TEMP/ulex"
           fi
