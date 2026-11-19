@@ -321,12 +321,7 @@ def mse_model(train,test):
             and {r["ind"] for r in train}.isdisjoint(
                 {r["ind"] for r in test}),
             "V51_ORIGINAL_SITE_OR_INDIVIDUAL_LEAKAGE")
-    return {
-        "M0":sum((predict(fit_model0,r)-r["fruit_set"])**2
-                 for r in test)/len(test),
-        "M1":sum((predict(fit_model1,r)-r["fruit_set"])**2
-                 for r in test)/len(test)
-    } if False else _mse_original(train,test)
+    return _mse_original(train,test)
 
 
 def _mse_original(train,test):
