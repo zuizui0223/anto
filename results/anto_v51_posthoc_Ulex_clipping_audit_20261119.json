@@ -1,0 +1,577 @@
+{
+  "aggregated_all_sites": {
+    "FAR2": {
+      "by_model": {
+        "M0": {
+          "n_raw_predictions_above_one": 91,
+          "n_raw_predictions_below_zero": 111,
+          "n_raw_predictions_within_unit": 0
+        },
+        "M1": {
+          "n_raw_predictions_above_one": 91,
+          "n_raw_predictions_below_zero": 111,
+          "n_raw_predictions_within_unit": 0
+        }
+      },
+      "n_both_models_at_same_clipping_boundary": 202,
+      "n_original_heldout_individuals_once_each": 202,
+      "n_same_after_clipping_M0_and_M1": 202
+    },
+    "FULL5": {
+      "by_model": {
+        "M0": {
+          "n_raw_predictions_above_one": 0,
+          "n_raw_predictions_below_zero": 0,
+          "n_raw_predictions_within_unit": 202
+        },
+        "M1": {
+          "n_raw_predictions_above_one": 0,
+          "n_raw_predictions_below_zero": 0,
+          "n_raw_predictions_within_unit": 202
+        }
+      },
+      "n_both_models_at_same_clipping_boundary": 0,
+      "n_original_heldout_individuals_once_each": 202,
+      "n_same_after_clipping_M0_and_M1": 0
+    },
+    "NEAR2": {
+      "by_model": {
+        "M0": {
+          "n_raw_predictions_above_one": 0,
+          "n_raw_predictions_below_zero": 59,
+          "n_raw_predictions_within_unit": 143
+        },
+        "M1": {
+          "n_raw_predictions_above_one": 0,
+          "n_raw_predictions_below_zero": 27,
+          "n_raw_predictions_within_unit": 175
+        }
+      },
+      "n_both_models_at_same_clipping_boundary": 27,
+      "n_original_heldout_individuals_once_each": 202,
+      "n_same_after_clipping_M0_and_M1": 27
+    }
+  },
+  "analysis_type": "POST_OUTCOME_ULEX_V51_FAR_PAIR_PREDICTION_CLIP_DIAGNOSTIC",
+  "derived_original_site_diagnostics": [
+    {
+      "both_models_at_same_zero_or_one_boundary_n": 0,
+      "model_clip_counts": {
+        "M0": {
+          "clipped_original_fruit_fraction_mse": 0.00681927498,
+          "n_original_heldout_individuals": 32,
+          "raw_above_one_n": 0,
+          "raw_below_zero_n": 0,
+          "raw_inside_closed_unit_interval_n": 32,
+          "raw_max": 0.094182501939,
+          "raw_min": 0.093257853591
+        },
+        "M1": {
+          "clipped_original_fruit_fraction_mse": 0.003723129857,
+          "n_original_heldout_individuals": 32,
+          "raw_above_one_n": 0,
+          "raw_below_zero_n": 0,
+          "raw_inside_closed_unit_interval_n": 32,
+          "raw_max": 0.094978869085,
+          "raw_min": 0.027836663965
+        }
+      },
+      "original_heldout_individual_count": 32,
+      "original_training_site_count": 5,
+      "regime": "FULL5",
+      "same_clipped_prediction_M0_M1_n": 0,
+      "site": "AresM"
+    },
+    {
+      "both_models_at_same_zero_or_one_boundary_n": 0,
+      "model_clip_counts": {
+        "M0": {
+          "clipped_original_fruit_fraction_mse": 0.006769941067,
+          "n_original_heldout_individuals": 32,
+          "raw_above_one_n": 0,
+          "raw_below_zero_n": 0,
+          "raw_inside_closed_unit_interval_n": 32,
+          "raw_max": 0.094117086113,
+          "raw_min": 0.092596728139
+        },
+        "M1": {
+          "clipped_original_fruit_fraction_mse": 0.003055453992,
+          "n_original_heldout_individuals": 32,
+          "raw_above_one_n": 0,
+          "raw_below_zero_n": 0,
+          "raw_inside_closed_unit_interval_n": 32,
+          "raw_max": 0.094362108987,
+          "raw_min": 0.006880785252
+        }
+      },
+      "original_heldout_individual_count": 32,
+      "original_training_site_count": 2,
+      "regime": "NEAR2",
+      "same_clipped_prediction_M0_M1_n": 0,
+      "site": "AresM"
+    },
+    {
+      "both_models_at_same_zero_or_one_boundary_n": 32,
+      "model_clip_counts": {
+        "M0": {
+          "clipped_original_fruit_fraction_mse": 0.972552723255,
+          "n_original_heldout_individuals": 32,
+          "raw_above_one_n": 32,
+          "raw_below_zero_n": 0,
+          "raw_inside_closed_unit_interval_n": 0,
+          "raw_max": 1.774271400408,
+          "raw_min": 1.710128513695
+        },
+        "M1": {
+          "clipped_original_fruit_fraction_mse": 0.972552723255,
+          "n_original_heldout_individuals": 32,
+          "raw_above_one_n": 32,
+          "raw_below_zero_n": 0,
+          "raw_inside_closed_unit_interval_n": 0,
+          "raw_max": 1.723335784887,
+          "raw_min": 1.442322020729
+        }
+      },
+      "original_heldout_individual_count": 32,
+      "original_training_site_count": 2,
+      "regime": "FAR2",
+      "same_clipped_prediction_M0_M1_n": 32,
+      "site": "AresM"
+    },
+    {
+      "both_models_at_same_zero_or_one_boundary_n": 0,
+      "model_clip_counts": {
+        "M0": {
+          "clipped_original_fruit_fraction_mse": 0.011160555962,
+          "n_original_heldout_individuals": 37,
+          "raw_above_one_n": 0,
+          "raw_below_zero_n": 0,
+          "raw_inside_closed_unit_interval_n": 37,
+          "raw_max": 0.134161675773,
+          "raw_min": 0.131711070308
+        },
+        "M1": {
+          "clipped_original_fruit_fraction_mse": 0.010700763035,
+          "n_original_heldout_individuals": 37,
+          "raw_above_one_n": 0,
+          "raw_below_zero_n": 0,
+          "raw_inside_closed_unit_interval_n": 37,
+          "raw_max": 0.14359497096,
+          "raw_min": 0.081203655307
+        }
+      },
+      "original_heldout_individual_count": 37,
+      "original_training_site_count": 5,
+      "regime": "FULL5",
+      "same_clipped_prediction_M0_M1_n": 0,
+      "site": "Cheste"
+    },
+    {
+      "both_models_at_same_zero_or_one_boundary_n": 0,
+      "model_clip_counts": {
+        "M0": {
+          "clipped_original_fruit_fraction_mse": 0.01154584397,
+          "n_original_heldout_individuals": 37,
+          "raw_above_one_n": 0,
+          "raw_below_zero_n": 0,
+          "raw_inside_closed_unit_interval_n": 37,
+          "raw_max": 0.139673204116,
+          "raw_min": 0.1362247191
+        },
+        "M1": {
+          "clipped_original_fruit_fraction_mse": 0.011430351084,
+          "n_original_heldout_individuals": 37,
+          "raw_above_one_n": 0,
+          "raw_below_zero_n": 0,
+          "raw_inside_closed_unit_interval_n": 37,
+          "raw_max": 0.146804744692,
+          "raw_min": 0.10316986781
+        }
+      },
+      "original_heldout_individual_count": 37,
+      "original_training_site_count": 2,
+      "regime": "NEAR2",
+      "same_clipped_prediction_M0_M1_n": 0,
+      "site": "Cheste"
+    },
+    {
+      "both_models_at_same_zero_or_one_boundary_n": 37,
+      "model_clip_counts": {
+        "M0": {
+          "clipped_original_fruit_fraction_mse": 0.019148650084,
+          "n_original_heldout_individuals": 37,
+          "raw_above_one_n": 0,
+          "raw_below_zero_n": 37,
+          "raw_inside_closed_unit_interval_n": 0,
+          "raw_max": -0.474775832549,
+          "raw_min": -0.493327170364
+        },
+        "M1": {
+          "clipped_original_fruit_fraction_mse": 0.019148650084,
+          "n_original_heldout_individuals": 37,
+          "raw_above_one_n": 0,
+          "raw_below_zero_n": 37,
+          "raw_inside_closed_unit_interval_n": 0,
+          "raw_max": -0.423669111459,
+          "raw_min": -0.453272970259
+        }
+      },
+      "original_heldout_individual_count": 37,
+      "original_training_site_count": 2,
+      "regime": "FAR2",
+      "same_clipped_prediction_M0_M1_n": 37,
+      "site": "Cheste"
+    },
+    {
+      "both_models_at_same_zero_or_one_boundary_n": 0,
+      "model_clip_counts": {
+        "M0": {
+          "clipped_original_fruit_fraction_mse": 0.003344492175,
+          "n_original_heldout_individuals": 33,
+          "raw_above_one_n": 0,
+          "raw_below_zero_n": 0,
+          "raw_inside_closed_unit_interval_n": 33,
+          "raw_max": 0.042975424903,
+          "raw_min": 0.040127950945
+        },
+        "M1": {
+          "clipped_original_fruit_fraction_mse": 0.002109444663,
+          "n_original_heldout_individuals": 33,
+          "raw_above_one_n": 0,
+          "raw_below_zero_n": 0,
+          "raw_inside_closed_unit_interval_n": 33,
+          "raw_max": 0.086644660293,
+          "raw_min": 0.011293946907
+        }
+      },
+      "original_heldout_individual_count": 33,
+      "original_training_site_count": 5,
+      "regime": "FULL5",
+      "same_clipped_prediction_M0_M1_n": 0,
+      "site": "Chiva"
+    },
+    {
+      "both_models_at_same_zero_or_one_boundary_n": 1,
+      "model_clip_counts": {
+        "M0": {
+          "clipped_original_fruit_fraction_mse": 0.00863182469,
+          "n_original_heldout_individuals": 33,
+          "raw_above_one_n": 0,
+          "raw_below_zero_n": 33,
+          "raw_inside_closed_unit_interval_n": 0,
+          "raw_max": -0.008694446065,
+          "raw_min": -0.023209429827
+        },
+        "M1": {
+          "clipped_original_fruit_fraction_mse": 0.002520129598,
+          "n_original_heldout_individuals": 33,
+          "raw_above_one_n": 0,
+          "raw_below_zero_n": 1,
+          "raw_inside_closed_unit_interval_n": 32,
+          "raw_max": 0.131425353146,
+          "raw_min": -0.016672304329
+        }
+      },
+      "original_heldout_individual_count": 33,
+      "original_training_site_count": 2,
+      "regime": "NEAR2",
+      "same_clipped_prediction_M0_M1_n": 1,
+      "site": "Chiva"
+    },
+    {
+      "both_models_at_same_zero_or_one_boundary_n": 33,
+      "model_clip_counts": {
+        "M0": {
+          "clipped_original_fruit_fraction_mse": 0.840636480828,
+          "n_original_heldout_individuals": 33,
+          "raw_above_one_n": 33,
+          "raw_below_zero_n": 0,
+          "raw_inside_closed_unit_interval_n": 0,
+          "raw_max": 1.993155881525,
+          "raw_min": 1.927016329078
+        },
+        "M1": {
+          "clipped_original_fruit_fraction_mse": 0.840636480828,
+          "n_original_heldout_individuals": 33,
+          "raw_above_one_n": 33,
+          "raw_below_zero_n": 0,
+          "raw_inside_closed_unit_interval_n": 0,
+          "raw_max": 1.904972552229,
+          "raw_min": 1.726894397943
+        }
+      },
+      "original_heldout_individual_count": 33,
+      "original_training_site_count": 2,
+      "regime": "FAR2",
+      "same_clipped_prediction_M0_M1_n": 33,
+      "site": "Chiva"
+    },
+    {
+      "both_models_at_same_zero_or_one_boundary_n": 0,
+      "model_clip_counts": {
+        "M0": {
+          "clipped_original_fruit_fraction_mse": 0.015413429603,
+          "n_original_heldout_individuals": 37,
+          "raw_above_one_n": 0,
+          "raw_below_zero_n": 0,
+          "raw_inside_closed_unit_interval_n": 37,
+          "raw_max": 0.105926099863,
+          "raw_min": 0.105421353903
+        },
+        "M1": {
+          "clipped_original_fruit_fraction_mse": 0.015325290459,
+          "n_original_heldout_individuals": 37,
+          "raw_above_one_n": 0,
+          "raw_below_zero_n": 0,
+          "raw_inside_closed_unit_interval_n": 37,
+          "raw_max": 0.128444720944,
+          "raw_min": 0.082774936406
+        }
+      },
+      "original_heldout_individual_count": 37,
+      "original_training_site_count": 5,
+      "regime": "FULL5",
+      "same_clipped_prediction_M0_M1_n": 0,
+      "site": "Montserrat"
+    },
+    {
+      "both_models_at_same_zero_or_one_boundary_n": 0,
+      "model_clip_counts": {
+        "M0": {
+          "clipped_original_fruit_fraction_mse": 0.015982414743,
+          "n_original_heldout_individuals": 37,
+          "raw_above_one_n": 0,
+          "raw_below_zero_n": 0,
+          "raw_inside_closed_unit_interval_n": 37,
+          "raw_max": 0.097914054483,
+          "raw_min": 0.097150012458
+        },
+        "M1": {
+          "clipped_original_fruit_fraction_mse": 0.015809766979,
+          "n_original_heldout_individuals": 37,
+          "raw_above_one_n": 0,
+          "raw_below_zero_n": 0,
+          "raw_inside_closed_unit_interval_n": 37,
+          "raw_max": 0.112639494524,
+          "raw_min": 0.082843449177
+        }
+      },
+      "original_heldout_individual_count": 37,
+      "original_training_site_count": 2,
+      "regime": "NEAR2",
+      "same_clipped_prediction_M0_M1_n": 0,
+      "site": "Montserrat"
+    },
+    {
+      "both_models_at_same_zero_or_one_boundary_n": 37,
+      "model_clip_counts": {
+        "M0": {
+          "clipped_original_fruit_fraction_mse": 0.03341123994,
+          "n_original_heldout_individuals": 37,
+          "raw_above_one_n": 0,
+          "raw_below_zero_n": 37,
+          "raw_inside_closed_unit_interval_n": 0,
+          "raw_max": -0.471874800298,
+          "raw_min": -0.47844029434
+        },
+        "M1": {
+          "clipped_original_fruit_fraction_mse": 0.03341123994,
+          "n_original_heldout_individuals": 37,
+          "raw_above_one_n": 0,
+          "raw_below_zero_n": 37,
+          "raw_inside_closed_unit_interval_n": 0,
+          "raw_max": -0.420764149576,
+          "raw_min": -0.435635187883
+        }
+      },
+      "original_heldout_individual_count": 37,
+      "original_training_site_count": 2,
+      "regime": "FAR2",
+      "same_clipped_prediction_M0_M1_n": 37,
+      "site": "Montserrat"
+    },
+    {
+      "both_models_at_same_zero_or_one_boundary_n": 0,
+      "model_clip_counts": {
+        "M0": {
+          "clipped_original_fruit_fraction_mse": 0.009118220715,
+          "n_original_heldout_individuals": 37,
+          "raw_above_one_n": 0,
+          "raw_below_zero_n": 0,
+          "raw_inside_closed_unit_interval_n": 37,
+          "raw_max": 0.105014076744,
+          "raw_min": 0.101525981762
+        },
+        "M1": {
+          "clipped_original_fruit_fraction_mse": 0.009310544062,
+          "n_original_heldout_individuals": 37,
+          "raw_above_one_n": 0,
+          "raw_below_zero_n": 0,
+          "raw_inside_closed_unit_interval_n": 37,
+          "raw_max": 0.146682655866,
+          "raw_min": 0.100903651602
+        }
+      },
+      "original_heldout_individual_count": 37,
+      "original_training_site_count": 5,
+      "regime": "FULL5",
+      "same_clipped_prediction_M0_M1_n": 0,
+      "site": "Simat"
+    },
+    {
+      "both_models_at_same_zero_or_one_boundary_n": 0,
+      "model_clip_counts": {
+        "M0": {
+          "clipped_original_fruit_fraction_mse": 0.182387241732,
+          "n_original_heldout_individuals": 37,
+          "raw_above_one_n": 0,
+          "raw_below_zero_n": 0,
+          "raw_inside_closed_unit_interval_n": 37,
+          "raw_max": 0.588751120698,
+          "raw_min": 0.473194091328
+        },
+        "M1": {
+          "clipped_original_fruit_fraction_mse": 0.141154623946,
+          "n_original_heldout_individuals": 37,
+          "raw_above_one_n": 0,
+          "raw_below_zero_n": 0,
+          "raw_inside_closed_unit_interval_n": 37,
+          "raw_max": 0.539005919558,
+          "raw_min": 0.159530863952
+        }
+      },
+      "original_heldout_individual_count": 37,
+      "original_training_site_count": 2,
+      "regime": "NEAR2",
+      "same_clipped_prediction_M0_M1_n": 0,
+      "site": "Simat"
+    },
+    {
+      "both_models_at_same_zero_or_one_boundary_n": 37,
+      "model_clip_counts": {
+        "M0": {
+          "clipped_original_fruit_fraction_mse": 0.021539423138,
+          "n_original_heldout_individuals": 37,
+          "raw_above_one_n": 0,
+          "raw_below_zero_n": 37,
+          "raw_inside_closed_unit_interval_n": 0,
+          "raw_max": -0.334686512008,
+          "raw_min": -0.370033299698
+        },
+        "M1": {
+          "clipped_original_fruit_fraction_mse": 0.021539423138,
+          "n_original_heldout_individuals": 37,
+          "raw_above_one_n": 0,
+          "raw_below_zero_n": 37,
+          "raw_inside_closed_unit_interval_n": 0,
+          "raw_max": -0.292552413776,
+          "raw_min": -0.338396956861
+        }
+      },
+      "original_heldout_individual_count": 37,
+      "original_training_site_count": 2,
+      "regime": "FAR2",
+      "same_clipped_prediction_M0_M1_n": 37,
+      "site": "Simat"
+    },
+    {
+      "both_models_at_same_zero_or_one_boundary_n": 0,
+      "model_clip_counts": {
+        "M0": {
+          "clipped_original_fruit_fraction_mse": 0.006549841606,
+          "n_original_heldout_individuals": 26,
+          "raw_above_one_n": 0,
+          "raw_below_zero_n": 0,
+          "raw_inside_closed_unit_interval_n": 26,
+          "raw_max": 0.076470425044,
+          "raw_min": 0.06239643705
+        },
+        "M1": {
+          "clipped_original_fruit_fraction_mse": 0.00511195492,
+          "n_original_heldout_individuals": 26,
+          "raw_above_one_n": 0,
+          "raw_below_zero_n": 0,
+          "raw_inside_closed_unit_interval_n": 26,
+          "raw_max": 0.099078487075,
+          "raw_min": 0.028066557149
+        }
+      },
+      "original_heldout_individual_count": 26,
+      "original_training_site_count": 5,
+      "regime": "FULL5",
+      "same_clipped_prediction_M0_M1_n": 0,
+      "site": "Sot.Chera"
+    },
+    {
+      "both_models_at_same_zero_or_one_boundary_n": 26,
+      "model_clip_counts": {
+        "M0": {
+          "clipped_original_fruit_fraction_mse": 0.015850519434,
+          "n_original_heldout_individuals": 26,
+          "raw_above_one_n": 0,
+          "raw_below_zero_n": 26,
+          "raw_inside_closed_unit_interval_n": 0,
+          "raw_max": -0.016183708033,
+          "raw_min": -0.134362600783
+        },
+        "M1": {
+          "clipped_original_fruit_fraction_mse": 0.015850519434,
+          "n_original_heldout_individuals": 26,
+          "raw_above_one_n": 0,
+          "raw_below_zero_n": 26,
+          "raw_inside_closed_unit_interval_n": 0,
+          "raw_max": -0.00073124707,
+          "raw_min": -0.112707731865
+        }
+      },
+      "original_heldout_individual_count": 26,
+      "original_training_site_count": 2,
+      "regime": "NEAR2",
+      "same_clipped_prediction_M0_M1_n": 26,
+      "site": "Sot.Chera"
+    },
+    {
+      "both_models_at_same_zero_or_one_boundary_n": 26,
+      "model_clip_counts": {
+        "M0": {
+          "clipped_original_fruit_fraction_mse": 0.807210038607,
+          "n_original_heldout_individuals": 26,
+          "raw_above_one_n": 26,
+          "raw_below_zero_n": 0,
+          "raw_inside_closed_unit_interval_n": 0,
+          "raw_max": 1.630012301109,
+          "raw_min": 1.243657481532
+        },
+        "M1": {
+          "clipped_original_fruit_fraction_mse": 0.807210038607,
+          "n_original_heldout_individuals": 26,
+          "raw_above_one_n": 26,
+          "raw_below_zero_n": 0,
+          "raw_inside_closed_unit_interval_n": 0,
+          "raw_max": 1.494097184509,
+          "raw_min": 1.130173654441
+        }
+      },
+      "original_heldout_individual_count": 26,
+      "original_training_site_count": 2,
+      "regime": "FAR2",
+      "same_clipped_prediction_M0_M1_n": 26,
+      "site": "Sot.Chera"
+    }
+  ],
+  "n_additional_independent_biological_studies": 0,
+  "n_original_individuals": 202,
+  "original_sites_one_continuous_population": true,
+  "posthoc_not_primary_confirmation": true,
+  "same_original_folds_reused": true,
+  "source_fitted_models_only": [
+    "M0",
+    "M1"
+  ],
+  "source_original_v51_result_git_blob_sha1": "8f1d5435d2d14c2b2c999671ff9801cffab01a71",
+  "source_train_regimes_only": [
+    "FULL5",
+    "NEAR2",
+    "FAR2"
+  ]
+}
