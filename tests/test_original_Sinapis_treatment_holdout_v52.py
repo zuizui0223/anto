@@ -82,7 +82,7 @@ class OriginalSinapisTreatmentTransfer(unittest.TestCase):
             tr=[r for r in rows if r["treatment"]!="Control"]
             fitted=v.fit(tr,m)
             self.assertEqual(fitted["model"],m)
-            self.assertEqual(fitted["n_train"],35)
+            self.assertEqual(fitted["n_train"],len(tr))
             self.assertNotIn("treatment",fitted["stats"])
             self.assertEqual(len(fitted["beta"]),len(v.FEATURES[m])+1)
 
