@@ -59,6 +59,59 @@ def audit():
         candidates[label]={"original_field_year_profile":profile(values),
                            "year_counts_original_field_years":dict(sorted(
                                 Counter(key[0] for key in values).items()))}
+    # Independent source field-year and physical field identity gate.
+    from collections import defaultdict
+    meta_p=defaultdict(lambda:{"names":set(),"region":set(),"field_type":set(),
+                               "distance":set()})
+    meta_v=defaultdict(lambda:{"names":set(),"region":set(),"field_type":set(),
+                               "distance":set()})
+    for source,metas,namecol in (
+        (product,meta_p,"Field_code_original"),
+        (visits,meta_v,"Field_ID")):
+        for row in source:
+            k=(row["Year"].strip(),row["Field_code"].strip())
+            q=metas[k]
+            q["names"].add(row[namecol].strip())
+            q["region"].add(row["Region"].strip())
+            q["field_type"].add(row["Field_Type"].strip())
+            q["distance"].add(row["Distance"].strip())
+    by_type=Counter()
+    by_region=Counter()
+    n_same_orig_name=0
+    n_exact_single_name=0
+    n_single_meta=0
+    band_counts=Counter()
+    distance_intersection=Counter()
+    physical_fields=set()
+    for k in both:
+        p=meta_p[k];w=meta_v[k]
+        n_exact_single_name+=(len(p["names"])==len(w["names"])==1)
+        n_same_orig_name+=(len(p["names"])==len(w["names"])==1
+                           and p["names"]==w["names"])
+        all_same=(len(p["region"])==len(w["region"])==1 and
+                  len(p["field_type"])==len(w["field_type"])==1 and
+                  p["region"]==w["region"] and
+                  p["field_type"]==w["field_type"])
+        n_single_meta+=bool(all_same)
+        if all_same:
+            by_type[next(iter(p["field_type"]))]+=1
+            by_region[next(iter(p["region"]))]+=1
+        inter=p["distance"]&w["distance"]
+        distance_intersection[len(inter)]+=1
+        band_counts[len(p["distance"])]+=1
+        if len(p["names"])==1 and len(p["region"])==1:
+            physical_fields.add((next(iter(p["region"])),next(iter(p["names"]))))
+    identity_summary={
+        "shared_fieldyear_original_name_singleton_in_both":n_exact_single_name,
+        "shared_fieldyear_same_original_physical_field_name":n_same_orig_name,
+        "shared_fieldyear_region_fieldtype_consistent_and_singleton":n_single_meta,
+        "shared_fieldyear_by_original_field_type":dict(sorted(by_type.items())),
+        "shared_fieldyear_by_original_region":dict(sorted(by_region.items())),
+        "shared_fieldyear_shared_distance_band_count":dict(sorted(distance_intersection.items())),
+        "productivity_fieldyear_distance_band_count":dict(sorted(band_counts.items())),
+        "distinct_original_region_plus_field_names_in_shared_fieldyears":len(physical_fields),
+        "seed_or_visitation_response_data_examined":False,
+    }
     text=files["README_file.txt"].decode("utf-8-sig",errors="replace")
     # Source README is used only to check field and year semantics; the full
     # author note is not redistributed with any source records in GitHub.
@@ -80,6 +133,7 @@ def audit():
             sum(kp[k] for k in both),
         "n_visitation_records_on_shared_field_year":
             sum(kv[k] for k in both),
+        "physical_field_metadata_join_audit":identity_summary,
         "same_plant_id_join_identifiable":False,
         "source_original_seed_yield_or_visit_count_values_opened":False,
         "no_predictive_model_fitted":True
