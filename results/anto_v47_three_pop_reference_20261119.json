@@ -1,0 +1,556 @@
+{
+  "analysis_type": "POSTHOC_FROZEN_V46_SOURCE_POPULATION_COUNT_MATCHING",
+  "original_input_v46_git_blob_sha1": "f03b0eb0177f807317ee1f8a7c0e65ee408d903b",
+  "original_CSV_source_git_blob_sha1": "4c780b0abe644ac69dae86a0450eb598c160626b",
+  "original_source_studies_added_in_v47": 0,
+  "new_prediction_fits": 0,
+  "new_original_field_populations": 0,
+  "primary_v46_all_taxa_transfer_pass_models": [],
+  "technical_biomass_nonadmission_retained": true,
+  "reference_is_no_refit_overlapping_combinatorial_conditioning": true,
+  "new_hypothesis_test_or_p_values": false,
+  "n_same_taxon_amoena_triplets": 56,
+  "n_same_taxon_pilosa_triplets": 84,
+  "n_same_taxon_triplets_total": 140,
+  "n_secondary_pooled_17_other_taxon_triplets": 680,
+  "endpoints": {
+    "fruits_2019": {
+      "outcome_role": "PRIMARY_REAGGREGATION",
+      "models": {
+        "G": {
+          "deamii_3_original_population_ids": [
+            "1719",
+            "1720",
+            "1721"
+          ],
+          "deamii_3_pop_relative_MSE_gain": -0.098256979,
+          "deamii_positive_original_population_folds": 0,
+          "deamii_two_pop_delete_one_arithmetic": [
+            {
+              "deleted_deamii_population": "1719",
+              "remaining_deamii_population_count": 2,
+              "remaining_relative_MSE_gain": -0.0976821179
+            },
+            {
+              "deleted_deamii_population": "1720",
+              "remaining_deamii_population_count": 2,
+              "remaining_relative_MSE_gain": -0.1070930409
+            },
+            {
+              "deleted_deamii_population": "1721",
+              "remaining_deamii_population_count": 2,
+              "remaining_relative_MSE_gain": -0.0887483974
+            }
+          ],
+          "amoena_same_taxon_choose3_reference": {
+            "n_overlapping_reference_combinations": 56,
+            "number_negative": 2,
+            "number_at_or_below_deamii": 0,
+            "minimum": -0.0110244718,
+            "median": 0.098006684,
+            "maximum": 0.1767207975,
+            "is_independent_study_replication": false,
+            "is_valid_randomization_p_value": false
+          },
+          "pilosa_same_taxon_choose3_reference": {
+            "n_overlapping_reference_combinations": 84,
+            "number_negative": 15,
+            "number_at_or_below_deamii": 0,
+            "minimum": -0.0715753238,
+            "median": 0.1457390182,
+            "maximum": 0.3367314762,
+            "is_independent_study_replication": false,
+            "is_valid_randomization_p_value": false
+          },
+          "primary_same_taxon_choose3_140_reference": {
+            "n_overlapping_reference_combinations": 140,
+            "number_negative": 17,
+            "number_at_or_below_deamii": 0,
+            "minimum": -0.0715753238,
+            "median": 0.1133379391,
+            "maximum": 0.3367314762,
+            "is_independent_study_replication": false,
+            "is_valid_randomization_p_value": false
+          },
+          "secondary_mixed_taxon_choose3_680_reference": {
+            "n_overlapping_reference_combinations": 680,
+            "number_negative": 86,
+            "number_at_or_below_deamii": 0,
+            "minimum": -0.0978424158,
+            "median": 0.0961455354,
+            "maximum": 0.3695042133,
+            "is_independent_study_replication": false,
+            "is_valid_randomization_p_value": false
+          }
+        },
+        "T": {
+          "deamii_3_original_population_ids": [
+            "1719",
+            "1720",
+            "1721"
+          ],
+          "deamii_3_pop_relative_MSE_gain": -0.0399085951,
+          "deamii_positive_original_population_folds": 0,
+          "deamii_two_pop_delete_one_arithmetic": [
+            {
+              "deleted_deamii_population": "1719",
+              "remaining_deamii_population_count": 2,
+              "remaining_relative_MSE_gain": -0.0326341051
+            },
+            {
+              "deleted_deamii_population": "1720",
+              "remaining_deamii_population_count": 2,
+              "remaining_relative_MSE_gain": -0.0261252099
+            },
+            {
+              "deleted_deamii_population": "1721",
+              "remaining_deamii_population_count": 2,
+              "remaining_relative_MSE_gain": -0.0637118033
+            }
+          ],
+          "amoena_same_taxon_choose3_reference": {
+            "n_overlapping_reference_combinations": 56,
+            "number_negative": 8,
+            "number_at_or_below_deamii": 4,
+            "minimum": -0.0854233973,
+            "median": 0.0862774684,
+            "maximum": 0.2163602778,
+            "is_independent_study_replication": false,
+            "is_valid_randomization_p_value": false
+          },
+          "pilosa_same_taxon_choose3_reference": {
+            "n_overlapping_reference_combinations": 84,
+            "number_negative": 17,
+            "number_at_or_below_deamii": 4,
+            "minimum": -0.0890854246,
+            "median": 0.1416417064,
+            "maximum": 0.3322918958,
+            "is_independent_study_replication": false,
+            "is_valid_randomization_p_value": false
+          },
+          "primary_same_taxon_choose3_140_reference": {
+            "n_overlapping_reference_combinations": 140,
+            "number_negative": 25,
+            "number_at_or_below_deamii": 8,
+            "minimum": -0.0890854246,
+            "median": 0.117521714,
+            "maximum": 0.3322918958,
+            "is_independent_study_replication": false,
+            "is_valid_randomization_p_value": false
+          },
+          "secondary_mixed_taxon_choose3_680_reference": {
+            "n_overlapping_reference_combinations": 680,
+            "number_negative": 136,
+            "number_at_or_below_deamii": 59,
+            "minimum": -0.1530173235,
+            "median": 0.0958229983,
+            "maximum": 0.3858372013,
+            "is_independent_study_replication": false,
+            "is_valid_randomization_p_value": false
+          }
+        },
+        "E": {
+          "deamii_3_original_population_ids": [
+            "1719",
+            "1720",
+            "1721"
+          ],
+          "deamii_3_pop_relative_MSE_gain": -0.0925025621,
+          "deamii_positive_original_population_folds": 0,
+          "deamii_two_pop_delete_one_arithmetic": [
+            {
+              "deleted_deamii_population": "1719",
+              "remaining_deamii_population_count": 2,
+              "remaining_relative_MSE_gain": -0.0932410316
+            },
+            {
+              "deleted_deamii_population": "1720",
+              "remaining_deamii_population_count": 2,
+              "remaining_relative_MSE_gain": -0.1001882467
+            },
+            {
+              "deleted_deamii_population": "1721",
+              "remaining_deamii_population_count": 2,
+              "remaining_relative_MSE_gain": -0.0828722408
+            }
+          ],
+          "amoena_same_taxon_choose3_reference": {
+            "n_overlapping_reference_combinations": 56,
+            "number_negative": 3,
+            "number_at_or_below_deamii": 0,
+            "minimum": -0.0103520121,
+            "median": 0.087905755,
+            "maximum": 0.1556222852,
+            "is_independent_study_replication": false,
+            "is_valid_randomization_p_value": false
+          },
+          "pilosa_same_taxon_choose3_reference": {
+            "n_overlapping_reference_combinations": 84,
+            "number_negative": 12,
+            "number_at_or_below_deamii": 0,
+            "minimum": -0.0749228684,
+            "median": 0.1471187909,
+            "maximum": 0.343930127,
+            "is_independent_study_replication": false,
+            "is_valid_randomization_p_value": false
+          },
+          "primary_same_taxon_choose3_140_reference": {
+            "n_overlapping_reference_combinations": 140,
+            "number_negative": 15,
+            "number_at_or_below_deamii": 0,
+            "minimum": -0.0749228684,
+            "median": 0.1052500979,
+            "maximum": 0.343930127,
+            "is_independent_study_replication": false,
+            "is_valid_randomization_p_value": false
+          },
+          "secondary_mixed_taxon_choose3_680_reference": {
+            "n_overlapping_reference_combinations": 680,
+            "number_negative": 84,
+            "number_at_or_below_deamii": 2,
+            "minimum": -0.1053703139,
+            "median": 0.0967119976,
+            "maximum": 0.3691808274,
+            "is_independent_study_replication": false,
+            "is_valid_randomization_p_value": false
+          }
+        },
+        "TE": {
+          "deamii_3_original_population_ids": [
+            "1719",
+            "1720",
+            "1721"
+          ],
+          "deamii_3_pop_relative_MSE_gain": -0.027988143,
+          "deamii_positive_original_population_folds": 1,
+          "deamii_two_pop_delete_one_arithmetic": [
+            {
+              "deleted_deamii_population": "1719",
+              "remaining_deamii_population_count": 2,
+              "remaining_relative_MSE_gain": -0.0160200182
+            },
+            {
+              "deleted_deamii_population": "1720",
+              "remaining_deamii_population_count": 2,
+              "remaining_relative_MSE_gain": -0.0198240543
+            },
+            {
+              "deleted_deamii_population": "1721",
+              "remaining_deamii_population_count": 2,
+              "remaining_relative_MSE_gain": -0.050495911
+            }
+          ],
+          "amoena_same_taxon_choose3_reference": {
+            "n_overlapping_reference_combinations": 56,
+            "number_negative": 13,
+            "number_at_or_below_deamii": 5,
+            "minimum": -0.110998399,
+            "median": 0.0772462391,
+            "maximum": 0.2118334406,
+            "is_independent_study_replication": false,
+            "is_valid_randomization_p_value": false
+          },
+          "pilosa_same_taxon_choose3_reference": {
+            "n_overlapping_reference_combinations": 84,
+            "number_negative": 17,
+            "number_at_or_below_deamii": 6,
+            "minimum": -0.0872824554,
+            "median": 0.1621100944,
+            "maximum": 0.3855672643,
+            "is_independent_study_replication": false,
+            "is_valid_randomization_p_value": false
+          },
+          "primary_same_taxon_choose3_140_reference": {
+            "n_overlapping_reference_combinations": 140,
+            "number_negative": 30,
+            "number_at_or_below_deamii": 11,
+            "minimum": -0.110998399,
+            "median": 0.1137770698,
+            "maximum": 0.3855672643,
+            "is_independent_study_replication": false,
+            "is_valid_randomization_p_value": false
+          },
+          "secondary_mixed_taxon_choose3_680_reference": {
+            "n_overlapping_reference_combinations": 680,
+            "number_negative": 140,
+            "number_at_or_below_deamii": 84,
+            "minimum": -0.1410914694,
+            "median": 0.0950386927,
+            "maximum": 0.4402652108,
+            "is_independent_study_replication": false,
+            "is_valid_randomization_p_value": false
+          }
+        }
+      }
+    },
+    "flowers_2019": {
+      "outcome_role": "SECONDARY_DESCRIPTIVE_REAGGREGATION",
+      "models": {
+        "G": {
+          "deamii_3_original_population_ids": [
+            "1719",
+            "1720",
+            "1721"
+          ],
+          "deamii_3_pop_relative_MSE_gain": -0.1254177774,
+          "deamii_positive_original_population_folds": 0,
+          "deamii_two_pop_delete_one_arithmetic": [
+            {
+              "deleted_deamii_population": "1719",
+              "remaining_deamii_population_count": 2,
+              "remaining_relative_MSE_gain": -0.1322898301
+            },
+            {
+              "deleted_deamii_population": "1720",
+              "remaining_deamii_population_count": 2,
+              "remaining_relative_MSE_gain": -0.137736031
+            },
+            {
+              "deleted_deamii_population": "1721",
+              "remaining_deamii_population_count": 2,
+              "remaining_relative_MSE_gain": -0.1049509759
+            }
+          ],
+          "amoena_same_taxon_choose3_reference": {
+            "n_overlapping_reference_combinations": 56,
+            "number_negative": 3,
+            "number_at_or_below_deamii": 0,
+            "minimum": -0.0129808238,
+            "median": 0.1100201471,
+            "maximum": 0.1879670754,
+            "is_independent_study_replication": false,
+            "is_valid_randomization_p_value": false
+          },
+          "pilosa_same_taxon_choose3_reference": {
+            "n_overlapping_reference_combinations": 84,
+            "number_negative": 10,
+            "number_at_or_below_deamii": 0,
+            "minimum": -0.0613511935,
+            "median": 0.2066412837,
+            "maximum": 0.3780947258,
+            "is_independent_study_replication": false,
+            "is_valid_randomization_p_value": false
+          },
+          "primary_same_taxon_choose3_140_reference": {
+            "n_overlapping_reference_combinations": 140,
+            "number_negative": 13,
+            "number_at_or_below_deamii": 0,
+            "minimum": -0.0613511935,
+            "median": 0.1189415955,
+            "maximum": 0.3780947258,
+            "is_independent_study_replication": false,
+            "is_valid_randomization_p_value": false
+          },
+          "secondary_mixed_taxon_choose3_680_reference": {
+            "n_overlapping_reference_combinations": 680,
+            "number_negative": 82,
+            "number_at_or_below_deamii": 0,
+            "minimum": -0.0749628803,
+            "median": 0.106142298,
+            "maximum": 0.4106816754,
+            "is_independent_study_replication": false,
+            "is_valid_randomization_p_value": false
+          }
+        },
+        "T": {
+          "deamii_3_original_population_ids": [
+            "1719",
+            "1720",
+            "1721"
+          ],
+          "deamii_3_pop_relative_MSE_gain": -0.0113353597,
+          "deamii_positive_original_population_folds": 1,
+          "deamii_two_pop_delete_one_arithmetic": [
+            {
+              "deleted_deamii_population": "1719",
+              "remaining_deamii_population_count": 2,
+              "remaining_relative_MSE_gain": -0.0139176124
+            },
+            {
+              "deleted_deamii_population": "1720",
+              "remaining_deamii_population_count": 2,
+              "remaining_relative_MSE_gain": -0.0014466152
+            },
+            {
+              "deleted_deamii_population": "1721",
+              "remaining_deamii_population_count": 2,
+              "remaining_relative_MSE_gain": -0.0190138641
+            }
+          ],
+          "amoena_same_taxon_choose3_reference": {
+            "n_overlapping_reference_combinations": 56,
+            "number_negative": 10,
+            "number_at_or_below_deamii": 10,
+            "minimum": -0.0605331061,
+            "median": 0.0746277054,
+            "maximum": 0.1727489314,
+            "is_independent_study_replication": false,
+            "is_valid_randomization_p_value": false
+          },
+          "pilosa_same_taxon_choose3_reference": {
+            "n_overlapping_reference_combinations": 84,
+            "number_negative": 15,
+            "number_at_or_below_deamii": 11,
+            "minimum": -0.1102581804,
+            "median": 0.2052163383,
+            "maximum": 0.3989743157,
+            "is_independent_study_replication": false,
+            "is_valid_randomization_p_value": false
+          },
+          "primary_same_taxon_choose3_140_reference": {
+            "n_overlapping_reference_combinations": 140,
+            "number_negative": 25,
+            "number_at_or_below_deamii": 21,
+            "minimum": -0.1102581804,
+            "median": 0.1017127015,
+            "maximum": 0.3989743157,
+            "is_independent_study_replication": false,
+            "is_valid_randomization_p_value": false
+          },
+          "secondary_mixed_taxon_choose3_680_reference": {
+            "n_overlapping_reference_combinations": 680,
+            "number_negative": 144,
+            "number_at_or_below_deamii": 124,
+            "minimum": -0.1238527622,
+            "median": 0.0888422074,
+            "maximum": 0.4209162446,
+            "is_independent_study_replication": false,
+            "is_valid_randomization_p_value": false
+          }
+        },
+        "E": {
+          "deamii_3_original_population_ids": [
+            "1719",
+            "1720",
+            "1721"
+          ],
+          "deamii_3_pop_relative_MSE_gain": -0.1119494754,
+          "deamii_positive_original_population_folds": 0,
+          "deamii_two_pop_delete_one_arithmetic": [
+            {
+              "deleted_deamii_population": "1719",
+              "remaining_deamii_population_count": 2,
+              "remaining_relative_MSE_gain": -0.1185455112
+            },
+            {
+              "deleted_deamii_population": "1720",
+              "remaining_deamii_population_count": 2,
+              "remaining_relative_MSE_gain": -0.1155718506
+            },
+            {
+              "deleted_deamii_population": "1721",
+              "remaining_deamii_population_count": 2,
+              "remaining_relative_MSE_gain": -0.1009869597
+            }
+          ],
+          "amoena_same_taxon_choose3_reference": {
+            "n_overlapping_reference_combinations": 56,
+            "number_negative": 3,
+            "number_at_or_below_deamii": 0,
+            "minimum": -0.0099231323,
+            "median": 0.1137441448,
+            "maximum": 0.1915833528,
+            "is_independent_study_replication": false,
+            "is_valid_randomization_p_value": false
+          },
+          "pilosa_same_taxon_choose3_reference": {
+            "n_overlapping_reference_combinations": 84,
+            "number_negative": 12,
+            "number_at_or_below_deamii": 0,
+            "minimum": -0.0883742582,
+            "median": 0.2047844231,
+            "maximum": 0.3827882952,
+            "is_independent_study_replication": false,
+            "is_valid_randomization_p_value": false
+          },
+          "primary_same_taxon_choose3_140_reference": {
+            "n_overlapping_reference_combinations": 140,
+            "number_negative": 15,
+            "number_at_or_below_deamii": 0,
+            "minimum": -0.0883742582,
+            "median": 0.1223387931,
+            "maximum": 0.3827882952,
+            "is_independent_study_replication": false,
+            "is_valid_randomization_p_value": false
+          },
+          "secondary_mixed_taxon_choose3_680_reference": {
+            "n_overlapping_reference_combinations": 680,
+            "number_negative": 85,
+            "number_at_or_below_deamii": 0,
+            "minimum": -0.1015236851,
+            "median": 0.1082704958,
+            "maximum": 0.4115176851,
+            "is_independent_study_replication": false,
+            "is_valid_randomization_p_value": false
+          }
+        },
+        "TE": {
+          "deamii_3_original_population_ids": [
+            "1719",
+            "1720",
+            "1721"
+          ],
+          "deamii_3_pop_relative_MSE_gain": -0.0099905189,
+          "deamii_positive_original_population_folds": 1,
+          "deamii_two_pop_delete_one_arithmetic": [
+            {
+              "deleted_deamii_population": "1719",
+              "remaining_deamii_population_count": 2,
+              "remaining_relative_MSE_gain": -0.0107610466
+            },
+            {
+              "deleted_deamii_population": "1720",
+              "remaining_deamii_population_count": 2,
+              "remaining_relative_MSE_gain": 0.0111060318
+            },
+            {
+              "deleted_deamii_population": "1721",
+              "remaining_deamii_population_count": 2,
+              "remaining_relative_MSE_gain": -0.0314920759
+            }
+          ],
+          "amoena_same_taxon_choose3_reference": {
+            "n_overlapping_reference_combinations": 56,
+            "number_negative": 10,
+            "number_at_or_below_deamii": 6,
+            "minimum": -0.0593828347,
+            "median": 0.0816095814,
+            "maximum": 0.1681154072,
+            "is_independent_study_replication": false,
+            "is_valid_randomization_p_value": false
+          },
+          "pilosa_same_taxon_choose3_reference": {
+            "n_overlapping_reference_combinations": 84,
+            "number_negative": 15,
+            "number_at_or_below_deamii": 15,
+            "minimum": -0.1143267669,
+            "median": 0.190271612,
+            "maximum": 0.3821091203,
+            "is_independent_study_replication": false,
+            "is_valid_randomization_p_value": false
+          },
+          "primary_same_taxon_choose3_140_reference": {
+            "n_overlapping_reference_combinations": 140,
+            "number_negative": 25,
+            "number_at_or_below_deamii": 21,
+            "minimum": -0.1143267669,
+            "median": 0.1011195462,
+            "maximum": 0.3821091203,
+            "is_independent_study_replication": false,
+            "is_valid_randomization_p_value": false
+          },
+          "secondary_mixed_taxon_choose3_680_reference": {
+            "n_overlapping_reference_combinations": 680,
+            "number_negative": 137,
+            "number_at_or_below_deamii": 117,
+            "minimum": -0.1355753038,
+            "median": 0.0865835182,
+            "maximum": 0.4032791929,
+            "is_independent_study_replication": false,
+            "is_valid_randomization_p_value": false
+          }
+        }
+      }
+    }
+  }
+}

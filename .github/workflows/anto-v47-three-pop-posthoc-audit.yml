@@ -1,0 +1,28 @@
+name: ANTO v47 source-frozen Phlox 2024 three-pop diagnostics
+on:
+  push:
+    branches: ['analysis/anto-v47-*']
+    paths:
+      - 'data/external/anto_v47_three_pop_posthoc_registry_20261119.json'
+      - 'docs/ANTO_V47*'
+      - 'scripts/analyze_Phlox_three_pop_conditional_v47.py'
+      - 'results/anto_v47_three_pop_reference_20261119.json'
+      - 'tests/test_Phlox_three_pop_conditional_v47.py'
+      - '.github/workflows/anto-v47-three-pop-posthoc-audit.yml'
+  pull_request:
+    branches: ['analysis/anto-v46-*']
+permissions:
+  contents: read
+jobs:
+  exact_v46_derived_only_three_pop_comparison:
+    runs-on: ubuntu-latest
+    timeout-minutes: 8
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Verify source-grain and adversarial numeric restrictions
+        run: python -m unittest discover -s tests -p 'test_Phlox_three_pop_conditional_v47.py' -v
+      - name: Reproduce all 140 and secondary 680 combinations from pinned existing v46 receipt
+        run: python scripts/analyze_Phlox_three_pop_conditional_v47.py --check
