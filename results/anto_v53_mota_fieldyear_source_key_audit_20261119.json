@@ -1,0 +1,75 @@
+{
+  "n_productivity_blank_field_year": 0,
+  "n_productivity_records_on_shared_field_year": 2217,
+  "n_shared_field_year_units": 80,
+  "n_shared_field_year_units_by_year": {
+    "2017": 41,
+    "2018": 39
+  },
+  "n_visitation_blank_field_year": 0,
+  "n_visitation_records_on_shared_field_year": 11682,
+  "no_predictive_model_fitted": true,
+  "physical_field_metadata_join_audit": {
+    "distinct_original_region_plus_field_names_in_shared_fieldyears": 51,
+    "productivity_fieldyear_distance_band_count": {
+      "3": 1,
+      "4": 79
+    },
+    "seed_or_visitation_response_data_examined": false,
+    "shared_fieldyear_by_original_field_type": {
+      "NonV": 10,
+      "SNV": 32,
+      "WFS": 38
+    },
+    "shared_fieldyear_by_original_region": {
+      "Burgos": 38,
+      "Cuenca": 42
+    },
+    "shared_fieldyear_original_name_singleton_in_both": 80,
+    "shared_fieldyear_region_fieldtype_consistent_and_singleton": 80,
+    "shared_fieldyear_same_original_physical_field_name": 80,
+    "shared_fieldyear_shared_distance_band_count": {
+      "3": 1,
+      "4": 79
+    }
+  },
+  "productivity": {
+    "original_field_year_profile": {
+      "maximum_records_per_field_year": 63,
+      "median_records_per_field_year": 32,
+      "minimum_records_per_field_year": 3,
+      "n_original_distinct_field_years": 102,
+      "total_source_rows": 2875
+    },
+    "year_counts_original_field_years": {
+      "2017": 52,
+      "2018": 50
+    }
+  },
+  "same_plant_id_join_identifiable": false,
+  "source_cross_file_common_column_names": [
+    "Year",
+    "Field_code"
+  ],
+  "source_identity_units": "FIELD×YEAR ONLY, not same individual plants",
+  "source_original_files_MD5": {
+    "Database_Productivity.csv": "aeea30a21e495498295241bcfd8c693d",
+    "Database_Visitation_rates.csv": "e13131ad60b133cc6ab25e20bbd3554b",
+    "README_file.txt": "479b26d3cebb72c8491b0ec00609c08c"
+  },
+  "source_original_seed_yield_or_visit_count_values_opened": false,
+  "visitation": {
+    "original_field_year_profile": {
+      "maximum_records_per_field_year": 256,
+      "median_records_per_field_year": 128,
+      "minimum_records_per_field_year": 1,
+      "n_original_distinct_field_years": 81,
+      "total_source_rows": 11683
+    },
+    "year_counts_original_field_years": {
+      "2017": 41,
+      "2018": 40
+    }
+  },
+  "zenodo_record": 6671199
+}
