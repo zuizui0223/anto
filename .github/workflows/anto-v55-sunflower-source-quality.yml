@@ -1,0 +1,23 @@
+name: ANTO v55 original Mota seed denominator source-quality only
+on:
+  push:
+    branches: ['analysis/anto-v55-*']
+    paths:
+      - 'scripts/audit_original_Mota_seed_fraction_quality_v55.py'
+      - 'results/anto_v55_Mota_seed_fraction_source_quality_20261119.json'
+      - '.github/workflows/anto-v55-sunflower-source-quality.yml'
+  pull_request:
+    branches: ['analysis/anto-v54-*']
+permissions:
+  contents: read
+jobs:
+  numeric_original_source_only:
+    runs-on: ubuntu-latest
+    timeout-minutes: 12
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Verify original source and classify 2217 seed denominator records without prediction
+        run: python scripts/audit_original_Mota_seed_fraction_quality_v55.py

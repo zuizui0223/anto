@@ -1,0 +1,93 @@
+{
+  "analysis_type": "POST_V54_STOP_MOTA_REPORTED_TOTAL_BEE_FIELD_TRANSFER",
+  "date": "2026-11-19",
+  "paper": "Mota et al 2022 sunflower",
+  "source_doi": "10.5061/dryad.h18931zpg",
+  "zenodo_record": 6671199,
+  "original_file_md5": {
+    "Database_Productivity.csv": "aeea30a21e495498295241bcfd8c693d",
+    "Database_Visitation_rates.csv": "e13131ad60b133cc6ab25e20bbd3554b",
+    "README_file.txt": "479b26d3cebb72c8491b0ec00609c08c"
+  },
+  "original_v53_fieldyear_blob_sha1": "7a4fb27c7f26abfa8400d23b041e1a3d3e3424c9",
+  "original_v54_quality_blob_sha1": "55eb9b942e7a0ab7f4e32139ac5305325fb74a83",
+  "n_source_harvest_rows_matched": 2217,
+  "n_source_visit_rows_matched": 11682,
+  "n_source_fieldyears": 80,
+  "n_original_physical_fields": 51,
+  "n_source_missing_aborts": 1056,
+  "n_source_visits_total_not_apis_plus_wild": 4087,
+  "max_absolute_visit_count_discrepancy": 9,
+  "response": "equal-band averaged full seeds / total reproductive units from exact original counts",
+  "primary_exposure": "equal-band averaged original No_Interactions_TOTAL / Total_no_monitored_units",
+  "secondary_exposure": "equal-band averaged original (No_Interactions_APIS + No_Interactions_WILD) / Total_no_monitored_units",
+  "exposure_unit": "source one-minute per monitored sunflower-unit survey, fieldyear aggregated",
+  "original_distance_bands": [
+    "0",
+    "15",
+    "30",
+    "60"
+  ],
+  "source_original_fieldyear_band_counts": {
+    "3": 1,
+    "4": 79
+  },
+  "original_years": [
+    "2017",
+    "2018"
+  ],
+  "original_regions": [
+    "Burgos",
+    "Cuenca"
+  ],
+  "original_field_types": [
+    "NonV",
+    "SNV",
+    "WFS"
+  ],
+  "source_original_fieldyear_by_year": {
+    "2017": 41,
+    "2018": 39
+  },
+  "source_original_fieldyear_by_region": {
+    "Burgos": 38,
+    "Cuenca": 42
+  },
+  "source_original_fieldyear_by_type": {
+    "NonV": 10,
+    "SNV": 32,
+    "WFS": 38
+  },
+  "models": [
+    "Z0",
+    "Z1",
+    "Z2"
+  ],
+  "Z0": "intercept + Year2018 RegionCuenca FieldTypeSNV FieldTypeWFS ridge 8 except intercept",
+  "Z1": "Z0 + train-standardized log1p(reported total visits per sunflower minute)",
+  "Z2": "Z0 + train-standardized log1p(reconstructed Apis+wild visits per sunflower minute), SECONDARY measurement sensitivity",
+  "ridge_alpha": 8,
+  "clipped_prediction_unit_interval": true,
+  "original_holdout": "entire physical field across both years",
+  "n_expected_original_field_holdouts": 51,
+  "n_expected_original_fieldyear_predictions": 80,
+  "placebo_seed": 20261119,
+  "placebo_repeats": 200,
+  "placebo_strata": "original Region×Year×Field_Type, reported and reconstructed rate jointly shuffled",
+  "primary_gain": "Z0 MSE minus Z1 MSE averaged over physical fields",
+  "descriptive_gate": {
+    "equal_field_gain_positive": true,
+    "fieldyear_weighted_gain_positive": true,
+    "positive_original_fields_more_than_half": true,
+    "both_original_region_mean_gains_positive": true,
+    "two_of_three_original_fieldtype_mean_gains_positive": true,
+    "observed_gain_above_placebo_q975": true
+  },
+  "source_model_fitted_before_protocol": false,
+  "v54_source_stop_retained": true,
+  "new_original_biological_studies_vs_v54": 0,
+  "source_study_is_posthoc": true,
+  "same_individual_plant_visit_and_harvest": false,
+  "visitor_group_component_counts_assumed_equal_total": false,
+  "causal_randomization_p_value": false
+}
