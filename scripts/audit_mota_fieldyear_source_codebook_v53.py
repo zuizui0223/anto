@@ -19,7 +19,7 @@ import audit_independent_pollinator_reproduction_sources_v53 as base
 def read_csv(raw):
     text=raw.decode("utf-8-sig")
     try:
-        delim=csv.Sniffer().sniff(text[:16000],delimiters=",;\\t").delimiter
+        delim=csv.Sniffer().sniff(text[:16000],delimiters=",;").delimiter
     except csv.Error:
         delim=","
     reader=csv.DictReader(io.StringIO(text),delimiter=delim)
