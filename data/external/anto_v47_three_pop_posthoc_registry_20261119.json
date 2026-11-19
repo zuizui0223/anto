@@ -1,0 +1,41 @@
+{
+  "analysis": "POSTHOC_ORIGINAL_2024_PHLOX_THREE_SOURCE_POPULATION_MATCHING",
+  "v46_parent_git_blob_sha1": "f03b0eb0177f807317ee1f8a7c0e65ee408d903b",
+  "v46_parent_result": "results/anto_v46_phlox2024_population_heldout_20261118.json",
+  "source_2024_author_git_sha": "d792fe58cce36721394adfd97e9f412396578e86",
+  "source_2024_CSV_blob_sha": "4c780b0abe644ac69dae86a0450eb598c160626b",
+  "source_2024_rows": 963,
+  "source_2024_genotypes": 284,
+  "source_2024_gardens": 3,
+  "source_2024_original_populations": 20,
+  "source_2024_taxon_populations": {
+    "amoena": 8,
+    "deamii": 3,
+    "pilosa": 9
+  },
+  "endpoints": [
+    "fruits_2019",
+    "flowers_2019"
+  ],
+  "fixed_original_models": [
+    "G",
+    "T",
+    "E",
+    "TE"
+  ],
+  "reference_methods": {
+    "primary": "within-original-taxon choose3 from amoena and pilosa",
+    "amoena_triplets": 56,
+    "pilosa_triplets": 84,
+    "pooled_triplets_primary": 140,
+    "secondary": "pooled 17-other-source-populations choose3, including mixed taxa",
+    "pooled_triplets_secondary": 680
+  },
+  "original_biomass_predeclared_transform_nonadmitted": true,
+  "regime": "posthoc_descriptive_no_new_fits",
+  "sign_threshold": 1e-12,
+  "comparison_tolerance": 1e-10,
+  "independent_new_biological_studies": 0,
+  "new_2014_Phlox_selection_refits": 0,
+  "has_p_value": false
+}
