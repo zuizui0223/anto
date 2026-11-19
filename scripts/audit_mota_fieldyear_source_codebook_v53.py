@@ -140,4 +140,14 @@ def audit():
     }
 
 if __name__=="__main__":
-    print("V53_MOTA_SOURCE_KEY_AUDIT="+json.dumps(audit(),sort_keys=True))
+    import argparse
+    p=argparse.ArgumentParser()
+    p.add_argument("--check",action="store_true")
+    args=p.parse_args()
+    result=audit()
+    if args.check:
+        expected=json.loads((ROOT/"results/anto_v53_mota_fieldyear_source_key_audit_20261119.json").read_text())
+        if result!=expected:raise ValueError("V53_MOTA_ORIGINAL_FIELDYEAR_RECEIPT_DRIFT")
+        print("V53_MOTA_80_ORIGINAL_FIELDYEAR_51_PHYSICAL_FIELD_MD5_PARITY_PASS")
+    else:
+        print("V53_MOTA_SOURCE_KEY_AUDIT="+json.dumps(result,sort_keys=True))
