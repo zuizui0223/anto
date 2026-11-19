@@ -1,0 +1,50 @@
+{
+  "analysis_type": "POSTHOC_TWO_TRAIN_ONE_TEST_ORIGINAL_SOURCE_POPULATION_MATCHING",
+  "protocol_date": "2026-11-19",
+  "original_publication_doi": "10.1038/s41467-024-49075-6",
+  "original_author_repo": "PhloxHopkins/PhloxFieldAdaptation",
+  "original_author_commit": "d792fe58cce36721394adfd97e9f412396578e86",
+  "original_csv_blob_sha1": "4c780b0abe644ac69dae86a0450eb598c160626b",
+  "original_csv_bytes": 175377,
+  "original_ramets": 963,
+  "original_genotypes": 284,
+  "original_populations": 20,
+  "original_gardens": [
+    "1-Amoena-PB",
+    "2-Deamii-JC",
+    "3-Pilosa-LBL"
+  ],
+  "original_taxon_population_counts": {
+    "amoena": 8,
+    "deamii": 3,
+    "pilosa": 9
+  },
+  "primary_outcome": "fruits_2019",
+  "secondary_outcome": "flowers_2019",
+  "outcome_transform": "log1p",
+  "biomass_log1p_nonadmitted": true,
+  "negative_biomass_rows": 13,
+  "negative_biomass_minimum": -233,
+  "models": [
+    "B0",
+    "G",
+    "E"
+  ],
+  "ridge_lambda": 10,
+  "train_populations_per_refit": 2,
+  "test_populations_per_refit": 1,
+  "panels_per_taxon": {
+    "amoena": 56,
+    "deamii": 1,
+    "pilosa": 84
+  },
+  "total_panels": 141,
+  "total_population_holdout_fits": 423,
+  "reference_panels": 140,
+  "matched_dimension": "original same-taxon training-source-population count and evaluation-source-population count only",
+  "source_family_replicates_added": 0,
+  "real_floral_colour_or_pollinator_data_admitted": false,
+  "biological_mechanism_inferred": false,
+  "valid_randomization_p_value": false,
+  "posthoc_after_v46_and_v47": true
+}

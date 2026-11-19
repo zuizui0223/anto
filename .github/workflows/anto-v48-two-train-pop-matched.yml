@@ -1,0 +1,44 @@
+name: ANTO v48 original Phlox two-training-population refits
+on:
+  push:
+    branches: ['analysis/anto-v48-*']
+    paths:
+      - 'data/external/anto_v48_original2024_train2_registry_20261119.json'
+      - 'docs/ANTO_V48*'
+      - 'scripts/analyze_Phlox_2024_train2_v48.py'
+      - 'tests/test_Phlox_2024_train2_v48.py'
+      - 'results/anto_v48_phlox2024_train2_matched_source_20261119.json'
+      - '.github/workflows/anto-v48-two-train-pop-matched.yml'
+  pull_request:
+    branches: ['analysis/anto-v47-*']
+permissions:
+  contents: read
+jobs:
+  original_2024_train_2_test_1:
+    runs-on: ubuntu-latest
+    timeout-minutes: 18
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Fetch exact original-author 2024 field dataset into ephemeral runner
+        shell: bash
+        run: |
+          curl --fail --location --retry 3 --max-time 120 --silent --show-error \
+            'https://raw.githubusercontent.com/PhloxHopkins/PhloxFieldAdaptation/d792fe58cce36721394adfd97e9f412396578e86/Dataset_fitness_leaftraits_distance_lat_long.csv' \
+            --output "$RUNNER_TEMP/phlox2024_author.csv"
+      - name: Source-grain and adversarial prediction tests
+        env:
+          PHLOX_V48_SOURCE: ${{ runner.temp }}/phlox2024_author.csv
+        run: python -m unittest discover -s tests -p 'test_Phlox_2024_train2_v48.py' -v
+      - name: Source SHA-verified 423 fits, complete no-refit receipt equality
+        shell: bash
+        run: |
+          if [ -f results/anto_v48_phlox2024_train2_matched_source_20261119.json ]; then
+            python scripts/analyze_Phlox_2024_train2_v48.py \
+              --source "$RUNNER_TEMP/phlox2024_author.csv" --check
+          else
+            python scripts/analyze_Phlox_2024_train2_v48.py \
+              --source "$RUNNER_TEMP/phlox2024_author.csv"
+          fi
