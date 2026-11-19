@@ -1,0 +1,23 @@
+name: ANTO v54 original Mota numeric source quality audit, NOT fitness model
+on:
+  push:
+    branches: ['analysis/anto-v54-*']
+    paths:
+      - 'scripts/audit_original_Mota_numeric_consistency_v54.py'
+      - 'results/anto_v54_original_Mota_source_integrity_20261119.json'
+      - '.github/workflows/anto-v54-original-sunflower-source-quality.yml'
+  pull_request:
+    branches: ['analysis/anto-v53-*']
+permissions:
+  contents: read
+jobs:
+  original_source_quality_only_no_model:
+    runs-on: ubuntu-latest
+    timeout-minutes: 12
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Original MD5 source and numeric denominator count audit without model
+        run: python scripts/audit_original_Mota_numeric_consistency_v54.py
