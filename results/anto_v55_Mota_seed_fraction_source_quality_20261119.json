@@ -1,0 +1,36 @@
+{
+  "analysis_type": "POST_V55_SOURCE_SEED_RATIO_QUALITY_ONLY_NOT_PREDICTION",
+  "new_v55_source_invalid_seed_fraction_not_imputed": true,
+  "no_source_plant_or_field_identifier_exported": true,
+  "original_seed_or_visitor_outcome_prediction_fitted": false,
+  "source_original_file_md5": {
+    "Database_Productivity.csv": "aeea30a21e495498295241bcfd8c693d",
+    "Database_Visitation_rates.csv": "e13131ad60b133cc6ab25e20bbd3554b",
+    "README_file.txt": "479b26d3cebb72c8491b0ec00609c08c"
+  },
+  "source_original_harvest_rows": 2217,
+  "source_original_record": 6671199,
+  "source_ratio_domain_status": {
+    "successful_seeds_greater_than_reproductive_units": 3,
+    "total_matched_harvest_source_rows": 2217,
+    "valid_source_fraction": 2214
+  },
+  "source_ratio_domain_status_by_year": [
+    {
+      "n": 3,
+      "status": "successful_seeds_greater_than_reproductive_units",
+      "year": "2017"
+    },
+    {
+      "n": 1306,
+      "status": "valid_source_fraction",
+      "year": "2017"
+    },
+    {
+      "n": 908,
+      "status": "valid_source_fraction",
+      "year": "2018"
+    }
+  ],
+  "v54_source_STOP_preserved": true
+}
