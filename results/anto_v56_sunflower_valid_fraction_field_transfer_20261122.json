@@ -1,0 +1,2371 @@
+{
+  "analysis_type": "POST_V55_ORIGINAL_SUNFLOWER_EXACT_THREE_INVALID_ROWS_EXCLUDED_FIELD_TRANSFER",
+  "does_not_link_same_sunflower_plant_visitor_and_seed": true,
+  "excluded_source_rows_reason_only": {
+    "No_Seeds_Total_gt_No_rep_units": 3
+  },
+  "n_new_original_studies_vs_v54": 0,
+  "new_source_plant_level_pollination_mechanism_estimated": false,
+  "no_causal_pollination_or_genetic_evolution_estimated": true,
+  "no_valid_randomization_p_value_computed": true,
+  "not_retroactive_v54_or_v55_success": true,
+  "original_independent_biological_studies_added": 0,
+  "original_physical_field_scores": [
+    {
+      "clipped_prediction_count": {
+        "Z0": {
+          "n_before_clip_above_one": 0,
+          "n_before_clip_below_zero": 0
+        },
+        "Z1": {
+          "n_before_clip_above_one": 0,
+          "n_before_clip_below_zero": 0
+        },
+        "Z2": {
+          "n_before_clip_above_one": 0,
+          "n_before_clip_below_zero": 0
+        }
+      },
+      "mse": {
+        "Z0": 0.0004387214106183519,
+        "Z1": 0.005559694869135056,
+        "Z2": 0.005618979982260483
+      },
+      "n_fieldyears": 2,
+      "original_fieldyear_derived_losses": [
+        {
+          "field_type": "NonV",
+          "squared_loss_by_model": {
+            "Z0": 0.00009801646516987916,
+            "Z1": 0.0020430525078122545,
+            "Z2": 0.0020389858639514946
+          },
+          "year": "2017"
+        },
+        {
+          "field_type": "NonV",
+          "squared_loss_by_model": {
+            "Z0": 0.0007794263560668246,
+            "Z1": 0.009076337230457858,
+            "Z2": 0.00919897410056947
+          },
+          "year": "2018"
+        }
+      ],
+      "physical_field_hash": "68e9598d6059a0d5af198a7596c24d24255f7cb86bb5a85cd311e7bb2caca0ba",
+      "region": "Burgos",
+      "years": [
+        "2017",
+        "2018"
+      ]
+    },
+    {
+      "clipped_prediction_count": {
+        "Z0": {
+          "n_before_clip_above_one": 0,
+          "n_before_clip_below_zero": 0
+        },
+        "Z1": {
+          "n_before_clip_above_one": 0,
+          "n_before_clip_below_zero": 0
+        },
+        "Z2": {
+          "n_before_clip_above_one": 0,
+          "n_before_clip_below_zero": 0
+        }
+      },
+      "mse": {
+        "Z0": 0.0005946898710252566,
+        "Z1": 0.015521072217824667,
+        "Z2": 0.015613009296263861
+      },
+      "n_fieldyears": 2,
+      "original_fieldyear_derived_losses": [
+        {
+          "field_type": "SNV",
+          "squared_loss_by_model": {
+            "Z0": 0.0008140772930696099,
+            "Z1": 0.009542159659210854,
+            "Z2": 0.00962589245710283
+          },
+          "year": "2017"
+        },
+        {
+          "field_type": "SNV",
+          "squared_loss_by_model": {
+            "Z0": 0.00037530244898090334,
+            "Z1": 0.02149998477643848,
+            "Z2": 0.021600126135424894
+          },
+          "year": "2018"
+        }
+      ],
+      "physical_field_hash": "4346f8910c1711c8cd1b6be45b5ac14e49d475d3e01f47df08c20545c3bae33a",
+      "region": "Burgos",
+      "years": [
+        "2017",
+        "2018"
+      ]
+    },
+    {
+      "clipped_prediction_count": {
+        "Z0": {
+          "n_before_clip_above_one": 0,
+          "n_before_clip_below_zero": 0
+        },
+        "Z1": {
+          "n_before_clip_above_one": 0,
+          "n_before_clip_below_zero": 0
+        },
+        "Z2": {
+          "n_before_clip_above_one": 0,
+          "n_before_clip_below_zero": 0
+        }
+      },
+      "mse": {
+        "Z0": 0.017861635423642778,
+        "Z1": 0.01081377776383647,
+        "Z2": 0.010809539772283373
+      },
+      "n_fieldyears": 2,
+      "original_fieldyear_derived_losses": [
+        {
+          "field_type": "WFS",
+          "squared_loss_by_model": {
+            "Z0": 0.0013094872400733568,
+            "Z1": 0.007926550532985972,
+            "Z2": 0.00819359026385573
+          },
+          "year": "2017"
+        },
+        {
+          "field_type": "WFS",
+          "squared_loss_by_model": {
+            "Z0": 0.0344137836072122,
+            "Z1": 0.013701004994686966,
+            "Z2": 0.013425489280711014
+          },
+          "year": "2018"
+        }
+      ],
+      "physical_field_hash": "82676cd0cb01de9281a5a487e3808a553f627f90c94495a8c02b3c617579f5ae",
+      "region": "Burgos",
+      "years": [
+        "2017",
+        "2018"
+      ]
+    },
+    {
+      "clipped_prediction_count": {
+        "Z0": {
+          "n_before_clip_above_one": 0,
+          "n_before_clip_below_zero": 0
+        },
+        "Z1": {
+          "n_before_clip_above_one": 0,
+          "n_before_clip_below_zero": 0
+        },
+        "Z2": {
+          "n_before_clip_above_one": 0,
+          "n_before_clip_below_zero": 0
+        }
+      },
+      "mse": {
+        "Z0": 0.0013718279958086694,
+        "Z1": 0.007324693579488487,
+        "Z2": 0.00741606829264599
+      },
+      "n_fieldyears": 2,
+      "original_fieldyear_derived_losses": [
+        {
+          "field_type": "WFS",
+          "squared_loss_by_model": {
+            "Z0": 2.717794479944326e-8,
+            "Z1": 0.012977608588826213,
+            "Z2": 0.013073646529928103
+          },
+          "year": "2017"
+        },
+        {
+          "field_type": "WFS",
+          "squared_loss_by_model": {
+            "Z0": 0.002743628813672539,
+            "Z1": 0.0016717785701507613,
+            "Z2": 0.0017584900553638777
+          },
+          "year": "2018"
+        }
+      ],
+      "physical_field_hash": "2bbfade6f31649253dec3cdfc91ea75378b67e6f20eb1fa29cdb475c045fcfb5",
+      "region": "Burgos",
+      "years": [
+        "2017",
+        "2018"
+      ]
+    },
+    {
+      "clipped_prediction_count": {
+        "Z0": {
+          "n_before_clip_above_one": 0,
+          "n_before_clip_below_zero": 0
+        },
+        "Z1": {
+          "n_before_clip_above_one": 0,
+          "n_before_clip_below_zero": 0
+        },
+        "Z2": {
+          "n_before_clip_above_one": 0,
+          "n_before_clip_below_zero": 0
+        }
+      },
+      "mse": {
+        "Z0": 0.006051062027978723,
+        "Z1": 0.0036557046853954818,
+        "Z2": 0.003656676616496218
+      },
+      "n_fieldyears": 2,
+      "original_fieldyear_derived_losses": [
+        {
+          "field_type": "NonV",
+          "squared_loss_by_model": {
+            "Z0": 0.011156226684168484,
+            "Z1": 0.006422821377043337,
+            "Z2": 0.006459519361860136
+          },
+          "year": "2017"
+        },
+        {
+          "field_type": "NonV",
+          "squared_loss_by_model": {
+            "Z0": 0.0009458973717889611,
+            "Z1": 0.000888587993747626,
+            "Z2": 0.0008538338711322996
+          },
+          "year": "2018"
+        }
+      ],
+      "physical_field_hash": "5e0946a757560a821ea6e9d4e22a6ec809999c05ed057db2068112efee602398",
+      "region": "Burgos",
+      "years": [
+        "2017",
+        "2018"
+      ]
+    },
+    {
+      "clipped_prediction_count": {
+        "Z0": {
+          "n_before_clip_above_one": 0,
+          "n_before_clip_below_zero": 0
+        },
+        "Z1": {
+          "n_before_clip_above_one": 0,
+          "n_before_clip_below_zero": 0
+        },
+        "Z2": {
+          "n_before_clip_above_one": 0,
+          "n_before_clip_below_zero": 0
+        }
+      },
+      "mse": {
+        "Z0": 0.013925168574385445,
+        "Z1": 0.016732370655118917,
+        "Z2": 0.01670079289130962
+      },
+      "n_fieldyears": 2,
+      "original_fieldyear_derived_losses": [
+        {
+          "field_type": "SNV",
+          "squared_loss_by_model": {
+            "Z0": 0.0031909426769764176,
+            "Z1": 0.0013989932696765969,
+            "Z2": 0.0014994328755500738
+          },
+          "year": "2017"
+        },
+        {
+          "field_type": "SNV",
+          "squared_loss_by_model": {
+            "Z0": 0.024659394471794473,
+            "Z1": 0.03206574804056124,
+            "Z2": 0.031902152907069166
+          },
+          "year": "2018"
+        }
+      ],
+      "physical_field_hash": "b5130a2667ed8ffdf75abed16fad1784c6db2a0af5007d8f1bfc9375cbb82482",
+      "region": "Burgos",
+      "years": [
+        "2017",
+        "2018"
+      ]
+    },
+    {
+      "clipped_prediction_count": {
+        "Z0": {
+          "n_before_clip_above_one": 0,
+          "n_before_clip_below_zero": 0
+        },
+        "Z1": {
+          "n_before_clip_above_one": 0,
+          "n_before_clip_below_zero": 0
+        },
+        "Z2": {
+          "n_before_clip_above_one": 0,
+          "n_before_clip_below_zero": 0
+        }
+      },
+      "mse": {
+        "Z0": 0.028331780187490312,
+        "Z1": 0.021349036717614192,
+        "Z2": 0.021191803066226075
+      },
+      "n_fieldyears": 2,
+      "original_fieldyear_derived_losses": [
+        {
+          "field_type": "WFS",
+          "squared_loss_by_model": {
+            "Z0": 0.056549840292581005,
+            "Z1": 0.042227873662771996,
+            "Z2": 0.041953827287872746
+          },
+          "year": "2017"
+        },
+        {
+          "field_type": "WFS",
+          "squared_loss_by_model": {
+            "Z0": 0.0001137200823996204,
+            "Z1": 0.0004701997724563892,
+            "Z2": 0.0004297788445794057
+          },
+          "year": "2018"
+        }
+      ],
+      "physical_field_hash": "dfeaf5cb1caed9be6ad7319864c7628ab1bce617a2f5f512d7cb853f0d2dcab6",
+      "region": "Burgos",
+      "years": [
+        "2017",
+        "2018"
+      ]
+    },
+    {
+      "clipped_prediction_count": {
+        "Z0": {
+          "n_before_clip_above_one": 0,
+          "n_before_clip_below_zero": 0
+        },
+        "Z1": {
+          "n_before_clip_above_one": 0,
+          "n_before_clip_below_zero": 0
+        },
+        "Z2": {
+          "n_before_clip_above_one": 0,
+          "n_before_clip_below_zero": 0
+        }
+      },
+      "mse": {
+        "Z0": 0.00760549686862628,
+        "Z1": 0.00457280713955625,
+        "Z2": 0.004511208082866973
+      },
+      "n_fieldyears": 2,
+      "original_fieldyear_derived_losses": [
+        {
+          "field_type": "NonV",
+          "squared_loss_by_model": {
+            "Z0": 0.012476772497971416,
+            "Z1": 0.0010403453896609635,
+            "Z2": 0.001026845904168954
+          },
+          "year": "2017"
+        },
+        {
+          "field_type": "NonV",
+          "squared_loss_by_model": {
+            "Z0": 0.002734221239281144,
+            "Z1": 0.008105268889451537,
+            "Z2": 0.007995570261564992
+          },
+          "year": "2018"
+        }
+      ],
+      "physical_field_hash": "4b8679330b9d0daecdcd76fa2b8a913556c30f5dbcef09734a30bece269543c1",
+      "region": "Burgos",
+      "years": [
+        "2017",
+        "2018"
+      ]
+    },
+    {
+      "clipped_prediction_count": {
+        "Z0": {
+          "n_before_clip_above_one": 0,
+          "n_before_clip_below_zero": 0
+        },
+        "Z1": {
+          "n_before_clip_above_one": 0,
+          "n_before_clip_below_zero": 0
+        },
+        "Z2": {
+          "n_before_clip_above_one": 0,
+          "n_before_clip_below_zero": 0
+        }
+      },
+      "mse": {
+        "Z0": 0.004345366155800096,
+        "Z1": 0.015325056497146135,
+        "Z2": 0.015186657136612634
+      },
+      "n_fieldyears": 1,
+      "original_fieldyear_derived_losses": [
+        {
+          "field_type": "SNV",
+          "squared_loss_by_model": {
+            "Z0": 0.004345366155800096,
+            "Z1": 0.015325056497146135,
+            "Z2": 0.015186657136612634
+          },
+          "year": "2018"
+        }
+      ],
+      "physical_field_hash": "f3c2bea2c45088768bb7e77023ad0532f7f52d569f07e852f94a4f45a06d75a0",
+      "region": "Burgos",
+      "years": [
+        "2018"
+      ]
+    },
+    {
+      "clipped_prediction_count": {
+        "Z0": {
+          "n_before_clip_above_one": 0,
+          "n_before_clip_below_zero": 0
+        },
+        "Z1": {
+          "n_before_clip_above_one": 0,
+          "n_before_clip_below_zero": 0
+        },
+        "Z2": {
+          "n_before_clip_above_one": 0,
+          "n_before_clip_below_zero": 0
+        }
+      },
+      "mse": {
+        "Z0": 0.00018561069672789086,
+        "Z1": 0.00995248975812075,
+        "Z2": 0.009621064824736795
+      },
+      "n_fieldyears": 1,
+      "original_fieldyear_derived_losses": [
+        {
+          "field_type": "SNV",
+          "squared_loss_by_model": {
+            "Z0": 0.00018561069672789086,
+            "Z1": 0.00995248975812075,
+            "Z2": 0.009621064824736795
+          },
+          "year": "2017"
+        }
+      ],
+      "physical_field_hash": "e6af616e50fdddf3f5a6cd7d2b67ec2293b015e9af57561b1ef2d4644b3729a0",
+      "region": "Burgos",
+      "years": [
+        "2017"
+      ]
+    },
+    {
+      "clipped_prediction_count": {
+        "Z0": {
+          "n_before_clip_above_one": 0,
+          "n_before_clip_below_zero": 0
+        },
+        "Z1": {
+          "n_before_clip_above_one": 0,
+          "n_before_clip_below_zero": 0
+        },
+        "Z2": {
+          "n_before_clip_above_one": 0,
+          "n_before_clip_below_zero": 0
+        }
+      },
+      "mse": {
+        "Z0": 0.0028512404611592155,
+        "Z1": 0.0035728638826635272,
+        "Z2": 0.0034696359531013726
+      },
+      "n_fieldyears": 2,
+      "original_fieldyear_derived_losses": [
+        {
+          "field_type": "WFS",
+          "squared_loss_by_model": {
+            "Z0": 0.004161423451760563,
+            "Z1": 0.0004352155476119352,
+            "Z2": 0.0004087738803916192
+          },
+          "year": "2017"
+        },
+        {
+          "field_type": "WFS",
+          "squared_loss_by_model": {
+            "Z0": 0.0015410574705578678,
+            "Z1": 0.0067105122177151194,
+            "Z2": 0.006530498025811126
+          },
+          "year": "2018"
+        }
+      ],
+      "physical_field_hash": "17031076ba28b2929c01d152c47ff41a32a3d9fa0865e5497d831873e83ed692",
+      "region": "Burgos",
+      "years": [
+        "2017",
+        "2018"
+      ]
+    },
+    {
+      "clipped_prediction_count": {
+        "Z0": {
+          "n_before_clip_above_one": 0,
+          "n_before_clip_below_zero": 0
+        },
+        "Z1": {
+          "n_before_clip_above_one": 0,
+          "n_before_clip_below_zero": 0
+        },
+        "Z2": {
+          "n_before_clip_above_one": 0,
+          "n_before_clip_below_zero": 0
+        }
+      },
+      "mse": {
+        "Z0": 0.03146501895148388,
+        "Z1": 0.017623960731807022,
+        "Z2": 0.017612927693755918
+      },
+      "n_fieldyears": 2,
+      "original_fieldyear_derived_losses": [
+        {
+          "field_type": "WFS",
+          "squared_loss_by_model": {
+            "Z0": 0.04599745668882903,
+            "Z1": 0.025004308892056567,
+            "Z2": 0.024809482260346113
+          },
+          "year": "2017"
+        },
+        {
+          "field_type": "WFS",
+          "squared_loss_by_model": {
+            "Z0": 0.01693258121413874,
+            "Z1": 0.010243612571557476,
+            "Z2": 0.010416373127165722
+          },
+          "year": "2018"
+        }
+      ],
+      "physical_field_hash": "cf355380b00990d10701179a1f7e5cf48cddc06cce3253848d464aca7f32ce8e",
+      "region": "Burgos",
+      "years": [
+        "2017",
+        "2018"
+      ]
+    },
+    {
+      "clipped_prediction_count": {
+        "Z0": {
+          "n_before_clip_above_one": 0,
+          "n_before_clip_below_zero": 0
+        },
+        "Z1": {
+          "n_before_clip_above_one": 0,
+          "n_before_clip_below_zero": 0
+        },
+        "Z2": {
+          "n_before_clip_above_one": 0,
+          "n_before_clip_below_zero": 0
+        }
+      },
+      "mse": {
+        "Z0": 0.016870696729109187,
+        "Z1": 0.014348726947707169,
+        "Z2": 0.014181091162509466
+      },
+      "n_fieldyears": 2,
+      "original_fieldyear_derived_losses": [
+        {
+          "field_type": "NonV",
+          "squared_loss_by_model": {
+            "Z0": 0.020553516255929914,
+            "Z1": 0.028661314369338914,
+            "Z2": 0.0283195338391735
+          },
+          "year": "2017"
+        },
+        {
+          "field_type": "NonV",
+          "squared_loss_by_model": {
+            "Z0": 0.013187877202288461,
+            "Z1": 0.000036139526075423994,
+            "Z2": 0.000042648485845434124
+          },
+          "year": "2018"
+        }
+      ],
+      "physical_field_hash": "10d46a07d5169ff4c22888a9f3960d8533ce2b49854eb84b53d7210fb6bf46bf",
+      "region": "Burgos",
+      "years": [
+        "2017",
+        "2018"
+      ]
+    },
+    {
+      "clipped_prediction_count": {
+        "Z0": {
+          "n_before_clip_above_one": 0,
+          "n_before_clip_below_zero": 0
+        },
+        "Z1": {
+          "n_before_clip_above_one": 0,
+          "n_before_clip_below_zero": 0
+        },
+        "Z2": {
+          "n_before_clip_above_one": 0,
+          "n_before_clip_below_zero": 0
+        }
+      },
+      "mse": {
+        "Z0": 0.009200175874831608,
+        "Z1": 0.0034625765390900063,
+        "Z2": 0.003441137751639916
+      },
+      "n_fieldyears": 2,
+      "original_fieldyear_derived_losses": [
+        {
+          "field_type": "SNV",
+          "squared_loss_by_model": {
+            "Z0": 0.0000029357387640397,
+            "Z1": 0.0021369627292880974,
+            "Z2": 0.002174453466182962
+          },
+          "year": "2017"
+        },
+        {
+          "field_type": "SNV",
+          "squared_loss_by_model": {
+            "Z0": 0.018397416010899177,
+            "Z1": 0.004788190348891915,
+            "Z2": 0.00470782203709687
+          },
+          "year": "2018"
+        }
+      ],
+      "physical_field_hash": "e916a383aca023c266334cc26d107a634253037bfc61cd51cc732c7d9b70db24",
+      "region": "Burgos",
+      "years": [
+        "2017",
+        "2018"
+      ]
+    },
+    {
+      "clipped_prediction_count": {
+        "Z0": {
+          "n_before_clip_above_one": 0,
+          "n_before_clip_below_zero": 0
+        },
+        "Z1": {
+          "n_before_clip_above_one": 0,
+          "n_before_clip_below_zero": 0
+        },
+        "Z2": {
+          "n_before_clip_above_one": 0,
+          "n_before_clip_below_zero": 0
+        }
+      },
+      "mse": {
+        "Z0": 0.00940818882701851,
+        "Z1": 0.00778911207482193,
+        "Z2": 0.007386029697328313
+      },
+      "n_fieldyears": 2,
+      "original_fieldyear_derived_losses": [
+        {
+          "field_type": "WFS",
+          "squared_loss_by_model": {
+            "Z0": 0.012957876732506379,
+            "Z1": 0.015155952348428262,
+            "Z2": 0.014384643955449073
+          },
+          "year": "2017"
+        },
+        {
+          "field_type": "WFS",
+          "squared_loss_by_model": {
+            "Z0": 0.005858500921530643,
+            "Z1": 0.00042227180121559707,
+            "Z2": 0.00038741543920755336
+          },
+          "year": "2018"
+        }
+      ],
+      "physical_field_hash": "ccff317f4d76abc1001ef72ea9adbfdd94de884af0ff65a65e4e77f96aeb8b24",
+      "region": "Burgos",
+      "years": [
+        "2017",
+        "2018"
+      ]
+    },
+    {
+      "clipped_prediction_count": {
+        "Z0": {
+          "n_before_clip_above_one": 0,
+          "n_before_clip_below_zero": 0
+        },
+        "Z1": {
+          "n_before_clip_above_one": 0,
+          "n_before_clip_below_zero": 0
+        },
+        "Z2": {
+          "n_before_clip_above_one": 0,
+          "n_before_clip_below_zero": 0
+        }
+      },
+      "mse": {
+        "Z0": 0.02630515308222599,
+        "Z1": 0.02405441919384809,
+        "Z2": 0.023438575961280905
+      },
+      "n_fieldyears": 2,
+      "original_fieldyear_derived_losses": [
+        {
+          "field_type": "WFS",
+          "squared_loss_by_model": {
+            "Z0": 0.004864552474843847,
+            "Z1": 0.011543789059063494,
+            "Z2": 0.010621113210252515
+          },
+          "year": "2017"
+        },
+        {
+          "field_type": "WFS",
+          "squared_loss_by_model": {
+            "Z0": 0.047745753689608136,
+            "Z1": 0.036565049328632686,
+            "Z2": 0.03625603871230929
+          },
+          "year": "2018"
+        }
+      ],
+      "physical_field_hash": "48bd36e750e0baac7521ef4ebaf53815caf43746de417182214192b6780d93cc",
+      "region": "Burgos",
+      "years": [
+        "2017",
+        "2018"
+      ]
+    },
+    {
+      "clipped_prediction_count": {
+        "Z0": {
+          "n_before_clip_above_one": 0,
+          "n_before_clip_below_zero": 0
+        },
+        "Z1": {
+          "n_before_clip_above_one": 0,
+          "n_before_clip_below_zero": 0
+        },
+        "Z2": {
+          "n_before_clip_above_one": 0,
+          "n_before_clip_below_zero": 0
+        }
+      },
+      "mse": {
+        "Z0": 0.018044361931158298,
+        "Z1": 0.005195637660980919,
+        "Z2": 0.00526425626014226
+      },
+      "n_fieldyears": 2,
+      "original_fieldyear_derived_losses": [
+        {
+          "field_type": "NonV",
+          "squared_loss_by_model": {
+            "Z0": 0.020981625214971326,
+            "Z1": 0.006110640836384802,
+            "Z2": 0.006183263955960246
+          },
+          "year": "2017"
+        },
+        {
+          "field_type": "NonV",
+          "squared_loss_by_model": {
+            "Z0": 0.015107098647345267,
+            "Z1": 0.004280634485577036,
+            "Z2": 0.004345248564324273
+          },
+          "year": "2018"
+        }
+      ],
+      "physical_field_hash": "9fcc42f2afd8bebb93423b22a2460e239468a0e57824df8af538303bc300bfa9",
+      "region": "Burgos",
+      "years": [
+        "2017",
+        "2018"
+      ]
+    },
+    {
+      "clipped_prediction_count": {
+        "Z0": {
+          "n_before_clip_above_one": 0,
+          "n_before_clip_below_zero": 0
+        },
+        "Z1": {
+          "n_before_clip_above_one": 0,
+          "n_before_clip_below_zero": 0
+        },
+        "Z2": {
+          "n_before_clip_above_one": 0,
+          "n_before_clip_below_zero": 0
+        }
+      },
+      "mse": {
+        "Z0": 0.013609226840051641,
+        "Z1": 0.0037014325469839106,
+        "Z2": 0.0036864438433553306
+      },
+      "n_fieldyears": 2,
+      "original_fieldyear_derived_losses": [
+        {
+          "field_type": "SNV",
+          "squared_loss_by_model": {
+            "Z0": 0.007095945638532297,
+            "Z1": 0.0004870795745461349,
+            "Z2": 0.0004101976590566914
+          },
+          "year": "2017"
+        },
+        {
+          "field_type": "SNV",
+          "squared_loss_by_model": {
+            "Z0": 0.020122508041570987,
+            "Z1": 0.006915785519421686,
+            "Z2": 0.00696269002765397
+          },
+          "year": "2018"
+        }
+      ],
+      "physical_field_hash": "027ba71028ab1c37371c616693a805d5af95847b9ef7f825974f3b83987a44f9",
+      "region": "Burgos",
+      "years": [
+        "2017",
+        "2018"
+      ]
+    },
+    {
+      "clipped_prediction_count": {
+        "Z0": {
+          "n_before_clip_above_one": 0,
+          "n_before_clip_below_zero": 0
+        },
+        "Z1": {
+          "n_before_clip_above_one": 0,
+          "n_before_clip_below_zero": 0
+        },
+        "Z2": {
+          "n_before_clip_above_one": 0,
+          "n_before_clip_below_zero": 0
+        }
+      },
+      "mse": {
+        "Z0": 0.008475614350950313,
+        "Z1": 0.0019396309708411693,
+        "Z2": 0.0019066695377694654
+      },
+      "n_fieldyears": 2,
+      "original_fieldyear_derived_losses": [
+        {
+          "field_type": "WFS",
+          "squared_loss_by_model": {
+            "Z0": 0.004958911833829926,
+            "Z1": 0.00032786739745832214,
+            "Z2": 0.0001727435978678954
+          },
+          "year": "2017"
+        },
+        {
+          "field_type": "WFS",
+          "squared_loss_by_model": {
+            "Z0": 0.0119923168680707,
+            "Z1": 0.0035513945442240164,
+            "Z2": 0.0036405954776710355
+          },
+          "year": "2018"
+        }
+      ],
+      "physical_field_hash": "6fbb1c2d2e9006844e1a55213e36b9bd789aa0f3bedb02c755660517c37b5148",
+      "region": "Burgos",
+      "years": [
+        "2017",
+        "2018"
+      ]
+    },
+    {
+      "clipped_prediction_count": {
+        "Z0": {
+          "n_before_clip_above_one": 0,
+          "n_before_clip_below_zero": 0
+        },
+        "Z1": {
+          "n_before_clip_above_one": 0,
+          "n_before_clip_below_zero": 0
+        },
+        "Z2": {
+          "n_before_clip_above_one": 0,
+          "n_before_clip_below_zero": 0
+        }
+      },
+      "mse": {
+        "Z0": 0.022367519727692305,
+        "Z1": 0.00883452101990674,
+        "Z2": 0.007864698375736778
+      },
+      "n_fieldyears": 2,
+      "original_fieldyear_derived_losses": [
+        {
+          "field_type": "WFS",
+          "squared_loss_by_model": {
+            "Z0": 0.030367190375849586,
+            "Z1": 0.013260937050767104,
+            "Z2": 0.011228130935006238
+          },
+          "year": "2017"
+        },
+        {
+          "field_type": "WFS",
+          "squared_loss_by_model": {
+            "Z0": 0.014367849079535021,
+            "Z1": 0.004408104989046373,
+            "Z2": 0.0045012658164673165
+          },
+          "year": "2018"
+        }
+      ],
+      "physical_field_hash": "7d3f74083bd36c87a15105d08d285458dd7a474f107691d196ef544fe759aa24",
+      "region": "Burgos",
+      "years": [
+        "2017",
+        "2018"
+      ]
+    },
+    {
+      "clipped_prediction_count": {
+        "Z0": {
+          "n_before_clip_above_one": 0,
+          "n_before_clip_below_zero": 0
+        },
+        "Z1": {
+          "n_before_clip_above_one": 0,
+          "n_before_clip_below_zero": 0
+        },
+        "Z2": {
+          "n_before_clip_above_one": 0,
+          "n_before_clip_below_zero": 0
+        }
+      },
+      "mse": {
+        "Z0": 0.010512300914446293,
+        "Z1": 0.023092181010118173,
+        "Z2": 0.023309946481110833
+      },
+      "n_fieldyears": 2,
+      "original_fieldyear_derived_losses": [
+        {
+          "field_type": "SNV",
+          "squared_loss_by_model": {
+            "Z0": 0.006906708135108795,
+            "Z1": 0.016956002291500953,
+            "Z2": 0.01682911370732816
+          },
+          "year": "2017"
+        },
+        {
+          "field_type": "SNV",
+          "squared_loss_by_model": {
+            "Z0": 0.014117893693783792,
+            "Z1": 0.029228359728735394,
+            "Z2": 0.029790779254893505
+          },
+          "year": "2018"
+        }
+      ],
+      "physical_field_hash": "6d214eb78b6ec578c6ce876cb085424fcd88a811efc24154d8cfd470b953981e",
+      "region": "Cuenca",
+      "years": [
+        "2017",
+        "2018"
+      ]
+    },
+    {
+      "clipped_prediction_count": {
+        "Z0": {
+          "n_before_clip_above_one": 0,
+          "n_before_clip_below_zero": 0
+        },
+        "Z1": {
+          "n_before_clip_above_one": 0,
+          "n_before_clip_below_zero": 0
+        },
+        "Z2": {
+          "n_before_clip_above_one": 0,
+          "n_before_clip_below_zero": 0
+        }
+      },
+      "mse": {
+        "Z0": 0.0024210853866469513,
+        "Z1": 0.0014038649836227144,
+        "Z2": 0.0014802254394858277
+      },
+      "n_fieldyears": 2,
+      "original_fieldyear_derived_losses": [
+        {
+          "field_type": "SNV",
+          "squared_loss_by_model": {
+            "Z0": 0.00476118836535853,
+            "Z1": 0.001917030956709578,
+            "Z2": 0.0019470084409252092
+          },
+          "year": "2017"
+        },
+        {
+          "field_type": "SNV",
+          "squared_loss_by_model": {
+            "Z0": 0.00008098240793537247,
+            "Z1": 0.0008906990105358511,
+            "Z2": 0.0010134424380464462
+          },
+          "year": "2018"
+        }
+      ],
+      "physical_field_hash": "59c705d37026b7b08dd3dc97a9ccd16b57bfae49c39784671d0a0c4cf3dadca5",
+      "region": "Cuenca",
+      "years": [
+        "2017",
+        "2018"
+      ]
+    },
+    {
+      "clipped_prediction_count": {
+        "Z0": {
+          "n_before_clip_above_one": 0,
+          "n_before_clip_below_zero": 0
+        },
+        "Z1": {
+          "n_before_clip_above_one": 0,
+          "n_before_clip_below_zero": 0
+        },
+        "Z2": {
+          "n_before_clip_above_one": 0,
+          "n_before_clip_below_zero": 0
+        }
+      },
+      "mse": {
+        "Z0": 0.0023514150380590224,
+        "Z1": 0.00001776931866975902,
+        "Z2": 3.578143902012254e-7
+      },
+      "n_fieldyears": 1,
+      "original_fieldyear_derived_losses": [
+        {
+          "field_type": "SNV",
+          "squared_loss_by_model": {
+            "Z0": 0.0023514150380590224,
+            "Z1": 0.00001776931866975902,
+            "Z2": 3.578143902012254e-7
+          },
+          "year": "2017"
+        }
+      ],
+      "physical_field_hash": "486a523a81658c988d697f2b0f730de7fc9a96715140440b271f6ed51074b775",
+      "region": "Cuenca",
+      "years": [
+        "2017"
+      ]
+    },
+    {
+      "clipped_prediction_count": {
+        "Z0": {
+          "n_before_clip_above_one": 0,
+          "n_before_clip_below_zero": 0
+        },
+        "Z1": {
+          "n_before_clip_above_one": 0,
+          "n_before_clip_below_zero": 0
+        },
+        "Z2": {
+          "n_before_clip_above_one": 0,
+          "n_before_clip_below_zero": 0
+        }
+      },
+      "mse": {
+        "Z0": 0.001344902713357327,
+        "Z1": 0.006333396919396986,
+        "Z2": 0.006514638259341233
+      },
+      "n_fieldyears": 1,
+      "original_fieldyear_derived_losses": [
+        {
+          "field_type": "SNV",
+          "squared_loss_by_model": {
+            "Z0": 0.001344902713357327,
+            "Z1": 0.006333396919396986,
+            "Z2": 0.006514638259341233
+          },
+          "year": "2018"
+        }
+      ],
+      "physical_field_hash": "3e006fb6302f1ea54c422ae5b0bde7b42556c343a5955d5a93e669503dc96563",
+      "region": "Cuenca",
+      "years": [
+        "2018"
+      ]
+    },
+    {
+      "clipped_prediction_count": {
+        "Z0": {
+          "n_before_clip_above_one": 0,
+          "n_before_clip_below_zero": 0
+        },
+        "Z1": {
+          "n_before_clip_above_one": 0,
+          "n_before_clip_below_zero": 0
+        },
+        "Z2": {
+          "n_before_clip_above_one": 0,
+          "n_before_clip_below_zero": 0
+        }
+      },
+      "mse": {
+        "Z0": 0.0003113891606610917,
+        "Z1": 0.0006549996104177559,
+        "Z2": 0.0008819191710412152
+      },
+      "n_fieldyears": 1,
+      "original_fieldyear_derived_losses": [
+        {
+          "field_type": "SNV",
+          "squared_loss_by_model": {
+            "Z0": 0.0003113891606610917,
+            "Z1": 0.0006549996104177559,
+            "Z2": 0.0008819191710412152
+          },
+          "year": "2018"
+        }
+      ],
+      "physical_field_hash": "3e2309b1ccb0b77a8a3a3df35c0fe66c669b550494de8db2b275d663a30e7a42",
+      "region": "Cuenca",
+      "years": [
+        "2018"
+      ]
+    },
+    {
+      "clipped_prediction_count": {
+        "Z0": {
+          "n_before_clip_above_one": 0,
+          "n_before_clip_below_zero": 0
+        },
+        "Z1": {
+          "n_before_clip_above_one": 0,
+          "n_before_clip_below_zero": 0
+        },
+        "Z2": {
+          "n_before_clip_above_one": 0,
+          "n_before_clip_below_zero": 0
+        }
+      },
+      "mse": {
+        "Z0": 0.0061880674196304495,
+        "Z1": 0.002966930507247376,
+        "Z2": 0.002739654383269272
+      },
+      "n_fieldyears": 1,
+      "original_fieldyear_derived_losses": [
+        {
+          "field_type": "SNV",
+          "squared_loss_by_model": {
+            "Z0": 0.0061880674196304495,
+            "Z1": 0.002966930507247376,
+            "Z2": 0.002739654383269272
+          },
+          "year": "2018"
+        }
+      ],
+      "physical_field_hash": "2d788af887e16ee23b18ac262e0fa2dffa171bf0a76f7a69b0198e17a3eceef9",
+      "region": "Cuenca",
+      "years": [
+        "2018"
+      ]
+    },
+    {
+      "clipped_prediction_count": {
+        "Z0": {
+          "n_before_clip_above_one": 0,
+          "n_before_clip_below_zero": 0
+        },
+        "Z1": {
+          "n_before_clip_above_one": 0,
+          "n_before_clip_below_zero": 0
+        },
+        "Z2": {
+          "n_before_clip_above_one": 0,
+          "n_before_clip_below_zero": 0
+        }
+      },
+      "mse": {
+        "Z0": 0.0490986208510849,
+        "Z1": 0.03245325977201384,
+        "Z2": 0.0313300595478925
+      },
+      "n_fieldyears": 1,
+      "original_fieldyear_derived_losses": [
+        {
+          "field_type": "SNV",
+          "squared_loss_by_model": {
+            "Z0": 0.0490986208510849,
+            "Z1": 0.03245325977201384,
+            "Z2": 0.0313300595478925
+          },
+          "year": "2018"
+        }
+      ],
+      "physical_field_hash": "cb9d2f39966f4dedb77b5b52b0628b72b60cd3151777d79f36cb851bf553181e",
+      "region": "Cuenca",
+      "years": [
+        "2018"
+      ]
+    },
+    {
+      "clipped_prediction_count": {
+        "Z0": {
+          "n_before_clip_above_one": 0,
+          "n_before_clip_below_zero": 0
+        },
+        "Z1": {
+          "n_before_clip_above_one": 0,
+          "n_before_clip_below_zero": 0
+        },
+        "Z2": {
+          "n_before_clip_above_one": 0,
+          "n_before_clip_below_zero": 0
+        }
+      },
+      "mse": {
+        "Z0": 0.0163172647911579,
+        "Z1": 0.010892520799568114,
+        "Z2": 0.011328243026413958
+      },
+      "n_fieldyears": 1,
+      "original_fieldyear_derived_losses": [
+        {
+          "field_type": "SNV",
+          "squared_loss_by_model": {
+            "Z0": 0.0163172647911579,
+            "Z1": 0.010892520799568114,
+            "Z2": 0.011328243026413958
+          },
+          "year": "2018"
+        }
+      ],
+      "physical_field_hash": "4ae8ec046e4975ccdc7be2af6b4d9d5bc5cfc5f87a2276e792da979b017718cb",
+      "region": "Cuenca",
+      "years": [
+        "2018"
+      ]
+    },
+    {
+      "clipped_prediction_count": {
+        "Z0": {
+          "n_before_clip_above_one": 0,
+          "n_before_clip_below_zero": 0
+        },
+        "Z1": {
+          "n_before_clip_above_one": 0,
+          "n_before_clip_below_zero": 0
+        },
+        "Z2": {
+          "n_before_clip_above_one": 0,
+          "n_before_clip_below_zero": 0
+        }
+      },
+      "mse": {
+        "Z0": 0.000009946912170063957,
+        "Z1": 0.0002850439722894559,
+        "Z2": 0.00017852888913358174
+      },
+      "n_fieldyears": 1,
+      "original_fieldyear_derived_losses": [
+        {
+          "field_type": "SNV",
+          "squared_loss_by_model": {
+            "Z0": 0.000009946912170063957,
+            "Z1": 0.0002850439722894559,
+            "Z2": 0.00017852888913358174
+          },
+          "year": "2017"
+        }
+      ],
+      "physical_field_hash": "85ebe9d39b67c6255a4404299e37776a795bfbd4a844d0f56d3193db21516610",
+      "region": "Cuenca",
+      "years": [
+        "2017"
+      ]
+    },
+    {
+      "clipped_prediction_count": {
+        "Z0": {
+          "n_before_clip_above_one": 0,
+          "n_before_clip_below_zero": 0
+        },
+        "Z1": {
+          "n_before_clip_above_one": 0,
+          "n_before_clip_below_zero": 0
+        },
+        "Z2": {
+          "n_before_clip_above_one": 0,
+          "n_before_clip_below_zero": 0
+        }
+      },
+      "mse": {
+        "Z0": 0.006639746230267952,
+        "Z1": 0.017754252082480135,
+        "Z2": 0.01773653894079628
+      },
+      "n_fieldyears": 1,
+      "original_fieldyear_derived_losses": [
+        {
+          "field_type": "SNV",
+          "squared_loss_by_model": {
+            "Z0": 0.006639746230267952,
+            "Z1": 0.017754252082480135,
+            "Z2": 0.01773653894079628
+          },
+          "year": "2018"
+        }
+      ],
+      "physical_field_hash": "aa0a6f8b13fcfb010f66e4442311fcc3eb0e2e3e883de42f6d1b47e59bb163d8",
+      "region": "Cuenca",
+      "years": [
+        "2018"
+      ]
+    },
+    {
+      "clipped_prediction_count": {
+        "Z0": {
+          "n_before_clip_above_one": 0,
+          "n_before_clip_below_zero": 0
+        },
+        "Z1": {
+          "n_before_clip_above_one": 0,
+          "n_before_clip_below_zero": 0
+        },
+        "Z2": {
+          "n_before_clip_above_one": 0,
+          "n_before_clip_below_zero": 0
+        }
+      },
+      "mse": {
+        "Z0": 0.05350715689607826,
+        "Z1": 0.030045952695797146,
+        "Z2": 0.02946202115267444
+      },
+      "n_fieldyears": 1,
+      "original_fieldyear_derived_losses": [
+        {
+          "field_type": "SNV",
+          "squared_loss_by_model": {
+            "Z0": 0.05350715689607826,
+            "Z1": 0.030045952695797146,
+            "Z2": 0.02946202115267444
+          },
+          "year": "2018"
+        }
+      ],
+      "physical_field_hash": "f111bb27e719ce9284dd5851382a81d73e6806949ce9df6b2443e93de4278cac",
+      "region": "Cuenca",
+      "years": [
+        "2018"
+      ]
+    },
+    {
+      "clipped_prediction_count": {
+        "Z0": {
+          "n_before_clip_above_one": 0,
+          "n_before_clip_below_zero": 0
+        },
+        "Z1": {
+          "n_before_clip_above_one": 0,
+          "n_before_clip_below_zero": 0
+        },
+        "Z2": {
+          "n_before_clip_above_one": 0,
+          "n_before_clip_below_zero": 0
+        }
+      },
+      "mse": {
+        "Z0": 0.10656135510628843,
+        "Z1": 0.08974116394965552,
+        "Z2": 0.08970753988195945
+      },
+      "n_fieldyears": 1,
+      "original_fieldyear_derived_losses": [
+        {
+          "field_type": "SNV",
+          "squared_loss_by_model": {
+            "Z0": 0.10656135510628843,
+            "Z1": 0.08974116394965552,
+            "Z2": 0.08970753988195945
+          },
+          "year": "2018"
+        }
+      ],
+      "physical_field_hash": "b8b0186bac88e85fb57c5e6be058fe33c8d6a802983a95c6dff25710300b09e3",
+      "region": "Cuenca",
+      "years": [
+        "2018"
+      ]
+    },
+    {
+      "clipped_prediction_count": {
+        "Z0": {
+          "n_before_clip_above_one": 0,
+          "n_before_clip_below_zero": 0
+        },
+        "Z1": {
+          "n_before_clip_above_one": 0,
+          "n_before_clip_below_zero": 0
+        },
+        "Z2": {
+          "n_before_clip_above_one": 0,
+          "n_before_clip_below_zero": 0
+        }
+      },
+      "mse": {
+        "Z0": 0.018961593557771814,
+        "Z1": 0.013595319607959608,
+        "Z2": 0.013354551231116087
+      },
+      "n_fieldyears": 1,
+      "original_fieldyear_derived_losses": [
+        {
+          "field_type": "SNV",
+          "squared_loss_by_model": {
+            "Z0": 0.018961593557771814,
+            "Z1": 0.013595319607959608,
+            "Z2": 0.013354551231116087
+          },
+          "year": "2018"
+        }
+      ],
+      "physical_field_hash": "1ec8fc55513ae3b506cccce0e8ac3a0a73a24d1757ba0cf62c86f4aac2b16c7b",
+      "region": "Cuenca",
+      "years": [
+        "2018"
+      ]
+    },
+    {
+      "clipped_prediction_count": {
+        "Z0": {
+          "n_before_clip_above_one": 0,
+          "n_before_clip_below_zero": 0
+        },
+        "Z1": {
+          "n_before_clip_above_one": 0,
+          "n_before_clip_below_zero": 0
+        },
+        "Z2": {
+          "n_before_clip_above_one": 0,
+          "n_before_clip_below_zero": 0
+        }
+      },
+      "mse": {
+        "Z0": 0.008708920106562499,
+        "Z1": 0.0057536484031167,
+        "Z2": 0.005562435781432625
+      },
+      "n_fieldyears": 1,
+      "original_fieldyear_derived_losses": [
+        {
+          "field_type": "SNV",
+          "squared_loss_by_model": {
+            "Z0": 0.008708920106562499,
+            "Z1": 0.0057536484031167,
+            "Z2": 0.005562435781432625
+          },
+          "year": "2017"
+        }
+      ],
+      "physical_field_hash": "817549bfe1dc08fca34764ea84d514a64d9e45e145c1bb3a07375c661f8b763e",
+      "region": "Cuenca",
+      "years": [
+        "2017"
+      ]
+    },
+    {
+      "clipped_prediction_count": {
+        "Z0": {
+          "n_before_clip_above_one": 0,
+          "n_before_clip_below_zero": 0
+        },
+        "Z1": {
+          "n_before_clip_above_one": 0,
+          "n_before_clip_below_zero": 0
+        },
+        "Z2": {
+          "n_before_clip_above_one": 0,
+          "n_before_clip_below_zero": 0
+        }
+      },
+      "mse": {
+        "Z0": 0.011324881381434176,
+        "Z1": 0.005927850489046039,
+        "Z2": 0.00663485119883738
+      },
+      "n_fieldyears": 1,
+      "original_fieldyear_derived_losses": [
+        {
+          "field_type": "SNV",
+          "squared_loss_by_model": {
+            "Z0": 0.011324881381434176,
+            "Z1": 0.005927850489046039,
+            "Z2": 0.00663485119883738
+          },
+          "year": "2017"
+        }
+      ],
+      "physical_field_hash": "a022ab29e5c1ba624e816e3fad05f14f51e4a6d199cd78f43d84680de46ee3df",
+      "region": "Cuenca",
+      "years": [
+        "2017"
+      ]
+    },
+    {
+      "clipped_prediction_count": {
+        "Z0": {
+          "n_before_clip_above_one": 0,
+          "n_before_clip_below_zero": 0
+        },
+        "Z1": {
+          "n_before_clip_above_one": 0,
+          "n_before_clip_below_zero": 0
+        },
+        "Z2": {
+          "n_before_clip_above_one": 0,
+          "n_before_clip_below_zero": 0
+        }
+      },
+      "mse": {
+        "Z0": 0.006399508699453194,
+        "Z1": 0.003112754348662685,
+        "Z2": 0.002340205490221746
+      },
+      "n_fieldyears": 1,
+      "original_fieldyear_derived_losses": [
+        {
+          "field_type": "SNV",
+          "squared_loss_by_model": {
+            "Z0": 0.006399508699453194,
+            "Z1": 0.003112754348662685,
+            "Z2": 0.002340205490221746
+          },
+          "year": "2017"
+        }
+      ],
+      "physical_field_hash": "24fc672d464e5faa00be44f3692dc11762818b67fbfbe0edb7a846382a8af2a7",
+      "region": "Cuenca",
+      "years": [
+        "2017"
+      ]
+    },
+    {
+      "clipped_prediction_count": {
+        "Z0": {
+          "n_before_clip_above_one": 0,
+          "n_before_clip_below_zero": 0
+        },
+        "Z1": {
+          "n_before_clip_above_one": 0,
+          "n_before_clip_below_zero": 0
+        },
+        "Z2": {
+          "n_before_clip_above_one": 0,
+          "n_before_clip_below_zero": 0
+        }
+      },
+      "mse": {
+        "Z0": 0.012838653321541767,
+        "Z1": 0.012442179513204582,
+        "Z2": 0.012250447649590613
+      },
+      "n_fieldyears": 1,
+      "original_fieldyear_derived_losses": [
+        {
+          "field_type": "SNV",
+          "squared_loss_by_model": {
+            "Z0": 0.012838653321541767,
+            "Z1": 0.012442179513204582,
+            "Z2": 0.012250447649590613
+          },
+          "year": "2017"
+        }
+      ],
+      "physical_field_hash": "49e8cb7c6eeb195884c68050fc683d38a641ce7d5fb6fcd4af60309ca7cfeaf8",
+      "region": "Cuenca",
+      "years": [
+        "2017"
+      ]
+    },
+    {
+      "clipped_prediction_count": {
+        "Z0": {
+          "n_before_clip_above_one": 0,
+          "n_before_clip_below_zero": 0
+        },
+        "Z1": {
+          "n_before_clip_above_one": 0,
+          "n_before_clip_below_zero": 0
+        },
+        "Z2": {
+          "n_before_clip_above_one": 0,
+          "n_before_clip_below_zero": 0
+        }
+      },
+      "mse": {
+        "Z0": 0.00830970750013125,
+        "Z1": 0.007911050041971826,
+        "Z2": 0.00816061456524368
+      },
+      "n_fieldyears": 1,
+      "original_fieldyear_derived_losses": [
+        {
+          "field_type": "SNV",
+          "squared_loss_by_model": {
+            "Z0": 0.00830970750013125,
+            "Z1": 0.007911050041971826,
+            "Z2": 0.00816061456524368
+          },
+          "year": "2017"
+        }
+      ],
+      "physical_field_hash": "d6289208fc80f67654d535829585c744d134fb50e4a49e2b91e56122e8d7d013",
+      "region": "Cuenca",
+      "years": [
+        "2017"
+      ]
+    },
+    {
+      "clipped_prediction_count": {
+        "Z0": {
+          "n_before_clip_above_one": 0,
+          "n_before_clip_below_zero": 0
+        },
+        "Z1": {
+          "n_before_clip_above_one": 0,
+          "n_before_clip_below_zero": 0
+        },
+        "Z2": {
+          "n_before_clip_above_one": 0,
+          "n_before_clip_below_zero": 0
+        }
+      },
+      "mse": {
+        "Z0": 0.01659426890732965,
+        "Z1": 0.013080664412041388,
+        "Z2": 0.01525574846115216
+      },
+      "n_fieldyears": 1,
+      "original_fieldyear_derived_losses": [
+        {
+          "field_type": "SNV",
+          "squared_loss_by_model": {
+            "Z0": 0.01659426890732965,
+            "Z1": 0.013080664412041388,
+            "Z2": 0.01525574846115216
+          },
+          "year": "2017"
+        }
+      ],
+      "physical_field_hash": "bb16cb92dcaa78dfac91e7e7db152b3327d2e70eb92045c8a65477e84ff75c5a",
+      "region": "Cuenca",
+      "years": [
+        "2017"
+      ]
+    },
+    {
+      "clipped_prediction_count": {
+        "Z0": {
+          "n_before_clip_above_one": 0,
+          "n_before_clip_below_zero": 0
+        },
+        "Z1": {
+          "n_before_clip_above_one": 0,
+          "n_before_clip_below_zero": 0
+        },
+        "Z2": {
+          "n_before_clip_above_one": 0,
+          "n_before_clip_below_zero": 0
+        }
+      },
+      "mse": {
+        "Z0": 0.003103731362659465,
+        "Z1": 0.0003043583106127162,
+        "Z2": 0.0006284460331840934
+      },
+      "n_fieldyears": 1,
+      "original_fieldyear_derived_losses": [
+        {
+          "field_type": "SNV",
+          "squared_loss_by_model": {
+            "Z0": 0.003103731362659465,
+            "Z1": 0.0003043583106127162,
+            "Z2": 0.0006284460331840934
+          },
+          "year": "2017"
+        }
+      ],
+      "physical_field_hash": "91222bd24b5ed35134f58448493636151e7117ab9d7ad5aa759501a7f0a55718",
+      "region": "Cuenca",
+      "years": [
+        "2017"
+      ]
+    },
+    {
+      "clipped_prediction_count": {
+        "Z0": {
+          "n_before_clip_above_one": 0,
+          "n_before_clip_below_zero": 0
+        },
+        "Z1": {
+          "n_before_clip_above_one": 0,
+          "n_before_clip_below_zero": 0
+        },
+        "Z2": {
+          "n_before_clip_above_one": 0,
+          "n_before_clip_below_zero": 0
+        }
+      },
+      "mse": {
+        "Z0": 0.019987908382483363,
+        "Z1": 0.015563580688524647,
+        "Z2": 0.015083108358730168
+      },
+      "n_fieldyears": 2,
+      "original_fieldyear_derived_losses": [
+        {
+          "field_type": "WFS",
+          "squared_loss_by_model": {
+            "Z0": 0.013200922942249997,
+            "Z1": 0.009303736839048974,
+            "Z2": 0.008748308485616732
+          },
+          "year": "2017"
+        },
+        {
+          "field_type": "WFS",
+          "squared_loss_by_model": {
+            "Z0": 0.026774893822716726,
+            "Z1": 0.02182342453800032,
+            "Z2": 0.021417908231843603
+          },
+          "year": "2018"
+        }
+      ],
+      "physical_field_hash": "87be2e6e0822d14d948a8694a8cfc00c72904d6005e025cdee7d210c25a27df8",
+      "region": "Cuenca",
+      "years": [
+        "2017",
+        "2018"
+      ]
+    },
+    {
+      "clipped_prediction_count": {
+        "Z0": {
+          "n_before_clip_above_one": 0,
+          "n_before_clip_below_zero": 0
+        },
+        "Z1": {
+          "n_before_clip_above_one": 0,
+          "n_before_clip_below_zero": 0
+        },
+        "Z2": {
+          "n_before_clip_above_one": 0,
+          "n_before_clip_below_zero": 0
+        }
+      },
+      "mse": {
+        "Z0": 0.010179759294745344,
+        "Z1": 0.005683360925038485,
+        "Z2": 0.005178326356534007
+      },
+      "n_fieldyears": 2,
+      "original_fieldyear_derived_losses": [
+        {
+          "field_type": "WFS",
+          "squared_loss_by_model": {
+            "Z0": 0.013097819067791866,
+            "Z1": 0.0054406854293773625,
+            "Z2": 0.004858191997215059
+          },
+          "year": "2017"
+        },
+        {
+          "field_type": "WFS",
+          "squared_loss_by_model": {
+            "Z0": 0.007261699521698822,
+            "Z1": 0.005926036420699608,
+            "Z2": 0.005498460715852954
+          },
+          "year": "2018"
+        }
+      ],
+      "physical_field_hash": "f4f19b8288e5d5957e65de11fdc0ef08ff6ded28b1f31557d4d02ff7c7941bb8",
+      "region": "Cuenca",
+      "years": [
+        "2017",
+        "2018"
+      ]
+    },
+    {
+      "clipped_prediction_count": {
+        "Z0": {
+          "n_before_clip_above_one": 0,
+          "n_before_clip_below_zero": 0
+        },
+        "Z1": {
+          "n_before_clip_above_one": 0,
+          "n_before_clip_below_zero": 0
+        },
+        "Z2": {
+          "n_before_clip_above_one": 0,
+          "n_before_clip_below_zero": 0
+        }
+      },
+      "mse": {
+        "Z0": 0.010154803185923484,
+        "Z1": 0.011153892319680002,
+        "Z2": 0.011459920940214382
+      },
+      "n_fieldyears": 2,
+      "original_fieldyear_derived_losses": [
+        {
+          "field_type": "WFS",
+          "squared_loss_by_model": {
+            "Z0": 0.00004724369876149765,
+            "Z1": 0.00037190533682226735,
+            "Z2": 0.00027374283215977934
+          },
+          "year": "2017"
+        },
+        {
+          "field_type": "WFS",
+          "squared_loss_by_model": {
+            "Z0": 0.02026236267308547,
+            "Z1": 0.021935879302537736,
+            "Z2": 0.022646099048268985
+          },
+          "year": "2018"
+        }
+      ],
+      "physical_field_hash": "a0759b2e558bc6814d13a6bb2706340c327c257c2c5ab68f80f17271b2c81c7d",
+      "region": "Cuenca",
+      "years": [
+        "2017",
+        "2018"
+      ]
+    },
+    {
+      "clipped_prediction_count": {
+        "Z0": {
+          "n_before_clip_above_one": 0,
+          "n_before_clip_below_zero": 0
+        },
+        "Z1": {
+          "n_before_clip_above_one": 0,
+          "n_before_clip_below_zero": 0
+        },
+        "Z2": {
+          "n_before_clip_above_one": 0,
+          "n_before_clip_below_zero": 0
+        }
+      },
+      "mse": {
+        "Z0": 0.0066399437072625295,
+        "Z1": 0.0036218839122833585,
+        "Z2": 0.0037584914383254247
+      },
+      "n_fieldyears": 2,
+      "original_fieldyear_derived_losses": [
+        {
+          "field_type": "WFS",
+          "squared_loss_by_model": {
+            "Z0": 0.009631640326885986,
+            "Z1": 0.004228204099045586,
+            "Z2": 0.0046923309312767334
+          },
+          "year": "2017"
+        },
+        {
+          "field_type": "WFS",
+          "squared_loss_by_model": {
+            "Z0": 0.003648247087639073,
+            "Z1": 0.003015563725521131,
+            "Z2": 0.0028246519453741163
+          },
+          "year": "2018"
+        }
+      ],
+      "physical_field_hash": "db54763a0ec651a45034fafaca8b6c4b4ed405a79c011606803ac3704f4ec9d3",
+      "region": "Cuenca",
+      "years": [
+        "2017",
+        "2018"
+      ]
+    },
+    {
+      "clipped_prediction_count": {
+        "Z0": {
+          "n_before_clip_above_one": 0,
+          "n_before_clip_below_zero": 0
+        },
+        "Z1": {
+          "n_before_clip_above_one": 0,
+          "n_before_clip_below_zero": 0
+        },
+        "Z2": {
+          "n_before_clip_above_one": 0,
+          "n_before_clip_below_zero": 0
+        }
+      },
+      "mse": {
+        "Z0": 0.006199342358950679,
+        "Z1": 0.00318322404388308,
+        "Z2": 0.0027678916333530473
+      },
+      "n_fieldyears": 2,
+      "original_fieldyear_derived_losses": [
+        {
+          "field_type": "WFS",
+          "squared_loss_by_model": {
+            "Z0": 0.011538003102972866,
+            "Z1": 0.005692046164025769,
+            "Z2": 0.00474983930635813
+          },
+          "year": "2017"
+        },
+        {
+          "field_type": "WFS",
+          "squared_loss_by_model": {
+            "Z0": 0.0008606816149284917,
+            "Z1": 0.000674401923740391,
+            "Z2": 0.0007859439603479643
+          },
+          "year": "2018"
+        }
+      ],
+      "physical_field_hash": "073a41aa969da08ea5cf1a0a98c06d8e1838bdb8f64c855cd751067d431a51bf",
+      "region": "Cuenca",
+      "years": [
+        "2017",
+        "2018"
+      ]
+    },
+    {
+      "clipped_prediction_count": {
+        "Z0": {
+          "n_before_clip_above_one": 0,
+          "n_before_clip_below_zero": 0
+        },
+        "Z1": {
+          "n_before_clip_above_one": 0,
+          "n_before_clip_below_zero": 0
+        },
+        "Z2": {
+          "n_before_clip_above_one": 0,
+          "n_before_clip_below_zero": 0
+        }
+      },
+      "mse": {
+        "Z0": 0.01617694436515836,
+        "Z1": 0.016600097410986597,
+        "Z2": 0.01694432950353586
+      },
+      "n_fieldyears": 1,
+      "original_fieldyear_derived_losses": [
+        {
+          "field_type": "WFS",
+          "squared_loss_by_model": {
+            "Z0": 0.01617694436515836,
+            "Z1": 0.016600097410986597,
+            "Z2": 0.01694432950353586
+          },
+          "year": "2017"
+        }
+      ],
+      "physical_field_hash": "eb06e9685ab042d6192fef9cfe859d00fe634706dd678de035cb66537e120c71",
+      "region": "Cuenca",
+      "years": [
+        "2017"
+      ]
+    },
+    {
+      "clipped_prediction_count": {
+        "Z0": {
+          "n_before_clip_above_one": 0,
+          "n_before_clip_below_zero": 0
+        },
+        "Z1": {
+          "n_before_clip_above_one": 0,
+          "n_before_clip_below_zero": 0
+        },
+        "Z2": {
+          "n_before_clip_above_one": 0,
+          "n_before_clip_below_zero": 0
+        }
+      },
+      "mse": {
+        "Z0": 0.009069240745806714,
+        "Z1": 0.003001591686428738,
+        "Z2": 0.0028954351169304406
+      },
+      "n_fieldyears": 1,
+      "original_fieldyear_derived_losses": [
+        {
+          "field_type": "WFS",
+          "squared_loss_by_model": {
+            "Z0": 0.009069240745806714,
+            "Z1": 0.003001591686428738,
+            "Z2": 0.0028954351169304406
+          },
+          "year": "2017"
+        }
+      ],
+      "physical_field_hash": "f63c1e75a7d4aec1fe0c1d9409c139201d3a5bdecab931d34c395518ec6ead1d",
+      "region": "Cuenca",
+      "years": [
+        "2017"
+      ]
+    },
+    {
+      "clipped_prediction_count": {
+        "Z0": {
+          "n_before_clip_above_one": 0,
+          "n_before_clip_below_zero": 0
+        },
+        "Z1": {
+          "n_before_clip_above_one": 0,
+          "n_before_clip_below_zero": 0
+        },
+        "Z2": {
+          "n_before_clip_above_one": 0,
+          "n_before_clip_below_zero": 0
+        }
+      },
+      "mse": {
+        "Z0": 0.012033295572104889,
+        "Z1": 0.01528614239365975,
+        "Z2": 0.01570537166394048
+      },
+      "n_fieldyears": 2,
+      "original_fieldyear_derived_losses": [
+        {
+          "field_type": "WFS",
+          "squared_loss_by_model": {
+            "Z0": 0.00002938929722325381,
+            "Z1": 0.0001755066660712917,
+            "Z2": 0.00015354719966900783
+          },
+          "year": "2017"
+        },
+        {
+          "field_type": "WFS",
+          "squared_loss_by_model": {
+            "Z0": 0.024037201846986524,
+            "Z1": 0.03039677812124821,
+            "Z2": 0.031257196128211956
+          },
+          "year": "2018"
+        }
+      ],
+      "physical_field_hash": "a38e7af2aac901f0e67a08f5f2ad934f280e6d954b1d4091b60f5e527f38e2ab",
+      "region": "Cuenca",
+      "years": [
+        "2017",
+        "2018"
+      ]
+    },
+    {
+      "clipped_prediction_count": {
+        "Z0": {
+          "n_before_clip_above_one": 0,
+          "n_before_clip_below_zero": 0
+        },
+        "Z1": {
+          "n_before_clip_above_one": 0,
+          "n_before_clip_below_zero": 0
+        },
+        "Z2": {
+          "n_before_clip_above_one": 0,
+          "n_before_clip_below_zero": 0
+        }
+      },
+      "mse": {
+        "Z0": 0.01186893357742975,
+        "Z1": 0.0126612910112289,
+        "Z2": 0.011966419130380428
+      },
+      "n_fieldyears": 2,
+      "original_fieldyear_derived_losses": [
+        {
+          "field_type": "WFS",
+          "squared_loss_by_model": {
+            "Z0": 0.017959805262171943,
+            "Z1": 0.0219621261950888,
+            "Z2": 0.02083240558158334
+          },
+          "year": "2017"
+        },
+        {
+          "field_type": "WFS",
+          "squared_loss_by_model": {
+            "Z0": 0.005778061892687556,
+            "Z1": 0.0033604558273689967,
+            "Z2": 0.0031004326791775165
+          },
+          "year": "2018"
+        }
+      ],
+      "physical_field_hash": "296cfc23bbded1dd2c423b011227aecb2b3ecc8f3b37277f5d4f9b0c5f2d688d",
+      "region": "Cuenca",
+      "years": [
+        "2017",
+        "2018"
+      ]
+    },
+    {
+      "clipped_prediction_count": {
+        "Z0": {
+          "n_before_clip_above_one": 0,
+          "n_before_clip_below_zero": 0
+        },
+        "Z1": {
+          "n_before_clip_above_one": 0,
+          "n_before_clip_below_zero": 0
+        },
+        "Z2": {
+          "n_before_clip_above_one": 0,
+          "n_before_clip_below_zero": 0
+        }
+      },
+      "mse": {
+        "Z0": 0.0025027388744862907,
+        "Z1": 0.005671947498343264,
+        "Z2": 0.005914325842274699
+      },
+      "n_fieldyears": 2,
+      "original_fieldyear_derived_losses": [
+        {
+          "field_type": "WFS",
+          "squared_loss_by_model": {
+            "Z0": 0.002980306643134701,
+            "Z1": 0.008839659653961567,
+            "Z2": 0.009366751095898457
+          },
+          "year": "2017"
+        },
+        {
+          "field_type": "WFS",
+          "squared_loss_by_model": {
+            "Z0": 0.0020251711058378806,
+            "Z1": 0.0025042353427249617,
+            "Z2": 0.002461900588650942
+          },
+          "year": "2018"
+        }
+      ],
+      "physical_field_hash": "40a10ed6405d6ffb3cc2aad7c6d5a68b805944e2631f96b621acab8921f0a2d7",
+      "region": "Cuenca",
+      "years": [
+        "2017",
+        "2018"
+      ]
+    },
+    {
+      "clipped_prediction_count": {
+        "Z0": {
+          "n_before_clip_above_one": 0,
+          "n_before_clip_below_zero": 0
+        },
+        "Z1": {
+          "n_before_clip_above_one": 0,
+          "n_before_clip_below_zero": 0
+        },
+        "Z2": {
+          "n_before_clip_above_one": 0,
+          "n_before_clip_below_zero": 0
+        }
+      },
+      "mse": {
+        "Z0": 0.005913308874644746,
+        "Z1": 0.005618020989023817,
+        "Z2": 0.005312300414981352
+      },
+      "n_fieldyears": 2,
+      "original_fieldyear_derived_losses": [
+        {
+          "field_type": "WFS",
+          "squared_loss_by_model": {
+            "Z0": 0.0007369021971828335,
+            "Z1": 0.0003308944773720188,
+            "Z2": 0.000416180083326461
+          },
+          "year": "2017"
+        },
+        {
+          "field_type": "WFS",
+          "squared_loss_by_model": {
+            "Z0": 0.011089715552106659,
+            "Z1": 0.010905147500675616,
+            "Z2": 0.010208420746636243
+          },
+          "year": "2018"
+        }
+      ],
+      "physical_field_hash": "a58bef8e35ad177f9852ab158545a635d58a1eb2a258fe8a7822c8f3c92b5a6a",
+      "region": "Cuenca",
+      "years": [
+        "2017",
+        "2018"
+      ]
+    }
+  ],
+  "original_three_author_file_md5": {
+    "Database_Productivity.csv": "aeea30a21e495498295241bcfd8c693d",
+    "Database_Visitation_rates.csv": "e13131ad60b133cc6ab25e20bbd3554b",
+    "README_file.txt": "479b26d3cebb72c8491b0ec00609c08c"
+  },
+  "registered_primary_field_transfer_verdict": "DESCRIPTIVE_SINGLE_ORIGINAL_CROP_STUDY_FIELD_TRANSFER",
+  "source_audit": {
+    "complete_Abort_numerator_denominator_triads_audited": 1161,
+    "excluded_harvest_seed_ratio_invalid_by_year": {
+      "2017": 3
+    },
+    "fieldyears_by_original_field_type": {
+      "NonV": 10,
+      "SNV": 32,
+      "WFS": 38
+    },
+    "fieldyears_by_original_region": {
+      "Burgos": 38,
+      "Cuenca": 42
+    },
+    "fieldyears_by_year": {
+      "2017": 41,
+      "2018": 39
+    },
+    "matched_harvest_rows_pre_numeric_gate": 2217,
+    "maximum_source_reported_vs_group_sum_difference": 9,
+    "missing_Abort_entries_never_imputed": 1056,
+    "n_eligible_fieldyear_unit_observations": 80,
+    "n_unique_original_physical_fields": 51,
+    "no_link_between_same_individual_sunflower_visits_and_harvest": true,
+    "original_MD5_source_files": {
+      "Database_Productivity.csv": "aeea30a21e495498295241bcfd8c693d",
+      "Database_Visitation_rates.csv": "e13131ad60b133cc6ab25e20bbd3554b",
+      "README_file.txt": "479b26d3cebb72c8491b0ec00609c08c"
+    },
+    "original_archive_record_id": 6671199,
+    "original_common_fieldyears": 80,
+    "original_harvest_seed_count_ratio_invalid_rows_excluded": 3,
+    "original_matched_distance_bands_per_fieldyear": {
+      "3": 1,
+      "4": 79
+    },
+    "original_source_harvest_rows": 2875,
+    "original_source_visit_survey_rows": 11683,
+    "original_v54_and_v55_source_numerical_STOPS_retained": true,
+    "original_visitation_surveys_on_common_fieldyears": 11682,
+    "source_reported_total_vs_group_sum_disagreement_rows": 4087,
+    "valid_harvest_original_source_rows_kept": 2214
+  },
+  "source_original_Abort_missing_never_zero_imputed": true,
+  "source_original_archive_record": 6671199,
+  "source_original_individual_observations_not_exported": true,
+  "source_original_sunflower_total_bees_not_assumed_equal_guild_sum": true,
+  "summary": {
+    "increments": {
+      "Z0_to_Z1": {
+        "by_original_field_type_fieldyear_mean_gain": {
+          "NonV": 0.003135553532943193,
+          "SNV": 0.0008515545255001974,
+          "WFS": 0.002894468480304473
+        },
+        "by_original_region_fieldyear_mean_gain": {
+          "Burgos": 0.0025448555388035434,
+          "Cuenca": 0.001711680283868418
+        },
+        "equal_physical_field_mse_gain": 0.0022430492569539863,
+        "fieldyear_weighted_mse_gain": 0.002107438529962602,
+        "negative_physical_fields": 17,
+        "positive_physical_fields": 34
+      },
+      "Z0_to_Z2": {
+        "by_original_field_type_fieldyear_mean_gain": {
+          "NonV": 0.003155625372643088,
+          "SNV": 0.0008215552151740896,
+          "WFS": 0.0030725852079942248
+        },
+        "by_original_region_fieldyear_mean_gain": {
+          "Burgos": 0.0026773506496775646,
+          "Cuenca": 0.001734879376857972
+        },
+        "equal_physical_field_mse_gain": 0.0022964535527000814,
+        "fieldyear_weighted_mse_gain": 0.002182553231447278,
+        "negative_physical_fields": 17,
+        "positive_physical_fields": 34
+      }
+    },
+    "model_risks": {
+      "Z0": {
+        "equal_physical_field_mse": 0.01355959394477477,
+        "fieldyear_weighted_mse": 0.012809128630598679,
+        "raw_predictions_above_one": 0,
+        "raw_predictions_below_zero": 0
+      },
+      "Z1": {
+        "equal_physical_field_mse": 0.011316544687820788,
+        "fieldyear_weighted_mse": 0.01070169010063608,
+        "raw_predictions_above_one": 0,
+        "raw_predictions_below_zero": 0
+      },
+      "Z2": {
+        "equal_physical_field_mse": 0.01126314039207469,
+        "fieldyear_weighted_mse": 0.010626575399151404,
+        "raw_predictions_above_one": 0,
+        "raw_predictions_below_zero": 0
+      }
+    },
+    "n_original_fieldyear_predictions": 80,
+    "n_original_physical_field_holdouts": 51
+  },
+  "unchanged_original_v55_model_blob_sha1": "3f4b936101ef51e56e1fc661089d49b0efe8810b",
+  "v53_prior_fieldyear_source_blob_sha1": "7a4fb27c7f26abfa8400d23b041e1a3d3e3424c9",
+  "v54_registered_quality_nonadmission_blob_sha1": "55eb9b942e7a0ab7f4e32139ac5305325fb74a83",
+  "v55_source_ratio_quality_parent_blob_sha1": "f9d6c01720ae0657977d09d0a92043b0eff0d7b5",
+  "visitor_source_label_placebo": {
+    "is_causal_randomization_p_value": false,
+    "n_original_fieldyear_stratum_permutations": 200,
+    "n_shuffle_gains_ge_observed": 0,
+    "observed_equal_physical_field_gain": 0.0022430492569539863,
+    "original_field_seed_outcomes_and_holdout_membership_fixed": true,
+    "original_reported_and_reconstructed_rates_shuffled_jointly": true,
+    "seed": 20261119,
+    "shuffle_max": 0.0020806610603811434,
+    "shuffle_median": 0.00004167889751457815,
+    "shuffle_min": -0.00041631702053610833,
+    "shuffle_q025": -0.0003474797840597887,
+    "shuffle_q975": 0.0010318732542249714,
+    "stratum": "Region×Year×Field_Type"
+  }
+}

@@ -1,0 +1,34 @@
+name: ANTO v56 original sunflower 3 invalid seed rows separated from 51 physical field forecast
+on:
+  push:
+    branches: ['analysis/anto-v56-*']
+    paths:
+      - 'data/external/anto_v56*'
+      - 'docs/ANTO_V56*'
+      - 'scripts/analyze_original_Mota_valid_seed_fraction_v56.py'
+      - 'tests/test_original_Mota_valid_fraction_v56.py'
+      - 'results/anto_v56_sunflower_valid_fraction_field_transfer_20261122.json'
+      - '.github/workflows/anto-v56-original-valid-fraction.yml'
+  pull_request:
+    branches: ['analysis/anto-v55-*']
+permissions:
+  contents: read
+jobs:
+  original_Mota_sunflower_all_51_physical_fields:
+    runs-on: ubuntu-latest
+    timeout-minutes: 22
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Source-authenticated original 3/2217 invalid rows and exact Z0/Z1/Z2 model tests
+        run: python -m unittest discover -s tests -p 'test_original_Mota_valid_fraction_v56.py' -v
+      - name: Exact original Zenodo MD5, group 51 full physical fields, score 200 source placebos
+        shell: bash
+        run: |
+          if [ -f results/anto_v56_sunflower_valid_fraction_field_transfer_20261122.json ]; then
+            python scripts/analyze_original_Mota_valid_seed_fraction_v56.py --check
+          else
+            python scripts/analyze_original_Mota_valid_seed_fraction_v56.py
+          fi

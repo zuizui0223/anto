@@ -1,0 +1,94 @@
+{
+  "analysis_type": "POST_V55_ORIGINAL_SUNFLOWER_EXACT_THREE_INVALID_ROWS_EXCLUDED_FIELD_TRANSFER",
+  "registration_date": "2026-11-22",
+  "source_original_data_doi": "10.5061/dryad.h18931zpg",
+  "source_zenodo_record": 6671199,
+  "source_original_md5": {
+    "Database_Productivity.csv": "aeea30a21e495498295241bcfd8c693d",
+    "Database_Visitation_rates.csv": "e13131ad60b133cc6ab25e20bbd3554b",
+    "README_file.txt": "479b26d3cebb72c8491b0ec00609c08c"
+  },
+  "v53_fieldyear_source_blob_sha1": "7a4fb27c7f26abfa8400d23b041e1a3d3e3424c9",
+  "v54_original_quality_blob_sha1": "55eb9b942e7a0ab7f4e32139ac5305325fb74a83",
+  "v55_invalid_fraction_quality_blob_sha1": "f9d6c01720ae0657977d09d0a92043b0eff0d7b5",
+  "v55_original_model_implementation_git_blob_sha1": "3f4b936101ef51e56e1fc661089d49b0efe8810b",
+  "original_2017_2018_matched_fieldyears": 80,
+  "original_unique_physical_fields": 51,
+  "original_matched_harvest_source_rows": 2217,
+  "original_matched_bee_visitation_survey_rows": 11682,
+  "source_invalid_seed_fraction_above_one_rows_excluded": 3,
+  "source_invalid_above_one_rows_year": {
+    "2017": 3
+  },
+  "source_included_harvest_rows": 2214,
+  "source_missing_abort_rows_preserved_not_imputed": 1056,
+  "source_guild_component_disagreements_preserved": 4087,
+  "source_max_guild_total_difference": 9,
+  "source_original_years": [
+    "2017",
+    "2018"
+  ],
+  "source_original_regions": [
+    "Burgos",
+    "Cuenca"
+  ],
+  "source_original_fieldtypes": [
+    "NonV",
+    "SNV",
+    "WFS"
+  ],
+  "source_2017_2018_fieldyears": {
+    "2017": 41,
+    "2018": 39
+  },
+  "source_fieldyears_by_region": {
+    "Burgos": 38,
+    "Cuenca": 42
+  },
+  "source_fieldyears_by_type": {
+    "NonV": 10,
+    "SNV": 32,
+    "WFS": 38
+  },
+  "source_original_distance_bands": [
+    "0",
+    "15",
+    "30",
+    "60"
+  ],
+  "original_all_common_distance_band_counts": {
+    "3": 1,
+    "4": 79
+  },
+  "outcome": "equal original distance-band means of sum(full seeds)/sum(total units) after exactly 3 invalid raw rows excluded",
+  "primary_visitor": "equal original distance-band means of reported total bee interactions / original monitored flower-minute",
+  "secondary_visitor": "same calculation using reconstructed Apis+wild summed counts, separate measurement diagnostic",
+  "models": [
+    "Z0",
+    "Z1",
+    "Z2"
+  ],
+  "ridge_lambda": 8,
+  "grouped_holdout": "entire physical field including both years",
+  "n_physical_field_holdouts": 51,
+  "n_fieldyear_heldouts": 80,
+  "numeric_score": "bounded 0-to-1 squared error",
+  "source_placebo_seed": 20261119,
+  "source_placebo_replicates": 200,
+  "source_placebo_stratum": "Region×Year×Field_Type fieldyear pair shuffle",
+  "fixed_descriptive_gate": {
+    "gain_equal_field_positive": true,
+    "gain_fieldyear_positive": true,
+    "physical_fields_improving_strict_majority": true,
+    "both_regions_positive": true,
+    "at_least_two_of_three_fieldtypes_positive": true,
+    "observed_gain_exceeds_placebo_q975": true
+  },
+  "v54_source_stop_cannot_be_redefined": true,
+  "v55_source_stop_cannot_be_redefined": true,
+  "new_original_independent_biological_studies": 0,
+  "new_molecular_pollinator_evolution_evidence": false,
+  "individual_sunflower_visit_seed_join_possible": false,
+  "ecological_causal_p_value": false,
+  "posthoc_after_v55_source_failure": true
+}
