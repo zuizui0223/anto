@@ -105,7 +105,7 @@ def original_denominator_quality(r):
     quality=json.loads(raw)
     x=quality["source_ratio_domain_status"]
     require(quality["source_original_record"]==6671199
-            and quality["original_source_file_md5"]==r["source_original_md5"]
+            and quality["source_original_file_md5"]==r["source_original_md5"]
             and quality["v54_source_STOP_preserved"] is True
             and quality["original_seed_or_visitor_outcome_prediction_fitted"] is False
             and x["total_matched_harvest_source_rows"]==2217
