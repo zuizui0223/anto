@@ -48,14 +48,14 @@ def inspect():
     need(set(found)==set(wanted),"V57_DRYAD_PACKAGE_DOES_NOT_MATCH_SOURCE_FILE_INVENTORY")
     # Official current published version's metadata provides *author digest*
     # for each original file; ZIP package is admitted only if all agree.
-    official=original.d.fetch_json("https://datadryad.org/api/v2/datasets/"+
+    official=dryad.fetch_json("https://datadryad.org/api/v2/datasets/"+
                                   key+"/versions")
     versions=official.get("_embedded",{}).get("stash:versions") or []
     need(len(versions)==1 and versions[0]["versionNumber"]==5,
          "V57_PHYSALIS_ORIGINAL_VERSION_CHANGED")
     href=(versions[0].get("_links",{}).get("stash:files") or {}).get("href")
     need(href.startswith("/api/v2/"),"V57_DRYAD_PACKAGE_FILELIST_MISSING")
-    meta=original.d.fetch_json("https://datadryad.org"+href)
+    meta=dryad.fetch_json("https://datadryad.org"+href)
     filemeta={z["path"]:z for z in meta.get("_embedded",{}).get("stash:files",[])}
     need(set(filemeta)==set(wanted),"V57_ORIGINAL_METADATA_ZIP_COHORT_DIFFERS")
     file_receipts=[];csv={}
