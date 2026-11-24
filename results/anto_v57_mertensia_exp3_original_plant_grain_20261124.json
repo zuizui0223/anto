@@ -1,0 +1,170 @@
+{
+  "analysis_type": "V57_ORIGINAL_MERTENSIA_EXPERIMENT3_SAMEPLANT_ORIGINAL_GROUP_GRAIN_ONLY",
+  "evolutionary_pollinator_mechanism_inferred": false,
+  "new_observed_fitness_effect_fitted": false,
+  "original_dryad_doi": "10.7280/D16D7Z",
+  "original_dryad_version": 4,
+  "original_source_group_grain": {
+    "candidate_var_missing_count": {
+      "mNecCon": 64,
+      "mNecVol": 44,
+      "mcorL": 9,
+      "mcorW": 9,
+      "mseed": 1,
+      "sCnt": 23
+    },
+    "candidate_var_present_count": {
+      "flrCnt": 115,
+      "mNecCon": 51,
+      "mNecVol": 71,
+      "mVWC": 115,
+      "mVisRate": 115,
+      "mcorL": 106,
+      "mcorW": 106,
+      "mseed": 114,
+      "sBombVis": 115,
+      "sCnt": 92,
+      "sNonBombVis": 115,
+      "sVis": 115
+    },
+    "n_clusters_with_at_least_5_source_plant_records": 20,
+    "n_original_plant_records_all_candidate_variables_PRESENT": 105,
+    "n_original_week_array_clusters": 20,
+    "nominal_original_treatment_categories": {
+      "A": 39,
+      "C": 39,
+      "D": 37
+    },
+    "nominal_week_categories": {
+      "1": 28,
+      "2": 28,
+      "3": 30,
+      "4": 29
+    },
+    "nominal_week_treatment_record_counts": [
+      {
+        "n": 10,
+        "treat": "A",
+        "week": "1"
+      },
+      {
+        "n": 10,
+        "treat": "C",
+        "week": "1"
+      },
+      {
+        "n": 8,
+        "treat": "D",
+        "week": "1"
+      },
+      {
+        "n": 9,
+        "treat": "A",
+        "week": "2"
+      },
+      {
+        "n": 10,
+        "treat": "C",
+        "week": "2"
+      },
+      {
+        "n": 9,
+        "treat": "D",
+        "week": "2"
+      },
+      {
+        "n": 10,
+        "treat": "A",
+        "week": "3"
+      },
+      {
+        "n": 10,
+        "treat": "C",
+        "week": "3"
+      },
+      {
+        "n": 10,
+        "treat": "D",
+        "week": "3"
+      },
+      {
+        "n": 10,
+        "treat": "A",
+        "week": "4"
+      },
+      {
+        "n": 9,
+        "treat": "C",
+        "week": "4"
+      },
+      {
+        "n": 10,
+        "treat": "D",
+        "week": "4"
+      }
+    ],
+    "original_distinct_composite_week_array_treat_plantID_keys": 115,
+    "original_nonempty_plant_record_rows": 115,
+    "original_plant_ID_tokens_or_outcomes_exported": false,
+    "original_week_by_array_clusters": {
+      "1|1": 6,
+      "1|2": 5,
+      "1|3": 6,
+      "1|4": 5,
+      "1|5": 6,
+      "2|1": 6,
+      "2|2": 6,
+      "2|3": 6,
+      "2|4": 5,
+      "2|5": 5,
+      "3|1": 6,
+      "3|2": 6,
+      "3|3": 6,
+      "3|4": 6,
+      "3|5": 6,
+      "4|1": 6,
+      "4|2": 5,
+      "4|3": 7,
+      "4|4": 6,
+      "4|5": 5
+    },
+    "original_workbook_sheet": "exp3_meansForAnalysis",
+    "source_only_prerequisite_three_original_group_cohort_ready": true,
+    "source_original_header_names": [
+      "week",
+      "array",
+      "treat",
+      "plantID",
+      "yrCol",
+      "noteGeneral",
+      "mVWC",
+      "mHeight",
+      "mHerb",
+      "noteVeg",
+      "flrCnt",
+      "mcorW",
+      "mcorL",
+      "noteCor",
+      "mNecVol",
+      "mNecCon",
+      "mVisRate",
+      "sBombVis",
+      "sNonBombVis",
+      "sVis",
+      "sbbVis",
+      "sflyVisits",
+      "sCnt",
+      "mseed",
+      "sMass",
+      "msMass"
+    ],
+    "source_original_measurement_magnitudes_examined": false,
+    "source_original_visitation_seed_association_fitted": false,
+    "source_row_duplicate_composite_plantkeys": 0,
+    "source_rows_missing_any_categorical_identifier": 0,
+    "source_sheet_xml_path": "xl/worksheets/sheet11.xml"
+  },
+  "original_workbook_sha256": "152e09ab8bd0f49c2c5052e284fbaeb3f7362fd0f82998ed1a27001bd0e7250d",
+  "original_zenodo_source_record": 4731053,
+  "source_original_author_workbook_authentic": true
+}
