@@ -110,9 +110,15 @@ def inspect_dryad(doi):
                  "links":sorted((x.get("_links") or {}).keys())} for x in potential[:12]]
         for x in potential[-3:]:
             ident=x.get("id")
-            if not isinstance(ident,int):continue
+            link=(x.get("_links") or {}).get("stash:files") or {}
+            files_url=link.get("href") if isinstance(link,dict) else None
+            if not files_url and isinstance(ident,int):
+                files_url=BASE+"versions/"+str(ident)+"/files"
+            if not files_url:continue
+            if files_url.startswith("/"):
+                files_url="https://datadryad.org"+files_url
             try:
-                files=fetch_json(BASE+"versions/"+str(ident)+"/files")
+                files=fetch_json(files_url)
                 farr=files if isinstance(files,list) else (
                     files.get("_embedded",{}).get("stash:files")
                     or files.get("_embedded",{}).get("files")
@@ -124,7 +130,9 @@ def inspect_dryad(doi):
                     "original_files":[{"keys":sorted(f.keys()),
                         "id":f.get("id"),"fileName":f.get("fileName",f.get("path")),
                         "size":f.get("size"),"sha256":f.get("sha256"),"md5":f.get("md5"),
-                        "links":sorted((f.get("_links") or {}).keys())}
+                        "links":sorted((f.get("_links") or {}).keys()),
+                        "download_href":((f.get("_links") or {}).get("stash:download") or {}).get("href"),
+                        "checksum":f.get("checksum")}
                         for f in farr[:25]]})
             except Exception as e:
                 evidence.setdefault("version_file_inventory",[]).append({
