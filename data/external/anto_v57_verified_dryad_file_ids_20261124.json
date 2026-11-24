@@ -1,0 +1,87 @@
+{
+  "analysis_type": "V57_INDEPENDENT_ORIGINAL_SAME_PLANT_SOURCE_ELIGIBILITY_NO_OUTCOME_SCORING",
+  "checked_date": "2026-11-24",
+  "source_metadata_from": "Original Dryad public v2 DOI/versions/file inventory",
+  "same_plant_predictive_outcomes_fitted": false,
+  "original_raw_rows_opened": false,
+  "source_study_versions": [
+    {
+      "candidate": "Physalis 2026 Davis et al",
+      "dataset_doi": "10.5061/dryad.xpnvx0kvp",
+      "dryad_dataset_id": 176194,
+      "dataset_title": "Data from: Plant responses to herbivory shift the contributions of different pollinator taxa to plant reproduction",
+      "published_version": 5,
+      "author_files": [
+        {
+          "file_name": "Oikos_2020_bee_behavior_observations.csv",
+          "size_bytes": 7719,
+          "official_download_href": "/api/v2/files/4573991/download"
+        },
+        {
+          "file_name": "Oikos_2020_cross_season_abundance.csv",
+          "size_bytes": 1863,
+          "official_download_href": "/api/v2/files/4573992/download"
+        },
+        {
+          "file_name": "Oikos_2020_focal_taxa_abundance.csv",
+          "size_bytes": 1303,
+          "official_download_href": "/api/v2/files/4573993/download"
+        },
+        {
+          "file_name": "Oikos_2020_total_plant_yield.csv",
+          "size_bytes": 1675,
+          "official_download_href": "/api/v2/files/4573994/download"
+        },
+        {
+          "file_name": "Oikos_2021_fruit_set_poll_obs.csv",
+          "size_bytes": 49852,
+          "official_download_href": "/api/v2/files/4573996/download"
+        },
+        {
+          "file_name": "Oikos_2021_fruit_weight_poll_obs.csv",
+          "size_bytes": 9634,
+          "official_download_href": "/api/v2/files/4573995/download"
+        },
+        {
+          "file_name": "Oikos_2021_nectar_pollen_foraging.csv",
+          "size_bytes": 45072,
+          "official_download_href": "/api/v2/files/4573998/download"
+        },
+        {
+          "file_name": "Oikos_2021_poll_importance.csv",
+          "size_bytes": 17714,
+          "official_download_href": "/api/v2/files/4573997/download"
+        },
+        {
+          "file_name": "Oikos_2021_seeds_fruit_sugar.csv",
+          "size_bytes": 5410,
+          "official_download_href": "/api/v2/files/4573999/download"
+        },
+        {
+          "file_name": "README.md",
+          "size_bytes": 11314,
+          "official_download_href": "/api/v2/files/4586150/download"
+        }
+      ]
+    },
+    {
+      "candidate": "Mertensia 2021 Gallagher Campbell",
+      "dataset_doi": "10.7280/D16D7Z",
+      "dryad_dataset_id": 59594,
+      "dataset_title": "Experimental test of the combined effects of water availability and flowering time on pollinator visitation and seed set",
+      "published_version": 4,
+      "author_files": [
+        {
+          "file_name": "gallagher&campbell_frontiersinecology&evolution_data.xlsx",
+          "size_bytes": 339816,
+          "official_download_href": "/api/v2/files/679988/download"
+        },
+        {
+          "file_name": "gallagher&campbell_frontiersinecology&evolution_metaDataFile.docx",
+          "size_bytes": 47265,
+          "official_download_href": "/api/v2/files/679987/download"
+        }
+      ]
+    }
+  ]
+}
