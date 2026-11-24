@@ -39,7 +39,7 @@ def need(ok,msg):
 
 def check_receipt():
     raw=SOURCE.read_bytes()
-    need(author.git_blob_sha1(raw)==SOURCE_GIT_BLOB,
+    need(author.gitblob(raw)==SOURCE_GIT_BLOB,
          "V57_DRYAD_ZENODO_ORIGINAL_AUTHOR_SOURCE_RECEIPT_CHANGED")
     z=json.loads(raw)
     need(z["source_identity"]==
