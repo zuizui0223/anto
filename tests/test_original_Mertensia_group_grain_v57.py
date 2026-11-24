@@ -9,7 +9,7 @@ import audit_original_Mertensia_exp3_sameplant_grain_v57 as p
 class Original2016MertensiaXLSX(unittest.TestCase):
     def test_dual_source_digest_frozen_before_composite_IDs(self):
         r=p.check_receipt()
-        self.assertEqual(p.author.git_blob_sha1(p.SOURCE.read_bytes()),
+        self.assertEqual(p.author.gitblob(p.SOURCE.read_bytes()),
                          "1071510aa742cb3f17b45c1fd6d8e0cc5412a746")
         self.assertEqual(r["original_dryad_doi"],"10.7280/D16D7Z")
         self.assertTrue(all(x["byte_identity_validated_by_both_archives"]
