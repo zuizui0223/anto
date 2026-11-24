@@ -1,0 +1,553 @@
+{
+  "all_20_original_week_array_holdout_risks": [
+    {
+      "array": "1",
+      "n_original_heldout_plants": 6,
+      "n_original_training_plants": 99,
+      "original_test_mse": {
+        "Q0": 0.08645483542751825,
+        "Q1": 0.1082179314623869,
+        "Q2": 0.07042257216560582,
+        "Q3": 0.07161988303460322
+      },
+      "water_treatments_in_test": {
+        "A": 2,
+        "C": 2,
+        "D": 2
+      },
+      "week": "1"
+    },
+    {
+      "array": "2",
+      "n_original_heldout_plants": 5,
+      "n_original_training_plants": 100,
+      "original_test_mse": {
+        "Q0": 0.23658187689654953,
+        "Q1": 0.22363911788895874,
+        "Q2": 0.17470127518425396,
+        "Q3": 0.17258431444228656
+      },
+      "water_treatments_in_test": {
+        "A": 2,
+        "C": 2,
+        "D": 1
+      },
+      "week": "1"
+    },
+    {
+      "array": "3",
+      "n_original_heldout_plants": 6,
+      "n_original_training_plants": 99,
+      "original_test_mse": {
+        "Q0": 0.19575484457042705,
+        "Q1": 0.19031957620292658,
+        "Q2": 0.146929541443049,
+        "Q3": 0.1493175907223933
+      },
+      "water_treatments_in_test": {
+        "A": 2,
+        "C": 2,
+        "D": 2
+      },
+      "week": "1"
+    },
+    {
+      "array": "4",
+      "n_original_heldout_plants": 5,
+      "n_original_training_plants": 100,
+      "original_test_mse": {
+        "Q0": 0.20034904144615098,
+        "Q1": 0.2477908842482251,
+        "Q2": 0.1653011354064385,
+        "Q3": 0.12173525578041663
+      },
+      "water_treatments_in_test": {
+        "A": 2,
+        "C": 2,
+        "D": 1
+      },
+      "week": "1"
+    },
+    {
+      "array": "5",
+      "n_original_heldout_plants": 6,
+      "n_original_training_plants": 99,
+      "original_test_mse": {
+        "Q0": 0.09497345164437732,
+        "Q1": 0.08180094878030533,
+        "Q2": 0.07098389501239878,
+        "Q3": 0.08386253793769956
+      },
+      "water_treatments_in_test": {
+        "A": 2,
+        "C": 2,
+        "D": 2
+      },
+      "week": "1"
+    },
+    {
+      "array": "1",
+      "n_original_heldout_plants": 5,
+      "n_original_training_plants": 100,
+      "original_test_mse": {
+        "Q0": 0.07560804985633837,
+        "Q1": 0.06279375377842936,
+        "Q2": 0.04060949292441915,
+        "Q3": 0.04933828084948481
+      },
+      "water_treatments_in_test": {
+        "A": 2,
+        "C": 1,
+        "D": 2
+      },
+      "week": "2"
+    },
+    {
+      "array": "2",
+      "n_original_heldout_plants": 6,
+      "n_original_training_plants": 99,
+      "original_test_mse": {
+        "Q0": 0.12686518770824456,
+        "Q1": 0.1548493329619504,
+        "Q2": 0.1591684338280947,
+        "Q3": 0.1359904152374283
+      },
+      "water_treatments_in_test": {
+        "A": 2,
+        "C": 2,
+        "D": 2
+      },
+      "week": "2"
+    },
+    {
+      "array": "3",
+      "n_original_heldout_plants": 6,
+      "n_original_training_plants": 99,
+      "original_test_mse": {
+        "Q0": 0.10738075496701106,
+        "Q1": 0.14998037466705513,
+        "Q2": 0.11650130927807971,
+        "Q3": 0.08148672810619492
+      },
+      "water_treatments_in_test": {
+        "A": 2,
+        "C": 2,
+        "D": 2
+      },
+      "week": "2"
+    },
+    {
+      "array": "4",
+      "n_original_heldout_plants": 5,
+      "n_original_training_plants": 100,
+      "original_test_mse": {
+        "Q0": 0.15024049428192612,
+        "Q1": 0.15021571168621964,
+        "Q2": 0.1866517810966295,
+        "Q3": 0.185608443436599
+      },
+      "water_treatments_in_test": {
+        "A": 2,
+        "C": 2,
+        "D": 1
+      },
+      "week": "2"
+    },
+    {
+      "array": "5",
+      "n_original_heldout_plants": 5,
+      "n_original_training_plants": 100,
+      "original_test_mse": {
+        "Q0": 0.017266011979740446,
+        "Q1": 0.011513157941210963,
+        "Q2": 0.010173664999468479,
+        "Q3": 0.017283041302825063
+      },
+      "water_treatments_in_test": {
+        "A": 1,
+        "C": 2,
+        "D": 2
+      },
+      "week": "2"
+    },
+    {
+      "array": "1",
+      "n_original_heldout_plants": 5,
+      "n_original_training_plants": 100,
+      "original_test_mse": {
+        "Q0": 0.04280993583600349,
+        "Q1": 0.04586918347234839,
+        "Q2": 0.03726530674558369,
+        "Q3": 0.034878345257505695
+      },
+      "water_treatments_in_test": {
+        "A": 2,
+        "C": 1,
+        "D": 2
+      },
+      "week": "3"
+    },
+    {
+      "array": "2",
+      "n_original_heldout_plants": 4,
+      "n_original_training_plants": 101,
+      "original_test_mse": {
+        "Q0": 0.31497772354460685,
+        "Q1": 0.2779956247318929,
+        "Q2": 0.3068164348781265,
+        "Q3": 0.34342541159662415
+      },
+      "water_treatments_in_test": {
+        "A": 2,
+        "D": 2
+      },
+      "week": "3"
+    },
+    {
+      "array": "3",
+      "n_original_heldout_plants": 6,
+      "n_original_training_plants": 99,
+      "original_test_mse": {
+        "Q0": 0.09945582795502271,
+        "Q1": 0.06991556186774407,
+        "Q2": 0.0694518395846738,
+        "Q3": 0.08961434470185475
+      },
+      "water_treatments_in_test": {
+        "A": 2,
+        "C": 2,
+        "D": 2
+      },
+      "week": "3"
+    },
+    {
+      "array": "4",
+      "n_original_heldout_plants": 6,
+      "n_original_training_plants": 99,
+      "original_test_mse": {
+        "Q0": 0.01122712973190619,
+        "Q1": 0.02405806052991838,
+        "Q2": 0.017962806001991988,
+        "Q3": 0.010525334383320824
+      },
+      "water_treatments_in_test": {
+        "A": 2,
+        "C": 2,
+        "D": 2
+      },
+      "week": "3"
+    },
+    {
+      "array": "5",
+      "n_original_heldout_plants": 6,
+      "n_original_training_plants": 99,
+      "original_test_mse": {
+        "Q0": 0.1595240924133369,
+        "Q1": 0.15943955523847225,
+        "Q2": 0.17213412046771795,
+        "Q3": 0.16668479566531713
+      },
+      "water_treatments_in_test": {
+        "A": 2,
+        "C": 2,
+        "D": 2
+      },
+      "week": "3"
+    },
+    {
+      "array": "1",
+      "n_original_heldout_plants": 5,
+      "n_original_training_plants": 100,
+      "original_test_mse": {
+        "Q0": 0.22478550596383612,
+        "Q1": 0.21221431093651105,
+        "Q2": 0.17227679732920734,
+        "Q3": 0.1777734083690671
+      },
+      "water_treatments_in_test": {
+        "A": 2,
+        "C": 1,
+        "D": 2
+      },
+      "week": "4"
+    },
+    {
+      "array": "2",
+      "n_original_heldout_plants": 4,
+      "n_original_training_plants": 101,
+      "original_test_mse": {
+        "Q0": 0.15166003804293995,
+        "Q1": 0.15373780604947546,
+        "Q2": 0.10806574604543126,
+        "Q3": 0.1027630869707076
+      },
+      "water_treatments_in_test": {
+        "A": 1,
+        "C": 1,
+        "D": 2
+      },
+      "week": "4"
+    },
+    {
+      "array": "3",
+      "n_original_heldout_plants": 4,
+      "n_original_training_plants": 101,
+      "original_test_mse": {
+        "Q0": 0.6321928420292001,
+        "Q1": 0.7019362357266821,
+        "Q2": 0.6825883172344005,
+        "Q3": 0.6316752224101534
+      },
+      "water_treatments_in_test": {
+        "A": 2,
+        "C": 1,
+        "D": 1
+      },
+      "week": "4"
+    },
+    {
+      "array": "4",
+      "n_original_heldout_plants": 5,
+      "n_original_training_plants": 100,
+      "original_test_mse": {
+        "Q0": 0.216947643909375,
+        "Q1": 0.22382541053625019,
+        "Q2": 0.22318894543011103,
+        "Q3": 0.21471249531425318
+      },
+      "water_treatments_in_test": {
+        "A": 2,
+        "C": 2,
+        "D": 1
+      },
+      "week": "4"
+    },
+    {
+      "array": "5",
+      "n_original_heldout_plants": 5,
+      "n_original_training_plants": 100,
+      "original_test_mse": {
+        "Q0": 0.23564690337372696,
+        "Q1": 0.2652944769419938,
+        "Q2": 0.19774972191358495,
+        "Q3": 0.1843400997536885
+      },
+      "water_treatments_in_test": {
+        "A": 2,
+        "C": 1,
+        "D": 2
+      },
+      "week": "4"
+    }
+  ],
+  "analysis_type": "POSTHOC_AUTHENTIC_MERTENSIA_ARRAY_HELDOUT_FLOWER_VISITOR_SEED_INFORMATION",
+  "fixed_ridge_alpha": 5,
+  "model_features": {
+    "Q0": [
+      "log_flower"
+    ],
+    "Q1": [
+      "log_flower",
+      "mcorW",
+      "mcorL"
+    ],
+    "Q2": [
+      "log_flower",
+      "mcorW",
+      "mcorL",
+      "log_visit"
+    ],
+    "Q3": [
+      "log_flower",
+      "log_visit"
+    ]
+  },
+  "new_causal_pollination_p_value_or_hereditary_fitness_effect": false,
+  "new_original_plant_studies_collected_in_ANTO": 0,
+  "original_200_visitor_identity_placebo": {
+    "causal_visitation_randomization_p_value": false,
+    "n_source_shuffles_at_or_above_observed": 0,
+    "n_within_original_week_water_visit_identity_placebos": 200,
+    "observed_equal_array_visit_mse_gain": 0.0193231939339845,
+    "original_rng_seed": 20261124,
+    "original_visitor_rate_shuffled_within_week_treat": true,
+    "placebo_max": 0.016280857061278874,
+    "placebo_median": -0.0015721126508128082,
+    "placebo_min": -0.009139189006189093,
+    "placebo_q025": -0.005564195556380885,
+    "placebo_q975": 0.0065535476858761006,
+    "source_test_arrays_and_seed_outcomes_fixed": true
+  },
+  "original_author_data_version": 4,
+  "original_author_dryad_doi": "10.7280/D16D7Z",
+  "original_author_plant_raw_records_rehosted": false,
+  "original_coded_flower_features": [
+    "log1p(flrCnt)",
+    "mcorW",
+    "mcorL"
+  ],
+  "original_coded_response": "log1p(source mseed) without inferred trait genetic fitness units",
+  "original_coded_visit_feature": "log1p(source mVisRate) observed plant visit rate",
+  "original_experiment": "Mertensia original Gallagher Campbell 2016 original 20 week-array groups within one 2021 paper",
+  "original_source_cohort_audit": {
+    "exact_original_complete_numeric_plants": 105,
+    "exact_original_composite_plantkeys": 115,
+    "original_20_week_array_groups": 20,
+    "original_author_plant_sheet_rows": 115,
+    "original_complete_plants_per_group": {
+      "1|1": 6,
+      "1|2": 5,
+      "1|3": 6,
+      "1|4": 5,
+      "1|5": 6,
+      "2|1": 5,
+      "2|2": 6,
+      "2|3": 6,
+      "2|4": 5,
+      "2|5": 5,
+      "3|1": 5,
+      "3|2": 4,
+      "3|3": 6,
+      "3|4": 6,
+      "3|5": 6,
+      "4|1": 5,
+      "4|2": 4,
+      "4|3": 4,
+      "4|4": 5,
+      "4|5": 5
+    },
+    "original_phenology_weeks": [
+      "1",
+      "2",
+      "3",
+      "4"
+    ],
+    "original_source_mseed_used_as_original_coded_proxy_no_unit_claim": true,
+    "original_source_raw_rows_exported": false,
+    "original_water_treatment_names_used_as_source_codes": [
+      "A",
+      "C",
+      "D"
+    ],
+    "source_original_author_sheet": "exp3_meansForAnalysis"
+  },
+  "original_workbook_sha256": "152e09ab8bd0f49c2c5052e284fbaeb3f7362fd0f82998ed1a27001bd0e7250d",
+  "original_zenodo_archival_record": 4731053,
+  "plant_visit_rate_randomly_manipulated": false,
+  "preoutcome_descriptive_transfer_gate_verdict": "DESCRIPTIVE_ORIGINAL_MERTENSIA_ARRAY_HELDOUT_VISITOR_INFORMATION",
+  "prior_original_source_grain_git_blob_sha1": "5659545f1376aeb715aefa4308a0fe1e8673da39",
+  "source_original_paper_independent_of_2022_sinapis_and_mota": true,
+  "summary": {
+    "increment": {
+      "Q0_to_Q1_morphology": {
+        "by_original_phenology_week": {
+          "1": {
+            "equal_array_mse_gain": -0.007530881719555904,
+            "n_original_arrays": 5,
+            "positive_original_arrays": 3
+          },
+          "2": {
+            "equal_array_mse_gain": -0.01039836644832098,
+            "n_original_arrays": 5,
+            "positive_original_arrays": 3
+          },
+          "3": {
+            "equal_array_mse_gain": 0.010143344728100032,
+            "n_original_arrays": 5,
+            "positive_original_arrays": 3
+          },
+          "4": {
+            "equal_array_mse_gain": -0.01915506137436689,
+            "n_original_arrays": 5,
+            "positive_original_arrays": 1
+          }
+        },
+        "equal_array_absolute_mse_gain": -0.006735241203535936,
+        "negative_original_arrays": 10,
+        "plant_weighted_absolute_mse_gain": -0.006625050235763859,
+        "positive_original_arrays": 10
+      },
+      "Q0_to_Q3_visitor_without_morphology": {
+        "by_original_phenology_week": {
+          "1": {
+            "equal_array_mse_gain": 0.04299889361352477,
+            "n_original_arrays": 5,
+            "positive_original_arrays": 5
+          },
+          "2": {
+            "equal_array_mse_gain": 0.0015307179721456969,
+            "n_original_arrays": 5,
+            "positive_original_arrays": 2
+          },
+          "3": {
+            "equal_array_mse_gain": -0.0034267044247492844,
+            "n_original_arrays": 5,
+            "positive_original_arrays": 3
+          },
+          "4": {
+            "equal_array_mse_gain": 0.02999372410024167,
+            "n_original_arrays": 5,
+            "positive_original_arrays": 5
+          }
+        },
+        "equal_array_absolute_mse_gain": 0.01777415781529071,
+        "negative_original_arrays": 5,
+        "plant_weighted_absolute_mse_gain": 0.017609365652560396,
+        "positive_original_arrays": 15
+      },
+      "Q1_to_Q2_conditional_visitor": {
+        "by_original_phenology_week": {
+          "1": {
+            "equal_array_mse_gain": 0.04468600787421131,
+            "n_original_arrays": 5,
+            "positive_original_arrays": 5
+          },
+          "2": {
+            "equal_array_mse_gain": 0.003249529781634788,
+            "n_original_arrays": 5,
+            "positive_original_arrays": 3
+          },
+          "3": {
+            "equal_array_mse_gain": -0.005270504367543588,
+            "n_original_arrays": 5,
+            "positive_original_arrays": 3
+          },
+          "4": {
+            "equal_array_mse_gain": 0.0346277424476355,
+            "n_original_arrays": 5,
+            "positive_original_arrays": 5
+          }
+        },
+        "equal_array_absolute_mse_gain": 0.0193231939339845,
+        "negative_original_arrays": 4,
+        "plant_weighted_absolute_mse_gain": 0.01915378141883338,
+        "positive_original_arrays": 16
+      }
+    },
+    "model_risk": {
+      "Q0": {
+        "equal_array_mse": 0.1690351095789119,
+        "plant_weighted_mse": 0.1589172997970694
+      },
+      "Q1": {
+        "equal_array_mse": 0.17577035078244782,
+        "plant_weighted_mse": 0.16554235003283327
+      },
+      "Q2": {
+        "equal_array_mse": 0.1564471568484633,
+        "plant_weighted_mse": 0.14638856861399985
+      },
+      "Q3": {
+        "equal_array_mse": 0.1512609517636212,
+        "plant_weighted_mse": 0.141307934144509
+      }
+    },
+    "original_heldout_arrays": 20,
+    "original_plant_predictions": 105
+  },
+  "water_levels_preserved_as_original_source_codes": [
+    "A",
+    "C",
+    "D"
+  ]
+}

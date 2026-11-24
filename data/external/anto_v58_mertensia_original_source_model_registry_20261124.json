@@ -1,0 +1,83 @@
+{
+  "analysis_type": "POSTHOC_AUTHENTIC_MERTENSIA_ARRAY_HELDOUT_FLOWER_VISITOR_SEED_INFORMATION",
+  "protocol_date": "2026-11-24",
+  "original_paper": "Gallagher and Campbell 2021 Frontiers in Ecology and Evolution",
+  "original_paper_doi": "10.3389/fevo.2021.641693",
+  "source_dryad_doi": "10.7280/D16D7Z",
+  "source_original_dryad_id": 59594,
+  "source_dryad_version": 4,
+  "source_zenodo_record": 4731053,
+  "original_xlsx_name": "gallagher&campbell_frontiersinecology&evolution_data.xlsx",
+  "original_xlsx_size": 339816,
+  "original_xlsx_sha256": "152e09ab8bd0f49c2c5052e284fbaeb3f7362fd0f82998ed1a27001bd0e7250d",
+  "original_xlsx_zenodo_md5": "db86f8286007b6176bf957334eba9ca4",
+  "original_author_sheet_name": "exp3_meansForAnalysis",
+  "original_xlsx_worksheet": "xl/worksheets/sheet11.xml",
+  "parent_v57_source_grain_blob_sha1": "5659545f1376aeb715aefa4308a0fe1e8673da39",
+  "source_original_plant_record_rows": 115,
+  "source_distinct_week_array_treatment_plant_keys": 115,
+  "source_complete_eligible_plant_records": 105,
+  "source_original_week_array_groups": 20,
+  "source_groups_min_raw_plant_rows": 5,
+  "source_groups_max_raw_plant_rows": 7,
+  "source_weeks": [
+    "1",
+    "2",
+    "3",
+    "4"
+  ],
+  "source_water_treatments": [
+    "A",
+    "C",
+    "D"
+  ],
+  "source_candidate_fields": [
+    "flrCnt",
+    "mcorW",
+    "mcorL",
+    "mVisRate",
+    "mseed"
+  ],
+  "source_no_source_measurement_values_seen_before_contract": true,
+  "outcome": "log1p(original source mseed seed-production proxy)",
+  "feature_flower_supply": "log1p(flrCnt)",
+  "feature_floral_morphology": [
+    "mcorW",
+    "mcorL"
+  ],
+  "feature_plant_visitation": "log1p(mVisRate)",
+  "models": [
+    "Q0",
+    "Q1",
+    "Q2",
+    "Q3"
+  ],
+  "Q0": "intercept, fixed original water C/D and week 2/3/4 dummies, train-standardized log1p flrCnt",
+  "Q1": "Q0 plus train-standardized mcorW mcorL",
+  "Q2": "Q1 plus train-standardized log1p mVisRate",
+  "Q3": "Q0 plus train-standardized log1p mVisRate (secondary)",
+  "ridge_alpha": 5,
+  "full_week_array_holdouts": 20,
+  "full_original_eligible_plant_predictions": 105,
+  "min_complete_plants_per_group": 3,
+  "holdout_group": "original week×array",
+  "primary_comparison": "Q1 MSE minus Q2 MSE",
+  "secondary_flower_trait_gain": "Q0 MSE minus Q1 MSE",
+  "secondary_visit_without_morphology": "Q0 MSE minus Q3 MSE",
+  "permutation_seed": 20261124,
+  "permutation_replicates": 200,
+  "permutation_stratum": "original week×water treatment plant visit-rate labels",
+  "readiness_gate": {
+    "equal_array_gain_positive": true,
+    "plant_weighted_gain_positive": true,
+    "improving_groups_at_least": 12,
+    "positive_week_means_at_least": 3,
+    "observed_gain_gt_shuffle_q975": true
+  },
+  "causal_pollination_claim": false,
+  "new_same_study_nonindependent_array_groups_not_papers": true,
+  "no_outcome_derived_predictor": true,
+  "no_inherited_phenotype_gene_effect": true,
+  "original_source_not_rehosted": true,
+  "research_question_is_posthoc": true
+}
