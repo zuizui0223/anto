@@ -1,0 +1,93 @@
+{
+  "all_source_numeric_outcomes_held_unanalysed": true,
+  "analysis_type": "V57_INDEPENDENT_ORIGINAL_SAME_PLANT_SOURCE_ELIGIBILITY_NO_OUTCOME_SCORING",
+  "author_source_grain_not_fitted_outcome": true,
+  "frozen_official_Dryad_file_inventory_Git_blob": "66ea1296a3a5f3957d20f777dd49faf815f4902c",
+  "source_records": [
+    {
+      "any_predictive_model_fitted": false,
+      "author_original_raw_observations_exported": false,
+      "candidate": "Physalis 2026 Davis et al",
+      "dataset_doi": "10.5061/dryad.xpnvx0kvp",
+      "download_errors": [
+        {
+          "error_type": "HTTPError",
+          "file": "Oikos_2020_bee_behavior_observations.csv",
+          "status": "HTTP_401"
+        },
+        {
+          "error_type": "HTTPError",
+          "file": "Oikos_2020_cross_season_abundance.csv",
+          "status": "HTTP_401"
+        },
+        {
+          "error_type": "HTTPError",
+          "file": "Oikos_2020_focal_taxa_abundance.csv",
+          "status": "HTTP_401"
+        },
+        {
+          "error_type": "HTTPError",
+          "file": "Oikos_2020_total_plant_yield.csv",
+          "status": "HTTP_401"
+        },
+        {
+          "error_type": "HTTPError",
+          "file": "Oikos_2021_fruit_set_poll_obs.csv",
+          "status": "HTTP_401"
+        },
+        {
+          "error_type": "HTTPError",
+          "file": "Oikos_2021_fruit_weight_poll_obs.csv",
+          "status": "HTTP_401"
+        },
+        {
+          "error_type": "HTTPError",
+          "file": "Oikos_2021_nectar_pollen_foraging.csv",
+          "status": "HTTP_401"
+        },
+        {
+          "error_type": "HTTPError",
+          "file": "Oikos_2021_poll_importance.csv",
+          "status": "HTTP_401"
+        },
+        {
+          "error_type": "HTTPError",
+          "file": "Oikos_2021_seeds_fruit_sugar.csv",
+          "status": "HTTP_401"
+        },
+        {
+          "error_type": "HTTPError",
+          "file": "README.md",
+          "status": "HTTP_401"
+        }
+      ],
+      "files": [],
+      "n_downloaded_verified_original_files": 0,
+      "n_expected_original_files": 10,
+      "original_source_data_admitted": false
+    },
+    {
+      "any_predictive_model_fitted": false,
+      "author_original_raw_observations_exported": false,
+      "candidate": "Mertensia 2021 Gallagher Campbell",
+      "dataset_doi": "10.7280/D16D7Z",
+      "download_errors": [
+        {
+          "error_type": "HTTPError",
+          "file": "gallagher&campbell_frontiersinecology&evolution_data.xlsx",
+          "status": "HTTP_401"
+        },
+        {
+          "error_type": "HTTPError",
+          "file": "gallagher&campbell_frontiersinecology&evolution_metaDataFile.docx",
+          "status": "HTTP_401"
+        }
+      ],
+      "files": [],
+      "n_downloaded_verified_original_files": 0,
+      "n_expected_original_files": 2,
+      "original_source_data_admitted": false
+    }
+  ],
+  "two_original_published_studies_checked": 2
+}

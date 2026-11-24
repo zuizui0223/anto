@@ -1,0 +1,27 @@
+name: ANTO v57 original Dryad Physalis and Mertensia file-byte/plant-ID gate
+on:
+  push:
+    branches: ['analysis/anto-v57-*']
+    paths:
+      - 'scripts/audit_original_Physalis_Mertensia_file_grain_v57.py'
+      - 'tests/test_original_Physalis_Mertensia_file_grain_v57.py'
+      - 'data/external/anto_v57_verified_dryad_file_ids_20261124.json'
+      - 'results/anto_v57_author_source_identity_grain_20261124.json'
+      - '.github/workflows/anto-v57-original-author-byte-gate.yml'
+  pull_request:
+    branches: ['analysis/anto-v56-*']
+permissions:
+  contents: read
+jobs:
+  original_author_file_identity_no_outcome_fits:
+    runs-on: ubuntu-latest
+    timeout-minutes: 14
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Verify immutable Dryad file inventory, no leaked plant outcomes, ID grain
+        run: python -m unittest discover -s tests -p 'test_original_Physalis_Mertensia_file_grain_v57.py' -v
+      - name: Fetch official original author Dryad file streams for IDs and XLSX header audit only
+        run: python scripts/audit_original_Physalis_Mertensia_file_grain_v57.py

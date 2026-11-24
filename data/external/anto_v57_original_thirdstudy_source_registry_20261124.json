@@ -1,0 +1,63 @@
+{
+  "analysis_type": "V57_INDEPENDENT_ORIGINAL_SAME_PLANT_SOURCE_ELIGIBILITY_NO_OUTCOME_SCORING",
+  "date": "2026-11-24",
+  "physalis": {
+    "original_paper_doi": "10.1002/oik.11650",
+    "original_dataset_doi": "10.5061/dryad.xpnvx0kvp",
+    "source": "Dryad official v2",
+    "first_publication_date": "2026-02-03",
+    "expected_files": [
+      "Oikos_2020_cross_season_abundance.csv",
+      "Oikos_2020_total_plant_yield.csv",
+      "Oikos_2021_fruit_set_poll_obs.csv",
+      "Oikos_2021_seeds_fruit_sugar.csv",
+      "Oikos_2021_poll_importance.csv",
+      "README.md"
+    ],
+    "join_2020_key_terms": [
+      "block",
+      "treat",
+      "id"
+    ],
+    "join_2021_key_terms": [
+      "block",
+      "treatment",
+      "plant_id"
+    ],
+    "forbidden_outcome_leaking_predictors": [
+      "poll_imp",
+      "prop_fs",
+      "avg_fruit_weight",
+      "fruit_weight_g",
+      "fruit_set",
+      "total_yield_grams",
+      "n_seeds",
+      "seed_weight_g"
+    ]
+  },
+  "mertensia": {
+    "original_paper_doi": "10.3389/fevo.2021.641693",
+    "original_dataset_doi": "10.7280/D16D7Z",
+    "source": "Dryad official v2",
+    "expected_files": [
+      "gallagher&campbell_frontiersinecology&evolution_data.xlsx",
+      "gallagher&campbell_frontiersinecology&evolution_metaDataFile.docx"
+    ],
+    "original_paper_seed_n_not_assumed_source_cohort": 114
+  },
+  "source_access_methods": [
+    "official_dryad_v2",
+    "original_doiciting_official_zenodo_record_only"
+  ],
+  "minimum_original_sameplant_keys": 30,
+  "minimum_original_blocks": 3,
+  "minimum_sameplant_keys_each_block": 5,
+  "no_ecological_effect_fit": true,
+  "no_original_raw_data_rehosted": true,
+  "no_placeholder_scored_if_source_unavailable": true,
+  "physalis_2020_and_2021_not_new_independent_papers": true,
+  "prior_anto_v56_success_not_confirmed_in_other_study_by_this_gate": true,
+  "prior_anto_v54_v55_source_STOPS_preserved": true,
+  "new_independent_original_study_results_admitted": 0,
+  "valid_causal_p_value_computed": false
+}

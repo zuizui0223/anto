@@ -1,0 +1,8 @@
+{
+  "error_type": "HTTPError",
+  "new_independent_ecological_effect_admitted": false,
+  "original_dryad_dataset_doi": "10.5061/dryad.xpnvx0kvp",
+  "original_reproduction_or_visitation_values_modelled": false,
+  "source_error_code": "HTTP Error 401: Unauthorized",
+  "status": "ORIGINAL_SOURCE_ACCESS_OR_EQUIVALENCE_STOP"
+}

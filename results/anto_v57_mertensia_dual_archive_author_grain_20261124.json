@@ -1,0 +1,221 @@
+{
+  "dryad_id": 59594,
+  "dryad_original_version": 4,
+  "dual_digest_identical_original_files": [
+    {
+      "author_file": "gallagher&campbell_frontiersinecology&evolution_data.xlsx",
+      "byte_identity_validated_by_both_archives": true,
+      "bytes": 339816,
+      "original_dryad_digest_type": "sha-256",
+      "sha256": "152e09ab8bd0f49c2c5052e284fbaeb3f7362fd0f82998ed1a27001bd0e7250d",
+      "zenodo_md5": "db86f8286007b6176bf957334eba9ca4"
+    },
+    {
+      "author_file": "gallagher&campbell_frontiersinecology&evolution_metaDataFile.docx",
+      "byte_identity_validated_by_both_archives": true,
+      "bytes": 47265,
+      "original_dryad_digest_type": "sha-256",
+      "sha256": "b41dd78899e1b451731917e923e739bbf1d0cbbd734867b1faa7d04713a8d968",
+      "zenodo_md5": "ed346bf60b6f0a2092a6cdc5efed4218"
+    }
+  ],
+  "new_independent_original_study_effect_confirmed": false,
+  "official_dryad_individual_download_401_remains_a_stop": true,
+  "original_dryad_doi": "10.7280/D16D7Z",
+  "original_individual_seed_visit_numeric_values_inspected": false,
+  "original_workbook_header_grain": {
+    "first_row_only_header_candidates": [
+      {
+        "first_row_text_labels_only": [
+          "row",
+          "week",
+          "array",
+          "treat",
+          "date",
+          "start",
+          "end",
+          "period",
+          "weather",
+          "collnit",
+          "plantID",
+          "totflrsAv",
+          "totflrsVis",
+          "totflrsNR",
+          "noVisitors",
+          "noRobbers",
+          "BombusVisits",
+          "nonBombusVisits",
+          "visID1",
+          "visID2",
+          "visID3",
+          "visID4",
+          "visID5",
+          "notes",
+          "deInit"
+        ],
+        "worksheet_path": "xl/worksheets/sheet1.xml"
+      },
+      {
+        "first_row_text_labels_only": [
+          "week",
+          "treat",
+          "plantID",
+          "yearCol",
+          "notes"
+        ],
+        "worksheet_path": "xl/worksheets/sheet10.xml"
+      },
+      {
+        "first_row_text_labels_only": [
+          "week",
+          "array",
+          "treat",
+          "plantID",
+          "yrCol",
+          "noteGeneral",
+          "mVWC",
+          "mHeight",
+          "mHerb",
+          "noteVeg",
+          "flrCnt",
+          "mcorW",
+          "mcorL",
+          "noteCor",
+          "mNecVol",
+          "mNecCon",
+          "mVisRate",
+          "sBombVis",
+          "sNonBombVis",
+          "sVis",
+          "sbbVis",
+          "sflyVisits",
+          "sCnt",
+          "mseed",
+          "sMass",
+          "msMass"
+        ],
+        "worksheet_path": "xl/worksheets/sheet11.xml"
+      },
+      {
+        "first_row_text_labels_only": [
+          "row",
+          "week",
+          "plantID",
+          "flrCnt",
+          "corW (mm)",
+          "corL (mm)",
+          "colInit",
+          "colDate",
+          "note",
+          "deInit"
+        ],
+        "worksheet_path": "xl/worksheets/sheet2.xml"
+      },
+      {
+        "first_row_text_labels_only": [
+          "stomCond (3 Ws.) mmol/m^2s (C^0)"
+        ],
+        "worksheet_path": "xl/worksheets/sheet3.xml"
+      },
+      {
+        "first_row_text_labels_only": [
+          "row",
+          "week",
+          "array",
+          "treat",
+          "plantID",
+          "sm (%)",
+          "period (m/s)",
+          "colInit",
+          "recInit",
+          "colDate",
+          "note",
+          "deInit"
+        ],
+        "worksheet_path": "xl/worksheets/sheet4.xml"
+      },
+      {
+        "first_row_text_labels_only": [
+          "necVol",
+          "necConc (%)"
+        ],
+        "worksheet_path": "xl/worksheets/sheet5.xml"
+      },
+      {
+        "first_row_text_labels_only": [
+          "height (cm)",
+          "LfCnt",
+          "herbivory"
+        ],
+        "worksheet_path": "xl/worksheets/sheet6.xml"
+      },
+      {
+        "first_row_text_labels_only": [
+          "row",
+          "week",
+          "array",
+          "treat",
+          "plantID",
+          "NRFlrID",
+          "colInit",
+          "colDate",
+          "deInit"
+        ],
+        "worksheet_path": "xl/worksheets/sheet7.xml"
+      },
+      {
+        "first_row_text_labels_only": [
+          "row",
+          "week",
+          "treat",
+          "plantID",
+          "flrID",
+          "seedCnt",
+          "recInit",
+          "colDate",
+          "note",
+          "deInit"
+        ],
+        "worksheet_path": "xl/worksheets/sheet8.xml"
+      },
+      {
+        "first_row_text_labels_only": [
+          "row",
+          "week",
+          "transect",
+          "mcID",
+          "budCnt",
+          "budNR",
+          "flrCnt",
+          "flrNR",
+          "seedCnt",
+          "note",
+          "colInit",
+          "colDate",
+          "recInit",
+          "deInit"
+        ],
+        "worksheet_path": "xl/worksheets/sheet9.xml"
+      }
+    ],
+    "n_sheets": 11,
+    "original_workbook_sheets": [
+      "exp3_PolObs_2016",
+      "exp3_2016_floralMorph",
+      "exp3_2016_stomCond",
+      "exp3_2016_soilMois",
+      "exp3_2016_nectar",
+      "exp3_2016_vegandherbiv",
+      "exp3_2016_NRFlrIDs",
+      "exp3_2016_seedCnt",
+      "exp3_2016_mcPhenTransects",
+      "exp3_2016_masterplantlist",
+      "exp3_meansForAnalysis"
+    ],
+    "source_seed_or_visitation_numeric_cell_values_parsed": false
+  },
+  "original_zenodo_archival_record": 4731053,
+  "sameplant_outcome_model_ready_without_future_cohort_check": false,
+  "sameplant_visit_seed_outcome_model_fitted": false,
+  "source_identity": "exact_original_Dryad_v4_files_via_original_Zenodo_archival_record"
+}

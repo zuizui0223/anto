@@ -1,0 +1,32 @@
+name: ANTO v57 original first-party Physalis Dryad dataset package gate
+on:
+  push:
+    branches: ['analysis/anto-v57-*']
+    paths:
+      - 'docs/ANTO_V57_PHYSALIS_OFFICIAL_DATASET_DOWNLOAD_GATE_20261124.md'
+      - 'scripts/audit_original_Physalis_official_Dryad_dataset_ZIP_v57.py'
+      - 'tests/test_original_Physalis_Dryad_dataset_ZIP_v57.py'
+      - 'results/anto_v57_physalis_official_dataset_package_20261124.json'
+      - '.github/workflows/anto-v57-original-physalis-package.yml'
+  pull_request:
+    branches: ['analysis/anto-v56-*']
+permissions:
+  contents: read
+jobs:
+  official_Dryad_public_package_only:
+    runs-on: ubuntu-latest
+    timeout-minutes: 12
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Verify official first-party Dryad API and no fake same-plant effects
+        run: python -m unittest discover -s tests -p 'test_original_Physalis_Dryad_dataset_ZIP_v57.py' -v
+      - name: Official Dryad documented dataset ZIP source MD5/SHA if publicly accessible
+        run: |
+          if [ -f results/anto_v57_physalis_official_dataset_package_20261124.json ]; then
+            python scripts/audit_original_Physalis_official_Dryad_dataset_ZIP_v57.py --check
+          else
+            python scripts/audit_original_Physalis_official_Dryad_dataset_ZIP_v57.py
+          fi

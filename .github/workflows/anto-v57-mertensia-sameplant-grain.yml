@@ -1,0 +1,32 @@
+name: ANTO v57 Mertensia original week-array plant source grain only
+on:
+  push:
+    branches: ['analysis/anto-v57-*']
+    paths:
+      - 'docs/ANTO_V57_MERTENSIA_ORIGINAL_MASTER_COHORT_ID_AUDIT_20261124.md'
+      - 'scripts/audit_original_Mertensia_exp3_sameplant_grain_v57.py'
+      - 'tests/test_original_Mertensia_group_grain_v57.py'
+      - 'results/anto_v57_mertensia_exp3_original_plant_grain_20261124.json'
+      - '.github/workflows/anto-v57-mertensia-sameplant-grain.yml'
+  pull_request:
+    branches: ['analysis/anto-v56-*']
+permissions:
+  contents: read
+jobs:
+  original_source_composite_plant_and_weekarray_counts_only:
+    runs-on: ubuntu-latest
+    timeout-minutes: 12
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Check source-only original plant and previous SHA256/MD5 byte identities
+        run: python -m unittest discover -s tests -p 'test_original_Mertensia_group_grain_v57.py' -v
+      - name: Inspect source group/plantID/missingness from authenticated original Excel, no outcome models
+        run: |
+          if [ -f results/anto_v57_mertensia_exp3_original_plant_grain_20261124.json ]; then
+            python scripts/audit_original_Mertensia_exp3_sameplant_grain_v57.py --check
+          else
+            python scripts/audit_original_Mertensia_exp3_sameplant_grain_v57.py
+          fi
