@@ -103,8 +103,11 @@ def verify_zenodo():
     return known
 
 def fetch_zenodo_exact(filemeta,filename,size):
-    link=(filemeta.get("links") or {}).get("content")
-    need(isinstance(link,str),"V57_ZENODO_OFFICIAL_CONTENT_URL_MISSING")
+    links=filemeta.get("links") or {}
+    link=links.get("content") or links.get("download") or links.get("self")
+    need(isinstance(link,str),
+         "V57_ZENODO_OFFICIAL_CONTENT_URL_MISSING_KEYS_"+
+         repr(sorted(links.keys())))
     u=urllib.parse.urlsplit(link)
     need(u.scheme=="https" and u.hostname=="zenodo.org"
          and u.username is None and u.password is None,
