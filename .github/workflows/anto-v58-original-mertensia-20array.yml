@@ -1,0 +1,33 @@
+name: ANTO v58 original Mertensia independent 20-array visitor/seed prediction
+on:
+  push:
+    branches: ['analysis/anto-v58-*']
+    paths:
+      - 'docs/ANTO_V58*'
+      - 'data/external/anto_v58*'
+      - 'scripts/analyze_original_Mertensia_20array_visitation_v58.py'
+      - 'tests/test_original_Mertensia_20array_v58.py'
+      - 'results/anto_v58_mertensia_array_heldout_visitation_20261124.json'
+      - '.github/workflows/anto-v58-original-mertensia-20array.yml'
+  pull_request:
+    branches: ['analysis/anto-v57-*']
+permissions:
+  contents: read
+jobs:
+  original_Gallagher_Mertensia_20_arrays:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Numerical and biological source, original plant/array leak adversarial tests
+        run: python -m unittest discover -s tests -p 'test_original_Mertensia_20array_v58.py' -v
+      - name: Double original-author Dryad v4 SHA256 and Zenodo MD5; 105 actual plants; 20 group heldouts; 200 placebo
+        run: |
+          if [ -f results/anto_v58_mertensia_array_heldout_visitation_20261124.json ]; then
+            python scripts/analyze_original_Mertensia_20array_visitation_v58.py --check
+          else
+            python scripts/analyze_original_Mertensia_20array_visitation_v58.py
+          fi
