@@ -1,0 +1,32 @@
+name: ANTO v57 official Mertensia Dryad-Zenodo same-byte identity gate
+on:
+  push:
+    branches: ['analysis/anto-v57-*']
+    paths:
+      - 'docs/ANTO_V57_MERTENSIA_ZENODO_ORIGINAL_EQUIVALENCE_GATE_20261124.md'
+      - 'scripts/audit_original_Mertensia_Zenodo_equivalence_v57.py'
+      - 'tests/test_original_Mertensia_dual_archive_v57.py'
+      - 'results/anto_v57_mertensia_dual_archive_author_grain_20261124.json'
+      - '.github/workflows/anto-v57-original-mertensia-archive.yml'
+  pull_request:
+    branches: ['analysis/anto-v56-*']
+permissions:
+  contents: read
+jobs:
+  original_Dryad_author_digest_and_Zenodo_source_only:
+    runs-on: ubuntu-latest
+    timeout-minutes: 12
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Source author dual archive integrity and no-effect tests
+        run: python -m unittest discover -s tests -p 'test_original_Mertensia_dual_archive_v57.py' -v
+      - name: Verify two archived original Mertensia author files against original published Dryad digest and Zenodo MD5
+        run: |
+          if [ -f results/anto_v57_mertensia_dual_archive_author_grain_20261124.json ]; then
+            python scripts/audit_original_Mertensia_Zenodo_equivalence_v57.py --check
+          else
+            python scripts/audit_original_Mertensia_Zenodo_equivalence_v57.py
+          fi
