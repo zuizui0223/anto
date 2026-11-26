@@ -1,0 +1,51 @@
+{
+  "version": "v59",
+  "date": "2026-11-26",
+  "scope": "posthoc diagnostic on one unchanged original Mertensia 2016 study; no independent biological replication",
+  "paper_doi": "10.3389/fevo.2021.641693",
+  "dryad_doi": "10.7280/D16D7Z",
+  "zenodo_record": 4731053,
+  "source_sha256": "152e09ab8bd0f49c2c5052e284fbaeb3f7362fd0f82998ed1a27001bd0e7250d",
+  "metadata_sha256": "b41dd78899e1b451731917e923e739bbf1d0cbbd734867b1faa7d04713a8d968",
+  "v58_script_git_blob": "0ace09e279f3cd943122cc227a4af88dc825f7e6",
+  "v58_result_git_blob": "cd2de70901ba305c05c86ccc0aa4dd08d803014d",
+  "n_plants": 105,
+  "n_original_groups": 20,
+  "n_weeks": 4,
+  "n_treatments": 3,
+  "original_week4_rearranged": true,
+  "source_new_measurement": "mVWC",
+  "primary_models": [
+    "linear_week",
+    "linear_week_vwc"
+  ],
+  "secondary_model": "no_week",
+  "primary_holdouts": [
+    "array20",
+    "safe16",
+    "week4"
+  ],
+  "secondary_holdout": "water3",
+  "water3_models": [
+    "linear_week",
+    "linear_week_vwc"
+  ],
+  "ridge_alpha": 5,
+  "base_features": [
+    "log_flower",
+    "mcorW",
+    "mcorL"
+  ],
+  "visit_feature": "log_visit",
+  "source_id_check": "raw plantID overlap across distinct weeks stops all newly interpreted folds; repeats in different arrays of weeks 1-3 stop safe16; week4 contained whole",
+  "scoring": "MSE on log1p(source mseed); fold, plant and week equal; same 105 complete plants; no outcomes as predictors",
+  "primary_week_gate": "linear_week whole-week: positive equal-week and plant weighted gain, >=3/4 weeks positive; descriptive only",
+  "placebo_seed": 20261126,
+  "placebo_n": 200,
+  "placebo_strata": "original week x treatment",
+  "placebo_scope": "linear_week whole-week primary; not a p-value",
+  "no_effect_selection": true,
+  "no_raw_rows_export": true,
+  "new_original_studies": 0,
+  "causal_claim": false
+}
