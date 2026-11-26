@@ -1,0 +1,33 @@
+name: ANTO v59 original Mertensia season and water transfer
+on:
+  push:
+    branches: ['analysis/anto-v59-*']
+    paths:
+      - 'data/external/anto_v59*'
+      - 'docs/ANTO_V59*'
+      - 'scripts/analyze_original_Mertensia_season_water_transfer_v59.py'
+      - 'tests/test_original_Mertensia_season_water_v59.py'
+      - 'results/anto_v59_mertensia_season_water_transfer_20261126.json'
+      - '.github/workflows/anto-v59-original-mertensia-season-water.yml'
+  pull_request:
+    branches: ['analysis/anto-v58-*']
+permissions:
+  contents: read
+jobs:
+  original_mertensia_v59_temporal_context:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Verify frozen prior source, split and mathematical identities
+        run: python -m unittest discover -s tests -p 'test_original_Mertensia_season_water_v59.py' -v
+      - name: Exact original archive source and all fixed context transfer comparisons
+        run: |
+          if [ -f results/anto_v59_mertensia_season_water_transfer_20261126.json ]; then
+            python scripts/analyze_original_Mertensia_season_water_transfer_v59.py --check
+          else
+            python scripts/analyze_original_Mertensia_season_water_transfer_v59.py
+          fi
