@@ -1,0 +1,5158 @@
+{
+  "analysis": "V59_RETROSPECTIVE_MERTENSIA_SAME_STUDY_CONTEXT_TRANSFER",
+  "author_dictionary": {
+    "definitions_bounded_to_registered_field_names": {
+      "array": [
+        "Each week, thirty plants in their first week of flowering (10 per water treatment) were moved from RMBL to a meadow near the original source population in Rustler Gulch. Plants were arranged 30 cm apart into five randomized arrays of six pl",
+        "The water manipulations were maintained through the growing season (June 10 – August 1) and discontinued once seeds were collected. We watered pots manually with watering cans slowly and evenly to avoid pooling, in the mid to late afternoon",
+        "array – Array"
+      ],
+      "mVWC": [
+        "mVWC – Mean Volumetric Water Content"
+      ],
+      "mVisRate": [
+        "mVisRate - M ean pollinator visitation rate per plant"
+      ],
+      "mseed": [],
+      "plantID": [
+        "plantID – Plant Identification Number"
+      ]
+    },
+    "original_dictionary_sha256": "b41dd78899e1b451731917e923e739bbf1d0cbbd734867b1faa7d04713a8d968"
+  },
+  "fixed_context_policy_results": {
+    "array20__linear_week": {
+      "by_water_code": {
+        "A": {
+          "B_mse": 0.23376964121271698,
+          "V_mse": 0.2359062366087204,
+          "alignment_2ed": 0.009759469023557817,
+          "correction_d2": 0.011896064419561226,
+          "gain": -0.0021365953960034156,
+          "mean_baseline_residual": 0.047636216442310544,
+          "mean_prediction_correction": 0.01075671691676468,
+          "n": 38,
+          "n_plants_improved": 20
+        },
+        "C": {
+          "B_mse": 0.1031479951637584,
+          "V_mse": 0.09762968107013686,
+          "alignment_2ed": 0.00985148786179865,
+          "correction_d2": 0.004333173768177111,
+          "gain": 0.0055183140936215375,
+          "mean_baseline_residual": -0.03079229040101777,
+          "mean_prediction_correction": -0.002651649733136993,
+          "n": 32,
+          "n_plants_improved": 19
+        },
+        "D": {
+          "B_mse": 0.16074205415272272,
+          "V_mse": 0.14376452055863082,
+          "alignment_2ed": 0.02646018756717053,
+          "correction_d2": 0.00948265397307858,
+          "gain": 0.016977533594091904,
+          "mean_baseline_residual": -0.026463437416776273,
+          "mean_prediction_correction": -0.0009696509222209897,
+          "n": 35,
+          "n_plants_improved": 21
+        }
+      },
+      "by_week": {
+        "1": {
+          "B_mse": 0.1769029439383891,
+          "V_mse": 0.1508968765758865,
+          "alignment_2ed": 0.04780009040576067,
+          "correction_d2": 0.021794023043258077,
+          "gain": 0.026006067362502605,
+          "mean_baseline_residual": -0.07376788909344464,
+          "mean_prediction_correction": 0.054753733287478755,
+          "n": 28,
+          "n_plants_improved": 14
+        },
+        "2": {
+          "B_mse": 0.1173367441237169,
+          "V_mse": 0.13238491257696258,
+          "alignment_2ed": -0.009379635288228138,
+          "correction_d2": 0.005668533165017579,
+          "gain": -0.015048168453245678,
+          "mean_baseline_residual": 0.10043927281357211,
+          "mean_prediction_correction": -0.053355565297270806,
+          "n": 27,
+          "n_plants_improved": 13
+        },
+        "3": {
+          "B_mse": 0.10267983156270839,
+          "V_mse": 0.10375438823400626,
+          "alignment_2ed": 0.0009793734685181888,
+          "correction_d2": 0.002053930139816065,
+          "gain": -0.0010745566712978688,
+          "mean_baseline_residual": 0.036098047779280946,
+          "mean_prediction_correction": -0.014521795883171233,
+          "n": 27,
+          "n_plants_improved": 15
+        },
+        "4": {
+          "B_mse": 0.3007053970808885,
+          "V_mse": 0.28345527560464573,
+          "alignment_2ed": 0.021766023351938793,
+          "correction_d2": 0.004515901875696093,
+          "gain": 0.017250121476242775,
+          "mean_baseline_residual": -0.07488713647837045,
+          "mean_prediction_correction": 0.02563256038788996,
+          "n": 23,
+          "n_plants_improved": 18
+        }
+      },
+      "context": "linear_week",
+      "fold_equal": {
+        "B_mse": 0.17967510037419848,
+        "V_mse": 0.1730887737209328,
+        "gain": 0.0065863266532656785
+      },
+      "folds": [
+        {
+          "B_mse": 0.07529041960790882,
+          "V_mse": 0.06347132664591225,
+          "alignment_2ed": 0.0677852873043333,
+          "correction_d2": 0.05596619434233672,
+          "fold": "1|1",
+          "gain": 0.011819092961996569,
+          "heldout_treatments": {
+            "A": 2,
+            "C": 2,
+            "D": 2
+          },
+          "heldout_weeks": {
+            "1": 6
+          },
+          "mean_baseline_residual": 0.11724319209477307,
+          "mean_prediction_correction": 0.21163656539100387,
+          "n": 6,
+          "n_plants_improved": 4,
+          "n_test_outside_training_range": {
+            "log_flower": 0,
+            "log_visit": 2,
+            "mVWC": 0,
+            "mcorL": 0,
+            "mcorW": 0,
+            "week_num": 0
+          },
+          "n_train": 99,
+          "train_visit_slope_per_log_rate_unit": 0.44340599201659625
+        },
+        {
+          "B_mse": 0.2064010996329857,
+          "V_mse": 0.20478461594393876,
+          "alignment_2ed": 0.023446245909288226,
+          "correction_d2": 0.021829762220241328,
+          "fold": "1|2",
+          "gain": 0.0016164836890469325,
+          "heldout_treatments": {
+            "A": 2,
+            "C": 2,
+            "D": 1
+          },
+          "heldout_weeks": {
+            "1": 5
+          },
+          "mean_baseline_residual": 0.21008371813136337,
+          "mean_prediction_correction": 0.09593536889170658,
+          "n": 5,
+          "n_plants_improved": 1,
+          "n_test_outside_training_range": {
+            "log_flower": 0,
+            "log_visit": 0,
+            "mVWC": 1,
+            "mcorL": 0,
+            "mcorW": 0,
+            "week_num": 0
+          },
+          "n_train": 100,
+          "train_visit_slope_per_log_rate_unit": 0.4166206149414463
+        },
+        {
+          "B_mse": 0.21844170246321845,
+          "V_mse": 0.1953792629640673,
+          "alignment_2ed": 0.031854937191082094,
+          "correction_d2": 0.008792497691930887,
+          "fold": "1|3",
+          "gain": 0.023062439499151155,
+          "heldout_treatments": {
+            "A": 2,
+            "C": 2,
+            "D": 2
+          },
+          "heldout_weeks": {
+            "1": 6
+          },
+          "mean_baseline_residual": -0.17176011904173402,
+          "mean_prediction_correction": 0.0543943357251388,
+          "n": 6,
+          "n_plants_improved": 3,
+          "n_test_outside_training_range": {
+            "log_flower": 0,
+            "log_visit": 0,
+            "mVWC": 0,
+            "mcorL": 0,
+            "mcorW": 0,
+            "week_num": 0
+          },
+          "n_train": 99,
+          "train_visit_slope_per_log_rate_unit": 0.3562870698012321
+        },
+        {
+          "B_mse": 0.27919662714051346,
+          "V_mse": 0.2009465879909039,
+          "alignment_2ed": 0.08783164864246598,
+          "correction_d2": 0.009581609492856417,
+          "fold": "1|4",
+          "gain": 0.07825003914960957,
+          "heldout_treatments": {
+            "A": 2,
+            "C": 2,
+            "D": 1
+          },
+          "heldout_weeks": {
+            "1": 5
+          },
+          "mean_baseline_residual": -0.24385701413471245,
+          "mean_prediction_correction": -0.0714318763620437,
+          "n": 5,
+          "n_plants_improved": 3,
+          "n_test_outside_training_range": {
+            "log_flower": 0,
+            "log_visit": 0,
+            "mVWC": 0,
+            "mcorL": 0,
+            "mcorW": 0,
+            "week_num": 0
+          },
+          "n_train": 100,
+          "train_visit_slope_per_log_rate_unit": 0.28353844366838904
+        },
+        {
+          "B_mse": 0.12715017733010578,
+          "V_mse": 0.10722549779845518,
+          "alignment_2ed": 0.030695285271672562,
+          "correction_d2": 0.010770605740021926,
+          "fold": "1|5",
+          "gain": 0.0199246795316506,
+          "heldout_treatments": {
+            "A": 2,
+            "C": 2,
+            "D": 2
+          },
+          "heldout_weeks": {
+            "1": 6
+          },
+          "mean_baseline_residual": -0.26158880881965657,
+          "mean_prediction_correction": -0.03093305621596082,
+          "n": 6,
+          "n_plants_improved": 3,
+          "n_test_outside_training_range": {
+            "log_flower": 0,
+            "log_visit": 0,
+            "mVWC": 0,
+            "mcorL": 0,
+            "mcorW": 0,
+            "week_num": 0
+          },
+          "n_train": 99,
+          "train_visit_slope_per_log_rate_unit": 0.372395029561296
+        },
+        {
+          "B_mse": 0.058394375677528365,
+          "V_mse": 0.0434061615918776,
+          "alignment_2ed": 0.016997031465272077,
+          "correction_d2": 0.0020088173796213157,
+          "fold": "2|1",
+          "gain": 0.014988214085650764,
+          "heldout_treatments": {
+            "A": 2,
+            "C": 1,
+            "D": 2
+          },
+          "heldout_weeks": {
+            "2": 5
+          },
+          "mean_baseline_residual": 0.021258619433564906,
+          "mean_prediction_correction": -0.023994804805261793,
+          "n": 5,
+          "n_plants_improved": 5,
+          "n_test_outside_training_range": {
+            "log_flower": 0,
+            "log_visit": 0,
+            "mVWC": 1,
+            "mcorL": 0,
+            "mcorW": 0,
+            "week_num": 0
+          },
+          "n_train": 100,
+          "train_visit_slope_per_log_rate_unit": 0.36518512224237903
+        },
+        {
+          "B_mse": 0.13165539445535226,
+          "V_mse": 0.1393303225438764,
+          "alignment_2ed": -0.004207871165318452,
+          "correction_d2": 0.003467056923205654,
+          "fold": "2|2",
+          "gain": -0.00767492808852413,
+          "heldout_treatments": {
+            "A": 2,
+            "C": 2,
+            "D": 2
+          },
+          "heldout_weeks": {
+            "2": 6
+          },
+          "mean_baseline_residual": -0.10569664141891677,
+          "mean_prediction_correction": -0.04513831770136547,
+          "n": 6,
+          "n_plants_improved": 3,
+          "n_test_outside_training_range": {
+            "log_flower": 0,
+            "log_visit": 0,
+            "mVWC": 0,
+            "mcorL": 0,
+            "mcorW": 0,
+            "week_num": 0
+          },
+          "n_train": 99,
+          "train_visit_slope_per_log_rate_unit": 0.40001523938020295
+        },
+        {
+          "B_mse": 0.1826116355369559,
+          "V_mse": 0.18285147952827752,
+          "alignment_2ed": 0.0016681402167730037,
+          "correction_d2": 0.0019079842080946107,
+          "fold": "2|3",
+          "gain": -0.00023984399132162548,
+          "heldout_treatments": {
+            "A": 2,
+            "C": 2,
+            "D": 2
+          },
+          "heldout_weeks": {
+            "2": 6
+          },
+          "mean_baseline_residual": 0.2979052128927681,
+          "mean_prediction_correction": -0.02464415538129065,
+          "n": 6,
+          "n_plants_improved": 2,
+          "n_test_outside_training_range": {
+            "log_flower": 1,
+            "log_visit": 0,
+            "mVWC": 0,
+            "mcorL": 0,
+            "mcorW": 0,
+            "week_num": 0
+          },
+          "n_train": 99,
+          "train_visit_slope_per_log_rate_unit": 0.3834573538189077
+        },
+        {
+          "B_mse": 0.1879950466838863,
+          "V_mse": 0.27116494134442765,
+          "alignment_2ed": -0.06414234305209666,
+          "correction_d2": 0.019027551608444687,
+          "fold": "2|4",
+          "gain": -0.08316989466054134,
+          "heldout_treatments": {
+            "A": 2,
+            "C": 2,
+            "D": 1
+          },
+          "heldout_weeks": {
+            "2": 5
+          },
+          "mean_baseline_residual": 0.2677186009346763,
+          "mean_prediction_correction": -0.1329663640940568,
+          "n": 5,
+          "n_plants_improved": 1,
+          "n_test_outside_training_range": {
+            "log_flower": 0,
+            "log_visit": 0,
+            "mVWC": 0,
+            "mcorL": 0,
+            "mcorW": 0,
+            "week_num": 0
+          },
+          "n_train": 100,
+          "train_visit_slope_per_log_rate_unit": 0.47906696565488993
+        },
+        {
+          "B_mse": 0.01010855991588681,
+          "V_mse": 0.013689262492708224,
+          "alignment_2ed": -0.000457041831352812,
+          "correction_d2": 0.003123660745468603,
+          "fold": "2|5",
+          "gain": -0.0035807025768214134,
+          "heldout_treatments": {
+            "A": 1,
+            "C": 2,
+            "D": 2
+          },
+          "heldout_weeks": {
+            "2": 5
+          },
+          "mean_baseline_residual": 0.022744567056426534,
+          "mean_prediction_correction": -0.047419916006756414,
+          "n": 5,
+          "n_plants_improved": 2,
+          "n_test_outside_training_range": {
+            "log_flower": 0,
+            "log_visit": 0,
+            "mVWC": 0,
+            "mcorL": 0,
+            "mcorW": 0,
+            "week_num": 0
+          },
+          "n_train": 100,
+          "train_visit_slope_per_log_rate_unit": 0.39032626521195907
+        },
+        {
+          "B_mse": 0.050506800643646724,
+          "V_mse": 0.04697241044008602,
+          "alignment_2ed": 0.005331707160860312,
+          "correction_d2": 0.001797316957299621,
+          "fold": "3|1",
+          "gain": 0.0035343902035607014,
+          "heldout_treatments": {
+            "A": 2,
+            "C": 1,
+            "D": 2
+          },
+          "heldout_weeks": {
+            "3": 5
+          },
+          "mean_baseline_residual": 0.004887209687846028,
+          "mean_prediction_correction": 0.035178880160422345,
+          "n": 5,
+          "n_plants_improved": 2,
+          "n_test_outside_training_range": {
+            "log_flower": 0,
+            "log_visit": 0,
+            "mVWC": 0,
+            "mcorL": 0,
+            "mcorW": 0,
+            "week_num": 0
+          },
+          "n_train": 100,
+          "train_visit_slope_per_log_rate_unit": 0.3798395336921028
+        },
+        {
+          "B_mse": 0.27496247362240267,
+          "V_mse": 0.2900354885150227,
+          "alignment_2ed": -0.014490491678659241,
+          "correction_d2": 0.0005825232139607792,
+          "fold": "3|2",
+          "gain": -0.01507301489262003,
+          "heldout_treatments": {
+            "A": 2,
+            "D": 2
+          },
+          "heldout_weeks": {
+            "3": 4
+          },
+          "mean_baseline_residual": 0.06516754691596982,
+          "mean_prediction_correction": -0.013213382582178496,
+          "n": 4,
+          "n_plants_improved": 0,
+          "n_test_outside_training_range": {
+            "log_flower": 0,
+            "log_visit": 0,
+            "mVWC": 0,
+            "mcorL": 0,
+            "mcorW": 0,
+            "week_num": 0
+          },
+          "n_train": 101,
+          "train_visit_slope_per_log_rate_unit": 0.3962174273616805
+        },
+        {
+          "B_mse": 0.053505645288336845,
+          "V_mse": 0.05449250348019516,
+          "alignment_2ed": 0.001972428862363262,
+          "correction_d2": 0.0029592870542215818,
+          "fold": "3|3",
+          "gain": -0.0009868581918583141,
+          "heldout_treatments": {
+            "A": 2,
+            "C": 2,
+            "D": 2
+          },
+          "heldout_weeks": {
+            "3": 6
+          },
+          "mean_baseline_residual": -0.04546669074107102,
+          "mean_prediction_correction": -0.052338808263469705,
+          "n": 6,
+          "n_plants_improved": 4,
+          "n_test_outside_training_range": {
+            "log_flower": 0,
+            "log_visit": 0,
+            "mVWC": 0,
+            "mcorL": 0,
+            "mcorW": 0,
+            "week_num": 0
+          },
+          "n_train": 99,
+          "train_visit_slope_per_log_rate_unit": 0.39018353012117385
+        },
+        {
+          "B_mse": 0.02167786890354732,
+          "V_mse": 0.018796733673934977,
+          "alignment_2ed": 0.005107597340644118,
+          "correction_d2": 0.0022264621110317747,
+          "fold": "3|4",
+          "gain": 0.002881135229612343,
+          "heldout_treatments": {
+            "A": 2,
+            "C": 2,
+            "D": 2
+          },
+          "heldout_weeks": {
+            "3": 6
+          },
+          "mean_baseline_residual": -0.003906263004155623,
+          "mean_prediction_correction": -0.004466055400294507,
+          "n": 6,
+          "n_plants_improved": 5,
+          "n_test_outside_training_range": {
+            "log_flower": 0,
+            "log_visit": 0,
+            "mVWC": 0,
+            "mcorL": 1,
+            "mcorW": 1,
+            "week_num": 0
+          },
+          "n_train": 99,
+          "train_visit_slope_per_log_rate_unit": 0.38224216278518136
+        },
+        {
+          "B_mse": 0.16147841155566292,
+          "V_mse": 0.1611048421888113,
+          "alignment_2ed": 0.002544392890380369,
+          "correction_d2": 0.0021708235235287318,
+          "fold": "3|5",
+          "gain": 0.0003735693668516227,
+          "heldout_treatments": {
+            "A": 2,
+            "C": 2,
+            "D": 2
+          },
+          "heldout_weeks": {
+            "3": 6
+          },
+          "mean_baseline_residual": 0.16429646273480597,
+          "mean_prediction_correction": -0.029050029556072627,
+          "n": 6,
+          "n_plants_improved": 4,
+          "n_test_outside_training_range": {
+            "log_flower": 0,
+            "log_visit": 0,
+            "mVWC": 0,
+            "mcorL": 0,
+            "mcorW": 0,
+            "week_num": 0
+          },
+          "n_train": 99,
+          "train_visit_slope_per_log_rate_unit": 0.384367504064509
+        },
+        {
+          "B_mse": 0.21730886501710214,
+          "V_mse": 0.20810234753946338,
+          "alignment_2ed": 0.009601814806982129,
+          "correction_d2": 0.00039529732934336656,
+          "fold": "4|1",
+          "gain": 0.00920651747763876,
+          "heldout_treatments": {
+            "A": 2,
+            "C": 1,
+            "D": 2
+          },
+          "heldout_weeks": {
+            "4": 5
+          },
+          "mean_baseline_residual": -0.2985761280660314,
+          "mean_prediction_correction": -0.006213002984829819,
+          "n": 5,
+          "n_plants_improved": 4,
+          "n_test_outside_training_range": {
+            "log_flower": 0,
+            "log_visit": 0,
+            "mVWC": 0,
+            "mcorL": 1,
+            "mcorW": 0,
+            "week_num": 0
+          },
+          "n_train": 100,
+          "train_visit_slope_per_log_rate_unit": 0.37264247701391806
+        },
+        {
+          "B_mse": 0.16004229361294423,
+          "V_mse": 0.15505988418499986,
+          "alignment_2ed": 0.005170810833789525,
+          "correction_d2": 0.0001884014058451368,
+          "fold": "4|2",
+          "gain": 0.004982409427944368,
+          "heldout_treatments": {
+            "A": 1,
+            "C": 1,
+            "D": 2
+          },
+          "heldout_weeks": {
+            "4": 4
+          },
+          "mean_baseline_residual": -0.38876862507434273,
+          "mean_prediction_correction": -0.008669580927325296,
+          "n": 4,
+          "n_plants_improved": 3,
+          "n_test_outside_training_range": {
+            "log_flower": 0,
+            "log_visit": 0,
+            "mVWC": 0,
+            "mcorL": 0,
+            "mcorW": 0,
+            "week_num": 0
+          },
+          "n_train": 101,
+          "train_visit_slope_per_log_rate_unit": 0.3793294643313861
+        },
+        {
+          "B_mse": 0.6943624186567763,
+          "V_mse": 0.6660889632889517,
+          "alignment_2ed": 0.03248603513248218,
+          "correction_d2": 0.004212579764657684,
+          "fold": "4|3",
+          "gain": 0.02827345536782455,
+          "heldout_treatments": {
+            "A": 2,
+            "C": 1,
+            "D": 1
+          },
+          "heldout_weeks": {
+            "4": 4
+          },
+          "mean_baseline_residual": 0.3951096543371256,
+          "mean_prediction_correction": 0.006172576941881738,
+          "n": 4,
+          "n_plants_improved": 3,
+          "n_test_outside_training_range": {
+            "log_flower": 0,
+            "log_visit": 0,
+            "mVWC": 0,
+            "mcorL": 0,
+            "mcorW": 1,
+            "week_num": 0
+          },
+          "n_train": 101,
+          "train_visit_slope_per_log_rate_unit": 0.3611201888037845
+        },
+        {
+          "B_mse": 0.2169084797713355,
+          "V_mse": 0.21248889898120554,
+          "alignment_2ed": 0.016116484896746254,
+          "correction_d2": 0.011696904106616262,
+          "fold": "4|4",
+          "gain": 0.004419580790129968,
+          "heldout_treatments": {
+            "A": 2,
+            "C": 2,
+            "D": 1
+          },
+          "heldout_weeks": {
+            "4": 5
+          },
+          "mean_baseline_residual": 0.06917207320355098,
+          "mean_prediction_correction": 0.09094504380236342,
+          "n": 5,
+          "n_plants_improved": 3,
+          "n_test_outside_training_range": {
+            "log_flower": 0,
+            "log_visit": 0,
+            "mVWC": 0,
+            "mcorL": 0,
+            "mcorW": 0,
+            "week_num": 0
+          },
+          "n_train": 100,
+          "train_visit_slope_per_log_rate_unit": 0.39226557586667965
+        },
+        {
+          "B_mse": 0.26550371196787265,
+          "V_mse": 0.22638394328154013,
+          "alignment_2ed": 0.04427993094217271,
+          "correction_d2": 0.005160162255840149,
+          "fold": "4|5",
+          "gain": 0.03911976868633252,
+          "heldout_treatments": {
+            "A": 2,
+            "C": 1,
+            "D": 2
+          },
+          "heldout_weeks": {
+            "4": 5
+          },
+          "mean_baseline_residual": -0.12014959634824977,
+          "mean_prediction_correction": 0.03517534015511505,
+          "n": 5,
+          "n_plants_improved": 5,
+          "n_test_outside_training_range": {
+            "log_flower": 0,
+            "log_visit": 0,
+            "mVWC": 0,
+            "mcorL": 0,
+            "mcorW": 0,
+            "week_num": 0
+          },
+          "n_train": 100,
+          "train_visit_slope_per_log_rate_unit": 0.3363619991257753
+        }
+      ],
+      "n_folds": 20,
+      "n_plants": 105,
+      "n_positive_folds": 14,
+      "n_positive_weeks": 2,
+      "plant_weighted": {
+        "B_mse": 0.16961861053970298,
+        "V_mse": 0.1630509048088365,
+        "alignment_2ed": 0.015354419041178307,
+        "correction_d2": 0.008786713310311852,
+        "gain": 0.0065677057308664855,
+        "mean_baseline_residual": -0.0009656893105898806,
+        "mean_prediction_correction": 0.0027615682771327562,
+        "n": 105,
+        "n_plants_improved": 60
+      },
+      "policy": "array20",
+      "week_equal": {
+        "B_mse": 0.17440622917642573,
+        "V_mse": 0.1676228632478753,
+        "gain": 0.006783365928550458
+      }
+    },
+    "array20__linear_week_vwc": {
+      "by_water_code": {
+        "A": {
+          "B_mse": 0.20787533996433086,
+          "V_mse": 0.2033174869950055,
+          "alignment_2ed": 0.016463037211949347,
+          "correction_d2": 0.011905184242623944,
+          "gain": 0.004557852969325371,
+          "mean_baseline_residual": 0.022678467313572096,
+          "mean_prediction_correction": 0.010967372691379804,
+          "n": 38,
+          "n_plants_improved": 18
+        },
+        "C": {
+          "B_mse": 0.08756005290064563,
+          "V_mse": 0.08319201536189999,
+          "alignment_2ed": 0.008734799198768482,
+          "correction_d2": 0.004366761660022845,
+          "gain": 0.004368037538745637,
+          "mean_baseline_residual": -0.018454974062482463,
+          "mean_prediction_correction": -0.0031037472897417085,
+          "n": 32,
+          "n_plants_improved": 20
+        },
+        "D": {
+          "B_mse": 0.18011922491710022,
+          "V_mse": 0.16430104007213367,
+          "alignment_2ed": 0.02521421884388571,
+          "correction_d2": 0.0093960339989193,
+          "gain": 0.015818184844966554,
+          "mean_baseline_residual": -0.009569257562841063,
+          "mean_prediction_correction": -0.0010096680971139614,
+          "n": 35,
+          "n_plants_improved": 20
+        }
+      },
+      "by_week": {
+        "1": {
+          "B_mse": 0.19566343807968475,
+          "V_mse": 0.16739096881713383,
+          "alignment_2ed": 0.05003011853665242,
+          "correction_d2": 0.0217576492741015,
+          "gain": 0.02827246926255092,
+          "mean_baseline_residual": -0.06967721893122285,
+          "mean_prediction_correction": 0.05439138647075697,
+          "n": 28,
+          "n_plants_improved": 14
+        },
+        "2": {
+          "B_mse": 0.13139637338875268,
+          "V_mse": 0.1404399548967483,
+          "alignment_2ed": -0.0034931704684466967,
+          "correction_d2": 0.005550411039548899,
+          "gain": -0.009043581507995613,
+          "mean_baseline_residual": 0.08655755323476469,
+          "mean_prediction_correction": -0.053032026561358594,
+          "n": 27,
+          "n_plants_improved": 13
+        },
+        "3": {
+          "B_mse": 0.09925909507620571,
+          "V_mse": 0.10136850896119537,
+          "alignment_2ed": 3.390075788638331e-7,
+          "correction_d2": 0.0021097528925685064,
+          "gain": -0.0021094138849896554,
+          "mean_baseline_residual": 0.04702966635735468,
+          "mean_prediction_correction": -0.014813874720042917,
+          "n": 27,
+          "n_plants_improved": 13
+        },
+        "4": {
+          "B_mse": 0.2303949377729864,
+          "V_mse": 0.2140421629944113,
+          "alignment_2ed": 0.020916077320340433,
+          "correction_d2": 0.004563302541765413,
+          "gain": 0.01635277477857508,
+          "mean_baseline_residual": -0.07476496633461392,
+          "mean_prediction_correction": 0.025694886044276336,
+          "n": 23,
+          "n_plants_improved": 18
+        }
+      },
+      "context": "linear_week_vwc",
+      "fold_equal": {
+        "B_mse": 0.1676103748250911,
+        "V_mse": 0.15914715488422004,
+        "gain": 0.008463219940871094
+      },
+      "folds": [
+        {
+          "B_mse": 0.08181710403625338,
+          "V_mse": 0.072691676517829,
+          "alignment_2ed": 0.06551733794418191,
+          "correction_d2": 0.05639191042575752,
+          "fold": "1|1",
+          "gain": 0.009125427518424378,
+          "heldout_treatments": {
+            "A": 2,
+            "C": 2,
+            "D": 2
+          },
+          "heldout_weeks": {
+            "1": 6
+          },
+          "mean_baseline_residual": 0.09370202255369568,
+          "mean_prediction_correction": 0.21247224784933172,
+          "n": 6,
+          "n_plants_improved": 4,
+          "n_test_outside_training_range": {
+            "log_flower": 0,
+            "log_visit": 2,
+            "mVWC": 0,
+            "mcorL": 0,
+            "mcorW": 0,
+            "week_num": 0
+          },
+          "n_train": 99,
+          "train_visit_slope_per_log_rate_unit": 0.44507220720553875
+        },
+        {
+          "B_mse": 0.31632673907239583,
+          "V_mse": 0.3089600704869332,
+          "alignment_2ed": 0.028800711701115124,
+          "correction_d2": 0.021434043115652446,
+          "fold": "1|2",
+          "gain": 0.0073666685854626435,
+          "heldout_treatments": {
+            "A": 2,
+            "C": 2,
+            "D": 1
+          },
+          "heldout_weeks": {
+            "1": 5
+          },
+          "mean_baseline_residual": 0.24144966295609524,
+          "mean_prediction_correction": 0.09513892957359027,
+          "n": 5,
+          "n_plants_improved": 1,
+          "n_test_outside_training_range": {
+            "log_flower": 0,
+            "log_visit": 0,
+            "mVWC": 1,
+            "mcorL": 0,
+            "mcorW": 0,
+            "week_num": 0
+          },
+          "n_train": 100,
+          "train_visit_slope_per_log_rate_unit": 0.41263526747372586
+        },
+        {
+          "B_mse": 0.202532026014522,
+          "V_mse": 0.1731505295341951,
+          "alignment_2ed": 0.03772998270261348,
+          "correction_d2": 0.008348486222286603,
+          "fold": "1|3",
+          "gain": 0.029381496480326896,
+          "heldout_treatments": {
+            "A": 2,
+            "C": 2,
+            "D": 2
+          },
+          "heldout_weeks": {
+            "1": 6
+          },
+          "mean_baseline_residual": -0.12083099843647128,
+          "mean_prediction_correction": 0.0533724745664817,
+          "n": 6,
+          "n_plants_improved": 4,
+          "n_test_outside_training_range": {
+            "log_flower": 0,
+            "log_visit": 0,
+            "mVWC": 0,
+            "mcorL": 0,
+            "mcorW": 0,
+            "week_num": 0
+          },
+          "n_train": 99,
+          "train_visit_slope_per_log_rate_unit": 0.34526009598625995
+        },
+        {
+          "B_mse": 0.27081097810119087,
+          "V_mse": 0.19377088248719493,
+          "alignment_2ed": 0.08717053801358358,
+          "correction_d2": 0.010130442399587634,
+          "fold": "1|4",
+          "gain": 0.07704009561399594,
+          "heldout_treatments": {
+            "A": 2,
+            "C": 2,
+            "D": 1
+          },
+          "heldout_weeks": {
+            "1": 5
+          },
+          "mean_baseline_residual": -0.2940819206450809,
+          "mean_prediction_correction": -0.07300869833290322,
+          "n": 5,
+          "n_plants_improved": 2,
+          "n_test_outside_training_range": {
+            "log_flower": 0,
+            "log_visit": 0,
+            "mVWC": 0,
+            "mcorL": 0,
+            "mcorW": 0,
+            "week_num": 0
+          },
+          "n_train": 100,
+          "train_visit_slope_per_log_rate_unit": 0.29122583797752916
+        },
+        {
+          "B_mse": 0.139465483343098,
+          "V_mse": 0.11637318761616043,
+          "alignment_2ed": 0.03358385776200038,
+          "correction_d2": 0.010491562035062789,
+          "fold": "1|5",
+          "gain": 0.023092295726937564,
+          "heldout_treatments": {
+            "A": 2,
+            "C": 2,
+            "D": 2
+          },
+          "heldout_weeks": {
+            "1": 6
+          },
+          "mean_baseline_residual": -0.25417116438877635,
+          "mean_prediction_correction": -0.030460111586186916,
+          "n": 6,
+          "n_plants_improved": 3,
+          "n_test_outside_training_range": {
+            "log_flower": 0,
+            "log_visit": 0,
+            "mVWC": 0,
+            "mcorL": 0,
+            "mcorW": 0,
+            "week_num": 0
+          },
+          "n_train": 99,
+          "train_visit_slope_per_log_rate_unit": 0.36721335601397
+        },
+        {
+          "B_mse": 0.1530913132188567,
+          "V_mse": 0.12275138471051703,
+          "alignment_2ed": 0.03240486885026754,
+          "correction_d2": 0.002064940341927881,
+          "fold": "2|1",
+          "gain": 0.030339928508339664,
+          "heldout_treatments": {
+            "A": 2,
+            "C": 1,
+            "D": 2
+          },
+          "heldout_weeks": {
+            "2": 5
+          },
+          "mean_baseline_residual": -0.08865387503088043,
+          "mean_prediction_correction": -0.024694529558720136,
+          "n": 5,
+          "n_plants_improved": 5,
+          "n_test_outside_training_range": {
+            "log_flower": 0,
+            "log_visit": 0,
+            "mVWC": 1,
+            "mcorL": 0,
+            "mcorW": 0,
+            "week_num": 0
+          },
+          "n_train": 100,
+          "train_visit_slope_per_log_rate_unit": 0.3465566228050507
+        },
+        {
+          "B_mse": 0.12601050511001236,
+          "V_mse": 0.13567338083184832,
+          "alignment_2ed": -0.006146613299584562,
+          "correction_d2": 0.003516262422251431,
+          "fold": "2|2",
+          "gain": -0.009662875721835967,
+          "heldout_treatments": {
+            "A": 2,
+            "C": 2,
+            "D": 2
+          },
+          "heldout_weeks": {
+            "2": 6
+          },
+          "mean_baseline_residual": -0.07497291135250334,
+          "mean_prediction_correction": -0.04551947298876374,
+          "n": 6,
+          "n_plants_improved": 3,
+          "n_test_outside_training_range": {
+            "log_flower": 0,
+            "log_visit": 0,
+            "mVWC": 0,
+            "mcorL": 0,
+            "mcorW": 0,
+            "week_num": 0
+          },
+          "n_train": 99,
+          "train_visit_slope_per_log_rate_unit": 0.40246733579204336
+        },
+        {
+          "B_mse": 0.17543410042943633,
+          "V_mse": 0.1812123237213609,
+          "alignment_2ed": -0.0037439663680618692,
+          "correction_d2": 0.0020342569238626794,
+          "fold": "2|3",
+          "gain": -0.005778223291924567,
+          "heldout_treatments": {
+            "A": 2,
+            "C": 2,
+            "D": 2
+          },
+          "heldout_weeks": {
+            "2": 6
+          },
+          "mean_baseline_residual": 0.34920002215876655,
+          "mean_prediction_correction": -0.025609400454136715,
+          "n": 6,
+          "n_plants_improved": 2,
+          "n_test_outside_training_range": {
+            "log_flower": 1,
+            "log_visit": 0,
+            "mVWC": 0,
+            "mcorL": 0,
+            "mcorW": 0,
+            "week_num": 0
+          },
+          "n_train": 99,
+          "train_visit_slope_per_log_rate_unit": 0.390636499718562
+        },
+        {
+          "B_mse": 0.17380002072167255,
+          "V_mse": 0.2370226980857467,
+          "alignment_2ed": -0.04504094059702674,
+          "correction_d2": 0.018181736767047395,
+          "fold": "2|4",
+          "gain": -0.06322267736407414,
+          "heldout_treatments": {
+            "A": 2,
+            "C": 2,
+            "D": 1
+          },
+          "heldout_weeks": {
+            "2": 5
+          },
+          "mean_baseline_residual": 0.21882993382000554,
+          "mean_prediction_correction": -0.12963651789966743,
+          "n": 5,
+          "n_plants_improved": 1,
+          "n_test_outside_training_range": {
+            "log_flower": 0,
+            "log_visit": 0,
+            "mVWC": 0,
+            "mcorL": 0,
+            "mcorW": 0,
+            "week_num": 0
+          },
+          "n_train": 100,
+          "train_visit_slope_per_log_rate_unit": 0.4625065232826698
+        },
+        {
+          "B_mse": 0.020915555711396982,
+          "V_mse": 0.018338828182326083,
+          "alignment_2ed": 0.005641646818322745,
+          "correction_d2": 0.003064919289251843,
+          "fold": "2|5",
+          "gain": 0.002576727529070899,
+          "heldout_treatments": {
+            "A": 1,
+            "C": 2,
+            "D": 2
+          },
+          "heldout_weeks": {
+            "2": 5
+          },
+          "mean_baseline_residual": 0.008162195711088583,
+          "mean_prediction_correction": -0.04668724784146834,
+          "n": 5,
+          "n_plants_improved": 2,
+          "n_test_outside_training_range": {
+            "log_flower": 0,
+            "log_visit": 0,
+            "mVWC": 0,
+            "mcorL": 0,
+            "mcorW": 0,
+            "week_num": 0
+          },
+          "n_train": 100,
+          "train_visit_slope_per_log_rate_unit": 0.38321221460902727
+        },
+        {
+          "B_mse": 0.04650678641617234,
+          "V_mse": 0.03860932818809626,
+          "alignment_2ed": 0.009675549242620592,
+          "correction_d2": 0.0017780910145445035,
+          "fold": "3|1",
+          "gain": 0.007897458228076082,
+          "heldout_treatments": {
+            "A": 2,
+            "C": 1,
+            "D": 2
+          },
+          "heldout_weeks": {
+            "3": 5
+          },
+          "mean_baseline_residual": 0.04667902624321677,
+          "mean_prediction_correction": 0.03497507726837592,
+          "n": 5,
+          "n_plants_improved": 3,
+          "n_test_outside_training_range": {
+            "log_flower": 0,
+            "log_visit": 0,
+            "mVWC": 0,
+            "mcorL": 0,
+            "mcorW": 0,
+            "week_num": 0
+          },
+          "n_train": 100,
+          "train_visit_slope_per_log_rate_unit": 0.37447422103233363
+        },
+        {
+          "B_mse": 0.17732272641608277,
+          "V_mse": 0.18966713260229234,
+          "alignment_2ed": -0.011754778216037366,
+          "correction_d2": 0.0005896279701721939,
+          "fold": "3|2",
+          "gain": -0.012344406186209578,
+          "heldout_treatments": {
+            "A": 2,
+            "D": 2
+          },
+          "heldout_weeks": {
+            "3": 4
+          },
+          "mean_baseline_residual": 0.030558908768108795,
+          "mean_prediction_correction": -0.013290849359368834,
+          "n": 4,
+          "n_plants_improved": 0,
+          "n_test_outside_training_range": {
+            "log_flower": 0,
+            "log_visit": 0,
+            "mVWC": 0,
+            "mcorL": 0,
+            "mcorW": 0,
+            "week_num": 0
+          },
+          "n_train": 101,
+          "train_visit_slope_per_log_rate_unit": 0.39361392016837143
+        },
+        {
+          "B_mse": 0.10227856352266383,
+          "V_mse": 0.10493042162275619,
+          "alignment_2ed": 0.00034401133923592404,
+          "correction_d2": 0.002995869439328291,
+          "fold": "3|3",
+          "gain": -0.002651858100092358,
+          "heldout_treatments": {
+            "A": 2,
+            "C": 2,
+            "D": 2
+          },
+          "heldout_weeks": {
+            "3": 6
+          },
+          "mean_baseline_residual": -0.05749496761330517,
+          "mean_prediction_correction": -0.05260016061848422,
+          "n": 6,
+          "n_plants_improved": 4,
+          "n_test_outside_training_range": {
+            "log_flower": 0,
+            "log_visit": 0,
+            "mVWC": 0,
+            "mcorL": 0,
+            "mcorW": 0,
+            "week_num": 0
+          },
+          "n_train": 99,
+          "train_visit_slope_per_log_rate_unit": 0.39234773019635977
+        },
+        {
+          "B_mse": 0.019429898398050458,
+          "V_mse": 0.022496359029608063,
+          "alignment_2ed": -0.0006662601220904042,
+          "correction_d2": 0.002400200509467205,
+          "fold": "3|4",
+          "gain": -0.003066460631557605,
+          "heldout_treatments": {
+            "A": 2,
+            "C": 2,
+            "D": 2
+          },
+          "heldout_weeks": {
+            "3": 6
+          },
+          "mean_baseline_residual": 0.028179383246448753,
+          "mean_prediction_correction": -0.004944947248576581,
+          "n": 6,
+          "n_plants_improved": 3,
+          "n_test_outside_training_range": {
+            "log_flower": 0,
+            "log_visit": 0,
+            "mVWC": 0,
+            "mcorL": 1,
+            "mcorW": 1,
+            "week_num": 0
+          },
+          "n_train": 99,
+          "train_visit_slope_per_log_rate_unit": 0.3911108525502829
+        },
+        {
+          "B_mse": 0.16798665963134604,
+          "V_mse": 0.17011231444807315,
+          "alignment_2ed": 0.00009733542546711774,
+          "correction_d2": 0.0022229902421942328,
+          "fold": "3|5",
+          "gain": -0.002125654816727107,
+          "heldout_treatments": {
+            "A": 2,
+            "C": 2,
+            "D": 2
+          },
+          "heldout_weeks": {
+            "3": 6
+          },
+          "mean_baseline_residual": 0.18167728859353263,
+          "mean_prediction_correction": -0.029402659857199698,
+          "n": 6,
+          "n_plants_improved": 3,
+          "n_test_outside_training_range": {
+            "log_flower": 0,
+            "log_visit": 0,
+            "mVWC": 0,
+            "mcorL": 0,
+            "mcorW": 0,
+            "week_num": 0
+          },
+          "n_train": 99,
+          "train_visit_slope_per_log_rate_unit": 0.3879689588682601
+        },
+        {
+          "B_mse": 0.1463871948486799,
+          "V_mse": 0.14002943549054359,
+          "alignment_2ed": 0.00678436345928852,
+          "correction_d2": 0.00042660410115223483,
+          "fold": "4|1",
+          "gain": 0.006357759358136317,
+          "heldout_treatments": {
+            "A": 2,
+            "C": 1,
+            "D": 2
+          },
+          "heldout_weeks": {
+            "4": 5
+          },
+          "mean_baseline_residual": -0.2585660906647064,
+          "mean_prediction_correction": -0.006547944888384827,
+          "n": 5,
+          "n_plants_improved": 4,
+          "n_test_outside_training_range": {
+            "log_flower": 0,
+            "log_visit": 0,
+            "mVWC": 0,
+            "mcorL": 1,
+            "mcorW": 0,
+            "week_num": 0
+          },
+          "n_train": 100,
+          "train_visit_slope_per_log_rate_unit": 0.37665096580994606
+        },
+        {
+          "B_mse": 0.12056860545907296,
+          "V_mse": 0.11738918337970475,
+          "alignment_2ed": 0.003374327987467439,
+          "correction_d2": 0.00019490590809923488,
+          "fold": "4|2",
+          "gain": 0.0031794220793682076,
+          "heldout_treatments": {
+            "A": 1,
+            "C": 1,
+            "D": 2
+          },
+          "heldout_weeks": {
+            "4": 4
+          },
+          "mean_baseline_residual": -0.3241804434992617,
+          "mean_prediction_correction": -0.008870058028562486,
+          "n": 4,
+          "n_plants_improved": 3,
+          "n_test_outside_training_range": {
+            "log_flower": 0,
+            "log_visit": 0,
+            "mVWC": 0,
+            "mcorL": 0,
+            "mcorW": 0,
+            "week_num": 0
+          },
+          "n_train": 101,
+          "train_visit_slope_per_log_rate_unit": 0.3810653230319847
+        },
+        {
+          "B_mse": 0.4727430075555987,
+          "V_mse": 0.44555396584614676,
+          "alignment_2ed": 0.03175802099427117,
+          "correction_d2": 0.004568979284819217,
+          "fold": "4|3",
+          "gain": 0.027189041709451967,
+          "heldout_treatments": {
+            "A": 2,
+            "C": 1,
+            "D": 1
+          },
+          "heldout_weeks": {
+            "4": 4
+          },
+          "mean_baseline_residual": 0.342728254315932,
+          "mean_prediction_correction": 0.00771591849334239,
+          "n": 4,
+          "n_plants_improved": 3,
+          "n_test_outside_training_range": {
+            "log_flower": 0,
+            "log_visit": 0,
+            "mVWC": 0,
+            "mcorL": 0,
+            "mcorW": 1,
+            "week_num": 0
+          },
+          "n_train": 101,
+          "train_visit_slope_per_log_rate_unit": 0.3677029469787867
+        },
+        {
+          "B_mse": 0.14438960160457437,
+          "V_mse": 0.1393708234278711,
+          "alignment_2ed": 0.01664673366994035,
+          "correction_d2": 0.011627955493237094,
+          "fold": "4|4",
+          "gain": 0.005018778176703265,
+          "heldout_treatments": {
+            "A": 2,
+            "C": 2,
+            "D": 1
+          },
+          "heldout_weeks": {
+            "4": 5
+          },
+          "mean_baseline_residual": 0.06819825123472065,
+          "mean_prediction_correction": 0.0906691289494326,
+          "n": 5,
+          "n_plants_improved": 3,
+          "n_test_outside_training_range": {
+            "log_flower": 0,
+            "log_visit": 0,
+            "mVWC": 0,
+            "mcorL": 0,
+            "mcorW": 0,
+            "week_num": 0
+          },
+          "n_train": 100,
+          "train_visit_slope_per_log_rate_unit": 0.3910837841010559
+        },
+        {
+          "B_mse": 0.29439062689074574,
+          "V_mse": 0.25483917147519636,
+          "alignment_2ed": 0.044676979358946246,
+          "correction_d2": 0.005125523943396805,
+          "fold": "4|5",
+          "gain": 0.039551455415549386,
+          "heldout_treatments": {
+            "A": 2,
+            "C": 1,
+            "D": 2
+          },
+          "heldout_weeks": {
+            "4": 5
+          },
+          "mean_baseline_residual": -0.16838925436257457,
+          "mean_prediction_correction": 0.03499860337079945,
+          "n": 5,
+          "n_plants_improved": 5,
+          "n_test_outside_training_range": {
+            "log_flower": 0,
+            "log_visit": 0,
+            "mVWC": 0,
+            "mcorL": 0,
+            "mcorW": 0,
+            "week_num": 0
+          },
+          "n_train": 100,
+          "train_visit_slope_per_log_rate_unit": 0.3352114723242081
+        }
+      ],
+      "n_folds": 20,
+      "n_plants": 105,
+      "n_positive_folds": 13,
+      "n_positive_weeks": 2,
+      "plant_weighted": {
+        "B_mse": 0.16195578555774978,
+        "V_mse": 0.15370233714205414,
+        "alignment_2ed": 0.017024825218577774,
+        "correction_d2": 0.008771376802882053,
+        "gain": 0.008253448415695641,
+        "mean_baseline_residual": -0.0006066802550775011,
+        "mean_prediction_correction": 0.0026866844343019975,
+        "n": 105,
+        "n_plants_improved": 58
+      },
+      "policy": "array20",
+      "week_equal": {
+        "B_mse": 0.1641784610794074,
+        "V_mse": 0.1558103989173722,
+        "gain": 0.008368062162035183
+      }
+    },
+    "array20__no_week": {
+      "by_water_code": {
+        "A": {
+          "B_mse": 0.24644211802399174,
+          "V_mse": 0.2360436318291321,
+          "alignment_2ed": 0.032006612654625434,
+          "correction_d2": 0.02160812645976581,
+          "gain": 0.01039848619485964,
+          "mean_baseline_residual": 0.044017164960475884,
+          "mean_prediction_correction": 0.0067806273677423964,
+          "n": 38,
+          "n_plants_improved": 23
+        },
+        "C": {
+          "B_mse": 0.09149529152874747,
+          "V_mse": 0.09105595942207813,
+          "alignment_2ed": 0.009995048680880584,
+          "correction_d2": 0.009555716574211257,
+          "gain": 0.00043933210666934064,
+          "mean_baseline_residual": -0.027699889589977912,
+          "mean_prediction_correction": -0.002965299930405268,
+          "n": 32,
+          "n_plants_improved": 14
+        },
+        "D": {
+          "B_mse": 0.16626777787783187,
+          "V_mse": 0.13662874644898304,
+          "alignment_2ed": 0.04493547044109048,
+          "correction_d2": 0.015296439012241678,
+          "gain": 0.029639031428848828,
+          "mean_baseline_residual": -0.022597687782190932,
+          "mean_prediction_correction": -0.0015202314801615348,
+          "n": 35,
+          "n_plants_improved": 26
+        }
+      },
+      "by_week": {
+        "1": {
+          "B_mse": 0.16856758405359548,
+          "V_mse": 0.13563544932749247,
+          "alignment_2ed": 0.07705468301521932,
+          "correction_d2": 0.044122548289116256,
+          "gain": 0.03293213472610301,
+          "mean_baseline_residual": 0.04972558314583493,
+          "mean_prediction_correction": 0.14702563546375572,
+          "n": 28,
+          "n_plants_improved": 18
+        },
+        "2": {
+          "B_mse": 0.12641406534304742,
+          "V_mse": 0.13312551527533664,
+          "alignment_2ed": -0.0015576056864899902,
+          "correction_d2": 0.005153844245799242,
+          "gain": -0.006711449932289226,
+          "mean_baseline_residual": 0.10570914015686234,
+          "mean_prediction_correction": -0.05107933800019416,
+          "n": 27,
+          "n_plants_improved": 14
+        },
+        "3": {
+          "B_mse": 0.09922232372508406,
+          "V_mse": 0.10225042900039726,
+          "alignment_2ed": 0.002867912235698716,
+          "correction_d2": 0.005896017511011903,
+          "gain": -0.003028105275313192,
+          "mean_baseline_residual": -0.02028508492810693,
+          "mean_prediction_correction": -0.06150654329522404,
+          "n": 27,
+          "n_plants_improved": 15
+        },
+        "4": {
+          "B_mse": 0.31738900787893454,
+          "V_mse": 0.28315268522231835,
+          "alignment_2ed": 0.03982282186292767,
+          "correction_d2": 0.00558649920631145,
+          "gain": 0.03423632265661619,
+          "mean_baseline_residual": -0.1610186560877247,
+          "mean_prediction_correction": -0.04205795033101214,
+          "n": 23,
+          "n_plants_improved": 16
+        }
+      },
+      "context": "no_week",
+      "fold_equal": {
+        "B_mse": 0.18305393773758372,
+        "V_mse": 0.16878823997768516,
+        "gain": 0.014265697759898544
+      },
+      "folds": [
+        {
+          "B_mse": 0.11355024998392843,
+          "V_mse": 0.06424744684089681,
+          "alignment_2ed": 0.16217547518020337,
+          "correction_d2": 0.11287267203717172,
+          "fold": "1|1",
+          "gain": 0.04930280314303162,
+          "heldout_treatments": {
+            "A": 2,
+            "C": 2,
+            "D": 2
+          },
+          "heldout_weeks": {
+            "1": 6
+          },
+          "mean_baseline_residual": 0.2150856964205846,
+          "mean_prediction_correction": 0.30937921104162897,
+          "n": 6,
+          "n_plants_improved": 4,
+          "n_test_outside_training_range": {
+            "log_flower": 0,
+            "log_visit": 2,
+            "mVWC": 0,
+            "mcorL": 0,
+            "mcorW": 0,
+            "week_num": 0
+          },
+          "n_train": 99,
+          "train_visit_slope_per_log_rate_unit": 0.4885895715683658
+        },
+        {
+          "B_mse": 0.27688599717331863,
+          "V_mse": 0.20549772586522316,
+          "alignment_2ed": 0.11905499942639393,
+          "correction_d2": 0.04766672811829842,
+          "fold": "1|2",
+          "gain": 0.07138827130809547,
+          "heldout_treatments": {
+            "A": 2,
+            "C": 2,
+            "D": 1
+          },
+          "heldout_weeks": {
+            "1": 5
+          },
+          "mean_baseline_residual": 0.3046920280824631,
+          "mean_prediction_correction": 0.18975181180112777,
+          "n": 5,
+          "n_plants_improved": 2,
+          "n_test_outside_training_range": {
+            "log_flower": 0,
+            "log_visit": 0,
+            "mVWC": 1,
+            "mcorL": 0,
+            "mcorW": 0,
+            "week_num": 0
+          },
+          "n_train": 100,
+          "train_visit_slope_per_log_rate_unit": 0.41878711081539627
+        },
+        {
+          "B_mse": 0.20085421930329814,
+          "V_mse": 0.17638810956165996,
+          "alignment_2ed": 0.05816299454192953,
+          "correction_d2": 0.03369688480029137,
+          "fold": "1|3",
+          "gain": 0.02446610974163818,
+          "heldout_treatments": {
+            "A": 2,
+            "C": 2,
+            "D": 2
+          },
+          "heldout_weeks": {
+            "1": 6
+          },
+          "mean_baseline_residual": -0.044834763919274025,
+          "mean_prediction_correction": 0.15145465497911367,
+          "n": 6,
+          "n_plants_improved": 4,
+          "n_test_outside_training_range": {
+            "log_flower": 0,
+            "log_visit": 0,
+            "mVWC": 0,
+            "mcorL": 0,
+            "mcorW": 0,
+            "week_num": 0
+          },
+          "n_train": 99,
+          "train_visit_slope_per_log_rate_unit": 0.4393155121958392
+        },
+        {
+          "B_mse": 0.203476401170343,
+          "V_mse": 0.1542658964616519,
+          "alignment_2ed": 0.057454199210623356,
+          "correction_d2": 0.008243694501932262,
+          "fold": "1|4",
+          "gain": 0.049210504708691094,
+          "heldout_treatments": {
+            "A": 2,
+            "C": 2,
+            "D": 1
+          },
+          "heldout_weeks": {
+            "1": 5
+          },
+          "mean_baseline_residual": -0.05212530650612177,
+          "mean_prediction_correction": 0.026152548306837563,
+          "n": 5,
+          "n_plants_improved": 5,
+          "n_test_outside_training_range": {
+            "log_flower": 0,
+            "log_visit": 0,
+            "mVWC": 0,
+            "mcorL": 0,
+            "mcorW": 0,
+            "week_num": 0
+          },
+          "n_train": 100,
+          "train_visit_slope_per_log_rate_unit": 0.40025786049898315
+        },
+        {
+          "B_mse": 0.07194225767650116,
+          "V_mse": 0.09252685518667879,
+          "alignment_2ed": -0.007840947848623757,
+          "correction_d2": 0.012743649661553858,
+          "fold": "1|5",
+          "gain": -0.020584597510177632,
+          "heldout_treatments": {
+            "A": 2,
+            "C": 2,
+            "D": 2
+          },
+          "heldout_weeks": {
+            "1": 6
+          },
+          "mean_baseline_residual": -0.14867047913436524,
+          "mean_prediction_correction": 0.0453654660534795,
+          "n": 6,
+          "n_plants_improved": 3,
+          "n_test_outside_training_range": {
+            "log_flower": 0,
+            "log_visit": 0,
+            "mVWC": 0,
+            "mcorL": 0,
+            "mcorW": 0,
+            "week_num": 0
+          },
+          "n_train": 99,
+          "train_visit_slope_per_log_rate_unit": 0.458177459621595
+        },
+        {
+          "B_mse": 0.05751557642471772,
+          "V_mse": 0.04116790088443796,
+          "alignment_2ed": 0.019513329023486247,
+          "correction_d2": 0.0031656534832064888,
+          "fold": "2|1",
+          "gain": 0.016347675540279757,
+          "heldout_treatments": {
+            "A": 2,
+            "C": 1,
+            "D": 2
+          },
+          "heldout_weeks": {
+            "2": 5
+          },
+          "mean_baseline_residual": 0.012286723201014826,
+          "mean_prediction_correction": -0.03459891605646961,
+          "n": 5,
+          "n_plants_improved": 5,
+          "n_test_outside_training_range": {
+            "log_flower": 0,
+            "log_visit": 0,
+            "mVWC": 1,
+            "mcorL": 0,
+            "mcorW": 0,
+            "week_num": 0
+          },
+          "n_train": 100,
+          "train_visit_slope_per_log_rate_unit": 0.419985123010983
+        },
+        {
+          "B_mse": 0.13718722061743424,
+          "V_mse": 0.14152867435486483,
+          "alignment_2ed": -0.0016039881493694382,
+          "correction_d2": 0.0027374655880611533,
+          "fold": "2|2",
+          "gain": -0.004341453737430584,
+          "heldout_treatments": {
+            "A": 2,
+            "C": 2,
+            "D": 2
+          },
+          "heldout_weeks": {
+            "2": 6
+          },
+          "mean_baseline_residual": -0.09738862279265809,
+          "mean_prediction_correction": -0.0424020924934008,
+          "n": 6,
+          "n_plants_improved": 3,
+          "n_test_outside_training_range": {
+            "log_flower": 0,
+            "log_visit": 0,
+            "mVWC": 0,
+            "mcorL": 0,
+            "mcorW": 0,
+            "week_num": 0
+          },
+          "n_train": 99,
+          "train_visit_slope_per_log_rate_unit": 0.4380971575234512
+        },
+        {
+          "B_mse": 0.19878309818331932,
+          "V_mse": 0.18543619749071769,
+          "alignment_2ed": 0.01682963979221078,
+          "correction_d2": 0.0034827390996091325,
+          "fold": "2|3",
+          "gain": 0.013346900692601638,
+          "heldout_treatments": {
+            "A": 2,
+            "C": 2,
+            "D": 2
+          },
+          "heldout_weeks": {
+            "2": 6
+          },
+          "mean_baseline_residual": 0.30198481070635114,
+          "mean_prediction_correction": -0.02357744375050695,
+          "n": 6,
+          "n_plants_improved": 3,
+          "n_test_outside_training_range": {
+            "log_flower": 1,
+            "log_visit": 0,
+            "mVWC": 0,
+            "mcorL": 0,
+            "mcorW": 0,
+            "week_num": 0
+          },
+          "n_train": 99,
+          "train_visit_slope_per_log_rate_unit": 0.4201757442529183
+        },
+        {
+          "B_mse": 0.21031279602200453,
+          "V_mse": 0.27089378013997123,
+          "alignment_2ed": -0.04882586430831026,
+          "correction_d2": 0.011755119809656458,
+          "fold": "2|4",
+          "gain": -0.060580984117966696,
+          "heldout_treatments": {
+            "A": 2,
+            "C": 2,
+            "D": 1
+          },
+          "heldout_weeks": {
+            "2": 5
+          },
+          "mean_baseline_residual": 0.2959247032599069,
+          "mean_prediction_correction": -0.10444054781269348,
+          "n": 5,
+          "n_plants_improved": 1,
+          "n_test_outside_training_range": {
+            "log_flower": 0,
+            "log_visit": 0,
+            "mVWC": 0,
+            "mcorL": 0,
+            "mcorW": 0,
+            "week_num": 0
+          },
+          "n_train": 100,
+          "train_visit_slope_per_log_rate_unit": 0.47824615854463454
+        },
+        {
+          "B_mse": 0.011643197844829587,
+          "V_mse": 0.014458255247709753,
+          "alignment_2ed": 0.0026306826063684603,
+          "correction_d2": 0.005445740009248625,
+          "fold": "2|5",
+          "gain": -0.002815057402880166,
+          "heldout_treatments": {
+            "A": 1,
+            "C": 2,
+            "D": 2
+          },
+          "heldout_weeks": {
+            "2": 5
+          },
+          "mean_baseline_residual": 0.017102504889703198,
+          "mean_prediction_correction": -0.057613517839196084,
+          "n": 5,
+          "n_plants_improved": 2,
+          "n_test_outside_training_range": {
+            "log_flower": 0,
+            "log_visit": 0,
+            "mVWC": 0,
+            "mcorL": 0,
+            "mcorW": 0,
+            "week_num": 0
+          },
+          "n_train": 100,
+          "train_visit_slope_per_log_rate_unit": 0.43644921941459014
+        },
+        {
+          "B_mse": 0.059043555112029786,
+          "V_mse": 0.04863016208932748,
+          "alignment_2ed": 0.011268103267533983,
+          "correction_d2": 0.000854710244831665,
+          "fold": "3|1",
+          "gain": 0.010413393022702305,
+          "heldout_treatments": {
+            "A": 2,
+            "C": 1,
+            "D": 2
+          },
+          "heldout_weeks": {
+            "3": 5
+          },
+          "mean_baseline_residual": -0.06135466535806897,
+          "mean_prediction_correction": -0.015121141875410648,
+          "n": 5,
+          "n_plants_improved": 3,
+          "n_test_outside_training_range": {
+            "log_flower": 0,
+            "log_visit": 0,
+            "mVWC": 0,
+            "mcorL": 0,
+            "mcorW": 0,
+            "week_num": 0
+          },
+          "n_train": 100,
+          "train_visit_slope_per_log_rate_unit": 0.42360794380445593
+        },
+        {
+          "B_mse": 0.2653521242115977,
+          "V_mse": 0.28931998629006045,
+          "alignment_2ed": -0.02004432225624949,
+          "correction_d2": 0.003923539822213223,
+          "fold": "3|2",
+          "gain": -0.023967862078462743,
+          "heldout_treatments": {
+            "A": 2,
+            "D": 2
+          },
+          "heldout_weeks": {
+            "3": 4
+          },
+          "mean_baseline_residual": 0.015902445762236983,
+          "mean_prediction_correction": -0.054534457981250145,
+          "n": 4,
+          "n_plants_improved": 1,
+          "n_test_outside_training_range": {
+            "log_flower": 0,
+            "log_visit": 0,
+            "mVWC": 0,
+            "mcorL": 0,
+            "mcorW": 0,
+            "week_num": 0
+          },
+          "n_train": 101,
+          "train_visit_slope_per_log_rate_unit": 0.44448209525330235
+        },
+        {
+          "B_mse": 0.05715538713682292,
+          "V_mse": 0.05415149749111336,
+          "alignment_2ed": 0.01309366839392824,
+          "correction_d2": 0.010089778748218679,
+          "fold": "3|3",
+          "gain": 0.003003889645709565,
+          "heldout_treatments": {
+            "A": 2,
+            "C": 2,
+            "D": 2
+          },
+          "heldout_weeks": {
+            "3": 6
+          },
+          "mean_baseline_residual": -0.09544260459959847,
+          "mean_prediction_correction": -0.09866494247784463,
+          "n": 6,
+          "n_plants_improved": 5,
+          "n_test_outside_training_range": {
+            "log_flower": 0,
+            "log_visit": 0,
+            "mVWC": 0,
+            "mcorL": 0,
+            "mcorW": 0,
+            "week_num": 0
+          },
+          "n_train": 99,
+          "train_visit_slope_per_log_rate_unit": 0.4382078326999783
+        },
+        {
+          "B_mse": 0.028380911872563128,
+          "V_mse": 0.019410524911329132,
+          "alignment_2ed": 0.014404404985194574,
+          "correction_d2": 0.005434018023960586,
+          "fold": "3|4",
+          "gain": 0.008970386961233996,
+          "heldout_treatments": {
+            "A": 2,
+            "C": 2,
+            "D": 2
+          },
+          "heldout_weeks": {
+            "3": 6
+          },
+          "mean_baseline_residual": -0.06219542804264844,
+          "mean_prediction_correction": -0.05210489079480809,
+          "n": 6,
+          "n_plants_improved": 4,
+          "n_test_outside_training_range": {
+            "log_flower": 0,
+            "log_visit": 0,
+            "mVWC": 0,
+            "mcorL": 1,
+            "mcorW": 1,
+            "week_num": 0
+          },
+          "n_train": 99,
+          "train_visit_slope_per_log_rate_unit": 0.42845572237763657
+        },
+        {
+          "B_mse": 0.1348597790190689,
+          "V_mse": 0.15315978216486523,
+          "alignment_2ed": -0.010619672870590582,
+          "correction_d2": 0.00768033027520576,
+          "fold": "3|5",
+          "gain": -0.01830000314579633,
+          "heldout_treatments": {
+            "A": 2,
+            "C": 2,
+            "D": 2
+          },
+          "heldout_weeks": {
+            "3": 6
+          },
+          "mean_baseline_residual": 0.10688240775599854,
+          "mean_prediction_correction": -0.0770523546721799,
+          "n": 6,
+          "n_plants_improved": 2,
+          "n_test_outside_training_range": {
+            "log_flower": 0,
+            "log_visit": 0,
+            "mVWC": 0,
+            "mcorL": 0,
+            "mcorW": 0,
+            "week_num": 0
+          },
+          "n_train": 99,
+          "train_visit_slope_per_log_rate_unit": 0.4523147869500323
+        },
+        {
+          "B_mse": 0.26424661363931906,
+          "V_mse": 0.21245367554456043,
+          "alignment_2ed": 0.057120994001526496,
+          "correction_d2": 0.0053280559067678725,
+          "fold": "4|1",
+          "gain": 0.05179293809475863,
+          "heldout_treatments": {
+            "A": 2,
+            "C": 1,
+            "D": 2
+          },
+          "heldout_weeks": {
+            "4": 5
+          },
+          "mean_baseline_residual": -0.3726065676560002,
+          "mean_prediction_correction": -0.07186844082234607,
+          "n": 5,
+          "n_plants_improved": 4,
+          "n_test_outside_training_range": {
+            "log_flower": 0,
+            "log_visit": 0,
+            "mVWC": 0,
+            "mcorL": 1,
+            "mcorW": 0,
+            "week_num": 0
+          },
+          "n_train": 100,
+          "train_visit_slope_per_log_rate_unit": 0.3959521503296314
+        },
+        {
+          "B_mse": 0.2168154016514614,
+          "V_mse": 0.16042218472486547,
+          "alignment_2ed": 0.06117668071924938,
+          "correction_d2": 0.004783463792653455,
+          "fold": "4|2",
+          "gain": 0.056393216926595935,
+          "heldout_treatments": {
+            "A": 1,
+            "C": 1,
+            "D": 2
+          },
+          "heldout_weeks": {
+            "4": 4
+          },
+          "mean_baseline_residual": -0.45469515712466446,
+          "mean_prediction_correction": -0.06789829137211874,
+          "n": 4,
+          "n_plants_improved": 4,
+          "n_test_outside_training_range": {
+            "log_flower": 0,
+            "log_visit": 0,
+            "mVWC": 0,
+            "mcorL": 0,
+            "mcorW": 0,
+            "week_num": 0
+          },
+          "n_train": 101,
+          "train_visit_slope_per_log_rate_unit": 0.4012323834440745
+        },
+        {
+          "B_mse": 0.6539173321325293,
+          "V_mse": 0.6504760780277911,
+          "alignment_2ed": 0.010931221297083182,
+          "correction_d2": 0.007489967192344885,
+          "fold": "4|3",
+          "gain": 0.0034412541047382783,
+          "heldout_treatments": {
+            "A": 2,
+            "C": 1,
+            "D": 1
+          },
+          "heldout_weeks": {
+            "4": 4
+          },
+          "mean_baseline_residual": 0.318239952932169,
+          "mean_prediction_correction": -0.049519938222027354,
+          "n": 4,
+          "n_plants_improved": 3,
+          "n_test_outside_training_range": {
+            "log_flower": 0,
+            "log_visit": 0,
+            "mVWC": 0,
+            "mcorL": 0,
+            "mcorW": 1,
+            "week_num": 0
+          },
+          "n_train": 101,
+          "train_visit_slope_per_log_rate_unit": 0.4328172190329038
+        },
+        {
+          "B_mse": 0.20406963318375598,
+          "V_mse": 0.21348367412372665,
+          "alignment_2ed": -0.0049106230356755955,
+          "correction_d2": 0.0045034179042950755,
+          "fold": "4|4",
+          "gain": -0.00941404093997067,
+          "heldout_treatments": {
+            "A": 2,
+            "C": 2,
+            "D": 1
+          },
+          "heldout_weeks": {
+            "4": 5
+          },
+          "mean_baseline_residual": -0.034769633605162296,
+          "mean_prediction_correction": 0.015768459298859783,
+          "n": 5,
+          "n_plants_improved": 2,
+          "n_test_outside_training_range": {
+            "log_flower": 0,
+            "log_visit": 0,
+            "mVWC": 0,
+            "mcorL": 0,
+            "mcorW": 0,
+            "week_num": 0
+          },
+          "n_train": 100,
+          "train_visit_slope_per_log_rate_unit": 0.44074583508331433
+        },
+        {
+          "B_mse": 0.29508700239283137,
+          "V_mse": 0.22784639215225214,
+          "alignment_2ed": 0.0732882879905503,
+          "correction_d2": 0.00604767774997105,
+          "fold": "4|5",
+          "gain": 0.06724061024057923,
+          "heldout_treatments": {
+            "A": 2,
+            "C": 1,
+            "D": 2
+          },
+          "heldout_weeks": {
+            "4": 5
+          },
+          "mean_baseline_residual": -0.2241454533883748,
+          "mean_prediction_correction": -0.04343200632385265,
+          "n": 5,
+          "n_plants_improved": 3,
+          "n_test_outside_training_range": {
+            "log_flower": 0,
+            "log_visit": 0,
+            "mVWC": 0,
+            "mcorL": 0,
+            "mcorW": 0,
+            "week_num": 0
+          },
+          "n_train": 100,
+          "train_visit_slope_per_log_rate_unit": 0.382333545347188
+        }
+      ],
+      "n_folds": 20,
+      "n_plants": 105,
+      "n_positive_folds": 13,
+      "n_positive_weeks": 2,
+      "plant_weighted": {
+        "B_mse": 0.17249544799576877,
+        "V_mse": 0.15871861749264687,
+        "alignment_2ed": 0.029607945753353463,
+        "correction_d2": 0.015831115250231606,
+        "gain": 0.013776830503121895,
+        "mean_baseline_residual": -0.000044412102456133015,
+        "mean_prediction_correction": 0.0010434870513865548,
+        "n": 105,
+        "n_plants_improved": 63
+      },
+      "policy": "array20",
+      "week_equal": {
+        "B_mse": 0.17789824525016537,
+        "V_mse": 0.16354101970638618,
+        "gain": 0.014357225543779197
+      }
+    },
+    "safe16__linear_week": {
+      "by_water_code": {
+        "A": {
+          "B_mse": 0.2312363541608484,
+          "V_mse": 0.24128682498503196,
+          "alignment_2ed": 0.002556372622675267,
+          "correction_d2": 0.012606843446858793,
+          "gain": -0.01005047082418356,
+          "mean_baseline_residual": -0.0015671452903067327,
+          "mean_prediction_correction": 0.021945146214789952,
+          "n": 38,
+          "n_plants_improved": 17
+        },
+        "C": {
+          "B_mse": 0.10620640981713614,
+          "V_mse": 0.1079496036089014,
+          "alignment_2ed": 0.003121153309206217,
+          "correction_d2": 0.004864347100971511,
+          "gain": -0.0017431937917652685,
+          "mean_baseline_residual": -0.07054856460251324,
+          "mean_prediction_correction": 0.0065810416234285095,
+          "n": 32,
+          "n_plants_improved": 15
+        },
+        "D": {
+          "B_mse": 0.17593229403077418,
+          "V_mse": 0.17175738127513268,
+          "alignment_2ed": 0.015186110645733041,
+          "correction_d2": 0.011011197890091525,
+          "gain": 0.004174912755641497,
+          "mean_baseline_residual": -0.06162498842226332,
+          "mean_prediction_correction": 0.011103834631395592,
+          "n": 35,
+          "n_plants_improved": 17
+        }
+      },
+      "by_week": {
+        "1": {
+          "B_mse": 0.1769029439383891,
+          "V_mse": 0.1508968765758865,
+          "alignment_2ed": 0.04780009040576067,
+          "correction_d2": 0.021794023043258077,
+          "gain": 0.026006067362502605,
+          "mean_baseline_residual": -0.07376788909344464,
+          "mean_prediction_correction": 0.054753733287478755,
+          "n": 28,
+          "n_plants_improved": 14
+        },
+        "2": {
+          "B_mse": 0.1173367441237169,
+          "V_mse": 0.13238491257696258,
+          "alignment_2ed": -0.009379635288228138,
+          "correction_d2": 0.005668533165017579,
+          "gain": -0.015048168453245678,
+          "mean_baseline_residual": 0.10043927281357211,
+          "mean_prediction_correction": -0.053355565297270806,
+          "n": 27,
+          "n_plants_improved": 13
+        },
+        "3": {
+          "B_mse": 0.10267983156270839,
+          "V_mse": 0.10375438823400626,
+          "alignment_2ed": 0.0009793734685181888,
+          "correction_d2": 0.002053930139816065,
+          "gain": -0.0010745566712978688,
+          "mean_baseline_residual": 0.036098047779280946,
+          "mean_prediction_correction": -0.014521795883171233,
+          "n": 27,
+          "n_plants_improved": 15
+        },
+        "4": {
+          "B_mse": 0.32389073432736154,
+          "V_mse": 0.3493009279793357,
+          "alignment_2ed": -0.016654892350965844,
+          "correction_d2": 0.008755301301008324,
+          "gain": -0.025410193651974167,
+          "mean_baseline_residual": -0.26499943236877727,
+          "mean_prediction_correction": 0.07533597043622198,
+          "n": 23,
+          "n_plants_improved": 7
+        }
+      },
+      "context": "linear_week",
+      "fold_equal": {
+        "B_mse": 0.14770418579908126,
+        "V_mse": 0.1464345228201144,
+        "gain": 0.0012696629789668264
+      },
+      "folds": [
+        {
+          "B_mse": 0.07529041960790882,
+          "V_mse": 0.06347132664591225,
+          "alignment_2ed": 0.0677852873043333,
+          "correction_d2": 0.05596619434233672,
+          "fold": "1|1",
+          "gain": 0.011819092961996569,
+          "heldout_treatments": {
+            "A": 2,
+            "C": 2,
+            "D": 2
+          },
+          "heldout_weeks": {
+            "1": 6
+          },
+          "mean_baseline_residual": 0.11724319209477307,
+          "mean_prediction_correction": 0.21163656539100387,
+          "n": 6,
+          "n_plants_improved": 4,
+          "n_test_outside_training_range": {
+            "log_flower": 0,
+            "log_visit": 2,
+            "mVWC": 0,
+            "mcorL": 0,
+            "mcorW": 0,
+            "week_num": 0
+          },
+          "n_train": 99,
+          "train_visit_slope_per_log_rate_unit": 0.44340599201659625
+        },
+        {
+          "B_mse": 0.2064010996329857,
+          "V_mse": 0.20478461594393876,
+          "alignment_2ed": 0.023446245909288226,
+          "correction_d2": 0.021829762220241328,
+          "fold": "1|2",
+          "gain": 0.0016164836890469325,
+          "heldout_treatments": {
+            "A": 2,
+            "C": 2,
+            "D": 1
+          },
+          "heldout_weeks": {
+            "1": 5
+          },
+          "mean_baseline_residual": 0.21008371813136337,
+          "mean_prediction_correction": 0.09593536889170658,
+          "n": 5,
+          "n_plants_improved": 1,
+          "n_test_outside_training_range": {
+            "log_flower": 0,
+            "log_visit": 0,
+            "mVWC": 1,
+            "mcorL": 0,
+            "mcorW": 0,
+            "week_num": 0
+          },
+          "n_train": 100,
+          "train_visit_slope_per_log_rate_unit": 0.4166206149414463
+        },
+        {
+          "B_mse": 0.21844170246321845,
+          "V_mse": 0.1953792629640673,
+          "alignment_2ed": 0.031854937191082094,
+          "correction_d2": 0.008792497691930887,
+          "fold": "1|3",
+          "gain": 0.023062439499151155,
+          "heldout_treatments": {
+            "A": 2,
+            "C": 2,
+            "D": 2
+          },
+          "heldout_weeks": {
+            "1": 6
+          },
+          "mean_baseline_residual": -0.17176011904173402,
+          "mean_prediction_correction": 0.0543943357251388,
+          "n": 6,
+          "n_plants_improved": 3,
+          "n_test_outside_training_range": {
+            "log_flower": 0,
+            "log_visit": 0,
+            "mVWC": 0,
+            "mcorL": 0,
+            "mcorW": 0,
+            "week_num": 0
+          },
+          "n_train": 99,
+          "train_visit_slope_per_log_rate_unit": 0.3562870698012321
+        },
+        {
+          "B_mse": 0.27919662714051346,
+          "V_mse": 0.2009465879909039,
+          "alignment_2ed": 0.08783164864246598,
+          "correction_d2": 0.009581609492856417,
+          "fold": "1|4",
+          "gain": 0.07825003914960957,
+          "heldout_treatments": {
+            "A": 2,
+            "C": 2,
+            "D": 1
+          },
+          "heldout_weeks": {
+            "1": 5
+          },
+          "mean_baseline_residual": -0.24385701413471245,
+          "mean_prediction_correction": -0.0714318763620437,
+          "n": 5,
+          "n_plants_improved": 3,
+          "n_test_outside_training_range": {
+            "log_flower": 0,
+            "log_visit": 0,
+            "mVWC": 0,
+            "mcorL": 0,
+            "mcorW": 0,
+            "week_num": 0
+          },
+          "n_train": 100,
+          "train_visit_slope_per_log_rate_unit": 0.28353844366838904
+        },
+        {
+          "B_mse": 0.12715017733010578,
+          "V_mse": 0.10722549779845518,
+          "alignment_2ed": 0.030695285271672562,
+          "correction_d2": 0.010770605740021926,
+          "fold": "1|5",
+          "gain": 0.0199246795316506,
+          "heldout_treatments": {
+            "A": 2,
+            "C": 2,
+            "D": 2
+          },
+          "heldout_weeks": {
+            "1": 6
+          },
+          "mean_baseline_residual": -0.26158880881965657,
+          "mean_prediction_correction": -0.03093305621596082,
+          "n": 6,
+          "n_plants_improved": 3,
+          "n_test_outside_training_range": {
+            "log_flower": 0,
+            "log_visit": 0,
+            "mVWC": 0,
+            "mcorL": 0,
+            "mcorW": 0,
+            "week_num": 0
+          },
+          "n_train": 99,
+          "train_visit_slope_per_log_rate_unit": 0.372395029561296
+        },
+        {
+          "B_mse": 0.058394375677528365,
+          "V_mse": 0.0434061615918776,
+          "alignment_2ed": 0.016997031465272077,
+          "correction_d2": 0.0020088173796213157,
+          "fold": "2|1",
+          "gain": 0.014988214085650764,
+          "heldout_treatments": {
+            "A": 2,
+            "C": 1,
+            "D": 2
+          },
+          "heldout_weeks": {
+            "2": 5
+          },
+          "mean_baseline_residual": 0.021258619433564906,
+          "mean_prediction_correction": -0.023994804805261793,
+          "n": 5,
+          "n_plants_improved": 5,
+          "n_test_outside_training_range": {
+            "log_flower": 0,
+            "log_visit": 0,
+            "mVWC": 1,
+            "mcorL": 0,
+            "mcorW": 0,
+            "week_num": 0
+          },
+          "n_train": 100,
+          "train_visit_slope_per_log_rate_unit": 0.36518512224237903
+        },
+        {
+          "B_mse": 0.13165539445535226,
+          "V_mse": 0.1393303225438764,
+          "alignment_2ed": -0.004207871165318452,
+          "correction_d2": 0.003467056923205654,
+          "fold": "2|2",
+          "gain": -0.00767492808852413,
+          "heldout_treatments": {
+            "A": 2,
+            "C": 2,
+            "D": 2
+          },
+          "heldout_weeks": {
+            "2": 6
+          },
+          "mean_baseline_residual": -0.10569664141891677,
+          "mean_prediction_correction": -0.04513831770136547,
+          "n": 6,
+          "n_plants_improved": 3,
+          "n_test_outside_training_range": {
+            "log_flower": 0,
+            "log_visit": 0,
+            "mVWC": 0,
+            "mcorL": 0,
+            "mcorW": 0,
+            "week_num": 0
+          },
+          "n_train": 99,
+          "train_visit_slope_per_log_rate_unit": 0.40001523938020295
+        },
+        {
+          "B_mse": 0.1826116355369559,
+          "V_mse": 0.18285147952827752,
+          "alignment_2ed": 0.0016681402167730037,
+          "correction_d2": 0.0019079842080946107,
+          "fold": "2|3",
+          "gain": -0.00023984399132162548,
+          "heldout_treatments": {
+            "A": 2,
+            "C": 2,
+            "D": 2
+          },
+          "heldout_weeks": {
+            "2": 6
+          },
+          "mean_baseline_residual": 0.2979052128927681,
+          "mean_prediction_correction": -0.02464415538129065,
+          "n": 6,
+          "n_plants_improved": 2,
+          "n_test_outside_training_range": {
+            "log_flower": 1,
+            "log_visit": 0,
+            "mVWC": 0,
+            "mcorL": 0,
+            "mcorW": 0,
+            "week_num": 0
+          },
+          "n_train": 99,
+          "train_visit_slope_per_log_rate_unit": 0.3834573538189077
+        },
+        {
+          "B_mse": 0.1879950466838863,
+          "V_mse": 0.27116494134442765,
+          "alignment_2ed": -0.06414234305209666,
+          "correction_d2": 0.019027551608444687,
+          "fold": "2|4",
+          "gain": -0.08316989466054134,
+          "heldout_treatments": {
+            "A": 2,
+            "C": 2,
+            "D": 1
+          },
+          "heldout_weeks": {
+            "2": 5
+          },
+          "mean_baseline_residual": 0.2677186009346763,
+          "mean_prediction_correction": -0.1329663640940568,
+          "n": 5,
+          "n_plants_improved": 1,
+          "n_test_outside_training_range": {
+            "log_flower": 0,
+            "log_visit": 0,
+            "mVWC": 0,
+            "mcorL": 0,
+            "mcorW": 0,
+            "week_num": 0
+          },
+          "n_train": 100,
+          "train_visit_slope_per_log_rate_unit": 0.47906696565488993
+        },
+        {
+          "B_mse": 0.01010855991588681,
+          "V_mse": 0.013689262492708224,
+          "alignment_2ed": -0.000457041831352812,
+          "correction_d2": 0.003123660745468603,
+          "fold": "2|5",
+          "gain": -0.0035807025768214134,
+          "heldout_treatments": {
+            "A": 1,
+            "C": 2,
+            "D": 2
+          },
+          "heldout_weeks": {
+            "2": 5
+          },
+          "mean_baseline_residual": 0.022744567056426534,
+          "mean_prediction_correction": -0.047419916006756414,
+          "n": 5,
+          "n_plants_improved": 2,
+          "n_test_outside_training_range": {
+            "log_flower": 0,
+            "log_visit": 0,
+            "mVWC": 0,
+            "mcorL": 0,
+            "mcorW": 0,
+            "week_num": 0
+          },
+          "n_train": 100,
+          "train_visit_slope_per_log_rate_unit": 0.39032626521195907
+        },
+        {
+          "B_mse": 0.050506800643646724,
+          "V_mse": 0.04697241044008602,
+          "alignment_2ed": 0.005331707160860312,
+          "correction_d2": 0.001797316957299621,
+          "fold": "3|1",
+          "gain": 0.0035343902035607014,
+          "heldout_treatments": {
+            "A": 2,
+            "C": 1,
+            "D": 2
+          },
+          "heldout_weeks": {
+            "3": 5
+          },
+          "mean_baseline_residual": 0.004887209687846028,
+          "mean_prediction_correction": 0.035178880160422345,
+          "n": 5,
+          "n_plants_improved": 2,
+          "n_test_outside_training_range": {
+            "log_flower": 0,
+            "log_visit": 0,
+            "mVWC": 0,
+            "mcorL": 0,
+            "mcorW": 0,
+            "week_num": 0
+          },
+          "n_train": 100,
+          "train_visit_slope_per_log_rate_unit": 0.3798395336921028
+        },
+        {
+          "B_mse": 0.27496247362240267,
+          "V_mse": 0.2900354885150227,
+          "alignment_2ed": -0.014490491678659241,
+          "correction_d2": 0.0005825232139607792,
+          "fold": "3|2",
+          "gain": -0.01507301489262003,
+          "heldout_treatments": {
+            "A": 2,
+            "D": 2
+          },
+          "heldout_weeks": {
+            "3": 4
+          },
+          "mean_baseline_residual": 0.06516754691596982,
+          "mean_prediction_correction": -0.013213382582178496,
+          "n": 4,
+          "n_plants_improved": 0,
+          "n_test_outside_training_range": {
+            "log_flower": 0,
+            "log_visit": 0,
+            "mVWC": 0,
+            "mcorL": 0,
+            "mcorW": 0,
+            "week_num": 0
+          },
+          "n_train": 101,
+          "train_visit_slope_per_log_rate_unit": 0.3962174273616805
+        },
+        {
+          "B_mse": 0.053505645288336845,
+          "V_mse": 0.05449250348019516,
+          "alignment_2ed": 0.001972428862363262,
+          "correction_d2": 0.0029592870542215818,
+          "fold": "3|3",
+          "gain": -0.0009868581918583141,
+          "heldout_treatments": {
+            "A": 2,
+            "C": 2,
+            "D": 2
+          },
+          "heldout_weeks": {
+            "3": 6
+          },
+          "mean_baseline_residual": -0.04546669074107102,
+          "mean_prediction_correction": -0.052338808263469705,
+          "n": 6,
+          "n_plants_improved": 4,
+          "n_test_outside_training_range": {
+            "log_flower": 0,
+            "log_visit": 0,
+            "mVWC": 0,
+            "mcorL": 0,
+            "mcorW": 0,
+            "week_num": 0
+          },
+          "n_train": 99,
+          "train_visit_slope_per_log_rate_unit": 0.39018353012117385
+        },
+        {
+          "B_mse": 0.02167786890354732,
+          "V_mse": 0.018796733673934977,
+          "alignment_2ed": 0.005107597340644118,
+          "correction_d2": 0.0022264621110317747,
+          "fold": "3|4",
+          "gain": 0.002881135229612343,
+          "heldout_treatments": {
+            "A": 2,
+            "C": 2,
+            "D": 2
+          },
+          "heldout_weeks": {
+            "3": 6
+          },
+          "mean_baseline_residual": -0.003906263004155623,
+          "mean_prediction_correction": -0.004466055400294507,
+          "n": 6,
+          "n_plants_improved": 5,
+          "n_test_outside_training_range": {
+            "log_flower": 0,
+            "log_visit": 0,
+            "mVWC": 0,
+            "mcorL": 1,
+            "mcorW": 1,
+            "week_num": 0
+          },
+          "n_train": 99,
+          "train_visit_slope_per_log_rate_unit": 0.38224216278518136
+        },
+        {
+          "B_mse": 0.16147841155566292,
+          "V_mse": 0.1611048421888113,
+          "alignment_2ed": 0.002544392890380369,
+          "correction_d2": 0.0021708235235287318,
+          "fold": "3|5",
+          "gain": 0.0003735693668516227,
+          "heldout_treatments": {
+            "A": 2,
+            "C": 2,
+            "D": 2
+          },
+          "heldout_weeks": {
+            "3": 6
+          },
+          "mean_baseline_residual": 0.16429646273480597,
+          "mean_prediction_correction": -0.029050029556072627,
+          "n": 6,
+          "n_plants_improved": 4,
+          "n_test_outside_training_range": {
+            "log_flower": 0,
+            "log_visit": 0,
+            "mVWC": 0,
+            "mcorL": 0,
+            "mcorW": 0,
+            "week_num": 0
+          },
+          "n_train": 99,
+          "train_visit_slope_per_log_rate_unit": 0.384367504064509
+        },
+        {
+          "B_mse": 0.32389073432736154,
+          "V_mse": 0.3493009279793357,
+          "alignment_2ed": -0.016654892350965844,
+          "correction_d2": 0.008755301301008324,
+          "fold": "4|ALL",
+          "gain": -0.025410193651974167,
+          "heldout_treatments": {
+            "A": 9,
+            "C": 6,
+            "D": 8
+          },
+          "heldout_weeks": {
+            "4": 23
+          },
+          "mean_baseline_residual": -0.26499943236877727,
+          "mean_prediction_correction": 0.07533597043622198,
+          "n": 23,
+          "n_plants_improved": 7,
+          "n_test_outside_training_range": {
+            "log_flower": 0,
+            "log_visit": 0,
+            "mVWC": 0,
+            "mcorL": 1,
+            "mcorW": 3,
+            "week_num": 23
+          },
+          "n_train": 82,
+          "train_visit_slope_per_log_rate_unit": 0.37031930749694164
+        }
+      ],
+      "n_folds": 16,
+      "n_plants": 105,
+      "n_positive_folds": 9,
+      "n_positive_weeks": 1,
+      "plant_weighted": {
+        "B_mse": 0.174697303460359,
+        "V_mse": 0.1774742381861495,
+        "alignment_2ed": 0.006938408934827768,
+        "correction_d2": 0.00971534366061834,
+        "gain": -0.002776934725790492,
+        "mean_baseline_residual": -0.04260933507705996,
+        "mean_prediction_correction": 0.013648981906767391,
+        "n": 105,
+        "n_plants_improved": 49
+      },
+      "policy": "safe16",
+      "week_equal": {
+        "B_mse": 0.18020256348804398,
+        "V_mse": 0.18408427634154778,
+        "gain": -0.003881712853503777
+      }
+    },
+    "safe16__linear_week_vwc": {
+      "by_water_code": {
+        "A": {
+          "B_mse": 0.22056381553171336,
+          "V_mse": 0.22431237161303863,
+          "alignment_2ed": 0.008944586072163077,
+          "correction_d2": 0.012693142153488364,
+          "gain": -0.003748556081325266,
+          "mean_baseline_residual": -0.026865504925577686,
+          "mean_prediction_correction": 0.022431504643294086,
+          "n": 38,
+          "n_plants_improved": 15
+        },
+        "C": {
+          "B_mse": 0.09874659959694862,
+          "V_mse": 0.10067149033732588,
+          "alignment_2ed": 0.003015277844674406,
+          "correction_d2": 0.00494016858505165,
+          "gain": -0.001924890740377258,
+          "mean_baseline_residual": -0.05686560202222042,
+          "mean_prediction_correction": 0.006498817566846641,
+          "n": 32,
+          "n_plants_improved": 16
+        },
+        "D": {
+          "B_mse": 0.19811392271758044,
+          "V_mse": 0.19471428801779414,
+          "alignment_2ed": 0.014435537024652022,
+          "correction_d2": 0.011035902324865782,
+          "gain": 0.003399634699786297,
+          "mean_baseline_residual": -0.04808293042971143,
+          "mean_prediction_correction": 0.011408633427014361,
+          "n": 35,
+          "n_plants_improved": 16
+        }
+      },
+      "by_week": {
+        "1": {
+          "B_mse": 0.19566343807968475,
+          "V_mse": 0.16739096881713383,
+          "alignment_2ed": 0.05003011853665242,
+          "correction_d2": 0.0217576492741015,
+          "gain": 0.02827246926255092,
+          "mean_baseline_residual": -0.06967721893122285,
+          "mean_prediction_correction": 0.05439138647075697,
+          "n": 28,
+          "n_plants_improved": 14
+        },
+        "2": {
+          "B_mse": 0.13139637338875268,
+          "V_mse": 0.1404399548967483,
+          "alignment_2ed": -0.0034931704684466967,
+          "correction_d2": 0.005550411039548899,
+          "gain": -0.009043581507995613,
+          "mean_baseline_residual": 0.08655755323476469,
+          "mean_prediction_correction": -0.053032026561358594,
+          "n": 27,
+          "n_plants_improved": 13
+        },
+        "3": {
+          "B_mse": 0.09925909507620571,
+          "V_mse": 0.10136850896119537,
+          "alignment_2ed": 3.390075788638331e-7,
+          "correction_d2": 0.0021097528925685064,
+          "gain": -0.0021094138849896554,
+          "mean_baseline_residual": 0.04702966635735468,
+          "mean_prediction_correction": -0.014813874720042917,
+          "n": 27,
+          "n_plants_improved": 13
+        },
+        "4": {
+          "B_mse": 0.29430563294077067,
+          "V_mse": 0.31932966268123764,
+          "alignment_2ed": -0.015865648345575564,
+          "correction_d2": 0.009158381394891361,
+          "gain": -0.02502402974046697,
+          "mean_baseline_residual": -0.2686688615580821,
+          "mean_prediction_correction": 0.07689313138897466,
+          "n": 23,
+          "n_plants_improved": 7
+        }
+      },
+      "context": "linear_week_vwc",
+      "fold_equal": {
+        "B_mse": 0.15425213081774505,
+        "V_mse": 0.15031813629663596,
+        "gain": 0.00393399452110911
+      },
+      "folds": [
+        {
+          "B_mse": 0.08181710403625338,
+          "V_mse": 0.072691676517829,
+          "alignment_2ed": 0.06551733794418191,
+          "correction_d2": 0.05639191042575752,
+          "fold": "1|1",
+          "gain": 0.009125427518424378,
+          "heldout_treatments": {
+            "A": 2,
+            "C": 2,
+            "D": 2
+          },
+          "heldout_weeks": {
+            "1": 6
+          },
+          "mean_baseline_residual": 0.09370202255369568,
+          "mean_prediction_correction": 0.21247224784933172,
+          "n": 6,
+          "n_plants_improved": 4,
+          "n_test_outside_training_range": {
+            "log_flower": 0,
+            "log_visit": 2,
+            "mVWC": 0,
+            "mcorL": 0,
+            "mcorW": 0,
+            "week_num": 0
+          },
+          "n_train": 99,
+          "train_visit_slope_per_log_rate_unit": 0.44507220720553875
+        },
+        {
+          "B_mse": 0.31632673907239583,
+          "V_mse": 0.3089600704869332,
+          "alignment_2ed": 0.028800711701115124,
+          "correction_d2": 0.021434043115652446,
+          "fold": "1|2",
+          "gain": 0.0073666685854626435,
+          "heldout_treatments": {
+            "A": 2,
+            "C": 2,
+            "D": 1
+          },
+          "heldout_weeks": {
+            "1": 5
+          },
+          "mean_baseline_residual": 0.24144966295609524,
+          "mean_prediction_correction": 0.09513892957359027,
+          "n": 5,
+          "n_plants_improved": 1,
+          "n_test_outside_training_range": {
+            "log_flower": 0,
+            "log_visit": 0,
+            "mVWC": 1,
+            "mcorL": 0,
+            "mcorW": 0,
+            "week_num": 0
+          },
+          "n_train": 100,
+          "train_visit_slope_per_log_rate_unit": 0.41263526747372586
+        },
+        {
+          "B_mse": 0.202532026014522,
+          "V_mse": 0.1731505295341951,
+          "alignment_2ed": 0.03772998270261348,
+          "correction_d2": 0.008348486222286603,
+          "fold": "1|3",
+          "gain": 0.029381496480326896,
+          "heldout_treatments": {
+            "A": 2,
+            "C": 2,
+            "D": 2
+          },
+          "heldout_weeks": {
+            "1": 6
+          },
+          "mean_baseline_residual": -0.12083099843647128,
+          "mean_prediction_correction": 0.0533724745664817,
+          "n": 6,
+          "n_plants_improved": 4,
+          "n_test_outside_training_range": {
+            "log_flower": 0,
+            "log_visit": 0,
+            "mVWC": 0,
+            "mcorL": 0,
+            "mcorW": 0,
+            "week_num": 0
+          },
+          "n_train": 99,
+          "train_visit_slope_per_log_rate_unit": 0.34526009598625995
+        },
+        {
+          "B_mse": 0.27081097810119087,
+          "V_mse": 0.19377088248719493,
+          "alignment_2ed": 0.08717053801358358,
+          "correction_d2": 0.010130442399587634,
+          "fold": "1|4",
+          "gain": 0.07704009561399594,
+          "heldout_treatments": {
+            "A": 2,
+            "C": 2,
+            "D": 1
+          },
+          "heldout_weeks": {
+            "1": 5
+          },
+          "mean_baseline_residual": -0.2940819206450809,
+          "mean_prediction_correction": -0.07300869833290322,
+          "n": 5,
+          "n_plants_improved": 2,
+          "n_test_outside_training_range": {
+            "log_flower": 0,
+            "log_visit": 0,
+            "mVWC": 0,
+            "mcorL": 0,
+            "mcorW": 0,
+            "week_num": 0
+          },
+          "n_train": 100,
+          "train_visit_slope_per_log_rate_unit": 0.29122583797752916
+        },
+        {
+          "B_mse": 0.139465483343098,
+          "V_mse": 0.11637318761616043,
+          "alignment_2ed": 0.03358385776200038,
+          "correction_d2": 0.010491562035062789,
+          "fold": "1|5",
+          "gain": 0.023092295726937564,
+          "heldout_treatments": {
+            "A": 2,
+            "C": 2,
+            "D": 2
+          },
+          "heldout_weeks": {
+            "1": 6
+          },
+          "mean_baseline_residual": -0.25417116438877635,
+          "mean_prediction_correction": -0.030460111586186916,
+          "n": 6,
+          "n_plants_improved": 3,
+          "n_test_outside_training_range": {
+            "log_flower": 0,
+            "log_visit": 0,
+            "mVWC": 0,
+            "mcorL": 0,
+            "mcorW": 0,
+            "week_num": 0
+          },
+          "n_train": 99,
+          "train_visit_slope_per_log_rate_unit": 0.36721335601397
+        },
+        {
+          "B_mse": 0.1530913132188567,
+          "V_mse": 0.12275138471051703,
+          "alignment_2ed": 0.03240486885026754,
+          "correction_d2": 0.002064940341927881,
+          "fold": "2|1",
+          "gain": 0.030339928508339664,
+          "heldout_treatments": {
+            "A": 2,
+            "C": 1,
+            "D": 2
+          },
+          "heldout_weeks": {
+            "2": 5
+          },
+          "mean_baseline_residual": -0.08865387503088043,
+          "mean_prediction_correction": -0.024694529558720136,
+          "n": 5,
+          "n_plants_improved": 5,
+          "n_test_outside_training_range": {
+            "log_flower": 0,
+            "log_visit": 0,
+            "mVWC": 1,
+            "mcorL": 0,
+            "mcorW": 0,
+            "week_num": 0
+          },
+          "n_train": 100,
+          "train_visit_slope_per_log_rate_unit": 0.3465566228050507
+        },
+        {
+          "B_mse": 0.12601050511001236,
+          "V_mse": 0.13567338083184832,
+          "alignment_2ed": -0.006146613299584562,
+          "correction_d2": 0.003516262422251431,
+          "fold": "2|2",
+          "gain": -0.009662875721835967,
+          "heldout_treatments": {
+            "A": 2,
+            "C": 2,
+            "D": 2
+          },
+          "heldout_weeks": {
+            "2": 6
+          },
+          "mean_baseline_residual": -0.07497291135250334,
+          "mean_prediction_correction": -0.04551947298876374,
+          "n": 6,
+          "n_plants_improved": 3,
+          "n_test_outside_training_range": {
+            "log_flower": 0,
+            "log_visit": 0,
+            "mVWC": 0,
+            "mcorL": 0,
+            "mcorW": 0,
+            "week_num": 0
+          },
+          "n_train": 99,
+          "train_visit_slope_per_log_rate_unit": 0.40246733579204336
+        },
+        {
+          "B_mse": 0.17543410042943633,
+          "V_mse": 0.1812123237213609,
+          "alignment_2ed": -0.0037439663680618692,
+          "correction_d2": 0.0020342569238626794,
+          "fold": "2|3",
+          "gain": -0.005778223291924567,
+          "heldout_treatments": {
+            "A": 2,
+            "C": 2,
+            "D": 2
+          },
+          "heldout_weeks": {
+            "2": 6
+          },
+          "mean_baseline_residual": 0.34920002215876655,
+          "mean_prediction_correction": -0.025609400454136715,
+          "n": 6,
+          "n_plants_improved": 2,
+          "n_test_outside_training_range": {
+            "log_flower": 1,
+            "log_visit": 0,
+            "mVWC": 0,
+            "mcorL": 0,
+            "mcorW": 0,
+            "week_num": 0
+          },
+          "n_train": 99,
+          "train_visit_slope_per_log_rate_unit": 0.390636499718562
+        },
+        {
+          "B_mse": 0.17380002072167255,
+          "V_mse": 0.2370226980857467,
+          "alignment_2ed": -0.04504094059702674,
+          "correction_d2": 0.018181736767047395,
+          "fold": "2|4",
+          "gain": -0.06322267736407414,
+          "heldout_treatments": {
+            "A": 2,
+            "C": 2,
+            "D": 1
+          },
+          "heldout_weeks": {
+            "2": 5
+          },
+          "mean_baseline_residual": 0.21882993382000554,
+          "mean_prediction_correction": -0.12963651789966743,
+          "n": 5,
+          "n_plants_improved": 1,
+          "n_test_outside_training_range": {
+            "log_flower": 0,
+            "log_visit": 0,
+            "mVWC": 0,
+            "mcorL": 0,
+            "mcorW": 0,
+            "week_num": 0
+          },
+          "n_train": 100,
+          "train_visit_slope_per_log_rate_unit": 0.4625065232826698
+        },
+        {
+          "B_mse": 0.020915555711396982,
+          "V_mse": 0.018338828182326083,
+          "alignment_2ed": 0.005641646818322745,
+          "correction_d2": 0.003064919289251843,
+          "fold": "2|5",
+          "gain": 0.002576727529070899,
+          "heldout_treatments": {
+            "A": 1,
+            "C": 2,
+            "D": 2
+          },
+          "heldout_weeks": {
+            "2": 5
+          },
+          "mean_baseline_residual": 0.008162195711088583,
+          "mean_prediction_correction": -0.04668724784146834,
+          "n": 5,
+          "n_plants_improved": 2,
+          "n_test_outside_training_range": {
+            "log_flower": 0,
+            "log_visit": 0,
+            "mVWC": 0,
+            "mcorL": 0,
+            "mcorW": 0,
+            "week_num": 0
+          },
+          "n_train": 100,
+          "train_visit_slope_per_log_rate_unit": 0.38321221460902727
+        },
+        {
+          "B_mse": 0.04650678641617234,
+          "V_mse": 0.03860932818809626,
+          "alignment_2ed": 0.009675549242620592,
+          "correction_d2": 0.0017780910145445035,
+          "fold": "3|1",
+          "gain": 0.007897458228076082,
+          "heldout_treatments": {
+            "A": 2,
+            "C": 1,
+            "D": 2
+          },
+          "heldout_weeks": {
+            "3": 5
+          },
+          "mean_baseline_residual": 0.04667902624321677,
+          "mean_prediction_correction": 0.03497507726837592,
+          "n": 5,
+          "n_plants_improved": 3,
+          "n_test_outside_training_range": {
+            "log_flower": 0,
+            "log_visit": 0,
+            "mVWC": 0,
+            "mcorL": 0,
+            "mcorW": 0,
+            "week_num": 0
+          },
+          "n_train": 100,
+          "train_visit_slope_per_log_rate_unit": 0.37447422103233363
+        },
+        {
+          "B_mse": 0.17732272641608277,
+          "V_mse": 0.18966713260229234,
+          "alignment_2ed": -0.011754778216037366,
+          "correction_d2": 0.0005896279701721939,
+          "fold": "3|2",
+          "gain": -0.012344406186209578,
+          "heldout_treatments": {
+            "A": 2,
+            "D": 2
+          },
+          "heldout_weeks": {
+            "3": 4
+          },
+          "mean_baseline_residual": 0.030558908768108795,
+          "mean_prediction_correction": -0.013290849359368834,
+          "n": 4,
+          "n_plants_improved": 0,
+          "n_test_outside_training_range": {
+            "log_flower": 0,
+            "log_visit": 0,
+            "mVWC": 0,
+            "mcorL": 0,
+            "mcorW": 0,
+            "week_num": 0
+          },
+          "n_train": 101,
+          "train_visit_slope_per_log_rate_unit": 0.39361392016837143
+        },
+        {
+          "B_mse": 0.10227856352266383,
+          "V_mse": 0.10493042162275619,
+          "alignment_2ed": 0.00034401133923592404,
+          "correction_d2": 0.002995869439328291,
+          "fold": "3|3",
+          "gain": -0.002651858100092358,
+          "heldout_treatments": {
+            "A": 2,
+            "C": 2,
+            "D": 2
+          },
+          "heldout_weeks": {
+            "3": 6
+          },
+          "mean_baseline_residual": -0.05749496761330517,
+          "mean_prediction_correction": -0.05260016061848422,
+          "n": 6,
+          "n_plants_improved": 4,
+          "n_test_outside_training_range": {
+            "log_flower": 0,
+            "log_visit": 0,
+            "mVWC": 0,
+            "mcorL": 0,
+            "mcorW": 0,
+            "week_num": 0
+          },
+          "n_train": 99,
+          "train_visit_slope_per_log_rate_unit": 0.39234773019635977
+        },
+        {
+          "B_mse": 0.019429898398050458,
+          "V_mse": 0.022496359029608063,
+          "alignment_2ed": -0.0006662601220904042,
+          "correction_d2": 0.002400200509467205,
+          "fold": "3|4",
+          "gain": -0.003066460631557605,
+          "heldout_treatments": {
+            "A": 2,
+            "C": 2,
+            "D": 2
+          },
+          "heldout_weeks": {
+            "3": 6
+          },
+          "mean_baseline_residual": 0.028179383246448753,
+          "mean_prediction_correction": -0.004944947248576581,
+          "n": 6,
+          "n_plants_improved": 3,
+          "n_test_outside_training_range": {
+            "log_flower": 0,
+            "log_visit": 0,
+            "mVWC": 0,
+            "mcorL": 1,
+            "mcorW": 1,
+            "week_num": 0
+          },
+          "n_train": 99,
+          "train_visit_slope_per_log_rate_unit": 0.3911108525502829
+        },
+        {
+          "B_mse": 0.16798665963134604,
+          "V_mse": 0.17011231444807315,
+          "alignment_2ed": 0.00009733542546711774,
+          "correction_d2": 0.0022229902421942328,
+          "fold": "3|5",
+          "gain": -0.002125654816727107,
+          "heldout_treatments": {
+            "A": 2,
+            "C": 2,
+            "D": 2
+          },
+          "heldout_weeks": {
+            "3": 6
+          },
+          "mean_baseline_residual": 0.18167728859353263,
+          "mean_prediction_correction": -0.029402659857199698,
+          "n": 6,
+          "n_plants_improved": 3,
+          "n_test_outside_training_range": {
+            "log_flower": 0,
+            "log_visit": 0,
+            "mVWC": 0,
+            "mcorL": 0,
+            "mcorW": 0,
+            "week_num": 0
+          },
+          "n_train": 99,
+          "train_visit_slope_per_log_rate_unit": 0.3879689588682601
+        },
+        {
+          "B_mse": 0.29430563294077067,
+          "V_mse": 0.31932966268123764,
+          "alignment_2ed": -0.015865648345575564,
+          "correction_d2": 0.009158381394891361,
+          "fold": "4|ALL",
+          "gain": -0.02502402974046697,
+          "heldout_treatments": {
+            "A": 9,
+            "C": 6,
+            "D": 8
+          },
+          "heldout_weeks": {
+            "4": 23
+          },
+          "mean_baseline_residual": -0.2686688615580821,
+          "mean_prediction_correction": 0.07689313138897466,
+          "n": 23,
+          "n_plants_improved": 7,
+          "n_test_outside_training_range": {
+            "log_flower": 0,
+            "log_visit": 0,
+            "mVWC": 0,
+            "mcorL": 1,
+            "mcorW": 3,
+            "week_num": 23
+          },
+          "n_train": 82,
+          "train_visit_slope_per_log_rate_unit": 0.37651161720173193
+        }
+      ],
+      "n_folds": 16,
+      "n_plants": 105,
+      "n_positive_folds": 8,
+      "n_positive_weeks": 1,
+      "plant_weighted": {
+        "B_mse": 0.17595527116593118,
+        "V_mse": 0.17676531326393036,
+        "alignment_2ed": 0.008967875786996177,
+        "correction_d2": 0.009777917884995357,
+        "gain": -0.0008100420979991751,
+        "mean_baseline_residual": -0.0430808668278372,
+        "mean_prediction_correction": 0.013901538176474012,
+        "n": 105,
+        "n_plants_improved": 47
+      },
+      "policy": "safe16",
+      "week_equal": {
+        "B_mse": 0.18015613487135346,
+        "V_mse": 0.18213227383907876,
+        "gain": -0.0019761389677253292
+      }
+    },
+    "safe16__no_week": {
+      "by_water_code": {
+        "A": {
+          "B_mse": 0.24564700850763552,
+          "V_mse": 0.22960984121579364,
+          "alignment_2ed": 0.0377764100751651,
+          "correction_d2": 0.021739242783323186,
+          "gain": 0.016037167291841875,
+          "mean_baseline_residual": 0.001598666251050952,
+          "mean_prediction_correction": -0.000015118783743331568,
+          "n": 38,
+          "n_plants_improved": 24
+        },
+        "C": {
+          "B_mse": 0.10097315577125833,
+          "V_mse": 0.0948139340395844,
+          "alignment_2ed": 0.016438688368063743,
+          "correction_d2": 0.010279466636389827,
+          "gain": 0.006159221731673936,
+          "mean_baseline_residual": -0.06154366237376457,
+          "mean_prediction_correction": -0.008067038266767489,
+          "n": 32,
+          "n_plants_improved": 15
+        },
+        "D": {
+          "B_mse": 0.18275983372528648,
+          "V_mse": 0.15171813792342267,
+          "alignment_2ed": 0.0461285641355219,
+          "correction_d2": 0.015086868333658139,
+          "gain": 0.031041695801863806,
+          "mean_baseline_residual": -0.04771991993023043,
+          "mean_prediction_correction": -0.004136966907746916,
+          "n": 35,
+          "n_plants_improved": 27
+        }
+      },
+      "by_week": {
+        "1": {
+          "B_mse": 0.16856758405359548,
+          "V_mse": 0.13563544932749247,
+          "alignment_2ed": 0.07705468301521932,
+          "correction_d2": 0.044122548289116256,
+          "gain": 0.03293213472610301,
+          "mean_baseline_residual": 0.04972558314583493,
+          "mean_prediction_correction": 0.14702563546375572,
+          "n": 28,
+          "n_plants_improved": 18
+        },
+        "2": {
+          "B_mse": 0.12641406534304742,
+          "V_mse": 0.13312551527533664,
+          "alignment_2ed": -0.0015576056864899902,
+          "correction_d2": 0.005153844245799242,
+          "gain": -0.006711449932289226,
+          "mean_baseline_residual": 0.10570914015686234,
+          "mean_prediction_correction": -0.05107933800019416,
+          "n": 27,
+          "n_plants_improved": 14
+        },
+        "3": {
+          "B_mse": 0.09922232372508406,
+          "V_mse": 0.10225042900039726,
+          "alignment_2ed": 0.002867912235698716,
+          "correction_d2": 0.005896017511011903,
+          "gain": -0.003028105275313192,
+          "mean_baseline_residual": -0.02028508492810693,
+          "mean_prediction_correction": -0.06150654329522404,
+          "n": 27,
+          "n_plants_improved": 15
+        },
+        "4": {
+          "B_mse": 0.35435854913109643,
+          "V_mse": 0.30071354809443684,
+          "alignment_2ed": 0.06013617191838278,
+          "correction_d2": 0.006491170881723229,
+          "gain": 0.05364500103665959,
+          "mean_baseline_residual": -0.3164178650103639,
+          "mean_prediction_correction": -0.06436576426516592,
+          "n": 23,
+          "n_plants_improved": 19
+        }
+      },
+      "context": "no_week",
+      "fold_equal": {
+        "B_mse": 0.1488313325551796,
+        "V_mse": 0.138237271442184,
+        "gain": 0.010594061112995568
+      },
+      "folds": [
+        {
+          "B_mse": 0.11355024998392843,
+          "V_mse": 0.06424744684089681,
+          "alignment_2ed": 0.16217547518020337,
+          "correction_d2": 0.11287267203717172,
+          "fold": "1|1",
+          "gain": 0.04930280314303162,
+          "heldout_treatments": {
+            "A": 2,
+            "C": 2,
+            "D": 2
+          },
+          "heldout_weeks": {
+            "1": 6
+          },
+          "mean_baseline_residual": 0.2150856964205846,
+          "mean_prediction_correction": 0.30937921104162897,
+          "n": 6,
+          "n_plants_improved": 4,
+          "n_test_outside_training_range": {
+            "log_flower": 0,
+            "log_visit": 2,
+            "mVWC": 0,
+            "mcorL": 0,
+            "mcorW": 0,
+            "week_num": 0
+          },
+          "n_train": 99,
+          "train_visit_slope_per_log_rate_unit": 0.4885895715683658
+        },
+        {
+          "B_mse": 0.27688599717331863,
+          "V_mse": 0.20549772586522316,
+          "alignment_2ed": 0.11905499942639393,
+          "correction_d2": 0.04766672811829842,
+          "fold": "1|2",
+          "gain": 0.07138827130809547,
+          "heldout_treatments": {
+            "A": 2,
+            "C": 2,
+            "D": 1
+          },
+          "heldout_weeks": {
+            "1": 5
+          },
+          "mean_baseline_residual": 0.3046920280824631,
+          "mean_prediction_correction": 0.18975181180112777,
+          "n": 5,
+          "n_plants_improved": 2,
+          "n_test_outside_training_range": {
+            "log_flower": 0,
+            "log_visit": 0,
+            "mVWC": 1,
+            "mcorL": 0,
+            "mcorW": 0,
+            "week_num": 0
+          },
+          "n_train": 100,
+          "train_visit_slope_per_log_rate_unit": 0.41878711081539627
+        },
+        {
+          "B_mse": 0.20085421930329814,
+          "V_mse": 0.17638810956165996,
+          "alignment_2ed": 0.05816299454192953,
+          "correction_d2": 0.03369688480029137,
+          "fold": "1|3",
+          "gain": 0.02446610974163818,
+          "heldout_treatments": {
+            "A": 2,
+            "C": 2,
+            "D": 2
+          },
+          "heldout_weeks": {
+            "1": 6
+          },
+          "mean_baseline_residual": -0.044834763919274025,
+          "mean_prediction_correction": 0.15145465497911367,
+          "n": 6,
+          "n_plants_improved": 4,
+          "n_test_outside_training_range": {
+            "log_flower": 0,
+            "log_visit": 0,
+            "mVWC": 0,
+            "mcorL": 0,
+            "mcorW": 0,
+            "week_num": 0
+          },
+          "n_train": 99,
+          "train_visit_slope_per_log_rate_unit": 0.4393155121958392
+        },
+        {
+          "B_mse": 0.203476401170343,
+          "V_mse": 0.1542658964616519,
+          "alignment_2ed": 0.057454199210623356,
+          "correction_d2": 0.008243694501932262,
+          "fold": "1|4",
+          "gain": 0.049210504708691094,
+          "heldout_treatments": {
+            "A": 2,
+            "C": 2,
+            "D": 1
+          },
+          "heldout_weeks": {
+            "1": 5
+          },
+          "mean_baseline_residual": -0.05212530650612177,
+          "mean_prediction_correction": 0.026152548306837563,
+          "n": 5,
+          "n_plants_improved": 5,
+          "n_test_outside_training_range": {
+            "log_flower": 0,
+            "log_visit": 0,
+            "mVWC": 0,
+            "mcorL": 0,
+            "mcorW": 0,
+            "week_num": 0
+          },
+          "n_train": 100,
+          "train_visit_slope_per_log_rate_unit": 0.40025786049898315
+        },
+        {
+          "B_mse": 0.07194225767650116,
+          "V_mse": 0.09252685518667879,
+          "alignment_2ed": -0.007840947848623757,
+          "correction_d2": 0.012743649661553858,
+          "fold": "1|5",
+          "gain": -0.020584597510177632,
+          "heldout_treatments": {
+            "A": 2,
+            "C": 2,
+            "D": 2
+          },
+          "heldout_weeks": {
+            "1": 6
+          },
+          "mean_baseline_residual": -0.14867047913436524,
+          "mean_prediction_correction": 0.0453654660534795,
+          "n": 6,
+          "n_plants_improved": 3,
+          "n_test_outside_training_range": {
+            "log_flower": 0,
+            "log_visit": 0,
+            "mVWC": 0,
+            "mcorL": 0,
+            "mcorW": 0,
+            "week_num": 0
+          },
+          "n_train": 99,
+          "train_visit_slope_per_log_rate_unit": 0.458177459621595
+        },
+        {
+          "B_mse": 0.05751557642471772,
+          "V_mse": 0.04116790088443796,
+          "alignment_2ed": 0.019513329023486247,
+          "correction_d2": 0.0031656534832064888,
+          "fold": "2|1",
+          "gain": 0.016347675540279757,
+          "heldout_treatments": {
+            "A": 2,
+            "C": 1,
+            "D": 2
+          },
+          "heldout_weeks": {
+            "2": 5
+          },
+          "mean_baseline_residual": 0.012286723201014826,
+          "mean_prediction_correction": -0.03459891605646961,
+          "n": 5,
+          "n_plants_improved": 5,
+          "n_test_outside_training_range": {
+            "log_flower": 0,
+            "log_visit": 0,
+            "mVWC": 1,
+            "mcorL": 0,
+            "mcorW": 0,
+            "week_num": 0
+          },
+          "n_train": 100,
+          "train_visit_slope_per_log_rate_unit": 0.419985123010983
+        },
+        {
+          "B_mse": 0.13718722061743424,
+          "V_mse": 0.14152867435486483,
+          "alignment_2ed": -0.0016039881493694382,
+          "correction_d2": 0.0027374655880611533,
+          "fold": "2|2",
+          "gain": -0.004341453737430584,
+          "heldout_treatments": {
+            "A": 2,
+            "C": 2,
+            "D": 2
+          },
+          "heldout_weeks": {
+            "2": 6
+          },
+          "mean_baseline_residual": -0.09738862279265809,
+          "mean_prediction_correction": -0.0424020924934008,
+          "n": 6,
+          "n_plants_improved": 3,
+          "n_test_outside_training_range": {
+            "log_flower": 0,
+            "log_visit": 0,
+            "mVWC": 0,
+            "mcorL": 0,
+            "mcorW": 0,
+            "week_num": 0
+          },
+          "n_train": 99,
+          "train_visit_slope_per_log_rate_unit": 0.4380971575234512
+        },
+        {
+          "B_mse": 0.19878309818331932,
+          "V_mse": 0.18543619749071769,
+          "alignment_2ed": 0.01682963979221078,
+          "correction_d2": 0.0034827390996091325,
+          "fold": "2|3",
+          "gain": 0.013346900692601638,
+          "heldout_treatments": {
+            "A": 2,
+            "C": 2,
+            "D": 2
+          },
+          "heldout_weeks": {
+            "2": 6
+          },
+          "mean_baseline_residual": 0.30198481070635114,
+          "mean_prediction_correction": -0.02357744375050695,
+          "n": 6,
+          "n_plants_improved": 3,
+          "n_test_outside_training_range": {
+            "log_flower": 1,
+            "log_visit": 0,
+            "mVWC": 0,
+            "mcorL": 0,
+            "mcorW": 0,
+            "week_num": 0
+          },
+          "n_train": 99,
+          "train_visit_slope_per_log_rate_unit": 0.4201757442529183
+        },
+        {
+          "B_mse": 0.21031279602200453,
+          "V_mse": 0.27089378013997123,
+          "alignment_2ed": -0.04882586430831026,
+          "correction_d2": 0.011755119809656458,
+          "fold": "2|4",
+          "gain": -0.060580984117966696,
+          "heldout_treatments": {
+            "A": 2,
+            "C": 2,
+            "D": 1
+          },
+          "heldout_weeks": {
+            "2": 5
+          },
+          "mean_baseline_residual": 0.2959247032599069,
+          "mean_prediction_correction": -0.10444054781269348,
+          "n": 5,
+          "n_plants_improved": 1,
+          "n_test_outside_training_range": {
+            "log_flower": 0,
+            "log_visit": 0,
+            "mVWC": 0,
+            "mcorL": 0,
+            "mcorW": 0,
+            "week_num": 0
+          },
+          "n_train": 100,
+          "train_visit_slope_per_log_rate_unit": 0.47824615854463454
+        },
+        {
+          "B_mse": 0.011643197844829587,
+          "V_mse": 0.014458255247709753,
+          "alignment_2ed": 0.0026306826063684603,
+          "correction_d2": 0.005445740009248625,
+          "fold": "2|5",
+          "gain": -0.002815057402880166,
+          "heldout_treatments": {
+            "A": 1,
+            "C": 2,
+            "D": 2
+          },
+          "heldout_weeks": {
+            "2": 5
+          },
+          "mean_baseline_residual": 0.017102504889703198,
+          "mean_prediction_correction": -0.057613517839196084,
+          "n": 5,
+          "n_plants_improved": 2,
+          "n_test_outside_training_range": {
+            "log_flower": 0,
+            "log_visit": 0,
+            "mVWC": 0,
+            "mcorL": 0,
+            "mcorW": 0,
+            "week_num": 0
+          },
+          "n_train": 100,
+          "train_visit_slope_per_log_rate_unit": 0.43644921941459014
+        },
+        {
+          "B_mse": 0.059043555112029786,
+          "V_mse": 0.04863016208932748,
+          "alignment_2ed": 0.011268103267533983,
+          "correction_d2": 0.000854710244831665,
+          "fold": "3|1",
+          "gain": 0.010413393022702305,
+          "heldout_treatments": {
+            "A": 2,
+            "C": 1,
+            "D": 2
+          },
+          "heldout_weeks": {
+            "3": 5
+          },
+          "mean_baseline_residual": -0.06135466535806897,
+          "mean_prediction_correction": -0.015121141875410648,
+          "n": 5,
+          "n_plants_improved": 3,
+          "n_test_outside_training_range": {
+            "log_flower": 0,
+            "log_visit": 0,
+            "mVWC": 0,
+            "mcorL": 0,
+            "mcorW": 0,
+            "week_num": 0
+          },
+          "n_train": 100,
+          "train_visit_slope_per_log_rate_unit": 0.42360794380445593
+        },
+        {
+          "B_mse": 0.2653521242115977,
+          "V_mse": 0.28931998629006045,
+          "alignment_2ed": -0.02004432225624949,
+          "correction_d2": 0.003923539822213223,
+          "fold": "3|2",
+          "gain": -0.023967862078462743,
+          "heldout_treatments": {
+            "A": 2,
+            "D": 2
+          },
+          "heldout_weeks": {
+            "3": 4
+          },
+          "mean_baseline_residual": 0.015902445762236983,
+          "mean_prediction_correction": -0.054534457981250145,
+          "n": 4,
+          "n_plants_improved": 1,
+          "n_test_outside_training_range": {
+            "log_flower": 0,
+            "log_visit": 0,
+            "mVWC": 0,
+            "mcorL": 0,
+            "mcorW": 0,
+            "week_num": 0
+          },
+          "n_train": 101,
+          "train_visit_slope_per_log_rate_unit": 0.44448209525330235
+        },
+        {
+          "B_mse": 0.05715538713682292,
+          "V_mse": 0.05415149749111336,
+          "alignment_2ed": 0.01309366839392824,
+          "correction_d2": 0.010089778748218679,
+          "fold": "3|3",
+          "gain": 0.003003889645709565,
+          "heldout_treatments": {
+            "A": 2,
+            "C": 2,
+            "D": 2
+          },
+          "heldout_weeks": {
+            "3": 6
+          },
+          "mean_baseline_residual": -0.09544260459959847,
+          "mean_prediction_correction": -0.09866494247784463,
+          "n": 6,
+          "n_plants_improved": 5,
+          "n_test_outside_training_range": {
+            "log_flower": 0,
+            "log_visit": 0,
+            "mVWC": 0,
+            "mcorL": 0,
+            "mcorW": 0,
+            "week_num": 0
+          },
+          "n_train": 99,
+          "train_visit_slope_per_log_rate_unit": 0.4382078326999783
+        },
+        {
+          "B_mse": 0.028380911872563128,
+          "V_mse": 0.019410524911329132,
+          "alignment_2ed": 0.014404404985194574,
+          "correction_d2": 0.005434018023960586,
+          "fold": "3|4",
+          "gain": 0.008970386961233996,
+          "heldout_treatments": {
+            "A": 2,
+            "C": 2,
+            "D": 2
+          },
+          "heldout_weeks": {
+            "3": 6
+          },
+          "mean_baseline_residual": -0.06219542804264844,
+          "mean_prediction_correction": -0.05210489079480809,
+          "n": 6,
+          "n_plants_improved": 4,
+          "n_test_outside_training_range": {
+            "log_flower": 0,
+            "log_visit": 0,
+            "mVWC": 0,
+            "mcorL": 1,
+            "mcorW": 1,
+            "week_num": 0
+          },
+          "n_train": 99,
+          "train_visit_slope_per_log_rate_unit": 0.42845572237763657
+        },
+        {
+          "B_mse": 0.1348597790190689,
+          "V_mse": 0.15315978216486523,
+          "alignment_2ed": -0.010619672870590582,
+          "correction_d2": 0.00768033027520576,
+          "fold": "3|5",
+          "gain": -0.01830000314579633,
+          "heldout_treatments": {
+            "A": 2,
+            "C": 2,
+            "D": 2
+          },
+          "heldout_weeks": {
+            "3": 6
+          },
+          "mean_baseline_residual": 0.10688240775599854,
+          "mean_prediction_correction": -0.0770523546721799,
+          "n": 6,
+          "n_plants_improved": 2,
+          "n_test_outside_training_range": {
+            "log_flower": 0,
+            "log_visit": 0,
+            "mVWC": 0,
+            "mcorL": 0,
+            "mcorW": 0,
+            "week_num": 0
+          },
+          "n_train": 99,
+          "train_visit_slope_per_log_rate_unit": 0.4523147869500323
+        },
+        {
+          "B_mse": 0.35435854913109643,
+          "V_mse": 0.30071354809443684,
+          "alignment_2ed": 0.06013617191838278,
+          "correction_d2": 0.006491170881723229,
+          "fold": "4|ALL",
+          "gain": 0.05364500103665959,
+          "heldout_treatments": {
+            "A": 9,
+            "C": 6,
+            "D": 8
+          },
+          "heldout_weeks": {
+            "4": 23
+          },
+          "mean_baseline_residual": -0.3164178650103639,
+          "mean_prediction_correction": -0.06436576426516592,
+          "n": 23,
+          "n_plants_improved": 19,
+          "n_test_outside_training_range": {
+            "log_flower": 0,
+            "log_visit": 0,
+            "mVWC": 0,
+            "mcorL": 1,
+            "mcorW": 3,
+            "week_num": 23
+          },
+          "n_train": 82,
+          "train_visit_slope_per_log_rate_unit": 0.28348804103717845
+        }
+      ],
+      "n_folds": 16,
+      "n_plants": 105,
+      "n_positive_folds": 10,
+      "n_positive_weeks": 2,
+      "plant_weighted": {
+        "B_mse": 0.18059353798433755,
+        "V_mse": 0.16256528269320622,
+        "alignment_2ed": 0.03405753671788173,
+        "correction_d2": 0.016029281426750367,
+        "gain": 0.018028255291131334,
+        "mean_baseline_residual": -0.03408423881884377,
+        "mean_prediction_correction": -0.0038429864770471297,
+        "n": 105,
+        "n_plants_improved": 66
+      },
+      "policy": "safe16",
+      "week_equal": {
+        "B_mse": 0.18714063056320585,
+        "V_mse": 0.1679312354244158,
+        "gain": 0.019209395138790046
+      }
+    },
+    "water3__linear_week": {
+      "by_water_code": {
+        "A": {
+          "B_mse": 0.25022762255201353,
+          "V_mse": 0.23372358669947382,
+          "alignment_2ed": 0.03350814874665785,
+          "correction_d2": 0.017004112894118035,
+          "gain": 0.016504035852539706,
+          "mean_baseline_residual": 0.20772493600790837,
+          "mean_prediction_correction": 0.050567200770533886,
+          "n": 38,
+          "n_plants_improved": 17
+        },
+        "C": {
+          "B_mse": 0.10194772565272363,
+          "V_mse": 0.09084791699639322,
+          "alignment_2ed": 0.015571299948252324,
+          "correction_d2": 0.004471491291921916,
+          "gain": 0.01109980865633041,
+          "mean_baseline_residual": -0.1130073309637482,
+          "mean_prediction_correction": -0.029233013775803847,
+          "n": 32,
+          "n_plants_improved": 17
+        },
+        "D": {
+          "B_mse": 0.14848269628017013,
+          "V_mse": 0.13491716525074474,
+          "alignment_2ed": 0.020236595044063575,
+          "correction_d2": 0.006671064014638087,
+          "gain": 0.013565531029425398,
+          "mean_baseline_residual": -0.10542575612207235,
+          "mean_prediction_correction": -0.0008992779441556551,
+          "n": 35,
+          "n_plants_improved": 22
+        }
+      },
+      "by_week": {
+        "1": {
+          "B_mse": 0.180799756071972,
+          "V_mse": 0.13930248701480918,
+          "alignment_2ed": 0.06633565953711844,
+          "correction_d2": 0.0248383904799556,
+          "gain": 0.041497269057162806,
+          "mean_baseline_residual": -0.04446568393396316,
+          "mean_prediction_correction": 0.056434932488934095,
+          "n": 28,
+          "n_plants_improved": 16
+        },
+        "2": {
+          "B_mse": 0.12841869133315104,
+          "V_mse": 0.13414562805596303,
+          "alignment_2ed": -0.0016878282679130224,
+          "correction_d2": 0.004039108454898949,
+          "gain": -0.005726936722811993,
+          "mean_baseline_residual": 0.08508249410551347,
+          "mean_prediction_correction": -0.04400108119313505,
+          "n": 27,
+          "n_plants_improved": 15
+        },
+        "3": {
+          "B_mse": 0.11423194556930012,
+          "V_mse": 0.11086823427067706,
+          "alignment_2ed": 0.0060584061266241935,
+          "correction_d2": 0.002694694828001144,
+          "gain": 0.003363711298623062,
+          "mean_baseline_residual": 0.03311143406035804,
+          "mean_prediction_correction": -0.007102554222961322,
+          "n": 27,
+          "n_plants_improved": 14
+        },
+        "4": {
+          "B_mse": 0.2762569948386187,
+          "V_mse": 0.26064723926116146,
+          "alignment_2ed": 0.021933391653686067,
+          "correction_d2": 0.006323636076228724,
+          "gain": 0.015609755577457252,
+          "mean_baseline_residual": -0.05907762596258773,
+          "mean_prediction_correction": 0.03279315247624192,
+          "n": 23,
+          "n_plants_improved": 11
+        }
+      },
+      "context": "linear_week",
+      "fold_equal": {
+        "B_mse": 0.16688601482830245,
+        "V_mse": 0.1531628896488706,
+        "gain": 0.013723125179431838
+      },
+      "folds": [
+        {
+          "B_mse": 0.25022762255201353,
+          "V_mse": 0.23372358669947382,
+          "alignment_2ed": 0.03350814874665785,
+          "correction_d2": 0.017004112894118035,
+          "fold": "water|A",
+          "gain": 0.016504035852539706,
+          "heldout_treatments": {
+            "A": 38
+          },
+          "heldout_weeks": {
+            "1": 10,
+            "2": 9,
+            "3": 10,
+            "4": 9
+          },
+          "mean_baseline_residual": 0.20772493600790837,
+          "mean_prediction_correction": 0.050567200770533886,
+          "n": 38,
+          "n_plants_improved": 17,
+          "n_test_outside_training_range": {
+            "log_flower": 0,
+            "log_visit": 1,
+            "mVWC": 9,
+            "mcorL": 0,
+            "mcorW": 0,
+            "week_num": 0
+          },
+          "n_train": 67,
+          "train_visit_slope_per_log_rate_unit": 0.48953617400823274
+        },
+        {
+          "B_mse": 0.10194772565272363,
+          "V_mse": 0.09084791699639322,
+          "alignment_2ed": 0.015571299948252324,
+          "correction_d2": 0.004471491291921916,
+          "fold": "water|C",
+          "gain": 0.01109980865633041,
+          "heldout_treatments": {
+            "C": 32
+          },
+          "heldout_weeks": {
+            "1": 10,
+            "2": 9,
+            "3": 7,
+            "4": 6
+          },
+          "mean_baseline_residual": -0.1130073309637482,
+          "mean_prediction_correction": -0.029233013775803847,
+          "n": 32,
+          "n_plants_improved": 17,
+          "n_test_outside_training_range": {
+            "log_flower": 0,
+            "log_visit": 0,
+            "mVWC": 0,
+            "mcorL": 1,
+            "mcorW": 2,
+            "week_num": 0
+          },
+          "n_train": 73,
+          "train_visit_slope_per_log_rate_unit": 0.3841229581026721
+        },
+        {
+          "B_mse": 0.14848269628017013,
+          "V_mse": 0.13491716525074474,
+          "alignment_2ed": 0.020236595044063575,
+          "correction_d2": 0.006671064014638087,
+          "fold": "water|D",
+          "gain": 0.013565531029425398,
+          "heldout_treatments": {
+            "D": 35
+          },
+          "heldout_weeks": {
+            "1": 8,
+            "2": 9,
+            "3": 10,
+            "4": 8
+          },
+          "mean_baseline_residual": -0.10542575612207235,
+          "mean_prediction_correction": -0.0008992779441556551,
+          "n": 35,
+          "n_plants_improved": 22,
+          "n_test_outside_training_range": {
+            "log_flower": 1,
+            "log_visit": 0,
+            "mVWC": 14,
+            "mcorL": 2,
+            "mcorW": 7,
+            "week_num": 0
+          },
+          "n_train": 70,
+          "train_visit_slope_per_log_rate_unit": 0.3512621022223754
+        }
+      ],
+      "n_folds": 3,
+      "n_plants": 105,
+      "n_positive_folds": 3,
+      "n_positive_weeks": 3,
+      "plant_weighted": {
+        "B_mse": 0.17112258331113933,
+        "V_mse": 0.15724505164038724,
+        "alignment_2ed": 0.023617829307231417,
+        "correction_d2": 0.009740297636479238,
+        "gain": 0.013877531670752091,
+        "mean_baseline_residual": 0.005594395363695653,
+        "mean_prediction_correction": 0.009091642480086832,
+        "n": 105,
+        "n_plants_improved": 56
+      },
+      "policy": "water3",
+      "week_equal": {
+        "B_mse": 0.17492684695326047,
+        "V_mse": 0.16124089715065268,
+        "gain": 0.013685949802607782
+      }
+    },
+    "water3__linear_week_vwc": {
+      "by_water_code": {
+        "A": {
+          "B_mse": 0.21008553158005147,
+          "V_mse": 0.20215718760019513,
+          "alignment_2ed": 0.024003186587735294,
+          "correction_d2": 0.016074842607878902,
+          "gain": 0.00792834397985634,
+          "mean_baseline_residual": 0.1471542476370243,
+          "mean_prediction_correction": 0.04145867364118303,
+          "n": 38,
+          "n_plants_improved": 19
+        },
+        "C": {
+          "B_mse": 0.08259433854693587,
+          "V_mse": 0.07692490976006648,
+          "alignment_2ed": 0.009939904046111711,
+          "correction_d2": 0.004270475259242319,
+          "gain": 0.005669428786869393,
+          "mean_baseline_residual": -0.04579970588581607,
+          "mean_prediction_correction": -0.02816595905991224,
+          "n": 32,
+          "n_plants_improved": 19
+        },
+        "D": {
+          "B_mse": 0.15797889921729394,
+          "V_mse": 0.14625784899965652,
+          "alignment_2ed": 0.016968398480368588,
+          "correction_d2": 0.005247348262731118,
+          "gain": 0.011721050217637419,
+          "mean_baseline_residual": 0.015683583588063238,
+          "mean_prediction_correction": 0.0012667930267022684,
+          "n": 35,
+          "n_plants_improved": 18
+        }
+      },
+      "by_week": {
+        "1": {
+          "B_mse": 0.18141011163242757,
+          "V_mse": 0.14774473901813384,
+          "alignment_2ed": 0.05620876430925552,
+          "correction_d2": 0.022543391694961824,
+          "gain": 0.033665372614293726,
+          "mean_baseline_residual": -0.012628763892433583,
+          "mean_prediction_correction": 0.05388716611996942,
+          "n": 28,
+          "n_plants_improved": 17
+        },
+        "2": {
+          "B_mse": 0.13210620059846903,
+          "V_mse": 0.14081651402184064,
+          "alignment_2ed": -0.004666056257958655,
+          "correction_d2": 0.004044257165413022,
+          "gain": -0.008710313423371613,
+          "mean_baseline_residual": 0.13168120015483534,
+          "mean_prediction_correction": -0.045202899925243185,
+          "n": 27,
+          "n_plants_improved": 14
+        },
+        "3": {
+          "B_mse": 0.10205763878959663,
+          "V_mse": 0.10274330847463554,
+          "alignment_2ed": 0.0017341029449611163,
+          "correction_d2": 0.002419772629999977,
+          "gain": -0.0006856696850389143,
+          "mean_baseline_residual": 0.07150870517357863,
+          "mean_prediction_correction": -0.00810414427901903,
+          "n": 27,
+          "n_plants_improved": 14
+        },
+        "4": {
+          "B_mse": 0.206679292041889,
+          "V_mse": 0.19780987200890926,
+          "alignment_2ed": 0.014322143713660657,
+          "correction_d2": 0.00545272368068084,
+          "gain": 0.008869420032979747,
+          "mean_baseline_residual": -0.019883730758087567,
+          "mean_prediction_correction": 0.028213313327751278,
+          "n": 23,
+          "n_plants_improved": 11
+        }
+      },
+      "context": "linear_week_vwc",
+      "fold_equal": {
+        "B_mse": 0.1502195897814271,
+        "V_mse": 0.1417799821199727,
+        "gain": 0.008439607661454384
+      },
+      "folds": [
+        {
+          "B_mse": 0.21008553158005147,
+          "V_mse": 0.20215718760019513,
+          "alignment_2ed": 0.024003186587735294,
+          "correction_d2": 0.016074842607878902,
+          "fold": "water|A",
+          "gain": 0.00792834397985634,
+          "heldout_treatments": {
+            "A": 38
+          },
+          "heldout_weeks": {
+            "1": 10,
+            "2": 9,
+            "3": 10,
+            "4": 9
+          },
+          "mean_baseline_residual": 0.1471542476370243,
+          "mean_prediction_correction": 0.04145867364118303,
+          "n": 38,
+          "n_plants_improved": 19,
+          "n_test_outside_training_range": {
+            "log_flower": 0,
+            "log_visit": 1,
+            "mVWC": 9,
+            "mcorL": 0,
+            "mcorW": 0,
+            "week_num": 0
+          },
+          "n_train": 67,
+          "train_visit_slope_per_log_rate_unit": 0.48307497140293726
+        },
+        {
+          "B_mse": 0.08259433854693587,
+          "V_mse": 0.07692490976006648,
+          "alignment_2ed": 0.009939904046111711,
+          "correction_d2": 0.004270475259242319,
+          "fold": "water|C",
+          "gain": 0.005669428786869393,
+          "heldout_treatments": {
+            "C": 32
+          },
+          "heldout_weeks": {
+            "1": 10,
+            "2": 9,
+            "3": 7,
+            "4": 6
+          },
+          "mean_baseline_residual": -0.04579970588581607,
+          "mean_prediction_correction": -0.02816595905991224,
+          "n": 32,
+          "n_plants_improved": 19,
+          "n_test_outside_training_range": {
+            "log_flower": 0,
+            "log_visit": 0,
+            "mVWC": 0,
+            "mcorL": 1,
+            "mcorW": 2,
+            "week_num": 0
+          },
+          "n_train": 73,
+          "train_visit_slope_per_log_rate_unit": 0.3772277072150894
+        },
+        {
+          "B_mse": 0.15797889921729394,
+          "V_mse": 0.14625784899965652,
+          "alignment_2ed": 0.016968398480368588,
+          "correction_d2": 0.005247348262731118,
+          "fold": "water|D",
+          "gain": 0.011721050217637419,
+          "heldout_treatments": {
+            "D": 35
+          },
+          "heldout_weeks": {
+            "1": 8,
+            "2": 9,
+            "3": 10,
+            "4": 8
+          },
+          "mean_baseline_residual": 0.015683583588063238,
+          "mean_prediction_correction": 0.0012667930267022684,
+          "n": 35,
+          "n_plants_improved": 18,
+          "n_test_outside_training_range": {
+            "log_flower": 1,
+            "log_visit": 0,
+            "mVWC": 14,
+            "mcorL": 2,
+            "mcorW": 7,
+            "week_num": 0
+          },
+          "n_train": 70,
+          "train_visit_slope_per_log_rate_unit": 0.3121274420186873
+        }
+      ],
+      "n_folds": 3,
+      "n_plants": 105,
+      "n_positive_folds": 3,
+      "n_positive_weeks": 2,
+      "plant_weighted": {
+        "B_mse": 0.1538621952966589,
+        "V_mse": 0.1453580472011193,
+        "alignment_2ed": 0.017372304444023004,
+        "correction_d2": 0.008868156348483251,
+        "gain": 0.008504148095539593,
+        "mean_baseline_residual": 0.04452567854707642,
+        "mean_prediction_correction": 0.006842444422688978,
+        "n": 105,
+        "n_plants_improved": 56
+      },
+      "policy": "water3",
+      "week_equal": {
+        "B_mse": 0.15556331076559554,
+        "V_mse": 0.1472786083808798,
+        "gain": 0.008284702384715736
+      }
+    },
+    "week4__linear_week": {
+      "by_water_code": {
+        "A": {
+          "B_mse": 0.23763537739559018,
+          "V_mse": 0.3655904447755411,
+          "alignment_2ed": -0.03826909156592854,
+          "correction_d2": 0.08968597581402223,
+          "gain": -0.1279550673799509,
+          "mean_baseline_residual": -0.03452945975589344,
+          "mean_prediction_correction": 0.10925582658292224,
+          "n": 38,
+          "n_plants_improved": 8
+        },
+        "C": {
+          "B_mse": 0.13241166569991994,
+          "V_mse": 0.22895387002617892,
+          "alignment_2ed": -0.054511517001722375,
+          "correction_d2": 0.04203068732453664,
+          "gain": -0.09654220432625898,
+          "mean_baseline_residual": -0.12123474777128276,
+          "mean_prediction_correction": 0.07755374073894986,
+          "n": 32,
+          "n_plants_improved": 14
+        },
+        "D": {
+          "B_mse": 0.17651565531404192,
+          "V_mse": 0.24210818694195102,
+          "alignment_2ed": -0.008035546706630531,
+          "correction_d2": 0.05755698492127851,
+          "gain": -0.0655925316279091,
+          "mean_baseline_residual": -0.10053477538453041,
+          "mean_prediction_correction": 0.06624813071213774,
+          "n": 35,
+          "n_plants_improved": 14
+        }
+      },
+      "by_week": {
+        "1": {
+          "B_mse": 0.2184424723405137,
+          "V_mse": 0.5316763621728795,
+          "alignment_2ed": -0.09345523621907528,
+          "correction_d2": 0.21977865361329055,
+          "gain": -0.3132338898323658,
+          "mean_baseline_residual": -0.27540304354554257,
+          "mean_prediction_correction": 0.37255786283458725,
+          "n": 28,
+          "n_plants_improved": 5
+        },
+        "2": {
+          "B_mse": 0.11501627073035398,
+          "V_mse": 0.14637691035042677,
+          "alignment_2ed": -0.018333168887300907,
+          "correction_d2": 0.013027470732771888,
+          "gain": -0.031360639620072794,
+          "mean_baseline_residual": 0.12599692053536804,
+          "mean_prediction_correction": -0.09829272074741104,
+          "n": 27,
+          "n_plants_improved": 11
+        },
+        "3": {
+          "B_mse": 0.10274259831992875,
+          "V_mse": 0.10443374894258145,
+          "alignment_2ed": 0.000554316291517705,
+          "correction_d2": 0.002245466914170382,
+          "gain": -0.0016911506226526957,
+          "mean_baseline_residual": 0.06274099153476181,
+          "mean_prediction_correction": -0.02067845668515517,
+          "n": 27,
+          "n_plants_improved": 13
+        },
+        "4": {
+          "B_mse": 0.32389073432736154,
+          "V_mse": 0.3493009279793357,
+          "alignment_2ed": -0.016654892350965844,
+          "correction_d2": 0.008755301301008324,
+          "gain": -0.025410193651974167,
+          "mean_baseline_residual": -0.26499943236877727,
+          "mean_prediction_correction": 0.07533597043622198,
+          "n": 23,
+          "n_plants_improved": 7
+        }
+      },
+      "context": "linear_week",
+      "fold_equal": {
+        "B_mse": 0.1900230189295395,
+        "V_mse": 0.28294698736130586,
+        "gain": -0.09292396843176635
+      },
+      "folds": [
+        {
+          "B_mse": 0.2184424723405137,
+          "V_mse": 0.5316763621728795,
+          "alignment_2ed": -0.09345523621907528,
+          "correction_d2": 0.21977865361329055,
+          "fold": "week|1",
+          "gain": -0.3132338898323658,
+          "heldout_treatments": {
+            "A": 10,
+            "C": 10,
+            "D": 8
+          },
+          "heldout_weeks": {
+            "1": 28
+          },
+          "mean_baseline_residual": -0.27540304354554257,
+          "mean_prediction_correction": 0.37255786283458725,
+          "n": 28,
+          "n_plants_improved": 5,
+          "n_test_outside_training_range": {
+            "log_flower": 0,
+            "log_visit": 16,
+            "mVWC": 1,
+            "mcorL": 0,
+            "mcorW": 0,
+            "week_num": 28
+          },
+          "n_train": 77,
+          "train_visit_slope_per_log_rate_unit": 0.9087137155611713
+        },
+        {
+          "B_mse": 0.11501627073035398,
+          "V_mse": 0.14637691035042677,
+          "alignment_2ed": -0.018333168887300907,
+          "correction_d2": 0.013027470732771888,
+          "fold": "week|2",
+          "gain": -0.031360639620072794,
+          "heldout_treatments": {
+            "A": 9,
+            "C": 9,
+            "D": 9
+          },
+          "heldout_weeks": {
+            "2": 27
+          },
+          "mean_baseline_residual": 0.12599692053536804,
+          "mean_prediction_correction": -0.09829272074741104,
+          "n": 27,
+          "n_plants_improved": 11,
+          "n_test_outside_training_range": {
+            "log_flower": 1,
+            "log_visit": 0,
+            "mVWC": 2,
+            "mcorL": 0,
+            "mcorW": 0,
+            "week_num": 0
+          },
+          "n_train": 78,
+          "train_visit_slope_per_log_rate_unit": 0.525251539491162
+        },
+        {
+          "B_mse": 0.10274259831992875,
+          "V_mse": 0.10443374894258145,
+          "alignment_2ed": 0.000554316291517705,
+          "correction_d2": 0.002245466914170382,
+          "fold": "week|3",
+          "gain": -0.0016911506226526957,
+          "heldout_treatments": {
+            "A": 10,
+            "C": 7,
+            "D": 10
+          },
+          "heldout_weeks": {
+            "3": 27
+          },
+          "mean_baseline_residual": 0.06274099153476181,
+          "mean_prediction_correction": -0.02067845668515517,
+          "n": 27,
+          "n_plants_improved": 13,
+          "n_test_outside_training_range": {
+            "log_flower": 0,
+            "log_visit": 0,
+            "mVWC": 0,
+            "mcorL": 2,
+            "mcorW": 3,
+            "week_num": 0
+          },
+          "n_train": 78,
+          "train_visit_slope_per_log_rate_unit": 0.3993683059571522
+        },
+        {
+          "B_mse": 0.32389073432736154,
+          "V_mse": 0.3493009279793357,
+          "alignment_2ed": -0.016654892350965844,
+          "correction_d2": 0.008755301301008324,
+          "fold": "week|4",
+          "gain": -0.025410193651974167,
+          "heldout_treatments": {
+            "A": 9,
+            "C": 6,
+            "D": 8
+          },
+          "heldout_weeks": {
+            "4": 23
+          },
+          "mean_baseline_residual": -0.26499943236877727,
+          "mean_prediction_correction": 0.07533597043622198,
+          "n": 23,
+          "n_plants_improved": 7,
+          "n_test_outside_training_range": {
+            "log_flower": 0,
+            "log_visit": 0,
+            "mVWC": 0,
+            "mcorL": 1,
+            "mcorW": 3,
+            "week_num": 23
+          },
+          "n_train": 82,
+          "train_visit_slope_per_log_rate_unit": 0.37031930749694164
+        }
+      ],
+      "n_folds": 4,
+      "n_plants": 105,
+      "n_positive_folds": 0,
+      "n_positive_weeks": 0,
+      "plant_weighted": {
+        "B_mse": 0.1851939578992508,
+        "V_mse": 0.2827880693835864,
+        "alignment_2ed": -0.033141315793261614,
+        "correction_d2": 0.06445279569107396,
+        "gain": -0.09759411148433561,
+        "mean_baseline_residual": -0.08295570036060536,
+        "mean_prediction_correction": 0.08525833989259289,
+        "n": 105,
+        "n_plants_improved": 36
+      },
+      "policy": "week4",
+      "week_equal": {
+        "B_mse": 0.1900230189295395,
+        "V_mse": 0.28294698736130586,
+        "gain": -0.09292396843176635
+      }
+    },
+    "week4__linear_week_vwc": {
+      "by_water_code": {
+        "A": {
+          "B_mse": 0.22063897605846336,
+          "V_mse": 0.3179793403764199,
+          "alignment_2ed": -0.02005700839271975,
+          "correction_d2": 0.07728335592523684,
+          "gain": -0.09734036431795653,
+          "mean_baseline_residual": -0.06045620371503171,
+          "mean_prediction_correction": 0.10047268910754296,
+          "n": 38,
+          "n_plants_improved": 11
+        },
+        "C": {
+          "B_mse": 0.12123633870707333,
+          "V_mse": 0.20460656012608455,
+          "alignment_2ed": -0.04744943733206383,
+          "correction_d2": 0.035920784086947405,
+          "gain": -0.08337022141901122,
+          "mean_baseline_residual": -0.09792989505632861,
+          "mean_prediction_correction": 0.07272096965364287,
+          "n": 32,
+          "n_plants_improved": 11
+        },
+        "D": {
+          "B_mse": 0.1936490093300595,
+          "V_mse": 0.24523720289228637,
+          "alignment_2ed": -0.0020399214550444657,
+          "correction_d2": 0.049548272107182455,
+          "gain": -0.05158819356222688,
+          "mean_baseline_residual": -0.07478792721218114,
+          "mean_prediction_correction": 0.06344754539266668,
+          "n": 35,
+          "n_plants_improved": 14
+        }
+      },
+      "by_week": {
+        "1": {
+          "B_mse": 0.21960531867880778,
+          "V_mse": 0.46981017496760663,
+          "alignment_2ed": -0.06318302118070783,
+          "correction_d2": 0.18702183510809098,
+          "gain": -0.25020485628879885,
+          "mean_baseline_residual": -0.24733323392396023,
+          "mean_prediction_correction": 0.3439463857046562,
+          "n": 28,
+          "n_plants_improved": 5
+        },
+        "2": {
+          "B_mse": 0.12931811833802376,
+          "V_mse": 0.14820262986915417,
+          "alignment_2ed": -0.007409874225508976,
+          "correction_d2": 0.011474637305621439,
+          "gain": -0.01888451153113041,
+          "mean_baseline_residual": 0.11221205514214155,
+          "mean_prediction_correction": -0.09113625572743082,
+          "n": 27,
+          "n_plants_improved": 12
+        },
+        "3": {
+          "B_mse": 0.09748116961589072,
+          "V_mse": 0.10048847453111381,
+          "alignment_2ed": -0.0006609057547833287,
+          "correction_d2": 0.0023463991604397603,
+          "gain": -0.003007304915223094,
+          "mean_baseline_residual": 0.0750488533877368,
+          "mean_prediction_correction": -0.02120980049220828,
+          "n": 27,
+          "n_plants_improved": 12
+        },
+        "4": {
+          "B_mse": 0.29430563294077067,
+          "V_mse": 0.31932966268123764,
+          "alignment_2ed": -0.015865648345575564,
+          "correction_d2": 0.009158381394891361,
+          "gain": -0.02502402974046697,
+          "mean_baseline_residual": -0.2686688615580821,
+          "mean_prediction_correction": 0.07689313138897466,
+          "n": 23,
+          "n_plants_improved": 7
+        }
+      },
+      "context": "linear_week_vwc",
+      "fold_equal": {
+        "B_mse": 0.18517755989337323,
+        "V_mse": 0.2594577355122781,
+        "gain": -0.07428017561890483
+      },
+      "folds": [
+        {
+          "B_mse": 0.21960531867880778,
+          "V_mse": 0.46981017496760663,
+          "alignment_2ed": -0.06318302118070783,
+          "correction_d2": 0.18702183510809098,
+          "fold": "week|1",
+          "gain": -0.25020485628879885,
+          "heldout_treatments": {
+            "A": 10,
+            "C": 10,
+            "D": 8
+          },
+          "heldout_weeks": {
+            "1": 28
+          },
+          "mean_baseline_residual": -0.24733323392396023,
+          "mean_prediction_correction": 0.3439463857046562,
+          "n": 28,
+          "n_plants_improved": 5,
+          "n_test_outside_training_range": {
+            "log_flower": 0,
+            "log_visit": 16,
+            "mVWC": 1,
+            "mcorL": 0,
+            "mcorW": 0,
+            "week_num": 28
+          },
+          "n_train": 77,
+          "train_visit_slope_per_log_rate_unit": 0.8363087703976447
+        },
+        {
+          "B_mse": 0.12931811833802376,
+          "V_mse": 0.14820262986915417,
+          "alignment_2ed": -0.007409874225508976,
+          "correction_d2": 0.011474637305621439,
+          "fold": "week|2",
+          "gain": -0.01888451153113041,
+          "heldout_treatments": {
+            "A": 9,
+            "C": 9,
+            "D": 9
+          },
+          "heldout_weeks": {
+            "2": 27
+          },
+          "mean_baseline_residual": 0.11221205514214155,
+          "mean_prediction_correction": -0.09113625572743082,
+          "n": 27,
+          "n_plants_improved": 12,
+          "n_test_outside_training_range": {
+            "log_flower": 1,
+            "log_visit": 0,
+            "mVWC": 2,
+            "mcorL": 0,
+            "mcorW": 0,
+            "week_num": 0
+          },
+          "n_train": 78,
+          "train_visit_slope_per_log_rate_unit": 0.48321796157757774
+        },
+        {
+          "B_mse": 0.09748116961589072,
+          "V_mse": 0.10048847453111381,
+          "alignment_2ed": -0.0006609057547833287,
+          "correction_d2": 0.0023463991604397603,
+          "fold": "week|3",
+          "gain": -0.003007304915223094,
+          "heldout_treatments": {
+            "A": 10,
+            "C": 7,
+            "D": 10
+          },
+          "heldout_weeks": {
+            "3": 27
+          },
+          "mean_baseline_residual": 0.0750488533877368,
+          "mean_prediction_correction": -0.02120980049220828,
+          "n": 27,
+          "n_plants_improved": 12,
+          "n_test_outside_training_range": {
+            "log_flower": 0,
+            "log_visit": 0,
+            "mVWC": 0,
+            "mcorL": 2,
+            "mcorW": 3,
+            "week_num": 0
+          },
+          "n_train": 78,
+          "train_visit_slope_per_log_rate_unit": 0.4070145604687294
+        },
+        {
+          "B_mse": 0.29430563294077067,
+          "V_mse": 0.31932966268123764,
+          "alignment_2ed": -0.015865648345575564,
+          "correction_d2": 0.009158381394891361,
+          "fold": "week|4",
+          "gain": -0.02502402974046697,
+          "heldout_treatments": {
+            "A": 9,
+            "C": 6,
+            "D": 8
+          },
+          "heldout_weeks": {
+            "4": 23
+          },
+          "mean_baseline_residual": -0.2686688615580821,
+          "mean_prediction_correction": 0.07689313138897466,
+          "n": 23,
+          "n_plants_improved": 7,
+          "n_test_outside_training_range": {
+            "log_flower": 0,
+            "log_visit": 0,
+            "mVWC": 0,
+            "mcorL": 1,
+            "mcorW": 3,
+            "week_num": 23
+          },
+          "n_train": 82,
+          "train_visit_slope_per_log_rate_unit": 0.37651161720173193
+        }
+      ],
+      "n_folds": 4,
+      "n_plants": 105,
+      "n_positive_folds": 0,
+      "n_positive_weeks": 0,
+      "plant_weighted": {
+        "B_mse": 0.18134818338476227,
+        "V_mse": 0.2591802567577971,
+        "alignment_2ed": -0.02239948156643759,
+        "correction_d2": 0.05543259180659716,
+        "gain": -0.07783207337303483,
+        "mean_baseline_residual": -0.07665399843238155,
+        "mean_prediction_correction": 0.0796733076547289,
+        "n": 105,
+        "n_plants_improved": 36
+      },
+      "policy": "week4",
+      "week_equal": {
+        "B_mse": 0.18517755989337323,
+        "V_mse": 0.2594577355122781,
+        "gain": -0.07428017561890483
+      }
+    },
+    "week4__no_week": {
+      "by_water_code": {
+        "A": {
+          "B_mse": 0.24451651887553277,
+          "V_mse": 0.26432744833400523,
+          "alignment_2ed": 0.07045201821932451,
+          "correction_d2": 0.090262947677797,
+          "gain": -0.01981092945847246,
+          "mean_baseline_residual": 0.013285473147432652,
+          "mean_prediction_correction": 0.05921770650792043,
+          "n": 38,
+          "n_plants_improved": 20
+        },
+        "C": {
+          "B_mse": 0.09554361105563493,
+          "V_mse": 0.1306479470752286,
+          "alignment_2ed": 0.008209411467946537,
+          "correction_d2": 0.04331374748754021,
+          "gain": -0.03510433601959366,
+          "mean_baseline_residual": -0.06548944448445407,
+          "mean_prediction_correction": 0.03839845601911583,
+          "n": 32,
+          "n_plants_improved": 16
+        },
+        "D": {
+          "B_mse": 0.1771616177379014,
+          "V_mse": 0.15646961900557818,
+          "alignment_2ed": 0.07708273884068399,
+          "correction_d2": 0.05639074010836073,
+          "gain": 0.02069199873232322,
+          "mean_baseline_residual": -0.03439457045593504,
+          "mean_prediction_correction": 0.021476562235926536,
+          "n": 35,
+          "n_plants_improved": 23
+        }
+      },
+      "by_week": {
+        "1": {
+          "B_mse": 0.16171912662208351,
+          "V_mse": 0.22260427420195625,
+          "alignment_2ed": 0.15667395448195845,
+          "correction_d2": 0.2175591020618311,
+          "gain": -0.060885147579872734,
+          "mean_baseline_residual": 0.05637421471499289,
+          "mean_prediction_correction": 0.37027335466423594,
+          "n": 28,
+          "n_plants_improved": 14
+        },
+        "2": {
+          "B_mse": 0.1227959392022136,
+          "V_mse": 0.14235025833300258,
+          "alignment_2ed": -0.008621242077690909,
+          "correction_d2": 0.01093307705309813,
+          "gain": -0.019554319130788977,
+          "mean_baseline_residual": 0.12947008387478393,
+          "mean_prediction_correction": -0.087885734989981,
+          "n": 27,
+          "n_plants_improved": 11
+        },
+        "3": {
+          "B_mse": 0.09465953177717734,
+          "V_mse": 0.100326879610254,
+          "alignment_2ed": 0.0037238731560211985,
+          "correction_d2": 0.009391220989097861,
+          "gain": -0.0056673478330766525,
+          "mean_baseline_residual": -0.02189568856512642,
+          "mean_prediction_correction": -0.08457864405926634,
+          "n": 27,
+          "n_plants_improved": 15
+        },
+        "4": {
+          "B_mse": 0.35435854913109643,
+          "V_mse": 0.30071354809443684,
+          "alignment_2ed": 0.06013617191838278,
+          "correction_d2": 0.006491170881723229,
+          "gain": 0.05364500103665959,
+          "mean_baseline_residual": -0.3164178650103639,
+          "mean_prediction_correction": -0.06436576426516592,
+          "n": 23,
+          "n_plants_improved": 19
+        }
+      },
+      "context": "no_week",
+      "fold_equal": {
+        "B_mse": 0.18338328668314272,
+        "V_mse": 0.1914987400599124,
+        "gain": -0.008115453376769693
+      },
+      "folds": [
+        {
+          "B_mse": 0.16171912662208351,
+          "V_mse": 0.22260427420195625,
+          "alignment_2ed": 0.15667395448195845,
+          "correction_d2": 0.2175591020618311,
+          "fold": "week|1",
+          "gain": -0.060885147579872734,
+          "heldout_treatments": {
+            "A": 10,
+            "C": 10,
+            "D": 8
+          },
+          "heldout_weeks": {
+            "1": 28
+          },
+          "mean_baseline_residual": 0.05637421471499289,
+          "mean_prediction_correction": 0.37027335466423594,
+          "n": 28,
+          "n_plants_improved": 14,
+          "n_test_outside_training_range": {
+            "log_flower": 0,
+            "log_visit": 16,
+            "mVWC": 1,
+            "mcorL": 0,
+            "mcorW": 0,
+            "week_num": 28
+          },
+          "n_train": 77,
+          "train_visit_slope_per_log_rate_unit": 0.9058443838627892
+        },
+        {
+          "B_mse": 0.1227959392022136,
+          "V_mse": 0.14235025833300258,
+          "alignment_2ed": -0.008621242077690909,
+          "correction_d2": 0.01093307705309813,
+          "fold": "week|2",
+          "gain": -0.019554319130788977,
+          "heldout_treatments": {
+            "A": 9,
+            "C": 9,
+            "D": 9
+          },
+          "heldout_weeks": {
+            "2": 27
+          },
+          "mean_baseline_residual": 0.12947008387478393,
+          "mean_prediction_correction": -0.087885734989981,
+          "n": 27,
+          "n_plants_improved": 11,
+          "n_test_outside_training_range": {
+            "log_flower": 1,
+            "log_visit": 0,
+            "mVWC": 2,
+            "mcorL": 0,
+            "mcorW": 0,
+            "week_num": 0
+          },
+          "n_train": 78,
+          "train_visit_slope_per_log_rate_unit": 0.4908737725307615
+        },
+        {
+          "B_mse": 0.09465953177717734,
+          "V_mse": 0.100326879610254,
+          "alignment_2ed": 0.0037238731560211985,
+          "correction_d2": 0.009391220989097861,
+          "fold": "week|3",
+          "gain": -0.0056673478330766525,
+          "heldout_treatments": {
+            "A": 10,
+            "C": 7,
+            "D": 10
+          },
+          "heldout_weeks": {
+            "3": 27
+          },
+          "mean_baseline_residual": -0.02189568856512642,
+          "mean_prediction_correction": -0.08457864405926634,
+          "n": 27,
+          "n_plants_improved": 15,
+          "n_test_outside_training_range": {
+            "log_flower": 0,
+            "log_visit": 0,
+            "mVWC": 0,
+            "mcorL": 2,
+            "mcorW": 3,
+            "week_num": 0
+          },
+          "n_train": 78,
+          "train_visit_slope_per_log_rate_unit": 0.46994704371052104
+        },
+        {
+          "B_mse": 0.35435854913109643,
+          "V_mse": 0.30071354809443684,
+          "alignment_2ed": 0.06013617191838278,
+          "correction_d2": 0.006491170881723229,
+          "fold": "week|4",
+          "gain": 0.05364500103665959,
+          "heldout_treatments": {
+            "A": 9,
+            "C": 6,
+            "D": 8
+          },
+          "heldout_weeks": {
+            "4": 23
+          },
+          "mean_baseline_residual": -0.3164178650103639,
+          "mean_prediction_correction": -0.06436576426516592,
+          "n": 23,
+          "n_plants_improved": 19,
+          "n_test_outside_training_range": {
+            "log_flower": 0,
+            "log_visit": 0,
+            "mVWC": 0,
+            "mcorL": 1,
+            "mcorW": 3,
+            "week_num": 23
+          },
+          "n_train": 82,
+          "train_visit_slope_per_log_rate_unit": 0.28348804103717845
+        }
+      ],
+      "n_folds": 4,
+      "n_plants": 105,
+      "n_positive_folds": 1,
+      "n_positive_weeks": 1,
+      "plant_weighted": {
+        "B_mse": 0.17666361801787728,
+        "V_mse": 0.1876344191266167,
+        "alignment_2ed": 0.05369308303554819,
+        "correction_d2": 0.06466388414428756,
+        "gain": -0.010970801108739436,
+        "mean_baseline_residual": -0.026615468665312544,
+        "mean_prediction_correction": 0.04029241064923914,
+        "n": 105,
+        "n_plants_improved": 59
+      },
+      "policy": "week4",
+      "week_equal": {
+        "B_mse": 0.18338328668314272,
+        "V_mse": 0.1914987400599124,
+        "gain": -0.008115453376769693
+      }
+    }
+  },
+  "frozen_v58_result_git_blob": "cd2de70901ba305c05c86ccc0aa4dd08d803014d",
+  "n_new_independent_studies": 0,
+  "n_plants": 105,
+  "new_causal_pollination_inference": false,
+  "original_data_sha256": "152e09ab8bd0f49c2c5052e284fbaeb3f7362fd0f82998ed1a27001bd0e7250d",
+  "original_vwc_by_water_code": {
+    "A": {
+      "max": 25.75,
+      "mean": 17.433274854473687,
+      "min": 10.66666667,
+      "n": 38
+    },
+    "C": {
+      "max": 20.322,
+      "mean": 13.018048612687497,
+      "min": 9.533333333,
+      "n": 32
+    },
+    "D": {
+      "max": 14.66666667,
+      "mean": 10.407980953000001,
+      "min": 6.166666667,
+      "n": 35
+    }
+  },
+  "primary_strong_descriptive_gate_pass": false,
+  "primary_verdict": "WHOLE_WEEK_VISITOR_TRANSFER_NOT_ESTABLISHED",
+  "primary_whole_week_directional_gate_pass": false,
+  "primary_whole_week_placebo_reference": {
+    "above_q975": false,
+    "max": 0.03593154995789987,
+    "median": -0.008133112914113644,
+    "min": -0.12695412624431218,
+    "n": 200,
+    "n_at_or_above": 191,
+    "observed_week_equal_gain": -0.09292396843176635,
+    "q025": -0.10899542047610881,
+    "q975": 0.027788706938204736,
+    "reference_is_not_a_valid_causal_p_value": true
+  },
+  "raw_plant_ids_or_raw_measurements_exported": false,
+  "source_identity_audit": {
+    "all_115_source_keys": {
+      "n_distinct_raw_plantID_tokens": 115,
+      "n_tokens_in_multiple_arrays_within_weeks1to3": 0,
+      "n_tokens_in_multiple_treatments": 0,
+      "n_tokens_in_multiple_week4_arrays": 0,
+      "n_tokens_in_multiple_weeks": 0,
+      "n_tokens_repeated": 0
+    },
+    "eligible_105_source_keys": {
+      "n_distinct_raw_plantID_tokens": 105,
+      "n_tokens_in_multiple_arrays_within_weeks1to3": 0,
+      "n_tokens_in_multiple_treatments": 0,
+      "n_tokens_in_multiple_week4_arrays": 0,
+      "n_tokens_in_multiple_weeks": 0,
+      "n_tokens_repeated": 0
+    },
+    "original_week4_environment_rearrangement_reported_in_article": true
+  },
+  "v58_replay_and_week_decomposition": {
+    "all_original_v58_80_fold_model_losses_reproduced": true,
+    "maximum_absolute_mse_error": 0,
+    "original_plant_weighted_correction_decomposition_all": {
+      "B_mse": 0.16554235003283335,
+      "V_mse": 0.14638856861399988,
+      "alignment_2ed": 0.03555271746743581,
+      "correction_d2": 0.016398936048602424,
+      "gain": 0.019153781418833477,
+      "mean_baseline_residual": 0.00168200134323218,
+      "mean_prediction_correction": 0.0014877260707602832,
+      "n": 105,
+      "n_plants_improved": 64
+    },
+    "original_plant_weighted_correction_decomposition_by_week": {
+      "1": {
+        "B_mse": 0.16568502676284402,
+        "V_mse": 0.12250100373856374,
+        "alignment_2ed": 0.08943880005491991,
+        "correction_d2": 0.04625477703063964,
+        "gain": 0.04318402302428029,
+        "mean_baseline_residual": 0.030047118651806762,
+        "mean_prediction_correction": 0.09057294051397662,
+        "n": 28,
+        "n_plants_improved": 17
+      },
+      "2": {
+        "B_mse": 0.10931819862234565,
+        "V_mse": 0.10522937606443082,
+        "alignment_2ed": 0.00898133929714677,
+        "correction_d2": 0.004892516739231918,
+        "gain": 0.004088822557914831,
+        "mean_baseline_residual": 0.02659566253128615,
+        "mean_prediction_correction": -0.0298468757341875,
+        "n": 27,
+        "n_plants_improved": 14
+      },
+      "3": {
+        "B_mse": 0.10599286970763412,
+        "V_mse": 0.11003277294691584,
+        "alignment_2ed": 0.0007442118003807415,
+        "correction_d2": 0.004784115039662416,
+        "gain": -0.004039903239281717,
+        "mean_baseline_residual": -0.006134669812159027,
+        "mean_prediction_correction": -0.033550002097959636,
+        "n": 27,
+        "n_plants_improved": 17
+      },
+      "4": {
+        "B_mse": 0.30127683300775676,
+        "V_mse": 0.2664649381079932,
+        "alignment_2ed": 0.04200691534390256,
+        "correction_d2": 0.007195020444138994,
+        "gain": 0.03481189489976355,
+        "mean_baseline_residual": -0.052919825418593185,
+        "mean_prediction_correction": -0.029048495456240976,
+        "n": 23,
+        "n_plants_improved": 16
+      }
+    }
+  }
+}
